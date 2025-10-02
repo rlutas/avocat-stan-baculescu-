@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propunere Platformă Web - Societate Civilă de Avocați Stan-Baculescu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --accent-gold: #d4af37;
+            --dark-gray: #1f2937;
+            --medium-gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --success-green: #10b981;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Cover Page */
+        .cover {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, var(--primary-blue) 50%, #1e40af 100%);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 40px),
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px, transparent 40px);
+            pointer-events: none;
+            animation: gridMove 20s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(40px, 40px);
+            }
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: rotateGlow 30s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes rotateGlow {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInDown 1s ease-out 0.2s backwards;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 58px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cover h1 br {
+            display: block;
+        }
+
+        .cover .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 60px;
+            opacity: 0.92;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cover .firm-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+            text-shadow: 0 2px 15px rgba(212, 175, 55, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .cover .date {
+            font-size: 15px;
+            opacity: 0.75;
+            animation: fadeInUp 1s ease-out 1s backwards;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .cover-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.7;
+            animation: fadeInUp 1s ease-out 1.2s backwards;
+            z-index: 10;
+        }
+
+        /* Floating particles effect */
+        .cover .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .cover .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+            bottom: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        .cover .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+        .cover .particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 14s; }
+        .cover .particle:nth-child(3) { left: 30%; animation-delay: 2s; animation-duration: 16s; }
+        .cover .particle:nth-child(4) { left: 40%; animation-delay: 3s; animation-duration: 13s; }
+        .cover .particle:nth-child(5) { left: 50%; animation-delay: 4s; animation-duration: 15s; }
+        .cover .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 17s; }
+        .cover .particle:nth-child(7) { left: 70%; animation-delay: 1.5s; animation-duration: 14s; }
+        .cover .particle:nth-child(8) { left: 80%; animation-delay: 2.5s; animation-duration: 16s; }
+        .cover .particle:nth-child(9) { left: 90%; animation-delay: 3.5s; animation-duration: 13s; }
+        .cover .particle:nth-child(10) { left: 95%; animation-delay: 4.5s; animation-duration: 15s; }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        section.alt-bg {
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--secondary-blue);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Executive Summary */
+        .executive-summary {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .summary-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--secondary-blue);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .summary-card:hover::before {
+            left: 100%;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .summary-card h3 {
+            color: var(--primary-blue);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .summary-card p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* Variant Cards */
+        .variants-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .variant-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .variant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .variant-card.featured {
+            border-color: var(--accent-gold);
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-gold);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .variant-header {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1e40af 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .variant-card.featured .variant-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+        }
+
+        .variant-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .variant-tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .variant-price {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .variant-price-note {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .variant-timeline {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .variant-body {
+            padding: 40px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            font-size: 15px;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .variant-cta {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-blue);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        .variant-card.featured .cta-button {
+            background: var(--accent-gold);
+        }
+
+        .variant-card.featured .cta-button:hover {
+            background: #b8941f;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin-top: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .comparison-table thead {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 18px 24px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .comparison-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table tbody tr:hover {
+            background: var(--light-gray);
+        }
+
+        .check-icon {
+            color: var(--success-green);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .minus-icon {
+            color: var(--medium-gray);
+            opacity: 0.3;
+        }
+
+        /* Value Proposition */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .value-item:hover .value-icon {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .value-item h3 {
+            font-size: 20px;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .value-item p {
+            color: var(--medium-gray);
+            font-size: 15px;
+        }
+
+        /* Timeline */
+        .timeline {
+            max-width: 900px;
+            margin: 40px auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 50%;
+            padding-right: 40px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-blue);
+            border: 4px solid var(--white);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 4px var(--light-gray);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-blue);
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
+            color: var(--medium-gray);
+            font-size: 15px;
+        }
+
+        /* Investment Section */
+        .investment-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .investment-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 3px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .investment-card:hover {
+            border-color: var(--secondary-blue);
+            transform: translateY(-5px);
+        }
+
+        .investment-card.premium {
+            border-color: var(--accent-gold);
+            background: linear-gradient(135deg, #fefefe 0%, #faf8f3 100%);
+        }
+
+        .investment-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .investment-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .investment-price {
+            font-size: 52px;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .investment-card.premium .investment-price {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .investment-period {
+            color: var(--medium-gray);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .investment-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .investment-features li {
+            padding: 10px 0;
+            font-size: 15px;
+            color: var(--dark-gray);
+        }
+
+        .investment-features li::before {
+            content: "•";
+            color: var(--secondary-blue);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Why Choose Us */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover .benefit-number {
+            transform: scale(1.15) rotate(360deg);
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #b8941f 100%);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-blue);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1e40af 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn-primary {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--white);
+            padding: 18px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .cta-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .cta-btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-btn-primary:hover {
+            background: #b8941f;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 18px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border: 2px solid var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* Hide particles and animations on mobile */
+            .cover .particles {
+                display: none;
+            }
+
+            .cover::before {
+                animation: none;
+            }
+
+            .cover::after {
+                animation: none;
+            }
+
+            .cover h1 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                line-height: 1.2;
+            }
+
+            .cover .subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+                line-height: 1.5;
+                max-width: 95%;
+            }
+
+            .cover .firm-name {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            .cover .date {
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .variants-container {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin: 0;
+                padding-left: 60px;
+                text-align: left;
+            }
+
+            .timeline-marker {
+                left: 20px;
+            }
+
+            .investment-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .comparison-table {
+                font-size: 14px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 16px;
+            }
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% {
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        /* Developer Profile Section */
+        .developer-profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 60px auto 0;
+            padding: 50px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .developer-image {
+            flex-shrink: 0;
+        }
+
+        .developer-image img {
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+            background: transparent;
+        }
+
+        .developer-content h3 {
+            color: var(--primary-blue);
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .developer-content p {
+            color: var(--medium-gray);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-blue), var(--accent-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(30, 58, 138, 0.2);
+            border-color: var(--secondary-blue);
+        }
+
+        .portfolio-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .portfolio-item:hover::after {
+            opacity: 1;
+        }
+
+        .portfolio-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 18px rgba(30, 58, 138, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-icon {
+            transform: scale(1.15) rotate(-5deg);
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4);
+        }
+
+        .portfolio-item h3 {
+            color: var(--primary-blue);
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-item:hover h3 {
+            color: var(--secondary-blue);
+        }
+
+        .portfolio-item .domain {
+            color: var(--accent-gold);
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover .domain {
+            background: var(--accent-gold);
+            color: white;
+        }
+
+        .portfolio-item p {
+            color: var(--medium-gray);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-item .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .portfolio-item .tech-badge {
+            background: var(--light-gray);
+            color: var(--primary-blue);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover .tech-badge {
+            background: var(--secondary-blue);
+            color: white;
+        }
+
+        .portfolio-item .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid var(--light-gray);
+        }
+
+        .portfolio-item .stat {
+            text-align: center;
+        }
+
+        .portfolio-item .stat-number {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-blue);
+            display: block;
+        }
+
+        .portfolio-item .stat-label {
+            font-size: 11px;
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            color: var(--secondary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            color: var(--accent-gold);
+            gap: 12px;
+        }
+
+        .portfolio-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-link:hover svg {
+            transform: translateX(5px);
+        }
+
+        /* Enhanced animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Print Styles */
+        @media print {
+            .whatsapp-float {
+                display: none;
+            }
+
+            .cover {
+                page-break-after: always;
+            }
+
+            section {
+                page-break-inside: avoid;
+                padding: 40px 0;
+            }
+
+            .variant-card,
+            .benefit-card,
+            .summary-card {
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+            }
+        }
+
+        /* Responsive for developer profile */
+        @media (max-width: 768px) {
+            .developer-profile {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cover Page -->
+    <div class="cover">
+        <!-- Floating Particles -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="cover-content">
+            <div class="cover-badge">✨ Propunere Tehnică & Financiară</div>
+            <h1>Transformați-vă Cabinetul<br>În Platforma Juridică Digitală</h1>
+            <p class="subtitle">Automatizare inteligentă, experiență client superioară și creștere accelerată a veniturilor pentru cabinete de avocatură moderne</p>
+            <div class="firm-name">Societate Civilă de Avocați Stan-Baculescu</div>
+            <div class="date">2 Octombrie 2025</div>
+        </div>
+        <div class="cover-footer">
+            💼 Pregătit exclusiv pentru echipa Societății Civile de Avocați Stan-Baculescu
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <section class="executive-summary">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Rezumat Executiv</div>
+                <h2 class="section-title">Transformare Digitală Care Generează Rezultate Concrete</h2>
+                <p class="section-description">
+                    Nu vă oferim doar un site web — vă propunem un instrument de business care automatizează procesele, crește conversiile și vă poziționează ca lider pe piața juridică digitală.
+                </p>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Obiectivul Proiectului</h3>
+                    <p>Înlocuirea site-ului WordPress învechit cu o <strong>platformă Next.js ultrarapidă</strong>, construită cu tehnologii enterprise-grade. O prezență digitală care transformă vizitatori în clienți și reflectă expertiza Societății Civile de Avocați Stan-Baculescu.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Provocarea Actuală</h3>
+                    <p>Site-ul actual pierde clienți potențiali din cauza: <strong>încărcare lentă</strong> (peste 5 secunde), design neresponsiv, <strong>zero automatizare</strong> pentru programări, și lipsa integrării cu sisteme moderne de plată. Timpul echipei este consumat de taskuri administrative repetitive.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Soluția Noastră</h3>
+                    <p><strong>Două variante scalabile:</strong> Varianta 1 — site modern optimizat SEO (€2,500-€3,500) sau Varianta 2 — platformă completă cu <strong>programări AI-powered</strong>, plăți Stripe integrate și dashboard inteligent (€5,000-€6,000). Ambele construite pe arhitectură care crește odată cu business-ul dumneavoastră.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Project -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Despre Proiect</div>
+                <h2 class="section-title">De Ce Aveți Nevoie De O Platformă Modernă?</h2>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-icon">🚀</div>
+                    <h3>Performanță Superioară</h3>
+                    <p>Site-uri care se încarcă în sub 2 secunde, optimizate pentru Google și dispozitive mobile.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">🔒</div>
+                    <h3>Securitate & GDPR</h3>
+                    <p>Conformitate totală cu reglementările europene și protecție maximă a datelor clienților.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">⚡</div>
+                    <h3>Eficiență Operațională</h3>
+                    <p>Automatizarea programărilor și reducerea timpului administrativ cu până la 70%.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">📈</div>
+                    <h3>Creștere & Scalabilitate</h3>
+                    <p>Arhitectură flexibilă care crește odată cu nevoile cabinetului dumneavoastră.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Variants Section -->
+    <section class="alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Alegeți Varianta Potrivită</div>
+                <h2 class="section-title">Două Abordări, Un Singur Obiectiv: Succesul Dumneavoastră</h2>
+                <p class="section-description">
+                    Înțelegem că fiecare cabinet are propriile priorități și bugete. De aceea vă propunem două variante complementare, fiecare concepută pentru a livra valoare maximă.
+                </p>
+            </div>
+
+            <div class="variants-container">
+                <!-- Variant 1 -->
+                <div class="variant-card">
+                    <div class="variant-header">
+                        <div class="variant-name">Varianta 1</div>
+                        <div class="variant-tagline">Site de Prezentare Professional</div>
+                        <div class="variant-price">€2.500 - €3.500</div>
+                        <div class="variant-price-note">investiție unică</div>
+                        <div class="variant-timeline">⏱ 4-6 săptămâni livrare</div>
+                    </div>
+                    <div class="variant-body">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 20px; font-size: 20px;">Soluția Ideală Pentru Început</h3>
+                        <p style="color: var(--medium-gray); margin-bottom: 30px; line-height: 1.7;">
+                            Un site modern, rapid și elegant care vă poziționează ca un cabinet de avocatură profesionist și de încredere. Pregătit pentru extindere viitoare când veți fi gata.
+                        </p>
+
+                        <h4 style="color: var(--dark-gray); margin-bottom: 15px; font-size: 16px; font-weight: 700;">Ce Includem:</h4>
+                        <ul class="feature-list">
+                            <li>Design modern și responsive (perfect pe orice dispozitiv)</li>
+                            <li>Homepage impactantă cu mesajul firmei</li>
+                            <li>Pagini pentru toate serviciile juridice</li>
+                            <li>Profiluri avocați cu biografie și poze profesionale</li>
+                            <li>Formular de contact inteligent cu protecție anti-spam</li>
+                            <li>Optimizare SEO completă — fiecare pagină optimizată pentru Google</li>
+                            <li>Google Analytics și Search Console instalate și configurate</li>
+                            <li>Cookie consent banner complet conform GDPR</li>
+                            <li>Pagini legale necesare (Politică Confidențialitate, Termeni și Condiții, Cookie Policy)</li>
+                            <li>Viteză de încărcare ultrarapidă (sub 2 secunde)</li>
+                            <li>Arhitectură pregătită pentru Varianta 2</li>
+                            <li>Training pentru actualizări de conținut</li>
+                            <li>Suport tehnic 1 an după lansare</li>
+                        </ul>
+
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 8px; margin-top: 30px;">
+                            <strong style="color: var(--primary-blue);">💰 Costuri lunare estimate:</strong>
+                            <p style="color: var(--medium-gray); margin-top: 10px; font-size: 14px;">€10-50/lună (hosting, domeniu, mentenanță)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variant 2 - Featured -->
+                <div class="variant-card featured">
+                    <div class="featured-badge">⭐ Recomandat</div>
+                    <div class="variant-header">
+                        <div class="variant-name">Varianta 2</div>
+                        <div class="variant-tagline">Platformă Completă cu AI</div>
+                        <div class="variant-price">€5.000 - €6.000</div>
+                        <div class="variant-price-note">investiție unică</div>
+                        <div class="variant-timeline">⏱ 12-16 săptămâni livrare</div>
+                    </div>
+                    <div class="variant-body">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 20px; font-size: 20px;">Transformare Digitală Completă</h3>
+                        <p style="color: var(--medium-gray); margin-bottom: 30px; line-height: 1.7;">
+                            Mai mult decât un site web — o platformă inteligentă care automatizează programările, procesează plăți online și folosește AI pentru a vă pregăti consultațiile mai eficient.
+                        </p>
+
+                        <h4 style="color: var(--dark-gray); margin-bottom: 15px; font-size: 16px; font-weight: 700;">Tot Ce Are Varianta 1 PLUS:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Programări Online Automate</strong> — clienții aleg data și plătesc online, 24/7</li>
+                            <li><strong>Calendar Inteligent Sincronizat</strong> — integrare cu Google Calendar și Meet</li>
+                            <li><strong>Plăți Online Securizate</strong> — Stripe integration, facturi automate</li>
+                            <li><strong>Analiză AI a Documentelor</strong> — GPT-4 pregătește sumarul cazului automat</li>
+                            <li><strong>Portal Clienți</strong> — upload documente, istoric consultații, facturi</li>
+                            <li><strong>Dashboard Avocați</strong> — consultații viitoare, pregătire AI, calendar</li>
+                            <li><strong>Panel Administrare Complet</strong> — management utilizatori, rapoarte financiare</li>
+                            <li><strong>Sistem Notificări</strong> — email și SMS automate (confirmare, reminder)</li>
+                            <li><strong>CMS Avansat</strong> — publicare articole, categorii, SEO per articol</li>
+                            <li><strong>Analytics Avansat</strong> — conversie, venit, comportament clienți</li>
+                            <li><strong>Training Complet</strong> — pentru avocați și personal administrativ</li>
+                            <li><strong>Suport Premium</strong> — 1 an suport inclus post-lansare</li>
+                        </ul>
+
+                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin-top: 30px; border: 2px solid var(--accent-gold);">
+                            <strong style="color: var(--primary-blue);">🎁 Avantaj Competitiv:</strong>
+                            <p style="color: var(--dark-gray); margin-top: 10px; font-size: 14px; line-height: 1.6;">
+                                Veți fi singurul cabinet din zonă cu tehnologie AI pentru pregătirea consultațiilor. Clienții vor aprecia profesionalismul și eficiența dumneavoastră.
+                            </p>
+                        </div>
+
+                        <div style="background: var(--light-gray); padding: 20px; border-radius: 8px; margin-top: 20px;">
+                            <strong style="color: var(--primary-blue);">💰 Costuri lunare estimate:</strong>
+                            <p style="color: var(--medium-gray); margin-top: 10px; font-size: 14px;">€60-200/lună (hosting, AI, email, payment gateway)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section style="background: white; padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Returnarea Investiției</div>
+                <h2 class="section-title">Calculul ROI: Cât de Rapid Vă Recuperați Investiția?</h2>
+                <p class="section-description">
+                    Analize concrete bazate pe scenarii reale pentru fiecare variantă
+                </p>
+            </div>
+
+            <!-- ROI Cards Container -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(550px, 1fr)); gap: 40px; margin-top: 60px;">
+                <!-- ROI Variant 1 -->
+                <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative;">
+                    <div style="text-align: center; margin-bottom: 35px;">
+                        <div style="display: inline-block; background: var(--primary-blue); color: white; padding: 6px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px;">VARIANTA 1</div>
+                        <h3 style="color: var(--primary-blue); font-size: 28px; margin-bottom: 10px; font-family: 'Playfair Display', serif;">
+                            Site de Prezentare Professional
+                        </h3>
+                        <p style="color: var(--medium-gray); font-size: 16px;">
+                            Investiție: <span style="color: var(--accent-gold); font-weight: 600;">€2.500 - €3.500</span>
+                        </p>
+                    </div>
+
+                    <!-- ROI Scenarios for Variant 1 -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                        <!-- Scenario 1 -->
+                        <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 25px; border-radius: 12px; border: 2px solid #3b82f6;">
+                            <div style="font-weight: 700; color: var(--primary-blue); margin-bottom: 15px; font-size: 16px;">Scenariu Conservator</div>
+                            <div style="margin-bottom: 12px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Clienți noi/lună:</div>
+                                <div style="font-size: 22px; font-weight: 800; color: var(--primary-blue);">+2</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Valoare medie caz:</div>
+                                <div style="font-size: 18px; font-weight: 700; color: var(--dark-gray);">€1.500</div>
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Venit nou lunar</div>
+                                <div style="font-size: 26px; font-weight: 800; color: var(--success-green);">€3.000</div>
+                            </div>
+                            <div style="text-align: center; padding-top: 12px; border-top: 2px dashed rgba(59, 130, 246, 0.2);">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px;">Break-even</div>
+                                <div style="font-size: 20px; font-weight: 800; color: var(--accent-gold);">1-2 luni</div>
+                            </div>
+                        </div>
+
+                        <!-- Scenario 2 -->
+                        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 25px; border-radius: 12px; border: 2px solid #22c55e;">
+                            <div style="font-weight: 700; color: var(--success-green); margin-bottom: 15px; font-size: 16px;">Scenariu Realistic</div>
+                            <div style="margin-bottom: 12px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Clienți noi/lună:</div>
+                                <div style="font-size: 22px; font-weight: 800; color: var(--success-green);">+5</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Valoare medie caz:</div>
+                                <div style="font-size: 18px; font-weight: 700; color: var(--dark-gray);">€1.500</div>
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Venit nou lunar</div>
+                                <div style="font-size: 26px; font-weight: 800; color: var(--success-green);">€7.500</div>
+                            </div>
+                            <div style="text-align: center; padding-top: 12px; border-top: 2px dashed rgba(34, 197, 94, 0.2);">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px;">Break-even</div>
+                                <div style="font-size: 20px; font-weight: 800; color: var(--accent-gold);">Sub 1 lună</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 25px 30px; border-radius: 16px; border-left: 4px solid var(--primary-blue);">
+                        <p style="color: var(--dark-gray); line-height: 1.8; margin: 0; font-size: 15px;">
+                            <strong style="color: var(--primary-blue);">De ce funcționează:</strong> Un site profesional cu SEO optimizat vă crește vizibilitatea în Google cu <strong>200-400%</strong>.
+                            Clienții caută online "avocat [domeniu]" și vă găsesc pe prima pagină. Chiar dacă doar 2-3 vizitatori pe lună devin clienți,
+                            investiția se recuperează rapid și continuă să genereze clienți lună de lună fără costuri suplimentare.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ROI Variant 2 -->
+                <div style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative;">
+                    <div style="text-align: center; margin-bottom: 35px;">
+                        <div style="display: inline-block; background: var(--accent-gold); color: white; padding: 6px 16px; border-radius: 6px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px;">VARIANTA 2</div>
+                        <h3 style="color: var(--primary-blue); font-size: 28px; margin-bottom: 10px; font-family: 'Playfair Display', serif;">
+                            Platformă Digitală Completă
+                        </h3>
+                        <p style="color: var(--medium-gray); font-size: 16px;">
+                            Investiție: <span style="color: var(--accent-gold); font-weight: 600;">€5.000 - €6.000</span>
+                        </p>
+                    </div>
+
+                    <!-- ROI Scenarios for Variant 2 -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                        <!-- Scenario 1: Conservator -->
+                        <div style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 25px; border-radius: 12px; border: 2px solid #3b82f6;">
+                            <div style="font-weight: 700; color: var(--primary-blue); margin-bottom: 15px; font-size: 16px;">Scenariu Conservator</div>
+                            <div style="margin-bottom: 12px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Consultații online/lună:</div>
+                                <div style="font-size: 22px; font-weight: 800; color: var(--primary-blue);">10</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Tarif consultație:</div>
+                                <div style="font-size: 18px; font-weight: 700; color: var(--dark-gray);">€100</div>
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Venit nou lunar</div>
+                                <div style="font-size: 26px; font-weight: 800; color: var(--success-green);">€1.000</div>
+                            </div>
+                            <div style="text-align: center; padding-top: 12px; border-top: 2px dashed rgba(59, 130, 246, 0.2);">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px;">Break-even</div>
+                                <div style="font-size: 20px; font-weight: 800; color: var(--accent-gold);">5-6 luni</div>
+                            </div>
+                        </div>
+
+                        <!-- Scenario 2: Realistic -->
+                        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 25px; border-radius: 12px; border: 2px solid #22c55e;">
+                            <div style="font-weight: 700; color: var(--success-green); margin-bottom: 15px; font-size: 16px;">Scenariu Realistic</div>
+                            <div style="margin-bottom: 12px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">Consultații online/lună:</div>
+                                <div style="font-size: 22px; font-weight: 800; color: var(--success-green);">15</div>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <div style="color: var(--medium-gray); font-size: 12px; margin-bottom: 4px;">+ clienți fizici noi:</div>
+                                <div style="font-size: 18px; font-weight: 700; color: var(--dark-gray);">3 × €1.500</div>
+                            </div>
+                            <div style="background: white; padding: 12px; border-radius: 8px; margin-bottom: 12px;">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Venit nou lunar</div>
+                                <div style="font-size: 26px; font-weight: 800; color: var(--success-green);">€6.000</div>
+                            </div>
+                            <div style="text-align: center; padding-top: 12px; border-top: 2px dashed rgba(34, 197, 94, 0.2);">
+                                <div style="font-size: 11px; color: var(--medium-gray); margin-bottom: 4px;">Break-even</div>
+                                <div style="font-size: 20px; font-weight: 800; color: var(--accent-gold);">1 lună</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 25px 30px; border-radius: 16px; border-left: 4px solid var(--accent-gold);">
+                        <p style="color: var(--dark-gray); line-height: 1.8; margin: 0; font-size: 15px;">
+                            <strong style="color: var(--accent-gold);">Avantaj unic:</strong> În prezent nu oferiți consultații online — aceasta este o sursă de venit complet nouă, fără costuri operaționale suplimentare.
+                            Consultațiile online pot fi programate seara sau în weekend, <strong>fără a afecta programul normal</strong>.
+                            Platforma automatizează tot: programări, plăți, reminder-uri. Voi doar apăreți la întâlnire și oferiți consultanță.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Approach -->
+    <section class="alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Abordare Tehnică</div>
+                <h2 class="section-title">Tehnologie de Ultimă Generație</h2>
+                <p class="section-description">
+                    Folosim cele mai moderne tehnologii web pentru a vă asigura un avantaj competitiv pe termen lung
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-number">1</div>
+                    <h3>Next.js 14 Framework</h3>
+                    <p>Cea mai avansată platformă pentru aplicații web. Site-ul dumneavoastră va fi rapid, optimizat pentru motoarele de căutare și pregătit pentru viitor.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">2</div>
+                    <h3>Securitate Enterprise</h3>
+                    <p>Criptare end-to-end, conformitate GDPR, backup-uri automate și protecție împotriva atacurilor. Datele clienților sunt în siguranță maximă.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">3</div>
+                    <h3>Inteligență Artificială</h3>
+                    <p>GPT-4 de la OpenAI analizează documentele și pregătește sumare pentru avocați. Economisiți ore întregi de pregătire pentru fiecare consultație.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">4</div>
+                    <h3>Cloud Scalabil</h3>
+                    <p>Hosting premium pe Vercel/Netlify cu performanță garantată. Site-ul se adaptează automat la traficul crescut fără costuri suplimentare.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">5</div>
+                    <h3>Design Responsive</h3>
+                    <p>Perfect pe orice dispozitiv — telefon, tabletă, desktop. Peste 70% din vizitatori folosesc mobile, iar site-ul va arăta impecabil.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">6</div>
+                    <h3>Integrări Profesionale</h3>
+                    <p>Google Calendar, Google Meet, Stripe pentru plăți, sisteme de email profesionale. Totul lucrează împreună fără probleme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Comparație Detaliată</div>
+                <h2 class="section-title">Varianta 1 vs. Varianta 2</h2>
+                <p class="section-description">O privire rapidă asupra diferențelor cheie între cele două opțiuni</p>
+            </div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Funcționalitate</th>
+                        <th style="text-align: center;">Varianta 1</th>
+                        <th style="text-align: center;">Varianta 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Site modern, responsive design</td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Profiluri avocați & servicii</td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Optimizare SEO completă</td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Formular de contact</td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>CMS pentru articole</td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Conformitate GDPR</td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Programări online automate</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Calendar sincronizat (Google)</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Plăți online (Stripe)</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Analiză AI documente (GPT-4)</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Portal clienți (upload documente)</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Dashboard avocați</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Panel administrare complet</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr style="background: rgba(59, 130, 246, 0.05);">
+                        <td><strong>Notificări automate (email/SMS)</strong></td>
+                        <td style="text-align: center;"><span class="minus-icon">—</span></td>
+                        <td style="text-align: center;"><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Investiție inițială</strong></td>
+                        <td style="text-align: center;">€2.500 - €3.500</td>
+                        <td style="text-align: center;">€5.000 - €6.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Costuri lunare</strong></td>
+                        <td style="text-align: center;">€10 - €50</td>
+                        <td style="text-align: center;">€60 - €200</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Timp de implementare</strong></td>
+                        <td style="text-align: center;">4-6 săptămâni</td>
+                        <td style="text-align: center;">12-16 săptămâni</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Cronologie & Livrabile</div>
+                <h2 class="section-title">Cum Arată Procesul De Dezvoltare?</h2>
+                <p class="section-description">Transparență completă în fiecare etapă a proiectului</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Săptămâna 1-2: Design & Planificare</h3>
+                        <p>Definirea cerințelor, crearea design-ului vizual, aprobarea aspectului final. Primiți mockup-uri interactive pentru toate paginile importante.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Săptămâna 3-6: Dezvoltare Core</h3>
+                        <p>Construirea funcționalităților de bază: homepage, pagini servicii, profiluri avocați, formular contact. Vedeți progresul săptămânal pe server de test.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Săptămâna 7-10: Funcționalități Avansate</h3>
+                        <p>(Varianta 2) Implementare programări, plăți, AI, dashboard-uri. Testare intensivă a fiecărei funcționalități noi.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Săptămâna 11-14: Conținut & Optimizare</h3>
+                        <p>Migrarea conținutului de pe WordPress, optimizare SEO, testare performanță, ajustări responsive. Site-ul devine complet funcțional.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Săptămâna 15-16: Testare & Lansare</h3>
+                        <p>Testare de către dumneavoastră și avocați, training complet, fixing bug-uri finale, lansare în producție. Monitorizare intensivă prima săptămână.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%); padding: 40px; border-radius: 16px; margin-top: 60px; text-align: center;">
+                <h3 style="color: var(--primary-blue); font-size: 24px; margin-bottom: 15px;">Transparență Garantată</h3>
+                <p style="color: var(--dark-gray); line-height: 1.7; max-width: 700px; margin: 0 auto;">
+                    Primiți rapoarte săptămânale de progres, aveți acces permanent la serverul de testare și aprobați fiecare etapă înainte de a merge mai departe.
+                    Nu există surprize, doar rezultate clare și măsurabile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Options -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Opțiuni de Plată</div>
+                <h2 class="section-title">Modalități de Plată Flexibile</h2>
+                <p class="section-description">Transparență completă și flexibilitate maximă</p>
+            </div>
+
+            <div class="summary-grid" style="max-width: 1000px; margin: 0 auto;">
+                <!-- Schema de plată -->
+                <div class="summary-card">
+                    <h3>Schema de Plată (3 Tranșe)</h3>
+                    <div style="margin-top: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border-color);">
+                            <div>
+                                <div style="font-weight: 600; color: var(--dark-gray);">La semnarea contractului</div>
+                                <div style="font-size: 14px; color: var(--medium-gray); margin-top: 3px;">Start proiect</div>
+                            </div>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--primary-blue);">50%</div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border-color);">
+                            <div>
+                                <div style="font-weight: 600; color: var(--dark-gray);">La finalizarea dezvoltării</div>
+                                <div style="font-size: 14px; color: var(--medium-gray); margin-top: 3px;">Înainte de testare</div>
+                            </div>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--primary-blue);">40%</div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
+                            <div>
+                                <div style="font-weight: 600; color: var(--dark-gray);">La lansarea în producție</div>
+                                <div style="font-size: 14px; color: var(--medium-gray); margin-top: 3px;">Go-live final</div>
+                            </div>
+                            <div style="font-size: 24px; font-weight: 700; color: var(--primary-blue);">10%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upgrade option -->
+                <div class="summary-card">
+                    <h3>Upgrade de la Varianta 1 la Varianta 2</h3>
+                    <p style="margin-top: 20px; line-height: 1.7;">
+                        Dacă începeți cu <strong>Varianta 1</strong> și doriți ulterior să treceți la <strong>Varianta 2</strong>, investiția inițială este dedusă integral.
+                    </p>
+                    <div style="background: var(--light-gray); padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--accent-gold);">
+                        <p style="margin: 0; font-weight: 600; color: var(--primary-blue);">
+                            Plătiți doar diferența pentru upgrade!
+                        </p>
+                        <p style="margin: 15px 0 0 0; font-size: 14px; color: var(--medium-gray);">
+                            <strong>Exemplu:</strong> Ați plătit €3.000 pentru Varianta 1? La upgrade plătiți doar €2.000-€3.000 diferența.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Developer -->
+    <section class="alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Despre Developer</div>
+                <h2 class="section-title">Experiență & Pasiune Pentru Tehnologie</h2>
+            </div>
+
+            <div class="developer-profile">
+                <div class="developer-image">
+                    <img src="../images/raul.png" alt="Luțaș Raul - Web Developer">
+                </div>
+                <div class="developer-content">
+                    <h3>Luțaș Raul - Full Stack Developer</h3>
+                    <p>Salut! Numele meu este Luțaș Raul și sunt pasionat de tehnologie și de crearea de aplicații web încă din 2008, când am creat prima mea pagină web. De atunci, am evoluat de la simple site-uri web la platforme complexe full-stack.</p>
+
+                    <p><strong style="color: var(--primary-blue);">Full Stack Developer cu expertiză completă:</strong> De la frontend modern (React, Next.js, Vue.js) până la backend robust (Node.js, Python, PHP), bazele de date (PostgreSQL, MySQL, MongoDB) și infrastructură cloud (AWS, Vercel, Netlify). Dezvolt aplicații complete end-to-end care scalează și performează exceptional.</p>
+
+                    <p>Cu experiența mea vastă în marketing digital și dezvoltare de afaceri, nu creez doar cod — construiesc soluții care generează rezultate de business. Am o abilitate unică de a combina expertiza tehnică cu înțelegerea nevoilor de afaceri, dezvoltând strategii personalizate pentru fiecare client, indiferent de industria sau domeniul de activitate.</p>
+
+                    <p>Cu o experiență de peste 8 ani în domeniul SEO și performanță web, am ajutat numeroase afaceri să-și îmbunătățească poziționarea pe motoarele de căutare și să obțină rezultate semnificative. Fiecare aplicație pe care o dezvolt este optimizată nu doar pentru experiență de utilizare plăcută, ci și pentru conversie și găsire ușoară în căutările organice.</p>
+
+                    <p><strong style="color: var(--primary-blue);">În calitate de Full Stack Developer și expert în marketing digital, transform ideile în platforme web puternice care vă ajută să vă atingeți obiectivele și să vă creșteți afacerea.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Portofoliu</div>
+                <h2 class="section-title">Proiecte Realizate Cu Succes</h2>
+                <p class="section-description">
+                    O selecție din proiectele dezvoltate pentru clienți din diverse industrii
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- CheckID -->
+                <div class="portfolio-item" onclick="window.open('https://checkid.app', '_blank')">
+                    <div class="portfolio-icon">🆔</div>
+                    <h3>CheckID</h3>
+                    <span class="domain">checkid.app</span>
+                    <p>Platformă SaaS complexă pentru verificarea automată a documentelor de identitate românești cu scanare OCR avansată și verificare în timp real a bazei de date ONJN pentru auto-excludere gambling. Sincronizare la fiecare 5 minute, autentificare multi-factor și criptare end-to-end (AES-256).</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">OCR AI</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">GDPR</span>
+                        <span class="tech-badge">SSL/TLS</span>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Disponibilitate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5 min</span>
+                            <span class="stat-label">Sync DB</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Securitate</span>
+                        </div>
+                    </div>
+
+                    <a href="https://checkid.app" target="_blank" class="portfolio-link" onclick="event.stopPropagation()">
+                        Vizitează Proiectul
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Avocat Tarta -->
+                <div class="portfolio-item" onclick="window.open('https://avocat-tarta.ro', '_blank')">
+                    <div class="portfolio-icon">⚖️</div>
+                    <h3>Avocat Tarta</h3>
+                    <span class="domain">avocat-tarta.ro</span>
+                    <p>Site web profesional pentru cabinet de avocatură cu 7+ ani experiență, dezvoltat full-stack în Next.js. Design modern și performant, optimizare SEO avansată pentru poziționare organică pe 15+ termeni cheie din domeniul juridic. Include secțiuni pentru 7 arii de practică, testimoniale clienți și sistem de programări online.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">SEO Pro</span>
+                        <span class="tech-badge">Responsive</span>
+                        <span class="tech-badge">Fast Load</span>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Clienți</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Rată Succes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">7+</span>
+                            <span class="stat-label">Ani Exp.</span>
+                        </div>
+                    </div>
+
+                    <a href="https://avocat-tarta.ro" target="_blank" class="portfolio-link" onclick="event.stopPropagation()">
+                        Vizitează Proiectul
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Eghiseul -->
+                <div class="portfolio-item" onclick="window.open('https://eghiseul.ro', '_blank')">
+                    <div class="portfolio-icon">📄</div>
+                    <h3>Eghiseul</h3>
+                    <span class="domain">eghiseul.ro</span>
+                    <p>Platformă digitală pentru obținerea documentelor oficiale românești online, accesibilă 24/7 pentru cetățeni din România și diaspora. Sistem complet de procesare documente (certificate, acte de stare civilă), plăți securizate și transmitere digitală criptată. Suport multilingv și asistență personalizată.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">WordPress</span>
+                        <span class="tech-badge">WooCommerce</span>
+                        <span class="tech-badge">Payment Gateway</span>
+                        <span class="tech-badge">Multi-language</span>
+                        <span class="tech-badge">SSL</span>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Online</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">51</span>
+                            <span class="stat-label">Țări</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Fast</span>
+                            <span class="stat-label">Procesare</span>
+                        </div>
+                    </div>
+
+                    <a href="https://eghiseul.ro" target="_blank" class="portfolio-link" onclick="event.stopPropagation()">
+                        Vizitează Proiectul
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- eRoVinieta -->
+                <div class="portfolio-item" onclick="window.open('https://erovinieta.net', '_blank')">
+                    <div class="portfolio-icon">🚗</div>
+                    <h3>eRoVinieta</h3>
+                    <span class="domain">erovinieta.net</span>
+                    <p>Platformă e-commerce full-stack pentru achiziție roviniete electronice CNAIR, distribuitor autorizat. Sistem de plăți dual (Netopia + Stripe), livrare automată instant prin SMS și email, suport pentru 51 țări și toate categoriile de vehicule. Input interactiv număr înmatriculare și auto-completare CUI/VAT.</p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">Full Stack</span>
+                        <span class="tech-badge">Stripe</span>
+                        <span class="tech-badge">Netopia</span>
+                        <span class="tech-badge">Auto SMS</span>
+                        <span class="tech-badge">CNAIR API</span>
+                        <span class="tech-badge">Responsive</span>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">Instant</span>
+                            <span class="stat-label">Livrare</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Payment</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">51</span>
+                            <span class="stat-label">Țări</span>
+                        </div>
+                    </div>
+
+                    <a href="https://erovinieta.net" target="_blank" class="portfolio-link" onclick="event.stopPropagation()">
+                        Vizitează Proiectul
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="color: var(--medium-gray); font-size: 18px; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                    <strong style="color: var(--primary-blue);">Peste 50+ de proiecte</strong> livrate cu succes pentru clienți din România și Europa,
+                    fiecare optimizat pentru performanță, SEO și experiență utilizator excepțională.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">De Ce Noi</div>
+                <h2 class="section-title">Partenerul Tehnologic Perfect Pentru Cabinetul Dumneavoastră</h2>
+                <p class="section-description">
+                    Nu sunteți doar un client pentru noi. Suntem investiți în succesul dumneavoastră pe termen lung.
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-number">1</div>
+                    <h3>Expertiză în Domeniul Legal</h3>
+                    <p>Înțelegem specificul industriei juridice: confidențialitate, GDPR, conformitate, profesionalism. Nu trebuie să ne explicați fiecare detaliu — știm deja ce vă trebuie.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">2</div>
+                    <h3>Tehnologie Modernă, Nu Legacy</h3>
+                    <p>Folosim stack-ul tehnologic de ultimă generație (Next.js, React, AI). Site-ul dumneavoastră va fi relevant și performant pentru următorii 5-10 ani, nu învechit după 2 ani.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">3</div>
+                    <h3>Design Centrat Pe Utilizator</h3>
+                    <p>Fiecare element este gândit pentru a simplifica viața clienților dumneavoastră și a vă crește conversiile. Design frumos dar și funcțional — nu doar "pretty website".</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">4</div>
+                    <h3>Securitate & Conformitate</h3>
+                    <p>GDPR compliant by design. Toate datele stocate în UE, criptare end-to-end, backup-uri automate, conformitate cu standardele Baroului pentru confidențialitate avocat-client.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">5</div>
+                    <h3>Scalabilitate Garantată</h3>
+                    <p>Indiferent dacă alegeți Varianta 1 sau 2, arhitectura este pregătită pentru creștere. Când sunteți gata să adăugați funcționalități noi, nu trebuie să reconstruim de la zero.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-number">6</div>
+                    <h3>Transparență Totală</h3>
+                    <p>Rapoarte săptămânale, acces la server de testare, comunicare deschisă. Știți exact unde sunt banii dumneavoastră și ce primiți la fiecare etapă.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Pașii Următori</div>
+                <h2 class="section-title">Cum Începem Colaborarea?</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; gap: 30px;">
+                    <div style="display: flex; gap: 20px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800;">1</div>
+                        <div>
+                            <h3 style="color: var(--primary-blue); font-size: 22px; margin-bottom: 8px;">Discuție Inițială (30-60 min)</h3>
+                            <p style="color: var(--medium-gray); line-height: 1.7;">Programăm o întâlnire online sau la birou pentru a discuta în detaliu nevoile dumneavoastră, răspunde la întrebări și confirma că înțelegem exact ce vă doriți.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800;">2</div>
+                        <div>
+                            <h3 style="color: var(--primary-blue); font-size: 22px; margin-bottom: 8px;">Propunere Personalizată & Semnare Contract</h3>
+                            <p style="color: var(--medium-gray); line-height: 1.7;">Refinam această propunere bazat pe discuția noastră, clarificăm detaliile finale de preț și cronologie, și semnăm contractul. Primiți factura pentru prima tranșă.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800;">3</div>
+                        <div>
+                            <h3 style="color: var(--primary-blue); font-size: 22px; margin-bottom: 8px;">Kick-off & Design (Săptămâna 1-2)</h3>
+                            <p style="color: var(--medium-gray); line-height: 1.7;">Începem cu un workshop de design, colectăm materialele necesare (logo, poze, conținut), și vă prezentăm mockup-uri interactive în 7-10 zile pentru aprobare.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800;">4</div>
+                        <div>
+                            <h3 style="color: var(--primary-blue); font-size: 22px; margin-bottom: 8px;">Dezvoltare & Testare</h3>
+                            <p style="color: var(--medium-gray); line-height: 1.7;">Construim site-ul conform design-ului aprobat, cu update-uri săptămânale. Aveți acces permanent la serverul de test pentru a vedea progresul și oferi feedback continuu.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; align-items: start;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: linear-gradient(135deg, var(--success-green), #059669); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800;">5</div>
+                        <div>
+                            <h3 style="color: var(--primary-blue); font-size: 22px; margin-bottom: 8px;">Lansare & Suport Continuu</h3>
+                            <p style="color: var(--medium-gray); line-height: 1.7;">După testare finală și training, lansăm site-ul în producție. Monitorizăm intensiv prima săptămână și oferim suport complet conform variantei alese (1 lună sau 3 luni).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Sunteți Gata Să Transformați Prezența Digitală a Cabinetului?</h2>
+            <p>Haideți să discutăm despre cum vă putem ajuta să atingeți obiectivele de business prin tehnologie</p>
+
+            <div class="cta-buttons">
+                <a href="tel:+40745850700" class="cta-btn-primary">
+                    📞 Sună Acum
+                </a>
+                <a href="https://wa.me/40745850700?text=Bună%20ziua!%20Am%20văzut%20propunerea%20pentru%20site-ul%20Societății%20Civile%20de%20Avocați%20Stan-Baculescu%20și%20aș%20dori%20să%20discutăm." class="cta-btn-secondary" target="_blank" rel="noopener noreferrer">
+                    💬 Scrie pe WhatsApp
+                </a>
+            </div>
+
+            <div style="margin-top: 50px; opacity: 0.9;">
+                <p style="font-size: 16px; margin-bottom: 10px;">Această propunere este valabilă 30 de zile de la data emiterii.</p>
+                <p style="font-size: 14px;">Prețurile pot fi ajustate în funcție de cerințe specifice discutate ulterior.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Propunere Tehnică pentru Societate Civilă de Avocați Stan-Baculescu</p>
+            <p style="margin-top: 10px;">Pregătit cu dedicare și atenție la detalii pentru succesul dumneavoastră</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/40745850700?text=Bună%20ziua!%20Am%20văzut%20propunerea%20pentru%20site-ul%20Societății%20Civile%20de%20Avocați%20Stan-Baculescu%20și%20aș%20dori%20să%20discutăm."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Contactează-mă pe WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.163 0 0 7.163 0 16C0 18.989 0.848 21.773 2.312 24.125L0.046 31.954L8.104 29.738C10.376 31.065 13.096 31.85 16 31.85C24.837 31.85 32 24.687 32 15.85C32 7.013 24.837 0 16 0ZM16 29.2C13.434 29.2 11.011 28.472 8.936 27.212L8.44 26.924L3.648 28.132L4.876 23.46L4.56 22.948C3.152 20.796 2.35 18.304 2.35 15.85C2.35 8.456 8.456 2.35 15.85 2.35C23.244 2.35 29.35 8.456 29.35 15.85C29.35 23.244 23.244 29.2 16 29.2ZM23.2 19.15C22.8 18.95 20.85 17.995 20.5 17.845C20.15 17.695 19.9 17.62 19.65 18.02C19.4 18.42 18.7 19.325 18.5 19.575C18.3 19.825 18.1 19.85 17.7 19.65C17.3 19.45 16.05 19.045 14.575 17.745C13.425 16.73 12.65 15.48 12.45 15.08C12.25 14.68 12.425 14.48 12.625 14.28C12.8 14.105 13.025 13.83 13.225 13.63C13.425 13.43 13.5 13.28 13.65 13.03C13.8 12.78 13.725 12.58 13.625 12.38C13.525 12.18 12.75 10.23 12.425 9.43C12.1 8.655 11.775 8.755 11.55 8.755C11.325 8.755 11.075 8.73 10.825 8.73C10.575 8.73 10.175 8.83 9.825 9.23C9.475 9.63 8.45 10.585 8.45 12.535C8.45 14.485 9.875 16.385 10.075 16.635C10.275 16.885 12.65 20.646 16.3 22.346C17.15 22.721 17.825 22.946 18.35 23.121C19.2 23.396 19.975 23.346 20.6 23.246C21.3 23.121 22.85 22.371 23.175 21.546C23.525 20.721 23.525 20.021 23.425 19.871C23.325 19.721 23.6 19.35 23.2 19.15Z" fill="white"/>
+        </svg>
+    </a>
+
+</body>
+</html>
