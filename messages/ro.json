@@ -15,9 +15,12 @@
     }
   },
   "HomePage": {
-    "title": "Cabinet de Avocatura Stan-Baculescu",
-    "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata tara. Cu experienta in drept civil, penal, al familiei si multe altele.",
-    "contact": "Contacteaza-ne",
-    "services": "Servicii"
+    "hero": {
+      "title": "Cabinet de Avocatura Stan-Baculescu",
+      "subtitle": "Profesionalism. Dedicare. Rezultate.",
+      "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata Romania. Cu peste 15 ani de experienta, echipa noastra va reprezinta cu dedicare in domenii precum drept civil, penal, al familiei, comercial si multe altele.",
+      "cta": "Programeaza o Consultatie",
+      "secondaryCta": "Descopera Serviciile"
+    }
   }
 }

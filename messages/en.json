@@ -15,9 +15,12 @@
     }
   },
   "HomePage": {
-    "title": "Stan-Baculescu Law Firm",
-    "description": "We provide excellent legal services in Satu Mare and throughout Romania. With expertise in civil law, criminal law, family law, and more.",
-    "contact": "Contact Us",
-    "services": "Services"
+    "hero": {
+      "title": "Stan-Baculescu Law Firm",
+      "subtitle": "Professionalism. Dedication. Results.",
+      "description": "We provide excellent legal services in Satu Mare and throughout Romania. With over 15 years of experience, our team represents you with dedication in civil law, criminal law, family law, commercial law, and more.",
+      "cta": "Schedule a Consultation",
+      "secondaryCta": "Discover Our Services"
+    }
   }
 }
