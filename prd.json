@@ -1,0 +1,556 @@
+{
+  "project": "Stan-Baculescu Law Firm Website",
+  "branchName": "ralph/stan-baculescu-website",
+  "description": "Professional presentation website for Stan-Baculescu law firm - bilingual (RO/EN), 8 practice areas, lawyer profiles, blog with CMS, GDPR compliance",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Project Setup and Configuration",
+      "description": "As a developer, I need the Next.js project initialized with all dependencies so that development can begin.",
+      "acceptanceCriteria": [
+        "Next.js 14+ project created with App Router",
+        "TypeScript configured with strict mode",
+        "Tailwind CSS installed and configured",
+        "shadcn/ui initialized with default theme",
+        "next-intl installed for i18n",
+        "Project structure created: app/, components/, lib/, messages/",
+        "ESLint and Prettier configured",
+        "pnpm as package manager",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": "Using npm instead of pnpm as the project was already initialized with npm"
+    },
+    {
+      "id": "US-002",
+      "title": "Internationalization Setup (next-intl)",
+      "description": "As a developer, I need i18n configured so that the site supports Romanian and English.",
+      "acceptanceCriteria": [
+        "next-intl configured for RO and EN locales",
+        "Default locale set to Romanian (ro)",
+        "URL structure with locale prefix: /ro/... and /en/...",
+        "Translation files created: messages/ro.json and messages/en.json",
+        "Middleware configured for locale detection",
+        "useTranslations hook working in components",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "Base Layout and Theme Setup",
+      "description": "As a developer, I need the base layout with theme colors so that all pages have consistent styling.",
+      "acceptanceCriteria": [
+        "Root layout with html lang attribute from locale",
+        "Tailwind theme extended with blue and gold colors (placeholder values)",
+        "Font configured (Inter or similar professional font)",
+        "CSS variables for theme colors in globals.css",
+        "Metadata template configured for SEO",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-004",
+      "title": "Header Component with Navigation",
+      "description": "As a visitor, I want a header with navigation so that I can browse the site easily.",
+      "acceptanceCriteria": [
+        "Header component with logo placeholder",
+        "Desktop navigation: Acasa, Despre Noi, Echipa, Servicii, Blog, Contact",
+        "Navigation links use next-intl Link component",
+        "Active link styling",
+        "Sticky header on scroll",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-005",
+      "title": "Mobile Navigation Menu",
+      "description": "As a mobile visitor, I want a hamburger menu so that I can navigate on small screens.",
+      "acceptanceCriteria": [
+        "Hamburger icon visible on screens < 768px",
+        "Desktop nav hidden on mobile",
+        "Mobile menu slides in from right or drops down",
+        "Menu closes when link clicked",
+        "Menu closes when clicking outside",
+        "Smooth animation",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-006",
+      "title": "Language Switcher Component",
+      "description": "As a visitor, I want to switch between Romanian and English languages.",
+      "acceptanceCriteria": [
+        "Language switcher in header (RO/EN toggle or dropdown)",
+        "Current language highlighted",
+        "Clicking switches locale and updates URL",
+        "Language preference persists across navigation",
+        "Works on both desktop and mobile nav",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-007",
+      "title": "Footer Component",
+      "description": "As a visitor, I want a footer with contact info and links so that I can find important information.",
+      "acceptanceCriteria": [
+        "Footer with 3-4 columns layout",
+        "Contact info: address (Str. Aurel Popp 2, Satu Mare), phone, email",
+        "Quick navigation links",
+        "Social media icons (Facebook, Instagram, TikTok) - placeholder links",
+        "Legal links: Privacy Policy, Cookie Policy, Terms",
+        "Copyright notice with current year",
+        "Bilingual content from translations",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-008",
+      "title": "Homepage Hero Section",
+      "description": "As a visitor, I want to see a hero section so that I understand what the firm offers.",
+      "acceptanceCriteria": [
+        "Hero section with placeholder for team photo",
+        "Headline text from translations (value proposition)",
+        "Subheadline with brief description",
+        "CTA button linking to contact page",
+        "Responsive layout (stacked on mobile, side-by-side on desktop)",
+        "Next.js Image component with optimization",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-009",
+      "title": "Homepage Services Preview Section",
+      "description": "As a visitor, I want to see practice areas on the homepage so that I know what services are offered.",
+      "acceptanceCriteria": [
+        "Section title 'Domenii de Practica' / 'Practice Areas'",
+        "Grid of 8 service cards (4x2 on desktop, 2x4 on tablet, 1x8 on mobile)",
+        "Each card: icon placeholder, title, brief description",
+        "Cards link to individual service pages",
+        "Hover effect on cards",
+        "Content from translations",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "Homepage Testimonials Section",
+      "description": "As a visitor, I want to see testimonials so that I can gauge the firm's reputation.",
+      "acceptanceCriteria": [
+        "Testimonials section with static data (3-5 reviews)",
+        "Each testimonial: star rating, reviewer name, excerpt, date",
+        "Carousel on mobile, grid (3 columns) on desktop",
+        "Link to Google My Business profile",
+        "Data stored in static JSON file for now",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "About Us Page",
+      "description": "As a potential client, I want to learn about the firm so that I can assess if they're the right fit.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/despre-noi (RO) and /[locale]/about (EN)",
+        "Firm history and background section",
+        "Values section: Profesionalism, Adaptabilitate, Loialitate",
+        "Principles section: Motivatie, Seriozitate, Experienta",
+        "Working methodology description",
+        "SEO metadata (title, description, OG tags)",
+        "Bilingual content from translations",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-012",
+      "title": "Team Overview Page",
+      "description": "As a potential client, I want to see all lawyers so that I can choose who to contact.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/echipa (RO) and /[locale]/team (EN)",
+        "Founders section: Camelia Stan, Vlad Baculescu",
+        "Collaborators section: Diana Antonia Chincea, Gabriela Tarta, Alexandra Rusu",
+        "Staff section: Cristina Tentes (Client Relations)",
+        "Each card: photo placeholder, name, title, brief bio",
+        "Cards link to individual profile pages",
+        "SEO metadata",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-013",
+      "title": "Individual Lawyer Profile Pages",
+      "description": "As a potential client, I want detailed lawyer profiles so that I can learn about their expertise.",
+      "acceptanceCriteria": [
+        "Dynamic route: /[locale]/echipa/[slug]",
+        "6 profile pages created (one per team member)",
+        "Profile shows: large photo, full name, title, full biography",
+        "Specializations list",
+        "Contact info or CTA to contact page",
+        "Back link to team page",
+        "SEO metadata per profile",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 13,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-014",
+      "title": "Services Overview Page",
+      "description": "As a visitor, I want to see all practice areas so that I can find the service I need.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/servicii (RO) and /[locale]/services (EN)",
+        "Grid of 8 service cards with icons/images",
+        "Each card: title, description, link to detail page",
+        "Clear visual hierarchy",
+        "SEO metadata",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 14,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-015",
+      "title": "Individual Service Pages (8 pages)",
+      "description": "As a potential client, I want detailed service information so that I understand how the firm can help.",
+      "acceptanceCriteria": [
+        "Dynamic route: /[locale]/servicii/[slug]",
+        "8 service pages: malpraxis-medical, drept-civil, drept-penal, drept-familiei, dreptul-muncii, drept-comercial, accidente-rutiere, drept-administrativ-fiscal",
+        "Each page: detailed description, common cases, approach",
+        "CTA button to contact page",
+        "Related services suggestions",
+        "Structured data (JSON-LD) for LegalService",
+        "SEO metadata per page",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 15,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-016",
+      "title": "Contact Page Layout",
+      "description": "As a potential client, I want to see contact information so that I can reach the firm.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/contact",
+        "Two-column layout: form on left, info on right (stacked on mobile)",
+        "Contact details: phone, email, address",
+        "Working hours displayed",
+        "Social media links",
+        "Google Maps embed showing office location",
+        "SEO metadata",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 16,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-017",
+      "title": "Contact Form UI",
+      "description": "As a potential client, I want a contact form so that I can send inquiries.",
+      "acceptanceCriteria": [
+        "Form fields: name, email, phone, subject (dropdown with services), message",
+        "React Hook Form for form management",
+        "Zod validation schema",
+        "Client-side validation with error messages",
+        "Submit button with loading state",
+        "Honeypot field for spam protection (hidden)",
+        "Bilingual labels and error messages",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 17,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-018",
+      "title": "Contact Form Server Action",
+      "description": "As a firm owner, I want form submissions emailed so that I receive inquiries.",
+      "acceptanceCriteria": [
+        "Server action for form submission",
+        "Server-side Zod validation",
+        "Rate limiting: max 3 submissions per hour per IP",
+        "Resend API integration for email delivery",
+        "Email sent to office@stanbaculescu.ro",
+        "Email template with all form fields and timestamp",
+        "Success/error response to client",
+        "Typecheck passes"
+      ],
+      "priority": 18,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-019",
+      "title": "Blog Setup with Velite",
+      "description": "As a developer, I need blog infrastructure so that articles can be managed.",
+      "acceptanceCriteria": [
+        "Velite installed and configured",
+        "Content schema for blog posts defined",
+        "Sample blog post created in content/blog/",
+        "Post frontmatter: title, date, author, category, excerpt, locale",
+        "MDX support for rich content",
+        "Build generates typed content",
+        "Typecheck passes"
+      ],
+      "priority": 19,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-020",
+      "title": "Blog Listing Page",
+      "description": "As a visitor, I want to browse blog articles so that I can read legal updates.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/blog",
+        "List of article cards: title, excerpt, date, category",
+        "Pagination (6 articles per page)",
+        "Category filter (optional, can be basic)",
+        "Articles filtered by current locale",
+        "SEO metadata",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 20,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-021",
+      "title": "Individual Blog Article Page",
+      "description": "As a visitor, I want to read full articles so that I can learn about legal topics.",
+      "acceptanceCriteria": [
+        "Dynamic route: /[locale]/blog/[slug]",
+        "Full article content rendered from MDX",
+        "Author attribution",
+        "Published date",
+        "Social sharing buttons (Twitter, Facebook, LinkedIn)",
+        "Related articles suggestions",
+        "SEO metadata per article with Article schema",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 21,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-022",
+      "title": "Cookie Consent Banner",
+      "description": "As a visitor, I need to consent to cookies so that my privacy is respected.",
+      "acceptanceCriteria": [
+        "Cookie consent banner appears on first visit",
+        "Options: Accept All, Reject Non-Essential, Customize",
+        "Preference saved to localStorage",
+        "Banner does not show again after choice",
+        "Link to cookie policy page",
+        "Bilingual text",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 22,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-023",
+      "title": "Google Analytics Integration",
+      "description": "As the firm owner, I want analytics so that I can track website performance.",
+      "acceptanceCriteria": [
+        "Google Analytics 4 script added",
+        "Only loads after cookie consent (check localStorage)",
+        "Page view tracking working",
+        "Contact form submission tracked as conversion event",
+        "Google Search Console verification meta tag added",
+        "Typecheck passes"
+      ],
+      "priority": 23,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-024",
+      "title": "Privacy Policy Page",
+      "description": "As a visitor, I want to read the privacy policy so that I understand data handling.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/politica-confidentialitate and /[locale]/privacy-policy",
+        "Comprehensive content: data collected, purpose, retention, rights, third parties",
+        "Contact info for data protection inquiries",
+        "Last updated date visible",
+        "Bilingual content",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 24,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-025",
+      "title": "Terms of Service Page",
+      "description": "As a visitor, I want to read terms of service so that I understand usage conditions.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/termeni and /[locale]/terms",
+        "Content: service description, user obligations, liability, governing law",
+        "Contact info for legal inquiries",
+        "Last updated date visible",
+        "Linked from footer",
+        "Bilingual content",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 25,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-026",
+      "title": "Cookie Policy Page",
+      "description": "As a visitor, I want to read the cookie policy so that I understand cookie usage.",
+      "acceptanceCriteria": [
+        "Page at /[locale]/politica-cookies and /[locale]/cookie-policy",
+        "List of cookies: essential, analytics, optional",
+        "Purpose and duration of each cookie",
+        "Instructions for managing cookies",
+        "Linked from footer and cookie banner",
+        "Bilingual content",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 26,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-027",
+      "title": "Custom 404 Error Page",
+      "description": "As a visitor, I want a helpful 404 page so that I can navigate back to content.",
+      "acceptanceCriteria": [
+        "Custom 404 page matching site design",
+        "Clear 'Page not found' message",
+        "Link to homepage",
+        "Links to main sections (Services, Contact)",
+        "Navigation suggestions",
+        "Bilingual content",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 27,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-028",
+      "title": "SEO Configuration",
+      "description": "As the firm owner, I want SEO optimization so that clients can find us online.",
+      "acceptanceCriteria": [
+        "XML sitemap generated at /sitemap.xml",
+        "robots.txt configured at /robots.txt",
+        "Structured data (JSON-LD) for Organization and LocalBusiness",
+        "hreflang tags for RO/EN on all pages",
+        "Canonical URLs set",
+        "All images have alt text",
+        "Typecheck passes"
+      ],
+      "priority": 28,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-029",
+      "title": "Supabase Infrastructure Setup",
+      "description": "As a developer, I need Supabase configured for future expansion.",
+      "acceptanceCriteria": [
+        "Supabase client configured in lib/supabase.ts",
+        "Environment variables in .env.local template",
+        "Contact form submissions optionally stored in database",
+        "Database schema documented for future features",
+        "Auth not active but infrastructure ready",
+        "Typecheck passes"
+      ],
+      "priority": 29,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-030",
+      "title": "Error Monitoring with Sentry",
+      "description": "As a developer, I need error tracking so that I can monitor production issues.",
+      "acceptanceCriteria": [
+        "Sentry SDK installed and configured",
+        "Environment variables for Sentry DSN",
+        "Client-side error tracking enabled",
+        "Source maps uploaded for debugging",
+        "Error boundary component created",
+        "Typecheck passes"
+      ],
+      "priority": 30,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-031",
+      "title": "Performance and Accessibility Audit",
+      "description": "As a developer, I need to verify performance targets are met.",
+      "acceptanceCriteria": [
+        "Lighthouse score 90+ on Performance, Accessibility, Best Practices, SEO",
+        "Core Web Vitals: LCP < 2.5s, FID < 100ms, CLS < 0.1",
+        "All images optimized with Next.js Image",
+        "No accessibility violations (run axe-core)",
+        "Mobile-friendly test passes",
+        "Typecheck passes"
+      ],
+      "priority": 31,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}

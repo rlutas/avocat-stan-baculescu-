@@ -1,0 +1,32 @@
+# Ralph Progress Log
+# Project: Stan-Baculescu Law Firm Website
+# Branch: ralph/stan-baculescu-website
+# Started: 2026-01-20
+
+---
+
+## Iteration 1 - US-001: Project Setup and Configuration
+- What was implemented:
+  - Installed next-intl for i18n support
+  - Initialized shadcn/ui with default theme (created lib/utils.ts, components.json)
+  - Created project structure: components/, lib/, messages/
+  - Created placeholder translation files: messages/ro.json, messages/en.json
+  - Installed and configured Prettier with eslint-config-prettier
+  - Added npm scripts: format, format:check, typecheck
+  - Removed auto-generated types/ folder that was causing typecheck errors
+- Files changed:
+  - package.json (added dependencies and scripts)
+  - eslint.config.mjs (added prettier config)
+  - .prettierrc, .prettierignore (new)
+  - messages/ro.json, messages/en.json (new)
+  - components/.gitkeep (new)
+  - lib/utils.ts (created by shadcn/ui)
+  - components.json (created by shadcn/ui)
+  - app/globals.css (updated by shadcn/ui with CSS variables)
+- Learnings for future iterations:
+  - Project uses npm (not pnpm) as package manager
+  - Next.js 16 generates a types/ folder that can cause issues before first dev run
+  - Delete types/ folder if it causes typecheck failures
+  - shadcn/ui automatically creates lib/utils.ts and updates globals.css
+---
+
