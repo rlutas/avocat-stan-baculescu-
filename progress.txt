@@ -30,3 +30,36 @@
   - shadcn/ui automatically creates lib/utils.ts and updates globals.css
 ---
 
+## Iteration 2 - US-002: Internationalization Setup (next-intl)
+- What was implemented:
+  - Created i18n/routing.ts with defineRouting for RO/EN locales, default locale Romanian
+  - Created i18n/request.ts with getRequestConfig for server-side message loading
+  - Created i18n/navigation.ts with createNavigation for locale-aware Link, useRouter, etc.
+  - Created middleware.ts for locale detection and URL prefix routing
+  - Updated next.config.ts with next-intl plugin (createNextIntlPlugin)
+  - Moved app structure to app/[locale]/ for locale-based routing
+  - Created app/[locale]/layout.tsx with NextIntlClientProvider
+  - Created app/[locale]/page.tsx with useTranslations hook
+  - Updated messages/ro.json and messages/en.json with navigation and homepage content
+- Files changed:
+  - i18n/routing.ts (new)
+  - i18n/request.ts (new)
+  - i18n/navigation.ts (new)
+  - middleware.ts (new)
+  - next.config.ts (updated with next-intl plugin)
+  - app/[locale]/layout.tsx (new - moved from app/layout.tsx)
+  - app/[locale]/page.tsx (new - moved from app/page.tsx)
+  - app/layout.tsx (deleted)
+  - app/page.tsx (deleted)
+  - messages/ro.json (updated)
+  - messages/en.json (updated)
+- Learnings for future iterations:
+  - next-intl v4 uses defineRouting from 'next-intl/routing' for configuration
+  - The createNextIntlPlugin requires path to i18n/request.ts
+  - Middleware uses createMiddleware from 'next-intl/middleware'
+  - App structure must be app/[locale]/ for locale prefix routing
+  - NextIntlClientProvider must wrap children in layout.tsx
+  - Clear .next folder when changing app structure to avoid stale type errors
+  - useTranslations hook works in both server and client components
+---
+
