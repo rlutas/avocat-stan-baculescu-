@@ -227,12 +227,12 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a visitor, I want to read the privacy policy so that I understand how my data is collected and used.
 
 **Acceptance Criteria:**
-- [ ] Comprehensive privacy policy page
-- [ ] Sections: data collected, purpose, retention, rights, third parties
-- [ ] Contact information for data protection inquiries
-- [ ] Bilingual content (RO/EN)
-- [ ] Last updated date visible
-- [ ] Typecheck passes
+- [x] Comprehensive privacy policy page
+- [x] Sections: data collected, purpose, retention, rights, third parties
+- [x] Contact information for data protection inquiries
+- [x] Bilingual content (RO/EN)
+- [x] Last updated date visible
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---

@@ -593,6 +593,77 @@
       "subtitle": "Ne gasiti in centrul orasului Satu Mare"
     }
   },
+  "PrivacyPolicy": {
+    "badge": "GDPR Conform",
+    "hero": {
+      "title": "Politica de Confidentialitate",
+      "subtitle": "Respectam confidentialitatea datelor dumneavoastra personale si ne angajam sa le protejam in conformitate cu legislatia europeana si nationala."
+    },
+    "backToHome": "Inapoi la pagina principala",
+    "lastUpdated": "Ultima actualizare",
+    "lastUpdatedDate": "15 Ianuarie 2026",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducere",
+        "content": "Societatea Civila de Avocati Stan-Baculescu (denumita in continuare \"Cabinetul\", \"noi\" sau \"nostru\") se angajeaza sa protejeze confidentialitatea si securitatea datelor dumneavoastra personale. Aceasta Politica de Confidentialitate descrie modul in care colectam, utilizam, stocam si protejam informatiile dumneavoastra atunci cand vizitati site-ul nostru web sau utilizati serviciile noastre juridice."
+      },
+      "dataCollected": {
+        "title": "2. Date Personale Colectate",
+        "content": "Colectam urmatoarele categorii de date personale:",
+        "items": {
+          "item1": "Date de identificare: nume, prenume, adresa de email, numar de telefon",
+          "item2": "Date de contact: adresa postala, adresa de corespondenta",
+          "item3": "Date de navigare: adresa IP, tipul de browser, paginile vizitate, durata vizitei (prin cookie-uri, cu consimtamantul dumneavoastra)",
+          "item4": "Date furnizate voluntar: informatii transmise prin formularul de contact sau in cadrul solicitarilor de servicii juridice",
+          "item5": "Date necesare reprezentarii juridice: informatii relevante pentru dosarele juridice, in cazul in care deveniti client al cabinetului"
+        }
+      },
+      "purpose": {
+        "title": "3. Scopul Prelucrarii Datelor",
+        "content": "Prelucram datele dumneavoastra personale in urmatoarele scopuri:",
+        "items": {
+          "item1": "Furnizarea serviciilor juridice solicitate si gestionarea relatiei contractuale cu clientii",
+          "item2": "Raspunsul la intrebarile si solicitarile primite prin formularul de contact",
+          "item3": "Imbunatatirea site-ului web si a experientei utilizatorilor (cu consimtamantul dumneavoastra pentru cookie-uri de analiza)",
+          "item4": "Indeplinirea obligatiilor legale, inclusiv cele fiscale si contabile"
+        }
+      },
+      "retention": {
+        "title": "4. Perioada de Stocare",
+        "content": "Pastram datele dumneavoastra personale doar pe perioada necesara indeplinirii scopurilor pentru care au fost colectate. Datele din formularele de contact sunt pastrate timp de 2 ani. Datele clientilor sunt pastrate conform obligatiilor legale profesionale (minim 10 ani de la finalizarea reprezentarii). Cookie-urile de analiza expira conform termenelor specificate in Politica de Cookie-uri."
+      },
+      "rights": {
+        "title": "5. Drepturile Dumneavoastra",
+        "content": "Conform Regulamentului General privind Protectia Datelor (GDPR), aveti urmatoarele drepturi:",
+        "items": {
+          "item1": "Dreptul de acces: puteti solicita informatii despre datele personale pe care le detinem despre dumneavoastra",
+          "item2": "Dreptul la rectificare: puteti solicita corectarea datelor inexacte sau incomplete",
+          "item3": "Dreptul la stergere (\"dreptul de a fi uitat\"): puteti solicita stergerea datelor in anumite circumstante",
+          "item4": "Dreptul la restrictionarea prelucrarii: puteti solicita limitarea modului in care utilizam datele dumneavoastra",
+          "item5": "Dreptul la portabilitatea datelor: puteti solicita transferul datelor catre alt operator",
+          "item6": "Dreptul de opozitie: puteti obiecta la prelucrarea datelor in anumite situatii"
+        }
+      },
+      "thirdParties": {
+        "title": "6. Partajarea cu Terti",
+        "content": "Nu vindem si nu inchiriem datele dumneavoastra personale tertilor. Putem partaja date in urmatoarele situatii:",
+        "items": {
+          "item1": "Cu furnizorii de servicii care ne ajuta sa operam site-ul web (de ex. hosting, analiza web) - acestia sunt obligati contractual sa protejeze datele",
+          "item2": "Cu autoritatile competente, atunci cand legea ne obliga",
+          "item3": "Pentru protejarea drepturilor, proprietatii sau sigurantei noastre sau a tertilor"
+        }
+      },
+      "contact": {
+        "title": "7. Contact",
+        "content": "Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau pentru exercitarea drepturilor dumneavoastra, ne puteti contacta la adresa de email office@stanbaculescu.ro sau la sediul nostru din Str. Aurel Popp nr. 2, Satu Mare, Romania."
+      }
+    },
+    "dataProtection": {
+      "title": "Intrebari despre Protectia Datelor?",
+      "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind modul in care prelucram si protejam datele dumneavoastra personale.",
+      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+    }
+  },
   "CookieConsent": {
     "title": "Utilizarea Cookie-urilor",
     "description": "Folosim cookie-uri pentru a va oferi cea mai buna experienta pe site-ul nostru. Cookie-urile esentiale sunt necesare pentru functionarea site-ului, in timp ce cookie-urile de analiza ne ajuta sa intelegem cum utilizati site-ul.",

@@ -593,6 +593,77 @@
       "subtitle": "Find us in the center of Satu Mare"
     }
   },
+  "PrivacyPolicy": {
+    "badge": "GDPR Compliant",
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "We respect the privacy of your personal data and are committed to protecting it in accordance with European and national legislation."
+    },
+    "backToHome": "Back to homepage",
+    "lastUpdated": "Last updated",
+    "lastUpdatedDate": "January 15, 2026",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "Stan-Baculescu Law Firm (hereinafter referred to as \"the Firm\", \"we\" or \"our\") is committed to protecting the privacy and security of your personal data. This Privacy Policy describes how we collect, use, store, and protect your information when you visit our website or use our legal services."
+      },
+      "dataCollected": {
+        "title": "2. Personal Data Collected",
+        "content": "We collect the following categories of personal data:",
+        "items": {
+          "item1": "Identification data: first name, last name, email address, phone number",
+          "item2": "Contact data: postal address, correspondence address",
+          "item3": "Browsing data: IP address, browser type, pages visited, visit duration (through cookies, with your consent)",
+          "item4": "Voluntarily provided data: information submitted through the contact form or in legal service requests",
+          "item5": "Data necessary for legal representation: information relevant to legal files, if you become a client of the firm"
+        }
+      },
+      "purpose": {
+        "title": "3. Purpose of Data Processing",
+        "content": "We process your personal data for the following purposes:",
+        "items": {
+          "item1": "Providing requested legal services and managing the contractual relationship with clients",
+          "item2": "Responding to inquiries and requests received through the contact form",
+          "item3": "Improving the website and user experience (with your consent for analytics cookies)",
+          "item4": "Fulfilling legal obligations, including tax and accounting requirements"
+        }
+      },
+      "retention": {
+        "title": "4. Retention Period",
+        "content": "We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected. Contact form data is retained for 2 years. Client data is retained according to professional legal obligations (minimum 10 years from the end of representation). Analytics cookies expire according to the terms specified in the Cookie Policy."
+      },
+      "rights": {
+        "title": "5. Your Rights",
+        "content": "Under the General Data Protection Regulation (GDPR), you have the following rights:",
+        "items": {
+          "item1": "Right of access: you can request information about the personal data we hold about you",
+          "item2": "Right to rectification: you can request correction of inaccurate or incomplete data",
+          "item3": "Right to erasure (\"right to be forgotten\"): you can request deletion of data in certain circumstances",
+          "item4": "Right to restriction of processing: you can request limitation of how we use your data",
+          "item5": "Right to data portability: you can request transfer of data to another controller",
+          "item6": "Right to object: you can object to processing in certain situations"
+        }
+      },
+      "thirdParties": {
+        "title": "6. Sharing with Third Parties",
+        "content": "We do not sell or rent your personal data to third parties. We may share data in the following situations:",
+        "items": {
+          "item1": "With service providers who help us operate the website (e.g., hosting, web analytics) - they are contractually obligated to protect the data",
+          "item2": "With competent authorities when required by law",
+          "item3": "To protect our rights, property, or safety, or that of third parties"
+        }
+      },
+      "contact": {
+        "title": "7. Contact",
+        "content": "For any questions or requests related to this Privacy Policy or to exercise your rights, you can contact us at the email address office@stanbaculescu.ro or at our office at Str. Aurel Popp nr. 2, Satu Mare, Romania."
+      }
+    },
+    "dataProtection": {
+      "title": "Questions about Data Protection?",
+      "description": "We are at your disposal for any clarifications regarding how we process and protect your personal data.",
+      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+    }
+  },
   "CookieConsent": {
     "title": "Cookie Usage",
     "description": "We use cookies to provide you with the best experience on our website. Essential cookies are necessary for the site to function, while analytics cookies help us understand how you use the site.",
