@@ -439,3 +439,33 @@
   - Responsive design: 1 column mobile, 2 columns tablet, 4 columns desktop
 ---
 
+## Iteration 15 - US-012: Privacy Policy Page
+- What was implemented:
+  - Created /politica-confidentialitate page route with locale support
+  - Hero section with gradient background and GDPR badge
+  - 7 comprehensive sections with icons:
+    1. Introduction - general overview
+    2. Data Collected - types of personal data (5 items)
+    3. Purpose - why data is processed (4 items)
+    4. Retention - how long data is stored
+    5. Your Rights - GDPR rights (6 items)
+    6. Third Parties - data sharing policies (3 items)
+    7. Contact - how to reach data protection officer
+  - Contact section for data protection inquiries with email and address
+  - Last updated date displayed prominently
+  - Full bilingual content (RO/EN) with PrivacyPolicy translations
+  - SEO metadata with generateMetadata (title, description, OG tags)
+- Files changed:
+  - app/[locale]/politica-confidentialitate/page.tsx (new)
+  - messages/ro.json (added PrivacyPolicy translations)
+  - messages/en.json (added PrivacyPolicy translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-012 criteria complete)
+- Learnings for future iterations:
+  - Page uses useTranslations hook for dynamic content
+  - Lucide icons: Shield, Database, Clock, UserCheck, Share2, Mail for sections
+  - Pattern follows existing page structure: Hero + Content sections
+  - Legal pages need comprehensive GDPR-compliant content
+  - Last updated date should be manually maintained in translations
+  - Data protection contact info: office@stanbaculescu.ro
+---
+
