@@ -164,7 +164,7 @@
       ],
       "priority": 10,
       "passes": true,
-      "notes": "Testimonials functionality exists (US-009 complete in PRD). This updates styling only."
+      "notes": "Testimonials using STATIC data (5 curated reviews RO/EN), not Google API. Google Places API integration NOT implemented - would require API key and Places ID from client. Current implementation is acceptable fallback per PRD."
     },
     {
       "id": "US-010-STYLE",
@@ -418,8 +418,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 24,
-      "passes": false,
-      "notes": "Full redesign following hero patterns. Existing functionality preserved."
+      "passes": true,
+      "notes": "Full redesign following hero patterns. Updated services-hero.tsx with navy gradient, gold decorations (gold-pulse/gold-rotate), trust badge with Briefcase icon, two-line headline. Updated services-grid.tsx with fadeInUp animation with staggered delays, card hover effects (lift, gold ring, shadow-xl), gold icon containers. Updated services-cta.tsx with gold decorations, pulse-glow button. Added translation keys: trustBadge, titleLine1, titleLine2 in RO/EN."
     },
     {
       "id": "US-027",

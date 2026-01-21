@@ -258,7 +258,10 @@
   "ServicesPage": {
     "hero": {
       "title": "Legal Services",
+      "titleLine1": "Legal Services",
+      "titleLine2": "Our Practice Areas",
       "subtitle": "Practice Areas",
+      "trustBadge": "8 Practice Areas",
       "description": "We provide comprehensive legal assistance across various areas of law. Our team of specialized attorneys is here to represent your interests with professionalism."
     },
     "viewDetails": "Learn more",

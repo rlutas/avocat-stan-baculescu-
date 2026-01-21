@@ -258,7 +258,10 @@
   "ServicesPage": {
     "hero": {
       "title": "Servicii Juridice",
+      "titleLine1": "Servicii Juridice",
+      "titleLine2": "Ariile Noastre de Practica",
       "subtitle": "Domenii de Practica",
+      "trustBadge": "8 Arii de Practica",
       "description": "Oferim asistenta juridica completa in diverse domenii ale dreptului. Echipa noastra de avocati specializati va sta la dispozitie pentru a va reprezenta interesele cu profesionalism."
     },
     "viewDetails": "Afla mai multe",
