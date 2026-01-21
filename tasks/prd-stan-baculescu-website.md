@@ -150,17 +150,17 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a potential client, I want to easily contact the firm with details about my legal matter so that I can request a consultation.
 
 **Acceptance Criteria:**
-- [ ] Contact form fields: name, email, phone, subject/service area, message
-- [ ] Form validation with clear error messages
-- [ ] Anti-spam protection (honeypot or reCAPTCHA)
+- [x] Contact form fields: name, email, phone, subject/service area, message
+- [x] Form validation with clear error messages
+- [x] Anti-spam protection (honeypot or reCAPTCHA)
 - [ ] Email sent to office@stanbaculescu.ro on submission
-- [ ] Success confirmation message to user
-- [ ] Google Maps integration showing office location (Str. Aurel Popp 2, Satu Mare)
-- [ ] Contact details displayed: phone (+40 261-848-015), email, address
-- [ ] Working hours: Luni-Duminica 09:00-17:00
-- [ ] Social media links (Facebook, Instagram, TikTok)
-- [ ] Bilingual content
-- [ ] Typecheck passes
+- [x] Success confirmation message to user
+- [x] Google Maps integration showing office location (Str. Aurel Popp 2, Satu Mare)
+- [x] Contact details displayed: phone (+40 261-848-015), email, address
+- [x] Working hours: Luni-Duminica 09:00-17:00
+- [x] Social media links (Facebook, Instagram, TikTok)
+- [x] Bilingual content
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---

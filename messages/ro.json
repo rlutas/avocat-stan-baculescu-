@@ -523,5 +523,52 @@
       "description": "Echipa noastra de avocati va sta la dispozitie pentru a va ajuta cu orice intrebare legala.",
       "button": "Contactati-ne"
     }
+  },
+  "ContactPage": {
+    "meta": {
+      "title": "Contact | Cabinet de Avocatura Stan-Baculescu",
+      "description": "Contactati Societatea Civila de Avocati Stan-Baculescu din Satu Mare. Programati o consultatie juridica sau trimiteti-ne un mesaj."
+    },
+    "hero": {
+      "title": "Contactati-ne",
+      "subtitle": "Suntem aici pentru a va ajuta. Completati formularul sau utilizati datele de contact pentru a ne contacta direct."
+    },
+    "form": {
+      "title": "Trimiteti-ne un mesaj",
+      "nameLabel": "Nume complet",
+      "namePlaceholder": "Introduceti numele dumneavoastra",
+      "nameError": "Numele trebuie sa contina cel putin 2 caractere",
+      "emailLabel": "Adresa de email",
+      "emailPlaceholder": "exemplu@email.com",
+      "emailError": "Introduceti o adresa de email valida",
+      "phoneLabel": "Numar de telefon (optional)",
+      "phonePlaceholder": "+40 7XX XXX XXX",
+      "subjectLabel": "Domeniu juridic",
+      "subjectPlaceholder": "Selectati domeniul",
+      "subjectError": "Va rugam selectati un domeniu",
+      "subjectOther": "Altele",
+      "messageLabel": "Mesaj",
+      "messagePlaceholder": "Descrieti pe scurt situatia dumneavoastra juridica...",
+      "messageError": "Mesajul trebuie sa contina cel putin 10 caractere",
+      "submitButton": "Trimite mesajul",
+      "submitting": "Se trimite...",
+      "successTitle": "Mesaj trimis cu succes!",
+      "successMessage": "Va multumim pentru mesaj. Vom reveni cu un raspuns in cel mai scurt timp posibil.",
+      "sendAnother": "Trimite alt mesaj",
+      "errorMessage": "A aparut o eroare la trimiterea mesajului. Va rugam incercati din nou."
+    },
+    "info": {
+      "title": "Informatii de contact",
+      "addressLabel": "Adresa",
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email",
+      "hoursLabel": "Program",
+      "hoursValue": "Luni - Duminica: 09:00 - 17:00",
+      "socialTitle": "Urmariti-ne pe retelele sociale"
+    },
+    "map": {
+      "title": "Locatia noastra",
+      "subtitle": "Ne gasiti in centrul orasului Satu Mare"
+    }
   }
 }
