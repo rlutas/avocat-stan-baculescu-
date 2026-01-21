@@ -35,7 +35,7 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 2,
-      "passes": false,
+      "passes": true,
       "notes": "IMPORTANT: No background image with dark overlay - use solid/gradient navy background instead. Update existing hero.tsx"
     },
     {

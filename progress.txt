@@ -469,3 +469,52 @@
   - Data protection contact info: office@stanbaculescu.ro
 ---
 
+## Iteration 16 - US-000: Apply Style Guide - Base Layout and Theme
+- What was implemented:
+  - Added Playfair Display (headings) and Inter (body) fonts via next/font
+  - Updated globals.css with brand CSS variables:
+    - Primary colors: navy #003a70, gold #d09c11
+    - Extended palette: bg-navy-dark, bg-navy-light, bg-gold-light, etc.
+    - Text colors: text-primary, text-secondary, text-muted, text-light
+    - Border colors: border-light, border-medium, border-gold, border-navy
+  - Configured shadcn/ui theme colors using navy/gold instead of default slate
+  - Added custom shadows (shadow-gold, shadow-gold-lg)
+  - Added custom gradients (gradient-hero, gradient-overlay, gradient-gold, gradient-card)
+  - Added animation keyframes (fadeIn, slideUp, slideDown)
+  - Set typography defaults for h1-h4 to use Playfair Display
+  - Configured focus states for accessibility with gold outline
+- Files changed:
+  - app/[locale]/layout.tsx (updated fonts from Geist to Playfair Display + Inter)
+  - app/globals.css (complete rewrite with brand colors and shadcn/ui theme)
+  - prd.json (marked US-000 complete)
+- Learnings for future iterations:
+  - Tailwind v4 uses CSS-only configuration via @theme directive in globals.css
+  - No tailwind.config.ts needed in Tailwind v4 - configuration done in CSS
+  - Use @theme inline { } to define color tokens that map to Tailwind classes
+  - Font variables (--font-heading, --font-body) must be defined in :root
+  - shadcn/ui HSL colors: --primary: 209 100% 22% (hue saturation% lightness%)
+  - Tailwind v4 color format: --color-navy: #003a70 directly in @theme
+  - Font loading via next/font creates CSS variables that can be referenced in globals.css
+---
+
+## Iteration 17 - US-001-STYLE: Update Hero Section with Style Guide
+- What was implemented:
+  - Removed background image with dark overlay - now uses solid navy gradient
+  - Hero uses gradient: linear-gradient(135deg, #002a52 0%, #003a70 50%, #004a8f 100%)
+  - Headline uses font-heading class for Playfair Display font
+  - Primary CTA button: gold background (#d09c11) with navy text
+  - Secondary CTA: white outline border on navy background
+  - Description text changed from slate-300 to white/90 for better contrast
+  - Removed Image import (no longer needed)
+  - Modern clean design without dated image overlay effects
+- Files changed:
+  - components/hero.tsx (updated)
+  - prd.json (marked US-001-STYLE complete)
+- Learnings for future iterations:
+  - Tailwind v4 arbitrary gradient syntax: bg-[linear-gradient(135deg,...)]
+  - Brand colors defined in globals.css can be used directly: text-gold, bg-gold, text-navy
+  - font-heading class applies Playfair Display from CSS variables
+  - shadow-gold and shadow-gold-lg available for gold button effects
+  - White text at 90% opacity (text-white/90) provides softer contrast than pure white
+---
+
