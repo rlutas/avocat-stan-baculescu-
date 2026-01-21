@@ -116,7 +116,7 @@ export default async function MemberProfilePage({ params }: Props) {
             <div className="mb-8 lg:mb-0 lg:w-1/3">
               <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-navy/50 shadow-2xl">
                 <Image
-                  src={`/images/team/${memberId}.jpg`}
+                  src={`/images/team/${memberId}.png`}
                   alt={t(`members.${memberKey}.name`)}
                   fill
                   className="object-cover"

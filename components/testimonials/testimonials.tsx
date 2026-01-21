@@ -112,7 +112,7 @@ function StarRating({ rating }: { rating: number }) {
           className={cn(
             'h-4 w-4',
             star <= rating
-              ? 'fill-amber-400 text-amber-400'
+              ? 'fill-gold text-gold'
               : 'fill-gray-200 text-gray-200'
           )}
         />
@@ -123,18 +123,18 @@ function StarRating({ rating }: { rating: number }) {
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+    <div className="flex h-full flex-col rounded-xl border border-transparent bg-white p-6 shadow-sm transition-all hover:border-gold hover:shadow-md">
       <div className="mb-4 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-lg font-semibold text-slate-700">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fef9e7] text-lg font-semibold text-navy">
           {testimonial.authorName.charAt(0)}
         </div>
         <div>
-          <p className="font-semibold text-slate-900">{testimonial.authorName}</p>
-          <p className="text-sm text-slate-500">{testimonial.relativeTime}</p>
+          <p className="font-semibold text-navy">{testimonial.authorName}</p>
+          <p className="text-sm text-[#4b5563]">{testimonial.relativeTime}</p>
         </div>
       </div>
       <StarRating rating={testimonial.rating} />
-      <p className="mt-4 flex-grow text-slate-600 leading-relaxed">
+      <p className="mt-4 flex-grow text-[#4b5563] leading-relaxed">
         &ldquo;{testimonial.text}&rdquo;
       </p>
     </div>
@@ -169,17 +169,17 @@ export function Testimonials() {
   const googleMapsUrl = 'https://www.google.com/maps/place/Societatea+Civil%C4%83+de+Avoca%C8%9Bi+Stan-B%C4%83culescu/@47.7897,22.8762,17z';
 
   return (
-    <section className="bg-slate-50 py-16 md:py-24">
+    <section className="bg-[#f8f9fa] py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-amber-600">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-gold">
             {t('subtitle')}
           </p>
-          <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
+          <h2 className="font-heading mb-4 text-3xl font-bold text-navy md:text-4xl">
             {t('title')}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-600">
+          <p className="mx-auto max-w-2xl text-lg text-[#4b5563]">
             {t('description')}
           </p>
         </div>
@@ -217,10 +217,10 @@ export function Testimonials() {
           <div className="mt-6 flex items-center justify-center gap-4">
             <button
               onClick={prevSlide}
-              className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-slate-100"
+              className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-navy/10"
               aria-label={t('previous')}
             >
-              <ChevronLeft className="h-5 w-5 text-slate-600" />
+              <ChevronLeft className="h-5 w-5 text-navy" />
             </button>
 
             {/* Dots */}
@@ -231,7 +231,7 @@ export function Testimonials() {
                   onClick={() => setCurrentIndex(index)}
                   className={cn(
                     'h-2 w-2 rounded-full transition-colors',
-                    index === currentIndex ? 'bg-amber-600' : 'bg-slate-300'
+                    index === currentIndex ? 'bg-gold' : 'bg-navy/20'
                   )}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -240,10 +240,10 @@ export function Testimonials() {
 
             <button
               onClick={nextSlide}
-              className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-slate-100"
+              className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-navy/10"
               aria-label={t('next')}
             >
-              <ChevronRight className="h-5 w-5 text-slate-600" />
+              <ChevronRight className="h-5 w-5 text-navy" />
             </button>
           </div>
         </div>
@@ -253,7 +253,7 @@ export function Testimonials() {
           <Button
             asChild
             variant="outline"
-            className="border-slate-300 text-slate-700 hover:bg-slate-100"
+            className="border-navy text-navy hover:bg-navy hover:text-white"
           >
             <a
               href={googleMapsUrl}
