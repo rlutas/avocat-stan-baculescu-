@@ -24,12 +24,28 @@ export function RelatedArticles({ posts }: RelatedArticlesProps) {
 
   return (
     <section className="py-16 bg-[#f8f9fa]">
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 1s ease-out both;
+        }
+      `}</style>
+
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-heading font-bold text-navy mb-8 text-center">
+        <h2 className="animate-fade-in-up text-2xl md:text-3xl font-heading font-bold text-navy mb-10 text-center">
           {t('relatedArticles')}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {posts.map((post) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {posts.map((post, index) => (
             <BlogCard
               key={post.slug}
               title={post.title}
@@ -39,6 +55,7 @@ export function RelatedArticles({ posts }: RelatedArticlesProps) {
               author={post.author}
               category={post.category}
               image={post.image}
+              index={index}
             />
           ))}
         </div>

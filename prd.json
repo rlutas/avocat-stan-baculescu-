@@ -466,8 +466,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 26,
-      "passes": false,
-      "notes": "Full redesign following hero patterns. MDX/Velite CMS functionality preserved."
+      "passes": true,
+      "notes": "Full redesign following hero patterns. Updated blog-hero.tsx with navy gradient, gold decorations (gold-pulse/gold-rotate), trust badge with FileText icon, two-line headline. Updated blog-card.tsx with rounded-2xl, shimmer effect on hover, fadeInUp animation with staggered delays, card hover effects (lift, gold border, gold ring). Updated blog-grid.tsx with staggered fadeIn delays, gold active states on category filter and pagination. Updated blog-cta.tsx with gold decorations, pulse-glow button. Updated blog-article.tsx with navy hero, gold decorative elements, two-line title, author section with gold accents. Updated social-share.tsx with gold accent on copy link button, Share2 icon. Updated related-articles.tsx with staggered card animations. Added translation keys: trustBadge, titleLine1, titleLine2, article.writtenBy, article.publishedOn in RO/EN."
     },
     {
       "id": "US-029",

@@ -548,8 +548,15 @@
   },
   "BlogPage": {
     "hero": {
+      "trustBadge": "Legal Articles & News",
+      "titleLine1": "Legal",
+      "titleLine2": "Blog",
       "title": "Legal Blog",
       "subtitle": "Useful articles and information about your rights"
+    },
+    "article": {
+      "writtenBy": "Written by",
+      "publishedOn": "Published on"
     },
     "readMore": "Read article",
     "allCategories": "All categories",

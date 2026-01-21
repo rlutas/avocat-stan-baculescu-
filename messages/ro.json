@@ -548,8 +548,15 @@
   },
   "BlogPage": {
     "hero": {
+      "trustBadge": "Articole & Noutati Juridice",
+      "titleLine1": "Blog",
+      "titleLine2": "Juridic",
       "title": "Blog Juridic",
       "subtitle": "Articole si informatii utile despre drepturile dumneavoastra"
+    },
+    "article": {
+      "writtenBy": "Scris de",
+      "publishedOn": "Publicat la"
     },
     "readMore": "Citeste articolul",
     "allCategories": "Toate categoriile",
