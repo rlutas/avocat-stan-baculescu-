@@ -730,6 +730,7 @@
   },
   "CookieConsent": {
     "title": "Cookie Usage",
+    "subtitle": "Manage your preferences",
     "description": "We use cookies to provide you with the best experience on our website. Essential cookies are necessary for the site to function, while analytics cookies help us understand how you use the site.",
     "learnMore": "Learn more",
     "acceptAll": "Accept all",

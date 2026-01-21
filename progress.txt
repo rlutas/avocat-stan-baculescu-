@@ -1417,3 +1417,37 @@
   - Divider background color (bg-navy) must match page background for transparency effect
   - Use min-h-[80vh] for 404 page to allow space for header/footer
 ---
+
+## Iteration 47 - US-035: Cookie Consent Banner - Full Design Update
+- What was implemented:
+  - Redesigned cookie consent banner with navy header and gold decorative elements
+  - SlideUp animation (0.4s ease-out) on banner appear
+  - SlideDown animation (0.3s ease-in) on banner dismiss
+  - FadeIn/FadeOut animations for backdrop
+  - Navy header with gold Cookie icon in rounded-xl container
+  - Gold decorative circles in header (gold-pulse animation)
+  - Title with font-heading class, subtitle added below title
+  - Gold toggle switches replacing checkboxes for cookie preferences
+  - Category icons: Shield (essential), BarChart3 (analytics), Megaphone (marketing)
+  - Icon containers with hover effects (bg changes to gold with navy icon)
+  - Accept All button with pulse-glow animation (2s infinite)
+  - Secondary buttons with navy border, hover fills navy with white text
+  - isClosing state for proper exit animation timing (300ms delay before hide)
+  - Added subtitle translation key (RO: "Gestioneaza preferintele tale", EN: "Manage your preferences")
+  - Responsive: modal centered on desktop, bottom-aligned on mobile
+- Files changed:
+  - components/cookie-consent/cookie-consent.tsx (major update with animations and design)
+  - messages/ro.json (added subtitle key to CookieConsent)
+  - messages/en.json (added subtitle key to CookieConsent)
+  - prd.json (marked US-035 complete)
+- Learnings for future iterations:
+  - Use isClosing state with setTimeout for proper exit animation timing
+  - SlideUp/slideDown animations for modal entry/exit (translateY 100px)
+  - FadeIn/fadeOut for backdrop overlay
+  - Custom ToggleSwitch component with bg-gold when checked, bg-gray-200 when unchecked
+  - Toggle switch uses translate-x-5 for checked state, translate-x-0 for unchecked
+  - Navy header pattern: bg-navy with gold/10 decorative circles
+  - Category cards clickable (onClick on container) with toggle inside
+  - Group hover effects: icon container changes from light gold to gold bg
+  - Animation delays handled with setTimeout for proper sequencing
+---

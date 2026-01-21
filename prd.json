@@ -614,8 +614,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 33,
-      "passes": false,
-      "notes": "Design update for cookie consent following hero patterns."
+      "passes": true,
+      "notes": "Full redesign with slideUp/slideDown animations, fadeIn/fadeOut for backdrop, navy header with gold decorative elements, gold toggle switches replacing checkboxes, pulse-glow animation on Accept All button, category icons (Shield, BarChart3, Megaphone) with hover effects. Added subtitle translation key (RO/EN). Responsive design maintained."
     }
   ]
 }

@@ -730,6 +730,7 @@
   },
   "CookieConsent": {
     "title": "Utilizarea Cookie-urilor",
+    "subtitle": "Gestioneaza preferintele tale",
     "description": "Folosim cookie-uri pentru a va oferi cea mai buna experienta pe site-ul nostru. Cookie-urile esentiale sunt necesare pentru functionarea site-ului, in timp ce cookie-urile de analiza ne ajuta sa intelegem cum utilizati site-ul.",
     "learnMore": "Aflati mai multe",
     "acceptAll": "Accepta toate",
