@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, ArrowRight } from 'lucide-react';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -100,7 +100,22 @@ export function ContactForm() {
 
   if (submitStatus === 'success') {
     return (
-      <div className="rounded-2xl bg-white p-8 text-center shadow-xl">
+      <div className="animate-fade-in-up rounded-2xl bg-white p-8 text-center shadow-xl">
+        <style jsx>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out both;
+          }
+        `}</style>
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#fef9e7]">
           <CheckCircle className="h-8 w-8 text-gold" />
         </div>
@@ -122,14 +137,41 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-2xl bg-white p-8 shadow-xl"
+      className="animate-fade-in-up rounded-2xl bg-white p-8 shadow-xl transition-all duration-300 hover:shadow-2xl"
     >
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 4px 15px rgba(208, 156, 17, 0.3);
+          }
+          50% {
+            box-shadow: 0 6px 25px rgba(208, 156, 17, 0.6);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 1s ease-out both;
+        }
+        .animate-pulse-glow {
+          animation: pulse-glow 1.5s ease-in-out infinite;
+        }
+      `}</style>
+
       <h2 className="font-heading mb-6 text-2xl font-bold text-navy">
         {t('title')}
       </h2>
 
       {submitStatus === 'error' && (
-        <div className="mb-6 flex items-center gap-3 rounded-lg bg-red-50 p-4 text-red-700">
+        <div className="mb-6 flex items-center gap-3 rounded-xl bg-red-50 p-4 text-red-700 border border-red-200">
           <AlertCircle className="h-5 w-5 flex-shrink-0" />
           <p>{t('errorMessage')}</p>
         </div>
@@ -138,13 +180,13 @@ export function ContactForm() {
       <div className="space-y-5">
         {/* Name Field */}
         <div>
-          <Label htmlFor="name" className="text-[#1f2937]">
+          <Label htmlFor="name" className="text-navy font-medium">
             {t('nameLabel')} <span className="text-red-500">*</span>
           </Label>
           <Input
             id="name"
             {...register('name')}
-            className={`mt-1.5 focus:border-navy focus-visible:ring-gold ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+            className={`mt-1.5 rounded-xl border-gray-200 focus:border-navy focus-visible:ring-gold transition-all ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
             placeholder={t('namePlaceholder')}
           />
           {errors.name && (
@@ -154,14 +196,14 @@ export function ContactForm() {
 
         {/* Email Field */}
         <div>
-          <Label htmlFor="email" className="text-[#1f2937]">
+          <Label htmlFor="email" className="text-navy font-medium">
             {t('emailLabel')} <span className="text-red-500">*</span>
           </Label>
           <Input
             id="email"
             type="email"
             {...register('email')}
-            className={`mt-1.5 focus:border-navy focus-visible:ring-gold ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+            className={`mt-1.5 rounded-xl border-gray-200 focus:border-navy focus-visible:ring-gold transition-all ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
             placeholder={t('emailPlaceholder')}
           />
           {errors.email && (
@@ -171,26 +213,26 @@ export function ContactForm() {
 
         {/* Phone Field */}
         <div>
-          <Label htmlFor="phone" className="text-[#1f2937]">
+          <Label htmlFor="phone" className="text-navy font-medium">
             {t('phoneLabel')}
           </Label>
           <Input
             id="phone"
             type="tel"
             {...register('phone')}
-            className="mt-1.5 focus:border-navy focus-visible:ring-gold"
+            className="mt-1.5 rounded-xl border-gray-200 focus:border-navy focus-visible:ring-gold transition-all"
             placeholder={t('phonePlaceholder')}
           />
         </div>
 
         {/* Subject Field */}
         <div>
-          <Label htmlFor="subject" className="text-[#1f2937]">
+          <Label htmlFor="subject" className="text-navy font-medium">
             {t('subjectLabel')} <span className="text-red-500">*</span>
           </Label>
           <Select onValueChange={(value) => setValue('subject', value)}>
             <SelectTrigger
-              className={`mt-1.5 focus:border-navy focus:ring-gold ${errors.subject ? 'border-red-500 focus:ring-red-500' : ''}`}
+              className={`mt-1.5 rounded-xl border-gray-200 focus:border-navy focus:ring-gold transition-all ${errors.subject ? 'border-red-500 focus:ring-red-500' : ''}`}
             >
               <SelectValue placeholder={t('subjectPlaceholder')} />
             </SelectTrigger>
@@ -211,13 +253,13 @@ export function ContactForm() {
 
         {/* Message Field */}
         <div>
-          <Label htmlFor="message" className="text-[#1f2937]">
+          <Label htmlFor="message" className="text-navy font-medium">
             {t('messageLabel')} <span className="text-red-500">*</span>
           </Label>
           <Textarea
             id="message"
             {...register('message')}
-            className={`mt-1.5 min-h-[150px] resize-none focus:border-navy focus-visible:ring-gold ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+            className={`mt-1.5 min-h-[150px] resize-none rounded-xl border-gray-200 focus:border-navy focus-visible:ring-gold transition-all ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
             placeholder={t('messagePlaceholder')}
           />
           {errors.message && (
@@ -238,7 +280,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={submitStatus === 'loading'}
-          className="h-12 w-full bg-gold text-base font-semibold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]"
+          className="group animate-pulse-glow h-14 w-full rounded-full bg-gold text-base font-semibold text-navy hover:bg-gold/90 transition-all duration-300"
         >
           {submitStatus === 'loading' ? (
             <span className="flex items-center gap-2">
@@ -264,9 +306,10 @@ export function ContactForm() {
               {t('submitting')}
             </span>
           ) : (
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               <Send className="h-5 w-5" />
               {t('submitButton')}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
           )}
         </Button>

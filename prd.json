@@ -490,8 +490,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 27,
-      "passes": false,
-      "notes": "Full redesign following hero patterns. Form functionality preserved."
+      "passes": true,
+      "notes": "Full redesign following hero patterns. Updated contact-hero.tsx with navy gradient, gold decorative elements (gold-pulse/gold-rotate), trust badge with Phone icon, two-line headline with fadeInUp animations. Updated contact-info.tsx with card hover effects (lift, gold ring, gold shadow), gold icons with hover transitions, social media buttons with gold hover. Updated contact-form.tsx with pulse-glow button, rounded-xl inputs, fadeInUp animations. Updated contact-map.tsx with gold ring border accent, badge with MapPin icon, fadeInUp animation. Updated contact page layout with floating badges (response time, free consultation) with float animations. Added translation keys: trustBadge, titleLine1, titleLine2, floatingBadges.response, floatingBadges.consultation, map.badge in RO/EN."
     },
     {
       "id": "US-030",

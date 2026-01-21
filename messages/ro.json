@@ -600,8 +600,15 @@
       "description": "Contactati Societatea Civila de Avocati Stan-Baculescu din Satu Mare. Programati o consultatie juridica sau trimiteti-ne un mesaj."
     },
     "hero": {
+      "trustBadge": "Contactati-ne",
+      "titleLine1": "Programeaza o",
+      "titleLine2": "Consultatie",
       "title": "Contactati-ne",
       "subtitle": "Suntem aici pentru a va ajuta. Completati formularul sau utilizati datele de contact pentru a ne contacta direct."
+    },
+    "floatingBadges": {
+      "response": "Raspundem in 24h",
+      "consultation": "Consultatie Gratuita"
     },
     "form": {
       "title": "Trimiteti-ne un mesaj",
@@ -637,6 +644,7 @@
       "socialTitle": "Urmariti-ne pe retelele sociale"
     },
     "map": {
+      "badge": "Locatie",
       "title": "Locatia noastra",
       "subtitle": "Ne gasiti in centrul orasului Satu Mare"
     }

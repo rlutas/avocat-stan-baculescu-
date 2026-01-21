@@ -6,6 +6,7 @@ import {
   ContactInfo,
   ContactMap,
 } from '@/components/contact';
+import { Clock, Gift } from 'lucide-react';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -52,12 +53,71 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
+      <style>{`
+        @keyframes float-up {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+        @keyframes float-down {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+        }
+        @keyframes badgeFadeIn {
+          from {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-float-up {
+          animation: float-up 4s ease-in-out infinite;
+        }
+        .animate-float-down {
+          animation: float-down 4s ease-in-out infinite;
+        }
+        .animate-badge {
+          animation: badgeFadeIn 0.8s ease-out both;
+        }
+      `}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ContactHero />
-      <section className="py-16 sm:py-24">
+      <section className="relative py-16 sm:py-24">
+        {/* Floating Badges - Desktop only */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          {/* Left Badge */}
+          <div className="animate-badge animate-float-up absolute left-4 top-32 hidden xl:block" style={{ animationDelay: '900ms' }}>
+            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-lg ring-1 ring-gold/20">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fef9e7]">
+                <Clock className="h-4 w-4 text-gold" />
+              </div>
+              <span className="text-sm font-semibold text-navy">{t('floatingBadges.response')}</span>
+            </div>
+          </div>
+          {/* Right Badge */}
+          <div className="animate-badge animate-float-down absolute right-4 top-48 hidden xl:block" style={{ animationDelay: '1000ms' }}>
+            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-lg ring-1 ring-gold/20">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fef9e7]">
+                <Gift className="h-4 w-4 text-gold" />
+              </div>
+              <span className="text-sm font-semibold text-navy">{t('floatingBadges.consultation')}</span>
+            </div>
+          </div>
+        </div>
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <ContactForm />

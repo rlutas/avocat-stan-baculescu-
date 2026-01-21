@@ -600,8 +600,15 @@
       "description": "Contact Stan-Baculescu Law Firm in Satu Mare. Schedule a legal consultation or send us a message."
     },
     "hero": {
+      "trustBadge": "Contact Us",
+      "titleLine1": "Schedule a",
+      "titleLine2": "Consultation",
       "title": "Contact Us",
       "subtitle": "We are here to help. Fill out the form or use the contact details to reach us directly."
+    },
+    "floatingBadges": {
+      "response": "We Respond in 24h",
+      "consultation": "Free Consultation"
     },
     "form": {
       "title": "Send us a message",
@@ -637,6 +644,7 @@
       "socialTitle": "Follow us on social media"
     },
     "map": {
+      "badge": "Location",
       "title": "Our location",
       "subtitle": "Find us in the center of Satu Mare"
     }
