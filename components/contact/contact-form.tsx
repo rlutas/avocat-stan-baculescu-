@@ -70,9 +70,17 @@ export function ContactForm() {
     setSubmitStatus('loading');
 
     try {
-      // For now, just simulate a successful submission
-      // TODO: Implement email sending with Resend in US-018
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
 
       setSubmitStatus('success');
       reset();

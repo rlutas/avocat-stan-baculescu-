@@ -618,3 +618,78 @@
   - Back link hover: text-white/70 hover:text-gold
 ---
 
+## Iteration 22 - US-007-STYLE: Update Blog Section with Style Guide
+- What was implemented:
+  - Updated blog-hero.tsx: navy gradient background, gold subtitle, font-heading for h1
+  - Updated blog-card.tsx: white bg, gold category badge on light gold (#fef9e7), navy title with font-heading, gold hover border
+  - Updated blog-grid.tsx: off-white (#f8f9fa) section, gold active state for category filter, navy/gold pagination
+  - Updated blog-cta.tsx: navy gradient, font-heading for title, gold CTA button with gold shadow
+  - Updated blog-article.tsx: gold category tag, navy headings with font-heading, updated prose styling for navy/gold scheme
+  - Updated social-share.tsx: navy/gold scheme for social buttons (navy bg on hover), gold copy link button
+  - Updated related-articles.tsx: off-white bg, navy heading with font-heading
+- Files changed:
+  - components/blog/blog-hero.tsx
+  - components/blog/blog-card.tsx
+  - components/blog/blog-grid.tsx
+  - components/blog/blog-cta.tsx
+  - components/blog/blog-article.tsx
+  - components/blog/social-share.tsx
+  - components/blog/related-articles.tsx
+  - prd.json (marked US-007-STYLE complete)
+- Learnings for future iterations:
+  - Blog cards follow same pattern as service/team cards: border border-transparent hover:border-gold
+  - Category filter pills: bg-gold text-navy when active, white with navy text when inactive
+  - Prose styling accepts custom colors via arbitrary values: prose-headings:text-navy, prose-a:text-gold
+  - Social share buttons: bg-navy/10 text-navy hover:bg-navy hover:text-white for consistent navy scheme
+  - Copy link button uses gold scheme: bg-gold/10 text-gold hover:bg-gold hover:text-navy
+---
+
+## Iteration 23 - US-008-STYLE: Update Contact Page with Style Guide
+- What was implemented:
+  - Updated contact-hero.tsx: navy gradient background (linear-gradient 135deg), gold accents, gold subtitle text, font-heading for h1
+  - Updated contact-form.tsx: navy headings with font-heading, navy border on focus, gold ring for active state, gold submit button with navy text and gold shadow
+  - Updated contact-info.tsx: navy headings with font-heading, gold icons on light gold background (#fef9e7), navy/gold social media buttons
+  - Updated contact-map.tsx: off-white (#f8f9fa) section background, navy heading with font-heading
+- Files changed:
+  - components/contact/contact-hero.tsx
+  - components/contact/contact-form.tsx
+  - components/contact/contact-info.tsx
+  - components/contact/contact-map.tsx
+  - prd.json (marked US-008-STYLE complete)
+- Learnings for future iterations:
+  - Form inputs use focus:border-navy and focus-visible:ring-gold for brand styling
+  - Submit button pattern: bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]
+  - Social media buttons: bg-navy/10 text-navy hover:bg-gold hover:text-navy
+  - Light gold icon background: bg-[#fef9e7]
+  - Contact page follows same styling patterns as other pages
+---
+
+## Iteration 24 - US-008-EMAIL: Complete Contact Form Email Integration
+- What was implemented:
+  - Installed Resend package for email sending
+  - Created API route at /api/contact/route.ts for form submissions
+  - Formatted HTML email with professional styling (navy/gold brand colors)
+  - Email includes: sender name, email, phone (if provided), subject/service area, message, timestamp
+  - Plain text fallback for email clients
+  - Honeypot anti-spam check at API level
+  - HTML escaping to prevent XSS in email content
+  - Reply-To header set to sender's email for easy response
+  - Error handling with appropriate HTTP status codes
+  - Updated contact-form.tsx to call API instead of simulating submission
+  - Created .env.example with RESEND_API_KEY documentation
+- Files changed:
+  - app/api/contact/route.ts (new)
+  - components/contact/contact-form.tsx (updated)
+  - .env.example (new)
+  - package.json (added resend dependency)
+  - prd.json (marked US-008-EMAIL complete)
+- Learnings for future iterations:
+  - Resend uses simple API: resend.emails.send({ from, to, subject, html, text })
+  - Must verify FROM_EMAIL domain in Resend dashboard before sending
+  - Use replyTo field so recipient can reply directly to the form submitter
+  - HTML escaping prevents XSS: &, <, >, ", ' need escaping
+  - Include plain text version for email clients that don't support HTML
+  - API routes in Next.js App Router: app/api/[route]/route.ts with POST function
+  - Environment variable RESEND_API_KEY needed in production
+---
+
