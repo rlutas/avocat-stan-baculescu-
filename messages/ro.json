@@ -287,5 +287,222 @@
       "description": "Contactati-ne pentru o consultatie initiala. Echipa noastra de avocati va sta la dispozitie pentru a va ajuta.",
       "button": "Contactati-ne"
     }
+  },
+  "ServiceDetail": {
+    "backToServices": "Inapoi la Servicii",
+    "relatedServices": "Servicii Conexe",
+    "cta": {
+      "title": "Aveti nevoie de asistenta juridica?",
+      "description": "Contactati-ne pentru o consultatie gratuita. Echipa noastra de avocati specializati va sta la dispozitie.",
+      "button": "Programeaza o Consultatie"
+    },
+    "malpraxis-medical": {
+      "title": "Malpraxis Medical",
+      "subtitle": "Reprezentare profesionala in cazuri de neglijenta medicala pentru obtinerea despagubirilor cuvenite.",
+      "meta": {
+        "title": "Malpraxis Medical | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Reprezentare specializata in cazuri de malpraxis medical. Obtineti despagubirile cuvenite pentru neglijenta medicala cu ajutorul avocatilor nostri experti din Satu Mare."
+      },
+      "descriptionTitle": "Ce este Malpraxisul Medical?",
+      "description": "Malpraxisul medical reprezinta o eroare sau neglijenta din partea unui profesionist din domeniul sanatatii care cauzeaza prejudicii pacientului. Aceste cazuri pot include diagnostice gresite, erori chirurgicale, prescrierea gresita a medicamentelor, lipsa consimtamantului informat sau ingrijire deficitara. Cabinetul nostru are experienta extinsa in reprezentarea victimelor malpraxisului medical, ajutandu-le sa obtina despagubirile cuvenite pentru suferinta fizica, emotionala si financiara provocata.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Erori de diagnostic sau diagnostic intarziat",
+        "case2": "Greseli chirurgicale si complicatii post-operatorii",
+        "case3": "Erori in administrarea medicamentelor",
+        "case4": "Neglijenta in timpul nasterii",
+        "case5": "Infectii dobandite in spital",
+        "case6": "Lipsa consimtamantului informat"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Analizam dosarul medical complet si consultam experti medicali independenti pentru a evalua cazul.",
+        "point2": "Documentam prejudiciul suferit si calculam despagubirile cuvenite (costuri medicale, venituri pierdute, daune morale).",
+        "point3": "Negociem cu societatile de asigurare sau reprezentam clientul in instanta pentru obtinerea compensatiei.",
+        "point4": "Va tinem la curent cu fiecare etapa a procesului si va oferim suport pe toata durata cazului."
+      }
+    },
+    "drept-civil": {
+      "title": "Drept Civil",
+      "subtitle": "Consultanta si reprezentare completa in toate aspectele dreptului civil si litigiilor civile.",
+      "meta": {
+        "title": "Drept Civil | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Servicii complete de drept civil: litigii, contracte, proprietate, succesiuni. Avocati specializati in Satu Mare cu experienta vasta in instanta."
+      },
+      "descriptionTitle": "Servicii de Drept Civil",
+      "description": "Dreptul civil reglementeaza raporturile dintre persoane fizice si juridice in ceea ce priveste proprietatea, contractele, obligatiile si raspunderea civila. Echipa noastra ofera consultanta si reprezentare in toate domeniile dreptului civil, de la redactarea si negocierea contractelor pana la solutionarea litigiilor in instanta. Cu o experienta de peste 15 ani, am reprezentat cu succes sute de clienti in cauze civile diverse.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Litigii privind proprietatea si revendicarile imobiliare",
+        "case2": "Redactarea si negocierea contractelor civile",
+        "case3": "Succesiuni, mosteniri si partaje",
+        "case4": "Despagubiri pentru prejudicii cauzate",
+        "case5": "Executari silite si recuperare creante",
+        "case6": "Litigii de vecinatate si servituti"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Analizam situatia dumneavoastra si identificam toate optiunile legale disponibile.",
+        "point2": "Elaboram o strategie adaptata obiectivelor si circumstantelor specifice ale cazului.",
+        "point3": "Reprezentam interesele dumneavoastra in negocieri, mediere sau in fata instantelor de judecata.",
+        "point4": "Urmarim executarea hotararilor judecatoresti pentru a va asigura ca drepturile va sunt respectate."
+      }
+    },
+    "drept-penal": {
+      "title": "Drept Penal",
+      "subtitle": "Aparare eficienta in procese penale si asistenta juridica specializata la toate etapele procedurii.",
+      "meta": {
+        "title": "Drept Penal | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Aparare penala profesionala in Satu Mare. Asistenta la audieri, reprezentare in instanta, recursuri. Avocat penal cu experienta."
+      },
+      "descriptionTitle": "Servicii de Drept Penal",
+      "description": "Dreptul penal este unul dintre cele mai complexe si sensibile domenii juridice, unde libertatea si reputatia unei persoane sunt puse in joc. Echipa noastra ofera aparare penala profesionala, de la asistenta in faza de urmarire penala pana la reprezentare in instanta si caile de atac. Ne asiguram ca drepturile dumneavoastra sunt respectate pe parcursul intregii proceduri penale.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Infractiuni contra persoanei (vatamari corporale, amenintari)",
+        "case2": "Infractiuni contra patrimoniului (furt, inselaciune, delapidare)",
+        "case3": "Infractiuni economice si de evaziune fiscala",
+        "case4": "Infractiuni rutiere (conducere sub influenta alcoolului)",
+        "case5": "Infractiuni informatice",
+        "case6": "Reprezentare victime in procese penale"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Oferim asistenta juridica imediata si confidentiala de la primul contact.",
+        "point2": "Analizam probele si identificam eventualele vicii de procedura sau incalcari ale drepturilor.",
+        "point3": "Elaboram o strategie de aparare personalizata, adaptata circumstantelor cazului.",
+        "point4": "Va reprezentam in fata organelor de urmarire penala si in toate fazele procesului."
+      }
+    },
+    "drept-familiei": {
+      "title": "Dreptul Familiei",
+      "subtitle": "Asistenta juridica sensibila si profesionala in toate aspectele legate de familie si relatii.",
+      "meta": {
+        "title": "Dreptul Familiei | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Divorturi, custodie, pensii alimentare, partaj. Avocat specializat in dreptul familiei in Satu Mare. Abordare sensibila si profesionala."
+      },
+      "descriptionTitle": "Servicii de Dreptul Familiei",
+      "description": "Problemele de familie sunt printre cele mai delicate si emotionale situatii juridice. Echipa noastra abordeaza fiecare caz cu sensibilitate si profesionalism, intelegand impactul emotional pe care aceste situatii il au asupra clientilor nostri. Oferim solutii care protejeaza interesele dumneavoastra si ale copiilor, incercand ori de cate ori este posibil sa gasim solutii amiabile.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Divorturi prin acord sau pe cale judiciara",
+        "case2": "Custodia si programul de vizita al copiilor",
+        "case3": "Stabilirea si modificarea pensiei alimentare",
+        "case4": "Partajul bunurilor comune",
+        "case5": "Recunoasterea sau contestarea paternitatii",
+        "case6": "Adoptii si tutela"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Ascultam si intelegem situatia dumneavoastra cu empatie si fara judecata.",
+        "point2": "Exploram toate optiunile, inclusiv medierea, pentru a gasi solutii amiabile cand este posibil.",
+        "point3": "Protejam cu prioritate interesul superior al copiilor in toate deciziile.",
+        "point4": "Va reprezentam ferm in instanta atunci cand negocierile nu sunt posibile."
+      }
+    },
+    "dreptul-muncii": {
+      "title": "Dreptul Muncii",
+      "subtitle": "Protectia drepturilor dumneavoastra in relatiile de munca si reprezentare in litigiile cu angajatorul.",
+      "meta": {
+        "title": "Dreptul Muncii | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Consultanta si reprezentare in dreptul muncii. Concedieri abuzive, drepturi salariale, hartuire la locul de munca. Avocat specializat Satu Mare."
+      },
+      "descriptionTitle": "Servicii de Dreptul Muncii",
+      "description": "Relatiile de munca sunt reglementate de norme speciale menite sa protejeze atat angajatii, cat si angajatorii. Cabinetul nostru ofera consultanta si reprezentare in toate aspectele dreptului muncii, ajutand angajatii sa-si apere drepturile si angajatorii sa respecte legislatia in vigoare. Avem experienta in negocierea contractelor, solutionarea conflictelor si reprezentarea in litigiile de munca.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Concedieri abuzive sau nelegale",
+        "case2": "Recuperarea drepturilor salariale restante",
+        "case3": "Hartuire si discriminare la locul de munca",
+        "case4": "Accidente de munca si boli profesionale",
+        "case5": "Negocierea contractelor individuale si colective",
+        "case6": "Restructurari si disponibilizari colective"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Analizam contractul de munca si documentele relevante pentru a identifica incalcarile.",
+        "point2": "Incercam sa solutionam conflictul pe cale amiabila prin negociere sau mediere.",
+        "point3": "Reprezentam clientul in fata Inspectoratului Teritorial de Munca si in instanta.",
+        "point4": "Urmarim executarea hotararilor pentru a asigura recuperarea efectiva a drepturilor."
+      }
+    },
+    "drept-comercial": {
+      "title": "Drept Comercial",
+      "subtitle": "Consultanta strategica si reprezentare pentru afaceri si societati comerciale.",
+      "meta": {
+        "title": "Drept Comercial | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Consultanta juridica pentru afaceri: contracte comerciale, litigii, insolventa, fuziuni. Cabinet de avocatura specializat in Satu Mare."
+      },
+      "descriptionTitle": "Servicii de Drept Comercial",
+      "description": "Mediul de afaceri necesita consiliere juridica strategica si proactiva. Cabinetul nostru ofera servicii complete de drept comercial, de la infiintarea societatilor si redactarea contractelor pana la solutionarea litigiilor comerciale si procedurile de insolventa. Intelegem ca timpul inseamna bani in afaceri, de aceea oferim solutii eficiente si pragmatice.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Constituirea si modificarea societatilor comerciale",
+        "case2": "Redactarea si negocierea contractelor comerciale",
+        "case3": "Litigii comerciale si arbitraj",
+        "case4": "Proceduri de insolventa si faliment",
+        "case5": "Fuziuni, achizitii si restructurari",
+        "case6": "Recuperarea creantelor comerciale"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Intelegem obiectivele de afaceri si oferim consiliere juridica aliniata strategiei dumneavoastra.",
+        "point2": "Redactam contracte clare care protejeaza interesele si minimizeaza riscurile.",
+        "point3": "Reprezentam interesele comerciale in negocieri, mediere sau instanta.",
+        "point4": "Oferim solutii rapide si eficiente pentru a minimiza impactul asupra afacerii."
+      }
+    },
+    "accidente-rutiere": {
+      "title": "Accidente Rutiere",
+      "subtitle": "Reprezentarea victimelor accidentelor de circulatie pentru obtinerea despagubirilor complete.",
+      "meta": {
+        "title": "Accidente Rutiere | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Reprezentare victime accidente rutiere. Obtineti despagubiri de la asigurator: daune materiale, morale, venituri pierdute. Avocat specializat Satu Mare."
+      },
+      "descriptionTitle": "Servicii pentru Victime ale Accidentelor Rutiere",
+      "description": "Accidentele rutiere pot avea consecinte devastatoare pentru victime si familiile acestora. Cabinetul nostru este specializat in reprezentarea victimelor accidentelor de circulatie, ajutandu-le sa obtina despagubirile complete la care au dreptul de la societatile de asigurare sau de la vinovati. Ne ocupam de toate aspectele juridice pentru ca dumneavoastra sa va puteti concentra pe recuperare.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Vatamari corporale suferite in accidente rutiere",
+        "case2": "Daune materiale (vehicule, bunuri personale)",
+        "case3": "Despagubiri pentru pierderea capacitatii de munca",
+        "case4": "Despagubiri pentru urmasi in caz de deces",
+        "case5": "Contestarea deciziilor societatilor de asigurare",
+        "case6": "Accidente cu vehicule neasigurate sau fugate"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Documentam complet prejudiciul suferit: daune materiale, medicale, venituri pierdute.",
+        "point2": "Negociem direct cu societatile de asigurare pentru obtinerea despagubirilor maxime.",
+        "point3": "Reprezentam victima in instanta daca asiguratorul refuza plata corecta.",
+        "point4": "Va asistam pe intreaga durata a procesului, fara costuri initiale in multe cazuri."
+      }
+    },
+    "drept-administrativ-fiscal": {
+      "title": "Drept Administrativ si Fiscal",
+      "subtitle": "Reprezentare in fata autoritatilor si contestarea deciziilor administrative si fiscale.",
+      "meta": {
+        "title": "Drept Administrativ si Fiscal | Cabinet de Avocatura Stan-Baculescu",
+        "description": "Contestatii administrative si fiscale, litigii cu ANAF, reprezentare in fata autoritatilor. Avocat specializat in drept fiscal Satu Mare."
+      },
+      "descriptionTitle": "Servicii de Drept Administrativ si Fiscal",
+      "description": "Relatia cu autoritatile statului poate fi complexa si intimidanta. Cabinetul nostru ofera reprezentare profesionala in fata organelor administrative si fiscale, contestand deciziile ilegale si aparand drepturile contribuabililor. Cu o intelegere profunda a legislatiei administrative si fiscale, va ajutam sa navigati prin procedurile birocratice si sa va aparati interesele.",
+      "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
+      "cases": {
+        "case1": "Contestarea deciziilor de impunere ale ANAF",
+        "case2": "Litigii fiscale si recuperarea sumelor platite necuvenit",
+        "case3": "Contestarea amenzilor si sanctiunilor contraventionale",
+        "case4": "Autorizatii si permise refuzate de autoritati",
+        "case5": "Exproprieri si despagubiri pentru utilitate publica",
+        "case6": "Contencios administrativ si actiuni impotriva autoritatilor"
+      },
+      "approachTitle": "Abordarea Noastra",
+      "approach": {
+        "point1": "Analizam decizia administrativa sau fiscala si identificam temeiurile de contestare.",
+        "point2": "Pregatim contestatia administrativa in termenele legale si cu argumentatie solida.",
+        "point3": "Reprezentam clientul in fata organelor administrative si in instanta de contencios.",
+        "point4": "Urmarim executarea hotararilor favorabile si recuperarea sumelor datorate."
+      }
+    }
   }
 }

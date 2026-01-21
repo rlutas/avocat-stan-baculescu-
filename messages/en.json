@@ -287,5 +287,222 @@
       "description": "Contact us for an initial consultation. Our team of attorneys is here to help you.",
       "button": "Contact Us"
     }
+  },
+  "ServiceDetail": {
+    "backToServices": "Back to Services",
+    "relatedServices": "Related Services",
+    "cta": {
+      "title": "Need Legal Assistance?",
+      "description": "Contact us for a free consultation. Our team of specialized attorneys is at your service.",
+      "button": "Schedule a Consultation"
+    },
+    "malpraxis-medical": {
+      "title": "Medical Malpractice",
+      "subtitle": "Professional representation in medical negligence cases to obtain the compensation you deserve.",
+      "meta": {
+        "title": "Medical Malpractice | Stan-Baculescu Law Firm",
+        "description": "Specialized representation in medical malpractice cases. Get the compensation you deserve for medical negligence with our expert attorneys in Satu Mare."
+      },
+      "descriptionTitle": "What is Medical Malpractice?",
+      "description": "Medical malpractice occurs when a healthcare professional makes an error or acts negligently, causing harm to a patient. These cases can include misdiagnosis, surgical errors, medication mistakes, lack of informed consent, or substandard care. Our firm has extensive experience representing victims of medical malpractice, helping them obtain deserved compensation for physical, emotional, and financial suffering caused.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Diagnostic errors or delayed diagnosis",
+        "case2": "Surgical mistakes and post-operative complications",
+        "case3": "Medication administration errors",
+        "case4": "Negligence during childbirth",
+        "case5": "Hospital-acquired infections",
+        "case6": "Lack of informed consent"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We analyze the complete medical file and consult independent medical experts to evaluate the case.",
+        "point2": "We document the harm suffered and calculate deserved compensation (medical costs, lost income, pain and suffering).",
+        "point3": "We negotiate with insurance companies or represent the client in court to obtain compensation.",
+        "point4": "We keep you informed at every stage of the process and provide support throughout the case."
+      }
+    },
+    "drept-civil": {
+      "title": "Civil Law",
+      "subtitle": "Complete consultation and representation in all aspects of civil law and civil litigation.",
+      "meta": {
+        "title": "Civil Law | Stan-Baculescu Law Firm",
+        "description": "Complete civil law services: litigation, contracts, property, successions. Specialized attorneys in Satu Mare with extensive court experience."
+      },
+      "descriptionTitle": "Civil Law Services",
+      "description": "Civil law governs relationships between individuals and legal entities regarding property, contracts, obligations, and civil liability. Our team offers consultation and representation in all areas of civil law, from drafting and negotiating contracts to resolving disputes in court. With over 15 years of experience, we have successfully represented hundreds of clients in diverse civil cases.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Property disputes and real estate claims",
+        "case2": "Drafting and negotiating civil contracts",
+        "case3": "Successions, inheritances, and property divisions",
+        "case4": "Compensation for damages caused",
+        "case5": "Enforcement proceedings and debt recovery",
+        "case6": "Neighborhood disputes and easements"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We analyze your situation and identify all available legal options.",
+        "point2": "We develop a strategy tailored to your specific objectives and circumstances.",
+        "point3": "We represent your interests in negotiations, mediation, or before the courts.",
+        "point4": "We pursue enforcement of court decisions to ensure your rights are respected."
+      }
+    },
+    "drept-penal": {
+      "title": "Criminal Law",
+      "subtitle": "Effective defense in criminal proceedings and specialized legal assistance at all procedural stages.",
+      "meta": {
+        "title": "Criminal Law | Stan-Baculescu Law Firm",
+        "description": "Professional criminal defense in Satu Mare. Assistance at hearings, court representation, appeals. Experienced criminal attorney."
+      },
+      "descriptionTitle": "Criminal Law Services",
+      "description": "Criminal law is one of the most complex and sensitive legal fields, where a person's freedom and reputation are at stake. Our team provides professional criminal defense, from assistance during the investigation phase to court representation and appeals. We ensure your rights are respected throughout the entire criminal procedure.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Offenses against persons (bodily harm, threats)",
+        "case2": "Offenses against property (theft, fraud, embezzlement)",
+        "case3": "Economic crimes and tax evasion",
+        "case4": "Traffic offenses (driving under the influence)",
+        "case5": "Cybercrime",
+        "case6": "Victim representation in criminal proceedings"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We provide immediate and confidential legal assistance from first contact.",
+        "point2": "We analyze evidence and identify any procedural defects or rights violations.",
+        "point3": "We develop a personalized defense strategy adapted to the case circumstances.",
+        "point4": "We represent you before prosecution authorities and in all phases of the trial."
+      }
+    },
+    "drept-familiei": {
+      "title": "Family Law",
+      "subtitle": "Sensitive and professional legal assistance in all matters related to family and relationships.",
+      "meta": {
+        "title": "Family Law | Stan-Baculescu Law Firm",
+        "description": "Divorces, custody, alimony, property division. Attorney specialized in family law in Satu Mare. Sensitive and professional approach."
+      },
+      "descriptionTitle": "Family Law Services",
+      "description": "Family matters are among the most delicate and emotional legal situations. Our team approaches each case with sensitivity and professionalism, understanding the emotional impact these situations have on our clients. We offer solutions that protect your interests and those of your children, trying whenever possible to find amicable solutions.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Divorces by mutual consent or through litigation",
+        "case2": "Child custody and visitation schedules",
+        "case3": "Establishing and modifying alimony",
+        "case4": "Division of marital property",
+        "case5": "Paternity recognition or contestation",
+        "case6": "Adoptions and guardianship"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We listen and understand your situation with empathy and without judgment.",
+        "point2": "We explore all options, including mediation, to find amicable solutions when possible.",
+        "point3": "We prioritize the best interests of children in all decisions.",
+        "point4": "We represent you firmly in court when negotiations are not possible."
+      }
+    },
+    "dreptul-muncii": {
+      "title": "Labor Law",
+      "subtitle": "Protection of your rights in employment relationships and representation in disputes with employers.",
+      "meta": {
+        "title": "Labor Law | Stan-Baculescu Law Firm",
+        "description": "Consultation and representation in labor law. Wrongful dismissals, wage rights, workplace harassment. Specialized attorney in Satu Mare."
+      },
+      "descriptionTitle": "Labor Law Services",
+      "description": "Employment relationships are governed by special rules designed to protect both employees and employers. Our firm offers consultation and representation in all aspects of labor law, helping employees defend their rights and employers comply with current legislation. We have experience in contract negotiations, conflict resolution, and representation in labor disputes.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Wrongful or illegal dismissals",
+        "case2": "Recovery of outstanding wage rights",
+        "case3": "Workplace harassment and discrimination",
+        "case4": "Workplace accidents and occupational diseases",
+        "case5": "Individual and collective contract negotiations",
+        "case6": "Restructuring and collective layoffs"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We analyze the employment contract and relevant documents to identify violations.",
+        "point2": "We try to resolve the conflict amicably through negotiation or mediation.",
+        "point3": "We represent the client before the Labor Inspectorate and in court.",
+        "point4": "We pursue enforcement of decisions to ensure effective recovery of rights."
+      }
+    },
+    "drept-comercial": {
+      "title": "Commercial Law",
+      "subtitle": "Strategic consultation and representation for businesses and commercial companies.",
+      "meta": {
+        "title": "Commercial Law | Stan-Baculescu Law Firm",
+        "description": "Legal consultation for businesses: commercial contracts, litigation, insolvency, mergers. Specialized law firm in Satu Mare."
+      },
+      "descriptionTitle": "Commercial Law Services",
+      "description": "The business environment requires strategic and proactive legal counsel. Our firm offers complete commercial law services, from company formation and contract drafting to resolving commercial disputes and insolvency proceedings. We understand that time is money in business, which is why we provide efficient and pragmatic solutions.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Formation and modification of commercial companies",
+        "case2": "Drafting and negotiating commercial contracts",
+        "case3": "Commercial litigation and arbitration",
+        "case4": "Insolvency and bankruptcy proceedings",
+        "case5": "Mergers, acquisitions, and restructuring",
+        "case6": "Recovery of commercial debts"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We understand business objectives and provide legal counsel aligned with your strategy.",
+        "point2": "We draft clear contracts that protect interests and minimize risks.",
+        "point3": "We represent commercial interests in negotiations, mediation, or court.",
+        "point4": "We provide fast and efficient solutions to minimize business impact."
+      }
+    },
+    "accidente-rutiere": {
+      "title": "Traffic Accidents",
+      "subtitle": "Representation of traffic accident victims to obtain complete compensation.",
+      "meta": {
+        "title": "Traffic Accidents | Stan-Baculescu Law Firm",
+        "description": "Representation for traffic accident victims. Get compensation from insurers: material damages, pain and suffering, lost income. Specialized attorney in Satu Mare."
+      },
+      "descriptionTitle": "Services for Traffic Accident Victims",
+      "description": "Traffic accidents can have devastating consequences for victims and their families. Our firm specializes in representing traffic accident victims, helping them obtain complete compensation they are entitled to from insurance companies or responsible parties. We handle all legal aspects so you can focus on recovery.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Bodily injuries suffered in traffic accidents",
+        "case2": "Material damages (vehicles, personal property)",
+        "case3": "Compensation for loss of work capacity",
+        "case4": "Compensation for survivors in case of death",
+        "case5": "Appealing insurance company decisions",
+        "case6": "Accidents with uninsured or hit-and-run vehicles"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We fully document the harm suffered: material damages, medical costs, lost income.",
+        "point2": "We negotiate directly with insurance companies to obtain maximum compensation.",
+        "point3": "We represent the victim in court if the insurer refuses proper payment.",
+        "point4": "We assist you throughout the process, often with no upfront costs."
+      }
+    },
+    "drept-administrativ-fiscal": {
+      "title": "Administrative and Tax Law",
+      "subtitle": "Representation before authorities and challenging administrative and tax decisions.",
+      "meta": {
+        "title": "Administrative and Tax Law | Stan-Baculescu Law Firm",
+        "description": "Administrative and tax appeals, disputes with ANAF, representation before authorities. Specialized tax attorney in Satu Mare."
+      },
+      "descriptionTitle": "Administrative and Tax Law Services",
+      "description": "Dealing with state authorities can be complex and intimidating. Our firm offers professional representation before administrative and tax bodies, challenging illegal decisions and defending taxpayers' rights. With deep understanding of administrative and tax legislation, we help you navigate bureaucratic procedures and defend your interests.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Challenging ANAF tax assessment decisions",
+        "case2": "Tax disputes and recovery of improperly paid amounts",
+        "case3": "Challenging fines and administrative sanctions",
+        "case4": "Permits and authorizations refused by authorities",
+        "case5": "Expropriations and compensation for public utility",
+        "case6": "Administrative litigation and actions against authorities"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We analyze the administrative or tax decision and identify grounds for challenge.",
+        "point2": "We prepare the administrative appeal within legal deadlines with solid arguments.",
+        "point3": "We represent the client before administrative bodies and in administrative court.",
+        "point4": "We pursue enforcement of favorable decisions and recovery of owed amounts."
+      }
+    }
   }
 }

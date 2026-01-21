@@ -107,7 +107,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a potential client interested in a specific legal area, I want detailed information about that practice area so that I can understand how the firm can help me.
 
 **Acceptance Criteria:**
-- [ ] 8 individual service pages created:
+- [x] 8 individual service pages created:
   - `/servicii/malpraxis-medical` - Malpraxis Medical
   - `/servicii/drept-civil` - Drept Civil
   - `/servicii/drept-penal` - Drept Penal
@@ -116,13 +116,13 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
   - `/servicii/drept-comercial` - Drept Comercial
   - `/servicii/accidente-rutiere` - Accidente Rutiere
   - `/servicii/drept-administrativ-fiscal` - Drept Administrativ si Fiscal
-- [ ] Each page includes: detailed description, common cases handled, approach
-- [ ] Call-to-action to contact the firm
-- [ ] Related services suggestions
-- [ ] Bilingual content (RO/EN)
-- [ ] SEO metadata per page (unique titles, descriptions)
-- [ ] Structured data (JSON-LD) for legal services
-- [ ] Typecheck passes
+- [x] Each page includes: detailed description, common cases handled, approach
+- [x] Call-to-action to contact the firm
+- [x] Related services suggestions
+- [x] Bilingual content (RO/EN)
+- [x] SEO metadata per page (unique titles, descriptions)
+- [x] Structured data (JSON-LD) for legal services
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---
