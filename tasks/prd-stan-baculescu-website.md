@@ -212,13 +212,13 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a visitor, I need to consent to cookies before non-essential tracking so that my privacy preferences are respected.
 
 **Acceptance Criteria:**
-- [ ] Cookie consent banner on first visit
-- [ ] Options: Accept All, Reject Non-Essential, Customize
-- [ ] Preference saved and remembered
-- [ ] Google Analytics only loads after consent
-- [ ] Easy way to change preferences later
-- [ ] Bilingual consent text
-- [ ] Typecheck passes
+- [x] Cookie consent banner on first visit
+- [x] Options: Accept All, Reject Non-Essential, Customize
+- [x] Preference saved and remembered
+- [x] Google Analytics only loads after consent
+- [x] Easy way to change preferences later
+- [x] Bilingual consent text
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---

@@ -308,3 +308,134 @@
   - Category filtering resets pagination to page 1
 ---
 
+## Iteration 11 - US-008: Contact Page with Complex Form
+- What was implemented:
+  - Created /contact page route with locale support
+  - Created ContactHero component with gradient background
+  - Created ContactForm component with React Hook Form + Zod validation
+  - Form fields: name, email, phone (optional), subject/service area dropdown, message
+  - Honeypot anti-spam protection (hidden field that bots fill)
+  - Success/error states with user feedback
+  - Created ContactInfo component with contact details display
+  - Created ContactMap component with Google Maps embed
+  - Contact details: phone (+40 261-848-015), email, address, working hours (Mon-Sun 09:00-17:00)
+  - Social media links (Facebook, Instagram, TikTok) with custom TikTok icon
+  - Full bilingual content (RO/EN) in messages/*.json
+  - JSON-LD structured data for LegalService schema
+  - Installed shadcn/ui components: Input, Textarea, Label, Select
+- Files changed:
+  - app/[locale]/contact/page.tsx (new)
+  - components/contact/contact-hero.tsx (new)
+  - components/contact/contact-form.tsx (new)
+  - components/contact/contact-info.tsx (new)
+  - components/contact/contact-map.tsx (new)
+  - components/contact/index.ts (new)
+  - components/ui/input.tsx (new - shadcn/ui)
+  - components/ui/textarea.tsx (new - shadcn/ui)
+  - components/ui/label.tsx (new - shadcn/ui)
+  - components/ui/select.tsx (new - shadcn/ui)
+  - messages/ro.json (added ContactPage translations)
+  - messages/en.json (added ContactPage translations)
+  - package.json (added react-hook-form, zod, @hookform/resolvers)
+  - tasks/prd-stan-baculescu-website.md (marked US-008 criteria complete)
+- Learnings for future iterations:
+  - React Hook Form with Zod: use zodResolver from @hookform/resolvers
+  - Honeypot anti-spam: hidden field with validation z.string().max(0)
+  - Select component needs setValue() from useForm for controlled value
+  - TikTok icon not in lucide-react, create custom SVG component
+  - Google Maps embed URL pattern for Romanian addresses
+  - Email sending deferred to US-018 (Resend integration)
+  - Form success state can reset with setSubmitStatus('idle')
+---
+
+## Iteration 12 - US-009: Google Reviews/Testimonials Integration
+- What was implemented:
+  - Created Testimonials component at components/testimonials/
+  - Static testimonials fallback with 5 curated reviews (RO/EN)
+  - Star rating display (1-5 stars with amber fill)
+  - Reviewer name, date/relative time, and review excerpt
+  - Carousel layout on mobile with auto-play (5 second intervals)
+  - 3-column grid layout on desktop (shows first 3 testimonials)
+  - Carousel controls: prev/next buttons and dot indicators
+  - Link to Google My Business profile with Google icon
+  - Full bilingual support using translation keys
+  - Added Testimonials section to homepage after Hero
+- Files changed:
+  - components/testimonials/testimonials.tsx (new)
+  - components/testimonials/index.ts (new)
+  - app/[locale]/page.tsx (updated to include Testimonials)
+  - messages/ro.json (added Testimonials translations)
+  - messages/en.json (added Testimonials translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-009 criteria complete)
+- Learnings for future iterations:
+  - useCallback for carousel navigation prevents unnecessary re-renders
+  - Locale detection via t('locale') key in translations
+  - Separate static testimonial arrays for RO/EN content
+  - cn() utility for conditional class merging
+  - Google icon can be inline SVG with official Google brand colors
+  - Carousel auto-play pauses on hover (setIsAutoPlaying)
+  - translate-x with percentage for CSS-based carousel sliding
+---
+
+## Iteration 14 - US-011: GDPR Cookie Consent
+- What was implemented:
+  - Created CookieConsent component at components/cookie-consent/
+  - Cookie consent banner shows on first visit with modal overlay
+  - Three options: Accept All, Reject Non-Essential (Essential only), Customize
+  - Customize view shows Essential (always on), Analytics, and Marketing cookie toggles
+  - Preferences saved to localStorage (cookie-consent and cookie-preferences keys)
+  - Custom event 'cookieConsentUpdate' dispatched for other components to react
+  - Created GoogleAnalytics component that only loads after analytics consent
+  - useCookieConsent hook for components to check consent status
+  - openCookieSettings utility function to re-open cookie settings
+  - Added cookie settings link with Cookie icon to footer's legal links section
+  - Full bilingual support (RO/EN) with CookieConsent translations
+  - Professional UI with amber/slate color scheme matching site design
+- Files changed:
+  - components/cookie-consent/cookie-consent.tsx (new)
+  - components/cookie-consent/index.ts (new)
+  - components/analytics/google-analytics.tsx (new)
+  - components/analytics/index.ts (new)
+  - components/footer.tsx (added cookie settings link)
+  - app/[locale]/layout.tsx (added CookieConsent and GoogleAnalytics)
+  - messages/ro.json (added CookieConsent translations)
+  - messages/en.json (added CookieConsent translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-011 criteria complete)
+- Learnings for future iterations:
+  - Use localStorage for cookie consent persistence
+  - Custom events (window.dispatchEvent) allow components to communicate
+  - GoogleAnalytics component conditionally renders based on consent
+  - useCookieConsent hook listens for consent updates via CustomEvent
+  - openCookieSettings removes consent key and reloads to show banner
+  - Cookie component from lucide-react for cookie icon
+  - NEXT_PUBLIC_GA_MEASUREMENT_ID env var for Google Analytics ID
+---
+
+## Iteration 13 - US-010: Footer Component
+- What was implemented:
+  - Created Footer component at components/footer.tsx
+  - 4-column responsive layout: Logo/description, Quick links, Services, Contact info
+  - Contact information: address, phone, email, working hours
+  - Quick navigation links (all main pages)
+  - Services quick links (all 8 practice areas)
+  - Social media icons/links: Facebook, Instagram, TikTok (with custom TikTok SVG icon)
+  - Legal links: Privacy Policy, Cookie Policy, Terms of Service
+  - Copyright notice with dynamic year
+  - Bottom bar with copyright and legal links
+  - Full bilingual content (RO/EN) in Footer translation keys
+  - Added Footer to layout.tsx (appears on all pages)
+- Files changed:
+  - components/footer.tsx (new)
+  - app/[locale]/layout.tsx (updated to include Footer)
+  - messages/ro.json (added Footer translations)
+  - messages/en.json (added Footer translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-010 criteria complete)
+- Learnings for future iterations:
+  - TikTok icon not in lucide-react, create custom SVG component
+  - Footer uses useTranslations hook for multiple namespaces: common, Footer, ServicesPage.services
+  - Legal links point to pages not yet created: /politica-confidentialitate, /politica-cookies, /termeni
+  - Main content wrapped in <main> tag in layout.tsx for semantic structure
+  - Social media links: Facebook, Instagram, TikTok with hover effects
+  - Responsive design: 1 column mobile, 2 columns tablet, 4 columns desktop
+---
+

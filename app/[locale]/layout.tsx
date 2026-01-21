@@ -6,6 +6,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { CookieConsent } from '@/components/cookie-consent';
+import { GoogleAnalytics } from '@/components/analytics';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -45,9 +47,11 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+          <GoogleAnalytics />
           <Header />
           <main>{children}</main>
           <Footer />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

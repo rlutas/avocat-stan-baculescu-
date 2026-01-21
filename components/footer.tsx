@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Scale, MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
+import { Scale, MapPin, Phone, Mail, Clock, Facebook, Instagram, Cookie } from 'lucide-react';
+import { openCookieSettings } from '@/components/cookie-consent';
 
 const navItems = [
   { href: '/', key: 'home' },
@@ -48,6 +49,7 @@ export function Footer() {
   const t = useTranslations('common');
   const tFooter = useTranslations('Footer');
   const tServices = useTranslations('ServicesPage.services');
+  const tCookie = useTranslations('CookieConsent');
 
   const currentYear = new Date().getFullYear();
 
@@ -199,6 +201,13 @@ export function Footer() {
                   {tFooter(`legal.${link.key}`)}
                 </Link>
               ))}
+              <button
+                onClick={openCookieSettings}
+                className="flex items-center gap-1 text-sm text-slate-500 transition-colors hover:text-amber-500"
+              >
+                <Cookie className="h-3.5 w-3.5" />
+                {tCookie('settingsLink')}
+              </button>
             </nav>
           </div>
         </div>

@@ -592,5 +592,32 @@
       "title": "Locatia noastra",
       "subtitle": "Ne gasiti in centrul orasului Satu Mare"
     }
+  },
+  "CookieConsent": {
+    "title": "Utilizarea Cookie-urilor",
+    "description": "Folosim cookie-uri pentru a va oferi cea mai buna experienta pe site-ul nostru. Cookie-urile esentiale sunt necesare pentru functionarea site-ului, in timp ce cookie-urile de analiza ne ajuta sa intelegem cum utilizati site-ul.",
+    "learnMore": "Aflati mai multe",
+    "acceptAll": "Accepta toate",
+    "rejectNonEssential": "Doar esentiale",
+    "customize": "Personalizeaza",
+    "savePreferences": "Salveaza preferintele",
+    "back": "Inapoi",
+    "close": "Inchide",
+    "alwaysOn": "Mereu activ",
+    "categories": {
+      "essential": {
+        "title": "Cookie-uri Esentiale",
+        "description": "Aceste cookie-uri sunt necesare pentru functionarea site-ului si nu pot fi dezactivate. Ele permit navigarea si utilizarea functiilor de baza."
+      },
+      "analytics": {
+        "title": "Cookie-uri de Analiza",
+        "description": "Ne ajuta sa intelegem cum interactionati cu site-ul nostru, permitandu-ne sa imbunatatim experienta utilizatorului. Datele sunt anonimizate."
+      },
+      "marketing": {
+        "title": "Cookie-uri de Marketing",
+        "description": "Sunt folosite pentru a va afisa reclame relevante pe alte site-uri. Acestea urmaresc activitatea de navigare pentru personalizarea publicitatii."
+      }
+    },
+    "settingsLink": "Setari cookie-uri"
   }
 }

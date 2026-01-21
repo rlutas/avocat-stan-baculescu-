@@ -592,5 +592,32 @@
       "title": "Our location",
       "subtitle": "Find us in the center of Satu Mare"
     }
+  },
+  "CookieConsent": {
+    "title": "Cookie Usage",
+    "description": "We use cookies to provide you with the best experience on our website. Essential cookies are necessary for the site to function, while analytics cookies help us understand how you use the site.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept all",
+    "rejectNonEssential": "Essential only",
+    "customize": "Customize",
+    "savePreferences": "Save preferences",
+    "back": "Back",
+    "close": "Close",
+    "alwaysOn": "Always on",
+    "categories": {
+      "essential": {
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the website to function and cannot be disabled. They enable navigation and use of basic features."
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "description": "Help us understand how you interact with our website, allowing us to improve the user experience. Data is anonymized."
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "description": "Used to display relevant ads on other websites. They track browsing activity to personalize advertising."
+      }
+    },
+    "settingsLink": "Cookie settings"
   }
 }
