@@ -112,7 +112,7 @@ function PrivacyPolicyContent() {
       <section className="bg-gradient-to-br from-[#002a52] via-[#003a70] to-[#004a8f] py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Shield className="h-4 w-4" />
               <span>{t('badge')}</span>
             </div>
@@ -130,7 +130,7 @@ function PrivacyPolicyContent() {
       <div className="container mx-auto px-4 md:px-6 py-6">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-[#003a70] hover:text-amber-600 transition-colors"
+          className="inline-flex items-center gap-2 text-navy hover:text-gold transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>{t('backToHome')}</span>
@@ -142,9 +142,9 @@ function PrivacyPolicyContent() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             {/* Last Updated */}
-            <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold">{t('lastUpdated')}:</span> {t('lastUpdatedDate')}
+            <div className="mb-8 p-4 bg-[#f8f9fa] rounded-lg border border-navy/10">
+              <p className="text-sm text-[#4b5563]">
+                <span className="font-semibold text-navy">{t('lastUpdated')}:</span> {t('lastUpdatedDate')}
               </p>
             </div>
 
@@ -155,21 +155,21 @@ function PrivacyPolicyContent() {
                 return (
                   <div key={section.id} className="scroll-mt-24" id={section.id}>
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
-                        <IconComponent className="h-6 w-6 text-amber-600" />
+                      <div className="flex-shrink-0 w-12 h-12 bg-[#fef9e7] rounded-lg flex items-center justify-center">
+                        <IconComponent className="h-6 w-6 text-gold" />
                       </div>
-                      <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#003a70] pt-2">
+                      <h2 className="font-heading text-2xl md:text-3xl font-bold text-navy pt-2">
                         {section.title}
                       </h2>
                     </div>
                     <div className="ml-16">
-                      <p className="text-gray-600 leading-relaxed mb-4">{section.content}</p>
+                      <p className="text-[#4b5563] leading-relaxed mb-4">{section.content}</p>
                       {section.items && (
                         <ul className="space-y-2">
                           {section.items.map((item, index) => (
                             <li key={index} className="flex items-start gap-3">
-                              <span className="flex-shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2" />
-                              <span className="text-gray-600">{item}</span>
+                              <span className="flex-shrink-0 w-2 h-2 bg-gold rounded-full mt-2" />
+                              <span className="text-[#4b5563]">{item}</span>
                             </li>
                           ))}
                         </ul>
@@ -181,14 +181,14 @@ function PrivacyPolicyContent() {
             </div>
 
             {/* Contact Section for Data Protection */}
-            <div className="mt-16 p-8 bg-gradient-to-r from-[#003a70] to-[#004a8f] rounded-xl text-white">
+            <div className="mt-16 p-8 bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] rounded-xl text-white">
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-4">
                 {t('dataProtection.title')}
               </h3>
               <p className="text-white/90 mb-6">{t('dataProtection.description')}</p>
               <div className="space-y-3">
                 <p className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-amber-400" />
+                  <Mail className="h-5 w-5 text-gold" />
                   <span>office@stanbaculescu.ro</span>
                 </p>
                 <p className="text-white/80 text-sm">{t('dataProtection.address')}</p>

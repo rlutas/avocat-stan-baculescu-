@@ -693,3 +693,69 @@
   - Environment variable RESEND_API_KEY needed in production
 ---
 
+## Iteration 25 - US-009-STYLE: Update Testimonials with Style Guide
+- What was implemented:
+  - Updated StarRating component: gold stars (fill-gold text-gold) instead of amber-400
+  - Updated TestimonialCard: white bg, navy text, gold hover border (border-transparent hover:border-gold)
+  - Author avatar: light gold background (#fef9e7) with navy text
+  - Section background: off-white (#f8f9fa) instead of slate-50
+  - Heading uses font-heading class for Playfair Display font
+  - Subtitle uses text-gold instead of amber-600
+  - Carousel controls: navy icons, gold active dot, navy/10 hover background
+  - Google Reviews button: navy border, navy text, navy bg on hover with white text
+- Files changed:
+  - components/testimonials/testimonials.tsx (updated)
+  - prd.json (marked US-009-STYLE complete)
+- Learnings for future iterations:
+  - Testimonials card follows same pattern as other cards: border border-transparent hover:border-gold
+  - Gold stars use fill-gold text-gold (fill for filled state, text for stroke)
+  - Carousel dots: bg-gold for active, bg-navy/20 for inactive
+  - Consistent button hover pattern: navy outline to navy filled with white text
+---
+
+## Iteration 26 - US-010-STYLE: Update Footer with Style Guide
+- What was implemented:
+  - Updated footer background from slate-900 to bg-navy (#003a70)
+  - Changed logo icon from amber-500 to text-gold
+  - Updated description text from slate-400 to text-white/70
+  - Social media icons: bg-white/10 text-white with hover:bg-gold hover:text-navy
+  - Section headings from amber-500 to text-gold
+  - All link colors from slate-400 to text-white/70 with hover:text-gold
+  - Contact icons from amber-500 to text-gold
+  - Bottom bar border from slate-800 to border-white/10
+  - Copyright text from slate-500 to text-white/50
+  - Legal links from slate-500 to text-white/50 with hover:text-gold
+- Files changed:
+  - components/footer.tsx (updated)
+  - prd.json (marked US-010-STYLE complete)
+- Learnings for future iterations:
+  - Footer uses bg-navy for background (defined in globals.css @theme)
+  - Text on dark navy: text-white for main, text-white/70 for secondary, text-white/50 for muted
+  - Social icons pattern: bg-white/10 text-white hover:bg-gold hover:text-navy
+  - Border on dark bg: border-white/10 for subtle separation
+  - Gold hover states: hover:text-gold for links on dark backgrounds
+---
+
+
+## Iteration 27 - US-011-STYLE: Update Cookie Consent with Style Guide
+- What was implemented:
+  - Updated cookie banner header: navy title, gold cookie icon on light gold background (#fef9e7)
+  - Accept All and Save Preferences buttons: gold background (bg-gold), navy text, gold shadow
+  - Reject/Customize/Back buttons: white background with navy border (border-navy text-navy)
+  - Description text: #4b5563 (secondary text color)
+  - Learn More link: gold color with hover state
+  - Category cards (Essential, Analytics, Marketing): navy title, secondary text body
+  - Card hover states: gold border (hover:border-gold) with light gold background
+  - Checkboxes: gold accent color (accent-gold) with gold focus ring
+  - Close button: gray to navy on hover
+- Files changed:
+  - components/cookie-consent/cookie-consent.tsx (updated)
+  - prd.json (marked US-011-STYLE complete)
+- Learnings for future iterations:
+  - Checkbox styling uses accent-gold for checked state color
+  - Consistent button patterns: gold primary (bg-gold text-navy), navy outline secondary (border-navy text-navy)
+  - Light gold background for icon containers: bg-[#fef9e7]
+  - Gold shadow pattern: shadow-[0_4px_6px_rgba(208,156,17,0.2)]
+  - Hover states on dark backgrounds: hover:bg-navy/5 for subtle lift
+  - Form element focus: focus:ring-gold for consistency
+---

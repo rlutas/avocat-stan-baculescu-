@@ -114,7 +114,7 @@ export function TeamGrid() {
           </div>
           <div className="mx-auto max-w-2xl">
             {staff.map((member) => (
-              <TeamCard key={member.id} member={member} t={t} variant="gold" />
+              <TeamCard key={member.id} member={member} t={t} variant="light" />
             ))}
           </div>
         </div>
@@ -131,17 +131,29 @@ function TeamCard({
 }: {
   member: TeamMember;
   t: ReturnType<typeof useTranslations<'TeamPage'>>;
-  variant: 'gold' | 'navy';
+  variant: 'gold' | 'navy' | 'light';
 }) {
   const isGold = variant === 'gold';
+  const isNavy = variant === 'navy';
+  const isLight = variant === 'light';
 
   // Colors based on variant
-  const accentColor = isGold ? 'bg-gold' : 'bg-navy';
+  const accentColor = isGold ? 'bg-gold' : isLight ? 'bg-gray-300' : 'bg-navy';
   const bgGradient = isGold
     ? 'bg-gradient-to-br from-[#fdf6e3] via-[#fef9ed] to-[#fffbf5]'
+    : isLight
+    ? 'bg-gradient-to-br from-[#f0f5fa] via-[#f5f8fc] to-[#f8fafc]'
     : 'bg-gradient-to-br from-[#e3ecf4] via-[#edf3f9] to-[#f5f9fc]';
-  const badgeBg = isGold ? 'bg-gold/10 text-gold' : 'bg-navy/10 text-navy';
-  const hoverColor = isGold ? 'group-hover:text-gold' : 'group-hover:text-navy-light';
+  const badgeBg = isGold
+    ? 'bg-gold/10 text-gold'
+    : isLight
+    ? 'bg-gray-100 text-gray-600'
+    : 'bg-navy/10 text-navy';
+  const hoverColor = isGold
+    ? 'group-hover:text-gold'
+    : isLight
+    ? 'group-hover:text-gray-600'
+    : 'group-hover:text-gold';
 
   return (
     <Link href={`/echipa/${member.id}`} className="group block">
@@ -153,8 +165,8 @@ function TeamCard({
           {/* Image Section - flush with edges */}
           <div className="relative sm:w-2/5">
             <div className={`relative h-64 w-full overflow-hidden sm:h-full sm:min-h-[280px] ${bgGradient}`}>
-              {/* Image positioned to be flush with left, bottom, and contained within */}
-              <div className="absolute bottom-0 left-0 right-0 top-4 sm:top-0">
+              {/* Image positioned to be flush with left, bottom, and fill horizontally */}
+              <div className="absolute bottom-0 left-0 right-0 top-0">
                 <Image
                   src={member.image}
                   alt={t(`members.${member.nameKey}.name`)}
