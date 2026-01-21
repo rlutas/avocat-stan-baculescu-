@@ -30,14 +30,14 @@ export function AboutMethodology() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 sm:py-24">
+    <section className="bg-[#f8f9fa] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-heading mb-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             {t('title')}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-300">
+          <p className="mx-auto max-w-2xl text-lg text-[#4b5563]">
             {t('subtitle')}
           </p>
         </div>
@@ -47,29 +47,29 @@ export function AboutMethodology() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10"
+              className="group relative rounded-2xl border border-transparent bg-white p-6 shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg"
             >
               {/* Step Number */}
-              <div className="mb-4 text-4xl font-bold text-amber-500/30">
+              <div className="mb-4 text-4xl font-bold text-gold/30">
                 {step.number}
               </div>
 
               {/* Icon */}
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-amber-500/10">
-                <step.icon className="h-6 w-6 text-amber-500" />
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#fef9e7]">
+                <step.icon className="h-6 w-6 text-gold" />
               </div>
 
               {/* Content */}
-              <h3 className="mb-2 text-lg font-semibold text-white">
+              <h3 className="mb-2 text-lg font-semibold text-navy">
                 {t(`${step.stepKey}.title`)}
               </h3>
-              <p className="text-sm leading-relaxed text-slate-400">
+              <p className="text-sm leading-relaxed text-[#4b5563]">
                 {t(`${step.stepKey}.description`)}
               </p>
 
               {/* Connector Line (except last) */}
               {index < steps.length - 1 && (
-                <div className="absolute -right-4 top-1/2 hidden h-px w-8 bg-gradient-to-r from-amber-500/50 to-transparent lg:block" />
+                <div className="absolute -right-4 top-1/2 hidden h-px w-8 bg-gradient-to-r from-gold/50 to-transparent lg:block" />
               )}
             </div>
           ))}
