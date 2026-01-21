@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const RECIPIENT_EMAIL = 'office@stanbaculescu.ro';
 const FROM_EMAIL = 'contact@stanbaculescu.ro'; // Must be verified in Resend
 
@@ -47,6 +45,18 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Check for API key
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
+    // Initialize Resend client
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Get service label
     const serviceLabel =
