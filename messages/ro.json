@@ -690,5 +690,72 @@
       }
     },
     "settingsLink": "Setari cookie-uri"
+  },
+  "TermsOfService": {
+    "badge": "Document Legal",
+    "hero": {
+      "title": "Termeni si Conditii",
+      "subtitle": "Va rugam sa cititi cu atentie acesti termeni si conditii inainte de a utiliza site-ul sau serviciile noastre."
+    },
+    "backToHome": "Inapoi la pagina principala",
+    "lastUpdated": "Ultima actualizare",
+    "lastUpdatedDate": "15 Ianuarie 2026",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducere",
+        "content": "Acesti Termeni si Conditii (\"Termenii\") guverneaza utilizarea site-ului web al Societatii Civile de Avocati Stan-Baculescu (\"Cabinetul\", \"noi\" sau \"nostru\") si serviciilor juridice oferite. Prin accesarea si utilizarea site-ului nostru, acceptati sa respectati acesti Termeni. Daca nu sunteti de acord cu vreun aspect al acestor Termeni, va rugam sa nu utilizati site-ul."
+      },
+      "serviceDescription": {
+        "title": "2. Descrierea Serviciilor",
+        "content": "Cabinetul nostru ofera servicii de consultanta si reprezentare juridica in diverse domenii ale dreptului. Informatiile prezentate pe acest site au caracter informativ general si nu constituie consultanta juridica specifica. Serviciile noastre includ:",
+        "items": {
+          "item1": "Consultanta juridica in domenii precum drept civil, penal, familiei, comercial, muncii si altele",
+          "item2": "Reprezentare in fata instantelor de judecata si a autoritatilor publice",
+          "item3": "Redactarea si analiza documentelor juridice, contractelor si actelor procedurale",
+          "item4": "Mediere si negociere in vederea solutionarii amiabile a litigiilor"
+        }
+      },
+      "userObligations": {
+        "title": "3. Obligatiile Utilizatorului",
+        "content": "Prin utilizarea site-ului nostru, va asumati urmatoarele obligatii:",
+        "items": {
+          "item1": "Sa furnizati informatii corecte, complete si actualizate in formularele de contact",
+          "item2": "Sa nu utilizati site-ul in scopuri ilegale sau neautorizate",
+          "item3": "Sa nu transmiteti continut defaimator, obscen, fraudulos sau care incalca drepturile tertilor",
+          "item4": "Sa nu incercati sa accesati neautorizat sistemele sau datele noastre",
+          "item5": "Sa respectati drepturile de proprietate intelectuala ale Cabinetului"
+        }
+      },
+      "intellectualProperty": {
+        "title": "4. Proprietate Intelectuala",
+        "content": "Toate materialele prezente pe acest site, inclusiv texte, imagini, logo-uri, design si structura site-ului, sunt protejate de drepturile de autor si alte drepturi de proprietate intelectuala apartinand Cabinetului sau licentiatilor acestuia. Este interzisa reproducerea, distribuirea, modificarea sau utilizarea comerciala a oricarui continut fara acordul prealabil scris al Cabinetului."
+      },
+      "liability": {
+        "title": "5. Limitarea Raspunderii",
+        "content": "Informatiile prezentate pe site au caracter general si informativ. Cabinetul nu isi asuma raspunderea pentru:",
+        "items": {
+          "item1": "Deciziile luate pe baza informatiilor generale de pe site, fara consultarea unui avocat",
+          "item2": "Erorile tehnice, intreruperile de serviciu sau indisponibilitatea temporara a site-ului",
+          "item3": "Continutul site-urilor terte catre care exista link-uri de pe site-ul nostru"
+        }
+      },
+      "governingLaw": {
+        "title": "6. Legea Aplicabila si Jurisdictia",
+        "content": "Acesti Termeni si Conditii sunt guvernati de legislatia Romaniei. Orice litigiu rezultat din sau in legatura cu utilizarea site-ului va fi solutionat de instantele competente din Romania, cu sediul in Satu Mare. Relatia avocat-client se stabileste exclusiv prin semnarea unui contract de asistenta juridica si nu prin simpla utilizare a acestui site web."
+      },
+      "modifications": {
+        "title": "7. Modificari ale Termenilor",
+        "content": "Cabinetul isi rezerva dreptul de a modifica acesti Termeni si Conditii in orice moment, fara notificare prealabila. Modificarile vor fi publicate pe aceasta pagina si vor intra in vigoare la data publicarii. Va recomandam sa verificati periodic aceasta pagina pentru a fi la curent cu orice actualizari. Continuarea utilizarii site-ului dupa publicarea modificarilor constituie acceptarea noilor Termeni."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "content": "Pentru orice intrebari sau clarificari referitoare la acesti Termeni si Conditii, ne puteti contacta utilizand datele de contact disponibile pe site sau la adresa de email office@stanbaculescu.ro."
+      }
+    },
+    "questions": {
+      "title": "Intrebari despre Termenii si Conditiile?",
+      "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind termenii de utilizare a site-ului si serviciilor noastre.",
+      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+    }
   }
 }

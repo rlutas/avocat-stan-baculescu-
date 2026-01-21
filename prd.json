@@ -265,8 +265,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 16,
-      "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "passes": true,
+      "notes": "Created app/[locale]/termeni/page.tsx with navy gradient hero, consistent styling with Privacy Policy, 8 comprehensive sections including introduction, service description, user obligations, intellectual property, liability, governing law, modifications, and contact. Full bilingual support (RO/EN) added to messages/*.json. Footer link already existed at /termeni."
     },
     {
       "id": "US-020",

@@ -690,5 +690,72 @@
       }
     },
     "settingsLink": "Cookie settings"
+  },
+  "TermsOfService": {
+    "badge": "Legal Document",
+    "hero": {
+      "title": "Terms of Service",
+      "subtitle": "Please read these terms and conditions carefully before using our website or services."
+    },
+    "backToHome": "Back to homepage",
+    "lastUpdated": "Last updated",
+    "lastUpdatedDate": "January 15, 2026",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "These Terms and Conditions (\"Terms\") govern the use of the Stan-Baculescu Law Firm website (\"the Firm\", \"we\" or \"our\") and the legal services offered. By accessing and using our website, you agree to comply with these Terms. If you do not agree with any aspect of these Terms, please do not use the website."
+      },
+      "serviceDescription": {
+        "title": "2. Description of Services",
+        "content": "Our firm provides legal consultation and representation services in various areas of law. The information presented on this website is for general informational purposes and does not constitute specific legal advice. Our services include:",
+        "items": {
+          "item1": "Legal consultation in areas such as civil, criminal, family, commercial, labor law, and others",
+          "item2": "Representation before courts and public authorities",
+          "item3": "Drafting and analysis of legal documents, contracts, and procedural documents",
+          "item4": "Mediation and negotiation for amicable dispute resolution"
+        }
+      },
+      "userObligations": {
+        "title": "3. User Obligations",
+        "content": "By using our website, you agree to the following obligations:",
+        "items": {
+          "item1": "To provide accurate, complete, and up-to-date information in contact forms",
+          "item2": "Not to use the website for illegal or unauthorized purposes",
+          "item3": "Not to transmit defamatory, obscene, fraudulent content or content that violates third-party rights",
+          "item4": "Not to attempt unauthorized access to our systems or data",
+          "item5": "To respect the Firm's intellectual property rights"
+        }
+      },
+      "intellectualProperty": {
+        "title": "4. Intellectual Property",
+        "content": "All materials on this website, including text, images, logos, design, and website structure, are protected by copyright and other intellectual property rights belonging to the Firm or its licensors. Reproduction, distribution, modification, or commercial use of any content without prior written consent from the Firm is prohibited."
+      },
+      "liability": {
+        "title": "5. Limitation of Liability",
+        "content": "The information presented on the website is general and informational in nature. The Firm does not assume responsibility for:",
+        "items": {
+          "item1": "Decisions made based on general information from the website without consulting an attorney",
+          "item2": "Technical errors, service interruptions, or temporary unavailability of the website",
+          "item3": "Content of third-party websites linked from our website"
+        }
+      },
+      "governingLaw": {
+        "title": "6. Governing Law and Jurisdiction",
+        "content": "These Terms and Conditions are governed by the laws of Romania. Any dispute arising from or in connection with the use of the website shall be resolved by the competent courts of Romania, located in Satu Mare. The attorney-client relationship is established exclusively through signing a legal assistance contract and not through mere use of this website."
+      },
+      "modifications": {
+        "title": "7. Modifications to Terms",
+        "content": "The Firm reserves the right to modify these Terms and Conditions at any time without prior notice. Changes will be posted on this page and will take effect on the date of publication. We recommend checking this page periodically to stay informed of any updates. Continued use of the website after the publication of changes constitutes acceptance of the new Terms."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "content": "For any questions or clarifications regarding these Terms and Conditions, you can contact us using the contact information available on the website or at the email address office@stanbaculescu.ro."
+      }
+    },
+    "questions": {
+      "title": "Questions about Terms and Conditions?",
+      "description": "We are at your disposal for any clarifications regarding the terms of use of our website and services.",
+      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+    }
   }
 }

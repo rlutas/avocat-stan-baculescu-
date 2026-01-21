@@ -759,3 +759,119 @@
   - Hover states on dark backgrounds: hover:bg-navy/5 for subtle lift
   - Form element focus: focus:ring-gold for consistency
 ---
+
+## Iteration 28 - US-012-STYLE: Update Privacy Policy Page with Style Guide
+- What was implemented:
+  - Updated hero badge from amber to gold (bg-gold/20 text-gold)
+  - Updated back link from text-[#003a70] to text-navy with hover:text-gold
+  - Updated "Last Updated" box: bg-[#f8f9fa] with border-navy/10
+  - Updated section icons: bg-[#fef9e7] (light gold) with text-gold icons
+  - Updated section headings: text-navy with font-heading class
+  - Updated body text: text-[#4b5563] (secondary text color)
+  - Updated bullet points: bg-gold instead of bg-amber-500
+  - Updated contact section: linear gradient navy with text-gold mail icon
+- Files changed:
+  - app/[locale]/politica-confidentialitate/page.tsx
+  - prd.json (marked US-012-STYLE complete)
+- Learnings for future iterations:
+  - Light gold icon background: bg-[#fef9e7] (consistent across all pages)
+  - Off-white section background: bg-[#f8f9fa]
+  - Secondary text color: text-[#4b5563]
+  - Gold colors use text-gold and bg-gold (defined in globals.css @theme)
+  - Navy gradient: bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)]
+---
+
+## Iteration 29 - US-013: SEO Optimization
+- What was implemented:
+  - Created app/sitemap.ts for XML sitemap generation
+  - Sitemap includes: all static pages, 8 service pages, 6 team member pages, blog posts
+  - Each URL has alternates for RO/EN languages
+  - Created app/robots.ts with allow/disallow rules and sitemap reference
+  - Created components/seo/organization-schema.tsx with JSON-LD for Organization and LegalService
+  - Enhanced app/[locale]/layout.tsx with comprehensive metadata:
+    - metadataBase for absolute URLs
+    - Title template for consistent page titles
+    - Keywords for SEO
+    - OpenGraph tags for social sharing
+    - Twitter card tags
+    - Robots directives for search engines
+    - Alternates for i18n canonical URLs
+  - Added generateMetadata to homepage for locale-specific titles/descriptions
+  - Fixed Resend initialization to be lazy (inside POST handler) to avoid build errors without API key
+- Files changed:
+  - app/sitemap.ts (new)
+  - app/robots.ts (new)
+  - components/seo/organization-schema.tsx (new)
+  - components/seo/index.ts (new)
+  - app/[locale]/layout.tsx (updated)
+  - app/[locale]/page.tsx (updated)
+  - app/api/contact/route.ts (fixed)
+  - prd.json (marked US-013 complete)
+- Learnings for future iterations:
+  - Next.js App Router: app/sitemap.ts exports a function returning MetadataRoute.Sitemap
+  - Next.js App Router: app/robots.ts exports a function returning MetadataRoute.Robots
+  - Sitemap alternates use languages key: { 'ro': url, 'en': url }
+  - metadataBase in layout.tsx allows relative URLs in metadata
+  - Title template '%s | Site Name' automatically formats page titles
+  - Module-level initialization can fail at build time if env vars are missing
+  - Move API client initialization inside request handlers for resilience
+  - JSON-LD structured data renders with <script type="application/ld+json">
+  - Organization schema should include @id for referencing
+---
+
+## Iteration 30 - US-014: Google Analytics Integration
+- What was implemented:
+  - Added gtag conversion tracking to contact form (generate_lead event)
+  - Created TypeScript type definitions for gtag in types/gtag.d.ts
+  - Updated Google Search Console verification to use NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION env var
+  - Updated .env.example with documentation for GA4 and GSC
+  - Updated .gitignore to allow .env.example
+- Files changed:
+  - components/contact/contact-form.tsx (added gtag event tracking on successful submission)
+  - types/gtag.d.ts (new - TypeScript types for window.gtag)
+  - app/[locale]/layout.tsx (updated Google verification to use env var)
+  - tsconfig.json (added types/**/*.d.ts to include)
+  - .env.example (updated with GA4 and GSC documentation)
+  - .gitignore (added !.env.example exception)
+  - prd.json (marked US-014 complete)
+- Learnings for future iterations:
+  - GA4 component already existed at components/analytics/google-analytics.tsx
+  - gtag('event', 'generate_lead', {...}) for lead generation conversion tracking
+  - TypeScript types for window extensions go in types/*.d.ts files
+  - Add types/**/*.d.ts to tsconfig.json include array
+  - .env* pattern in .gitignore requires !.env.example exception
+  - Use process.env.NEXT_PUBLIC_* for client-side accessible env vars in metadata
+---
+
+## Iteration 31 - US-019: Terms of Service Page
+- What was implemented:
+  - Created /termeni page route with locale support at app/[locale]/termeni/page.tsx
+  - Hero section with navy gradient background (linear-gradient 135deg from #002a52 to #004a8f)
+  - Badge with FileText icon, gold styling
+  - 8 comprehensive sections with icons:
+    1. Introduction - general terms overview
+    2. Service Description - legal services offered (4 items)
+    3. User Obligations - user responsibilities (5 items)
+    4. Intellectual Property - copyright and usage rights
+    5. Liability - limitation of responsibility (3 items)
+    6. Governing Law - Romanian law and jurisdiction
+    7. Modifications - terms update policy
+    8. Contact - how to reach us with questions
+  - Contact section at bottom for terms inquiries with email and address
+  - Last updated date displayed prominently
+  - Full bilingual content (RO/EN) with TermsOfService translations
+  - SEO metadata with generateMetadata (title, description, OG tags)
+  - Styling consistent with Privacy Policy page
+  - Footer already had link to /termeni from US-010
+- Files changed:
+  - app/[locale]/termeni/page.tsx (new)
+  - messages/ro.json (added TermsOfService translations)
+  - messages/en.json (added TermsOfService translations)
+  - prd.json (marked US-019 complete)
+- Learnings for future iterations:
+  - Legal pages follow same pattern: Hero + Content sections + Contact footer
+  - Page uses useTranslations hook for TermsOfService namespace
+  - Lucide icons: FileText, Users, AlertTriangle, Scale, BookOpen, Mail
+  - Consistent styling: navy gradient, gold accents, off-white sections
+  - Footer link at /termeni was already configured in US-010
+---
