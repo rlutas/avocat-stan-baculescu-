@@ -335,8 +335,8 @@
         "Contact information for technical support"
       ],
       "priority": 20,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Created docs/ghid-administrare-blog.md - comprehensive Romanian documentation including: MDX basics, creating/editing articles, frontmatter fields, Markdown syntax, image handling, bilingual articles, SEO tips, troubleshooting section, and contact info. The 30-minute training session must be delivered manually by the developer to the client."
     }
   ]
 }
