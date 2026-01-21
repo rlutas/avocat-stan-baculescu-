@@ -197,13 +197,13 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a visitor, I want a comprehensive footer with quick links and legal information so that I can easily navigate and find important policies.
 
 **Acceptance Criteria:**
-- [ ] Contact information (address, phone, email)
-- [ ] Quick navigation links
-- [ ] Social media icons/links (Facebook, Instagram, TikTok)
-- [ ] Legal links: Privacy Policy, Cookie Policy, Terms of Service
-- [ ] Copyright notice
-- [ ] Bilingual content
-- [ ] Typecheck passes
+- [x] Contact information (address, phone, email)
+- [x] Quick navigation links
+- [x] Social media icons/links (Facebook, Instagram, TikTok)
+- [x] Legal links: Privacy Policy, Cookie Policy, Terms of Service
+- [x] Copyright notice
+- [x] Bilingual content
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---

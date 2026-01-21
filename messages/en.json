@@ -533,6 +533,19 @@
     "next": "Next",
     "viewAllReviews": "View all reviews on Google"
   },
+  "Footer": {
+    "description": "We provide excellent legal services in Satu Mare and throughout Romania. With over 15 years of experience, we are here for you in matters of civil, criminal, family, and commercial law.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactInfo": "Contact Information",
+    "hours": "Monday - Sunday: 09:00 - 17:00",
+    "copyright": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "terms": "Terms of Service"
+    }
+  },
   "ContactPage": {
     "meta": {
       "title": "Contact | Stan-Baculescu Law Firm",

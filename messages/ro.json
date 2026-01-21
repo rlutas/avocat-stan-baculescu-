@@ -533,6 +533,19 @@
     "next": "Urmator",
     "viewAllReviews": "Vezi toate recenziile pe Google"
   },
+  "Footer": {
+    "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata Romania. Cu peste 15 ani de experienta, suntem alaturi de dumneavoastra in probleme de drept civil, penal, familiei si comercial.",
+    "quickLinks": "Navigare Rapida",
+    "services": "Servicii",
+    "contactInfo": "Informatii Contact",
+    "hours": "Luni - Duminica: 09:00 - 17:00",
+    "copyright": "Toate drepturile rezervate.",
+    "legal": {
+      "privacy": "Politica de Confidentialitate",
+      "cookies": "Politica Cookies",
+      "terms": "Termeni si Conditii"
+    }
+  },
   "ContactPage": {
     "meta": {
       "title": "Contact | Cabinet de Avocatura Stan-Baculescu",
