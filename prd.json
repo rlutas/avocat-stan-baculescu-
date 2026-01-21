@@ -594,8 +594,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 32,
-      "passes": false,
-      "notes": "Full redesign following hero patterns."
+      "passes": true,
+      "notes": "Full redesign following hero patterns. Updated not-found.tsx with: navy gradient background (full page), gold decorative circle + rotating ring elements (gold-pulse/gold-rotate animations), large 404 in gold with number-glow animation, two-line headline (titleLine1/titleLine2 translations), animated Scale icon with float animation, primary CTA with pulse-glow animation and ArrowRight icon, secondary navigation cards with hover effects (lift, gold border, icon transitions), fadeInUp animations with staggered delays. Added titleLine1/titleLine2 translations in RO/EN."
     },
     {
       "id": "US-035",

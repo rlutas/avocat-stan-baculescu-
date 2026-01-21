@@ -825,6 +825,8 @@
     }
   },
   "NotFound": {
+    "titleLine1": "Ne pare rau",
+    "titleLine2": "Pagina nu a fost gasita",
     "title": "Pagina nu a fost gasita",
     "description": "Ne pare rau, dar pagina pe care o cautati nu exista sau a fost mutata. Va rugam sa verificati adresa URL sau sa navigati catre una dintre paginile de mai jos.",
     "backToHome": "Inapoi la pagina principala",

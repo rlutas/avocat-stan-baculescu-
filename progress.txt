@@ -1351,3 +1351,69 @@
   - Index prop passed to TeamCard enables staggered animation delays
   - Existing layout preserved - only animations added, no structural changes
 ---
+
+## Iteration 45 - US-033: Legal Pages - Full Design Update (Privacy, Terms, Cookies)
+- What was implemented:
+  - Updated Privacy Policy page (politica-confidentialitate) with hero design pattern
+  - Updated Terms of Service page (termeni) with hero design pattern
+  - Updated Cookie Policy page (politica-cookies) with hero design pattern
+  - Created separate client components for each page:
+    - privacy-policy-content.tsx
+    - terms-of-service-content.tsx
+    - cookie-policy-content.tsx
+  - Added CSS keyframe animations: fadeInUp, gold-pulse, gold-rotate
+  - Added gold decorative elements (gold-decoration circle + gold-ring with rotating dots)
+  - Implemented two-line headline pattern (titleLine1/titleLine2)
+  - Section icons with hover effects (light gold bg to gold bg with navy icon)
+  - Enhanced contact footer sections with decorative circles
+  - Added rounded-xl styling on cards and tables
+  - Updated translation files (RO/EN) with titleLine1/titleLine2 keys for all 3 pages
+- Files changed:
+  - app/[locale]/politica-confidentialitate/page.tsx (refactored)
+  - app/[locale]/politica-confidentialitate/privacy-policy-content.tsx (new)
+  - app/[locale]/termeni/page.tsx (refactored)
+  - app/[locale]/termeni/terms-of-service-content.tsx (new)
+  - app/[locale]/politica-cookies/page.tsx (refactored)
+  - app/[locale]/politica-cookies/cookie-policy-content.tsx (new)
+  - messages/ro.json (added titleLine1, titleLine2 for PrivacyPolicy, TermsOfService, CookiePolicy)
+  - messages/en.json (added titleLine1, titleLine2 for PrivacyPolicy, TermsOfService, CookiePolicy)
+  - prd.json (marked US-033 complete)
+- Learnings for future iterations:
+  - Legal pages use smaller hero (py-16 md:py-20) compared to main pages
+  - Gold decorations positioned at left: 70% for smaller heroes
+  - Split page.tsx into server component (metadata) + client content component
+  - Section hover effects use group class: group-hover:bg-gold group-hover:text-navy
+  - Cookie tables get gold/10 bg on cookie name badges for visual hierarchy
+  - List items get hover:bg-[#f8f9fa] for subtle interactive feedback
+  - Contact footer sections use decorative circles (bg-gold/10) positioned with translate
+  - Same animation keyframes used across all legal pages for consistency
+---
+
+## Iteration 46 - US-034: 404 Page - Full Design Update
+- What was implemented:
+  - Redesigned 404 page with navy gradient background (full page)
+  - Gold decorative elements: gold-decoration (pulsing circle 600px) + gold-ring (rotating ring 500px with 2 dots)
+  - Large "404" number in gold with number-glow animation (text-shadow pulsing)
+  - Two-line headline pattern: "Ne pare rau" (smaller) + "Pagina nu a fost gasita" (larger)
+  - Animated Scale icon with float animation (rotate and translate effect)
+  - Primary CTA "Inapoi la pagina principala" with pulse-glow animation and ArrowRight icon
+  - Secondary navigation cards for Services and Contact with hover effects:
+    - Lift effect (-translate-y-1)
+    - Gold border hover (hover:border-gold/50)
+    - Icon containers with gold hover (group-hover:bg-gold group-hover:text-navy)
+  - FadeInUp animations with staggered delays (0ms to 600ms)
+  - Background pattern overlay with subtle cross pattern at 5% opacity
+  - Responsive typography: 120px/180px for 404 number, 3xl/5xl for title
+- Files changed:
+  - app/[locale]/not-found.tsx (complete rewrite with animations and design)
+  - messages/ro.json (added titleLine1, titleLine2 for NotFound)
+  - messages/en.json (added titleLine1, titleLine2 for NotFound)
+  - prd.json (marked US-034 complete)
+- Learnings for future iterations:
+  - 404 page uses same gold-decoration/gold-ring pattern as hero pages
+  - Number-glow animation uses text-shadow with rgba gold color
+  - Float animation combines translateY with rotate for more dynamic effect
+  - Secondary cards use group class for coordinated icon/container hover transitions
+  - Divider background color (bg-navy) must match page background for transparency effect
+  - Use min-h-[80vh] for 404 page to allow space for header/footer
+---
