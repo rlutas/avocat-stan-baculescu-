@@ -35,7 +35,7 @@ export function BlogGrid({
   const t = useTranslations('BlogPage');
 
   return (
-    <section className="py-16 bg-slate-50">
+    <section className="py-16 bg-[#f8f9fa]">
       <div className="container mx-auto px-4">
         {/* Category Filter */}
         <div className="mb-8 flex flex-wrap gap-2 justify-center">
@@ -43,8 +43,8 @@ export function BlogGrid({
             onClick={() => onCategoryChange(null)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               selectedCategory === null
-                ? 'bg-slate-900 text-white'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                ? 'bg-gold text-navy'
+                : 'bg-white text-navy hover:bg-gold/10 border border-gray-200'
             }`}
           >
             {t('allCategories')}
@@ -55,8 +55,8 @@ export function BlogGrid({
               onClick={() => onCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-slate-900 text-white'
-                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                  ? 'bg-gold text-navy'
+                  : 'bg-white text-navy hover:bg-gold/10 border border-gray-200'
               }`}
             >
               {category}
@@ -82,7 +82,7 @@ export function BlogGrid({
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-slate-600 text-lg">{t('noPosts')}</p>
+            <p className="text-[#4b5563] text-lg">{t('noPosts')}</p>
           </div>
         )}
 
@@ -92,7 +92,7 @@ export function BlogGrid({
             <button
               onClick={() => onPageChange(currentPage - 1)}
               disabled={currentPage === 1}
-              className="px-4 py-2 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-4 py-2 rounded-md border border-gray-200 text-navy hover:bg-gold/10 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {t('previousPage')}
             </button>
@@ -102,8 +102,8 @@ export function BlogGrid({
                 onClick={() => onPageChange(page)}
                 className={`px-4 py-2 rounded-md transition-colors ${
                   currentPage === page
-                    ? 'bg-slate-900 text-white'
-                    : 'border border-slate-200 text-slate-700 hover:bg-slate-100'
+                    ? 'bg-gold text-navy'
+                    : 'border border-gray-200 text-navy hover:bg-gold/10'
                 }`}
               >
                 {page}
@@ -112,7 +112,7 @@ export function BlogGrid({
             <button
               onClick={() => onPageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className="px-4 py-2 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-4 py-2 rounded-md border border-gray-200 text-navy hover:bg-gold/10 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {t('nextPage')}
             </button>

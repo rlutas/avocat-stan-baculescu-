@@ -53,13 +53,13 @@ export function SocialShare({ title, description, slug }: SocialShareProps) {
 
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-      <span className="text-slate-700 font-medium">{t('shareArticle')}</span>
+      <span className="text-navy font-medium">{t('shareArticle')}</span>
       <div className="flex items-center gap-3">
         <a
           href={shareLinks.facebook}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-colors"
+          className="p-2 rounded-full bg-navy/10 text-navy hover:bg-navy hover:text-white transition-colors"
           aria-label="Share on Facebook"
         >
           <Facebook className="w-5 h-5" />
@@ -68,7 +68,7 @@ export function SocialShare({ title, description, slug }: SocialShareProps) {
           href={shareLinks.twitter}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors"
+          className="p-2 rounded-full bg-navy/10 text-navy hover:bg-navy hover:text-white transition-colors"
           aria-label="Share on Twitter"
         >
           <Twitter className="w-5 h-5" />
@@ -77,14 +77,14 @@ export function SocialShare({ title, description, slug }: SocialShareProps) {
           href={shareLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-700 hover:text-white transition-colors"
+          className="p-2 rounded-full bg-navy/10 text-navy hover:bg-navy hover:text-white transition-colors"
           aria-label="Share on LinkedIn"
         >
           <Linkedin className="w-5 h-5" />
         </a>
         <button
           onClick={copyToClipboard}
-          className="p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-amber-500 hover:text-white transition-colors"
+          className="p-2 rounded-full bg-gold/10 text-gold hover:bg-gold hover:text-navy transition-colors"
           aria-label="Copy link"
         >
           {copied ? <Check className="w-5 h-5" /> : <Link2 className="w-5 h-5" />}

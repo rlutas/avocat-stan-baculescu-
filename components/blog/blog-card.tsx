@@ -30,18 +30,18 @@ export function BlogCard({
   });
 
   return (
-    <article className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
+    <article className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-transparent hover:border-gold">
       <div className="p-6">
         <div className="mb-3">
-          <span className="inline-block px-3 py-1 text-sm font-medium text-amber-700 bg-amber-50 rounded-full">
+          <span className="inline-block px-3 py-1 text-sm font-medium text-gold bg-[#fef9e7] rounded-full">
             {category}
           </span>
         </div>
-        <h2 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition-colors line-clamp-2">
+        <h2 className="text-xl font-heading font-bold text-navy mb-3 group-hover:text-gold transition-colors line-clamp-2">
           <Link href={`/blog/${slug}`}>{title}</Link>
         </h2>
-        <p className="text-slate-600 mb-4 line-clamp-3">{description}</p>
-        <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
+        <p className="text-[#4b5563] mb-4 line-clamp-3">{description}</p>
+        <div className="flex items-center justify-between text-sm text-[#6b7280] mb-4">
           <div className="flex items-center gap-2">
             <User className="w-4 h-4" />
             <span>{author}</span>
@@ -53,7 +53,7 @@ export function BlogCard({
         </div>
         <Link
           href={`/blog/${slug}`}
-          className="inline-flex items-center gap-2 text-amber-600 font-medium hover:text-amber-700 transition-colors"
+          className="inline-flex items-center gap-2 text-gold font-medium hover:text-gold/80 transition-colors"
         >
           {t('readMore')}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

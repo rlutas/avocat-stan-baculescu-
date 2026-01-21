@@ -23,9 +23,9 @@ export function RelatedArticles({ posts }: RelatedArticlesProps) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="py-16 bg-slate-50">
+    <section className="py-16 bg-[#f8f9fa]">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">
+        <h2 className="text-2xl font-heading font-bold text-navy mb-8 text-center">
           {t('relatedArticles')}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
