@@ -1087,3 +1087,195 @@
   - All About components are 'use client' due to useTranslations hook
   - Shimmer effect uses linear-gradient with transparent and rgba(255,255,255,0.06)
 ---
+
+## Iteration 39 - US-026: Services Overview Page - Full Design Update
+- What was implemented:
+  - Updated services-hero.tsx with:
+    - Navy gradient background (bg-navy)
+    - Gold decorative elements (gold-decoration pulsing circle + gold-ring rotating with dots)
+    - Trust badge with Briefcase icon and translation key
+    - Two-line headline (titleLine1 smaller, titleLine2 larger)
+    - FadeInUp animations with sequential delays
+    - Bottom fade transition to off-white grid section
+  - Updated services-grid.tsx with:
+    - FadeInUp animation with staggered delays (100ms per card, 0-700ms)
+    - Card hover effects: lift (-translate-y-2), gold ring (ring-gold/60), shadow-xl
+    - Gold icon containers (rounded-2xl, light gold bg, hover to gold bg with navy icon)
+    - Decorative top accent line animation (scale-x-0 to scale-x-100)
+    - Improved spacing and typography
+  - Updated services-cta.tsx with:
+    - Gold decorative elements (smaller than hero for balance)
+    - FadeInUp animations on all elements
+    - Pulse-glow button with ArrowRight icon
+- Files changed:
+  - components/services/services-hero.tsx
+  - components/services/services-grid.tsx
+  - components/services/services-cta.tsx
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2)
+  - messages/en.json (added trustBadge, titleLine1, titleLine2)
+  - prd.json (marked US-026 complete)
+- Learnings for future iterations:
+  - Services hero uses same gold-decoration and gold-ring pattern as homepage/about
+  - Staggered delays for grid items: use template string `delay-${index * 100}`
+  - Card hover pattern consistent across site: -translate-y-2 + ring-gold/60 + shadow-xl
+  - CTA section uses smaller gold decorations (500px/400px vs 600px/500px) for visual balance
+  - Bottom fade uses from-[#f8f9fa] to transition to next section color
+---
+
+## Iteration 40 - US-027: Individual Service Pages (8 pages) - Full Design Update
+- What was implemented:
+  - Updated service-detail-hero.tsx with:
+    - Navy gradient background (bg-navy)
+    - Gold decorative elements (gold-decoration pulsing circle + gold-ring rotating with dots)
+    - Trust badge with service-specific icon and text
+    - Two-line headline (titleLine1 smaller, titleLine2 larger)
+    - FadeInUp animations with sequential delays
+    - Icon hover effect (gold background with navy icon)
+  - Updated service-detail-content.tsx with:
+    - FadeInUp animations on headings and content
+    - Common cases cards: hover effect (-translate-y-1), gold border, gold ring/20
+    - Icon containers: light gold bg, gold on hover with navy icon
+    - Approach steps: gold number badges, hover lift effect, gold shadow
+    - Staggered animation delays for list items
+  - Updated service-detail-related.tsx with:
+    - FadeInUp animation with staggered delays (100ms per card)
+    - Card hover: lift (-translate-y-2), gold border, gold ring/20, shadow-xl
+    - Top accent line animation (scale-x-0 to scale-x-100)
+    - Icon hover: gold bg with navy icon and gold shadow
+  - Updated service-detail-cta.tsx with:
+    - Gold decorative elements (smaller than hero: 400px/350px)
+    - FadeInUp animations on all elements
+    - Contact info cards with gold icon containers and hover effects
+    - Pulse-glow button with ArrowRight icon
+  - Added translation keys for all 8 services (RO/EN):
+    - trustBadge: service-specific expertise badge text
+    - titleLine1: smaller category line (e.g., "Servicii Juridice Specializate")
+    - titleLine2: larger service name (e.g., "Malpraxis Medical")
+- Files changed:
+  - components/service-detail/service-detail-hero.tsx
+  - components/service-detail/service-detail-content.tsx
+  - components/service-detail/service-detail-related.tsx
+  - components/service-detail/service-detail-cta.tsx
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2 for 8 services)
+  - messages/en.json (added trustBadge, titleLine1, titleLine2 for 8 services)
+  - prd.json (marked US-027 complete)
+- Learnings for future iterations:
+  - Service detail pages follow same patterns as services overview
+  - Gold decorations positioned to right side (left: 70%/80%) to avoid overlap with content
+  - CTA section uses smaller gold decorations than hero (400px/350px vs 500px/400px)
+  - Contact info cards use ring-1 ring-white/10 with hover:ring-gold/30 for subtle effect
+  - Dynamic animation delays with style={{ animationDelay: `${(index + 1) * 100}ms` }}
+  - Trust badge uses same service icon for consistency
+---
+
+## Iteration 41 - US-028: Blog Section - Full Design Update
+- What was implemented:
+  - Updated blog-hero.tsx with:
+    - Navy gradient background (bg-navy)
+    - Gold decorative elements (gold-decoration pulsing circle + gold-ring rotating with dots)
+    - Trust badge with FileText icon
+    - Two-line headline (titleLine1 smaller, titleLine2 larger)
+    - FadeInUp animations with sequential delays
+    - Bottom fade transition to off-white grid section
+  - Updated blog-card.tsx with:
+    - Rounded-2xl cards with shadow-md
+    - Shimmer effect on hover using CSS ::before pseudo-element
+    - FadeInUp animation with staggered delays based on index prop
+    - Card hover effects: lift (-translate-y-2), gold border, gold ring/20
+    - Decorative top accent line animation (scale-x-0 to scale-x-100)
+    - Quote icon decoration on hover
+    - Gold icon backgrounds on User/Calendar icons
+  - Updated blog-grid.tsx with:
+    - Staggered fadeIn delays passed via index prop to BlogCard
+    - Gold active state on category filter buttons
+    - Gold shadow on active filter buttons and pagination
+    - ChevronLeft/Right icons on pagination
+    - Improved button styling for prev/next
+  - Updated blog-cta.tsx with:
+    - Gold decorative elements (smaller than hero: 400px/350px)
+    - FadeInUp animations on all elements
+    - Pulse-glow button with ArrowRight icon
+  - Updated blog-article.tsx with:
+    - Navy hero section with gold decorative elements
+    - FadeInUp animations on all text sections
+    - Category badge with Tag icon on gold/10 background
+    - Two-line title style (article title in large font)
+    - Author section with gold accents (User/Calendar icons in gold/20 circles)
+    - "Written by" and "Published on" labels
+  - Updated social-share.tsx with:
+    - Share2 icon in gold container
+    - Rounded-xl buttons with ring hover effects
+    - Gold accent on copy link button (bg-[#fef9e7] hover:bg-gold)
+    - Navy hover state on social buttons
+  - Updated related-articles.tsx with:
+    - FadeInUp animation on heading
+    - Staggered card animations via index prop
+    - Increased gap between cards
+- Files changed:
+  - components/blog/blog-hero.tsx
+  - components/blog/blog-card.tsx
+  - components/blog/blog-grid.tsx
+  - components/blog/blog-cta.tsx
+  - components/blog/blog-article.tsx
+  - components/blog/social-share.tsx
+  - components/blog/related-articles.tsx
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2, article.writtenBy, article.publishedOn)
+  - messages/en.json (added trustBadge, titleLine1, titleLine2, article.writtenBy, article.publishedOn)
+  - prd.json (marked US-028 complete)
+- Learnings for future iterations:
+  - Blog components follow same animation pattern as hero and services pages
+  - Card shimmer effect uses CSS ::before pseudo-element with linear-gradient
+  - Index prop allows staggered animation delays with style={{ animationDelay: }}
+  - Quote icon from lucide-react for decorative blog card element
+  - Share2 icon from lucide-react for social share section
+  - Article hero is separate section from article content for better layout control
+  - Author info section uses two rows: label text-white/50, value text-white font-semibold
+---
+
+## Iteration 42 - US-029: Contact Page - Full Design Update
+- What was implemented:
+  - Updated contact-hero.tsx with:
+    - Navy gradient background (bg-navy)
+    - Gold decorative elements (gold-decoration pulsing circle + gold-ring rotating with dots)
+    - Trust badge with Phone icon
+    - Two-line headline (titleLine1 smaller, titleLine2 larger)
+    - FadeInUp animations with sequential delays
+    - Bottom fade transition to form section
+  - Updated contact-info.tsx with:
+    - Card hover effects (lift -translate-y-1, gold border, gold shadow)
+    - Gold icons on light gold bg (#fef9e7) that transform to gold bg with navy icon on hover
+    - Social media buttons with gold hover state and shadow
+    - FadeInUp animation
+  - Updated contact-form.tsx with:
+    - Rounded-xl inputs with gold focus states
+    - Navy font-medium labels
+    - Pulse-glow button animation on submit
+    - ArrowRight icon that translates on hover
+    - FadeInUp animation on form card
+  - Updated contact-map.tsx with:
+    - Gold ring-2 ring-gold/20 border accent with hover ring-gold/40
+    - Badge with MapPin icon
+    - FadeInUp animation with staggered delays
+  - Updated contact page layout with:
+    - Floating badges: 'Raspundem in 24h', 'Consultatie Gratuita'
+    - Float-up and float-down animations
+    - Badge fade-in animation with delays
+    - Desktop only visibility (xl:block)
+- Files changed:
+  - components/contact/contact-hero.tsx
+  - components/contact/contact-info.tsx
+  - components/contact/contact-form.tsx
+  - components/contact/contact-map.tsx
+  - app/[locale]/contact/page.tsx
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2, floatingBadges.response, floatingBadges.consultation, map.badge)
+  - messages/en.json (added same keys in English)
+  - prd.json (marked US-029 complete)
+- Learnings for future iterations:
+  - Contact page follows same animation pattern as hero, services, blog pages
+  - Gold decorative elements positioned at left: 70% to avoid overlap with centered content
+  - Floating badges use pointer-events-none to allow clicking through to content below
+  - Float animations use 4s duration for subtle continuous movement
+  - Contact info cards use group class for coordinated hover effects on icon and container
+  - Submit button combines pulse-glow animation with hover transitions
+  - Map section uses ring utility for border accent (more flexible than border)
+---
