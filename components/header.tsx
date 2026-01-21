@@ -10,7 +10,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from '@/components/ui/sheet';
-import { Menu, X, Scale } from 'lucide-react';
+import { Menu, Scale } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -52,26 +52,16 @@ export function Header() {
       className={cn(
         'fixed left-0 right-0 top-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/95 shadow-md backdrop-blur-sm'
-          : 'bg-transparent'
+          ? 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] backdrop-blur-sm'
+          : 'bg-white'
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Scale
-              className={cn(
-                'h-8 w-8 transition-colors',
-                isScrolled ? 'text-slate-900' : 'text-white'
-              )}
-            />
-            <span
-              className={cn(
-                'text-xl font-bold tracking-tight transition-colors',
-                isScrolled ? 'text-slate-900' : 'text-white'
-              )}
-            >
+            <Scale className="h-8 w-8 text-navy transition-colors" />
+            <span className="text-xl font-bold tracking-tight text-navy transition-colors">
               {t('siteName')}
             </span>
           </Link>
@@ -83,14 +73,10 @@ export function Header() {
                 key={item.key}
                 href={item.href}
                 className={cn(
-                  'rounded-md px-4 py-2 text-sm font-medium transition-colors',
+                  'relative px-4 py-2 text-sm font-medium transition-colors',
                   pathname === item.href
-                    ? isScrolled
-                      ? 'bg-slate-100 text-slate-900'
-                      : 'bg-white/20 text-white'
-                    : isScrolled
-                      ? 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
-                      : 'text-white/90 hover:bg-white/10 hover:text-white'
+                    ? 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                    : 'text-navy hover:text-gold'
                 )}
               >
                 {t(`nav.${item.key}`)}
@@ -101,18 +87,14 @@ export function Header() {
           {/* Desktop Language Switcher & CTA */}
           <div className="hidden items-center gap-4 lg:flex">
             {/* Language Switcher */}
-            <div className="flex items-center rounded-full border border-current/20 p-1">
+            <div className="flex items-center rounded-full border border-navy/20 p-1">
               <button
                 onClick={() => switchLanguage('ro')}
                 className={cn(
                   'rounded-full px-3 py-1 text-sm font-medium transition-all',
                   locale === 'ro'
-                    ? isScrolled
-                      ? 'bg-slate-900 text-white'
-                      : 'bg-white text-slate-900'
-                    : isScrolled
-                      ? 'text-slate-600 hover:text-slate-900'
-                      : 'text-white/70 hover:text-white'
+                    ? 'bg-navy text-white'
+                    : 'text-navy/60 hover:text-navy'
                 )}
               >
                 RO
@@ -122,12 +104,8 @@ export function Header() {
                 className={cn(
                   'rounded-full px-3 py-1 text-sm font-medium transition-all',
                   locale === 'en'
-                    ? isScrolled
-                      ? 'bg-slate-900 text-white'
-                      : 'bg-white text-slate-900'
-                    : isScrolled
-                      ? 'text-slate-600 hover:text-slate-900'
-                      : 'text-white/70 hover:text-white'
+                    ? 'bg-navy text-white'
+                    : 'text-navy/60 hover:text-navy'
                 )}
               >
                 EN
@@ -137,12 +115,7 @@ export function Header() {
             {/* CTA Button */}
             <Button
               asChild
-              className={cn(
-                'font-semibold transition-colors',
-                isScrolled
-                  ? 'bg-amber-600 text-white hover:bg-amber-700'
-                  : 'bg-amber-600 text-white hover:bg-amber-700'
-              )}
+              className="bg-gold font-semibold text-navy shadow-[var(--shadow-gold)] transition-all hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[var(--shadow-gold-lg)]"
             >
               <Link href="/contact">{t('nav.contact')}</Link>
             </Button>
@@ -153,12 +126,7 @@ export function Header() {
             {/* Mobile Language Switcher */}
             <button
               onClick={() => switchLanguage(otherLocale)}
-              className={cn(
-                'rounded-full px-3 py-1 text-sm font-semibold transition-colors',
-                isScrolled
-                  ? 'bg-slate-100 text-slate-900'
-                  : 'bg-white/20 text-white'
-              )}
+              className="rounded-full bg-navy/10 px-3 py-1 text-sm font-semibold text-navy transition-colors hover:bg-navy/20"
             >
               {otherLocale.toUpperCase()}
             </button>
@@ -169,21 +137,21 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={cn(
-                    'h-10 w-10',
-                    isScrolled
-                      ? 'text-slate-900 hover:bg-slate-100'
-                      : 'text-white hover:bg-white/10'
-                  )}
+                  className="h-10 w-10 text-navy hover:bg-navy/10"
                 >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80">
+              <SheetContent
+                side="right"
+                className="w-80 border-l-navy/10 bg-navy"
+              >
                 <SheetTitle className="flex items-center gap-2">
-                  <Scale className="h-6 w-6 text-slate-900" />
-                  <span className="text-lg font-bold">{t('siteName')}</span>
+                  <Scale className="h-6 w-6 text-gold" />
+                  <span className="text-lg font-bold text-white">
+                    {t('siteName')}
+                  </span>
                 </SheetTitle>
                 <nav className="mt-8 flex flex-col gap-2">
                   {navItems.map((item) => (
@@ -194,8 +162,8 @@ export function Header() {
                       className={cn(
                         'rounded-lg px-4 py-3 text-base font-medium transition-colors',
                         pathname === item.href
-                          ? 'bg-slate-100 text-slate-900'
-                          : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
+                          ? 'bg-white/10 text-gold'
+                          : 'text-white hover:bg-white/5 hover:text-gold'
                       )}
                     >
                       {t(`nav.${item.key}`)}
@@ -207,7 +175,7 @@ export function Header() {
                 <div className="mt-8">
                   <Button
                     asChild
-                    className="w-full bg-amber-600 font-semibold text-white hover:bg-amber-700"
+                    className="w-full bg-gold font-semibold text-navy hover:bg-gold-light"
                   >
                     <Link
                       href="/contact"
@@ -220,7 +188,7 @@ export function Header() {
 
                 {/* Mobile Language Switcher */}
                 <div className="mt-6">
-                  <p className="mb-2 text-sm font-medium text-slate-500">
+                  <p className="mb-2 text-sm font-medium text-white/60">
                     {t('language.ro') === 'Romana' ? 'Limba' : 'Language'}
                   </p>
                   <div className="flex gap-2">
@@ -232,8 +200,8 @@ export function Header() {
                       className={cn(
                         'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors',
                         locale === 'ro'
-                          ? 'bg-slate-900 text-white'
-                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                          ? 'bg-gold text-navy'
+                          : 'bg-white/10 text-white hover:bg-white/20'
                       )}
                     >
                       {t('language.ro')}
@@ -246,8 +214,8 @@ export function Header() {
                       className={cn(
                         'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors',
                         locale === 'en'
-                          ? 'bg-slate-900 text-white'
-                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                          ? 'bg-gold text-navy'
+                          : 'bg-white/10 text-white hover:bg-white/20'
                       )}
                     >
                       {t('language.en')}

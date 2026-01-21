@@ -518,3 +518,25 @@
   - White text at 90% opacity (text-white/90) provides softer contrast than pure white
 ---
 
+## Iteration 18 - US-002-STYLE: Update Header/Navigation with Style Guide
+- What was implemented:
+  - Header background: white by default, white with subtle shadow on scroll
+  - Logo: navy (#003a70) Scale icon and site name
+  - Navigation links: navy text, gold underline on active, gold text on hover
+  - Language switcher: navy/gold pill-style toggle
+  - Desktop CTA button: gold background, navy text with gold shadow
+  - Mobile menu: navy background, white text, gold active/hover states
+  - Mobile language buttons: gold when active, translucent white when inactive
+  - Sticky header shadow: subtle gray (0,0,0,0.05) instead of harsh black
+- Files changed:
+  - components/header.tsx (updated)
+  - prd.json (marked US-002-STYLE complete)
+- Learnings for future iterations:
+  - Use text-navy and bg-navy for brand colors (defined in globals.css @theme)
+  - Shadow variables can be used with arbitrary values: shadow-[var(--shadow-gold)]
+  - For nav active state, use after: pseudo-element for underline effect
+  - Mobile Sheet component accepts className for bg-navy styling
+  - opacity modifiers work with custom colors: text-navy/60, bg-navy/10
+  - Removed unused X import from lucide-react
+---
+
