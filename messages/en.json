@@ -757,5 +757,89 @@
       "description": "We are at your disposal for any clarifications regarding the terms of use of our website and services.",
       "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
     }
+  },
+  "CookiePolicy": {
+    "badge": "Cookie Policy",
+    "hero": {
+      "title": "Cookie Policy",
+      "subtitle": "This policy explains what cookies are, how we use them, and how you can manage your preferences."
+    },
+    "backToHome": "Back to homepage",
+    "lastUpdated": "Last updated",
+    "lastUpdatedDate": "January 15, 2026",
+    "table": {
+      "name": "Cookie Name",
+      "purpose": "Purpose",
+      "duration": "Duration"
+    },
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "Stan-Baculescu Law Firm (hereinafter referred to as \"the Firm\", \"we\" or \"our\") uses cookies and similar technologies on our website to provide you with an optimal browsing experience, to analyze site traffic, and to personalize content. This Cookie Policy explains what cookies are, what types of cookies we use, and how you can manage them."
+      },
+      "whatAreCookies": {
+        "title": "2. What Are Cookies?",
+        "content": "Cookies are small text files that are placed on your device (computer, tablet, mobile phone) when you visit a website. They allow the site to recognize your device and store information about your preferences or previous actions. Cookies do not contain directly identifiable personal information and cannot access or damage your device."
+      },
+      "essentialCookies": {
+        "title": "3. Essential Cookies",
+        "content": "These cookies are strictly necessary for our website to function and cannot be disabled. They are set in response to your actions, such as setting privacy preferences or selecting language. Without these cookies, the site cannot function properly.",
+        "cookies": {
+          "cookieConsent": {
+            "purpose": "Stores your consent for the use of cookies",
+            "duration": "1 year"
+          },
+          "cookiePreferences": {
+            "purpose": "Stores your preferences for cookie categories",
+            "duration": "1 year"
+          },
+          "nextLocale": {
+            "purpose": "Stores your language preference (Romanian/English)",
+            "duration": "Session"
+          }
+        }
+      },
+      "analyticsCookies": {
+        "title": "4. Analytics Cookies",
+        "content": "These cookies allow us to measure and analyze how visitors interact with our website. They help us understand which pages are most popular, how visitors navigate the site, and if they encounter errors. All data collected by these cookies is aggregated and anonymous. We use Google Analytics for this purpose.",
+        "cookies": {
+          "ga": {
+            "purpose": "Used by Google Analytics to distinguish unique users",
+            "duration": "2 years"
+          },
+          "gaId": {
+            "purpose": "Used by Google Analytics to maintain session state",
+            "duration": "2 years"
+          }
+        }
+      },
+      "marketingCookies": {
+        "title": "5. Marketing Cookies",
+        "content": "Currently, our website does not use marketing or advertising cookies. If we introduce such cookies in the future, we will update this policy and request your consent before activating them."
+      },
+      "manageCookies": {
+        "title": "6. How to Manage Cookies",
+        "content": "You have full control over the cookies you accept. You can manage your preferences in the following ways:",
+        "items": {
+          "item1": "Through the consent banner: On your first visit to the site, a banner is displayed allowing you to accept all cookies, reject non-essential ones, or customize your choice.",
+          "item2": "Through cookie settings: You can access cookie settings at any time from the website footer to change your preferences.",
+          "item3": "Through browser settings: Most browsers allow you to block or delete cookies. Consult your browser's help section for instructions.",
+          "item4": "Important: Disabling essential cookies may affect the proper functioning of our website."
+        }
+      },
+      "retention": {
+        "title": "7. Retention Period",
+        "content": "Essential and preference cookies are stored for 1 year. Analytics cookies (Google Analytics) are stored for 2 years. You can delete cookies at any time from your browser settings or by revoking consent through the cookie settings on our website."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "content": "For any questions or concerns regarding the use of cookies on our website, you can contact us at the email address office@stanbaculescu.ro or through the contact form available on the site."
+      }
+    },
+    "questions": {
+      "title": "Questions about Cookies?",
+      "description": "We are at your disposal for any clarifications regarding how we use cookies on our website.",
+      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+    }
   }
 }

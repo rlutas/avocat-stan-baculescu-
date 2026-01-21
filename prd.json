@@ -285,8 +285,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 17,
-      "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "passes": true,
+      "notes": "Created app/[locale]/politica-cookies/page.tsx with navy gradient hero, 8 comprehensive sections covering: introduction, what cookies are, essential cookies (with table), analytics cookies (with table), marketing cookies, managing cookies (with instructions), retention periods, and contact. Full bilingual support (RO/EN) with CookiePolicy translations. Footer already links to /politica-cookies from US-010."
     },
     {
       "id": "US-021",

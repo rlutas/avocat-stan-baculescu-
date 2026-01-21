@@ -757,5 +757,89 @@
       "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind termenii de utilizare a site-ului si serviciilor noastre.",
       "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
     }
+  },
+  "CookiePolicy": {
+    "badge": "Politica Cookies",
+    "hero": {
+      "title": "Politica de Cookies",
+      "subtitle": "Aceasta politica explica ce sunt cookie-urile, cum le folosim si cum puteti gestiona preferintele dumneavoastra."
+    },
+    "backToHome": "Inapoi la pagina principala",
+    "lastUpdated": "Ultima actualizare",
+    "lastUpdatedDate": "15 Ianuarie 2026",
+    "table": {
+      "name": "Nume Cookie",
+      "purpose": "Scop",
+      "duration": "Durata"
+    },
+    "sections": {
+      "introduction": {
+        "title": "1. Introducere",
+        "content": "Societatea Civila de Avocati Stan-Baculescu (denumita in continuare \"Cabinetul\", \"noi\" sau \"nostru\") utilizeaza cookie-uri si tehnologii similare pe site-ul nostru web pentru a va oferi o experienta optima de navigare, pentru a analiza traficul site-ului si pentru a personaliza continutul. Aceasta Politica de Cookie-uri explica ce sunt cookie-urile, ce tipuri de cookie-uri folosim si cum le puteti gestiona."
+      },
+      "whatAreCookies": {
+        "title": "2. Ce sunt Cookie-urile?",
+        "content": "Cookie-urile sunt fisiere text mici care sunt plasate pe dispozitivul dumneavoastra (computer, tableta, telefon mobil) atunci cand vizitati un site web. Acestea permit site-ului sa va recunoasca dispozitivul si sa stocheze informatii despre preferintele sau actiunile dumneavoastra anterioare. Cookie-urile nu contin informatii personale identificabile direct si nu pot accesa sau deteriora dispozitivul dumneavoastra."
+      },
+      "essentialCookies": {
+        "title": "3. Cookie-uri Esentiale",
+        "content": "Aceste cookie-uri sunt strict necesare pentru functionarea site-ului nostru si nu pot fi dezactivate. Ele sunt setate ca raspuns la actiunile dumneavoastra, cum ar fi setarea preferintelor de confidentialitate sau selectarea limbii. Fara aceste cookie-uri, site-ul nu poate functiona corect.",
+        "cookies": {
+          "cookieConsent": {
+            "purpose": "Stocheaza consimtamantul dumneavoastra pentru utilizarea cookie-urilor",
+            "duration": "1 an"
+          },
+          "cookiePreferences": {
+            "purpose": "Stocheaza preferintele dumneavoastra pentru categoriile de cookie-uri",
+            "duration": "1 an"
+          },
+          "nextLocale": {
+            "purpose": "Stocheaza preferinta dumneavoastra de limba (romana/engleza)",
+            "duration": "Sesiune"
+          }
+        }
+      },
+      "analyticsCookies": {
+        "title": "4. Cookie-uri de Analiza",
+        "content": "Aceste cookie-uri ne permit sa masuram si sa analizam modul in care vizitatorii interactioneaza cu site-ul nostru. Ne ajuta sa intelegem care pagini sunt cele mai populare, cum navigheaza vizitatorii pe site si daca intampina erori. Toate datele colectate de aceste cookie-uri sunt agregate si anonime. Folosim Google Analytics pentru aceasta.",
+        "cookies": {
+          "ga": {
+            "purpose": "Folosit de Google Analytics pentru a distinge utilizatorii unici",
+            "duration": "2 ani"
+          },
+          "gaId": {
+            "purpose": "Folosit de Google Analytics pentru a mentine starea sesiunii",
+            "duration": "2 ani"
+          }
+        }
+      },
+      "marketingCookies": {
+        "title": "5. Cookie-uri de Marketing",
+        "content": "In prezent, site-ul nostru nu utilizeaza cookie-uri de marketing sau publicitate. Daca vom introduce astfel de cookie-uri in viitor, vom actualiza aceasta politica si vom solicita consimtamantul dumneavoastra inainte de a le activa."
+      },
+      "manageCookies": {
+        "title": "6. Cum puteti gestiona Cookie-urile",
+        "content": "Aveti control deplin asupra cookie-urilor pe care le acceptati. Puteti gestiona preferintele dumneavoastra in urmatoarele moduri:",
+        "items": {
+          "item1": "Prin bannerul de consimtamant: La prima vizita pe site, vi se afiseaza un banner care va permite sa acceptati toate cookie-urile, sa le refuzati pe cele neesentiale sau sa va personalizati alegerea.",
+          "item2": "Prin setarile cookie-urilor: Puteti accesa oricand setarile cookie-urilor din footer-ul site-ului pentru a va modifica preferintele.",
+          "item3": "Prin setarile browserului: Majoritatea browserelor va permit sa blocati sau sa stergeti cookie-urile. Consultati sectiunea de ajutor a browserului dumneavoastra pentru instructiuni.",
+          "item4": "Important: Dezactivarea cookie-urilor esentiale poate afecta functionarea corecta a site-ului nostru."
+        }
+      },
+      "retention": {
+        "title": "7. Perioada de Stocare",
+        "content": "Cookie-urile esentiale si de preferinte sunt stocate timp de 1 an. Cookie-urile de analiza (Google Analytics) sunt stocate timp de 2 ani. Puteti sterge cookie-urile oricand din setarile browserului dumneavoastra sau revocand consimtamantul prin setarile cookie-urilor de pe site-ul nostru."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "content": "Pentru orice intrebari sau preocupari legate de utilizarea cookie-urilor pe site-ul nostru, ne puteti contacta la adresa de email office@stanbaculescu.ro sau prin formularul de contact disponibil pe site."
+      }
+    },
+    "questions": {
+      "title": "Intrebari despre Cookie-uri?",
+      "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind modul in care utilizam cookie-urile pe site-ul nostru.",
+      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+    }
   }
 }
