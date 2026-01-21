@@ -76,17 +76,17 @@ export function ContactInfo() {
     <div className="space-y-8">
       {/* Contact Details Card */}
       <div className="rounded-2xl bg-white p-8 shadow-xl">
-        <h2 className="mb-6 text-2xl font-bold text-slate-900">
+        <h2 className="font-heading mb-6 text-2xl font-bold text-navy">
           {t('title')}
         </h2>
         <div className="space-y-6">
           {contactDetails.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-amber-50">
-                <item.icon className="h-6 w-6 text-amber-600" />
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#fef9e7]">
+                <item.icon className="h-6 w-6 text-gold" />
               </div>
               <div>
-                <p className="text-sm font-medium text-slate-500">
+                <p className="text-sm font-medium text-[#4b5563]">
                   {item.label}
                 </p>
                 {item.href ? (
@@ -98,12 +98,12 @@ export function ContactInfo() {
                         ? 'noopener noreferrer'
                         : undefined
                     }
-                    className="text-lg text-slate-900 hover:text-amber-600 transition-colors"
+                    className="text-lg text-[#1f2937] hover:text-gold transition-colors"
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <p className="text-lg text-slate-900">{item.value}</p>
+                  <p className="text-lg text-[#1f2937]">{item.value}</p>
                 )}
               </div>
             </div>
@@ -113,7 +113,7 @@ export function ContactInfo() {
 
       {/* Social Media Card */}
       <div className="rounded-2xl bg-white p-8 shadow-xl">
-        <h3 className="mb-4 text-lg font-semibold text-slate-900">
+        <h3 className="font-heading mb-4 text-lg font-semibold text-navy">
           {t('socialTitle')}
         </h3>
         <div className="flex gap-4">
@@ -123,7 +123,7 @@ export function ContactInfo() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-all hover:bg-amber-500 hover:text-white"
+              className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy/10 text-navy transition-all hover:bg-gold hover:text-navy"
               aria-label={social.label}
             >
               <social.icon className="h-6 w-6" />

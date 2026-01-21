@@ -84,17 +84,17 @@ export function ContactForm() {
   if (submitStatus === 'success') {
     return (
       <div className="rounded-2xl bg-white p-8 text-center shadow-xl">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-          <CheckCircle className="h-8 w-8 text-green-600" />
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#fef9e7]">
+          <CheckCircle className="h-8 w-8 text-gold" />
         </div>
-        <h3 className="mb-2 text-xl font-semibold text-slate-900">
+        <h3 className="font-heading mb-2 text-xl font-semibold text-navy">
           {t('successTitle')}
         </h3>
-        <p className="mb-6 text-slate-600">{t('successMessage')}</p>
+        <p className="mb-6 text-[#4b5563]">{t('successMessage')}</p>
         <Button
           onClick={() => setSubmitStatus('idle')}
           variant="outline"
-          className="border-slate-300"
+          className="border-navy text-navy hover:bg-navy hover:text-white"
         >
           {t('sendAnother')}
         </Button>
@@ -107,7 +107,7 @@ export function ContactForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="rounded-2xl bg-white p-8 shadow-xl"
     >
-      <h2 className="mb-6 text-2xl font-bold text-slate-900">
+      <h2 className="font-heading mb-6 text-2xl font-bold text-navy">
         {t('title')}
       </h2>
 
@@ -121,13 +121,13 @@ export function ContactForm() {
       <div className="space-y-5">
         {/* Name Field */}
         <div>
-          <Label htmlFor="name" className="text-slate-700">
+          <Label htmlFor="name" className="text-[#1f2937]">
             {t('nameLabel')} <span className="text-red-500">*</span>
           </Label>
           <Input
             id="name"
             {...register('name')}
-            className={`mt-1.5 ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+            className={`mt-1.5 focus:border-navy focus-visible:ring-gold ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
             placeholder={t('namePlaceholder')}
           />
           {errors.name && (
@@ -137,14 +137,14 @@ export function ContactForm() {
 
         {/* Email Field */}
         <div>
-          <Label htmlFor="email" className="text-slate-700">
+          <Label htmlFor="email" className="text-[#1f2937]">
             {t('emailLabel')} <span className="text-red-500">*</span>
           </Label>
           <Input
             id="email"
             type="email"
             {...register('email')}
-            className={`mt-1.5 ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+            className={`mt-1.5 focus:border-navy focus-visible:ring-gold ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
             placeholder={t('emailPlaceholder')}
           />
           {errors.email && (
@@ -154,26 +154,26 @@ export function ContactForm() {
 
         {/* Phone Field */}
         <div>
-          <Label htmlFor="phone" className="text-slate-700">
+          <Label htmlFor="phone" className="text-[#1f2937]">
             {t('phoneLabel')}
           </Label>
           <Input
             id="phone"
             type="tel"
             {...register('phone')}
-            className="mt-1.5"
+            className="mt-1.5 focus:border-navy focus-visible:ring-gold"
             placeholder={t('phonePlaceholder')}
           />
         </div>
 
         {/* Subject Field */}
         <div>
-          <Label htmlFor="subject" className="text-slate-700">
+          <Label htmlFor="subject" className="text-[#1f2937]">
             {t('subjectLabel')} <span className="text-red-500">*</span>
           </Label>
           <Select onValueChange={(value) => setValue('subject', value)}>
             <SelectTrigger
-              className={`mt-1.5 ${errors.subject ? 'border-red-500 focus:ring-red-500' : ''}`}
+              className={`mt-1.5 focus:border-navy focus:ring-gold ${errors.subject ? 'border-red-500 focus:ring-red-500' : ''}`}
             >
               <SelectValue placeholder={t('subjectPlaceholder')} />
             </SelectTrigger>
@@ -194,13 +194,13 @@ export function ContactForm() {
 
         {/* Message Field */}
         <div>
-          <Label htmlFor="message" className="text-slate-700">
+          <Label htmlFor="message" className="text-[#1f2937]">
             {t('messageLabel')} <span className="text-red-500">*</span>
           </Label>
           <Textarea
             id="message"
             {...register('message')}
-            className={`mt-1.5 min-h-[150px] resize-none ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+            className={`mt-1.5 min-h-[150px] resize-none focus:border-navy focus-visible:ring-gold ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
             placeholder={t('messagePlaceholder')}
           />
           {errors.message && (
@@ -221,7 +221,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={submitStatus === 'loading'}
-          className="h-12 w-full bg-amber-500 text-base font-semibold text-white hover:bg-amber-600"
+          className="h-12 w-full bg-gold text-base font-semibold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]"
         >
           {submitStatus === 'loading' ? (
             <span className="flex items-center gap-2">
