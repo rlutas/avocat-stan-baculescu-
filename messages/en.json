@@ -92,5 +92,153 @@
       "description": "Contact us for an initial consultation and discover how we can help you.",
       "button": "Contact Us"
     }
+  },
+  "TeamPage": {
+    "hero": {
+      "title": "Our Team",
+      "subtitle": "Dedicated Professionals"
+    },
+    "sections": {
+      "founders": "Founders",
+      "collaborators": "Associate Attorneys",
+      "staff": "Support Team"
+    },
+    "roles": {
+      "founder": "Founding Attorney",
+      "collaborator": "Associate Attorney",
+      "clientRelations": "Client Relations"
+    },
+    "viewProfile": "View Full Profile",
+    "backToTeam": "Back to Team",
+    "contactMember": "Contact",
+    "members": {
+      "cameliaStan": {
+        "name": "Camelia Stan",
+        "shortBio": "Founding attorney with over 15 years of experience in civil and family law. Dedicated to defending clients' rights with professionalism and empathy.",
+        "fullBio": "Attorney Camelia Stan is co-founder of Stan-Baculescu Law Firm, with over 15 years of experience in the legal field. Specializing in civil law and family law, she has successfully represented hundreds of clients in court, achieving remarkable results in complex divorce, custody, and property division cases. Her approach combines deep legal knowledge with an empathetic understanding of clients' needs.",
+        "specializations": {
+          "spec1": "Civil Law",
+          "spec2": "Family Law",
+          "spec3": "Inheritances and Successions",
+          "spec4": "Civil Contracts"
+        },
+        "education": {
+          "edu1": "Law Degree - University of Oradea",
+          "edu2": "Member of the Satu Mare Bar Association"
+        },
+        "experience": {
+          "exp1": "Co-Founder - SCA Stan-Baculescu (2009 - present)",
+          "exp2": "Licensed Attorney - Satu Mare Bar"
+        }
+      },
+      "vladBaculescu": {
+        "name": "Vlad Baculescu",
+        "shortBio": "Founding attorney specializing in criminal and commercial law. Expert in complex litigation with a high success rate.",
+        "fullBio": "Attorney Vlad Baculescu is co-founder of Stan-Baculescu Law Firm, with extensive experience in criminal and commercial law. He has successfully handled highly complex criminal cases and advised numerous commercial companies on various legal matters. His work style is characterized by rigor, attention to detail, and a strategic approach to each case.",
+        "specializations": {
+          "spec1": "Criminal Law",
+          "spec2": "Commercial Law",
+          "spec3": "Commercial Litigation",
+          "spec4": "Administrative Law"
+        },
+        "education": {
+          "edu1": "Law Degree - Babes-Bolyai University of Cluj-Napoca",
+          "edu2": "Member of the Satu Mare Bar Association"
+        },
+        "experience": {
+          "exp1": "Co-Founder - SCA Stan-Baculescu (2009 - present)",
+          "exp2": "Licensed Attorney - Satu Mare Bar"
+        }
+      },
+      "dianaChincea": {
+        "name": "Diana Antonia Chincea",
+        "shortBio": "Associate attorney with expertise in labor law and civil litigation. Dedicated to protecting employees' rights.",
+        "fullBio": "Diana Antonia Chincea is an associate attorney at our firm, specializing in labor law and civil litigation. With a meticulous approach and deep understanding of labor legislation, she has successfully represented both employees and employers in various labor disputes. She is known for her ability to find balanced and efficient solutions.",
+        "specializations": {
+          "spec1": "Labor Law",
+          "spec2": "Civil Litigation",
+          "spec3": "Contract Law",
+          "spec4": "Administrative Litigation"
+        },
+        "education": {
+          "edu1": "Law Degree - University of Oradea",
+          "edu2": "Member of the Satu Mare Bar Association"
+        },
+        "experience": {
+          "exp1": "Associate Attorney - SCA Stan-Baculescu",
+          "exp2": "Professional Internship - Satu Mare Bar"
+        }
+      },
+      "gabrielaTarta": {
+        "name": "Gabriela Tarta",
+        "shortBio": "Associate attorney focused on civil law and enforcement proceedings. Solid experience in debt recovery.",
+        "fullBio": "Gabriela Tarta is an associate attorney specializing in civil law and enforcement procedures. With significant experience in debt recovery, she has assisted clients in complex enforcement procedures, ensuring their rights are fully respected. Her professional and efficient approach guarantees optimal results for clients.",
+        "specializations": {
+          "spec1": "Civil Law",
+          "spec2": "Enforcement Proceedings",
+          "spec3": "Debt Recovery",
+          "spec4": "Banking Law"
+        },
+        "education": {
+          "edu1": "Law Degree - University of Oradea",
+          "edu2": "Member of the Satu Mare Bar Association"
+        },
+        "experience": {
+          "exp1": "Associate Attorney - SCA Stan-Baculescu",
+          "exp2": "Experience in enforcement proceedings"
+        }
+      },
+      "alexandraRusu": {
+        "name": "Alexandra Rusu",
+        "shortBio": "Associate attorney specializing in traffic accidents and medical malpractice. Dedicated to obtaining fair compensation.",
+        "fullBio": "Alexandra Rusu is an associate attorney with a distinct specialization in traffic accident cases and medical malpractice. With an empathetic and determined approach, she has helped numerous clients obtain fair compensation for injuries suffered. Her experience in this niche field makes her a trusted ally for victims of accidents and medical negligence.",
+        "specializations": {
+          "spec1": "Traffic Accidents",
+          "spec2": "Medical Malpractice",
+          "spec3": "Compensation Claims",
+          "spec4": "Civil Law"
+        },
+        "education": {
+          "edu1": "Law Degree - University of Oradea",
+          "edu2": "Member of the Satu Mare Bar Association"
+        },
+        "experience": {
+          "exp1": "Associate Attorney - SCA Stan-Baculescu",
+          "exp2": "Specialization in damages and compensation"
+        }
+      },
+      "cristinaTentes": {
+        "name": "Cristina Tentes",
+        "shortBio": "Client relations manager, ensuring efficient communication and administrative support for the firm.",
+        "fullBio": "Cristina Tentes is part of the firm's administrative team, serving as client relations manager. With a professional and friendly attitude, she ensures efficient communication between clients and attorneys, manages appointments, and provides essential administrative support for the smooth operation of the firm. Her dedication significantly contributes to our clients' positive experience.",
+        "specializations": {
+          "spec1": "Client Relations",
+          "spec2": "Appointment Coordination",
+          "spec3": "Administrative Support",
+          "spec4": "Communication"
+        },
+        "education": {
+          "edu1": "Studies in Administration",
+          "edu2": "Communication and public relations courses"
+        },
+        "experience": {
+          "exp1": "Client Relations Manager - SCA Stan-Baculescu",
+          "exp2": "Experience in office administration"
+        }
+      }
+    },
+    "profile": {
+      "biography": "Biography",
+      "specializations": "Specializations",
+      "education": "Education",
+      "experience": "Experience",
+      "contactTitle": "Want to schedule a consultation?",
+      "contactDescription": "We are here to help. Contact us to discuss your case."
+    },
+    "cta": {
+      "title": "Want to meet our team?",
+      "description": "Schedule a consultation and speak directly with one of our attorneys about your case.",
+      "button": "Contact Us"
+    }
   }
 }

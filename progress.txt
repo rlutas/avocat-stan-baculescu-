@@ -63,3 +63,119 @@
   - useTranslations hook works in both server and client components
 ---
 
+## Iteration 3 - US-001: Homepage Hero Section
+- What was implemented:
+  - Created Hero component with professional design (components/hero.tsx)
+  - Added bilingual content for hero section (title, subtitle, description, CTAs)
+  - Implemented responsive layout with Tailwind CSS classes
+  - Used Next.js Image component with fill and priority props for team photo
+  - Installed shadcn/ui Button component
+  - Created CTA buttons linking to /contact and /servicii pages
+  - Added professional styling with slate/amber color scheme
+- Files changed:
+  - components/hero.tsx (new)
+  - components/ui/button.tsx (new - shadcn/ui)
+  - app/[locale]/page.tsx (updated to use Hero component)
+  - messages/ro.json (updated with hero translations)
+  - messages/en.json (updated with hero translations)
+  - public/images/ (created directory for team photo)
+  - tasks/prd-stan-baculescu-website.md (marked US-001 complete)
+- Learnings for future iterations:
+  - shadcn/ui components can be installed with: npx shadcn@latest add <component> -y
+  - Hero component uses 'use client' directive for useTranslations hook
+  - Next.js Image with fill prop needs parent with relative positioning
+  - Translation keys are nested: HomePage.hero.title, etc.
+  - Team photo placeholder expected at /images/team-hero.jpg
+---
+
+## Iteration 4 - US-002: Navigation and Language Switcher
+- What was implemented:
+  - Created Header component with logo (Scale icon) and navigation menu
+  - Navigation links: Acasa, Despre Noi, Echipa, Servicii, Blog, Contact
+  - Implemented RO/EN language switcher with pill-style toggle in header
+  - Language persists across page navigation via next-intl routing
+  - Mobile hamburger menu using shadcn/ui Sheet component
+  - Sticky header: transparent by default, white background with shadow on scroll
+  - Header added to layout.tsx for site-wide display
+- Files changed:
+  - components/header.tsx (new)
+  - components/ui/sheet.tsx (new - shadcn/ui)
+  - app/[locale]/layout.tsx (updated to include Header)
+  - package.json, package-lock.json (added sheet dependencies)
+  - tasks/prd-stan-baculescu-website.md (marked US-002 complete)
+- Learnings for future iterations:
+  - usePathname from @/i18n/navigation returns path without locale prefix
+  - useRouter.replace with { locale: newLocale } switches language while keeping path
+  - cn() from @/lib/utils is essential for conditional Tailwind classes
+  - Sheet component needs SheetTitle for accessibility
+  - lucide-react already installed with shadcn/ui (has Scale, Menu, X icons)
+  - Fixed header needs corresponding padding-top on main content or overlap handling
+---
+
+## Iteration 5 - US-003: About Us Page
+- What was implemented:
+  - Created /despre-noi page route with locale support
+  - Created AboutHero component with gradient background and title/subtitle
+  - Created AboutHistory component with firm story and milestone icons
+  - Created AboutValues component with Profesionalism, Adaptabilitate, Loialitate cards
+  - Created AboutPrinciples component with Motivatie, Seriozitate, Experienta cards
+  - Created AboutMethodology component with 4-step process visualization
+  - Created AboutCta component with contact call-to-action
+  - Added full bilingual content (RO/EN) in messages/*.json
+  - Implemented SEO metadata with generateMetadata (title, description, OG tags)
+- Files changed:
+  - app/[locale]/despre-noi/page.tsx (new)
+  - components/about/about-hero.tsx (new)
+  - components/about/about-history.tsx (new)
+  - components/about/about-values.tsx (new)
+  - components/about/about-principles.tsx (new)
+  - components/about/about-methodology.tsx (new)
+  - components/about/about-cta.tsx (new)
+  - components/about/index.ts (new)
+  - messages/ro.json (updated with AboutPage translations)
+  - messages/en.json (updated with AboutPage translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-003 complete)
+- Learnings for future iterations:
+  - Page routes follow app/[locale]/page-name/page.tsx pattern
+  - Use generateMetadata async function for page-level SEO metadata
+  - setRequestLocale(locale) needed in server components for i18n
+  - Component organization: components/feature-name/component-name.tsx
+  - lucide-react icons: Briefcase, RefreshCw, Heart for values; Target, ShieldCheck, GraduationCap for principles
+  - Use Promise<{ locale: string }> for params type in Next.js 14+ App Router
+---
+
+## Iteration 6 - US-004: Team Page with Lawyer Profiles
+- What was implemented:
+  - Created /echipa team listing page with grid layout
+  - Created individual profile pages at /echipa/[memberId]
+  - Added 3 sections: Founders, Collaborators, Staff
+  - All 6 team members with full profiles:
+    - Founders: Camelia Stan, Vlad Baculescu
+    - Collaborators: Diana Chincea, Gabriela Tarta, Alexandra Rusu
+    - Staff: Cristina Tentes (Client Relations)
+  - Each profile shows: name, title, photo, brief bio
+  - Individual profile pages with: biography, specializations, education, experience
+  - Full bilingual support (RO/EN) with complete translations
+  - SEO metadata with generateMetadata for all pages
+  - Responsive design with card layouts and hover effects
+- Files changed:
+  - app/[locale]/echipa/page.tsx (new)
+  - app/[locale]/echipa/[memberId]/page.tsx (new)
+  - components/team/team-hero.tsx (new)
+  - components/team/team-grid.tsx (new)
+  - components/team/team-cta.tsx (new)
+  - components/team/index.ts (new)
+  - messages/ro.json (updated with TeamPage translations)
+  - messages/en.json (updated with TeamPage translations)
+  - public/images/team/ (created directory for team photos)
+  - tasks/prd-stan-baculescu-website.md (marked US-004 complete)
+- Learnings for future iterations:
+  - Dynamic routes use [param] syntax: app/[locale]/echipa/[memberId]/page.tsx
+  - generateStaticParams returns array of params for static generation
+  - Use t.has(key) to check if translation key exists before rendering
+  - Link component from @/i18n/navigation handles locale-aware routing
+  - notFound() from next/navigation for 404 pages when member not found
+  - Team member data stored as constants with translation keys mapping
+  - Featured cards can have different layout with lg:flex for founders
+---
+

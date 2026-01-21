@@ -75,15 +75,15 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a potential client, I want to see all lawyers with their individual profiles so that I can learn about their expertise and choose who to contact.
 
 **Acceptance Criteria:**
-- [ ] Grid/list of all 6 team members with photos
-- [ ] Founders section: Camelia Stan, Vlad Baculescu
-- [ ] Collaborators section: Diana Antonia Chincea, Gabriela Tarța, Alexandra Rusu
-- [ ] Staff section: Cristina Tenteș (Client Relations)
-- [ ] Each profile shows: name, title, photo, brief bio
-- [ ] Click to individual profile page with full details
-- [ ] Individual profile pages with: biography, specializations, contact info
-- [ ] Bilingual content for all profiles
-- [ ] Typecheck passes
+- [x] Grid/list of all 6 team members with photos
+- [x] Founders section: Camelia Stan, Vlad Baculescu
+- [x] Collaborators section: Diana Antonia Chincea, Gabriela Tarța, Alexandra Rusu
+- [x] Staff section: Cristina Tenteș (Client Relations)
+- [x] Each profile shows: name, title, photo, brief bio
+- [x] Click to individual profile page with full details
+- [x] Individual profile pages with: biography, specializations, contact info
+- [x] Bilingual content for all profiles
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---
@@ -429,11 +429,38 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 
 ## Design Considerations
 
-### Visual Design
-- **Colors:** Blue + Gold (exact codes TBD from client logo)
-- **Style:** Professional, trustworthy, modern legal aesthetic
-- **Typography:** Clean, readable fonts appropriate for legal industry
-- **Imagery:** Team photos, professional graphics, service icons
+> **Full Style Guide:** See `docs/tehnic/style-guide.md` for complete design specifications including all color variants, typography scales, spacing system, and component styles.
+
+### Color Palette
+
+| Color | HEX Code | CSS Variable | Usage |
+|-------|----------|--------------|-------|
+| **Navy Blue** | `#003a70` | `--primary-navy` | Headers, navigation, hero backgrounds, primary text |
+| **Gold** | `#d09c11` | `--primary-gold` | CTAs, highlights, icons, accent borders |
+| **White** | `#ffffff` | `--primary-white` | Backgrounds, text on dark backgrounds |
+
+**Extended Colors:**
+- Dark Navy: `#002a52` (gradients, depth)
+- Light Navy: `#004a8f` (hover states)
+- Off-White: `#f8f9fa` (alternate section backgrounds)
+- Text Primary: `#1f2937` (body text on light backgrounds)
+- Text Secondary: `#4b5563` (descriptions, secondary content)
+
+### Typography
+
+| Element | Font | Weight | Usage |
+|---------|------|--------|-------|
+| **Headlines (H1-H4)** | Playfair Display | 600-700 | Hero titles, section headings, card titles |
+| **Body & UI** | Inter | 400-600 | Body text, navigation, buttons, forms |
+
+**Font Loading:** Use `next/font` for optimized Google Fonts loading.
+
+### Visual Style
+- **Aesthetic:** Professional elegance meets modern accessibility (Lawfor-inspired)
+- **Hero:** Dark navy background with gradient overlay, gold accent CTAs
+- **Cards:** White backgrounds with subtle shadows, gold accent on hover
+- **Sections:** Alternating white/off-white backgrounds for visual rhythm
+- **Icons:** Lucide React icons, gold color for service icons
 
 ### UI Components (shadcn/ui)
 - Navigation (desktop + mobile hamburger)
@@ -449,6 +476,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 ### Existing Design References
 - Current WordPress site (stanbaculescu.ro) for content reference
 - Modern law firm websites for design inspiration
+- Example landing page (Lawfor style) in `docs/example lading pages/`
 
 ---
 
@@ -555,7 +583,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 
 ## Open Questions
 
-1. **Logo and exact color codes:** Client to provide final logo and hex values for blue/gold
+1. ~~**Logo and exact color codes:**~~ ✅ RESOLVED - Colors defined: Navy `#003a70`, Gold `#d09c11`, White `#ffffff`. See `docs/tehnic/style-guide.md`
 2. **Team photos:** Client to provide professional photos (team + individual)
 3. **Lawyer biographies:** Client to provide detailed bios for each team member
 4. **Service descriptions:** Need client input/approval for detailed service page content
@@ -571,7 +599,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 | Item | Format | Deadline |
 |------|--------|----------|
 | Logo | SVG/PNG (vectorial) | 7 days from contract |
-| Color guide | HEX codes | 7 days from contract |
+| ~~Color guide~~ | ~~HEX codes~~ | ✅ DONE - See style-guide.md |
 | Team photo | High-res JPG (min 1920px) | 14 days from contract |
 | Individual photos (6) | High-res JPG, uniform style | 14 days from contract |
 | Lawyer biographies (6) | Text document | 14 days from contract |

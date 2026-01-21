@@ -92,5 +92,153 @@
       "description": "Contactati-ne pentru o consultatie initiala si descoperiti cum va putem ajuta.",
       "button": "Contactati-ne"
     }
+  },
+  "TeamPage": {
+    "hero": {
+      "title": "Echipa Noastra",
+      "subtitle": "Profesionisti Dedicati"
+    },
+    "sections": {
+      "founders": "Fondatori",
+      "collaborators": "Avocati Colaboratori",
+      "staff": "Echipa de Suport"
+    },
+    "roles": {
+      "founder": "Avocat Fondator",
+      "collaborator": "Avocat Colaborator",
+      "clientRelations": "Relatii cu Clientii"
+    },
+    "viewProfile": "Vezi Profilul Complet",
+    "backToTeam": "Inapoi la Echipa",
+    "contactMember": "Contacteaza",
+    "members": {
+      "cameliaStan": {
+        "name": "Camelia Stan",
+        "shortBio": "Avocat fondator cu peste 15 ani de experienta in drept civil si familiei. Dedicata apararii drepturilor clientilor cu profesionalism si empatie.",
+        "fullBio": "Avocat Camelia Stan este cofondatoare a Societatii Civile de Avocati Stan-Baculescu, avand o experienta de peste 15 ani in domeniul juridic. Specializata in drept civil si dreptul familiei, a reprezentat cu succes sute de clienti in instanta, obtinand rezultate remarcabile in cazuri complexe de divort, custodie si partaj. Abordarea sa combina cunostintele juridice aprofundate cu o intelegere empatica a nevoilor clientilor.",
+        "specializations": {
+          "spec1": "Drept Civil",
+          "spec2": "Dreptul Familiei",
+          "spec3": "Succesiuni si Mosteniri",
+          "spec4": "Contracte Civile"
+        },
+        "education": {
+          "edu1": "Licenta in Drept - Universitatea din Oradea",
+          "edu2": "Membru al Baroului Satu Mare"
+        },
+        "experience": {
+          "exp1": "Cofondator - SCA Stan-Baculescu (2009 - prezent)",
+          "exp2": "Avocat titular - Baroul Satu Mare"
+        }
+      },
+      "vladBaculescu": {
+        "name": "Vlad Baculescu",
+        "shortBio": "Avocat fondator specializat in drept penal si comercial. Expert in litigii complexe cu o rata ridicata de succes.",
+        "fullBio": "Avocat Vlad Baculescu este cofondator al Societatii Civile de Avocati Stan-Baculescu, cu o vasta experienta in drept penal si comercial. A gestionat cu succes cazuri penale de mare complexitate si a consiliat numeroase societati comerciale in probleme juridice diverse. Stilul sau de lucru se caracterizeaza prin rigurozitate, atentie la detalii si o abordare strategica a fiecarui caz.",
+        "specializations": {
+          "spec1": "Drept Penal",
+          "spec2": "Drept Comercial",
+          "spec3": "Litigii Comerciale",
+          "spec4": "Drept Administrativ"
+        },
+        "education": {
+          "edu1": "Licenta in Drept - Universitatea din Cluj-Napoca",
+          "edu2": "Membru al Baroului Satu Mare"
+        },
+        "experience": {
+          "exp1": "Cofondator - SCA Stan-Baculescu (2009 - prezent)",
+          "exp2": "Avocat titular - Baroul Satu Mare"
+        }
+      },
+      "dianaChincea": {
+        "name": "Diana Antonia Chincea",
+        "shortBio": "Avocat colaborator cu expertiza in dreptul muncii si litigii civile. Dedicata protejarii drepturilor angajatilor.",
+        "fullBio": "Diana Antonia Chincea este avocat colaborator in cadrul cabinetului nostru, specializata in dreptul muncii si litigii civile. Cu o abordare meticuloasa si o intelegere profunda a legislatiei muncii, a reprezentat cu succes atat angajati cat si angajatori in diverse dispute de munca. Este cunoscuta pentru capacitatea sa de a gasi solutii echilibrate si eficiente.",
+        "specializations": {
+          "spec1": "Dreptul Muncii",
+          "spec2": "Litigii Civile",
+          "spec3": "Drept Contractual",
+          "spec4": "Contencios Administrativ"
+        },
+        "education": {
+          "edu1": "Licenta in Drept - Universitatea din Oradea",
+          "edu2": "Membru al Baroului Satu Mare"
+        },
+        "experience": {
+          "exp1": "Avocat Colaborator - SCA Stan-Baculescu",
+          "exp2": "Stagiu profesional - Baroul Satu Mare"
+        }
+      },
+      "gabrielaTarta": {
+        "name": "Gabriela Tarta",
+        "shortBio": "Avocat colaborator cu focus pe drept civil si executari silite. Experienta solida in recuperarea creantelor.",
+        "fullBio": "Gabriela Tarta este avocat colaborator specializat in drept civil si proceduri de executare silita. Cu o experienta semnificativa in domeniul recuperarii creantelor, a asistat clientii in proceduri complexe de executare, asigurandu-se ca drepturile acestora sunt pe deplin respectate. Abordarea sa profesionala si eficienta garanteaza rezultate optime pentru clienti.",
+        "specializations": {
+          "spec1": "Drept Civil",
+          "spec2": "Executari Silite",
+          "spec3": "Recuperare Creante",
+          "spec4": "Drept Bancar"
+        },
+        "education": {
+          "edu1": "Licenta in Drept - Universitatea din Oradea",
+          "edu2": "Membru al Baroului Satu Mare"
+        },
+        "experience": {
+          "exp1": "Avocat Colaborator - SCA Stan-Baculescu",
+          "exp2": "Experienta in executari silite"
+        }
+      },
+      "alexandraRusu": {
+        "name": "Alexandra Rusu",
+        "shortBio": "Avocat colaborator specializat in accidente rutiere si malpraxis medical. Dedicata obtinerii de despagubiri corecte.",
+        "fullBio": "Alexandra Rusu este avocat colaborator cu o specializare distincta in cazuri de accidente rutiere si malpraxis medical. Cu o abordare empatica si determinata, a ajutat numerosi clienti sa obtina despagubiri corecte pentru prejudiciile suferite. Experienta sa in acest domeniu de nisa o face un aliat de incredere pentru victimele accidentelor si ale neglijentei medicale.",
+        "specializations": {
+          "spec1": "Accidente Rutiere",
+          "spec2": "Malpraxis Medical",
+          "spec3": "Despagubiri",
+          "spec4": "Drept Civil"
+        },
+        "education": {
+          "edu1": "Licenta in Drept - Universitatea din Oradea",
+          "edu2": "Membru al Baroului Satu Mare"
+        },
+        "experience": {
+          "exp1": "Avocat Colaborator - SCA Stan-Baculescu",
+          "exp2": "Specializare in daune si despagubiri"
+        }
+      },
+      "cristinaTentes": {
+        "name": "Cristina Tentes",
+        "shortBio": "Responsabil relatii cu clientii, asigurand comunicarea eficienta si suportul administrativ pentru cabinet.",
+        "fullBio": "Cristina Tentes face parte din echipa administrativa a cabinetului, ocupand functia de responsabil relatii cu clientii. Cu o atitudine profesionala si prietenoasa, asigura comunicarea eficienta intre clienti si avocati, gestioneaza programarile si ofera suport administrativ esential pentru buna functionare a cabinetului. Dedicarea sa contribuie semnificativ la experienta pozitiva a clientilor nostri.",
+        "specializations": {
+          "spec1": "Relatii cu Clientii",
+          "spec2": "Coordonare Programari",
+          "spec3": "Suport Administrativ",
+          "spec4": "Comunicare"
+        },
+        "education": {
+          "edu1": "Studii in Administratie",
+          "edu2": "Cursuri de comunicare si relatii publice"
+        },
+        "experience": {
+          "exp1": "Responsabil Relatii Clienti - SCA Stan-Baculescu",
+          "exp2": "Experienta in administrare birouri"
+        }
+      }
+    },
+    "profile": {
+      "biography": "Biografie",
+      "specializations": "Specializari",
+      "education": "Educatie",
+      "experience": "Experienta",
+      "contactTitle": "Doriti sa programati o consultatie?",
+      "contactDescription": "Suntem aici sa va ajutam. Contactati-ne pentru a discuta despre cazul dumneavoastra."
+    },
+    "cta": {
+      "title": "Doriti sa cunoasteti echipa noastra?",
+      "description": "Programati o consultatie si discutati direct cu unul dintre avocatii nostri despre cazul dumneavoastra.",
+      "button": "Contactati-ne"
+    }
   }
 }
