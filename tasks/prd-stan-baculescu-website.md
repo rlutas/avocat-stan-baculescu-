@@ -84,7 +84,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 - [x] Individual profile pages with: biography, specializations, contact info
 - [x] Bilingual content for all profiles
 - [x] Typecheck passes
-- [ ] Verify in browser using dev-browser skill
+- [x] Verify in browser using dev-browser skill
 
 ---
 
@@ -99,7 +99,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 - [x] Bilingual content
 - [x] SEO optimized
 - [x] Typecheck passes
-- [ ] Verify in browser using dev-browser skill
+- [x] Verify in browser using dev-browser skill
 
 ---
 
@@ -123,7 +123,7 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 - [x] SEO metadata per page (unique titles, descriptions)
 - [x] Structured data (JSON-LD) for legal services
 - [x] Typecheck passes
-- [ ] Verify in browser using dev-browser skill
+- [x] Verify in browser using dev-browser skill
 
 ---
 
