@@ -659,6 +659,8 @@
     "badge": "GDPR Compliant",
     "hero": {
       "title": "Privacy Policy",
+      "titleLine1": "Stan-Baculescu Law Firm",
+      "titleLine2": "Privacy Policy",
       "subtitle": "We respect the privacy of your personal data and are committed to protecting it in accordance with European and national legislation."
     },
     "backToHome": "Back to homepage",
@@ -757,6 +759,8 @@
     "badge": "Legal Document",
     "hero": {
       "title": "Terms of Service",
+      "titleLine1": "Stan-Baculescu Law Firm",
+      "titleLine2": "Terms of Service",
       "subtitle": "Please read these terms and conditions carefully before using our website or services."
     },
     "backToHome": "Back to homepage",
@@ -832,6 +836,8 @@
     "badge": "Cookie Policy",
     "hero": {
       "title": "Cookie Policy",
+      "titleLine1": "Stan-Baculescu Law Firm",
+      "titleLine2": "Cookie Policy",
       "subtitle": "This policy explains what cookies are, how we use them, and how you can manage your preferences."
     },
     "backToHome": "Back to homepage",

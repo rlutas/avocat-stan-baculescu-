@@ -659,6 +659,8 @@
     "badge": "GDPR Conform",
     "hero": {
       "title": "Politica de Confidentialitate",
+      "titleLine1": "SCA Stan-Baculescu",
+      "titleLine2": "Politica de Confidentialitate",
       "subtitle": "Respectam confidentialitatea datelor dumneavoastra personale si ne angajam sa le protejam in conformitate cu legislatia europeana si nationala."
     },
     "backToHome": "Inapoi la pagina principala",
@@ -757,6 +759,8 @@
     "badge": "Document Legal",
     "hero": {
       "title": "Termeni si Conditii",
+      "titleLine1": "SCA Stan-Baculescu",
+      "titleLine2": "Termeni si Conditii",
       "subtitle": "Va rugam sa cititi cu atentie acesti termeni si conditii inainte de a utiliza site-ul sau serviciile noastre."
     },
     "backToHome": "Inapoi la pagina principala",
@@ -832,6 +836,8 @@
     "badge": "Politica Cookies",
     "hero": {
       "title": "Politica de Cookies",
+      "titleLine1": "SCA Stan-Baculescu",
+      "titleLine2": "Politica de Cookies",
       "subtitle": "Aceasta politica explica ce sunt cookie-urile, cum le folosim si cum puteti gestiona preferintele dumneavoastra."
     },
     "backToHome": "Inapoi la pagina principala",

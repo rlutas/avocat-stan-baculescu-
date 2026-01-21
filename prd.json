@@ -572,8 +572,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 31,
-      "passes": false,
-      "notes": "Full redesign for all 3 legal pages following hero patterns."
+      "passes": true,
+      "notes": "Full redesign for all 3 legal pages following hero patterns. Created separate client components for each page (privacy-policy-content.tsx, terms-of-service-content.tsx, cookie-policy-content.tsx). Added CSS keyframe animations (fadeInUp, gold-pulse, gold-rotate), gold decorative elements, two-line headline (titleLine1/titleLine2), section hover effects on icons. Updated translation files (RO/EN) with titleLine1/titleLine2 keys."
     },
     {
       "id": "US-034",
