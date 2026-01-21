@@ -567,3 +567,54 @@
   - Gold shadow for buttons: shadow-[0_4px_6px_rgba(208,156,17,0.2)]
 ---
 
+## Iteration 20 - US-004-STYLE: Update Team Page with Style Guide
+- What was implemented:
+  - Updated team-hero.tsx: navy gradient background (linear-gradient 135deg from #002a52 to #004a8f), gold subtitle, font-heading for h1
+  - Updated team-grid.tsx: navy section headings with font-heading, TeamCard with white bg, navy text, gold hover border, gold role text
+  - Updated team-cta.tsx: navy gradient background, gold CTA button with navy text and gold shadow
+  - Updated member profile page ([memberId]/page.tsx):
+    - Hero: navy gradient, gold role badge, font-heading for name
+    - Biography: navy heading with font-heading
+    - Specializations: off-white bg, white cards with gold hover, gold icons on light gold bg
+    - Education/Experience: navy headings with font-heading, gold icons
+    - Contact section: navy gradient, gold icons, gold CTA button
+- Files changed:
+  - components/team/team-hero.tsx
+  - components/team/team-grid.tsx
+  - components/team/team-cta.tsx
+  - app/[locale]/echipa/[memberId]/page.tsx
+  - prd.json (marked US-004-STYLE complete)
+- Learnings for future iterations:
+  - Team cards use border border-transparent hover:border-gold for gold accent on hover
+  - Profile pages follow same pattern as other pages: navy gradient hero, alternating white/off-white sections
+  - Button styling pattern: bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]
+  - Link hover states: text-white/70 hover:text-gold for back links
+---
+
+## Iteration 21 - US-005-STYLE: Update Services Pages with Style Guide
+- What was implemented:
+  - Updated services-hero.tsx: navy gradient background (linear-gradient 135deg), gold subtitle, font-heading for h1
+  - Updated services-grid.tsx: off-white (#f8f9fa) section, white cards with gold hover border, gold icons on light gold bg (#fef9e7), navy titles with font-heading
+  - Updated services-cta.tsx: navy gradient background, font-heading for title, gold CTA button with navy text and gold shadow
+  - Updated service-detail-hero.tsx: navy gradient, gold icons, font-heading, white/70 to gold hover for back link
+  - Updated service-detail-content.tsx: navy headings with font-heading, off-white sections, gold checkmarks on light gold bg, gold step numbers
+  - Updated service-detail-related.tsx: off-white bg, white cards with gold hover border, gold icons, navy titles with font-heading
+  - Updated service-detail-cta.tsx: navy gradient, gold icons, gold CTA button with navy text
+- Files changed:
+  - components/services/services-hero.tsx
+  - components/services/services-grid.tsx
+  - components/services/services-cta.tsx
+  - components/service-detail/service-detail-hero.tsx
+  - components/service-detail/service-detail-content.tsx
+  - components/service-detail/service-detail-related.tsx
+  - components/service-detail/service-detail-cta.tsx
+  - prd.json (marked US-005-STYLE complete)
+- Learnings for future iterations:
+  - Service cards use same pattern as about/team pages: border border-transparent hover:border-gold
+  - Navy gradient: bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)]
+  - Light gold icon background: bg-[#fef9e7]
+  - Off-white for alternating sections: bg-[#f8f9fa]
+  - Gold step numbers: bg-gold text-navy for numbered list items
+  - Back link hover: text-white/70 hover:text-gold
+---
+

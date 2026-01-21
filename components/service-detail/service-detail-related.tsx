@@ -57,9 +57,9 @@ export function ServiceDetailRelated({
   }
 
   return (
-    <section className="bg-slate-50 py-16 sm:py-24">
+    <section className="bg-[#f8f9fa] py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-8 text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+        <h2 className="font-heading mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
           {t('relatedServices')}
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -69,28 +69,28 @@ export function ServiceDetailRelated({
               <Link
                 key={service.id}
                 href={`/servicii/${service.id}`}
-                className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                className="group relative overflow-hidden rounded-xl border border-transparent bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-lg"
               >
                 {/* Top Accent Line */}
-                <div className="absolute left-0 right-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-slate-800 to-amber-500 transition-transform duration-300 group-hover:scale-x-100" />
+                <div className="absolute left-0 right-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-navy to-gold transition-transform duration-300 group-hover:scale-x-100" />
 
                 {/* Icon */}
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-50 text-amber-600 transition-colors duration-300 group-hover:bg-amber-500 group-hover:text-white">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#fef9e7] text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-navy">
                   <Icon className="h-6 w-6" />
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-2 font-serif text-xl font-semibold text-slate-800 transition-colors duration-300 group-hover:text-slate-900">
+                <h3 className="font-heading mb-2 text-xl font-semibold text-navy transition-colors duration-300">
                   {tServices(`services.${service.id}.title`)}
                 </h3>
 
                 {/* Description */}
-                <p className="mb-4 text-sm text-slate-600">
+                <p className="mb-4 text-sm text-[#4b5563]">
                   {tServices(`services.${service.id}.shortDescription`)}
                 </p>
 
                 {/* Learn More */}
-                <span className="inline-flex items-center text-sm font-medium text-slate-700 transition-colors duration-300 group-hover:text-amber-600">
+                <span className="inline-flex items-center text-sm font-medium text-navy transition-colors duration-300 group-hover:text-gold">
                   {tServices('viewDetails')}
                   <svg
                     className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
