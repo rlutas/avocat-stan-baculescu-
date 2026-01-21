@@ -109,21 +109,21 @@ export function CookieConsent() {
       {/* Banner */}
       <div className="relative z-10 w-full max-w-2xl rounded-xl bg-white shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-slate-200 p-4 sm:p-6">
+        <div className="flex items-center justify-between border-b border-gray-200 p-4 sm:p-6">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100">
-              <Cookie className="h-5 w-5 text-amber-600" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fef9e7]">
+              <Cookie className="h-5 w-5 text-gold" />
             </div>
             <h2
               id="cookie-consent-title"
-              className="text-lg font-semibold text-slate-900"
+              className="text-lg font-semibold text-navy"
             >
               {t('title')}
             </h2>
           </div>
           <button
             onClick={rejectNonEssential}
-            className="rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600"
+            className="rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-navy"
             aria-label={t('close')}
           >
             <X className="h-5 w-5" />
@@ -135,11 +135,11 @@ export function CookieConsent() {
           {!showCustomize ? (
             // Main banner view
             <>
-              <p className="mb-6 text-sm leading-relaxed text-slate-600">
+              <p className="mb-6 text-sm leading-relaxed text-[#4b5563]">
                 {t('description')}{' '}
                 <a
                   href="/politica-cookies"
-                  className="font-medium text-amber-600 underline underline-offset-2 hover:text-amber-700"
+                  className="font-medium text-gold underline underline-offset-2 hover:text-gold/80"
                 >
                   {t('learnMore')}
                 </a>
@@ -149,7 +149,7 @@ export function CookieConsent() {
                 <Button
                   variant="outline"
                   onClick={() => setShowCustomize(true)}
-                  className="order-3 sm:order-1"
+                  className="order-3 border-navy text-navy hover:bg-navy/5 sm:order-1"
                 >
                   <Settings className="mr-2 h-4 w-4" />
                   {t('customize')}
@@ -157,13 +157,13 @@ export function CookieConsent() {
                 <Button
                   variant="outline"
                   onClick={rejectNonEssential}
-                  className="order-2"
+                  className="order-2 border-navy text-navy hover:bg-navy/5"
                 >
                   {t('rejectNonEssential')}
                 </Button>
                 <Button
                   onClick={acceptAll}
-                  className="order-1 bg-amber-600 hover:bg-amber-700 sm:order-3"
+                  className="order-1 bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)] sm:order-3"
                 >
                   {t('acceptAll')}
                 </Button>
@@ -174,29 +174,29 @@ export function CookieConsent() {
             <>
               <div className="mb-6 space-y-4">
                 {/* Essential cookies - always on */}
-                <div className="flex items-start justify-between rounded-lg border border-slate-200 p-4">
+                <div className="flex items-start justify-between rounded-lg border border-gray-200 p-4">
                   <div className="flex-1 pr-4">
-                    <h3 className="font-medium text-slate-900">
+                    <h3 className="font-medium text-navy">
                       {t('categories.essential.title')}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#4b5563]">
                       {t('categories.essential.description')}
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-sm font-medium text-slate-400">
+                    <span className="text-sm font-medium text-gray-400">
                       {t('alwaysOn')}
                     </span>
                   </div>
                 </div>
 
                 {/* Analytics cookies */}
-                <label className="flex cursor-pointer items-start justify-between rounded-lg border border-slate-200 p-4 transition-colors hover:border-amber-300 hover:bg-amber-50/50">
+                <label className="flex cursor-pointer items-start justify-between rounded-lg border border-gray-200 p-4 transition-colors hover:border-gold hover:bg-[#fef9e7]/50">
                   <div className="flex-1 pr-4">
-                    <h3 className="font-medium text-slate-900">
+                    <h3 className="font-medium text-navy">
                       {t('categories.analytics.title')}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#4b5563]">
                       {t('categories.analytics.description')}
                     </p>
                   </div>
@@ -205,18 +205,18 @@ export function CookieConsent() {
                       type="checkbox"
                       checked={preferences.analytics}
                       onChange={() => togglePreference('analytics')}
-                      className="h-5 w-5 cursor-pointer rounded border-slate-300 text-amber-600 focus:ring-amber-500"
+                      className="h-5 w-5 cursor-pointer rounded border-gray-300 text-gold accent-gold focus:ring-gold"
                     />
                   </div>
                 </label>
 
                 {/* Marketing cookies */}
-                <label className="flex cursor-pointer items-start justify-between rounded-lg border border-slate-200 p-4 transition-colors hover:border-amber-300 hover:bg-amber-50/50">
+                <label className="flex cursor-pointer items-start justify-between rounded-lg border border-gray-200 p-4 transition-colors hover:border-gold hover:bg-[#fef9e7]/50">
                   <div className="flex-1 pr-4">
-                    <h3 className="font-medium text-slate-900">
+                    <h3 className="font-medium text-navy">
                       {t('categories.marketing.title')}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-[#4b5563]">
                       {t('categories.marketing.description')}
                     </p>
                   </div>
@@ -225,7 +225,7 @@ export function CookieConsent() {
                       type="checkbox"
                       checked={preferences.marketing}
                       onChange={() => togglePreference('marketing')}
-                      className="h-5 w-5 cursor-pointer rounded border-slate-300 text-amber-600 focus:ring-amber-500"
+                      className="h-5 w-5 cursor-pointer rounded border-gray-300 text-gold accent-gold focus:ring-gold"
                     />
                   </div>
                 </label>
@@ -235,13 +235,13 @@ export function CookieConsent() {
                 <Button
                   variant="outline"
                   onClick={() => setShowCustomize(false)}
-                  className="order-2 sm:order-1"
+                  className="order-2 border-navy text-navy hover:bg-navy/5 sm:order-1"
                 >
                   {t('back')}
                 </Button>
                 <Button
                   onClick={saveCustomPreferences}
-                  className="order-1 bg-amber-600 hover:bg-amber-700 sm:order-2"
+                  className="order-1 bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)] sm:order-2"
                 >
                   {t('savePreferences')}
                 </Button>
