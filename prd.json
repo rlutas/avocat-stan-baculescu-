@@ -531,8 +531,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 29,
-      "passes": false,
-      "notes": "Animation enhancement only - existing layout preserved per user request."
+      "passes": true,
+      "notes": "Animation enhancement completed. Updated team-hero.tsx with gold decorative elements (gold-pulse/gold-rotate), trust badge with Users icon, two-line headline with fadeInUp animations. Updated team-grid.tsx with photoFadeIn animations with staggered delays (100ms per card), shimmer effect on team photos, enhanced hover effects (lift -translate-y-2, gold ring, shadow-xl), accent line animation. Updated team-cta.tsx with gold decorative elements, fadeInUp animations, pulse-glow button. Added trustBadge, titleLine1, titleLine2 translations in RO/EN."
     },
     {
       "id": "US-032",

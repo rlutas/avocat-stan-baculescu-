@@ -110,7 +110,10 @@
   "TeamPage": {
     "hero": {
       "title": "Our Team",
-      "subtitle": "Dedicated Professionals"
+      "trustBadge": "Trusted Professionals",
+      "titleLine1": "Stan-Baculescu Law Firm",
+      "titleLine2": "Our Team",
+      "subtitle": "Meet the attorneys who will represent you with dedication and professionalism in any legal matter."
     },
     "sections": {
       "founders": "Founders",

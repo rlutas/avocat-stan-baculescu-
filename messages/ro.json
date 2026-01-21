@@ -110,7 +110,10 @@
   "TeamPage": {
     "hero": {
       "title": "Echipa Noastra",
-      "subtitle": "Profesionisti Dedicati"
+      "trustBadge": "Profesionisti de Incredere",
+      "titleLine1": "Societate Civila de Avocati",
+      "titleLine2": "Echipa Noastra",
+      "subtitle": "Cunoaste avocatii care va vor reprezenta cu dedicare si profesionalism in orice problema juridica."
     },
     "sections": {
       "founders": "Fondatori",

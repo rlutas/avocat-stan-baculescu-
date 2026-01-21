@@ -1279,3 +1279,75 @@
   - Submit button combines pulse-glow animation with hover transitions
   - Map section uses ring utility for border accent (more flexible than border)
 ---
+
+## Iteration 43 - US-030: Testimonials Section - Full Design Update
+- What was implemented:
+  - Updated testimonials.tsx with off-white background (#f8f9fa) and gold decorative circles
+  - Added trust badge with MessageSquare icon and "Ce Spun Clientii Nostri" text
+  - Implemented two-line headline pattern (titleLine1 smaller, titleLine2 larger)
+  - Testimonial cards with rounded-2xl, shadow-md, fadeInUp animations with staggered delays (100ms per card)
+  - Added Quote icon that appears on hover with opacity transition
+  - Gold accent line animation at bottom of cards (scale-x-0 to scale-x-100)
+  - Author avatar with light gold bg (#fef9e7), transforms to gold bg with white text on hover
+  - Larger stars (h-5 w-5) with gold fill/text color
+  - Carousel controls with gold hover states (bg-gold, text-white, gold shadow)
+  - Active dot indicator expands to w-6 when selected
+  - Google Reviews button with gold border, transparent bg, gold text, hover fills with gold
+  - Gold decorative circles with gold-pulse animation (6s infinite, offset by 3s)
+  - Added touch events for mobile carousel (onTouchStart/onTouchEnd)
+- Files changed:
+  - components/testimonials/testimonials.tsx (major update with animations and design)
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2)
+  - messages/en.json (added trustBadge, titleLine1, titleLine2)
+  - prd.json (marked US-030 complete)
+- Learnings for future iterations:
+  - Testimonials use off-white background to contrast with homepage navy hero
+  - Gold decorative circles positioned at -left-32 and -right-32 for subtle background effect
+  - Card hover pattern: -translate-y-2 + border-gold + shadow-xl + ring-2 ring-gold/20
+  - Quote icon uses absolute positioning (right-4 top-4) with opacity transition
+  - Bottom accent line uses origin-left scale-x-0 hover:scale-x-100 pattern
+  - Author avatar hover: bg-gold text-white shadow-[0_4px_6px_rgba(208,156,17,0.3)]
+  - Active carousel dot expands width: w-2.5 to w-6 for better visual feedback
+  - Touch events pause auto-play on mobile (onTouchStart/onTouchEnd)
+---
+
+## Iteration 44 - US-031: Team Page - Animation Enhancement
+- What was implemented:
+  - Updated team-hero.tsx with:
+    - Navy background (bg-navy) with gold decorative elements (gold-pulse/gold-rotate)
+    - Trust badge with Users icon: "Profesionisti de Incredere"
+    - Two-line headline pattern (titleLine1 smaller, titleLine2 larger)
+    - FadeInUp animations with sequential delays on badge, headline, and subtitle
+    - Background pattern overlay with subtle grid effect
+  - Updated team-grid.tsx with:
+    - FadeInUp animation on section headings with staggered delays (0ms, 200ms, 400ms)
+    - PhotoFadeIn animation on team cards with staggered delays (100ms per card)
+    - Shimmer effect on team photos (visible on hover)
+    - Enhanced hover effects: lift (-translate-y-2), gold ring (ring-gold/60), shadow-xl
+    - Accent line animation at top of cards (scale-x-0 to scale-x-100)
+    - Photo scale transition on hover (scale-[1.05])
+  - Updated team-cta.tsx with:
+    - Navy background with gold decorative elements (gold-pulse/gold-rotate at 80% left)
+    - FadeInUp animations on title, description, button
+    - Pulse-glow animation on CTA button
+    - ArrowRight icon with hover translate effect
+  - Added translation keys (RO/EN):
+    - trustBadge: "Profesionisti de Incredere" / "Trusted Professionals"
+    - titleLine1: "Societate Civila de Avocati" / "Stan-Baculescu Law Firm"
+    - titleLine2: "Echipa Noastra" / "Our Team"
+    - Updated subtitle with more descriptive text
+- Files changed:
+  - components/team/team-hero.tsx
+  - components/team/team-grid.tsx
+  - components/team/team-cta.tsx
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2, updated subtitle)
+  - messages/en.json (added trustBadge, titleLine1, titleLine2, updated subtitle)
+  - prd.json (marked US-031 complete)
+- Learnings for future iterations:
+  - Team page follows same animation patterns as hero, about, services, blog pages
+  - Gold decorative elements use consistent positioning (70% for hero, 80% for CTA)
+  - Card animations use photoFadeIn instead of fadeInUp for slightly different effect (includes scale)
+  - Shimmer effect uses linear-gradient with translateX animation (0% to 100%)
+  - Index prop passed to TeamCard enables staggered animation delays
+  - Existing layout preserved - only animations added, no structural changes
+---
