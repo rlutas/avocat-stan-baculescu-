@@ -12,21 +12,32 @@
     "language": {
       "ro": "Romana",
       "en": "English"
-    }
+    },
+    "callNow": "Call now"
   },
   "HomePage": {
     "hero": {
-      "title": "Stan-Baculescu Law Firm",
+      "titleLine1": "Stan-Baculescu",
+      "titleLine2": "Law Firm",
       "subtitle": "Professionalism. Dedication. Results.",
       "description": "We provide excellent legal services in Satu Mare and throughout Romania. With over 15 years of experience, our team represents you with dedication in civil law, criminal law, family law, commercial law, and more.",
       "cta": "Schedule a Consultation",
-      "secondaryCta": "Discover Our Services"
+      "secondaryCta": "Discover Our Services",
+      "trustBadge": "15+ years of legal excellence",
+      "callNow": "Call now",
+      "schedule": "Hours: Monday - Friday, 09:00 - 17:00",
+      "founder": "Founder",
+      "satisfiedClients": "Satisfied Clients",
+      "yearsExperience": "Years Experience"
     }
   },
   "AboutPage": {
     "hero": {
       "title": "About Us",
-      "subtitle": "Tradition and Excellence in Legal Practice"
+      "titleLine1": "Stan-Baculescu",
+      "titleLine2": "About Us",
+      "subtitle": "Tradition and Excellence in Legal Practice",
+      "trustBadge": "15+ years of legal excellence"
     },
     "history": {
       "title": "Our Story",
@@ -54,6 +65,9 @@
     "principles": {
       "title": "Our Principles",
       "subtitle": "The foundation of our success",
+      "statMotivation": "Commitment",
+      "statSeriousness": "Availability",
+      "statExperience": "Years Experience",
       "motivation": {
         "title": "Motivation",
         "description": "We are motivated by the desire to achieve the best results for our clients in every case."

@@ -337,6 +337,285 @@
       "priority": 20,
       "passes": true,
       "notes": "Created docs/ghid-administrare-blog.md - comprehensive Romanian documentation including: MDX basics, creating/editing articles, frontmatter fields, Markdown syntax, image handling, bilingual articles, SEO tips, troubleshooting section, and contact info. The 30-minute training session must be delivered manually by the developer to the client."
+    },
+    {
+      "id": "US-023",
+      "title": "Hero Section Enhancements with Animations",
+      "description": "As a visitor, I want an engaging hero section with founder photos and smooth animations that creates a professional first impression.",
+      "acceptanceCriteria": [
+        "Founder photos displayed with elegant card layout (desktop)",
+        "Trust badges: 1K+ Clienți Mulțumiți, 15+ Ani Experiență",
+        "Sequential load animations: text first, then photos, then badges",
+        "Shimmer effect on founder photos",
+        "Floating animations for trust badges (up/down movement)",
+        "Pulse glow animation on CTA button",
+        "Mobile version shows founder avatars in circular format",
+        "Hover effects on photos (scale, gold ring, lift)",
+        "Gold decorative elements behind founders (circle + rotating ring with dots)",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 21,
+      "passes": true,
+      "notes": "Enhanced hero.tsx with CSS keyframe animations: fadeInUp (text), photoFadeIn (photos), badgeFadeIn (badges), shimmer (subtle background effect), float-up/float-down (badges), pulse-glow (CTA), gold-rotate/gold-pulse (decorative background). Desktop shows founders side-by-side with staggered layout, mobile shows circular avatars. Animation delays create sequential loading effect. Gold decorative circle and rotating ring with 2 dots behind founders."
+    },
+    {
+      "id": "US-024",
+      "title": "Branding Update - Societate Civila de Avocati",
+      "description": "As the firm, I want consistent branding with 'Societate Civila de Avocati Stan-Baculescu' (SCA Stan-Baculescu) across the website.",
+      "acceptanceCriteria": [
+        "Hero h1 displays 'Societate Civila de Avocati' on first line, 'Stan-Baculescu' on second line (RO)",
+        "Hero h1 displays 'Stan-Baculescu' on first line, 'Law Firm' on second line (EN)",
+        "All meta titles use 'SCA Stan-Baculescu' instead of 'Cabinet de Avocat/Avocatura'",
+        "SEO schema updated with correct firm name",
+        "Logo integrated in header (desktop and mobile)",
+        "All hardcoded hero text translated (trustBadge, callNow, schedule, founder, badges)",
+        "Typecheck passes"
+      ],
+      "priority": 22,
+      "passes": true,
+      "notes": "Updated all page metadata, SEO schema, layout.tsx, messages files. Hero uses titleLine1/titleLine2 pattern with different sizing (smaller first line, larger second line). All hero text uses translations for bilingual support. Replaced 'Cabinet de Avocat/Avocatura' with 'SCA Stan-Baculescu' across ~15 files."
+    },
+    {
+      "id": "US-025",
+      "title": "About Us Page - Full Design Update",
+      "description": "As a visitor, I want the About Us page to have the same professional design as the hero for visual consistency.",
+      "acceptanceCriteria": [
+        "Hero section with navy gradient background (from-[#002a52] via-[#003a70] to-[#004a8f])",
+        "Gold decorative circle + rotating ring elements (like homepage hero)",
+        "Trust badge: '15+ ani de excelență juridică'",
+        "Two-line headline: 'Societate Civila de Avocati' (smaller) + 'Despre Noi' (larger)",
+        "FadeInUp animations on all text sections with sequential delays",
+        "History section with cards featuring hover lift effect (-translate-y-2, gold ring)",
+        "Values section (Profesionalism, Adaptabilitate, Loialitate) with gold icons and fadeIn",
+        "Principles section with animated stat badges (like hero floating badges)",
+        "Photo section with shimmer effect and photo-hover animations",
+        "CTA button with pulse-glow animation",
+        "Responsive: mobile, tablet, desktop layouts",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 23,
+      "passes": true,
+      "notes": "Full redesign with navy gradient hero, gold decorative circle + rotating ring, trust badge, two-line headline, FadeInUp animations on all sections, hover lift effects on cards, floating stat badges on principles, pulse-glow CTA button. All translation keys added (trustBadge, titleLine1, titleLine2, statMotivation, statSeriousness, statExperience)."
+    },
+    {
+      "id": "US-026",
+      "title": "Services Overview Page - Full Design Update",
+      "description": "As a visitor, I want the Services page to showcase all practice areas with the hero's elegant design.",
+      "acceptanceCriteria": [
+        "Hero section with navy gradient + gold decorations",
+        "Trust badge: '8 Arii de Practică'",
+        "Two-line headline: 'Servicii Juridice' (smaller) + 'Ariile Noastre de Practică' (larger)",
+        "Service cards with: white background, rounded-2xl, gold icon in decorative circle",
+        "Card hover: lift effect (-translate-y-2), gold ring (ring-gold/60), shadow-xl",
+        "FadeIn animation with staggered delays (100ms per card)",
+        "Grid layout: 1 col mobile, 2 cols tablet, 3-4 cols desktop",
+        "Each card links to individual service page",
+        "CTA section at bottom with pulse-glow button",
+        "Responsive design",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 24,
+      "passes": false,
+      "notes": "Full redesign following hero patterns. Existing functionality preserved."
+    },
+    {
+      "id": "US-027",
+      "title": "Individual Service Pages (8 pages) - Full Design Update",
+      "description": "As a visitor on a specific service page, I want to see detailed information with the same elegant design.",
+      "acceptanceCriteria": [
+        "Hero section with navy gradient + gold decorations",
+        "Service-specific trust badge (e.g., 'Expertiză în Malpraxis Medical')",
+        "Two-line headline: service category (smaller) + service name (larger)",
+        "FadeInUp animations on all content sections",
+        "Content sections with alternating white/off-white backgrounds",
+        "Gold accent borders and icons throughout",
+        "Cards for key points with hover lift effects",
+        "'Common Cases' section with animated list items",
+        "Related services cards with hover lift",
+        "CTA section: 'Programează o Consultație' with pulse-glow",
+        "Back to services link",
+        "Apply to all 8 service pages (malpraxis, civil, penal, familiei, muncii, comercial, accidente, administrativ)",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 25,
+      "passes": false,
+      "notes": "Full redesign for all 8 service pages following hero patterns."
+    },
+    {
+      "id": "US-028",
+      "title": "Blog Section - Full Design Update",
+      "description": "As a visitor, I want the blog to have the hero's professional styling for a cohesive reading experience.",
+      "acceptanceCriteria": [
+        "Blog listing hero with navy gradient + gold decorations",
+        "Trust badge: 'Articole & Noutăți Juridice'",
+        "Two-line headline style",
+        "Article cards with: white background, rounded-2xl, shimmer effect on image hover",
+        "Card hover: lift effect, gold ring accent",
+        "FadeIn with staggered delays",
+        "Category badge in gold",
+        "Category filter with gold active state",
+        "Individual article pages: hero with two-line title, author section with gold accents",
+        "Related articles with card hover effects",
+        "Share buttons styled with gold accents",
+        "Responsive grid: 1/2/3 columns",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 26,
+      "passes": false,
+      "notes": "Full redesign following hero patterns. MDX/Velite CMS functionality preserved."
+    },
+    {
+      "id": "US-029",
+      "title": "Contact Page - Full Design Update",
+      "description": "As a potential client, I want the contact page to feel premium and trustworthy with the hero styling.",
+      "acceptanceCriteria": [
+        "Hero section with navy gradient + gold decorations",
+        "Trust badge: 'Contactați-ne'",
+        "Two-line headline: 'Programează o' (smaller) + 'Consultație' (larger)",
+        "Contact info cards with gold icons (phone, email, location, hours)",
+        "Cards with hover effects (lift, gold ring)",
+        "FadeIn animations on all elements",
+        "Contact form: white card with shadow-xl, gold focus states on inputs",
+        "Submit button with pulse-glow animation",
+        "Google Map with gold border accent",
+        "Social media links with gold hover",
+        "Floating badges: 'Răspundem în 24h', 'Consultație Gratuită'",
+        "Responsive layout",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 27,
+      "passes": false,
+      "notes": "Full redesign following hero patterns. Form functionality preserved."
+    },
+    {
+      "id": "US-030",
+      "title": "Testimonials Section - Full Design Update",
+      "description": "As a visitor, I want to see client testimonials styled consistently with the hero design.",
+      "acceptanceCriteria": [
+        "Section with navy gradient background OR white with gold accents",
+        "Trust badge: 'Ce Spun Clienții Noștri'",
+        "Testimonial cards: white background, rounded-2xl, gold star ratings",
+        "Quote icon in gold",
+        "Hover: lift effect, gold shadow",
+        "FadeIn with staggered delays",
+        "Carousel navigation with gold accent buttons",
+        "Google Reviews link styled with gold",
+        "Responsive: cards stack on mobile",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 28,
+      "passes": false,
+      "notes": "Full redesign following hero patterns. Review fetching logic preserved."
+    },
+    {
+      "id": "US-031",
+      "title": "Team Page - Animation Enhancement",
+      "description": "As a visitor, I want the team page to have smooth animations matching the hero style.",
+      "acceptanceCriteria": [
+        "Existing team layout preserved (user approved current design)",
+        "Add fadeInUp animations to all text sections",
+        "Add photoFadeIn animations to team member cards",
+        "Add staggered delays (100ms per team member)",
+        "Add hover effects: lift (-translate-y-2), gold ring (ring-gold/60), shadow enhancement",
+        "Add shimmer effect on team photos (like hero founders)",
+        "Founders section: subtle float animation on badges (if applicable)",
+        "Responsive animations work on all devices",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 29,
+      "passes": false,
+      "notes": "Animation enhancement only - existing layout preserved per user request."
+    },
+    {
+      "id": "US-032",
+      "title": "Footer - Design Verification",
+      "description": "As a visitor, I want the footer to match the overall design system.",
+      "acceptanceCriteria": [
+        "Navy background (already implemented)",
+        "White logo (already implemented)",
+        "Gold accents on links hover",
+        "Social media icons with gold hover effect",
+        "FadeInUp animation when scrolling into view (optional)",
+        "Responsive layout verified",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 30,
+      "passes": true,
+      "notes": "Footer already updated with white logo. Verify gold hovers are working."
+    },
+    {
+      "id": "US-033",
+      "title": "Legal Pages - Full Design Update (Privacy, Terms, Cookies)",
+      "description": "As a visitor, I want legal pages to have the same professional styling for consistency.",
+      "acceptanceCriteria": [
+        "All 3 pages updated: Privacy Policy, Terms of Service, Cookie Policy",
+        "Hero section with navy gradient (smaller than main pages)",
+        "Trust badge relevant to page (e.g., 'GDPR Compliant')",
+        "Two-line headline style",
+        "Content with clear typography hierarchy",
+        "Gold accent icons for section headers",
+        "White cards for important notices",
+        "FadeInUp animations",
+        "Back to home link with gold accent",
+        "Last updated date styled",
+        "Responsive layout",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 31,
+      "passes": false,
+      "notes": "Full redesign for all 3 legal pages following hero patterns."
+    },
+    {
+      "id": "US-034",
+      "title": "404 Page - Full Design Update",
+      "description": "As a lost visitor, I want the 404 page to maintain the premium feel and help me navigate.",
+      "acceptanceCriteria": [
+        "Navy gradient background (full page)",
+        "Gold decorative elements (circle + ring)",
+        "Large '404' with gold accent or gradient",
+        "Two-line message style",
+        "Animated illustration or icon",
+        "Navigation suggestions with card hover effects",
+        "Primary CTA: 'Înapoi la Pagina Principală' with pulse-glow",
+        "Secondary links to main sections (Services, Contact)",
+        "FadeInUp animations",
+        "Responsive design",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 32,
+      "passes": false,
+      "notes": "Full redesign following hero patterns."
+    },
+    {
+      "id": "US-035",
+      "title": "Cookie Consent Banner - Design Update",
+      "description": "As a visitor, I want the cookie consent banner to match the site's premium styling.",
+      "acceptanceCriteria": [
+        "Banner with navy background or white with navy text",
+        "Gold accent on 'Accept All' button (primary action)",
+        "Secondary buttons styled consistently",
+        "Smooth slideUp animation on appear",
+        "FadeOut animation on dismiss",
+        "Gold toggle switches for cookie preferences (if applicable)",
+        "Settings modal with navy header, gold accents",
+        "Responsive: full width on mobile",
+        "Typecheck passes",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 33,
+      "passes": false,
+      "notes": "Design update for cookie consent following hero patterns."
     }
   ]
 }

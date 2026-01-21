@@ -909,3 +909,181 @@
   - Type narrowing with 'cookies' in section check for conditional rendering
   - Footer link at /politica-cookies was already configured in US-010
 ---
+
+## Iteration 33 - US-021: 404 Error Page
+- What was implemented:
+  - Created custom 404 page at app/[locale]/not-found.tsx
+  - Off-white background (#f8f9fa) with navy accents matching site design
+  - Scale icon in navy circle at top
+  - Large "404" number in navy with Playfair Display font (font-heading)
+  - "Page not found" title in navy with font-heading
+  - Descriptive text in secondary text color (#4b5563)
+  - Primary CTA: Gold button linking to homepage with Home icon
+  - Divider with "Or visit" text
+  - Secondary links to Services and Contact with navy outline buttons
+  - Full bilingual support (RO/EN) with NotFound translations
+- Files changed:
+  - app/[locale]/not-found.tsx (new)
+  - messages/ro.json (added NotFound translations)
+  - messages/en.json (added NotFound translations)
+  - prd.json (marked US-021 complete)
+- Learnings for future iterations:
+  - Next.js App Router uses not-found.tsx for 404 pages
+  - With next-intl, place not-found.tsx in app/[locale]/ for localized 404 pages
+  - Use 'use client' directive for client-side translation with useTranslations hook
+  - Min-height of 70vh ensures proper vertical centering without taking full screen
+  - Lucide icons: Scale, Home, Briefcase, Phone for relevant sections
+  - Gold shadow pattern: shadow-[0_4px_6px_rgba(208,156,17,0.2)]
+---
+
+## Iteration 34 - US-017: Supabase Infrastructure Setup
+- What was implemented:
+  - Installed @supabase/supabase-js client package
+  - Created lib/supabase/client.ts with graceful degradation support
+  - Client exports: supabase (singleton), getSupabaseClient(), isSupabaseConfigured()
+  - Created lib/supabase/types.ts with TypeScript types for contact_submissions table
+  - Created lib/supabase/index.ts for module exports
+  - Created supabase/migrations/001_contact_submissions.sql:
+    - contact_status enum (pending, read, responded, archived)
+    - contact_submissions table with RLS enabled
+    - Indexes for status and created_at
+    - Comments documenting each column
+  - Created docs/supabase-setup.md with comprehensive setup guide
+  - Updated .env.example with NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY
+- Files changed:
+  - package.json, package-lock.json (added @supabase/supabase-js)
+  - lib/supabase/client.ts (new)
+  - lib/supabase/types.ts (new)
+  - lib/supabase/index.ts (new)
+  - supabase/migrations/001_contact_submissions.sql (new)
+  - docs/supabase-setup.md (new)
+  - .env.example (updated)
+  - prd.json (marked US-017 complete)
+- Learnings for future iterations:
+  - Supabase client can gracefully degrade by checking env vars at runtime
+  - isSupabaseConfigured() allows optional features without breaking builds
+  - Auth is disabled by default with persistSession: false, autoRefreshToken: false
+  - SQL migrations stored in supabase/migrations/ for manual execution
+  - RLS policies can restrict insert-only access for public forms
+  - TypeScript types can be auto-generated with supabase gen types command
+  - Documentation in docs/ folder for setup guides
+---
+
+## Iteration 35 - US-022: Admin Training and Documentation
+- What was implemented:
+  - Created docs/ghid-administrare-blog.md - comprehensive Romanian documentation
+  - Sections include:
+    - Introduction to MDX and requirements
+    - Creating new articles with frontmatter
+    - Markdown formatting syntax (headings, lists, links, tables, code)
+    - Adding and managing images
+    - Categories and metadata fields
+    - Bilingual articles (RO/EN) setup
+    - Publishing and preview process
+    - SEO best practices
+    - Troubleshooting common issues
+    - Contact information for support
+    - Article template for quick start
+- Files changed:
+  - docs/ghid-administrare-blog.md (new - 450+ lines)
+  - prd.json (marked US-022 complete)
+- Learnings for future iterations:
+  - Romanian documentation should avoid using diacritics in code examples
+  - Include copy-paste templates for common tasks
+  - Troubleshooting sections are essential for non-technical users
+  - Training sessions must be delivered separately (not automatable)
+  - File naming conventions important for non-technical users
+---
+
+## Iteration 36 - US-023: Hero Section Enhancements with Animations
+- What was implemented:
+  - Redesigned hero section with founder photos and trust badges
+  - Desktop layout: split view with text left, founders right
+  - Founders displayed in staggered card layout (Camelia higher, Vlad lower)
+  - Trust badges: "1K+ Clienți Mulțumiți" (below Camelia), "15+ Ani Experiență" (above Vlad)
+  - CSS keyframe animations in style jsx block:
+    - fadeInUp: 1s ease-out for text elements with staggered delays (0-400ms)
+    - photoFadeIn: 1.2s ease-out for photos (delay 600-700ms)
+    - badgeFadeIn: 0.8s ease-out for badges (delay 900-1000ms)
+    - shimmer: 6s infinite subtle light effect on photos
+    - float-up / float-down: 4s infinite for badge movement
+    - pulse-glow: 1.5s infinite gold glow on CTA button
+  - Photo hover effects: scale-105, gold ring, -translate-y-3, gold shadow
+  - Mobile layout: circular founder avatars with gold ring
+  - Image quality: quality={100}, object-contain object-bottom
+- Files changed:
+  - components/hero.tsx (major update with animations and layout)
+  - prd.json (added US-023)
+- Learnings for future iterations:
+  - Use style jsx for CSS keyframes in Next.js components
+  - animation: ... both maintains final state after animation
+  - Stagger delays create sequential reveal effect
+  - z-index: 1 for shimmer ::before pseudo-element
+  - object-contain preserves aspect ratio, object-bottom aligns to bottom
+  - Floating animations (translateY) create subtle movement without being distracting
+  - Pulse-glow shadow animation draws attention to CTA
+---
+
+## Iteration 37 - US-024: Branding Update - Societate Civila de Avocati
+- What was implemented:
+  - Updated firm name from "Cabinet de Avocat/Avocatura" to "Societate Civila de Avocati Stan-Baculescu" (SCA)
+  - Hero h1 now uses two-line format with visual hierarchy:
+    - RO: "Societate Civila de Avocati" (smaller) + "Stan-Baculescu" (larger)
+    - EN: "Stan-Baculescu" (smaller) + "Law Firm" (larger)
+  - Logo integrated in header (desktop h-16, mobile h-12 with brightness invert)
+  - All hardcoded hero text now uses translations:
+    - trustBadge, callNow, schedule, founder, satisfiedClients, yearsExperience
+  - Gold decorative elements added behind founders:
+    - Pulsing radial gradient circle (gold-pulse animation, 6s)
+    - Rotating ring with 2 dots (gold-rotate animation, 30s)
+  - Updated SEO schema with SCA Stan-Baculescu
+  - Updated all page metadata titles (~15 files)
+- Files changed:
+  - components/hero.tsx (h1 structure, translations, gold decorations)
+  - components/header.tsx (logo integration)
+  - messages/ro.json (titleLine1, titleLine2, hero translations)
+  - messages/en.json (titleLine1, titleLine2, hero translations)
+  - components/seo/organization-schema.tsx (firm name)
+  - app/[locale]/layout.tsx (metadata)
+  - app/[locale]/page.tsx, despre-noi/page.tsx, echipa/page.tsx, etc. (meta titles)
+  - prd.json (added US-024)
+- Learnings for future iterations:
+  - Use titleLine1/titleLine2 pattern for multi-line headings with different styles
+  - CSS ::before and ::after pseudo-elements for decorative elements
+  - gold-rotate animation for slow continuous rotation (30s linear infinite)
+  - Use replace_all: true with Edit tool for global find-replace
+  - Keep "SCA" abbreviation for shorter meta titles, full name for schema
+---
+
+## Iteration 38 - US-025: About Us Page - Full Design Update
+- What was implemented:
+  - Updated about-hero.tsx with navy gradient, gold decorative circle + rotating ring
+  - Added trust badge with Award icon: '15+ ani de excelenta juridica'
+  - Implemented two-line headline pattern (titleLine1/titleLine2) like homepage hero
+  - Added FadeInUp animations with sequential delays on all text sections
+  - Updated about-history.tsx with shimmer effect on image and hover lift on milestones
+  - Updated about-values.tsx with card hover effects (-translate-y-2, gold ring, shadow-xl)
+  - Updated about-principles.tsx with floating stat badges (100% Commitment, 24/7 Availability, 15+ Years)
+  - Updated about-methodology.tsx with animated step numbers and hover effects
+  - Updated about-cta.tsx with pulse-glow button, gold decorative elements
+  - Added CSS animations: fadeInUp, gold-pulse, gold-rotate, float, shimmer, pulse-glow
+  - Added bilingual translations for new keys (RO/EN)
+- Files changed:
+  - components/about/about-hero.tsx (complete rewrite with animations)
+  - components/about/about-history.tsx (added shimmer, hover effects)
+  - components/about/about-values.tsx (added card animations)
+  - components/about/about-principles.tsx (added floating stat badges)
+  - components/about/about-methodology.tsx (added card animations)
+  - components/about/about-cta.tsx (added gold decorations, pulse-glow)
+  - messages/ro.json (added trustBadge, titleLine1, titleLine2, statMotivation, statSeriousness, statExperience)
+  - messages/en.json (same keys in English)
+  - prd.json (marked US-025 complete)
+- Learnings for future iterations:
+  - Copy animation keyframes from hero.tsx for consistency across pages
+  - Use style jsx for CSS keyframes in React components
+  - Floating badges pattern: animate-float + staggered animation-delay
+  - Card hover pattern: -translate-y-2 + ring-gold/60 + shadow-xl
+  - Gold decorative elements: gold-decoration (pulsing circle) + gold-ring (rotating with dots)
+  - All About components are 'use client' due to useTranslations hook
+  - Shimmer effect uses linear-gradient with transparent and rgba(255,255,255,0.06)
+---
