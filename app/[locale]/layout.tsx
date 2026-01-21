@@ -30,7 +30,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Stan-Baculescu | Cabinet de Avocatura',
+    default: 'Stan-Baculescu | Societate Civila de Avocati',
     template: '%s | Stan-Baculescu',
   },
   description:
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     'dreptul muncii',
     'avocat Romania',
   ],
-  authors: [{ name: 'Cabinet de Avocatura Stan-Baculescu' }],
+  authors: [{ name: 'SCA Stan-Baculescu' }],
   creator: 'Stan-Baculescu Law Firm',
   publisher: 'Stan-Baculescu Law Firm',
   formatDetection: {
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     alternateLocale: 'en_US',
     url: BASE_URL,
     siteName: 'Stan-Baculescu Law Firm',
-    title: 'Stan-Baculescu | Cabinet de Avocatura',
+    title: 'Stan-Baculescu | Societate Civila de Avocati',
     description:
       'Cabinet de avocatura profesional din Satu Mare. Servicii juridice complete pentru persoane fizice si juridice.',
     images: [
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Cabinet de Avocatura Stan-Baculescu',
+        alt: 'SCA Stan-Baculescu',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stan-Baculescu | Cabinet de Avocatura',
+    title: 'Stan-Baculescu | Societate Civila de Avocati',
     description: 'Cabinet de avocatura profesional din Satu Mare.',
     images: [`${BASE_URL}/images/og-image.jpg`],
   },

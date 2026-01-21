@@ -2,7 +2,14 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { Star, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import {
+  Star,
+  ChevronLeft,
+  ChevronRight,
+  ExternalLink,
+  Quote,
+  MessageSquare,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -110,7 +117,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={star}
           className={cn(
-            'h-4 w-4',
+            'h-5 w-5',
             star <= rating
               ? 'fill-gold text-gold'
               : 'fill-gray-200 text-gray-200'
@@ -121,22 +128,44 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+function TestimonialCard({
+  testimonial,
+  index,
+}: {
+  testimonial: Testimonial;
+  index: number;
+}) {
   return (
-    <div className="flex h-full flex-col rounded-xl border border-transparent bg-white p-6 shadow-sm transition-all hover:border-gold hover:shadow-md">
+    <div
+      className="group relative flex h-full flex-col rounded-2xl border border-transparent bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-xl hover:ring-2 hover:ring-gold/20"
+      style={{ animation: `fadeInUp 0.6s ease-out ${index * 100}ms both` }}
+    >
+      {/* Quote icon decoration */}
+      <div className="absolute right-4 top-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <Quote className="h-8 w-8 text-gold/30" />
+      </div>
+
+      {/* Author info */}
       <div className="mb-4 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fef9e7] text-lg font-semibold text-navy">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fef9e7] text-lg font-bold text-navy transition-all duration-300 group-hover:bg-gold group-hover:text-white group-hover:shadow-[0_4px_6px_rgba(208,156,17,0.3)]">
           {testimonial.authorName.charAt(0)}
         </div>
         <div>
           <p className="font-semibold text-navy">{testimonial.authorName}</p>
-          <p className="text-sm text-[#4b5563]">{testimonial.relativeTime}</p>
+          <p className="text-sm text-[#6b7280]">{testimonial.relativeTime}</p>
         </div>
       </div>
+
+      {/* Star rating */}
       <StarRating rating={testimonial.rating} />
+
+      {/* Testimonial text */}
       <p className="mt-4 flex-grow text-[#4b5563] leading-relaxed">
         &ldquo;{testimonial.text}&rdquo;
       </p>
+
+      {/* Gold accent line at bottom */}
+      <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 rounded-b-2xl bg-gold transition-transform duration-300 group-hover:scale-x-100" />
     </div>
   );
 }
@@ -145,7 +174,8 @@ export function Testimonials() {
   const t = useTranslations('Testimonials');
   const locale = t('locale') === 'en' ? 'en' : 'ro';
 
-  const testimonials = locale === 'en' ? staticTestimonialsEn : staticTestimonials;
+  const testimonials =
+    locale === 'en' ? staticTestimonialsEn : staticTestimonials;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -154,7 +184,9 @@ export function Testimonials() {
   }, [testimonials.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   }, [testimonials.length]);
 
   // Auto-play carousel on mobile
@@ -166,48 +198,95 @@ export function Testimonials() {
   }, [isAutoPlaying, nextSlide]);
 
   // Google My Business URL
-  const googleMapsUrl = 'https://www.google.com/maps/place/Societatea+Civil%C4%83+de+Avoca%C8%9Bi+Stan-B%C4%83culescu/@47.7897,22.8762,17z';
+  const googleMapsUrl =
+    'https://www.google.com/maps/place/Societatea+Civil%C4%83+de+Avoca%C8%9Bi+Stan-B%C4%83culescu/@47.7897,22.8762,17z';
 
   return (
-    <section className="bg-[#f8f9fa] py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-[#f8f9fa] py-16 md:py-24">
+      {/* Background decorative elements */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        {/* Gold circle decoration - left */}
+        <div
+          className="absolute -left-32 top-1/4 h-64 w-64 rounded-full opacity-10"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(208,156,17,0.4) 0%, transparent 70%)',
+            animation: 'gold-pulse 6s ease-in-out infinite',
+          }}
+        />
+        {/* Gold circle decoration - right */}
+        <div
+          className="absolute -right-32 bottom-1/4 h-64 w-64 rounded-full opacity-10"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(208,156,17,0.4) 0%, transparent 70%)',
+            animation: 'gold-pulse 6s ease-in-out infinite 3s',
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-gold">
-            {t('subtitle')}
+          {/* Trust badge */}
+          <div
+            className="mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2"
+            style={{ animation: 'fadeInUp 0.6s ease-out both' }}
+          >
+            <MessageSquare className="h-4 w-4 text-gold" />
+            <span className="text-sm font-semibold text-gold">
+              {t('trustBadge')}
+            </span>
+          </div>
+
+          {/* Two-line headline */}
+          <p
+            className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold"
+            style={{ animation: 'fadeInUp 0.6s ease-out 100ms both' }}
+          >
+            {t('titleLine1')}
           </p>
-          <h2 className="font-heading mb-4 text-3xl font-bold text-navy md:text-4xl">
-            {t('title')}
+          <h2
+            className="font-heading mb-4 text-3xl font-bold text-navy md:text-4xl lg:text-5xl"
+            style={{ animation: 'fadeInUp 0.6s ease-out 200ms both' }}
+          >
+            {t('titleLine2')}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-[#4b5563]">
+          <p
+            className="mx-auto max-w-2xl text-lg text-[#4b5563]"
+            style={{ animation: 'fadeInUp 0.6s ease-out 300ms both' }}
+          >
             {t('description')}
           </p>
         </div>
 
         {/* Desktop Grid (3 columns) */}
         <div className="hidden gap-6 md:grid md:grid-cols-3">
-          {testimonials.slice(0, 3).map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          {testimonials.slice(0, 3).map((testimonial, index) => (
+            <TestimonialCard
+              key={testimonial.id}
+              testimonial={testimonial}
+              index={index}
+            />
           ))}
         </div>
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden rounded-2xl"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
+            onTouchStart={() => setIsAutoPlaying(false)}
+            onTouchEnd={() => setIsAutoPlaying(true)}
           >
             <div
-              className="flex transition-transform duration-300 ease-in-out"
+              className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.id}
-                  className="w-full flex-shrink-0 px-2"
-                >
-                  <TestimonialCard testimonial={testimonial} />
+              {testimonials.map((testimonial, index) => (
+                <div key={testimonial.id} className="w-full flex-shrink-0 px-2">
+                  <TestimonialCard testimonial={testimonial} index={index} />
                 </div>
               ))}
             </div>
@@ -217,10 +296,10 @@ export function Testimonials() {
           <div className="mt-6 flex items-center justify-center gap-4">
             <button
               onClick={prevSlide}
-              className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-navy/10"
+              className="group rounded-full bg-white p-3 shadow-md transition-all duration-300 hover:bg-gold hover:shadow-[0_4px_6px_rgba(208,156,17,0.3)]"
               aria-label={t('previous')}
             >
-              <ChevronLeft className="h-5 w-5 text-navy" />
+              <ChevronLeft className="h-5 w-5 text-navy transition-colors group-hover:text-white" />
             </button>
 
             {/* Dots */}
@@ -230,8 +309,10 @@ export function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={cn(
-                    'h-2 w-2 rounded-full transition-colors',
-                    index === currentIndex ? 'bg-gold' : 'bg-navy/20'
+                    'h-2.5 w-2.5 rounded-full transition-all duration-300',
+                    index === currentIndex
+                      ? 'w-6 bg-gold'
+                      : 'bg-navy/20 hover:bg-navy/40'
                   )}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -240,20 +321,22 @@ export function Testimonials() {
 
             <button
               onClick={nextSlide}
-              className="rounded-full bg-white p-2 shadow-md transition-colors hover:bg-navy/10"
+              className="group rounded-full bg-white p-3 shadow-md transition-all duration-300 hover:bg-gold hover:shadow-[0_4px_6px_rgba(208,156,17,0.3)]"
               aria-label={t('next')}
             >
-              <ChevronRight className="h-5 w-5 text-navy" />
+              <ChevronRight className="h-5 w-5 text-navy transition-colors group-hover:text-white" />
             </button>
           </div>
         </div>
 
         {/* Google Reviews Link */}
-        <div className="mt-10 text-center">
+        <div
+          className="mt-12 text-center"
+          style={{ animation: 'fadeInUp 0.6s ease-out 600ms both' }}
+        >
           <Button
             asChild
-            variant="outline"
-            className="border-navy text-navy hover:bg-navy hover:text-white"
+            className="border-2 border-gold bg-transparent text-gold transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-[0_4px_6px_rgba(208,156,17,0.3)]"
           >
             <a
               href={googleMapsUrl}
@@ -290,6 +373,32 @@ export function Testimonials() {
           </Button>
         </div>
       </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes gold-pulse {
+          0%,
+          100% {
+            transform: scale(1);
+            opacity: 0.1;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 0.15;
+          }
+        }
+      `}</style>
     </section>
   );
 }

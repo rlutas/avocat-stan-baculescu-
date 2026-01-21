@@ -165,31 +165,33 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 
 ---
 
-### US-009: Google Reviews/Testimonials Integration
+### US-009: Google Reviews/Testimonials Integration ⚠️ PARTIAL (Static Fallback)
 **Description:** As a visitor, I want to see client testimonials so that I can gauge the firm's reputation and service quality.
 
 **Implementation Approach:**
-- **Primary:** Google Places API integration (requires API key and Places ID)
-- **Fallback:** Static testimonials from curated Google Reviews (manually updated)
-- **Alternative:** Google Reviews iframe widget embed
+- **Primary:** Google Places API integration (requires API key and Places ID) - ❌ NOT IMPLEMENTED
+- **Fallback:** Static testimonials from curated Google Reviews (manually updated) - ✅ IMPLEMENTED
+- **Alternative:** Google Reviews iframe widget embed - ❌ NOT IMPLEMENTED
+
+**Current Status:** Using STATIC testimonials (5 curated reviews in RO/EN). No Google API integration.
 
 **Acceptance Criteria:**
-- [x] Section displaying Google Reviews testimonials on homepage and/or contact page
-- [x] Shows: star rating (1-5), reviewer name, review excerpt (max 200 chars), date
-- [x] Minimum 3-5 testimonials displayed
-- [x] Link to Google My Business profile for more reviews
+- [x] Section displaying testimonials on homepage
+- [x] Shows: star rating (1-5), reviewer name, review excerpt, date
+- [x] Minimum 3-5 testimonials displayed (5 static testimonials)
+- [ ] Link to Google My Business profile for more reviews
 - [x] Carousel layout on mobile, grid (3 columns) on desktop
-- [x] If API unavailable: graceful fallback to static testimonials
-- [x] Loading state while fetching reviews
-- [x] Error handling if API fails (show static fallback, no broken UI)
-- [x] Reviews cached for 24 hours to reduce API calls
+- [x] If API unavailable: graceful fallback to static testimonials (currently using fallback)
+- [ ] ~~Loading state while fetching reviews~~ (not needed - static data)
+- [ ] ~~Error handling if API fails~~ (not needed - static data)
+- [ ] ~~Reviews cached for 24 hours~~ (not needed - static data)
 - [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 **Technical Notes:**
-- Google Places API has usage limits (free tier: ~$200/month credit)
-- Alternatively, use static JSON file with curated reviews (no API needed)
-- Reviews should be fetched server-side to protect API key
+- Currently using static testimonials in `components/testimonials/testimonials.tsx`
+- To implement Google Places API: need API key and Places ID from client
+- Alternative: Add link to Google My Business profile for users to see real reviews
 
 ---
 
@@ -385,6 +387,281 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 
 ---
 
+## Design System Update - Hero Style Application
+
+> **Reference:** Hero section design patterns from `docs/tehnic/style-guide.md`
+> **Goal:** Apply the hero section's professional, elegant design to ALL pages for visual consistency.
+
+### Design Patterns to Apply
+
+**1. Page Hero Sections:**
+- Navy gradient background: `from-[#002a52] via-[#003a70] to-[#004a8f]`
+- Gold decorative elements (pulsing circle + rotating ring with dots)
+- Trust badge with gold accent
+- Two-line headline structure (subtitle smaller, title larger)
+- fadeInUp animations with sequential delays
+
+**2. Animations:**
+- `fadeInUp` (1s ease-out) for text elements
+- `photoFadeIn` (1.2s) for images
+- `badgeFadeIn` (0.8s) for badges/stats
+- `pulse-glow` (1.5s) for CTAs
+- `float-up`/`float-down` (4s) for ambient movement
+- Sequential delays: 100ms → 200ms → 300ms → etc.
+
+**3. Cards & Components:**
+- White background with `shadow-md`, `shadow-xl` on hover
+- Gold accent borders on hover (`ring-gold/60`)
+- Lift effect: `hover:-translate-y-2`
+- Rounded corners: `rounded-2xl`
+
+**4. Typography:**
+- Headlines: Playfair Display, font-bold
+- Body: Inter
+- Gold accents for highlights and labels
+
+---
+
+### US-025: About Us Page - Design Update ✅ COMPLETE
+**Description:** As a visitor, I want the About Us page to have the same professional design as the hero so that the site feels cohesive.
+
+**Acceptance Criteria:**
+- [x] Hero section with navy gradient background
+- [x] Gold decorative circle + rotating ring elements
+- [x] Trust badge: "15+ ani de excelență juridică"
+- [x] Two-line headline: "Societate Civila de Avocati" (smaller) + "Despre Noi" (larger)
+- [x] FadeInUp animations on all text sections
+- [x] History section with cards featuring hover lift effect
+- [x] Values section (Profesionalism, Adaptabilitate, Loialitate) with gold icons and fadeIn
+- [x] Principles section with animated stat badges (like hero)
+- [x] Photo section with shimmer effect and photo-hover animations
+- [x] CTA button with pulse-glow animation
+- [x] Responsive: mobile, tablet, desktop layouts
+- [x] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+**Notes:** Implemented with full hero design. Translation keys added: trustBadge, titleLine1, titleLine2, statMotivation, statSeriousness, statExperience.
+
+---
+
+### US-026: Services Overview Page - Design Update
+**Description:** As a visitor, I want the Services page to showcase all practice areas with the hero's elegant design.
+
+**Acceptance Criteria:**
+- [ ] Hero section with navy gradient + gold decorations
+- [ ] Trust badge: "8 Arii de Practică"
+- [ ] Two-line headline: "Servicii Juridice" (smaller) + "Ariile Noastre de Practică" (larger)
+- [ ] Service cards with:
+  - White background, `rounded-2xl`
+  - Gold icon in decorative circle
+  - Hover: lift effect (-translate-y-2), gold ring, shadow-xl
+  - FadeIn animation with staggered delays (100ms per card)
+- [ ] Grid layout: 1 col mobile, 2 cols tablet, 3-4 cols desktop
+- [ ] Each card links to individual service page
+- [ ] CTA section at bottom with pulse-glow button
+- [ ] Responsive design
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-027: Individual Service Pages (8 pages) - Design Update
+**Description:** As a visitor on a specific service page, I want to see detailed information with the same elegant design.
+
+**Acceptance Criteria:**
+- [ ] Hero section with navy gradient + gold decorations
+- [ ] Service-specific trust badge (e.g., "Expertiză în Malpraxis Medical")
+- [ ] Two-line headline: service category (smaller) + service name (larger)
+- [ ] FadeInUp animations on all content sections
+- [ ] Content sections with:
+  - Alternating white/off-white backgrounds
+  - Gold accent borders and icons
+  - Cards for key points with hover effects
+- [ ] "Common Cases" section with animated list items
+- [ ] Related services cards with hover lift
+- [ ] CTA section: "Programează o Consultație" with pulse-glow
+- [ ] Back to services link
+- [ ] Apply to all 8 service pages:
+  - `/servicii/malpraxis-medical`
+  - `/servicii/drept-civil`
+  - `/servicii/drept-penal`
+  - `/servicii/drept-familiei`
+  - `/servicii/dreptul-muncii`
+  - `/servicii/drept-comercial`
+  - `/servicii/accidente-rutiere`
+  - `/servicii/drept-administrativ-fiscal`
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-028: Blog Section - Design Update
+**Description:** As a visitor, I want the blog to have the hero's professional styling for a cohesive reading experience.
+
+**Acceptance Criteria:**
+- [ ] Blog listing hero with navy gradient + gold decorations
+- [ ] Trust badge: "Articole & Noutăți Juridice"
+- [ ] Two-line headline style
+- [ ] Article cards with:
+  - White background, rounded-2xl
+  - Featured image with shimmer effect on hover
+  - Hover: lift effect, gold ring accent
+  - FadeIn with staggered delays
+  - Category badge in gold
+  - Author avatar and date
+- [ ] Category filter with gold active state
+- [ ] Individual article pages:
+  - Hero with article title (two-line style)
+  - Author section with photo and gold accents
+  - Content with proper typography
+  - Related articles with card hover effects
+  - Share buttons styled with gold accents
+- [ ] Responsive grid: 1/2/3 columns
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-029: Contact Page - Design Update
+**Description:** As a potential client, I want the contact page to feel premium and trustworthy with the hero styling.
+
+**Acceptance Criteria:**
+- [ ] Hero section with navy gradient + gold decorations
+- [ ] Trust badge: "Contactați-ne"
+- [ ] Two-line headline: "Programează o" (smaller) + "Consultație" (larger)
+- [ ] Contact info cards with:
+  - Gold icons (phone, email, location, hours)
+  - Hover effects with lift and gold ring
+  - FadeIn animations
+- [ ] Contact form styled:
+  - White card with shadow-xl
+  - Gold focus states on inputs
+  - Submit button with pulse-glow animation
+  - Form fields with smooth transitions
+- [ ] Google Map with gold border accent
+- [ ] Social media links with gold hover
+- [ ] Floating badges (like hero) with stats: "Răspundem în 24h", "Consultație Gratuită"
+- [ ] Responsive layout
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-030: Testimonials Section - Design Update
+**Description:** As a visitor, I want to see client testimonials styled consistently with the hero design.
+
+**Acceptance Criteria:**
+- [ ] Section with navy gradient background OR white with gold accents
+- [ ] Trust badge: "Ce Spun Clienții Noștri"
+- [ ] Testimonial cards with:
+  - White background, rounded-2xl
+  - Gold star ratings
+  - Quote icon in gold
+  - Client name and photo (if available)
+  - Hover: lift effect, gold shadow
+  - FadeIn with staggered delays
+- [ ] Carousel navigation with gold accent buttons
+- [ ] Google Reviews link styled with gold
+- [ ] Responsive: cards stack on mobile
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-031: Team Page - Animation Enhancement
+**Description:** As a visitor, I want the team page to have smooth animations matching the hero style.
+
+**Acceptance Criteria:**
+- [ ] Existing team layout preserved (user approved current design)
+- [ ] Add fadeInUp animations to all text sections
+- [ ] Add photoFadeIn animations to team member cards
+- [ ] Add staggered delays (100ms per team member)
+- [ ] Add hover effects on team cards:
+  - Lift effect (-translate-y-2)
+  - Gold ring accent on hover
+  - Shadow enhancement
+- [ ] Add shimmer effect on team photos (like hero founders)
+- [ ] Founders section: subtle float animation on badges
+- [ ] Responsive animations work on all devices
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-032: Footer - Design Verification
+**Description:** As a visitor, I want the footer to match the overall design system.
+
+**Acceptance Criteria:**
+- [x] Navy background (already implemented)
+- [x] White logo (already implemented)
+- [ ] Gold accents on links hover
+- [ ] Social media icons with gold hover effect
+- [ ] FadeInUp animation when scrolling into view
+- [ ] Newsletter section (if added) with gold CTA
+- [ ] Responsive layout verified
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-033: Legal Pages - Design Update (Privacy, Terms, Cookies)
+**Description:** As a visitor, I want legal pages to have the same professional styling for consistency.
+
+**Acceptance Criteria:**
+- [ ] All 3 pages updated: Privacy Policy, Terms of Service, Cookie Policy
+- [ ] Hero section with navy gradient (smaller than main pages)
+- [ ] Trust badge relevant to page (e.g., "GDPR Compliant")
+- [ ] Two-line headline style
+- [ ] Content sections with:
+  - Clear typography hierarchy
+  - Gold accent icons for section headers
+  - White cards for important notices
+  - FadeInUp animations
+- [ ] Back to home link with gold accent
+- [ ] Table of contents with gold active state (if applicable)
+- [ ] Last updated date styled
+- [ ] Responsive layout
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-034: 404 Page - Design Update
+**Description:** As a lost visitor, I want the 404 page to maintain the premium feel and help me navigate.
+
+**Acceptance Criteria:**
+- [ ] Navy gradient background (full page)
+- [ ] Gold decorative elements (circle + ring)
+- [ ] Large "404" with gold accent or gradient
+- [ ] Two-line message: "Pagina nu a fost găsită" style
+- [ ] Animated illustration or icon
+- [ ] Navigation suggestions with card hover effects
+- [ ] Primary CTA: "Înapoi la Pagina Principală" with pulse-glow
+- [ ] Secondary links to main sections (Services, Contact)
+- [ ] FadeInUp animations
+- [ ] Responsive design
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
+### US-035: Cookie Consent Banner - Design Update
+**Description:** As a visitor, I want the cookie consent banner to match the site's premium styling.
+
+**Acceptance Criteria:**
+- [ ] Banner with navy background or white with navy text
+- [ ] Gold accent on "Accept All" button (primary action)
+- [ ] Secondary buttons styled consistently
+- [ ] Smooth slideUp animation on appear
+- [ ] FadeOut animation on dismiss
+- [ ] Gold toggle switches for cookie preferences
+- [ ] Settings modal with navy header, gold accents
+- [ ] Responsive: full width on mobile
+- [ ] Typecheck passes
+- [ ] Verify in browser using dev-browser skill
+
+---
+
 ## Functional Requirements
 
 - **FR-1:** Display homepage with hero section, team photo, and CTA
@@ -408,6 +685,12 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 - **FR-19:** Create admin documentation and deliver 30-minute training session
 - **FR-20:** Set up error monitoring with Sentry
 - **FR-21:** Implement automated testing (unit + E2E)
+- **FR-22:** Apply hero design system to all pages (navy gradients, gold accents, animations)
+- **FR-23:** Implement consistent animation library (fadeInUp, photoFadeIn, badgeFadeIn, pulse-glow, float)
+- **FR-24:** Add gold decorative elements (pulsing circle, rotating ring) to key pages
+- **FR-25:** Ensure all page heroes follow two-line headline pattern with proper typography hierarchy
+- **FR-26:** Implement card hover effects (lift, gold ring, shadow enhancement) site-wide
+- **FR-27:** Add shimmer effects to all featured images
 
 ---
 
@@ -581,16 +864,61 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 
 ---
 
+## Implementation Audit Summary (January 2026)
+
+### Pages Status
+| Page | Functional | Design (Hero Style) |
+|------|:----------:|:-------------------:|
+| Homepage | ✅ | ✅ COMPLETE |
+| About Us | ✅ | ✅ COMPLETE |
+| Team (List + 6 profiles) | ✅ | ⚠️ Needs animations |
+| Services (Overview + 8 pages) | ✅ | ⚠️ Needs hero update |
+| Blog (List + 6 articles) | ✅ | ⚠️ Needs hero update |
+| Contact | ✅ | ⚠️ Needs hero update |
+| Legal (Privacy, Terms, Cookies) | ✅ | ⚠️ Needs hero update |
+| 404 Page | ✅ | ⚠️ Needs hero update |
+
+### Functionality Status
+| Feature | Status | Configuration Needed |
+|---------|--------|---------------------|
+| Contact Form + Email | ✅ Ready | `RESEND_API_KEY` in .env.local |
+| Blog MDX/Velite | ✅ Working | None |
+| Google Analytics | ⚠️ Ready | `NEXT_PUBLIC_GA_MEASUREMENT_ID` |
+| Google Maps | ✅ Working | None (embedded) |
+| **Google Reviews** | ❌ **NOT IMPLEMENTED** | Needs Google Places API or static fallback |
+| Cookie Consent | ✅ Working | None |
+| SEO (sitemap, robots, JSON-LD) | ✅ Working | None |
+| Supabase | ✅ Ready | Optional: `SUPABASE_URL`, `SUPABASE_ANON_KEY` |
+
+### Environment Variables Required
+```bash
+# Required for email
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxx
+
+# Required for analytics
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# Optional - Google verification
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-code
+
+# Optional - Supabase (for contact form storage)
+NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=xxx
+```
+
+---
+
 ## Open Questions
 
 1. ~~**Logo and exact color codes:**~~ ✅ RESOLVED - Colors defined: Navy `#003a70`, Gold `#d09c11`, White `#ffffff`. See `docs/tehnic/style-guide.md`
-2. **Team photos:** Client to provide professional photos (team + individual)
-3. **Lawyer biographies:** Client to provide detailed bios for each team member
-4. **Service descriptions:** Need client input/approval for detailed service page content
-5. **Instagram and TikTok links:** Client to provide social media profile URLs
-6. **Google Reviews API:** Need access to Google My Business for testimonials integration
-7. **Content migration:** Confirm which content from WordPress should be migrated vs. rewritten
-8. **Domain access:** Need DNS access for domain configuration
+2. ~~**Team photos:**~~ ✅ RESOLVED - Photos provided and implemented
+3. ~~**Lawyer biographies:**~~ ✅ RESOLVED - Bios implemented for all 6 team members
+4. ~~**Service descriptions:**~~ ✅ RESOLVED - All 8 service pages have full content
+5. ~~**Instagram and TikTok links:**~~ ✅ RESOLVED - Links implemented in footer
+6. **Google Reviews API:** ⚠️ **NOT IMPLEMENTED** - Need to implement static testimonials or Google Places API integration
+7. ~~**Content migration:**~~ ✅ RESOLVED - Content rewritten for new site
+8. **Domain access:** Pending - Need DNS access for domain configuration
+9. **Environment variables:** Need to configure RESEND_API_KEY and GA_MEASUREMENT_ID before launch
 
 ---
 

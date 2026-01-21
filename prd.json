@@ -511,8 +511,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 28,
-      "passes": false,
-      "notes": "Full redesign following hero patterns. Review fetching logic preserved."
+      "passes": true,
+      "notes": "Full redesign following hero patterns. Updated testimonials.tsx with: off-white bg with gold decorative circles (gold-pulse animation), trust badge with MessageSquare icon, two-line headline (titleLine1/titleLine2), testimonial cards with rounded-2xl, fadeInUp animations with staggered delays, quote icon on hover, gold accent line animation at bottom, author avatar with gold hover effect, carousel controls with gold hover states, Google Reviews button with gold border/hover. Added trustBadge, titleLine1, titleLine2 translations in RO/EN."
     },
     {
       "id": "US-031",

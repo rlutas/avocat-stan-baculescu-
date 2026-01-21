@@ -574,6 +574,9 @@
   },
   "Testimonials": {
     "locale": "ro",
+    "trustBadge": "Ce Spun Clientii Nostri",
+    "titleLine1": "Recenzii & Testimoniale",
+    "titleLine2": "Parerea Clientilor",
     "subtitle": "Ce spun clientii nostri",
     "title": "Recenzii si Testimoniale",
     "description": "Satisfactia clientilor nostri este cea mai mare recompensa. Iata ce spun despre colaborarea cu noi.",

@@ -574,6 +574,9 @@
   },
   "Testimonials": {
     "locale": "en",
+    "trustBadge": "What Our Clients Say",
+    "titleLine1": "Reviews & Testimonials",
+    "titleLine2": "Client Feedback",
     "subtitle": "What our clients say",
     "title": "Reviews and Testimonials",
     "description": "Our clients' satisfaction is our greatest reward. Here's what they say about working with us.",

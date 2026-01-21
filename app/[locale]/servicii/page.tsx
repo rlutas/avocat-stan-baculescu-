@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Servicii Juridice | Cabinet de Avocatura Stan-Baculescu'
+      ? 'Servicii Juridice | SCA Stan-Baculescu'
       : 'Legal Services | Stan-Baculescu Law Firm';
   const description =
     locale === 'ro'
-      ? 'Descopera serviciile juridice oferite de Cabinetul de Avocatura Stan-Baculescu: malpraxis medical, drept civil, penal, familiei, muncii, comercial, accidente rutiere si drept administrativ.'
+      ? 'Descopera serviciile juridice oferite de SCA Stan-Baculescu: malpraxis medical, drept civil, penal, familiei, muncii, comercial, accidente rutiere si drept administrativ.'
       : 'Discover the legal services offered by Stan-Baculescu Law Firm: medical malpractice, civil law, criminal law, family law, labor law, commercial law, traffic accidents, and administrative law.';
 
   return {

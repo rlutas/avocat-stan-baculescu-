@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Scale, MapPin, Phone, Mail, Clock, Facebook, Instagram, Cookie } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Cookie } from 'lucide-react';
+import Image from 'next/image';
 import { openCookieSettings } from '@/components/cookie-consent';
 
 const navItems = [
@@ -60,11 +61,14 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo and Description */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <Scale className="h-8 w-8 text-gold" />
-              <span className="text-xl font-bold tracking-tight">
-                {t('siteName')}
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt={t('siteName')}
+                width={180}
+                height={60}
+                className="h-14 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-white/70">
               {tFooter('description')}

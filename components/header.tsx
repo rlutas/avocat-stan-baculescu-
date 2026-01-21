@@ -10,7 +10,8 @@ import {
   SheetTrigger,
   SheetTitle,
 } from '@/components/ui/sheet';
-import { Menu, Scale } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -21,6 +22,32 @@ const navItems = [
   { href: '/blog', key: 'blog' },
   { href: '/contact', key: 'contact' },
 ] as const;
+
+// Animated hamburger icon component
+function AnimatedHamburger({ isOpen }: { isOpen: boolean }) {
+  return (
+    <div className="relative h-6 w-7 flex flex-col justify-center items-center">
+      <span
+        className={cn(
+          'absolute h-0.5 w-7 bg-navy rounded-full transition-all duration-300 ease-out',
+          isOpen ? 'rotate-45 bg-gold' : '-translate-y-2'
+        )}
+      />
+      <span
+        className={cn(
+          'absolute h-0.5 w-5 bg-navy rounded-full transition-all duration-300 ease-out',
+          isOpen ? 'opacity-0 translate-x-3' : 'opacity-100'
+        )}
+      />
+      <span
+        className={cn(
+          'absolute h-0.5 w-7 bg-navy rounded-full transition-all duration-300 ease-out',
+          isOpen ? '-rotate-45 bg-gold' : 'translate-y-2'
+        )}
+      />
+    </div>
+  );
+}
 
 export function Header() {
   const t = useTranslations('common');
@@ -59,11 +86,15 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <Scale className="h-8 w-8 text-navy transition-colors" />
-            <span className="text-xl font-bold tracking-tight text-navy transition-colors">
-              {t('siteName')}
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt={t('siteName')}
+              width={220}
+              height={73}
+              className="h-16 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -122,104 +153,123 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
-            {/* Mobile Language Switcher */}
-            <button
-              onClick={() => switchLanguage(otherLocale)}
-              className="rounded-full bg-navy/10 px-3 py-1 text-sm font-semibold text-navy transition-colors hover:bg-navy/20"
-            >
-              {otherLocale.toUpperCase()}
-            </button>
-
+          <div className="flex items-center gap-3 lg:hidden">
             {/* Hamburger Menu */}
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-10 w-10 text-navy hover:bg-navy/10"
+                <button
+                  className="flex h-12 w-12 items-center justify-center transition-all duration-300 active:scale-95"
+                  aria-label="Toggle menu"
                 >
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
+                  <AnimatedHamburger isOpen={isMobileMenuOpen} />
+                </button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 border-l-navy/10 bg-navy"
+                className="w-[85vw] max-w-sm border-l-gold/20 bg-gradient-to-br from-[#002a52] via-[#003a70] to-[#004a8f] p-0 overflow-hidden"
+                closeClassName="text-white hover:text-gold hover:bg-white/10 p-2 rounded-lg"
               >
-                <SheetTitle className="flex items-center gap-2">
-                  <Scale className="h-6 w-6 text-gold" />
-                  <span className="text-lg font-bold text-white">
-                    {t('siteName')}
-                  </span>
-                </SheetTitle>
-                <nav className="mt-8 flex flex-col gap-2">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.key}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={cn(
-                        'rounded-lg px-4 py-3 text-base font-medium transition-colors',
-                        pathname === item.href
-                          ? 'bg-white/10 text-gold'
-                          : 'text-white hover:bg-white/5 hover:text-gold'
-                      )}
-                    >
-                      {t(`nav.${item.key}`)}
-                    </Link>
-                  ))}
-                </nav>
+                {/* Decorative gold circle */}
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+                <div className="absolute -left-10 bottom-20 h-40 w-40 rounded-full bg-gold/5 blur-2xl" />
 
-                {/* Mobile CTA */}
-                <div className="mt-8">
-                  <Button
-                    asChild
-                    className="w-full bg-gold font-semibold text-navy hover:bg-gold-light"
-                  >
-                    <Link
-                      href="/contact"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {t('nav.contact')}
-                    </Link>
-                  </Button>
-                </div>
+                <div className="relative z-10 flex h-full flex-col p-6">
+                  {/* Logo */}
+                  <SheetTitle className="flex items-center pb-6 border-b border-white/10">
+                    <Image
+                      src="/images/logo.png"
+                      alt={t('siteName')}
+                      width={160}
+                      height={53}
+                      className="h-12 w-auto brightness-0 invert"
+                    />
+                  </SheetTitle>
 
-                {/* Mobile Language Switcher */}
-                <div className="mt-6">
-                  <p className="mb-2 text-sm font-medium text-white/60">
-                    {t('language.ro') === 'Romana' ? 'Limba' : 'Language'}
-                  </p>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => {
-                        switchLanguage('ro');
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className={cn(
-                        'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors',
-                        locale === 'ro'
-                          ? 'bg-gold text-navy'
-                          : 'bg-white/10 text-white hover:bg-white/20'
-                      )}
+                  {/* Navigation */}
+                  <nav className="mt-6 flex flex-col gap-1 flex-1">
+                    {navItems.map((item, index) => (
+                      <Link
+                        key={item.key}
+                        href={item.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={cn(
+                          'group relative flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300',
+                          pathname === item.href
+                            ? 'bg-gold/20 text-gold'
+                            : 'text-white/90 hover:bg-white/5 hover:text-gold hover:translate-x-1'
+                        )}
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        {pathname === item.href && (
+                          <span className="absolute left-0 top-1/2 -translate-y-1/2 h-6 w-1 rounded-r-full bg-gold" />
+                        )}
+                        {t(`nav.${item.key}`)}
+                      </Link>
+                    ))}
+                  </nav>
+
+                  {/* Bottom section */}
+                  <div className="space-y-4 pt-6 border-t border-white/10">
+                    {/* Language Switcher */}
+                    <div className="flex items-center justify-center gap-1 p-1 bg-white/5 rounded-full">
+                      <button
+                        onClick={() => {
+                          switchLanguage('ro');
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex-1 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300',
+                          locale === 'ro'
+                            ? 'bg-gold text-navy shadow-lg'
+                            : 'text-white/70 hover:text-white'
+                        )}
+                      >
+                        🇷🇴 Română
+                      </button>
+                      <button
+                        onClick={() => {
+                          switchLanguage('en');
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex-1 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300',
+                          locale === 'en'
+                            ? 'bg-gold text-navy shadow-lg'
+                            : 'text-white/70 hover:text-white'
+                        )}
+                      >
+                        🇬🇧 English
+                      </button>
+                    </div>
+
+                    {/* CTA Button */}
+                    <Button
+                      asChild
+                      className="w-full h-12 bg-gold font-semibold text-navy text-base hover:bg-gold-light shadow-[0_4px_20px_rgba(208,156,17,0.3)] hover:shadow-[0_6px_30px_rgba(208,156,17,0.4)] transition-all duration-300"
                     >
-                      {t('language.ro')}
-                    </button>
-                    <button
-                      onClick={() => {
-                        switchLanguage('en');
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className={cn(
-                        'flex-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors',
-                        locale === 'en'
-                          ? 'bg-gold text-navy'
-                          : 'bg-white/10 text-white hover:bg-white/20'
-                      )}
+                      <Link
+                        href="tel:+40261848015"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Phone className="h-4 w-4" />
+                        {t('callNow')}
+                      </Link>
+                    </Button>
+
+                    {/* Contact button */}
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full h-12 bg-transparent border-white/20 text-white text-base hover:bg-white/10 hover:border-white/30 transition-all duration-300"
                     >
-                      {t('language.en')}
-                    </button>
+                      <Link
+                        href="/contact"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {t('nav.contact')}
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </SheetContent>

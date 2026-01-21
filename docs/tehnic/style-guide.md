@@ -114,6 +114,70 @@
 
 ### Responsive Typography
 
+#### Hero Section Typography (Two-Line Layout)
+
+The hero section uses a distinctive two-line headline with different styling for each line:
+
+**Line 1 - "Societate Civila de Avocati" (Firm Type)**
+```css
+.hero-title-line1 {
+  font-size: 1.5rem;           /* text-2xl - Mobile */
+  color: rgba(255, 255, 255, 0.7);  /* text-white/70 */
+  font-weight: 500;            /* font-medium */
+}
+
+@media (min-width: 640px) {    /* sm breakpoint */
+  .hero-title-line1 {
+    font-size: 1.875rem;       /* text-3xl - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {   /* lg breakpoint */
+  .hero-title-line1 {
+    font-size: 2.5rem;         /* text-[2.5rem] - Desktop */
+  }
+}
+```
+
+**Tailwind Classes:** `text-2xl sm:text-3xl lg:text-[2.5rem] text-white/70 font-medium`
+
+**Line 2 - "Stan-Baculescu" (Firm Name)**
+```css
+.hero-title-line2 {
+  font-size: 3rem;             /* text-5xl - Mobile */
+  color: #ffffff;              /* text-white */
+  font-weight: 700;            /* font-bold */
+}
+
+@media (min-width: 640px) {    /* sm breakpoint */
+  .hero-title-line2 {
+    font-size: 3.75rem;        /* text-6xl - Tablet */
+  }
+}
+
+@media (min-width: 1024px) {   /* lg breakpoint */
+  .hero-title-line2 {
+    font-size: 4.5rem;         /* text-7xl - Desktop */
+  }
+}
+```
+
+**Tailwind Classes:** `text-5xl sm:text-6xl lg:text-7xl text-white font-bold`
+
+**Example Implementation:**
+```jsx
+<h1 className="font-heading">
+  <span className="block text-2xl sm:text-3xl lg:text-[2.5rem] text-white/70 font-medium">
+    Societate Civila de Avocati
+  </span>
+  <span className="block text-5xl sm:text-6xl lg:text-7xl text-white font-bold">
+    Stan-Baculescu
+  </span>
+</h1>
+```
+
+#### General Typography
+
 ```css
 /* H1 - Hero Headlines */
 h1, .h1 {
@@ -624,7 +688,11 @@ body, .body {
 }
 ```
 
-#### Mobile Menu
+#### Mobile Menu (Enhanced Design)
+
+The mobile menu features a sophisticated gradient background with decorative elements and polished interactions.
+
+**Background & Structure**
 ```css
 .mobile-menu {
   position: fixed;
@@ -632,17 +700,34 @@ body, .body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #003a70;
+  /* Gradient background */
+  background: linear-gradient(180deg, #002a52 0%, #003a70 50%, #004a8f 100%);
   padding: 2rem;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 100;
+  overflow: hidden;
 }
 
 .mobile-menu.active {
   transform: translateX(0);
 }
+```
 
+**Tailwind Classes (Container):**
+```html
+<div className="fixed inset-0 z-50 bg-gradient-to-b from-[#002a52] via-[#003a70] to-[#004a8f]">
+```
+
+**Decorative Gold Circles (Blur Effect)**
+```jsx
+{/* Background decorative elements */}
+<div className="absolute top-20 right-10 h-32 w-32 rounded-full bg-gold/10 blur-3xl" />
+<div className="absolute bottom-40 left-10 h-40 w-40 rounded-full bg-gold/5 blur-3xl" />
+```
+
+**Navigation Items with Hover Slide Effect**
+```css
 .mobile-menu-link {
   display: block;
   font-family: var(--font-body);
@@ -652,13 +737,210 @@ body, .body {
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
 }
 
 .mobile-menu-link:hover {
   color: #d09c11;
+  padding-left: 1rem; /* Slide effect on hover */
+}
+
+/* Gold active indicator */
+.mobile-menu-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: #d09c11;
+  border-radius: 2px;
 }
 ```
+
+**Tailwind Implementation:**
+```jsx
+<Link
+  href="/about"
+  className={cn(
+    "block py-4 text-xl font-medium text-white border-b border-white/10 transition-all duration-300 hover:text-gold hover:pl-4",
+    pathname === "/about" && "text-gold pl-4 border-l-4 border-gold"
+  )}
+>
+  Despre Noi
+</Link>
+```
+
+**Language Switcher (Pill Design with Flags)**
+```jsx
+<div className="flex items-center gap-2 bg-white/10 rounded-full p-1">
+  <button
+    className={cn(
+      "flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium transition-all duration-300",
+      locale === 'ro'
+        ? "bg-gold text-navy"
+        : "text-white/70 hover:text-white"
+    )}
+  >
+    <span>🇷🇴</span>
+    <span>RO</span>
+  </button>
+  <button
+    className={cn(
+      "flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium transition-all duration-300",
+      locale === 'en'
+        ? "bg-gold text-navy"
+        : "text-white/70 hover:text-white"
+    )}
+  >
+    <span>🇬🇧</span>
+    <span>EN</span>
+  </button>
+</div>
+```
+
+**Close Button**
+```css
+.mobile-menu-close {
+  padding: 0.5rem;           /* p-2 */
+  border-radius: 0.5rem;     /* rounded-lg */
+  color: #ffffff;            /* text-white */
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+  color: #d09c11;            /* text-gold on hover */
+  background: rgba(208, 156, 17, 0.1);
+}
+```
+
+**Tailwind Classes:** `p-2 rounded-lg text-white hover:text-gold hover:bg-gold/10 transition-all duration-300`
+
+**CTA Buttons in Mobile Menu**
+
+Primary CTA - "Suna acum" (Call Now):
+```jsx
+<a
+  href="tel:+40261848015"
+  className="flex items-center justify-center gap-2 w-full h-14 bg-gold text-navy font-semibold rounded-full shadow-lg shadow-gold/30 animate-pulse-glow"
+>
+  <Phone className="h-5 w-5" />
+  <span>Suna acum</span>
+</a>
+```
+
+Secondary CTA - "Contact":
+```jsx
+<Link
+  href="/contact"
+  className="flex items-center justify-center w-full h-14 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+>
+  Contact
+</Link>
+```
+
+---
+
+#### Hamburger Icon (Animated)
+
+Custom animated hamburger menu icon that transforms to an X when open.
+
+**Container Specifications**
+```css
+.hamburger-button {
+  width: 3rem;               /* h-12 / w-12 (48px) */
+  height: 3rem;
+  background: transparent;   /* No background */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;             /* 6px gap between lines */
+}
+```
+
+**Line Specifications**
+```css
+.hamburger-line {
+  width: 1.75rem;            /* w-7 (28px) */
+  height: 2px;
+  background: #ffffff;       /* white */
+  border-radius: 1px;
+  transition: all 300ms ease-out;
+  transform-origin: center;
+}
+
+/* Open state - lines become gold and transform to X */
+.hamburger-button.open .hamburger-line {
+  background: #d09c11;       /* gold */
+}
+
+.hamburger-button.open .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-button.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-button.open .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+```
+
+**React Implementation**
+```jsx
+<button
+  onClick={() => setIsOpen(!isOpen)}
+  className="relative h-12 w-12 flex flex-col items-center justify-center gap-1.5"
+  aria-label={isOpen ? 'Close menu' : 'Open menu'}
+>
+  <span
+    className={cn(
+      "block h-0.5 w-7 rounded-full transition-all duration-300 ease-out",
+      isOpen
+        ? "bg-gold translate-y-2 rotate-45"
+        : "bg-white"
+    )}
+  />
+  <span
+    className={cn(
+      "block h-0.5 w-7 rounded-full transition-all duration-300 ease-out",
+      isOpen
+        ? "bg-gold opacity-0 scale-x-0"
+        : "bg-white"
+    )}
+  />
+  <span
+    className={cn(
+      "block h-0.5 w-7 rounded-full transition-all duration-300 ease-out",
+      isOpen
+        ? "bg-gold -translate-y-2 -rotate-45"
+        : "bg-white"
+    )}
+  />
+</button>
+```
+
+**Animation Properties**
+| Property | Value | Notes |
+|----------|-------|-------|
+| Transition duration | 300ms | Smooth but snappy |
+| Easing | ease-out | Quick start, gentle finish |
+| Line width | 28px (w-7) | Comfortable touch target |
+| Line height | 2px (h-0.5) | Visible but refined |
+| Gap between lines | 6px (gap-1.5) | Proper spacing for X transform |
+| Container size | 48px (h-12 w-12) | Touch-friendly target |
+| Color (closed) | white | Visible on navy background |
+| Color (open) | gold (#d09c11) | Indicates active state |
 
 ### Forms
 
@@ -742,6 +1024,37 @@ body, .body {
 ```
 
 ### Footer
+
+#### Footer Logo
+
+The footer uses the actual logo image converted to white using CSS filters.
+
+```css
+.footer-logo {
+  height: 3.5rem;            /* h-14 (56px) */
+  width: auto;               /* w-auto - maintains aspect ratio */
+  filter: brightness(0) invert(1);  /* Converts to white */
+}
+```
+
+**Next.js Image Implementation:**
+```jsx
+<Image
+  src="/images/logo.png"
+  alt="Stan Baculescu Law Firm"
+  width={200}
+  height={56}
+  className="h-14 w-auto brightness-0 invert"
+/>
+```
+
+**Filter Explanation:**
+- `brightness(0)` - Makes the image completely black
+- `invert(1)` - Inverts black to white, creating a white version of the logo
+
+**Tailwind Classes:** `h-14 w-auto brightness-0 invert`
+
+#### Footer Layout
 
 ```css
 .footer {
@@ -1895,6 +2208,691 @@ npx shadcn-ui@latest add toast
   left: 100%;
 }
 ```
+
+---
+
+## 13. Animation & Interaction Patterns
+
+This section documents the animation patterns established in the Hero component. These patterns should be reused consistently across the site for a cohesive user experience.
+
+### 13.1 CSS Keyframe Animations
+
+#### fadeInUp - Text Element Entry Animation
+
+Used for text content that slides up while fading in. Ideal for headlines, paragraphs, and CTA elements.
+
+```css
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out both;
+}
+```
+
+**Properties:**
+- Duration: 1s
+- Easing: ease-out
+- Fill mode: both (maintains final state)
+- Transform distance: 30px vertical
+
+#### photoFadeIn - Photo/Image Entry Animation
+
+Used for image cards and photo elements. Combines scale and translate for a more dramatic entrance.
+
+```css
+@keyframes photoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-photo {
+  animation: photoFadeIn 1.2s ease-out both;
+}
+```
+
+**Properties:**
+- Duration: 1.2s (slightly longer for visual weight)
+- Easing: ease-out
+- Transform distance: 40px vertical
+- Scale: 0.95 to 1
+
+#### badgeFadeIn - Badge/Stat Entry Animation
+
+Used for floating badges and stat cards. Uses scale transformation for a "pop-in" effect.
+
+```css
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-badge {
+  animation: badgeFadeIn 0.8s ease-out both;
+}
+```
+
+**Properties:**
+- Duration: 0.8s (shorter for snappier feel)
+- Easing: ease-out
+- Scale: 0.8 to 1
+
+#### shimmer - Photo Highlight Effect
+
+A subtle light sweep effect that adds polish to photo cards.
+
+```css
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.photo-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.03) 55%,
+    transparent 60%
+  );
+  animation: shimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+```
+
+**Properties:**
+- Duration: 6s (slow, subtle effect)
+- Easing: ease-in-out
+- Repeat: infinite
+- Gradient angle: 105deg for diagonal sweep
+
+#### float-up / float-down - Ambient Floating Animation
+
+Creates gentle floating motion for badges and decorative elements.
+
+```css
+@keyframes float-up {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float-up {
+  animation: float-up 4s ease-in-out infinite;
+}
+
+.animate-float-down {
+  animation: float-down 4s ease-in-out infinite;
+}
+```
+
+**Properties:**
+- Duration: 4s
+- Easing: ease-in-out
+- Movement: 8px up or down
+- Repeat: infinite
+
+**Usage:** Use opposite directions (up/down) for paired elements to create visual interest.
+
+#### pulse-glow - CTA Button Glow Effect
+
+Draws attention to primary call-to-action buttons with a pulsing glow.
+
+```css
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(208, 156, 17, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(208, 156, 17, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+```
+
+**Properties:**
+- Duration: 1.5s
+- Easing: ease-in-out
+- Shadow color: Gold with varying opacity (0.3 to 0.6)
+- Repeat: infinite
+
+#### subtle-glow - Photo Card Ambient Effect
+
+Optional subtle glow for photo cards or featured elements.
+
+```css
+@keyframes subtle-glow {
+  0%, 100% {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(208, 156, 17, 0.15);
+  }
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 4s ease-in-out infinite;
+}
+```
+
+**Properties:**
+- Duration: 4s
+- Transitions between neutral shadow and gold-tinted shadow
+
+---
+
+### 13.2 Animation Delay System (Sequential Loading Pattern)
+
+Animation delays create a staggered, sequential reveal that guides the user's eye through content. Apply delays using these utility classes:
+
+```css
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1100 { animation-delay: 1100ms; }
+.delay-1200 { animation-delay: 1200ms; }
+```
+
+#### Delay Timing Guidelines
+
+| Content Type | Delay Range | Rationale |
+|--------------|-------------|-----------|
+| **Text Elements** | 0-400ms | Primary content loads first |
+| **CTA Buttons** | 300-400ms | After headline/description |
+| **Supporting Info** | 400-500ms | Secondary text elements |
+| **Photos/Images** | 600-700ms | Visual elements after text |
+| **Badges/Stats** | 900-1000ms | Decorative elements load last |
+
+#### Example: Hero Section Timing
+
+```html
+<!-- Trust Badge - No delay (immediate) -->
+<div class="animate-fade-in-up mb-6">...</div>
+
+<!-- Headline - 100ms delay -->
+<h1 class="animate-fade-in-up delay-100">...</h1>
+
+<!-- Description - 200ms delay -->
+<p class="animate-fade-in-up delay-200">...</p>
+
+<!-- CTA Buttons - 300ms delay -->
+<div class="animate-fade-in-up delay-300">...</div>
+
+<!-- Operating Hours - 400ms delay -->
+<div class="animate-fade-in-up delay-400">...</div>
+
+<!-- Photo 1 - 600ms delay -->
+<div class="animate-photo delay-600">...</div>
+
+<!-- Photo 2 - 700ms delay -->
+<div class="animate-photo delay-700">...</div>
+
+<!-- Badge 1 - 900ms delay -->
+<div class="animate-badge delay-900">...</div>
+
+<!-- Badge 2 - 1000ms delay -->
+<div class="animate-badge delay-1000">...</div>
+```
+
+---
+
+### 13.3 Component Patterns
+
+#### Photo Card with Staggered Positioning
+
+Two-column photo layout with vertical offset for visual interest.
+
+```jsx
+{/* Photo Card Container Structure */}
+<div className="flex items-start gap-5">
+  {/* Column 1 - Badge Below */}
+  <div className="flex flex-col items-center">
+    <div className="animate-photo delay-600 photo-shimmer relative h-[380px] w-[260px] overflow-hidden rounded-2xl bg-gradient-to-b from-gold/5 to-navy-light/20 shadow-2xl ring-2 ring-white/20 transition-all duration-500 group-hover:ring-gold/60 group-hover:-translate-y-3 group-hover:shadow-gold/30">
+      <Image ... />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/70 to-transparent pt-16 pb-4">
+        <div className="text-center">
+          <p className="text-base font-bold text-white">Name</p>
+          <p className="text-xs text-gold">Title</p>
+        </div>
+      </div>
+    </div>
+    {/* Badge Below */}
+    <div className="animate-badge delay-1000 mt-8">...</div>
+  </div>
+
+  {/* Column 2 - Offset Down with Badge Above */}
+  <div className="flex flex-col items-center mt-16">
+    {/* Badge Above */}
+    <div className="animate-badge delay-900 mb-8">...</div>
+    <div className="animate-photo delay-700 photo-shimmer ...">...</div>
+  </div>
+</div>
+```
+
+**Photo Card Styling:**
+- Dimensions: h-[380px] w-[260px]
+- Border radius: rounded-2xl (1rem)
+- Ring: ring-2 ring-white/20
+- Shadow: shadow-2xl
+- Background: bg-gradient-to-b from-gold/5 to-navy-light/20
+- Vertical offset for second column: mt-16
+
+#### Trust Badge / Stat Badge Styling
+
+White background badges with gold accent icons and navy text.
+
+```jsx
+<div className="animate-badge delay-900">
+  <div className="animate-float-up rounded-2xl bg-white px-5 py-3 shadow-xl">
+    <div className="flex items-center gap-3">
+      {/* Icon Container */}
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
+        <span className="text-base font-bold text-navy">15+</span>
+      </div>
+      {/* Text */}
+      <p className="text-sm font-bold text-navy whitespace-nowrap">Ani Experienta</p>
+    </div>
+  </div>
+</div>
+```
+
+**Badge Styling:**
+- Background: bg-white
+- Border radius: rounded-2xl
+- Padding: px-5 py-3
+- Shadow: shadow-xl
+- Icon container: h-10 w-10, rounded-lg, bg-gradient-to-br from-gold to-gold-light
+- Text: text-sm font-bold text-navy
+
+#### Inline Trust Badge (Hero Top)
+
+Small badge for section headers.
+
+```jsx
+<div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2 ring-1 ring-gold/20">
+  <Award className="h-4 w-4 text-gold" />
+  <span className="text-sm font-medium text-gold">15+ ani de excelenta juridica</span>
+</div>
+```
+
+**Inline Badge Styling:**
+- Background: bg-gold/10 (10% opacity gold)
+- Border radius: rounded-full
+- Ring: ring-1 ring-gold/20
+- Padding: px-4 py-2
+- Icon: h-4 w-4 text-gold
+
+#### CTA Button with Glow Animation
+
+Primary action button with attention-grabbing glow.
+
+```jsx
+<Button
+  asChild
+  size="lg"
+  className="group animate-pulse-glow h-14 rounded-full bg-gold px-8 text-base font-semibold text-navy transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/30"
+>
+  <Link href="/contact">
+    {t('cta')}
+    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+  </Link>
+</Button>
+```
+
+**CTA Button Styling:**
+- Height: h-14
+- Border radius: rounded-full
+- Background: bg-gold
+- Padding: px-8
+- Font: text-base font-semibold
+- Animation: animate-pulse-glow
+
+#### Secondary CTA (Phone Link)
+
+```jsx
+<a
+  href="tel:+40261848015"
+  className="group flex h-14 items-center gap-3 rounded-full bg-white/5 px-6 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/10 hover:ring-white/40"
+>
+  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20">
+    <Phone className="h-4 w-4 text-gold" />
+  </div>
+  <div className="text-left">
+    <p className="text-xs text-white/50">Suna acum</p>
+    <p className="text-sm font-semibold text-white">+40 261-848-015</p>
+  </div>
+</a>
+```
+
+---
+
+### 13.4 Hover Effects
+
+#### Photo Card Hover
+
+Multi-property transition for rich interaction feedback.
+
+```css
+/* Base State */
+.photo-card {
+  transition: all 0.5s ease;
+  ring: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+}
+
+/* Hover State */
+.photo-card:hover {
+  transform: translateY(-12px); /* -translate-y-3 */
+  ring-color: rgba(208, 156, 17, 0.6); /* ring-gold/60 */
+  box-shadow: 0 25px 50px -12px rgba(208, 156, 17, 0.3); /* shadow-gold/30 */
+}
+
+/* Inner Image Scale */
+.photo-card img {
+  transition: transform 0.5s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+```
+
+**Tailwind Classes:**
+```html
+<div className="transition-all duration-500 group-hover:ring-gold/60 group-hover:-translate-y-3 group-hover:shadow-gold/30">
+  <Image className="transition-transform duration-500 group-hover:scale-105" />
+</div>
+```
+
+**Properties Changed on Hover:**
+- translateY: -12px (lift effect)
+- ring-color: gold/60 (highlight border)
+- box-shadow: gold-tinted shadow
+- Image scale: 1.05 (subtle zoom)
+- Duration: 500ms for smooth animation
+
+#### CTA Button Hover
+
+```css
+/* Base State */
+.cta-button {
+  background: var(--gold);
+  transition: all 0.3s ease;
+}
+
+/* Hover State */
+.cta-button:hover {
+  background: var(--gold-light);
+  box-shadow: 0 10px 15px -3px rgba(208, 156, 17, 0.3);
+}
+
+/* Arrow Icon Animation */
+.cta-button .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow-icon {
+  transform: translateX(4px); /* translate-x-1 */
+}
+```
+
+**Tailwind Classes:**
+```html
+<Button className="transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/30">
+  <ArrowRight className="transition-transform group-hover:translate-x-1" />
+</Button>
+```
+
+#### Secondary Link Hover
+
+```css
+/* Base State */
+.secondary-link {
+  background: rgba(255, 255, 255, 0.05);
+  ring: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover State */
+.secondary-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  ring-color: rgba(255, 255, 255, 0.4);
+}
+```
+
+**Tailwind Classes:**
+```html
+<a className="bg-white/5 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/10 hover:ring-white/40">
+```
+
+---
+
+### 13.5 Complete Animation Stylesheet
+
+Copy this entire block into your component's `<style jsx>` tag or a dedicated CSS file:
+
+```css
+/* === KEYFRAME ANIMATIONS === */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes photoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes subtle-glow {
+  0%, 100% {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(208, 156, 17, 0.15);
+  }
+}
+
+@keyframes float-up {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(208, 156, 17, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(208, 156, 17, 0.6);
+  }
+}
+
+/* === ANIMATION UTILITY CLASSES === */
+
+.animate-float-up {
+  animation: float-up 4s ease-in-out infinite;
+}
+
+.animate-float-down {
+  animation: float-down 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out both;
+}
+
+.animate-photo {
+  animation: photoFadeIn 1.2s ease-out both;
+}
+
+.animate-badge {
+  animation: badgeFadeIn 0.8s ease-out both;
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 4s ease-in-out infinite;
+}
+
+/* === SHIMMER EFFECT === */
+
+.photo-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.03) 45%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.03) 55%,
+    transparent 60%
+  );
+  animation: shimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* === ANIMATION DELAY UTILITIES === */
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1100 { animation-delay: 1100ms; }
+.delay-1200 { animation-delay: 1200ms; }
+```
+
+---
+
+### 13.6 Animation Quick Reference
+
+| Animation | Duration | Easing | Use Case |
+|-----------|----------|--------|----------|
+| `animate-fade-in-up` | 1s | ease-out | Text, headlines, paragraphs |
+| `animate-photo` | 1.2s | ease-out | Photo cards, images |
+| `animate-badge` | 0.8s | ease-out | Stat badges, floating elements |
+| `animate-float-up` | 4s | ease-in-out | Ambient floating (upward) |
+| `animate-float-down` | 4s | ease-in-out | Ambient floating (downward) |
+| `animate-pulse-glow` | 1.5s | ease-in-out | Primary CTA buttons |
+| `animate-subtle-glow` | 4s | ease-in-out | Featured cards, photos |
+| `photo-shimmer` | 6s | ease-in-out | Light sweep on photos |
 
 ---
 

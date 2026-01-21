@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Blog Juridic | Cabinet de Avocatura Stan-Baculescu'
+      ? 'Blog Juridic | SCA Stan-Baculescu'
       : 'Legal Blog | Stan-Baculescu Law Firm';
   const description =
     locale === 'ro'

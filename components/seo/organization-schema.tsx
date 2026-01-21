@@ -6,7 +6,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': `${BASE_URL}/#organization`,
-  name: 'Cabinet de Avocatura Stan-Baculescu',
+  name: 'SCA Stan-Baculescu',
   alternateName: 'Stan-Baculescu Law Firm',
   url: BASE_URL,
   logo: {
@@ -33,7 +33,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
   '@id': `${BASE_URL}/#localbusiness`,
-  name: 'Cabinet de Avocatura Stan-Baculescu',
+  name: 'SCA Stan-Baculescu',
   image: `${BASE_URL}/images/office.jpg`,
   url: BASE_URL,
   telephone: '+40-261-848-015',
