@@ -179,3 +179,132 @@
   - Featured cards can have different layout with lg:flex for founders
 ---
 
+## Iteration 7 - US-005: Services Overview Page
+- What was implemented:
+  - Created /servicii services overview page route
+  - Created ServicesHero component with gradient background, title, subtitle and description
+  - Created ServicesGrid component with 8 service cards in responsive grid layout
+  - Each card displays: icon (Lucide), title, short description, and link to individual page
+  - Created ServicesCta component with call-to-action section
+  - Added hover effects: top accent line animation, icon color transition, card lift
+  - Full bilingual support (RO/EN) for all 8 practice areas
+  - SEO metadata with generateMetadata for page
+- Files changed:
+  - app/[locale]/servicii/page.tsx (new)
+  - components/services/services-hero.tsx (new)
+  - components/services/services-grid.tsx (new)
+  - components/services/services-cta.tsx (new)
+  - components/services/index.ts (new)
+  - messages/ro.json (updated with ServicesPage translations)
+  - messages/en.json (updated with ServicesPage translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-005 complete)
+- Learnings for future iterations:
+  - Service cards use Lucide icons: Stethoscope, Scale, Gavel, Users, Briefcase, Building2, Car, FileText
+  - Links use slug pattern: /servicii/[service-id] for individual service pages
+  - Card hover animations use group class and group-hover for coordinated effects
+  - Origin-left with scale-x for horizontal accent line animation
+  - Pattern follows existing about page structure: Hero + Grid + CTA components
+---
+
+## Iteration 8 - US-006: Individual Service Pages (8 pages)
+- What was implemented:
+  - Created dynamic route at app/[locale]/servicii/[serviceId]/page.tsx
+  - All 8 practice areas with individual pages:
+    - /servicii/malpraxis-medical - Medical Malpractice
+    - /servicii/drept-civil - Civil Law
+    - /servicii/drept-penal - Criminal Law
+    - /servicii/drept-familiei - Family Law
+    - /servicii/dreptul-muncii - Labor Law
+    - /servicii/drept-comercial - Commercial Law
+    - /servicii/accidente-rutiere - Traffic Accidents
+    - /servicii/drept-administrativ-fiscal - Administrative and Tax Law
+  - Created 4 service-detail components: hero, content, related, cta
+  - Each page includes: detailed description, common cases handled (6 per service), approach (4 steps)
+  - Call-to-action section with contact info (phone, email, address)
+  - Related services suggestions (3 related services per page)
+  - Full bilingual content (RO/EN) with complete translations
+  - SEO metadata per page (unique titles and descriptions)
+  - JSON-LD structured data for LegalService schema
+- Files changed:
+  - app/[locale]/servicii/[serviceId]/page.tsx (new)
+  - components/service-detail/service-detail-hero.tsx (new)
+  - components/service-detail/service-detail-content.tsx (new)
+  - components/service-detail/service-detail-related.tsx (new)
+  - components/service-detail/service-detail-cta.tsx (new)
+  - components/service-detail/index.ts (new)
+  - messages/ro.json (updated with ServiceDetail translations)
+  - messages/en.json (updated with ServiceDetail translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-006 complete)
+- Learnings for future iterations:
+  - Dynamic routes use [param] folder syntax: app/[locale]/servicii/[serviceId]/page.tsx
+  - generateStaticParams returns all valid service IDs for static generation
+  - Use t.has(key) to check if translation key exists before rendering
+  - Related services mapping can be defined as Record<string, string[]>
+  - JSON-LD for LegalService requires: @context, @type, name, description, provider, areaServed
+  - Service icons reuse same mapping from services-grid component
+  - Pattern: Hero + Content (description, cases, approach) + Related + CTA
+---
+
+## Iteration 9 - Browser Verification (US-004, US-005, US-006)
+- What was implemented:
+  - Verified US-004 Team Page loads correctly (HTTP 200 for /echipa and individual profiles)
+  - Verified US-005 Services Overview Page loads correctly (HTTP 200 for /servicii)
+  - Verified US-006 Individual Service Pages load correctly (all 8 pages)
+  - Confirmed bilingual content (RO/EN) renders properly
+  - TypeScript typecheck passes
+- Files changed:
+  - tasks/prd-stan-baculescu-website.md (marked browser verification complete for US-004, US-005, US-006)
+- Learnings for future iterations:
+  - dev-browser skill not available in this environment
+  - Use curl to verify HTTP status codes and content rendering
+  - curl -s http://localhost:3000/[path] | grep pattern for content verification
+  - Dev server runs on port 3000, fallback to 3001 if occupied
+---
+
+## Iteration 10 - US-007: Blog/Articles Section
+- What was implemented:
+  - Installed and configured Velite for MDX content management
+  - Created velite.config.ts with Post schema (title, slug, description, date, author, category, locale, etc.)
+  - Updated next.config.ts with VeliteWebpackPlugin for automatic content building
+  - Created content/blog/ directory with 6 sample blog posts (3 RO, 3 EN)
+  - Blog listing page at /[locale]/blog with responsive grid layout
+  - Individual article pages at /[locale]/blog/[slug]
+  - Category filtering with pill-style buttons
+  - Client-side pagination with page navigation
+  - Related articles suggestions based on same category
+  - Social sharing buttons (Facebook, Twitter, LinkedIn, copy link)
+  - Blog components: BlogHero, BlogCard, BlogGrid, BlogListClient, BlogCta, BlogArticle, SocialShare, RelatedArticles
+  - Full bilingual support (RO/EN) with BlogPage translations
+  - SEO metadata for blog listing and individual articles
+  - JSON-LD structured data for Article schema
+- Files changed:
+  - velite.config.ts (new)
+  - next.config.ts (updated with VeliteWebpackPlugin)
+  - tsconfig.json (added #site/content path)
+  - .gitignore (added .velite)
+  - content/blog/*.mdx (6 new sample articles)
+  - app/[locale]/blog/page.tsx (new)
+  - app/[locale]/blog/[slug]/page.tsx (new)
+  - components/blog/blog-hero.tsx (new)
+  - components/blog/blog-card.tsx (new)
+  - components/blog/blog-grid.tsx (new)
+  - components/blog/blog-list-client.tsx (new)
+  - components/blog/blog-cta.tsx (new)
+  - components/blog/blog-article.tsx (new)
+  - components/blog/social-share.tsx (new)
+  - components/blog/related-articles.tsx (new)
+  - components/blog/index.ts (new)
+  - messages/ro.json (added BlogPage translations)
+  - messages/en.json (added BlogPage translations)
+  - tasks/prd-stan-baculescu-website.md (marked US-007 complete)
+- Learnings for future iterations:
+  - Velite builds content to .velite directory, import with #site/content
+  - VeliteWebpackPlugin integrates Velite build into Next.js webpack process
+  - MDX frontmatter requires explicit locale field for bilingual filtering
+  - posts.filter(p => p.locale === locale) for locale-specific content
+  - dangerouslySetInnerHTML with prose classes for MDX body content
+  - Social share URLs need encodeURIComponent for URL-safe encoding
+  - Related articles: filter by same category, different slug, same locale
+  - Category filtering resets pagination to page 1
+---
+

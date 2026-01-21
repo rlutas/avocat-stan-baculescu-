@@ -131,18 +131,18 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a visitor interested in legal topics, I want to read articles and legal updates so that I can learn about relevant legal matters.
 
 **Acceptance Criteria:**
-- [ ] Blog listing page with article cards (title, excerpt, date, category)
-- [ ] Pagination or infinite scroll for article list
-- [ ] Category filtering
-- [ ] Individual article pages with full content
-- [ ] Author attribution
-- [ ] Related articles suggestions
-- [ ] Social sharing buttons
-- [ ] CMS integration (MDX + Velite) for easy content management
-- [ ] Bilingual article support
-- [ ] SEO metadata per article
-- [ ] Typecheck passes
-- [ ] Verify in browser using dev-browser skill
+- [x] Blog listing page with article cards (title, excerpt, date, category)
+- [x] Pagination or infinite scroll for article list
+- [x] Category filtering
+- [x] Individual article pages with full content
+- [x] Author attribution
+- [x] Related articles suggestions
+- [x] Social sharing buttons
+- [x] CMS integration (MDX + Velite) for easy content management
+- [x] Bilingual article support
+- [x] SEO metadata per article
+- [x] Typecheck passes
+- [x] Verify in browser using dev-browser skill
 
 ---
 

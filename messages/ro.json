@@ -504,5 +504,24 @@
         "point4": "Urmarim executarea hotararilor favorabile si recuperarea sumelor datorate."
       }
     }
+  },
+  "BlogPage": {
+    "hero": {
+      "title": "Blog Juridic",
+      "subtitle": "Articole si informatii utile despre drepturile dumneavoastra"
+    },
+    "readMore": "Citeste articolul",
+    "allCategories": "Toate categoriile",
+    "noPosts": "Nu exista articole in aceasta categorie.",
+    "previousPage": "Pagina anterioara",
+    "nextPage": "Pagina urmatoare",
+    "backToBlog": "Inapoi la Blog",
+    "shareArticle": "Distribuie articolul:",
+    "relatedArticles": "Articole similare",
+    "cta": {
+      "title": "Aveti nevoie de consultanta juridica?",
+      "description": "Echipa noastra de avocati va sta la dispozitie pentru a va ajuta cu orice intrebare legala.",
+      "button": "Contactati-ne"
+    }
   }
 }
