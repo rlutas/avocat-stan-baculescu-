@@ -524,6 +524,15 @@
       "button": "Contact Us"
     }
   },
+  "Testimonials": {
+    "locale": "en",
+    "subtitle": "What our clients say",
+    "title": "Reviews and Testimonials",
+    "description": "Our clients' satisfaction is our greatest reward. Here's what they say about working with us.",
+    "previous": "Previous",
+    "next": "Next",
+    "viewAllReviews": "View all reviews on Google"
+  },
   "ContactPage": {
     "meta": {
       "title": "Contact | Stan-Baculescu Law Firm",

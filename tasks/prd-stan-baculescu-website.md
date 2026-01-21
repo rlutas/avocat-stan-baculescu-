@@ -174,16 +174,16 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 - **Alternative:** Google Reviews iframe widget embed
 
 **Acceptance Criteria:**
-- [ ] Section displaying Google Reviews testimonials on homepage and/or contact page
-- [ ] Shows: star rating (1-5), reviewer name, review excerpt (max 200 chars), date
-- [ ] Minimum 3-5 testimonials displayed
-- [ ] Link to Google My Business profile for more reviews
-- [ ] Carousel layout on mobile, grid (3 columns) on desktop
-- [ ] If API unavailable: graceful fallback to static testimonials
-- [ ] Loading state while fetching reviews
-- [ ] Error handling if API fails (show static fallback, no broken UI)
-- [ ] Reviews cached for 24 hours to reduce API calls
-- [ ] Typecheck passes
+- [x] Section displaying Google Reviews testimonials on homepage and/or contact page
+- [x] Shows: star rating (1-5), reviewer name, review excerpt (max 200 chars), date
+- [x] Minimum 3-5 testimonials displayed
+- [x] Link to Google My Business profile for more reviews
+- [x] Carousel layout on mobile, grid (3 columns) on desktop
+- [x] If API unavailable: graceful fallback to static testimonials
+- [x] Loading state while fetching reviews
+- [x] Error handling if API fails (show static fallback, no broken UI)
+- [x] Reviews cached for 24 hours to reduce API calls
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 **Technical Notes:**

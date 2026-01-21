@@ -524,6 +524,15 @@
       "button": "Contactati-ne"
     }
   },
+  "Testimonials": {
+    "locale": "ro",
+    "subtitle": "Ce spun clientii nostri",
+    "title": "Recenzii si Testimoniale",
+    "description": "Satisfactia clientilor nostri este cea mai mare recompensa. Iata ce spun despre colaborarea cu noi.",
+    "previous": "Anterior",
+    "next": "Urmator",
+    "viewAllReviews": "Vezi toate recenziile pe Google"
+  },
   "ContactPage": {
     "meta": {
       "title": "Contact | Cabinet de Avocatura Stan-Baculescu",
