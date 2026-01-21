@@ -58,25 +58,45 @@ export function ServiceDetailRelated({
 
   return (
     <section className="bg-[#f8f9fa] py-16 sm:py-24">
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in-up {
+          animation: fadeInUp 0.8s ease-out both;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+      `}</style>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
+        <h2 className="animate-fade-in-up font-heading mb-10 text-center text-2xl font-bold text-navy sm:text-3xl">
           {t('relatedServices')}
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {relatedServices.map((service) => {
+          {relatedServices.map((service, index) => {
             const Icon = service.icon;
             return (
               <Link
                 key={service.id}
                 href={`/servicii/${service.id}`}
-                className="group relative overflow-hidden rounded-xl border border-transparent bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-lg"
+                className="animate-fade-in-up group relative overflow-hidden rounded-2xl border border-transparent bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-gold hover:shadow-xl hover:ring-2 hover:ring-gold/20"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
                 {/* Top Accent Line */}
                 <div className="absolute left-0 right-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-navy to-gold transition-transform duration-300 group-hover:scale-x-100" />
 
                 {/* Icon */}
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#fef9e7] text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-navy">
-                  <Icon className="h-6 w-6" />
+                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#fef9e7] text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-navy group-hover:shadow-[0_4px_12px_rgba(208,156,17,0.3)]">
+                  <Icon className="h-7 w-7" />
                 </div>
 
                 {/* Title */}
@@ -85,7 +105,7 @@ export function ServiceDetailRelated({
                 </h3>
 
                 {/* Description */}
-                <p className="mb-4 text-sm text-[#4b5563]">
+                <p className="mb-4 text-sm text-[#4b5563] line-clamp-2">
                   {tServices(`services.${service.id}.shortDescription`)}
                 </p>
 

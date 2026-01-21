@@ -316,6 +316,9 @@
     "malpraxis-medical": {
       "title": "Medical Malpractice",
       "subtitle": "Professional representation in medical negligence cases to obtain the compensation you deserve.",
+      "trustBadge": "Medical Malpractice Expertise",
+      "titleLine1": "Specialized Legal Services",
+      "titleLine2": "Medical Malpractice",
       "meta": {
         "title": "Medical Malpractice | Stan-Baculescu Law Firm",
         "description": "Specialized representation in medical malpractice cases. Get the compensation you deserve for medical negligence with our expert attorneys in Satu Mare."
@@ -342,6 +345,9 @@
     "drept-civil": {
       "title": "Civil Law",
       "subtitle": "Complete consultation and representation in all aspects of civil law and civil litigation.",
+      "trustBadge": "Civil Law Expertise",
+      "titleLine1": "Complete Legal Services",
+      "titleLine2": "Civil Law",
       "meta": {
         "title": "Civil Law | Stan-Baculescu Law Firm",
         "description": "Complete civil law services: litigation, contracts, property, successions. Specialized attorneys in Satu Mare with extensive court experience."
@@ -368,6 +374,9 @@
     "drept-penal": {
       "title": "Criminal Law",
       "subtitle": "Effective defense in criminal proceedings and specialized legal assistance at all procedural stages.",
+      "trustBadge": "Professional Criminal Defense",
+      "titleLine1": "Specialized Legal Assistance",
+      "titleLine2": "Criminal Law",
       "meta": {
         "title": "Criminal Law | Stan-Baculescu Law Firm",
         "description": "Professional criminal defense in Satu Mare. Assistance at hearings, court representation, appeals. Experienced criminal attorney."
@@ -394,6 +403,9 @@
     "drept-familiei": {
       "title": "Family Law",
       "subtitle": "Sensitive and professional legal assistance in all matters related to family and relationships.",
+      "trustBadge": "Sensitive and Professional Approach",
+      "titleLine1": "Legal Consultation for Families",
+      "titleLine2": "Family Law",
       "meta": {
         "title": "Family Law | Stan-Baculescu Law Firm",
         "description": "Divorces, custody, alimony, property division. Attorney specialized in family law in Satu Mare. Sensitive and professional approach."
@@ -420,6 +432,9 @@
     "dreptul-muncii": {
       "title": "Labor Law",
       "subtitle": "Protection of your rights in employment relationships and representation in disputes with employers.",
+      "trustBadge": "Employee Rights Protection",
+      "titleLine1": "Employment Relations Assistance",
+      "titleLine2": "Labor Law",
       "meta": {
         "title": "Labor Law | Stan-Baculescu Law Firm",
         "description": "Consultation and representation in labor law. Wrongful dismissals, wage rights, workplace harassment. Specialized attorney in Satu Mare."
@@ -446,6 +461,9 @@
     "drept-comercial": {
       "title": "Commercial Law",
       "subtitle": "Strategic consultation and representation for businesses and commercial companies.",
+      "trustBadge": "Business Consultation",
+      "titleLine1": "Legal Services for Companies",
+      "titleLine2": "Commercial Law",
       "meta": {
         "title": "Commercial Law | Stan-Baculescu Law Firm",
         "description": "Legal consultation for businesses: commercial contracts, litigation, insolvency, mergers. Specialized law firm in Satu Mare."
@@ -472,6 +490,9 @@
     "accidente-rutiere": {
       "title": "Traffic Accidents",
       "subtitle": "Representation of traffic accident victims to obtain complete compensation.",
+      "trustBadge": "Accident Victim Representation",
+      "titleLine1": "Compensation and Damages",
+      "titleLine2": "Traffic Accidents",
       "meta": {
         "title": "Traffic Accidents | Stan-Baculescu Law Firm",
         "description": "Representation for traffic accident victims. Get compensation from insurers: material damages, pain and suffering, lost income. Specialized attorney in Satu Mare."
@@ -498,6 +519,9 @@
     "drept-administrativ-fiscal": {
       "title": "Administrative and Tax Law",
       "subtitle": "Representation before authorities and challenging administrative and tax decisions.",
+      "trustBadge": "Administrative and Tax Expertise",
+      "titleLine1": "Appeals and Representation",
+      "titleLine2": "Administrative and Tax Law",
       "meta": {
         "title": "Administrative and Tax Law | Stan-Baculescu Law Firm",
         "description": "Administrative and tax appeals, disputes with ANAF, representation before authorities. Specialized tax attorney in Satu Mare."

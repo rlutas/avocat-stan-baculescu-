@@ -316,6 +316,9 @@
     "malpraxis-medical": {
       "title": "Malpraxis Medical",
       "subtitle": "Reprezentare profesionala in cazuri de neglijenta medicala pentru obtinerea despagubirilor cuvenite.",
+      "trustBadge": "Expertiza in Malpraxis Medical",
+      "titleLine1": "Servicii Juridice Specializate",
+      "titleLine2": "Malpraxis Medical",
       "meta": {
         "title": "Malpraxis Medical | SCA Stan-Baculescu",
         "description": "Reprezentare specializata in cazuri de malpraxis medical. Obtineti despagubirile cuvenite pentru neglijenta medicala cu ajutorul avocatilor nostri experti din Satu Mare."
@@ -342,6 +345,9 @@
     "drept-civil": {
       "title": "Drept Civil",
       "subtitle": "Consultanta si reprezentare completa in toate aspectele dreptului civil si litigiilor civile.",
+      "trustBadge": "Expertiza in Drept Civil",
+      "titleLine1": "Servicii Juridice Complete",
+      "titleLine2": "Drept Civil",
       "meta": {
         "title": "Drept Civil | SCA Stan-Baculescu",
         "description": "Servicii complete de drept civil: litigii, contracte, proprietate, succesiuni. Avocati specializati in Satu Mare cu experienta vasta in instanta."
@@ -368,6 +374,9 @@
     "drept-penal": {
       "title": "Drept Penal",
       "subtitle": "Aparare eficienta in procese penale si asistenta juridica specializata la toate etapele procedurii.",
+      "trustBadge": "Aparare Penala Profesionala",
+      "titleLine1": "Asistenta Juridica Specializata",
+      "titleLine2": "Drept Penal",
       "meta": {
         "title": "Drept Penal | SCA Stan-Baculescu",
         "description": "Aparare penala profesionala in Satu Mare. Asistenta la audieri, reprezentare in instanta, recursuri. Avocat penal cu experienta."
@@ -394,6 +403,9 @@
     "drept-familiei": {
       "title": "Dreptul Familiei",
       "subtitle": "Asistenta juridica sensibila si profesionala in toate aspectele legate de familie si relatii.",
+      "trustBadge": "Abordare Sensibila si Profesionala",
+      "titleLine1": "Consultanta Juridica pentru Familie",
+      "titleLine2": "Dreptul Familiei",
       "meta": {
         "title": "Dreptul Familiei | SCA Stan-Baculescu",
         "description": "Divorturi, custodie, pensii alimentare, partaj. Avocat specializat in dreptul familiei in Satu Mare. Abordare sensibila si profesionala."
@@ -420,6 +432,9 @@
     "dreptul-muncii": {
       "title": "Dreptul Muncii",
       "subtitle": "Protectia drepturilor dumneavoastra in relatiile de munca si reprezentare in litigiile cu angajatorul.",
+      "trustBadge": "Protectia Drepturilor Salariatilor",
+      "titleLine1": "Asistenta in Relatiile de Munca",
+      "titleLine2": "Dreptul Muncii",
       "meta": {
         "title": "Dreptul Muncii | SCA Stan-Baculescu",
         "description": "Consultanta si reprezentare in dreptul muncii. Concedieri abuzive, drepturi salariale, hartuire la locul de munca. Avocat specializat Satu Mare."
@@ -446,6 +461,9 @@
     "drept-comercial": {
       "title": "Drept Comercial",
       "subtitle": "Consultanta strategica si reprezentare pentru afaceri si societati comerciale.",
+      "trustBadge": "Consultanta pentru Afaceri",
+      "titleLine1": "Servicii Juridice pentru Companii",
+      "titleLine2": "Drept Comercial",
       "meta": {
         "title": "Drept Comercial | SCA Stan-Baculescu",
         "description": "Consultanta juridica pentru afaceri: contracte comerciale, litigii, insolventa, fuziuni. Cabinet de avocat specializat in Satu Mare."
@@ -472,6 +490,9 @@
     "accidente-rutiere": {
       "title": "Accidente Rutiere",
       "subtitle": "Reprezentarea victimelor accidentelor de circulatie pentru obtinerea despagubirilor complete.",
+      "trustBadge": "Reprezentare Victime Accidente",
+      "titleLine1": "Despagubiri si Compensatii",
+      "titleLine2": "Accidente Rutiere",
       "meta": {
         "title": "Accidente Rutiere | SCA Stan-Baculescu",
         "description": "Reprezentare victime accidente rutiere. Obtineti despagubiri de la asigurator: daune materiale, morale, venituri pierdute. Avocat specializat Satu Mare."
@@ -498,6 +519,9 @@
     "drept-administrativ-fiscal": {
       "title": "Drept Administrativ si Fiscal",
       "subtitle": "Reprezentare in fata autoritatilor si contestarea deciziilor administrative si fiscale.",
+      "trustBadge": "Expertiza Administrativa si Fiscala",
+      "titleLine1": "Contestatii si Reprezentare",
+      "titleLine2": "Drept Administrativ si Fiscal",
       "meta": {
         "title": "Drept Administrativ si Fiscal | SCA Stan-Baculescu",
         "description": "Contestatii administrative si fiscale, litigii cu ANAF, reprezentare in fata autoritatilor. Avocat specializat in drept fiscal Satu Mare."

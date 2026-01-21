@@ -442,8 +442,8 @@
         "Verify in browser using dev-browser skill"
       ],
       "priority": 25,
-      "passes": false,
-      "notes": "Full redesign for all 8 service pages following hero patterns."
+      "passes": true,
+      "notes": "Full redesign for all 8 service pages following hero patterns. Updated: service-detail-hero.tsx with navy gradient, gold decorative elements (gold-pulse/gold-rotate), trust badge, two-line headline with fadeInUp animations. Updated service-detail-content.tsx with fadeInUp animations, card hover effects (-translate-y-1, gold border, gold ring), animated step numbers. Updated service-detail-related.tsx with staggered fadeInUp animations, card hover effects (lift, gold border, gold ring, shadow-xl). Updated service-detail-cta.tsx with gold decorative elements, fadeInUp animations, pulse-glow button, contact info cards with gold icons. Added trustBadge, titleLine1, titleLine2 translation keys for all 8 services in RO/EN."
     },
     {
       "id": "US-028",
