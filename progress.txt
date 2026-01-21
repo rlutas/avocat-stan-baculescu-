@@ -875,3 +875,37 @@
   - Consistent styling: navy gradient, gold accents, off-white sections
   - Footer link at /termeni was already configured in US-010
 ---
+
+## Iteration 32 - US-020: Cookie Policy Page
+- What was implemented:
+  - Created /politica-cookies page route with locale support at app/[locale]/politica-cookies/page.tsx
+  - Hero section with navy gradient background (linear-gradient 135deg from #002a52 to #004a8f)
+  - Badge with Cookie icon, gold styling
+  - 8 comprehensive sections with icons:
+    1. Introduction - overview of cookie usage on the site
+    2. What Are Cookies - explanation of cookie technology
+    3. Essential Cookies - table with cookie-consent, cookie-preferences, NEXT_LOCALE
+    4. Analytics Cookies - table with _ga, _ga_* (Google Analytics)
+    5. Marketing Cookies - note that none currently used
+    6. How to Manage Cookies - 4 methods for controlling preferences
+    7. Retention Period - duration of different cookie types
+    8. Contact - how to reach us with questions
+  - Cookie tables showing name, purpose, and duration for each cookie
+  - Contact section at bottom for cookie inquiries with email and address
+  - Last updated date displayed prominently
+  - Full bilingual content (RO/EN) with CookiePolicy translations
+  - SEO metadata with generateMetadata (title, description, OG tags)
+  - Styling consistent with Privacy Policy and Terms of Service pages
+  - Footer already had link to /politica-cookies from US-010
+- Files changed:
+  - app/[locale]/politica-cookies/page.tsx (new)
+  - messages/ro.json (added CookiePolicy translations)
+  - messages/en.json (added CookiePolicy translations)
+  - prd.json (marked US-020 complete)
+- Learnings for future iterations:
+  - Cookie policy follows same pattern as other legal pages: Hero + Content sections + Contact footer
+  - Cookie tables need proper structure with thead/tbody for accessibility
+  - Lucide icons for cookies: Cookie, Settings, BarChart3, Megaphone, Clock, Shield, Mail
+  - Type narrowing with 'cookies' in section check for conditional rendering
+  - Footer link at /politica-cookies was already configured in US-010
+---

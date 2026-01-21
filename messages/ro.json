@@ -758,6 +758,14 @@
       "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
     }
   },
+  "NotFound": {
+    "title": "Pagina nu a fost gasita",
+    "description": "Ne pare rau, dar pagina pe care o cautati nu exista sau a fost mutata. Va rugam sa verificati adresa URL sau sa navigati catre una dintre paginile de mai jos.",
+    "backToHome": "Inapoi la pagina principala",
+    "orVisit": "Sau vizitati",
+    "viewServices": "Serviciile noastre",
+    "contactUs": "Contactati-ne"
+  },
   "CookiePolicy": {
     "badge": "Politica Cookies",
     "hero": {
