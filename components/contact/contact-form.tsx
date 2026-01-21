@@ -84,6 +84,15 @@ export function ContactForm() {
 
       setSubmitStatus('success');
       reset();
+
+      // Track conversion in Google Analytics
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'Contact',
+          event_label: data.subject,
+          value: 1,
+        });
+      }
     } catch {
       setSubmitStatus('error');
     }

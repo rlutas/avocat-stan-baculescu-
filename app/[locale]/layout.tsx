@@ -90,7 +90,9 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'google-site-verification-code',
+    // Replace with actual Google Search Console verification code
+    // Get it from: Google Search Console > Settings > Ownership verification > HTML tag
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
   alternates: {
     canonical: BASE_URL,
