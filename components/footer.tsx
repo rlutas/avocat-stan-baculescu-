@@ -54,19 +54,19 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-navy text-white">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo and Description */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <Scale className="h-8 w-8 text-amber-500" />
+              <Scale className="h-8 w-8 text-gold" />
               <span className="text-xl font-bold tracking-tight">
                 {t('siteName')}
               </span>
             </Link>
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-white/70">
               {tFooter('description')}
             </p>
             {/* Social Media Links */}
@@ -75,7 +75,7 @@ export function Footer() {
                 href="https://www.facebook.com/cabinetavocaturastanbaculescu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition-colors hover:bg-amber-600 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -84,7 +84,7 @@ export function Footer() {
                 href="https://www.instagram.com/cabinet_stan_baculescu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition-colors hover:bg-amber-600 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
@@ -93,7 +93,7 @@ export function Footer() {
                 href="https://www.tiktok.com/@cabinetavocat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition-colors hover:bg-amber-600 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy"
                 aria-label="TikTok"
               >
                 <TikTokIcon className="h-5 w-5" />
@@ -103,7 +103,7 @@ export function Footer() {
 
           {/* Column 2: Quick Navigation */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-amber-500">
+            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
               {tFooter('quickLinks')}
             </h3>
             <ul className="space-y-3">
@@ -111,7 +111,7 @@ export function Footer() {
                 <li key={item.key}>
                   <Link
                     href={item.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-amber-500"
+                    className="text-sm text-white/70 transition-colors hover:text-gold"
                   >
                     {t(`nav.${item.key}`)}
                   </Link>
@@ -122,7 +122,7 @@ export function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-amber-500">
+            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
               {tFooter('services')}
             </h3>
             <ul className="space-y-3">
@@ -130,7 +130,7 @@ export function Footer() {
                 <li key={service.key}>
                   <Link
                     href={service.href}
-                    className="text-sm text-slate-400 transition-colors hover:text-amber-500"
+                    className="text-sm text-white/70 transition-colors hover:text-gold"
                   >
                     {tServices(`${service.key}.title`)}
                   </Link>
@@ -141,38 +141,38 @@ export function Footer() {
 
           {/* Column 4: Contact Info */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-amber-500">
+            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
               {tFooter('contactInfo')}
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
-                <span className="text-sm text-slate-400">
+                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
+                <span className="text-sm text-white/70">
                   Str. Aurel Popp nr. 2,<br />
                   Satu Mare, Romania
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 flex-shrink-0 text-amber-500" />
+                <Phone className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
                   href="tel:+40261848015"
-                  className="text-sm text-slate-400 transition-colors hover:text-amber-500"
+                  className="text-sm text-white/70 transition-colors hover:text-gold"
                 >
                   +40 261-848-015
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 flex-shrink-0 text-amber-500" />
+                <Mail className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
                   href="mailto:office@stanbaculescu.ro"
-                  className="text-sm text-slate-400 transition-colors hover:text-amber-500"
+                  className="text-sm text-white/70 transition-colors hover:text-gold"
                 >
                   office@stanbaculescu.ro
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Clock className="h-5 w-5 flex-shrink-0 text-amber-500" />
-                <span className="text-sm text-slate-400">
+                <Clock className="h-5 w-5 flex-shrink-0 text-gold" />
+                <span className="text-sm text-white/70">
                   {tFooter('hours')}
                 </span>
               </li>
@@ -182,11 +182,11 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             {/* Copyright */}
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-white/50">
               &copy; {currentYear} {t('siteName')}. {tFooter('copyright')}
             </p>
 
@@ -196,14 +196,14 @@ export function Footer() {
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="text-sm text-slate-500 transition-colors hover:text-amber-500"
+                  className="text-sm text-white/50 transition-colors hover:text-gold"
                 >
                   {tFooter(`legal.${link.key}`)}
                 </Link>
               ))}
               <button
                 onClick={openCookieSettings}
-                className="flex items-center gap-1 text-sm text-slate-500 transition-colors hover:text-amber-500"
+                className="flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-gold"
               >
                 <Cookie className="h-3.5 w-3.5" />
                 {tCookie('settingsLink')}
