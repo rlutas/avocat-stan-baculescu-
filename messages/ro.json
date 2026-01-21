@@ -22,5 +22,75 @@
       "cta": "Programeaza o Consultatie",
       "secondaryCta": "Descopera Serviciile"
     }
+  },
+  "AboutPage": {
+    "hero": {
+      "title": "Despre Noi",
+      "subtitle": "Traditie si Excelenta in Avocatura"
+    },
+    "history": {
+      "title": "Povestea Noastra",
+      "description": "Societatea Civila de Avocati Stan-Baculescu isi are sediul in Satu Mare si ofera servicii juridice de inalta calitate de peste 15 ani. Fondata de avocatii Camelia Stan si Vlad Baculescu, firma noastra s-a dezvoltat continuu, devenind un partener de incredere pentru clientii din regiunea de nord-vest a Romaniei si nu numai.",
+      "milestone1": "Peste 15 ani de experienta in domeniul juridic",
+      "milestone2": "Sute de cazuri rezolvate cu succes",
+      "milestone3": "Echipa de avocati specializati pe diverse domenii"
+    },
+    "values": {
+      "title": "Valorile Noastre",
+      "subtitle": "Principii care ne ghideaza in fiecare zi",
+      "professionalism": {
+        "title": "Profesionalism",
+        "description": "Oferim servicii juridice de cea mai inalta calitate, bazate pe cunostinte solide si experienta vasta in domeniu."
+      },
+      "adaptability": {
+        "title": "Adaptabilitate",
+        "description": "Ne adaptam constant la schimbarile legislative si la nevoile specifice ale fiecarui client."
+      },
+      "loyalty": {
+        "title": "Loialitate",
+        "description": "Punem interesele clientilor nostri pe primul loc, construind relatii bazate pe incredere si respect reciproc."
+      }
+    },
+    "principles": {
+      "title": "Principiile Noastre",
+      "subtitle": "Fundamentul succesului nostru",
+      "motivation": {
+        "title": "Motivatie",
+        "description": "Suntem motivati de dorinta de a obtine cele mai bune rezultate pentru clientii nostri in fiecare caz."
+      },
+      "seriousness": {
+        "title": "Seriozitate",
+        "description": "Abordam fiecare caz cu seriozitate maxima si atentie la detalii."
+      },
+      "experience": {
+        "title": "Experienta",
+        "description": "Experienta noastra vasta ne permite sa gestionam eficient cazuri complexe din diverse domenii juridice."
+      }
+    },
+    "methodology": {
+      "title": "Metodologia Noastra de Lucru",
+      "subtitle": "Cum abordam fiecare caz",
+      "step1": {
+        "title": "Consultatie Initiala",
+        "description": "Analizam situatia dumneavoastra si identificam cele mai bune solutii juridice."
+      },
+      "step2": {
+        "title": "Strategie Personalizata",
+        "description": "Elaboram o strategie adaptata nevoilor specifice ale cazului dumneavoastra."
+      },
+      "step3": {
+        "title": "Implementare",
+        "description": "Punem in practica strategia stabilita, tinandu-va la curent cu fiecare etapa."
+      },
+      "step4": {
+        "title": "Rezultate",
+        "description": "Ne asiguram ca obtineti cel mai bun rezultat posibil pentru situatia dumneavoastra."
+      }
+    },
+    "cta": {
+      "title": "Aveti nevoie de asistenta juridica?",
+      "description": "Contactati-ne pentru o consultatie initiala si descoperiti cum va putem ajuta.",
+      "button": "Contactati-ne"
+    }
   }
 }

@@ -59,15 +59,15 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a potential client, I want to learn about the firm's history, values, and methodology so that I can assess if they're the right fit for my legal needs.
 
 **Acceptance Criteria:**
-- [ ] Page displays firm history and background
-- [ ] Values section: Profesionalism, Adaptabilitate, Loialitate
-- [ ] Principles section: Motivatie, Seriozitate, Experienta
-- [ ] Working methodology description
-- [ ] Professional imagery/graphics
-- [ ] Full bilingual content (RO/EN)
-- [ ] SEO metadata (title, description, OG tags)
-- [ ] Typecheck passes
-- [ ] Verify in browser using dev-browser skill
+- [x] Page displays firm history and background
+- [x] Values section: Profesionalism, Adaptabilitate, Loialitate
+- [x] Principles section: Motivatie, Seriozitate, Experienta
+- [x] Working methodology description
+- [x] Professional imagery/graphics
+- [x] Full bilingual content (RO/EN)
+- [x] SEO metadata (title, description, OG tags)
+- [x] Typecheck passes
+- [x] Verify in browser using dev-browser skill
 
 ---
 
