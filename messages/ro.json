@@ -240,5 +240,52 @@
       "description": "Programati o consultatie si discutati direct cu unul dintre avocatii nostri despre cazul dumneavoastra.",
       "button": "Contactati-ne"
     }
+  },
+  "ServicesPage": {
+    "hero": {
+      "title": "Servicii Juridice",
+      "subtitle": "Domenii de Practica",
+      "description": "Oferim asistenta juridica completa in diverse domenii ale dreptului. Echipa noastra de avocati specializati va sta la dispozitie pentru a va reprezenta interesele cu profesionalism."
+    },
+    "viewDetails": "Afla mai multe",
+    "services": {
+      "malpraxis-medical": {
+        "title": "Malpraxis Medical",
+        "shortDescription": "Reprezentare in cazuri de neglijenta medicala si obtinerea de despagubiri pentru prejudiciile suferite."
+      },
+      "drept-civil": {
+        "title": "Drept Civil",
+        "shortDescription": "Consultanta si reprezentare in litigii civile, contracte, proprietate si succesiuni."
+      },
+      "drept-penal": {
+        "title": "Drept Penal",
+        "shortDescription": "Aparare in procese penale, asistenta la audieri si reprezentare in instanta."
+      },
+      "drept-familiei": {
+        "title": "Dreptul Familiei",
+        "shortDescription": "Divorturi, custodia copiilor, partaj, pensii alimentare si alte aspecte familiale."
+      },
+      "dreptul-muncii": {
+        "title": "Dreptul Muncii",
+        "shortDescription": "Protectia drepturilor angajatilor, contracte de munca, concedieri si litigii de munca."
+      },
+      "drept-comercial": {
+        "title": "Drept Comercial",
+        "shortDescription": "Consultanta pentru societati comerciale, contracte, litigii comerciale si insolventa."
+      },
+      "accidente-rutiere": {
+        "title": "Accidente Rutiere",
+        "shortDescription": "Reprezentare victimelor accidentelor rutiere pentru obtinerea despagubirilor cuvenite."
+      },
+      "drept-administrativ-fiscal": {
+        "title": "Drept Administrativ si Fiscal",
+        "shortDescription": "Contestatii administrative, litigii fiscale si reprezentare in fata autoritatilor."
+      }
+    },
+    "cta": {
+      "title": "Aveti nevoie de asistenta juridica?",
+      "description": "Contactati-ne pentru o consultatie initiala. Echipa noastra de avocati va sta la dispozitie pentru a va ajuta.",
+      "button": "Contactati-ne"
+    }
   }
 }

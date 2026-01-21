@@ -240,5 +240,52 @@
       "description": "Schedule a consultation and speak directly with one of our attorneys about your case.",
       "button": "Contact Us"
     }
+  },
+  "ServicesPage": {
+    "hero": {
+      "title": "Legal Services",
+      "subtitle": "Practice Areas",
+      "description": "We provide comprehensive legal assistance across various areas of law. Our team of specialized attorneys is here to represent your interests with professionalism."
+    },
+    "viewDetails": "Learn more",
+    "services": {
+      "malpraxis-medical": {
+        "title": "Medical Malpractice",
+        "shortDescription": "Representation in medical negligence cases and obtaining compensation for injuries suffered."
+      },
+      "drept-civil": {
+        "title": "Civil Law",
+        "shortDescription": "Consultation and representation in civil litigation, contracts, property, and inheritances."
+      },
+      "drept-penal": {
+        "title": "Criminal Law",
+        "shortDescription": "Defense in criminal proceedings, assistance at hearings, and court representation."
+      },
+      "drept-familiei": {
+        "title": "Family Law",
+        "shortDescription": "Divorces, child custody, property division, alimony, and other family matters."
+      },
+      "dreptul-muncii": {
+        "title": "Labor Law",
+        "shortDescription": "Protection of employee rights, employment contracts, dismissals, and labor disputes."
+      },
+      "drept-comercial": {
+        "title": "Commercial Law",
+        "shortDescription": "Consultation for commercial companies, contracts, commercial litigation, and insolvency."
+      },
+      "accidente-rutiere": {
+        "title": "Traffic Accidents",
+        "shortDescription": "Representation for traffic accident victims to obtain rightful compensation."
+      },
+      "drept-administrativ-fiscal": {
+        "title": "Administrative and Tax Law",
+        "shortDescription": "Administrative appeals, tax litigation, and representation before authorities."
+      }
+    },
+    "cta": {
+      "title": "Need Legal Assistance?",
+      "description": "Contact us for an initial consultation. Our team of attorneys is here to help you.",
+      "button": "Contact Us"
+    }
   }
 }

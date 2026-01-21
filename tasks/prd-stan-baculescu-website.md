@@ -92,13 +92,13 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a visitor, I want to see all practice areas at a glance so that I can quickly find the legal service I need.
 
 **Acceptance Criteria:**
-- [ ] Grid/cards displaying all 8 practice areas
-- [ ] Each service shows: icon/image, title, brief description
-- [ ] Click through to individual service page
-- [ ] Clear visual hierarchy and professional design
-- [ ] Bilingual content
-- [ ] SEO optimized
-- [ ] Typecheck passes
+- [x] Grid/cards displaying all 8 practice areas
+- [x] Each service shows: icon/image, title, brief description
+- [x] Click through to individual service page
+- [x] Clear visual hierarchy and professional design
+- [x] Bilingual content
+- [x] SEO optimized
+- [x] Typecheck passes
 - [ ] Verify in browser using dev-browser skill
 
 ---
