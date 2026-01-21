@@ -70,7 +70,7 @@ export function TeamGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Founders Section */}
         <div className="mb-16">
-          <h2 className="mb-8 text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2 className="font-heading mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
             {t('sections.founders')}
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:gap-12">
@@ -82,7 +82,7 @@ export function TeamGrid() {
 
         {/* Collaborators Section */}
         <div className="mb-16">
-          <h2 className="mb-8 text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2 className="font-heading mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
             {t('sections.collaborators')}
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -94,7 +94,7 @@ export function TeamGrid() {
 
         {/* Staff Section */}
         <div>
-          <h2 className="mb-8 text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2 className="font-heading mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
             {t('sections.staff')}
           </h2>
           <div className="mx-auto max-w-md">
@@ -120,13 +120,13 @@ function TeamCard({
   return (
     <Link href={`/echipa/${member.id}`} className="group block">
       <div
-        className={`overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-lg ${
+        className={`overflow-hidden rounded-2xl border border-transparent bg-white shadow-sm transition-all duration-300 hover:border-gold hover:shadow-lg ${
           featured ? 'lg:flex' : ''
         }`}
       >
         <div className={`relative ${featured ? 'lg:w-2/5' : ''}`}>
           <div
-            className={`relative ${featured ? 'h-80 lg:h-full' : 'h-72'} w-full bg-slate-200`}
+            className={`relative ${featured ? 'h-80 lg:h-full' : 'h-72'} w-full bg-[#f8f9fa]`}
           >
             <Image
               src={member.image}
@@ -135,20 +135,20 @@ function TeamCard({
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes={featured ? '(max-width: 1024px) 100vw, 40vw' : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
           </div>
         </div>
         <div className={`p-6 ${featured ? 'lg:flex lg:w-3/5 lg:flex-col lg:justify-center lg:p-8' : ''}`}>
-          <h3 className="mb-1 text-xl font-semibold text-slate-900 transition-colors group-hover:text-amber-600">
+          <h3 className="mb-1 text-xl font-semibold text-navy transition-colors group-hover:text-gold">
             {t(`members.${member.nameKey}.name`)}
           </h3>
-          <p className="mb-3 text-sm font-medium text-amber-600">
+          <p className="mb-3 text-sm font-medium text-gold">
             {t(`roles.${member.roleKey}`)}
           </p>
-          <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-slate-600">
+          <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-[#4b5563]">
             {t(`members.${member.nameKey}.shortBio`)}
           </p>
-          <div className="flex items-center text-sm font-medium text-slate-900 transition-colors group-hover:text-amber-600">
+          <div className="flex items-center text-sm font-medium text-navy transition-colors group-hover:text-gold">
             {t('viewProfile')}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </div>

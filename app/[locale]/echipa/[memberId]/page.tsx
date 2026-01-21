@@ -97,7 +97,7 @@ export default async function MemberProfilePage({ params }: Props) {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 sm:py-24">
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] py-16 sm:py-24">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_24%,rgba(255,255,255,0.04)_25%,rgba(255,255,255,0.04)_26%,transparent_27%,transparent_74%,rgba(255,255,255,0.04)_75%,rgba(255,255,255,0.04)_76%,transparent_77%)] bg-[length:50px_50px]" />
         </div>
@@ -105,7 +105,7 @@ export default async function MemberProfilePage({ params }: Props) {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/echipa"
-            className="mb-8 inline-flex items-center text-sm font-medium text-slate-300 transition-colors hover:text-amber-500"
+            className="mb-8 inline-flex items-center text-sm font-medium text-white/70 transition-colors hover:text-gold"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             {t('backToTeam')}
@@ -114,7 +114,7 @@ export default async function MemberProfilePage({ params }: Props) {
           <div className="lg:flex lg:items-center lg:gap-12">
             {/* Profile Image */}
             <div className="mb-8 lg:mb-0 lg:w-1/3">
-              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-slate-700 shadow-2xl">
+              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-navy/50 shadow-2xl">
                 <Image
                   src={`/images/team/${memberId}.jpg`}
                   alt={t(`members.${memberKey}.name`)}
@@ -128,13 +128,13 @@ export default async function MemberProfilePage({ params }: Props) {
 
             {/* Profile Info */}
             <div className="lg:w-2/3">
-              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-amber-500">
+              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
                 {t(`roles.${role}`)}
               </p>
-              <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              <h1 className="font-heading mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
                 {t(`members.${memberKey}.name`)}
               </h1>
-              <p className="mb-8 text-lg leading-relaxed text-slate-300">
+              <p className="mb-8 text-lg leading-relaxed text-white/80">
                 {t(`members.${memberKey}.shortBio`)}
               </p>
 
@@ -143,7 +143,7 @@ export default async function MemberProfilePage({ params }: Props) {
                 <Button
                   asChild
                   variant="default"
-                  className="bg-amber-500 hover:bg-amber-600"
+                  className="bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]"
                 >
                   <Link href="/contact">
                     <Mail className="mr-2 h-4 w-4" />
@@ -161,11 +161,11 @@ export default async function MemberProfilePage({ params }: Props) {
       {/* Biography Section */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2 className="font-heading mb-6 text-2xl font-bold text-navy sm:text-3xl">
             {t('profile.biography')}
           </h2>
-          <div className="prose prose-lg prose-slate max-w-none">
-            <p className="leading-relaxed text-slate-600">
+          <div className="prose prose-lg max-w-none">
+            <p className="leading-relaxed text-[#4b5563]">
               {t(`members.${memberKey}.fullBio`)}
             </p>
           </div>
@@ -173,9 +173,9 @@ export default async function MemberProfilePage({ params }: Props) {
       </section>
 
       {/* Specializations Section */}
-      <section className="bg-slate-50 py-16 sm:py-24">
+      <section className="bg-[#f8f9fa] py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2 className="font-heading mb-8 text-2xl font-bold text-navy sm:text-3xl">
             {t('profile.specializations')}
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -186,12 +186,12 @@ export default async function MemberProfilePage({ params }: Props) {
               return (
                 <div
                   key={i}
-                  className="flex items-center rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-center rounded-lg border border-transparent bg-white p-4 shadow-sm transition-all duration-300 hover:border-gold"
                 >
-                  <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100">
-                    <Briefcase className="h-5 w-5 text-amber-600" />
+                  <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#fef9e7]">
+                    <Briefcase className="h-5 w-5 text-gold" />
                   </div>
-                  <span className="font-medium text-slate-900">{specValue}</span>
+                  <span className="font-medium text-navy">{specValue}</span>
                 </div>
               );
             })}
@@ -205,8 +205,8 @@ export default async function MemberProfilePage({ params }: Props) {
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Education */}
             <div>
-              <h2 className="mb-6 flex items-center text-2xl font-bold text-slate-900">
-                <GraduationCap className="mr-3 h-6 w-6 text-amber-500" />
+              <h2 className="font-heading mb-6 flex items-center text-2xl font-bold text-navy">
+                <GraduationCap className="mr-3 h-6 w-6 text-gold" />
                 {t('profile.education')}
               </h2>
               <div className="space-y-4">
@@ -215,8 +215,8 @@ export default async function MemberProfilePage({ params }: Props) {
                   const eduValue = t.has(eduKey) ? t(eduKey) : null;
                   if (!eduValue) return null;
                   return (
-                    <div key={i} className="rounded-lg bg-slate-50 p-4">
-                      <p className="text-slate-700">{eduValue}</p>
+                    <div key={i} className="rounded-lg bg-[#f8f9fa] p-4">
+                      <p className="text-[#4b5563]">{eduValue}</p>
                     </div>
                   );
                 })}
@@ -225,8 +225,8 @@ export default async function MemberProfilePage({ params }: Props) {
 
             {/* Experience */}
             <div>
-              <h2 className="mb-6 flex items-center text-2xl font-bold text-slate-900">
-                <Award className="mr-3 h-6 w-6 text-amber-500" />
+              <h2 className="font-heading mb-6 flex items-center text-2xl font-bold text-navy">
+                <Award className="mr-3 h-6 w-6 text-gold" />
                 {t('profile.experience')}
               </h2>
               <div className="space-y-4">
@@ -235,8 +235,8 @@ export default async function MemberProfilePage({ params }: Props) {
                   const expValue = t.has(expKey) ? t(expKey) : null;
                   if (!expValue) return null;
                   return (
-                    <div key={i} className="rounded-lg bg-slate-50 p-4">
-                      <p className="text-slate-700">{expValue}</p>
+                    <div key={i} className="rounded-lg bg-[#f8f9fa] p-4">
+                      <p className="text-[#4b5563]">{expValue}</p>
                     </div>
                   );
                 })}
@@ -247,25 +247,25 @@ export default async function MemberProfilePage({ params }: Props) {
       </section>
 
       {/* Contact Info Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 sm:py-24">
+      <section className="bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-heading mb-4 text-3xl font-bold text-white sm:text-4xl">
             {t('profile.contactTitle')}
           </h2>
-          <p className="mb-8 text-lg text-slate-300">
+          <p className="mb-8 text-lg text-white/80">
             {t('profile.contactDescription')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center text-slate-300">
-              <Phone className="mr-2 h-5 w-5 text-amber-500" />
+            <div className="flex items-center text-white/80">
+              <Phone className="mr-2 h-5 w-5 text-gold" />
               <span>+40 261-848-015</span>
             </div>
-            <div className="flex items-center text-slate-300">
-              <Mail className="mr-2 h-5 w-5 text-amber-500" />
+            <div className="flex items-center text-white/80">
+              <Mail className="mr-2 h-5 w-5 text-gold" />
               <span>office@stanbaculescu.ro</span>
             </div>
-            <div className="flex items-center text-slate-300">
-              <MapPin className="mr-2 h-5 w-5 text-amber-500" />
+            <div className="flex items-center text-white/80">
+              <MapPin className="mr-2 h-5 w-5 text-gold" />
               <span>Str. Aurel Popp 2, Satu Mare</span>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default async function MemberProfilePage({ params }: Props) {
             <Button
               asChild
               size="lg"
-              className="bg-amber-500 hover:bg-amber-600"
+              className="bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]"
             >
               <Link href="/contact">{t('cta.button')}</Link>
             </Button>
