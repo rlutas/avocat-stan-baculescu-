@@ -44,14 +44,14 @@ Professional presentation website for Societate Civila de Avocati Stan-Baculescu
 **Description:** As a visitor, I want clear navigation and the ability to switch between Romanian and English so that I can browse in my preferred language.
 
 **Acceptance Criteria:**
-- [ ] Header with logo and main navigation menu
-- [ ] Navigation links: Acasa, Despre Noi, Echipa, Servicii, Blog, Contact
-- [ ] Language switcher visible in header (RO/EN toggle)
-- [ ] Language persists across page navigation
-- [ ] Mobile hamburger menu for smaller screens
-- [ ] Sticky header on scroll
-- [ ] Typecheck passes
-- [ ] Verify in browser using dev-browser skill
+- [x] Header with logo and main navigation menu
+- [x] Navigation links: Acasa, Despre Noi, Echipa, Servicii, Blog, Contact
+- [x] Language switcher visible in header (RO/EN toggle)
+- [x] Language persists across page navigation
+- [x] Mobile hamburger menu for smaller screens
+- [x] Sticky header on scroll
+- [x] Typecheck passes
+- [x] Verify in browser using dev-browser skill
 
 ---
 
