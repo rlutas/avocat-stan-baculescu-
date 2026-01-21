@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Playfair_Display, Inter } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -10,14 +10,18 @@ import { CookieConsent } from '@/components/cookie-consent';
 import { GoogleAnalytics } from '@/components/analytics';
 import '../globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const playfairDisplay = Playfair_Display({
+  variable: '--font-heading',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const inter = Inter({
+  variable: '--font-body',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -44,7 +48,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${inter.variable} font-body antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <GoogleAnalytics />

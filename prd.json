@@ -16,11 +16,11 @@
         "Typecheck passes"
       ],
       "priority": 1,
-      "passes": false,
-      "notes": "Foundation story - must complete before other UI updates. Reference: docs/tehnic/style-guide.md"
+      "passes": true,
+      "notes": "Foundation story - must complete before other UI style updates. Reference: docs/tehnic/style-guide.md"
     },
     {
-      "id": "US-001",
+      "id": "US-001-STYLE",
       "title": "Update Hero Section with Style Guide",
       "description": "As a visitor, I want a modern hero section with brand colors (NO background image with overlay - use solid navy gradient instead).",
       "acceptanceCriteria": [
@@ -28,18 +28,18 @@
         "Headline uses Playfair Display font, white text on navy",
         "CTA buttons use gold (#d09c11) background with navy text",
         "Secondary CTA uses white outline on navy background",
-        "Remove any team photo background/overlay pattern",
+        "Remove any team photo background/overlay pattern - this is outdated",
         "Modern clean design without dated image overlay effects",
-        "Responsive layout: text centered on mobile, can be split layout on desktop",
+        "Responsive layout maintained",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 2,
       "passes": false,
-      "notes": "IMPORTANT: No background image with dark overlay - this is outdated. Use solid/gradient navy background instead."
+      "notes": "IMPORTANT: No background image with dark overlay - use solid/gradient navy background instead. Update existing hero.tsx"
     },
     {
-      "id": "US-002",
+      "id": "US-002-STYLE",
       "title": "Update Header/Navigation with Style Guide",
       "description": "As a visitor, I want the header styled with official brand colors for professional appearance.",
       "acceptanceCriteria": [
@@ -57,7 +57,7 @@
       "notes": "Update existing header.tsx with brand colors"
     },
     {
-      "id": "US-003",
+      "id": "US-003-STYLE",
       "title": "Update About Page with Style Guide",
       "description": "As a visitor, I want the About page styled with official brand colors for consistent branding.",
       "acceptanceCriteria": [
@@ -76,202 +76,146 @@
       "notes": "Update existing about/ components with brand colors"
     },
     {
-      "id": "US-004",
-      "title": "Team Page with Lawyer Profiles",
-      "description": "As a potential client, I want to see all lawyers with their individual profiles so that I can learn about their expertise and choose who to contact.",
+      "id": "US-004-STYLE",
+      "title": "Update Team Page with Style Guide",
+      "description": "As a developer, I need to update the existing Team page components to use brand colors.",
       "acceptanceCriteria": [
-        "Grid/list of all 6 team members with photo placeholders",
-        "Founders section: Camelia Stan, Vlad Baculescu",
-        "Collaborators section: Diana Antonia Chincea, Gabriela Tarta, Alexandra Rusu",
-        "Staff section: Cristina Tentes (Client Relations)",
         "Team cards: white background, navy text, gold accent on hover",
         "Section headings use Playfair Display in navy",
-        "Click to individual profile page with full details",
-        "Individual profile pages with: biography, specializations, contact CTA",
-        "Bilingual content for all profiles",
+        "Profile pages use navy gradient hero with gold CTA",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 5,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Team page functionality already exists (US-004 complete in PRD). This updates styling only."
     },
     {
-      "id": "US-005",
-      "title": "Services Overview Page",
-      "description": "As a visitor, I want to see all practice areas at a glance so that I can quickly find the legal service I need.",
+      "id": "US-005-STYLE",
+      "title": "Update Services Pages with Style Guide",
+      "description": "As a developer, I need to update Services overview and individual pages to use brand colors.",
       "acceptanceCriteria": [
-        "Grid/cards displaying all 8 practice areas",
-        "Service cards: white background, navy title, gold icon, subtle shadow",
+        "Service cards: white background, navy title, gold Lucide icon, subtle shadow",
         "Card hover: lift effect with gold border accent",
-        "Section heading uses Playfair Display in navy",
-        "Each service shows: Lucide icon (gold), title, brief description",
-        "Click through to individual service page",
-        "Bilingual content",
-        "SEO optimized",
+        "Section headings use Playfair Display in navy",
+        "Individual service pages: navy gradient hero, white content sections, gold CTAs",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 6,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Services pages functionality exists (US-005, US-006 complete in PRD). This updates styling only."
     },
     {
-      "id": "US-006",
-      "title": "Individual Service Pages (8 pages)",
-      "description": "As a potential client interested in a specific legal area, I want detailed information about that practice area so that I can understand how the firm can help me.",
+      "id": "US-007-STYLE",
+      "title": "Update Blog Section with Style Guide",
+      "description": "As a developer, I need to update the Blog listing and article pages to use brand colors.",
       "acceptanceCriteria": [
-        "8 individual service pages: malpraxis-medical, drept-civil, drept-penal, drept-familiei, dreptul-muncii, drept-comercial, accidente-rutiere, drept-administrativ-fiscal",
-        "Service hero: navy gradient background with gold icon, white text",
-        "Content sections: white/off-white alternating backgrounds",
-        "Headings: Playfair Display in navy",
-        "CTA button: gold background with navy text",
-        "Related services suggestions with card grid",
-        "Bilingual content (RO/EN)",
-        "SEO metadata per page (unique titles, descriptions)",
-        "Structured data (JSON-LD) for legal services",
+        "Article cards: white background, navy title, gold category badge",
+        "Category filtering with gold active state",
+        "Article headings use Playfair Display in navy",
+        "Social sharing buttons use navy/gold scheme",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 7,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Blog functionality exists (US-007 complete in PRD). This updates styling only."
     },
     {
-      "id": "US-007",
-      "title": "Blog/Articles Section",
-      "description": "As a visitor interested in legal topics, I want to read articles and legal updates so that I can learn about relevant legal matters.",
+      "id": "US-008-STYLE",
+      "title": "Update Contact Page with Style Guide",
+      "description": "As a developer, I need to update the Contact page to use brand colors.",
       "acceptanceCriteria": [
-        "Blog listing page with article cards (title, excerpt, date, category)",
-        "Article cards: white background, navy title, gold category badge",
-        "Pagination or infinite scroll for article list",
-        "Category filtering with gold active state",
-        "Individual article pages with full content",
-        "Article headings: Playfair Display",
-        "Author attribution",
-        "Related articles suggestions",
-        "Social sharing buttons",
-        "CMS integration (MDX + Velite) for easy content management",
-        "Bilingual article support",
-        "SEO metadata per article",
+        "Form inputs: navy border on focus, gold accent for active state",
+        "Submit button: gold background, navy text",
+        "Contact hero uses navy gradient background",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 8,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Contact page functionality exists (US-008 mostly complete in PRD). This updates styling only."
     },
     {
-      "id": "US-008",
-      "title": "Contact Page with Complex Form",
-      "description": "As a potential client, I want to easily contact the firm with details about my legal matter so that I can request a consultation.",
+      "id": "US-008-EMAIL",
+      "title": "Complete Contact Form Email Integration",
+      "description": "As the firm owner, I want contact form submissions delivered to my email.",
       "acceptanceCriteria": [
-        "Contact form fields: name, email, phone, subject/service area, message",
-        "Form inputs: navy border on focus, gold accent for active state",
-        "Submit button: gold background, navy text",
-        "Form validation with clear error messages (red for errors)",
-        "Anti-spam protection (honeypot or reCAPTCHA)",
-        "Email sent to office@stanbaculescu.ro on submission",
-        "Success confirmation message to user",
-        "Google Maps integration showing office location (Str. Aurel Popp 2, Satu Mare)",
-        "Contact details displayed: phone (+40 261-848-015), email, address",
-        "Working hours: Luni-Duminica 09:00-17:00",
-        "Social media links (Facebook, Instagram, TikTok)",
-        "Bilingual content",
-        "Typecheck passes",
-        "Verify in browser using dev-browser skill"
+        "Resend API integrated",
+        "Contact form sends formatted email to office@stanbaculescu.ro",
+        "Email includes: sender name, email, phone, subject, message, timestamp",
+        "Error handling if email fails",
+        "Typecheck passes"
       ],
       "priority": 9,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "This completes the missing email functionality from US-008"
     },
     {
-      "id": "US-009",
-      "title": "Google Reviews/Testimonials Integration",
-      "description": "As a visitor, I want to see client testimonials so that I can gauge the firm's reputation and service quality.",
+      "id": "US-009-STYLE",
+      "title": "Update Testimonials with Style Guide",
+      "description": "As a developer, I need to update the testimonials component to use brand colors.",
       "acceptanceCriteria": [
-        "Section displaying Google Reviews testimonials on homepage and/or contact page",
         "Testimonial cards: white background, navy text, gold star icons",
-        "Shows: star rating (1-5 gold stars), reviewer name, review excerpt (max 200 chars), date",
-        "Minimum 3-5 testimonials displayed",
-        "Link to Google My Business profile for more reviews",
-        "Carousel layout on mobile, grid (3 columns) on desktop",
-        "If API unavailable: graceful fallback to static testimonials",
-        "Loading state while fetching reviews",
-        "Error handling if API fails (show static fallback, no broken UI)",
-        "Reviews cached for 24 hours to reduce API calls",
+        "Gold stars for ratings",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 10,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Testimonials functionality exists (US-009 complete in PRD). This updates styling only."
     },
     {
-      "id": "US-010",
-      "title": "Footer Component",
-      "description": "As a visitor, I want a comprehensive footer with quick links and legal information so that I can easily navigate and find important policies.",
+      "id": "US-010-STYLE",
+      "title": "Update Footer with Style Guide",
+      "description": "As a developer, I need to update the Footer component to use brand colors.",
       "acceptanceCriteria": [
         "Footer background: navy (#003a70)",
         "Footer text: white, links have gold hover state",
-        "Contact information (address, phone, email) in white",
-        "Quick navigation links in white, gold on hover",
         "Social media icons: white, gold on hover",
-        "Legal links: Privacy Policy, Cookie Policy, Terms of Service",
         "Copyright notice in lighter gray text",
-        "Bilingual content",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 11,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Footer functionality exists (US-010 complete in PRD). This updates styling only."
     },
     {
-      "id": "US-011",
-      "title": "GDPR Cookie Consent",
-      "description": "As a visitor, I need to consent to cookies before non-essential tracking so that my privacy preferences are respected.",
+      "id": "US-011-STYLE",
+      "title": "Update Cookie Consent with Style Guide",
+      "description": "As a developer, I need to update the cookie consent banner to use brand colors.",
       "acceptanceCriteria": [
-        "Cookie consent banner on first visit",
         "Banner: white background, navy text",
         "Accept button: gold background, navy text",
         "Reject/Customize buttons: white background, navy border",
-        "Options: Accept All, Reject Non-Essential, Customize",
-        "Preference saved and remembered",
-        "Google Analytics only loads after consent",
-        "Easy way to change preferences later",
-        "Bilingual consent text",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 12,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Cookie consent functionality exists (US-011 complete in PRD). This updates styling only."
     },
     {
-      "id": "US-012",
-      "title": "Privacy Policy Page",
-      "description": "As a visitor, I want to read the privacy policy so that I understand how my data is collected and used.",
+      "id": "US-012-STYLE",
+      "title": "Update Privacy Policy Page with Style Guide",
+      "description": "As a developer, I need to update the Privacy Policy page to use brand colors.",
       "acceptanceCriteria": [
-        "Comprehensive privacy policy page",
         "Page hero: navy gradient background, white text",
         "Content: white background, navy headings (Playfair Display)",
         "Body text uses --text-primary color",
-        "Sections: data collected, purpose, retention, rights, third parties",
-        "Contact information for data protection inquiries",
-        "Bilingual content (RO/EN)",
-        "Last updated date visible",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 13,
       "passes": false,
-      "notes": "Use brand colors from style-guide.md"
+      "notes": "Privacy Policy functionality exists (US-012 complete in PRD). This updates styling only."
     },
     {
       "id": "US-013",
       "title": "SEO Optimization",
-      "description": "As the firm owner, I want the website optimized for search engines so that potential clients can find us when searching for legal services in Satu Mare.",
+      "description": "As the firm owner, I want the website optimized for search engines so that potential clients can find us.",
       "acceptanceCriteria": [
         "Semantic HTML5 structure",
         "Meta titles and descriptions for all pages",
@@ -292,7 +236,7 @@
     {
       "id": "US-014",
       "title": "Google Analytics Integration",
-      "description": "As the firm owner, I want to track website traffic and user behavior so that I can measure marketing effectiveness.",
+      "description": "As the firm owner, I want to track website traffic and user behavior.",
       "acceptanceCriteria": [
         "Google Analytics 4 integrated",
         "Only loads after cookie consent",
@@ -306,103 +250,31 @@
       "notes": ""
     },
     {
-      "id": "US-015",
-      "title": "Responsive Design Implementation",
-      "description": "As a visitor on any device, I want the website to display correctly so that I can browse comfortably on mobile, tablet, or desktop.",
-      "acceptanceCriteria": [
-        "Mobile-first design approach",
-        "Breakpoints: mobile (<768px), tablet (768-1024px), desktop (>1024px)",
-        "Touch-friendly buttons and links on mobile (min 44px tap targets)",
-        "Readable typography at all screen sizes (following style-guide.md scales)",
-        "Images scale appropriately",
-        "No horizontal scroll on any device",
-        "Tested on: iPhone, Android, iPad, Desktop browsers",
-        "Typecheck passes",
-        "Verify in browser using dev-browser skill"
-      ],
-      "priority": 16,
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "US-016",
-      "title": "Internationalization Setup (next-intl)",
-      "description": "As a developer, I need a robust i18n system so that all content can be translated and the site can support multiple languages.",
-      "acceptanceCriteria": [
-        "next-intl configured for RO and EN locales",
-        "Default locale: Romanian (ro)",
-        "URL structure: /ro/... and /en/... or language prefix",
-        "Translation files organized by page/component",
-        "Date/time formatting localized",
-        "Language switcher updates URL and content",
-        "SEO: hreflang tags for language alternatives",
-        "Typecheck passes"
-      ],
-      "priority": 17,
-      "passes": true,
-      "notes": "Completed in iteration 2 - Full next-intl v4 setup with App Router"
-    },
-    {
-      "id": "US-017",
-      "title": "Supabase Infrastructure Setup",
-      "description": "As a developer, I need the database infrastructure prepared so that future features (auth, booking) can be easily added.",
-      "acceptanceCriteria": [
-        "Supabase project created and connected",
-        "Environment variables configured (.env.local)",
-        "Database schema designed for future expansion",
-        "Contact form submissions stored in database (optional but recommended)",
-        "Supabase client initialized but auth not active",
-        "Documentation for future activation",
-        "Typecheck passes"
-      ],
-      "priority": 18,
-      "passes": false,
-      "notes": ""
-    },
-    {
-      "id": "US-018",
-      "title": "Email Service Integration (Resend)",
-      "description": "As the firm owner, I want contact form submissions delivered reliably to my email so that I never miss a potential client inquiry.",
-      "acceptanceCriteria": [
-        "Resend API integrated",
-        "Contact form sends formatted email to office@stanbaculescu.ro",
-        "Email includes: sender name, email, phone, subject, message, timestamp",
-        "Error handling if email fails",
-        "Optional: auto-reply confirmation to sender",
-        "Typecheck passes"
-      ],
-      "priority": 19,
-      "passes": false,
-      "notes": ""
-    },
-    {
       "id": "US-019",
       "title": "Terms of Service Page",
-      "description": "As a visitor, I want to read the terms of service so that I understand the conditions for using the website and services.",
+      "description": "As a visitor, I want to read the terms of service.",
       "acceptanceCriteria": [
         "Dedicated terms of service page at /termeni (RO) and /en/terms (EN)",
         "Page hero: navy gradient background, white text",
         "Content styling consistent with Privacy Policy page",
-        "Sections: service description, user obligations, liability limitations, governing law",
-        "Contact information for legal inquiries",
+        "Sections: service description, user obligations, liability, governing law",
         "Bilingual content (RO/EN)",
         "Last updated date visible",
         "Linked from footer",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
-      "priority": 20,
+      "priority": 16,
       "passes": false,
       "notes": "Use brand colors from style-guide.md"
     },
     {
       "id": "US-020",
       "title": "Cookie Policy Page",
-      "description": "As a visitor, I want to read the cookie policy so that I understand what cookies are used and why.",
+      "description": "As a visitor, I want to read the cookie policy.",
       "acceptanceCriteria": [
         "Dedicated cookie policy page at /politica-cookies (RO) and /en/cookie-policy (EN)",
         "Page hero: navy gradient background, white text",
-        "Content styling consistent with Privacy Policy page",
         "List of all cookies used: essential, analytics, optional",
         "Purpose and duration of each cookie",
         "Instructions for managing/deleting cookies",
@@ -412,14 +284,14 @@
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
-      "priority": 21,
+      "priority": 17,
       "passes": false,
       "notes": "Use brand colors from style-guide.md"
     },
     {
       "id": "US-021",
       "title": "404 Error Page",
-      "description": "As a visitor who lands on a non-existent page, I want a helpful error page so that I can navigate back to useful content.",
+      "description": "As a visitor who lands on a non-existent page, I want a helpful error page.",
       "acceptanceCriteria": [
         "Custom 404 page with professional design matching site",
         "Navy background or white with navy accents",
@@ -430,14 +302,30 @@
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
-      "priority": 22,
+      "priority": 18,
       "passes": false,
       "notes": "Use brand colors from style-guide.md"
     },
     {
+      "id": "US-017",
+      "title": "Supabase Infrastructure Setup",
+      "description": "As a developer, I need the database infrastructure prepared for future features.",
+      "acceptanceCriteria": [
+        "Supabase project created and connected",
+        "Environment variables configured (.env.local)",
+        "Contact form submissions stored in database (optional)",
+        "Supabase client initialized but auth not active",
+        "Documentation for future activation",
+        "Typecheck passes"
+      ],
+      "priority": 19,
+      "passes": false,
+      "notes": ""
+    },
+    {
       "id": "US-022",
       "title": "Admin Training and Documentation",
-      "description": "As a client/admin, I want documentation and training so that I can manage blog content independently.",
+      "description": "As a client/admin, I want documentation and training so that I can manage blog content.",
       "acceptanceCriteria": [
         "Written documentation for blog content management (PDF or Markdown)",
         "Step-by-step guide for: creating articles, editing content, adding images",
@@ -446,7 +334,7 @@
         "Troubleshooting section for common issues",
         "Contact information for technical support"
       ],
-      "priority": 23,
+      "priority": 20,
       "passes": false,
       "notes": ""
     }
