@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { TeamHero, TeamGrid, TeamCta } from '@/components/team';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -26,6 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/echipa`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/echipa`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/echipa`,
+        'en-US': `${BASE_URL}/en/echipa`,
+      },
     },
   };
 }

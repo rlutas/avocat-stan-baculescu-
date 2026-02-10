@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import CookiePolicyContent from './cookie-policy-content';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -26,6 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/politica-cookies`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/politica-cookies`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/politica-cookies`,
+        'en-US': `${BASE_URL}/en/politica-cookies`,
+      },
     },
   };
 }

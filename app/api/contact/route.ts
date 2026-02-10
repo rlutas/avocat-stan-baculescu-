@@ -4,6 +4,62 @@ import { NextRequest, NextResponse } from 'next/server';
 const RECIPIENT_EMAIL = 'office@stanbaculescu.ro';
 const FROM_EMAIL = 'contact@stanbaculescu.ro'; // Must be verified in Resend
 
+// Rate limiting configuration
+const rateLimit = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 5; // max requests per window
+const RATE_WINDOW = 60 * 60 * 1000; // 1 hour in ms
+
+/**
+ * Check if the IP is within rate limits
+ * @param ip - The IP address to check
+ * @returns true if request is allowed, false if rate limited
+ */
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimit.get(ip);
+
+  // Clean up old entries periodically (basic memory management)
+  if (rateLimit.size > 10000) {
+    for (const [key, value] of rateLimit.entries()) {
+      if (now > value.resetTime) {
+        rateLimit.delete(key);
+      }
+    }
+  }
+
+  if (!record || now > record.resetTime) {
+    rateLimit.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+    return true;
+  }
+
+  if (record.count >= RATE_LIMIT) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
+/**
+ * Get client IP from request headers
+ * @param request - The incoming request
+ * @returns The client IP address or 'unknown'
+ */
+function getClientIp(request: NextRequest): string {
+  const forwardedFor = request.headers.get('x-forwarded-for');
+  if (forwardedFor) {
+    // x-forwarded-for can contain multiple IPs, take the first one
+    return forwardedFor.split(',')[0].trim();
+  }
+
+  const realIp = request.headers.get('x-real-ip');
+  if (realIp) {
+    return realIp;
+  }
+
+  return 'unknown';
+}
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -30,6 +86,15 @@ const serviceLabels: Record<string, { ro: string; en: string }> = {
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting check
+    const clientIp = getClientIp(request);
+    if (!checkRateLimit(clientIp)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
     const data: ContactFormData = await request.json();
 
     // Honeypot check - if filled, it's a bot

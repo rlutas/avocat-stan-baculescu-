@@ -152,17 +152,17 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
                 <span className="text-sm text-white/70">
-                  Str. Aurel Popp nr. 2,<br />
-                  Satu Mare, Romania
+                  Str. Decebal Nr. 4, Et. 1,<br />
+                  Mun. Satu Mare, Jud. Satu Mare
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
-                  href="tel:+40261848015"
+                  href="tel:+40745466720"
                   className="text-sm text-white/70 transition-colors hover:text-gold"
                 >
-                  +40 261-848-015
+                  +40 745 466 720
                 </a>
               </li>
               <li className="flex items-center gap-3">

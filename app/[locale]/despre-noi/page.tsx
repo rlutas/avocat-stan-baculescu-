@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { AboutHero } from '@/components/about/about-hero';
 import { AboutHistory } from '@/components/about/about-history';
 import { AboutValues } from '@/components/about/about-values';
@@ -7,13 +7,14 @@ import { AboutPrinciples } from '@/components/about/about-principles';
 import { AboutMethodology } from '@/components/about/about-methodology';
 import { AboutCta } from '@/components/about/about-cta';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'AboutPage' });
 
   const title =
     locale === 'ro'
@@ -32,6 +33,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/despre-noi`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/despre-noi`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/despre-noi`,
+        'en-US': `${BASE_URL}/en/despre-noi`,
+      },
     },
   };
 }

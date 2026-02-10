@@ -7,7 +7,7 @@ export function BlogHero() {
   const t = useTranslations('BlogPage');
 
   return (
-    <section className="relative w-full overflow-hidden bg-navy py-20 md:py-28">
+    <section className="relative w-full overflow-hidden bg-navy py-20 sm:py-28 lg:py-36">
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -116,8 +116,6 @@ export function BlogHero() {
         </div>
       </div>
 
-      {/* Bottom fade to off-white */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#f8f9fa] to-transparent"></div>
     </section>
   );
 }

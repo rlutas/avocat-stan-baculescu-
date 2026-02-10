@@ -129,7 +129,7 @@ export function ServiceDetailHero({ serviceId }: ServiceDetailHeroProps) {
         <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_24%,rgba(255,255,255,0.04)_25%,rgba(255,255,255,0.04)_26%,transparent_27%,transparent_74%,rgba(255,255,255,0.04)_75%,rgba(255,255,255,0.04)_76%,transparent_77%)] bg-[length:50px_50px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
         {/* Back Link */}
         <Link
           href="/servicii"
@@ -169,8 +169,6 @@ export function ServiceDetailHero({ serviceId }: ServiceDetailHeroProps) {
         </div>
       </div>
 
-      {/* Bottom Gradient Fade to content area */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 }

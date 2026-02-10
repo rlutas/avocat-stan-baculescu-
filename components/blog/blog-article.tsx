@@ -12,7 +12,6 @@ type BlogArticleProps = {
   author: string;
   category: string;
   content: string;
-  slug: string;
 };
 
 export function BlogArticle({
@@ -22,7 +21,6 @@ export function BlogArticle({
   author,
   category,
   content,
-  slug,
 }: BlogArticleProps) {
   const t = useTranslations('BlogPage');
   const formattedDate = new Date(date).toLocaleDateString('ro-RO', {
@@ -34,7 +32,7 @@ export function BlogArticle({
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-navy py-16 md:py-24">
+      <section className="relative w-full overflow-hidden bg-navy py-20 sm:py-28 lg:py-36">
         <style jsx>{`
           @keyframes fadeInUp {
             from {
@@ -199,7 +197,6 @@ export function BlogArticle({
               <SocialShare
                 title={title}
                 description={description}
-                slug={slug}
               />
             </div>
           </div>

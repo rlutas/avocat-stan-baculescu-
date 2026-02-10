@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { ServicesHero, ServicesGrid, ServicesCta } from '@/components/services';
+
+const BASE_URL = 'https://stanbaculescu.ro';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,6 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/servicii`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/servicii`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/servicii`,
+        'en-US': `${BASE_URL}/en/servicii`,
+      },
     },
   };
 }

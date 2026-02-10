@@ -14,6 +14,8 @@ import {
   Award,
 } from 'lucide-react';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 const validMemberIds = [
   'camelia-stan',
   'vlad-baculescu',
@@ -78,6 +80,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'profile',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/echipa/${memberId}`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/echipa/${memberId}`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/echipa/${memberId}`,
+        'en-US': `${BASE_URL}/en/echipa/${memberId}`,
+      },
     },
   };
 }
@@ -258,7 +268,7 @@ export default async function MemberProfilePage({ params }: Props) {
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center text-white/80">
               <Phone className="mr-2 h-5 w-5 text-gold" />
-              <span>+40 261-848-015</span>
+              <span>+40 745 466 720</span>
             </div>
             <div className="flex items-center text-white/80">
               <Mail className="mr-2 h-5 w-5 text-gold" />
@@ -266,7 +276,7 @@ export default async function MemberProfilePage({ params }: Props) {
             </div>
             <div className="flex items-center text-white/80">
               <MapPin className="mr-2 h-5 w-5 text-gold" />
-              <span>Str. Aurel Popp 2, Satu Mare</span>
+              <span>Str. Decebal Nr. 4, Satu Mare</span>
             </div>
           </div>
           <div className="mt-8">

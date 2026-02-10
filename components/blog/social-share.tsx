@@ -7,10 +7,9 @@ import { useState } from 'react';
 type SocialShareProps = {
   title: string;
   description: string;
-  slug: string;
 };
 
-export function SocialShare({ title, description, slug }: SocialShareProps) {
+export function SocialShare({ title, description }: SocialShareProps) {
   const t = useTranslations('BlogPage');
   const [copied, setCopied] = useState(false);
 

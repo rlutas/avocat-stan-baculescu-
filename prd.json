@@ -31,12 +31,15 @@
         "Remove any team photo background/overlay pattern - this is outdated",
         "Modern clean design without dated image overlay effects",
         "Responsive layout maintained",
+        "Suna acum call button with integrated phone icon and rounded-full style",
+        "Responsive text layout (inline on mobile, stacked on desktop)",
+        "Hover effects on buttons (no glow animation)",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 2,
       "passes": true,
-      "notes": "IMPORTANT: No background image with dark overlay - use solid/gradient navy background instead. Update existing hero.tsx"
+      "notes": "IMPORTANT: No background image with dark overlay - use solid/gradient navy background instead. January 2026: Call button redesigned with integrated Phone icon, rounded-full style matching CTA, responsive text layout, hover effects (no glow)."
     },
     {
       "id": "US-002-STYLE",
@@ -49,12 +52,14 @@
         "Language switcher: navy/gold color scheme",
         "Mobile menu: navy background, white text, gold accents",
         "Sticky header shadow uses subtle gray, not harsh black",
+        "Services dropdown menu with all 8 practice areas (desktop: hover, mobile: expandable)",
+        "Dropdown includes icons for each service",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 3,
       "passes": true,
-      "notes": "Update existing header.tsx with brand colors"
+      "notes": "Update existing header.tsx with brand colors. January 2026: Added services dropdown menu with all 8 services and icons (desktop hover, mobile expandable)."
     },
     {
       "id": "US-003-STYLE",
@@ -130,12 +135,13 @@
         "Form inputs: navy border on focus, gold accent for active state",
         "Submit button: gold background, navy text",
         "Contact hero uses navy gradient background",
+        "Updated contact information displayed correctly",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 8,
       "passes": true,
-      "notes": "Contact page functionality exists (US-008 mostly complete in PRD). This updates styling only."
+      "notes": "Contact page functionality exists (US-008 mostly complete in PRD). January 2026: Contact info updated - Address: Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare; Phone: +40 745 466 720; Company: STAN-BACULESCU-SOCIETATE CIVILA DE AVOCATI; CUI: 43512039."
     },
     {
       "id": "US-008-EMAIL",
@@ -391,13 +397,15 @@
         "Principles section with animated stat badges (like hero floating badges)",
         "Photo section with shimmer effect and photo-hover animations",
         "CTA button with pulse-glow animation",
+        "No bottom gradient blur on hero section",
+        "Consistent padding across page sections",
         "Responsive: mobile, tablet, desktop layouts",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 23,
       "passes": true,
-      "notes": "Full redesign with navy gradient hero, gold decorative circle + rotating ring, trust badge, two-line headline, FadeInUp animations on all sections, hover lift effects on cards, floating stat badges on principles, pulse-glow CTA button. All translation keys added (trustBadge, titleLine1, titleLine2, statMotivation, statSeriousness, statExperience)."
+      "notes": "Full redesign with navy gradient hero, gold decorative circle + rotating ring, trust badge, two-line headline, FadeInUp animations on all sections, hover lift effects on cards, floating stat badges on principles, pulse-glow CTA button. All translation keys added. January 2026: Removed bottom gradient blur from hero section."
     },
     {
       "id": "US-026",
@@ -413,13 +421,14 @@
         "Grid layout: 1 col mobile, 2 cols tablet, 3-4 cols desktop",
         "Each card links to individual service page",
         "CTA section at bottom with pulse-glow button",
+        "No bottom gradient blur on hero section",
         "Responsive design",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 24,
       "passes": true,
-      "notes": "Full redesign following hero patterns. Updated services-hero.tsx with navy gradient, gold decorations (gold-pulse/gold-rotate), trust badge with Briefcase icon, two-line headline. Updated services-grid.tsx with fadeInUp animation with staggered delays, card hover effects (lift, gold ring, shadow-xl), gold icon containers. Updated services-cta.tsx with gold decorations, pulse-glow button. Added translation keys: trustBadge, titleLine1, titleLine2 in RO/EN."
+      "notes": "Full redesign following hero patterns. Updated services-hero.tsx with navy gradient, gold decorations (gold-pulse/gold-rotate), trust badge with Briefcase icon, two-line headline. January 2026: Removed bottom gradient blur from hero section."
     },
     {
       "id": "US-027",
@@ -437,13 +446,14 @@
         "Related services cards with hover lift",
         "CTA section: 'Programează o Consultație' with pulse-glow",
         "Back to services link",
+        "No bottom gradient blur on hero sections",
         "Apply to all 8 service pages (malpraxis, civil, penal, familiei, muncii, comercial, accidente, administrativ)",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 25,
       "passes": true,
-      "notes": "Full redesign for all 8 service pages following hero patterns. Updated: service-detail-hero.tsx with navy gradient, gold decorative elements (gold-pulse/gold-rotate), trust badge, two-line headline with fadeInUp animations. Updated service-detail-content.tsx with fadeInUp animations, card hover effects (-translate-y-1, gold border, gold ring), animated step numbers. Updated service-detail-related.tsx with staggered fadeInUp animations, card hover effects (lift, gold border, gold ring, shadow-xl). Updated service-detail-cta.tsx with gold decorative elements, fadeInUp animations, pulse-glow button, contact info cards with gold icons. Added trustBadge, titleLine1, titleLine2 translation keys for all 8 services in RO/EN."
+      "notes": "Full redesign for all 8 service pages following hero patterns. January 2026: Removed bottom gradient blur from all hero sections, consistent padding applied."
     },
     {
       "id": "US-028",
@@ -461,13 +471,14 @@
         "Individual article pages: hero with two-line title, author section with gold accents",
         "Related articles with card hover effects",
         "Share buttons styled with gold accents",
+        "No bottom gradient blur on hero sections",
         "Responsive grid: 1/2/3 columns",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 26,
       "passes": true,
-      "notes": "Full redesign following hero patterns. Updated blog-hero.tsx with navy gradient, gold decorations (gold-pulse/gold-rotate), trust badge with FileText icon, two-line headline. Updated blog-card.tsx with rounded-2xl, shimmer effect on hover, fadeInUp animation with staggered delays, card hover effects (lift, gold border, gold ring). Updated blog-grid.tsx with staggered fadeIn delays, gold active states on category filter and pagination. Updated blog-cta.tsx with gold decorations, pulse-glow button. Updated blog-article.tsx with navy hero, gold decorative elements, two-line title, author section with gold accents. Updated social-share.tsx with gold accent on copy link button, Share2 icon. Updated related-articles.tsx with staggered card animations. Added translation keys: trustBadge, titleLine1, titleLine2, article.writtenBy, article.publishedOn in RO/EN."
+      "notes": "Full redesign following hero patterns. January 2026: Removed bottom gradient blur from hero sections."
     },
     {
       "id": "US-029",
@@ -485,13 +496,14 @@
         "Google Map with gold border accent",
         "Social media links with gold hover",
         "Floating badges: 'Răspundem în 24h', 'Consultație Gratuită'",
+        "No bottom gradient blur on hero section",
         "Responsive layout",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 27,
       "passes": true,
-      "notes": "Full redesign following hero patterns. Updated contact-hero.tsx with navy gradient, gold decorative elements (gold-pulse/gold-rotate), trust badge with Phone icon, two-line headline with fadeInUp animations. Updated contact-info.tsx with card hover effects (lift, gold ring, gold shadow), gold icons with hover transitions, social media buttons with gold hover. Updated contact-form.tsx with pulse-glow button, rounded-xl inputs, fadeInUp animations. Updated contact-map.tsx with gold ring border accent, badge with MapPin icon, fadeInUp animation. Updated contact page layout with floating badges (response time, free consultation) with float animations. Added translation keys: trustBadge, titleLine1, titleLine2, floatingBadges.response, floatingBadges.consultation, map.badge in RO/EN."
+      "notes": "Full redesign following hero patterns. January 2026: Contact info updated (Str. Decebal Nr. 4, +40 745 466 720, CUI 43512039), removed bottom gradient blur from hero section."
     },
     {
       "id": "US-030",
@@ -526,13 +538,14 @@
         "Add hover effects: lift (-translate-y-2), gold ring (ring-gold/60), shadow enhancement",
         "Add shimmer effect on team photos (like hero founders)",
         "Founders section: subtle float animation on badges (if applicable)",
+        "No bottom gradient blur on hero section",
         "Responsive animations work on all devices",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 29,
       "passes": true,
-      "notes": "Animation enhancement completed. Updated team-hero.tsx with gold decorative elements (gold-pulse/gold-rotate), trust badge with Users icon, two-line headline with fadeInUp animations. Updated team-grid.tsx with photoFadeIn animations with staggered delays (100ms per card), shimmer effect on team photos, enhanced hover effects (lift -translate-y-2, gold ring, shadow-xl), accent line animation. Updated team-cta.tsx with gold decorative elements, fadeInUp animations, pulse-glow button. Added trustBadge, titleLine1, titleLine2 translations in RO/EN."
+      "notes": "Animation enhancement completed. January 2026: Removed bottom gradient blur from hero section."
     },
     {
       "id": "US-032",
@@ -567,13 +580,14 @@
         "FadeInUp animations",
         "Back to home link with gold accent",
         "Last updated date styled",
+        "No bottom gradient blur on hero sections",
         "Responsive layout",
         "Typecheck passes",
         "Verify in browser using dev-browser skill"
       ],
       "priority": 31,
       "passes": true,
-      "notes": "Full redesign for all 3 legal pages following hero patterns. Created separate client components for each page (privacy-policy-content.tsx, terms-of-service-content.tsx, cookie-policy-content.tsx). Added CSS keyframe animations (fadeInUp, gold-pulse, gold-rotate), gold decorative elements, two-line headline (titleLine1/titleLine2), section hover effects on icons. Updated translation files (RO/EN) with titleLine1/titleLine2 keys."
+      "notes": "Full redesign for all 3 legal pages following hero patterns. January 2026: Removed bottom gradient blur from hero sections."
     },
     {
       "id": "US-034",

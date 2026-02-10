@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { Scale, Award, Users } from 'lucide-react';
-import Image from 'next/image';
 
 export function AboutHistory() {
   const t = useTranslations('AboutPage.history');

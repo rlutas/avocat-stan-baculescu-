@@ -10,7 +10,18 @@ import {
   SheetTrigger,
   SheetTitle,
 } from '@/components/ui/sheet';
-import { Phone } from 'lucide-react';
+import {
+  Phone,
+  ChevronDown,
+  Stethoscope,
+  Scale,
+  Gavel,
+  Users,
+  Briefcase,
+  Building2,
+  Car,
+  FileText,
+} from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -18,9 +29,20 @@ const navItems = [
   { href: '/', key: 'home' },
   { href: '/despre-noi', key: 'about' },
   { href: '/echipa', key: 'team' },
-  { href: '/servicii', key: 'services' },
+  { href: '/servicii', key: 'services', hasDropdown: true },
   { href: '/blog', key: 'blog' },
   { href: '/contact', key: 'contact' },
+] as const;
+
+const serviceItems = [
+  { id: 'malpraxis-medical', href: '/servicii/malpraxis-medical', icon: Stethoscope },
+  { id: 'drept-civil', href: '/servicii/drept-civil', icon: Scale },
+  { id: 'drept-penal', href: '/servicii/drept-penal', icon: Gavel },
+  { id: 'drept-familiei', href: '/servicii/drept-familiei', icon: Users },
+  { id: 'dreptul-muncii', href: '/servicii/dreptul-muncii', icon: Briefcase },
+  { id: 'drept-comercial', href: '/servicii/drept-comercial', icon: Building2 },
+  { id: 'accidente-rutiere', href: '/servicii/accidente-rutiere', icon: Car },
+  { id: 'drept-administrativ-fiscal', href: '/servicii/drept-administrativ-fiscal', icon: FileText },
 ] as const;
 
 // Animated hamburger icon component
@@ -51,11 +73,13 @@ function AnimatedHamburger({ isOpen }: { isOpen: boolean }) {
 
 export function Header() {
   const t = useTranslations('common');
+  const tServices = useTranslations('ServicesPage.services');
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesExpanded, setIsServicesExpanded] = useState(false);
 
   // Handle scroll for sticky header
   useEffect(() => {
@@ -71,8 +95,6 @@ export function Header() {
   const switchLanguage = (newLocale: 'ro' | 'en') => {
     router.replace(pathname, { locale: newLocale });
   };
-
-  const otherLocale = locale === 'ro' ? 'en' : 'ro';
 
   return (
     <header
@@ -99,20 +121,65 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 lg:flex">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className={cn(
-                  'relative px-4 py-2 text-sm font-medium transition-colors',
-                  pathname === item.href
-                    ? 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
-                    : 'text-navy hover:text-gold'
-                )}
-              >
-                {t(`nav.${item.key}`)}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const hasDropdown = 'hasDropdown' in item && item.hasDropdown;
+
+              if (hasDropdown) {
+                return (
+                  <div key={item.key} className="relative group">
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        'relative flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors',
+                        pathname === item.href || pathname.startsWith('/servicii/')
+                          ? 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                          : 'text-navy hover:text-gold'
+                      )}
+                    >
+                      {t(`nav.${item.key}`)}
+                      <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
+
+                    {/* Dropdown Menu */}
+                    <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="bg-navy rounded-lg shadow-xl py-2 min-w-[280px] border border-navy-light/10">
+                        {serviceItems.map((service) => {
+                          const Icon = service.icon;
+                          return (
+                            <Link
+                              key={service.id}
+                              href={service.href}
+                              className={cn(
+                                'flex items-center gap-3 px-4 py-3 text-sm text-white/90 hover:bg-white/10 hover:text-gold transition-colors',
+                                pathname === service.href && 'bg-white/10 text-gold'
+                              )}
+                            >
+                              <Icon className="h-5 w-5 flex-shrink-0" />
+                              <span>{tServices(`${service.id}.title`)}</span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className={cn(
+                    'relative px-4 py-2 text-sm font-medium transition-colors',
+                    pathname === item.href
+                      ? 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                      : 'text-navy hover:text-gold'
+                  )}
+                >
+                  {t(`nav.${item.key}`)}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Desktop Language Switcher & CTA */}
@@ -167,11 +234,11 @@ export function Header() {
               <SheetContent
                 side="right"
                 className="w-[85vw] max-w-sm border-l-gold/20 bg-gradient-to-br from-[#002a52] via-[#003a70] to-[#004a8f] p-0 overflow-hidden"
-                closeClassName="text-white hover:text-gold hover:bg-white/10 p-2 rounded-lg"
+                closeClassName="top-6 right-6 z-20 text-white hover:text-gold hover:bg-white/10 p-2 rounded-lg"
               >
                 {/* Decorative gold circle */}
-                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
-                <div className="absolute -left-10 bottom-20 h-40 w-40 rounded-full bg-gold/5 blur-2xl" />
+                <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+                <div className="pointer-events-none absolute -left-10 bottom-20 h-40 w-40 rounded-full bg-gold/5 blur-2xl" />
 
                 <div className="relative z-10 flex h-full flex-col p-6">
                   {/* Logo */}
@@ -187,25 +254,104 @@ export function Header() {
 
                   {/* Navigation */}
                   <nav className="mt-6 flex flex-col gap-1 flex-1">
-                    {navItems.map((item, index) => (
-                      <Link
-                        key={item.key}
-                        href={item.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={cn(
-                          'group relative flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300',
-                          pathname === item.href
-                            ? 'bg-gold/20 text-gold'
-                            : 'text-white/90 hover:bg-white/5 hover:text-gold hover:translate-x-1'
-                        )}
-                        style={{ animationDelay: `${index * 50}ms` }}
-                      >
-                        {pathname === item.href && (
-                          <span className="absolute left-0 top-1/2 -translate-y-1/2 h-6 w-1 rounded-r-full bg-gold" />
-                        )}
-                        {t(`nav.${item.key}`)}
-                      </Link>
-                    ))}
+                    {navItems.map((item, index) => {
+                      const hasDropdown = 'hasDropdown' in item && item.hasDropdown;
+
+                      if (hasDropdown) {
+                        return (
+                          <div key={item.key}>
+                            {/* Services Header with Toggle */}
+                            <button
+                              onClick={() => setIsServicesExpanded(!isServicesExpanded)}
+                              className={cn(
+                                'group relative flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300',
+                                pathname === item.href || pathname.startsWith('/servicii/')
+                                  ? 'bg-gold/20 text-gold'
+                                  : 'text-white/90 hover:bg-white/5 hover:text-gold'
+                              )}
+                              style={{ animationDelay: `${index * 50}ms` }}
+                            >
+                              <span className="flex items-center gap-3">
+                                {(pathname === item.href || pathname.startsWith('/servicii/')) && (
+                                  <span className="absolute left-0 top-1/2 -translate-y-1/2 h-6 w-1 rounded-r-full bg-gold" />
+                                )}
+                                {t(`nav.${item.key}`)}
+                              </span>
+                              <ChevronDown
+                                className={cn(
+                                  'h-5 w-5 transition-transform duration-300',
+                                  isServicesExpanded && 'rotate-180'
+                                )}
+                              />
+                            </button>
+
+                            {/* Services List */}
+                            <div
+                              className={cn(
+                                'overflow-hidden transition-all duration-300 ease-in-out',
+                                isServicesExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                              )}
+                            >
+                              <div className="ml-4 mt-1 flex flex-col gap-0.5 border-l border-white/10 pl-4">
+                                {/* Link to All Services */}
+                                <Link
+                                  href="/servicii"
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className={cn(
+                                    'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200',
+                                    pathname === '/servicii'
+                                      ? 'bg-gold/20 text-gold'
+                                      : 'text-white/70 hover:bg-white/5 hover:text-gold'
+                                  )}
+                                >
+                                  <Scale className="h-4 w-4" />
+                                  <span>Toate Serviciile</span>
+                                </Link>
+                                {serviceItems.map((service) => {
+                                  const Icon = service.icon;
+                                  return (
+                                    <Link
+                                      key={service.id}
+                                      href={service.href}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className={cn(
+                                        'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200',
+                                        pathname === service.href
+                                          ? 'bg-gold/20 text-gold'
+                                          : 'text-white/70 hover:bg-white/5 hover:text-gold'
+                                      )}
+                                    >
+                                      <Icon className="h-4 w-4" />
+                                      <span>{tServices(`${service.id}.title`)}</span>
+                                    </Link>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <Link
+                          key={item.key}
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={cn(
+                            'group relative flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300',
+                            pathname === item.href
+                              ? 'bg-gold/20 text-gold'
+                              : 'text-white/90 hover:bg-white/5 hover:text-gold hover:translate-x-1'
+                          )}
+                          style={{ animationDelay: `${index * 50}ms` }}
+                        >
+                          {pathname === item.href && (
+                            <span className="absolute left-0 top-1/2 -translate-y-1/2 h-6 w-1 rounded-r-full bg-gold" />
+                          )}
+                          {t(`nav.${item.key}`)}
+                        </Link>
+                      );
+                    })}
                   </nav>
 
                   {/* Bottom section */}
@@ -248,7 +394,7 @@ export function Header() {
                       className="w-full h-12 bg-gold font-semibold text-navy text-base hover:bg-gold-light shadow-[0_4px_20px_rgba(208,156,17,0.3)] hover:shadow-[0_6px_30px_rgba(208,156,17,0.4)] transition-all duration-300"
                     >
                       <Link
-                        href="tel:+40261848015"
+                        href="tel:+40745466720"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="flex items-center justify-center gap-2"
                       >

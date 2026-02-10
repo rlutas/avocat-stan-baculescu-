@@ -8,6 +8,8 @@ import {
 } from '@/components/contact';
 import { Clock, Gift } from 'lucide-react';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -23,6 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t('title'),
       description: t('description'),
       type: 'website',
+      locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/contact`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/contact`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/contact`,
+        'en-US': `${BASE_URL}/en/contact`,
+      },
     },
   };
 }
@@ -36,16 +47,16 @@ export default async function ContactPage({ params }: Props) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    name: 'Societate Civila de Avocati Stan-Baculescu',
+    name: 'STAN-BACULESCU-SOCIETATE CIVILA DE AVOCATI',
     description: t('meta.description'),
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Str. Aurel Popp 2',
+      streetAddress: 'Str. Decebal Nr. 4, Et. 1',
       addressLocality: 'Satu Mare',
       postalCode: '440014',
       addressCountry: 'RO',
     },
-    telephone: '+40261848015',
+    telephone: '+40745466720',
     email: 'office@stanbaculescu.ro',
     openingHours: 'Mo-Su 09:00-17:00',
     url: 'https://stanbaculescu.ro',

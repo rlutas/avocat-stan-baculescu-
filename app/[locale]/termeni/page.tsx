@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import TermsOfServiceContent from './terms-of-service-content';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -26,6 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/termeni`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/termeni`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/termeni`,
+        'en-US': `${BASE_URL}/en/termeni`,
+      },
     },
   };
 }

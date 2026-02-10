@@ -4,6 +4,144 @@
 
 ---
 
+## Recent Design Changes (January 2026)
+
+This section documents the most recent design updates implemented across the website. Always refer to these standards when creating new components.
+
+### 1. Hero Section Updates
+
+**IMPORTANT CHANGES:**
+- ❌ **Removed:** Bottom gradient/blur effects on all hero sections
+- ✅ **Updated:** Solid navy background (#003a70) without gradients or transitions
+- ✅ **Standardized Padding:**
+  - Mobile: `py-20` (5rem)
+  - Tablet: `py-28` (7rem)
+  - Desktop: `py-36` (9rem)
+
+**Rationale:** Cleaner, more professional appearance with consistent spacing across all pages.
+
+### 2. Call Button Design - New Pattern
+
+**Integrated Phone Icon Button:**
+
+The call button has been completely redesigned with an integrated icon pattern:
+
+**Key Features:**
+- **Phone icon** in a distinct rounded container with gold/10 background
+- **Rounded-full** pill-shaped button
+- **Stacked text layout** on desktop (label + number)
+- **Inline text layout** on mobile (icon + number)
+
+**Interactive States:**
+- **Hover:** `bg-white/15`, `-translate-y-0.5`, `shadow-gold/20`
+- **Active:** `scale-[0.98]`
+- **Transition:** All properties animate over 300ms
+
+**Implementation:**
+```jsx
+{/* Desktop */}
+<a href="tel:+40261848015" className="rounded-full bg-gold px-6 py-3 hover:bg-white/15 hover:-translate-y-0.5 active:scale-[0.98]">
+  <div className="h-12 w-12 rounded-full bg-gold/10">
+    <Phone className="h-5 w-5 text-navy" />
+  </div>
+  <div className="flex flex-col">
+    <span className="text-xs text-navy/70">Sună acum</span>
+    <span className="text-base font-bold text-navy">(+40) 261-848-015</span>
+  </div>
+</a>
+```
+
+### 3. Header Navigation - Services Dropdown
+
+**Desktop Navigation:**
+- **Services dropdown** appears on hover
+- **Navy background** dropdown with gold hover states
+- **Icons** for each service (h-5 w-5)
+- **2-column grid layout** for service items
+
+**Mobile Navigation:**
+- **Expandable accordion** for services
+- **Chevron icon** rotates 180° when expanded
+- **Nested service links** with icons
+- **Smooth height animation** (max-h-0 to max-h-[500px])
+
+**Implementation Details:**
+- Hover state: `hover:bg-navy hover:text-gold`
+- Icon color remains gold on hover
+- Text turns white on hover
+- Dropdown width: 600px (lg:w-[600px])
+
+### 4. Contact Information Updates
+
+**Current Official Information:**
+- **Address:** Str. Mihail Kogălniceanu, nr. 10, Biroul 2, Pitești, Argeș
+- **Phone:** (+40) 261-848-015
+- **Phone (international format):** +40 261-848-015
+- **Phone (clickable link):** `tel:+40261848015`
+
+**Format Standards:**
+- Display format: `(+40) 261-848-015` (with parentheses and dash)
+- Link format: `+40261848015` (no spaces, no special characters)
+- Address: Multi-line format with street on first line, city on second line
+
+### Design System Consistency Checklist
+
+When implementing new pages or components, ensure:
+
+- [ ] Hero sections use `py-20 sm:py-28 lg:py-36` padding
+- [ ] Hero sections have solid navy background (no gradients)
+- [ ] Call buttons use the integrated icon pattern
+- [ ] Services navigation includes dropdown (desktop) and expandable menu (mobile)
+- [ ] Contact information uses the updated address and phone format
+- [ ] All interactive elements have proper hover/active states
+- [ ] Animations follow the established timing patterns (300ms standard)
+
+---
+
+## Quick Reference - Common Patterns
+
+### Hero Section Pattern
+```jsx
+<section className="bg-navy py-20 sm:py-28 lg:py-36">
+  {/* Content - NO gradient overlays */}
+</section>
+```
+
+### Call Button Pattern
+```jsx
+<a href="tel:+40261848015" className="rounded-full bg-gold px-6 py-3 hover:bg-white/15 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300">
+  <div className="h-12 w-12 rounded-full bg-gold/10">
+    <Phone className="h-5 w-5 text-navy" />
+  </div>
+  <span className="font-bold text-navy">(+40) 261-848-015</span>
+</a>
+```
+
+### Services Dropdown (Desktop)
+```jsx
+<NavigationMenuContent>
+  <ul className="grid w-[600px] grid-cols-2 gap-3 p-4">
+    <li className="rounded-md p-3 hover:bg-navy hover:text-gold">
+      <Icon className="h-5 w-5 text-gold" />
+      <span>Service Name</span>
+    </li>
+  </ul>
+</NavigationMenuContent>
+```
+
+### Services Accordion (Mobile)
+```jsx
+<button onClick={toggle} className="py-4 hover:text-gold hover:pl-4">
+  <span>Services</span>
+  <ChevronDown className={cn("h-5 w-5", isOpen && "rotate-180")} />
+</button>
+<div className={cn("overflow-hidden transition-all", isOpen ? "max-h-[500px]" : "max-h-0")}>
+  {/* Service links */}
+</div>
+```
+
+---
+
 ## 1. Color Palette
 
 ### Primary Colors
@@ -370,7 +508,111 @@ body, .body {
 
 ### Buttons
 
-#### Primary Button (Gold CTA)
+#### Primary Call Button (Integrated Phone Icon Design)
+
+**Updated Design Pattern:** The primary call button features an integrated phone icon with distinct styling for visual hierarchy.
+
+**Structure:**
+- Rounded-full pill shape
+- Phone icon in a distinct background container
+- Stacked text layout (desktop) / Inline text (mobile)
+
+```jsx
+{/* Desktop: Stacked Text Layout */}
+<a
+  href="tel:+40261848015"
+  className="group hidden sm:flex items-center gap-3 rounded-full bg-gold px-6 py-3 shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-gold/20 active:scale-[0.98]"
+>
+  {/* Icon Container */}
+  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
+    <Phone className="h-5 w-5 text-navy" />
+  </div>
+
+  {/* Stacked Text */}
+  <div className="flex flex-col">
+    <span className="text-xs text-navy/70">{t('call')}</span>
+    <span className="text-base font-bold text-navy">(+40) 261-848-015</span>
+  </div>
+</a>
+
+{/* Mobile: Inline Text Layout */}
+<a
+  href="tel:+40261848015"
+  className="flex sm:hidden items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-gold/20 active:scale-[0.98]"
+>
+  <Phone className="h-5 w-5 text-navy" />
+  <span className="text-base font-semibold text-navy">(+40) 261-848-015</span>
+</a>
+```
+
+**Call Button Styling:**
+```css
+.call-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;           /* gap-3 */
+  border-radius: 9999px;  /* rounded-full */
+  background: #d09c11;    /* bg-gold */
+  padding: 0.75rem 1.5rem; /* px-6 py-3 */
+  box-shadow: 0 10px 15px -3px rgba(208, 156, 17, 0.2); /* shadow-lg shadow-gold/20 */
+  transition: all 0.3s ease;
+}
+
+.call-button:hover {
+  background: rgba(255, 255, 255, 0.15); /* hover:bg-white/15 */
+  transform: translateY(-2px); /* hover:-translate-y-0.5 */
+  box-shadow: 0 10px 15px -3px rgba(208, 156, 17, 0.2); /* hover:shadow-gold/20 */
+}
+
+.call-button:active {
+  transform: scale(0.98); /* active:scale-[0.98] */
+}
+
+/* Icon Container */
+.call-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;           /* h-12 */
+  width: 3rem;            /* w-12 */
+  border-radius: 9999px;  /* rounded-full */
+  background: rgba(208, 156, 17, 0.1); /* bg-gold/10 */
+}
+
+/* Stacked Text (Desktop) */
+.call-button-text-stacked {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-button-label {
+  font-size: 0.75rem;     /* text-xs */
+  color: rgba(0, 58, 112, 0.7); /* text-navy/70 */
+}
+
+.call-button-number {
+  font-size: 1rem;        /* text-base */
+  font-weight: 700;       /* font-bold */
+  color: #003a70;         /* text-navy */
+}
+
+/* Inline Text (Mobile) */
+.call-button-text-inline {
+  font-size: 1rem;        /* text-base */
+  font-weight: 600;       /* font-semibold */
+  color: #003a70;         /* text-navy */
+}
+```
+
+**Tailwind Classes Reference:**
+```
+Base: rounded-full bg-gold px-6 py-3 shadow-lg shadow-gold/20
+Hover: hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-gold/20
+Active: active:scale-[0.98]
+Transition: transition-all duration-300
+```
+
+#### Primary Button (Gold CTA - Standard)
 ```css
 .btn-primary {
   background: linear-gradient(135deg, #d09c11 0%, #e6b520 100%);
@@ -645,6 +887,9 @@ body, .body {
 ### Navigation
 
 #### Desktop Navigation
+
+**Updated Design Pattern:** Services dropdown with hover interaction and icons for each service.
+
 ```css
 .navbar {
   background: #ffffff;
@@ -688,9 +933,234 @@ body, .body {
 }
 ```
 
+**Services Dropdown (Desktop - Hover Trigger):**
+
+```jsx
+<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger className="text-base font-medium text-gray-700 hover:text-navy">
+        {t('nav.services')}
+      </NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
+          {services.map((service) => (
+            <li key={service.href}>
+              <NavigationMenuLink asChild>
+                <Link
+                  href={service.href}
+                  className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-navy hover:text-gold focus:bg-navy focus:text-gold"
+                >
+                  <div className="flex items-center gap-3">
+                    <service.icon className="h-5 w-5 text-gold group-hover:text-gold transition-colors" />
+                    <div className="text-sm font-semibold leading-none group-hover:text-white">
+                      {service.title}
+                    </div>
+                  </div>
+                </Link>
+              </NavigationMenuLink>
+            </li>
+          ))}
+        </ul>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+```
+
+**Services Dropdown Styling:**
+
+```css
+/* Dropdown Container */
+.services-dropdown {
+  background: #ffffff;
+  border-radius: 0.5rem; /* rounded-md */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem; /* gap-3 */
+}
+
+/* Dropdown Item */
+.services-dropdown-item {
+  display: block;
+  padding: 0.75rem; /* p-3 */
+  border-radius: 0.375rem; /* rounded-md */
+  transition: all 0.3s ease;
+}
+
+.services-dropdown-item:hover {
+  background: #003a70; /* hover:bg-navy */
+}
+
+/* Icon + Text Container */
+.services-dropdown-item-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+}
+
+/* Service Icon */
+.services-dropdown-icon {
+  height: 1.25rem; /* h-5 */
+  width: 1.25rem;  /* w-5 */
+  color: #d09c11;  /* text-gold */
+  transition: color 0.3s ease;
+}
+
+.services-dropdown-item:hover .services-dropdown-icon {
+  color: #d09c11; /* Stays gold on hover */
+}
+
+/* Service Title */
+.services-dropdown-title {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;    /* font-semibold */
+  color: #1f2937;      /* Default text color */
+  transition: color 0.3s ease;
+}
+
+.services-dropdown-item:hover .services-dropdown-title {
+  color: #ffffff; /* hover:text-white */
+}
+```
+
+**Tailwind Classes Reference:**
+```
+Dropdown container: w-[600px] grid grid-cols-2 gap-3 p-4 rounded-md shadow-lg
+Dropdown item: block p-3 rounded-md hover:bg-navy hover:text-gold transition-colors
+Icon: h-5 w-5 text-gold
+Title: text-sm font-semibold group-hover:text-white
+```
+
 #### Mobile Menu (Enhanced Design)
 
 The mobile menu features a sophisticated gradient background with decorative elements and polished interactions.
+
+**Services Expandable Menu (Mobile):**
+
+In mobile view, services appear as an expandable accordion section instead of a dropdown.
+
+```jsx
+{/* Services Accordion Item */}
+<div className="border-b border-white/10">
+  <button
+    onClick={() => setIsServicesOpen(!isServicesOpen)}
+    className="flex w-full items-center justify-between py-4 text-xl font-medium text-white transition-all duration-300 hover:text-gold hover:pl-4"
+  >
+    <span>{t('nav.services')}</span>
+    <ChevronDown
+      className={cn(
+        "h-5 w-5 transition-transform duration-300",
+        isServicesOpen && "rotate-180"
+      )}
+    />
+  </button>
+
+  {/* Expandable Services List */}
+  <div
+    className={cn(
+      "overflow-hidden transition-all duration-300",
+      isServicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+    )}
+  >
+    <div className="space-y-2 pb-4 pl-4">
+      {services.map((service) => (
+        <Link
+          key={service.href}
+          href={service.href}
+          className="flex items-center gap-3 py-2 text-base text-white/70 transition-colors hover:text-gold"
+          onClick={() => setIsOpen(false)}
+        >
+          <service.icon className="h-4 w-4" />
+          <span>{service.title}</span>
+        </Link>
+      ))}
+    </div>
+  </div>
+</div>
+```
+
+**Mobile Services Menu Styling:**
+
+```css
+/* Services Accordion Button */
+.mobile-services-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0; /* py-4 */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 500; /* font-medium */
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mobile-services-toggle:hover {
+  color: #d09c11; /* hover:text-gold */
+  padding-left: 1rem; /* hover:pl-4 */
+}
+
+/* Chevron Icon */
+.mobile-services-icon {
+  height: 1.25rem; /* h-5 */
+  width: 1.25rem; /* w-5 */
+  transition: transform 0.3s ease;
+}
+
+.mobile-services-icon.open {
+  transform: rotate(180deg); /* rotate-180 when open */
+}
+
+/* Services List Container */
+.mobile-services-list {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-services-list.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.mobile-services-list.closed {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Individual Service Link */
+.mobile-service-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+  padding: 0.5rem 0; /* py-2 */
+  padding-left: 1rem; /* pl-4 */
+  font-size: 1rem; /* text-base */
+  color: rgba(255, 255, 255, 0.7); /* text-white/70 */
+  transition: color 0.3s ease;
+}
+
+.mobile-service-link:hover {
+  color: #d09c11; /* hover:text-gold */
+}
+
+.mobile-service-link .icon {
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+}
+```
+
+**Tailwind Classes Reference:**
+```
+Toggle button: flex w-full items-center justify-between py-4 text-xl font-medium text-white hover:text-gold hover:pl-4
+Chevron: h-5 w-5 transition-transform duration-300 [open]:rotate-180
+Container: overflow-hidden transition-all duration-300 [open]:max-h-[500px] [open]:opacity-100 [closed]:max-h-0 [closed]:opacity-0
+Service link: flex items-center gap-3 py-2 text-base text-white/70 hover:text-gold
+```
 
 **Background & Structure**
 ```css
@@ -1106,9 +1576,16 @@ The footer uses the actual logo image converted to white using CSS filters.
 
 ### Hero Section
 
+**IMPORTANT: Current Design Standards (Updated January 2026)**
+
+All hero sections must follow these updated standards:
+- **NO bottom gradient/blur effects**
+- **Solid navy background** (#003a70) without gradients or transitions
+- **Consistent padding:** `py-20 sm:py-28 lg:py-36`
+- Clean, minimal design philosophy
+
 ```html
 <section class="hero">
-  <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-badge">Badge/Category</span>
     <h1 class="hero-title">
@@ -1127,24 +1604,23 @@ The footer uses the actual logo image converted to white using CSS filters.
 ```css
 .hero {
   position: relative;
-  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #002a52 0%, #003a70 50%, #004a8f 100%);
-  background-image: url('/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 2rem;
+  background: #003a70; /* Solid navy - NO gradients */
+  padding: 5rem 2rem; /* py-20 mobile */
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(0, 58, 112, 0.9) 0%, rgba(0, 58, 112, 0.7) 100%);
+@media (min-width: 640px) {
+  .hero {
+    padding: 7rem 2rem; /* py-28 tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 9rem 2rem; /* py-36 desktop */
+  }
 }
 
 .hero-content {
@@ -1568,6 +2044,11 @@ The footer uses the actual logo image converted to white using CSS filters.
 
 ### Contact Section
 
+**Updated Contact Information:**
+- **Address:** Str. Mihail Kogălniceanu, nr. 10, Biroul 2, Pitești, Argeș
+- **Phone:** (+40) 261-848-015
+- **Email:** contact@example.com
+
 ```html
 <section class="contact">
   <div class="container">
@@ -1582,7 +2063,8 @@ The footer uses the actual logo image converted to white using CSS filters.
             <div class="contact-icon">📍</div>
             <div>
               <h4>Address</h4>
-              <p>123 Legal Street, City</p>
+              <p>Str. Mihail Kogălniceanu, nr. 10, Biroul 2</p>
+              <p>Pitești, Argeș</p>
             </div>
           </div>
 
@@ -1590,7 +2072,7 @@ The footer uses the actual logo image converted to white using CSS filters.
             <div class="contact-icon">📞</div>
             <div>
               <h4>Phone</h4>
-              <p>+40 123 456 789</p>
+              <p>(+40) 261-848-015</p>
             </div>
           </div>
 

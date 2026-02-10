@@ -4,6 +4,8 @@ import { setRequestLocale } from 'next-intl/server';
 import { posts } from '#site/content';
 import { BlogArticle, RelatedArticles, BlogCta } from '@/components/blog';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
@@ -40,12 +42,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [post.author],
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
       images: post.image ? [post.image] : undefined,
+      url: `${BASE_URL}/${locale}/blog/${slug}`,
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
       images: post.image ? [post.image] : undefined,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/blog/${slug}`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/blog/${slug}`,
+        'en-US': `${BASE_URL}/en/blog/${slug}`,
+      },
     },
   };
 }
@@ -121,7 +131,6 @@ export default async function BlogPostPage({ params }: Props) {
         author={post.author}
         category={post.category}
         content={post.body}
-        slug={post.slug}
       />
       <RelatedArticles posts={relatedPosts} />
       <BlogCta />

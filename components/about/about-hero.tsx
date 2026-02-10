@@ -94,7 +94,7 @@ export function AboutHero() {
       <div className="gold-decoration"></div>
       <div className="gold-ring"></div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
         <div className="text-center">
           {/* Trust Badge */}
           <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2 ring-1 ring-gold/20">
@@ -114,9 +114,6 @@ export function AboutHero() {
           </p>
         </div>
       </div>
-
-      {/* Bottom Gradient Transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

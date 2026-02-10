@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { X, Settings, Cookie, Shield, BarChart3, Megaphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -54,42 +55,36 @@ function ToggleSwitch({
   );
 }
 
+// Helper to get initial preferences from localStorage (client-side only)
+function getInitialPreferences(): CookiePreferences {
+  if (typeof window === 'undefined') return defaultPreferences;
+  const savedPrefs = localStorage.getItem(COOKIE_PREFERENCES_KEY);
+  if (savedPrefs) {
+    try {
+      return JSON.parse(savedPrefs);
+    } catch {
+      return defaultPreferences;
+    }
+  }
+  return defaultPreferences;
+}
+
 export function CookieConsent() {
   const t = useTranslations('CookieConsent');
   const [showBanner, setShowBanner] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [showCustomize, setShowCustomize] = useState(false);
   const [preferences, setPreferences] =
-    useState<CookiePreferences>(defaultPreferences);
+    useState<CookiePreferences>(getInitialPreferences);
 
-  // Check if consent has been given on mount
+  // Check if consent has been given on mount and show banner if needed
   useEffect(() => {
     const hasConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
     if (!hasConsent) {
       // Small delay to prevent flash on page load
       const timer = setTimeout(() => setShowBanner(true), 500);
       return () => clearTimeout(timer);
-    } else {
-      // Load saved preferences
-      const savedPrefs = localStorage.getItem(COOKIE_PREFERENCES_KEY);
-      if (savedPrefs) {
-        try {
-          setPreferences(JSON.parse(savedPrefs));
-        } catch {
-          // Invalid JSON, use defaults
-        }
-      }
     }
-  }, []);
-
-  const closeBanner = useCallback(() => {
-    setIsClosing(true);
-    // Wait for animation to complete before hiding
-    setTimeout(() => {
-      setShowBanner(false);
-      setIsClosing(false);
-      setShowCustomize(false);
-    }, 300);
   }, []);
 
   const saveConsent = useCallback((prefs: CookiePreferences) => {
@@ -282,12 +277,12 @@ export function CookieConsent() {
               <>
                 <p className="mb-6 text-sm leading-relaxed text-[#4b5563]">
                   {t('description')}{' '}
-                  <a
+                  <Link
                     href="/politica-cookies"
                     className="font-medium text-gold underline underline-offset-2 transition-colors hover:text-gold/80"
                   >
                     {t('learnMore')}
-                  </a>
+                  </Link>
                 </p>
 
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
@@ -425,44 +420,64 @@ export function CookieConsent() {
   );
 }
 
-// Utility hook for other components to check consent
-export function useCookieConsent(): CookiePreferences | null {
-  const [preferences, setPreferences] = useState<CookiePreferences | null>(
-    null
-  );
+// Helper to read cookie preferences from localStorage
+// Cache for getStoredPreferences to avoid infinite loops with useSyncExternalStore
+let cachedPreferences: CookiePreferences | null = null;
+let cachedPreferencesString: string | null = null;
 
-  useEffect(() => {
-    // Initial load
-    const hasConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (hasConsent) {
-      const savedPrefs = localStorage.getItem(COOKIE_PREFERENCES_KEY);
-      if (savedPrefs) {
-        try {
-          setPreferences(JSON.parse(savedPrefs));
-        } catch {
-          setPreferences(defaultPreferences);
-        }
-      }
+function getStoredPreferences(): CookiePreferences | null {
+  if (typeof window === 'undefined') return null;
+  const hasConsent = localStorage.getItem(COOKIE_CONSENT_KEY);
+  if (!hasConsent) {
+    cachedPreferences = null;
+    cachedPreferencesString = null;
+    return null;
+  }
+
+  const savedPrefs = localStorage.getItem(COOKIE_PREFERENCES_KEY);
+
+  // Return cached value if the stored string hasn't changed
+  if (savedPrefs === cachedPreferencesString) {
+    return cachedPreferences;
+  }
+
+  // Update cache and return new parsed value
+  cachedPreferencesString = savedPrefs;
+
+  if (savedPrefs) {
+    try {
+      cachedPreferences = JSON.parse(savedPrefs);
+      return cachedPreferences;
+    } catch {
+      cachedPreferences = defaultPreferences;
+      return cachedPreferences;
     }
+  }
 
-    // Listen for updates
-    const handleUpdate = (event: CustomEvent<CookiePreferences>) => {
-      setPreferences(event.detail);
-    };
+  cachedPreferences = null;
+  return null;
+}
 
-    window.addEventListener(
-      'cookieConsentUpdate',
-      handleUpdate as EventListener
-    );
-    return () => {
-      window.removeEventListener(
-        'cookieConsentUpdate',
-        handleUpdate as EventListener
-      );
-    };
-  }, []);
+// Subscribe function for useSyncExternalStore
+function subscribeToCookieConsent(callback: () => void): () => void {
+  const handleUpdate = () => callback();
+  window.addEventListener('cookieConsentUpdate', handleUpdate);
+  return () => window.removeEventListener('cookieConsentUpdate', handleUpdate);
+}
 
-  return preferences;
+// Server snapshot - always return null (no localStorage on server)
+function getServerSnapshot(): CookiePreferences | null {
+  return null;
+}
+
+// Utility hook for other components to check consent
+// Uses useSyncExternalStore to avoid setState in useEffect
+export function useCookieConsent(): CookiePreferences | null {
+  return useSyncExternalStore(
+    subscribeToCookieConsent,
+    getStoredPreferences,
+    getServerSnapshot
+  );
 }
 
 // Utility to open cookie settings (can be called from footer link)

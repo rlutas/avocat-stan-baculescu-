@@ -127,7 +127,7 @@ export function ServiceDetailCta() {
             <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
               <Phone className="h-5 w-5 text-gold" />
             </div>
-            <span>+40 261-848-015</span>
+            <span>+40 745 466 720</span>
           </div>
           <div className="flex items-center rounded-xl bg-white/5 px-4 py-3 text-white/90 ring-1 ring-white/10 transition-all duration-300 hover:bg-white/10 hover:ring-gold/30">
             <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
@@ -139,7 +139,7 @@ export function ServiceDetailCta() {
             <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
               <MapPin className="h-5 w-5 text-gold" />
             </div>
-            <span>Str. Aurel Popp 2, Satu Mare</span>
+            <span>Str. Decebal Nr. 4, Satu Mare</span>
           </div>
         </div>
 

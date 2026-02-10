@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/hero';
+import { HomeServices } from '@/components/home/home-services';
+import { HomeWhyUs } from '@/components/home/home-why-us';
+import { HomeMethodology } from '@/components/home/home-methodology';
 import { Testimonials } from '@/components/testimonials';
+import { HomeCta } from '@/components/home/home-cta';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -11,7 +15,6 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'HomePage' });
 
   const title =
     locale === 'ro'
@@ -49,7 +52,11 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <Hero />
+      <HomeServices />
+      <HomeWhyUs />
+      <HomeMethodology />
       <Testimonials />
+      <HomeCta />
     </>
   );
 }

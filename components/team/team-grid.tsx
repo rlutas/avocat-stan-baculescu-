@@ -176,7 +176,6 @@ function TeamCard({
   index: number;
 }) {
   const isGold = variant === 'gold';
-  const isNavy = variant === 'navy';
   const isLight = variant === 'light';
 
   // Colors based on variant

@@ -3,6 +3,8 @@ import { setRequestLocale } from 'next-intl/server';
 import { posts } from '#site/content';
 import { BlogHero, BlogListClient, BlogCta } from '@/components/blog';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -27,6 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/blog`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/blog`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/blog`,
+        'en-US': `${BASE_URL}/en/blog`,
+      },
     },
   };
 }

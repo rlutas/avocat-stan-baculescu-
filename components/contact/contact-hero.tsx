@@ -95,7 +95,7 @@ export function ContactHero() {
       <div className="gold-decoration" />
       <div className="gold-ring" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
         <div className="text-center">
           {/* Trust Badge */}
           <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2 ring-1 ring-gold/20">
@@ -115,9 +115,6 @@ export function ContactHero() {
           </p>
         </div>
       </div>
-
-      {/* Bottom fade for transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

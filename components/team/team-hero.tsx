@@ -7,7 +7,7 @@ export function TeamHero() {
   const t = useTranslations('TeamPage.hero');
 
   return (
-    <section className="relative overflow-hidden bg-navy py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-navy py-20 sm:py-28 lg:py-36">
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -131,8 +131,6 @@ export function TeamHero() {
         </div>
       </div>
 
-      {/* Bottom fade to content */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 }

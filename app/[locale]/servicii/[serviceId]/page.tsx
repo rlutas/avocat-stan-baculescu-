@@ -8,6 +8,8 @@ import {
   ServiceDetailCta,
 } from '@/components/service-detail';
 
+const BASE_URL = 'https://stanbaculescu.ro';
+
 const validServiceIds = [
   'malpraxis-medical',
   'drept-civil',
@@ -46,6 +48,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
+      url: `${BASE_URL}/${locale}/servicii/${serviceId}`,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/servicii/${serviceId}`,
+      languages: {
+        'ro-RO': `${BASE_URL}/ro/servicii/${serviceId}`,
+        'en-US': `${BASE_URL}/en/servicii/${serviceId}`,
+      },
     },
   };
 }
@@ -64,13 +74,13 @@ function generateLegalServiceJsonLd(
     description: description,
     provider: {
       '@type': 'LegalService',
-      name: 'Cabinet de Avocatura Stan-Baculescu',
+      name: 'STAN-BACULESCU-SOCIETATE CIVILA DE AVOCATI',
       url: 'https://stanbaculescu.ro',
-      telephone: '+40261848015',
+      telephone: '+40745466720',
       email: 'office@stanbaculescu.ro',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Str. Aurel Popp 2',
+        streetAddress: 'Str. Decebal Nr. 4, Et. 1',
         addressLocality: 'Satu Mare',
         addressCountry: 'RO',
       },

@@ -31,14 +31,14 @@ export function ContactInfo() {
     {
       icon: MapPin,
       label: t('addressLabel'),
-      value: 'Str. Aurel Popp 2, Satu Mare 440014, Romania',
-      href: 'https://maps.google.com/?q=Str.+Aurel+Popp+2,+Satu+Mare,+Romania',
+      value: 'Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare',
+      href: 'https://maps.google.com/?q=Str.+Decebal+4,+Satu+Mare,+Romania',
     },
     {
       icon: Phone,
       label: t('phoneLabel'),
-      value: '+40 261-848-015',
-      href: 'tel:+40261848015',
+      value: '+40 745 466 720',
+      href: 'tel:+40745466720',
     },
     {
       icon: Mail,

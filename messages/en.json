@@ -29,6 +29,45 @@
       "founder": "Founder",
       "satisfiedClients": "Satisfied Clients",
       "yearsExperience": "Years Experience"
+    },
+    "services": {
+      "trustBadge": "8 Practice Areas",
+      "titleLine1": "Legal Services",
+      "titleLine2": "Our Practice Areas",
+      "description": "We provide comprehensive legal assistance across various areas of law, from civil and criminal law to medical malpractice and traffic accidents.",
+      "viewAll": "View All Services",
+      "viewDetails": "Learn more"
+    },
+    "whyUs": {
+      "trustBadge": "Why Choose Us",
+      "titleLine1": "Your Legal Partner",
+      "titleLine2": "Why Stan-Baculescu",
+      "description": "With a dedicated team and extensive experience, we stand by you at every step in resolving your legal matters.",
+      "stat1Value": "15+",
+      "stat1Label": "Years of Experience",
+      "stat2Value": "1000+",
+      "stat2Label": "Satisfied Clients",
+      "stat3Value": "8",
+      "stat3Label": "Practice Areas",
+      "value1Title": "Proven Experience",
+      "value1Description": "Over 15 years of legal practice and hundreds of cases successfully resolved in court.",
+      "value2Title": "Personalized Approach",
+      "value2Description": "Every case receives individual attention and a strategy tailored to the specific situation.",
+      "value3Title": "Transparent Communication",
+      "value3Description": "We keep you informed at every stage and clearly explain the available options."
+    },
+    "methodology": {
+      "trustBadge": "Our Process",
+      "titleLine1": "How We Work",
+      "titleLine2": "4 Simple Steps",
+      "description": "A clear and transparent process, from the initial consultation to achieving the desired result."
+    },
+    "cta": {
+      "title": "Need Legal Assistance?",
+      "description": "Schedule a consultation and speak with one of our attorneys about your situation. We are here to help.",
+      "button": "Schedule a Consultation",
+      "callLabel": "Or call directly",
+      "available": "Available Monday - Friday, 09:00 - 17:00"
     }
   },
   "AboutPage": {
@@ -719,13 +758,13 @@
       },
       "contact": {
         "title": "7. Contact",
-        "content": "For any questions or requests related to this Privacy Policy or to exercise your rights, you can contact us at the email address office@stanbaculescu.ro or at our office at Str. Aurel Popp nr. 2, Satu Mare, Romania."
+        "content": "For any questions or requests related to this Privacy Policy or to exercise your rights, you can contact us at the email address office@stanbaculescu.ro or at our office at Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare."
       }
     },
     "dataProtection": {
       "title": "Questions about Data Protection?",
       "description": "We are at your disposal for any clarifications regarding how we process and protect your personal data.",
-      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+      "address": "Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare"
     }
   },
   "CookieConsent": {
@@ -822,7 +861,7 @@
     "questions": {
       "title": "Questions about Terms and Conditions?",
       "description": "We are at your disposal for any clarifications regarding the terms of use of our website and services.",
-      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+      "address": "Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare"
     }
   },
   "NotFound": {
@@ -918,7 +957,7 @@
     "questions": {
       "title": "Questions about Cookies?",
       "description": "We are at your disposal for any clarifications regarding how we use cookies on our website.",
-      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+      "address": "Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare"
     }
   }
 }

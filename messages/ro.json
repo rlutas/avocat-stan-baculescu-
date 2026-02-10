@@ -29,6 +29,45 @@
       "founder": "Fondator",
       "satisfiedClients": "Clienti Multumiti",
       "yearsExperience": "Ani Experienta"
+    },
+    "services": {
+      "trustBadge": "8 Arii de Practica",
+      "titleLine1": "Servicii Juridice",
+      "titleLine2": "Ariile Noastre de Practica",
+      "description": "Oferim asistenta juridica completa in diverse domenii ale dreptului, de la drept civil si penal la malpraxis medical si accidente rutiere.",
+      "viewAll": "Vezi Toate Serviciile",
+      "viewDetails": "Afla mai multe"
+    },
+    "whyUs": {
+      "trustBadge": "De Ce Sa Ne Alegeti",
+      "titleLine1": "Partenerul Dvs. Juridic",
+      "titleLine2": "De Ce Stan-Baculescu",
+      "description": "Cu o echipa dedicata si experienta vasta, suntem alaturi de dumneavoastra la fiecare pas in rezolvarea problemelor juridice.",
+      "stat1Value": "15+",
+      "stat1Label": "Ani de Experienta",
+      "stat2Value": "1000+",
+      "stat2Label": "Clienti Multumiti",
+      "stat3Value": "8",
+      "stat3Label": "Arii de Practica",
+      "value1Title": "Experienta Dovedita",
+      "value1Description": "Peste 15 ani de practica juridica si sute de cazuri rezolvate cu succes in instanta.",
+      "value2Title": "Abordare Personalizata",
+      "value2Description": "Fiecare caz primeste atentie individuala si o strategie adaptata situatiei specifice.",
+      "value3Title": "Comunicare Transparenta",
+      "value3Description": "Va tinem la curent cu fiecare etapa si va explicam clar optiunile disponibile."
+    },
+    "methodology": {
+      "trustBadge": "Procesul Nostru",
+      "titleLine1": "Cum Lucram",
+      "titleLine2": "4 Pasi Simpli",
+      "description": "Un proces clar si transparent, de la prima consultatie pana la obtinerea rezultatului dorit."
+    },
+    "cta": {
+      "title": "Aveti Nevoie de Asistenta Juridica?",
+      "description": "Programati o consultatie si discutati cu unul dintre avocatii nostri despre situatia dumneavoastra. Suntem aici sa va ajutam.",
+      "button": "Programeaza o Consultatie",
+      "callLabel": "Sau sunati direct",
+      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
     }
   },
   "AboutPage": {
@@ -719,13 +758,13 @@
       },
       "contact": {
         "title": "7. Contact",
-        "content": "Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau pentru exercitarea drepturilor dumneavoastra, ne puteti contacta la adresa de email office@stanbaculescu.ro sau la sediul nostru din Str. Aurel Popp nr. 2, Satu Mare, Romania."
+        "content": "Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau pentru exercitarea drepturilor dumneavoastra, ne puteti contacta la adresa de email office@stanbaculescu.ro sau la sediul nostru din Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare."
       }
     },
     "dataProtection": {
       "title": "Intrebari despre Protectia Datelor?",
       "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind modul in care prelucram si protejam datele dumneavoastra personale.",
-      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+      "address": "Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare"
     }
   },
   "CookieConsent": {
@@ -822,7 +861,7 @@
     "questions": {
       "title": "Intrebari despre Termenii si Conditiile?",
       "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind termenii de utilizare a site-ului si serviciilor noastre.",
-      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+      "address": "Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare"
     }
   },
   "NotFound": {
@@ -918,7 +957,7 @@
     "questions": {
       "title": "Intrebari despre Cookie-uri?",
       "description": "Suntem la dispozitia dumneavoastra pentru orice clarificari privind modul in care utilizam cookie-urile pe site-ul nostru.",
-      "address": "Str. Aurel Popp nr. 2, Satu Mare, 440014, Romania"
+      "address": "Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare"
     }
   }
 }

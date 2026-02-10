@@ -6,9 +6,9 @@ import { MapPin } from 'lucide-react';
 export function ContactMap() {
   const t = useTranslations('ContactPage.map');
 
-  // Google Maps embed URL for Str. Aurel Popp 2, Satu Mare
+  // Google Maps embed URL for Str. Decebal Nr. 4, Satu Mare
   const mapSrc =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.9881732890584!2d22.8685!3d47.7925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4737d8b4f3c3c3c3%3A0x0!2sStr.%20Aurel%20Popp%202%2C%20Satu%20Mare%20440014%2C%20Romania!5e0!3m2!1sen!2sro!4v1704067200000!5m2!1sen!2sro';
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.9881732890584!2d22.8685!3d47.7925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4737d8b4f3c3c3c3%3A0x0!2sStr.%20Decebal%204%2C%20Satu%20Mare%2C%20Romania!5e0!3m2!1sen!2sro!4v1704067200000!5m2!1sen!2sro';
 
   return (
     <section className="py-16 bg-[#f8f9fa]">

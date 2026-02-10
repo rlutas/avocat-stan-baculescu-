@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import { useCookieConsent } from '@/components/cookie-consent';
 
@@ -12,17 +11,12 @@ export function GoogleAnalytics({
   measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
 }: GoogleAnalyticsProps) {
   const cookiePreferences = useCookieConsent();
-  const [shouldLoad, setShouldLoad] = useState(false);
 
-  useEffect(() => {
-    // Only load GA if analytics cookies are accepted
-    if (cookiePreferences?.analytics && measurementId) {
-      setShouldLoad(true);
-    }
-  }, [cookiePreferences, measurementId]);
+  // Derive shouldLoad directly from props - no state needed
+  const shouldLoad = Boolean(cookiePreferences?.analytics && measurementId);
 
   // Don't render anything if no measurement ID or no consent
-  if (!shouldLoad || !measurementId) {
+  if (!shouldLoad) {
     return null;
   }
 

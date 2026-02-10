@@ -249,15 +249,17 @@ export function Hero() {
                 </Link>
               </Button>
               <a
-                href="tel:+40261848015"
-                className="group flex h-14 items-center gap-3 rounded-full bg-white/5 px-6 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/10 hover:ring-white/40"
+                href="tel:+40745466720"
+                className="group relative flex h-14 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/15 hover:ring-gold/40 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20">
-                  <Phone className="h-4 w-4 text-gold" />
+                {/* Icon section with distinct background - matches text height */}
+                <div className="flex h-full w-12 sm:w-14 flex-shrink-0 items-center justify-center self-stretch bg-gold/10 transition-all duration-300 group-hover:bg-gold/20 group-active:bg-gold/30">
+                  <Phone className="h-5 w-5 text-gold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 group-active:scale-95" />
                 </div>
-                <div className="text-left">
-                  <p className="text-xs text-white/50">{t('callNow')}</p>
-                  <p className="text-sm font-semibold text-white">+40 261-848-015</p>
+                {/* Text section - horizontal on mobile, stacked on sm+ */}
+                <div className="flex items-center gap-1.5 px-3 sm:block sm:px-5 sm:text-left">
+                  <p className="text-sm sm:text-xs text-white/50 transition-colors duration-300 group-hover:text-white/70 whitespace-nowrap">{t('callNow')}</p>
+                  <p className="text-base sm:text-sm font-semibold text-white whitespace-nowrap">+40 745 466 720</p>
                 </div>
               </a>
             </div>
