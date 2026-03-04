@@ -2,13 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Scale, Home, Briefcase, Phone, ArrowRight } from 'lucide-react';
+import { Scale, Home, Briefcase, Phone, ArrowRight, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function NotFound() {
   const t = useTranslations('NotFound');
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center bg-navy relative overflow-hidden">
+    <div className="min-h-[80vh] flex items-center justify-center bg-[linear-gradient(135deg,#002a52_0%,#003a70_60%,#004a8f_100%)] relative overflow-hidden">
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -36,24 +38,6 @@ export default function NotFound() {
             box-shadow: 0 6px 25px rgba(208, 156, 17, 0.6);
           }
         }
-        @keyframes gold-rotate {
-          0% {
-            transform: translate(-50%, -50%) rotate(0deg);
-          }
-          100% {
-            transform: translate(-50%, -50%) rotate(360deg);
-          }
-        }
-        @keyframes gold-pulse {
-          0%, 100% {
-            opacity: 0.15;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.25;
-            transform: scale(1.05);
-          }
-        }
         @keyframes number-glow {
           0%, 100% {
             text-shadow: 0 0 30px rgba(208, 156, 17, 0.3);
@@ -62,69 +46,76 @@ export default function NotFound() {
             text-shadow: 0 0 50px rgba(208, 156, 17, 0.5);
           }
         }
-        .gold-decoration {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 600px;
-          height: 600px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(208, 156, 17, 0.15) 0%, rgba(208, 156, 17, 0.05) 50%, transparent 70%);
-          animation: gold-pulse 6s ease-in-out infinite;
-          pointer-events: none;
-        }
-        .gold-ring {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 500px;
-          height: 500px;
-          border-radius: 50%;
-          border: 2px solid rgba(208, 156, 17, 0.15);
-          animation: gold-rotate 30s linear infinite;
-          pointer-events: none;
-        }
-        .gold-ring::before {
-          content: '';
-          position: absolute;
-          top: -5px;
-          left: 50%;
-          width: 10px;
-          height: 10px;
-          background: rgba(208, 156, 17, 0.6);
-          border-radius: 50%;
-          box-shadow: 0 0 10px rgba(208, 156, 17, 0.4);
-        }
-        .gold-ring::after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 50%;
-          width: 10px;
-          height: 10px;
-          background: rgba(208, 156, 17, 0.6);
-          border-radius: 50%;
-          box-shadow: 0 0 10px rgba(208, 156, 17, 0.4);
-        }
       `}</style>
 
-      {/* Gold decorative elements */}
-      <div className="gold-decoration" />
-      <div className="gold-ring" />
+      {/* Grid texture */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
 
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      {/* Gold radial glow on right side */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 h-[700px] w-[500px] opacity-15"
+        style={{
+          background:
+            'radial-gradient(circle at 80% 40%, rgba(208,156,17,0.4) 0%, rgba(208,156,17,0.08) 50%, transparent 70%)',
+        }}
+      />
+
+      {/* Gold shimmer top line */}
+      <div className="absolute left-0 right-0 top-0 z-20 h-[2px] animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(90deg,transparent_0%,#d09c11_25%,#e6b520_50%,#d09c11_75%,transparent_100%)]" />
+
+      {/* Noise grain SVG */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.03] mix-blend-soft-light" aria-hidden="true">
+        <filter id="notFoundNoise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#notFoundNoise)" />
+      </svg>
+
+      {/* Animated gold line art */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+        <motion.path
+          d="M-50 800 Q350 400 700 500 T1450 100"
+          stroke="rgba(208, 156, 17, 0.10)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{
+            pathLength: { duration: 3, ease: 'easeInOut', delay: 1.2 },
+            opacity: { duration: 0.5, delay: 1.2 },
           }}
         />
-      </div>
+        <motion.path
+          d="M-50 830 Q350 430 700 530 T1450 130"
+          stroke="rgba(208, 156, 17, 0.05)"
+          strokeWidth="1"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{
+            pathLength: { duration: 3.5, ease: 'easeInOut', delay: 1.5 },
+            opacity: { duration: 0.5, delay: 1.5 },
+          }}
+        />
+      </svg>
 
       <div className="max-w-3xl mx-auto px-4 py-16 text-center relative z-10">
+        {/* Site Logo */}
+        <div
+          style={{
+            animation: 'fadeInUp 0.8s ease-out both',
+          }}
+        >
+          <Image src="/images/logo.webp" alt="SCA Stan-Baculescu" width={160} height={50} className="mx-auto mb-6 brightness-0 invert" />
+        </div>
+
         {/* Animated Scale Icon */}
         <div
           className="mb-6 flex justify-center"
@@ -182,7 +173,7 @@ export default function NotFound() {
         >
           <Link
             href="/"
-            className="group inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-4 rounded-xl hover:bg-gold/90 transition-all duration-300"
+            className="group inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-4 rounded-full hover:bg-gold/90 transition-all duration-300"
             style={{
               animation: 'pulse-glow 2s ease-in-out infinite',
             }}
@@ -204,7 +195,7 @@ export default function NotFound() {
             <div className="w-full border-t border-white/10"></div>
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-navy px-4 text-white/50 text-sm">{t('orVisit')}</span>
+            <span className="px-4 text-white/50 text-sm" style={{ backgroundColor: '#002a52' }}>{t('orVisit')}</span>
           </div>
         </div>
 
@@ -233,6 +224,24 @@ export default function NotFound() {
             </div>
             <span>{t('contactUs')}</span>
           </Link>
+        </div>
+
+        {/* Contact info */}
+        <div
+          className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-white/50 text-sm"
+          style={{
+            animation: 'fadeInUp 0.8s ease-out 0.7s both',
+          }}
+        >
+          <a href="mailto:office@stanbaculescu.ro" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <Mail className="w-4 h-4" />
+            office@stanbaculescu.ro
+          </a>
+          <span className="hidden sm:inline">|</span>
+          <a href="tel:+40745466720" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <Phone className="w-4 h-4" />
+            +40 745 466 720
+          </a>
         </div>
       </div>
     </div>

@@ -1,11 +1,20 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import { ArrowLeft, Cookie, Settings, BarChart3, Megaphone, Clock, Shield, Mail } from 'lucide-react';
 
 export default function CookiePolicyContent() {
   const t = useTranslations('CookiePolicy');
+
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   const sections = [
     {
@@ -95,122 +104,130 @@ export default function CookiePolicyContent() {
 
   return (
     <main className="min-h-screen bg-white">
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes gold-rotate {
-          0% {
-            transform: translate(-50%, -50%) rotate(0deg);
-          }
-          100% {
-            transform: translate(-50%, -50%) rotate(360deg);
-          }
-        }
-        @keyframes gold-pulse {
-          0%, 100% {
-            opacity: 0.15;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.25;
-            transform: scale(1.05);
-          }
-        }
-        .gold-decoration {
-          position: absolute;
-          top: 50%;
-          left: 70%;
-          transform: translate(-50%, -50%);
-          width: 350px;
-          height: 350px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(208, 156, 17, 0.2) 0%, rgba(208, 156, 17, 0.05) 50%, transparent 70%);
-          animation: gold-pulse 6s ease-in-out infinite;
-          pointer-events: none;
-        }
-        .gold-ring {
-          position: absolute;
-          top: 50%;
-          left: 70%;
-          transform: translate(-50%, -50%);
-          width: 300px;
-          height: 300px;
-          border-radius: 50%;
-          border: 2px solid rgba(208, 156, 17, 0.15);
-          animation: gold-rotate 30s linear infinite;
-          pointer-events: none;
-        }
-        .gold-ring::before {
-          content: '';
-          position: absolute;
-          top: -5px;
-          left: 50%;
-          width: 10px;
-          height: 10px;
-          background: rgba(208, 156, 17, 0.6);
-          border-radius: 50%;
-          box-shadow: 0 0 10px rgba(208, 156, 17, 0.4);
-        }
-        .gold-ring::after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 50%;
-          width: 10px;
-          height: 10px;
-          background: rgba(208, 156, 17, 0.6);
-          border-radius: 50%;
-          box-shadow: 0 0 10px rgba(208, 156, 17, 0.4);
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 1s ease-out both;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-      `}</style>
-
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-navy py-16 md:py-20">
-        {/* Gold decorative elements */}
-        <div className="gold-decoration"></div>
-        <div className="gold-ring"></div>
+      <section ref={heroRef} className="relative overflow-hidden bg-[linear-gradient(135deg,#002a52_0%,#003a70_60%,#004a8f_100%)] pt-32 pb-20 sm:pt-40 sm:pb-28">
+        {/* Subtle grid texture */}
+        <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+              backgroundSize: '60px 60px',
+            }}
+          />
+        </div>
 
-        <div className="relative container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Trust Badge */}
-            <div className="animate-fade-in-up inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full text-sm font-medium mb-6 ring-1 ring-gold/20">
-              <Cookie className="h-4 w-4" />
-              <span>{t('badge')}</span>
-            </div>
+        {/* Gold radial glow — right side */}
+        <div
+          className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3"
+          style={{
+            width: '600px',
+            height: '600px',
+            borderRadius: '50%',
+            background:
+              'radial-gradient(circle, rgba(208,156,17,0.18) 0%, rgba(208,156,17,0.06) 45%, transparent 70%)',
+          }}
+        />
 
-            {/* Two-line Headline */}
-            <h1 className="animate-fade-in-up delay-100 font-heading font-bold leading-tight text-white mb-4">
-              <span className="block text-lg sm:text-xl lg:text-2xl text-white/70 font-medium">{t('hero.titleLine1')}</span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl">{t('hero.titleLine2')}</span>
+        {/* Gold accent top line with shimmer */}
+        <div className="absolute left-0 right-0 top-0 h-[2px] animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(90deg,transparent_0%,#d09c11_25%,#e6b520_50%,#d09c11_75%,transparent_100%)]" />
+
+        {/* Noise grain texture */}
+        <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.03] mix-blend-soft-light" aria-hidden="true">
+          <filter id="cookieHeroNoise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#cookieHeroNoise)" />
+        </svg>
+
+        {/* Animated gold line art */}
+        <svg className="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+          <motion.path
+            d="M-50 800 Q350 400 700 500 T1450 100"
+            stroke="rgba(208, 156, 17, 0.10)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              pathLength: { duration: 3, ease: "easeInOut", delay: 1.2 },
+              opacity: { duration: 0.5, delay: 1.2 }
+            }}
+          />
+          <motion.path
+            d="M-50 830 Q350 430 700 530 T1450 130"
+            stroke="rgba(208, 156, 17, 0.05)"
+            strokeWidth="1"
+            strokeLinecap="round"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              pathLength: { duration: 3.5, ease: "easeInOut", delay: 1.5 },
+              opacity: { duration: 0.5, delay: 1.5 }
+            }}
+          />
+        </svg>
+
+        <motion.div style={{ y: contentY }} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            {/* Gold label */}
+            <p
+              className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-gold"
+              style={{ animation: 'fadeInUp 0.8s ease-out both' }}
+            >
+              {t('badge')}
+            </p>
+
+            {/* Heading */}
+            <h1
+              className="font-heading font-bold leading-[1.05] text-white"
+              style={{ animation: 'fadeInUp 0.8s ease-out 120ms both' }}
+            >
+              <span className="mb-1 block text-2xl font-semibold text-gold/90 sm:text-3xl">
+                {t('hero.titleLine1')}
+              </span>
+              <span className="block text-5xl sm:text-6xl lg:text-7xl lg:whitespace-nowrap">
+                {t('hero.titleLine2')}
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="animate-fade-in-up delay-200 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+            {/* Animated gold bar */}
+            <div
+              className="mt-5 h-[2px] w-16 origin-left bg-gold"
+              style={{ animation: 'lineReveal 1.2s ease-out 200ms both' }}
+            />
+
+            {/* Description */}
+            <p
+              className="mt-6 max-w-lg text-lg leading-relaxed text-white/70"
+              style={{ animation: 'fadeInUp 0.8s ease-out 280ms both' }}
+            >
               {t('hero.subtitle')}
             </p>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/[0.04] to-transparent" />
+
+        <style jsx>{`
+          @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes lineReveal {
+            from { transform: scaleX(0); }
+            to   { transform: scaleX(1); }
+          }
+        `}</style>
       </section>
 
       {/* Back Link */}
       <div className="container mx-auto px-4 md:px-6 py-6">
         <Link
           href="/"
-          className="animate-fade-in-up delay-300 inline-flex items-center gap-2 text-navy hover:text-gold transition-colors"
+          className="inline-flex items-center gap-2 text-navy hover:text-gold transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>{t('backToHome')}</span>
