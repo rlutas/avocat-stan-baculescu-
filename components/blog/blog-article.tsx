@@ -48,9 +48,9 @@ export function BlogArticle({
             <ScrollAnimate variant="fadeUp">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-gold mb-8 transition-colors duration-300"
+                className="mb-8 inline-flex items-center gap-2 text-white/70 transition-colors duration-300 hover:text-gold"
               >
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="h-4 w-4" />
                 {t('backToBlog')}
               </Link>
             </ScrollAnimate>
@@ -58,8 +58,8 @@ export function BlogArticle({
             {/* Category badge */}
             <ScrollAnimate variant="fadeUp" delay={0.1}>
               <div className="mb-6">
-                <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-navy bg-gold rounded-full shadow-md">
-                  <Tag className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-sm font-medium text-navy shadow-md">
+                  <Tag className="h-3.5 w-3.5" />
                   {category}
                 </span>
               </div>
@@ -74,7 +74,7 @@ export function BlogArticle({
 
             {/* Description */}
             <ScrollAnimate variant="fadeUp" delay={0.3}>
-              <p className="text-lg text-white/70 leading-relaxed mb-8">
+              <p className="mb-8 text-lg leading-relaxed text-white/70">
                 {description}
               </p>
             </ScrollAnimate>
@@ -92,33 +92,33 @@ export function BlogArticle({
                       className="rounded-full object-cover"
                     />
                   ) : (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gold/20 ring-2 ring-gold/30">
-                      <User className="w-5 h-5 text-gold" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20 ring-2 ring-gold/30">
+                      <User className="h-5 w-5 text-gold" />
                     </div>
                   )}
                   <div>
-                    <p className="text-xs text-white/50 uppercase tracking-wider">{t('article.writtenBy')}</p>
-                    <p className="text-white font-semibold">{author}</p>
+                    <p className="text-xs uppercase tracking-wider text-white/50">{t('article.writtenBy')}</p>
+                    <p className="font-semibold text-white">{author}</p>
                   </div>
                 </div>
-                <div className="hidden sm:block h-8 w-px bg-white/20" />
+                <div className="hidden h-8 w-px bg-white/20 sm:block" />
                 <div className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gold/20 ring-2 ring-gold/30">
-                    <Calendar className="w-5 h-5 text-gold" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20 ring-2 ring-gold/30">
+                    <Calendar className="h-5 w-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-xs text-white/50 uppercase tracking-wider">{t('article.publishedOn')}</p>
-                    <time dateTime={date} className="text-white font-semibold">{formattedDate}</time>
+                    <p className="text-xs uppercase tracking-wider text-white/50">{t('article.publishedOn')}</p>
+                    <time dateTime={date} className="font-semibold text-white">{formattedDate}</time>
                   </div>
                 </div>
-                <div className="hidden sm:block h-8 w-px bg-white/20" />
+                <div className="hidden h-8 w-px bg-white/20 sm:block" />
                 <div className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gold/20 ring-2 ring-gold/30">
-                    <Clock className="w-5 h-5 text-gold" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20 ring-2 ring-gold/30">
+                    <Clock className="h-5 w-5 text-gold" />
                   </div>
                   <div>
-                    <p className="text-xs text-white/50 uppercase tracking-wider">&nbsp;</p>
-                    <p className="text-white font-semibold">{readingTime} {t('article.readingTime')}</p>
+                    <p className="text-xs uppercase tracking-wider text-white/50">&nbsp;</p>
+                    <p className="font-semibold text-white">{readingTime} {t('article.readingTime')}</p>
                   </div>
                 </div>
               </div>
@@ -130,10 +130,10 @@ export function BlogArticle({
       {/* Article content */}
       <article className="bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="mx-auto max-w-4xl">
             {/* Featured image */}
             {image && (
-              <ScrollAnimate variant="scaleUp" className="-mt-16 relative z-10 mb-12">
+              <ScrollAnimate variant="scaleUp" className="relative z-10 -mt-16 mb-12">
                 <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-black/5">
                   <Image
                     src={image}
@@ -143,7 +143,6 @@ export function BlogArticle({
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
                     priority
                   />
-                  {/* Subtle overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                 </div>
               </ScrollAnimate>
@@ -151,35 +150,22 @@ export function BlogArticle({
 
             {/* Gold divider */}
             <ScrollAnimate variant="fadeIn" delay={0.1}>
-              <div className="flex items-center gap-4 mb-12">
+              <div className="mb-12 flex items-center gap-4">
                 <div className="h-px flex-1 bg-gradient-to-r from-gold/40 to-transparent" />
-                <div className="w-2 h-2 rotate-45 bg-gold" />
+                <div className="h-2 w-2 rotate-45 bg-gold" />
                 <div className="h-px flex-1 bg-gradient-to-l from-gold/40 to-transparent" />
               </div>
             </ScrollAnimate>
 
             {/* Article body */}
             <ScrollAnimate variant="fadeUp" delay={0.2}>
-              <div className="max-w-3xl mx-auto">
-                <div
-                  className="prose prose-lg max-w-none mb-16
-                    prose-headings:font-heading prose-headings:font-bold prose-headings:text-navy
-                    prose-h2:text-2xl prose-h2:sm:text-3xl prose-h2:mt-12 prose-h2:mb-5 prose-h2:leading-tight
-                    prose-h3:text-xl prose-h3:sm:text-2xl prose-h3:mt-10 prose-h3:mb-4
-                    prose-p:text-[#374151] prose-p:leading-[1.8] prose-p:text-base prose-p:sm:text-lg
-                    prose-a:text-gold prose-a:font-semibold prose-a:no-underline prose-a:border-b prose-a:border-gold/30 hover:prose-a:border-gold
-                    prose-strong:text-navy prose-strong:font-bold
-                    prose-ul:my-6 prose-li:text-[#374151] prose-li:leading-[1.8]
-                    prose-ol:my-6
-                    prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:bg-[#fef9e7]/50 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:text-navy prose-blockquote:font-heading prose-blockquote:text-lg prose-blockquote:sm:text-xl prose-blockquote:leading-relaxed prose-blockquote:my-10
-                    prose-img:rounded-xl prose-img:shadow-lg
-                    prose-hr:border-gold/20"
-                >
+              <div className="mx-auto max-w-3xl">
+                <div className="blog-content mb-16">
                   <MDXContent />
                 </div>
 
                 {/* Bottom divider */}
-                <div className="flex items-center gap-4 mb-10">
+                <div className="mb-10 flex items-center gap-4">
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
                 </div>
 

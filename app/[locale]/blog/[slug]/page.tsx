@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { posts } from '#site/content';
-import { BlogArticle, RelatedArticles, BlogCta } from '@/components/blog';
+import { BlogArticle, RelatedArticles } from '@/components/blog';
 import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
@@ -154,7 +154,6 @@ export default async function BlogPostPage({ params }: Props) {
         image={post.image}
       />
       <RelatedArticles posts={relatedPosts} />
-      <BlogCta />
     </main>
   );
 }
