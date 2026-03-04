@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'ro-RO': `${BASE_URL}/ro/blog`,
         'en-US': `${BASE_URL}/en/blog`,
+        'x-default': `${BASE_URL}/ro/blog`,
       },
     },
   };

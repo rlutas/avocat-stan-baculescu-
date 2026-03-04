@@ -55,6 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'ro-RO': `${BASE_URL}/ro/blog/${slug}`,
         'en-US': `${BASE_URL}/en/blog/${slug}`,
+        'x-default': `${BASE_URL}/ro/blog/${slug}`,
       },
     },
   };
@@ -100,18 +101,15 @@ export default async function BlogPostPage({ params }: Props) {
     '@type': 'Article',
     headline: post.title,
     description: post.description,
+    image: post.image ? `https://stanbaculescu.ro${post.image}` : undefined,
     datePublished: post.date,
+    dateModified: post.date,
     author: {
       '@type': 'Person',
       name: post.author,
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Societate Civila de Avocati Stan-Baculescu',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://stanbaculescu.ro/images/logo.webp',
-      },
+      '@id': 'https://stanbaculescu.ro/#organization',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',

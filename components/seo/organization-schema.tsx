@@ -1,5 +1,3 @@
-'use client';
-
 const BASE_URL = 'https://stanbaculescu.ro';
 
 const organizationSchema = {
@@ -23,9 +21,9 @@ const organizationSchema = {
     areaServed: 'RO',
   },
   sameAs: [
-    'https://www.facebook.com/stanbaculescu',
-    'https://www.instagram.com/stanbaculescu',
-    'https://www.tiktok.com/@stanbaculescu',
+    'https://www.facebook.com/cabinetavocaturastanbaculescu',
+    'https://www.instagram.com/cabinet_stan_baculescu/',
+    'https://www.tiktok.com/@cabinetavocat',
   ],
 };
 
@@ -34,7 +32,7 @@ const localBusinessSchema = {
   '@type': 'LegalService',
   '@id': `${BASE_URL}/#localbusiness`,
   name: 'STAN-BACULESCU-SOCIETATE CIVILA DE AVOCATI',
-  image: `${BASE_URL}/images/office.jpg`,
+  image: `${BASE_URL}/images/logo.webp`,
   url: BASE_URL,
   telephone: '+40-745-466-720',
   email: 'office@stanbaculescu.ro',
@@ -61,8 +59,6 @@ const localBusinessSchema = {
         'Wednesday',
         'Thursday',
         'Friday',
-        'Saturday',
-        'Sunday',
       ],
       opens: '09:00',
       closes: '17:00',
@@ -84,7 +80,7 @@ const localBusinessSchema = {
     itemListElement: [
       {
         '@type': 'OfferCatalog',
-        name: 'Medical Malpractice',
+        name: 'Malpraxis Medical',
         itemListElement: [
           {
             '@type': 'Offer',
@@ -97,7 +93,7 @@ const localBusinessSchema = {
       },
       {
         '@type': 'OfferCatalog',
-        name: 'Civil Law',
+        name: 'Drept Civil',
         itemListElement: [
           {
             '@type': 'Offer',
@@ -110,7 +106,7 @@ const localBusinessSchema = {
       },
       {
         '@type': 'OfferCatalog',
-        name: 'Criminal Law',
+        name: 'Drept Penal',
         itemListElement: [
           {
             '@type': 'Offer',
@@ -123,13 +119,65 @@ const localBusinessSchema = {
       },
       {
         '@type': 'OfferCatalog',
-        name: 'Family Law',
+        name: 'Dreptul Familiei',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
               name: 'Family Law Services',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Dreptul Muncii',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Employment Law Services',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Drept Comercial',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Commercial Law Services',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Accidente Rutiere',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Road Accident Legal Services',
+            },
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Drept Administrativ-Fiscal',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Administrative and Tax Law Services',
             },
           },
         ],

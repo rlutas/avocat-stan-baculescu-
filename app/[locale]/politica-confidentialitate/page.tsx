@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'ro-RO': `${BASE_URL}/ro/politica-confidentialitate`,
         'en-US': `${BASE_URL}/en/politica-confidentialitate`,
+        'x-default': `${BASE_URL}/ro/politica-confidentialitate`,
       },
     },
   };

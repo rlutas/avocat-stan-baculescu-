@@ -9,6 +9,10 @@ export const routing = defineRouting({
 
   // Always show the locale prefix in the URL (/ro/..., /en/...)
   localePrefix: 'always',
+
+  // Disable automatic browser language detection (Accept-Language header)
+  // so visitors always land on Romanian by default
+  localeDetection: false,
 });
 
 export type Locale = (typeof routing.locales)[number];

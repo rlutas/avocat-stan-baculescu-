@@ -2,6 +2,7 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
+  trailingSlash: false,
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;

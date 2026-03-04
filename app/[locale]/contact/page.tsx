@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'ro-RO': `${BASE_URL}/ro/contact`,
         'en-US': `${BASE_URL}/en/contact`,
+        'x-default': `${BASE_URL}/ro/contact`,
       },
     },
   };
@@ -46,20 +47,8 @@ export default async function ContactPage({ params }: Props) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LegalService',
-    name: 'STAN-BACULESCU-SOCIETATE CIVILA DE AVOCATI',
-    description: t('meta.description'),
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Str. Decebal Nr. 4, Et. 1',
-      addressLocality: 'Satu Mare',
-      postalCode: '440014',
-      addressCountry: 'RO',
-    },
-    telephone: '+40745466720',
-    email: 'office@stanbaculescu.ro',
-    openingHours: 'Mo-Su 09:00-17:00',
-    url: 'https://stanbaculescu.ro',
+    '@type': 'ContactPage',
+    mainEntity: { '@id': 'https://stanbaculescu.ro/#localbusiness' },
   };
 
   return (

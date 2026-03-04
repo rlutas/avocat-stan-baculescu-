@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'ro-RO': `${BASE_URL}/ro/echipa`,
         'en-US': `${BASE_URL}/en/echipa`,
+        'x-default': `${BASE_URL}/ro/echipa`,
       },
     },
   };
