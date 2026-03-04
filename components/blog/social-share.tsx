@@ -13,7 +13,6 @@ export function SocialShare({ title, description }: SocialShareProps) {
   const t = useTranslations('BlogPage');
   const [copied, setCopied] = useState(false);
 
-  // Get the full URL (will work on client-side)
   const getFullUrl = () => {
     if (typeof window !== 'undefined') {
       return window.location.href;
@@ -38,7 +37,6 @@ export function SocialShare({ title, description }: SocialShareProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = shareUrl;
       document.body.appendChild(textArea);
@@ -51,19 +49,19 @@ export function SocialShare({ title, description }: SocialShareProps) {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-      <div className="flex items-center gap-2">
-        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#fef9e7]">
+    <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+      <div className="flex items-center gap-3">
+        <div className="flex items-center justify-center w-9 h-9 rounded-full bg-gold/10">
           <Share2 className="w-4 h-4 text-gold" />
         </div>
-        <span className="text-navy font-semibold">{t('shareArticle')}</span>
+        <span className="text-navy font-heading font-semibold text-lg">{t('shareArticle')}</span>
       </div>
       <div className="flex items-center gap-3">
         <a
           href={shareLinks.facebook}
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-3 rounded-xl bg-[#f8f9fa] text-navy hover:bg-navy hover:text-white transition-all duration-300 ring-1 ring-transparent hover:ring-navy"
+          className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           aria-label="Share on Facebook"
         >
           <Facebook className="w-5 h-5" />
@@ -72,7 +70,7 @@ export function SocialShare({ title, description }: SocialShareProps) {
           href={shareLinks.twitter}
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-3 rounded-xl bg-[#f8f9fa] text-navy hover:bg-navy hover:text-white transition-all duration-300 ring-1 ring-transparent hover:ring-navy"
+          className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           aria-label="Share on Twitter"
         >
           <Twitter className="w-5 h-5" />
@@ -81,22 +79,27 @@ export function SocialShare({ title, description }: SocialShareProps) {
           href={shareLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="group p-3 rounded-xl bg-[#f8f9fa] text-navy hover:bg-navy hover:text-white transition-all duration-300 ring-1 ring-transparent hover:ring-navy"
+          className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           aria-label="Share on LinkedIn"
         >
           <Linkedin className="w-5 h-5" />
         </a>
         <button
           onClick={copyToClipboard}
-          className={`p-3 rounded-xl transition-all duration-300 ring-1 ${
+          className={`flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-300 ${
             copied
-              ? 'bg-gold text-navy ring-gold'
-              : 'bg-[#fef9e7] text-gold hover:bg-gold hover:text-navy ring-transparent hover:ring-gold'
+              ? 'bg-gold text-navy shadow-lg shadow-gold/20'
+              : 'bg-navy text-white hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5'
           }`}
           aria-label="Copy link"
         >
           {copied ? <Check className="w-5 h-5" /> : <Link2 className="w-5 h-5" />}
         </button>
+        {copied && (
+          <span className="text-sm font-medium text-gold animate-pulse">
+            Link copiat!
+          </span>
+        )}
       </div>
     </div>
   );

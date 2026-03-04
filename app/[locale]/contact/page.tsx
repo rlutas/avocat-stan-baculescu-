@@ -6,7 +6,7 @@ import {
   ContactInfo,
   ContactMap,
 } from '@/components/contact';
-import { Clock, Gift } from 'lucide-react';
+import { ScrollAnimate } from '@/components/ui/scroll-animate';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -64,79 +64,72 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
-      <style>{`
-        @keyframes float-up {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-8px);
-          }
-        }
-        @keyframes float-down {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(8px);
-          }
-        }
-        @keyframes badgeFadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.8);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        .animate-float-up {
-          animation: float-up 4s ease-in-out infinite;
-        }
-        .animate-float-down {
-          animation: float-down 4s ease-in-out infinite;
-        }
-        .animate-badge {
-          animation: badgeFadeIn 0.8s ease-out both;
-        }
-      `}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ContactHero />
-      <section className="relative py-16 sm:py-24">
-        {/* Floating Badges - Desktop only */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          {/* Left Badge */}
-          <div className="animate-badge animate-float-up absolute left-4 top-32 hidden xl:block" style={{ animationDelay: '900ms' }}>
-            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-lg ring-1 ring-gold/20">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fef9e7]">
-                <Clock className="h-4 w-4 text-gold" />
-              </div>
-              <span className="text-sm font-semibold text-navy">{t('floatingBadges.response')}</span>
-            </div>
-          </div>
-          {/* Right Badge */}
-          <div className="animate-badge animate-float-down absolute right-4 top-48 hidden xl:block" style={{ animationDelay: '1000ms' }}>
-            <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-lg ring-1 ring-gold/20">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fef9e7]">
-                <Gift className="h-4 w-4 text-gold" />
-              </div>
-              <span className="text-sm font-semibold text-navy">{t('floatingBadges.consultation')}</span>
-            </div>
-          </div>
-        </div>
+
+      {/* Main Contact Section */}
+      <section className="relative bg-[#f8f9fa] py-20 sm:py-28">
+        {/* Subtle top line */}
+        <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-navy/10 to-transparent" />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
+          {/* Section Header */}
+          <div className="mb-14 text-center sm:mb-16">
+            <ScrollAnimate>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                {t('sectionLabel')}
+              </p>
+            </ScrollAnimate>
+
+            <ScrollAnimate delay={0.1}>
+              <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl lg:text-6xl">
+                {t('sectionTitle')}
+              </h2>
+              <div className="mx-auto mt-4 h-[2px] w-24 bg-gold" />
+            </ScrollAnimate>
+
+            <ScrollAnimate delay={0.2}>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+                {t('sectionSubtitle')}
+              </p>
+            </ScrollAnimate>
+          </div>
+
+          {/* Two Column Layout: Form (60%) + Info (40%) */}
+          <div className="grid items-start gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-10">
             <ContactForm />
             <ContactInfo />
           </div>
+
+          {/* Map - integrated within the same section */}
+          <div className="mt-20 sm:mt-24">
+            <div className="mb-10 text-center">
+              <ScrollAnimate>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                  {t('map.badge')}
+                </p>
+              </ScrollAnimate>
+              <ScrollAnimate delay={0.1}>
+                <h3 className="font-heading text-2xl font-bold text-navy sm:text-3xl">
+                  {t('map.title')}
+                </h3>
+                <div className="mx-auto mt-3 h-[2px] w-12 bg-gold" />
+              </ScrollAnimate>
+              <ScrollAnimate delay={0.2}>
+                <p className="mt-3 text-base leading-relaxed text-text-secondary">
+                  {t('map.subtitle')}
+                </p>
+              </ScrollAnimate>
+            </div>
+            <ScrollAnimate variant="scaleUp" delay={0.3}>
+              <ContactMap />
+            </ScrollAnimate>
+          </div>
         </div>
       </section>
-      <ContactMap />
     </>
   );
 }

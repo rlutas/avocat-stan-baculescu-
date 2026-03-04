@@ -393,3 +393,86 @@ Standard padding handles this: `py-20 sm:py-32`
 - **Floating stat badges** with gentle animation
 - **Decorative gold separator lines** between elements
 - **Multiple icon container styles** (glassmorphism backdrop-blur on dark, solid fill on light)
+
+---
+
+## 14. Contact Page Patterns
+
+### Section Layout
+- Single unified section on `bg-[#f8f9fa]` background
+- Section header: centered, standard pattern (gold label → heading → gold bar → description)
+- No floating badge pills - use plain gold text labels only
+- Two-column layout: `grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-10`
+- Map integrated inline below the form+info grid (not a separate section)
+
+### Contact Form
+- White card: `rounded-2xl bg-white p-8 shadow-lg sm:p-10`
+- Fields in 2-column grid where appropriate: `grid grid-cols-1 sm:grid-cols-2 gap-5`
+- Input styling: `h-12 rounded-xl border-gray-200 bg-gray-50/50 focus:border-gold focus:bg-white`
+- Radio pill buttons: `rounded-full border border-gray-200 bg-gray-50/50 px-4 py-2.5 peer-checked:border-gold peer-checked:bg-gold/10`
+- GDPR checkbox: custom styled with gold checked state
+- Submit: GlowWrapper gold rounded-full button
+
+### Contact Info Cards
+- Icon containers: `h-11 w-11 rounded-xl bg-gold/10` → hover `bg-gold`
+- Social media buttons: `h-12 w-12 rounded-xl border-navy/10 bg-navy/[0.03]` → hover `bg-gold text-white`
+
+### Map Section
+- Mini section header within main section: gold label + `font-heading text-2xl sm:text-3xl` heading + gold bar + subtitle
+- Map container: `rounded-2xl shadow-lg ring-1 ring-black/[0.04]`
+- Google Maps embed: use search query format (`?q=...&output=embed`) for reliable pin display
+
+---
+
+## 15. Blog Page Patterns
+
+### Blog Grid
+- Section header with gold category filter pills
+- Cards in responsive grid with StaggerContainer/StaggerItem
+
+### Blog Card
+- `rounded-2xl border border-gray-100 bg-white shadow-sm`
+- Featured image: `aspect-[16/9]` with navy gradient overlay
+- Category badge: gold pill in top-left corner
+- Author: gold dot + name (no icon)
+- Gold bottom line reveal on hover: `h-[3px] w-0 → group-hover:w-full`
+
+### Blog Article (Single Post)
+- Navy hero with: back link, gold category badge, title, description, author photo + meta row
+- No decorative circles/rings — keep hero clean
+- Featured image: `aspect-[21/9] -mt-16 rounded-2xl shadow-2xl` (overlaps into hero)
+- Content: prose styling with `prose-headings:font-heading prose-headings:text-navy`
+- Gold ornamental divider between sections
+- Author photos from team (`authorImage` MDX frontmatter field)
+
+### MDX Content Rendering
+- Velite `s.mdx()` outputs compiled JS function strings, not HTML
+- Use `useMDXComponent` from `lib/mdx.ts` (uses `new Function()` + `react/jsx-runtime`)
+- Never use `dangerouslySetInnerHTML` for velite MDX content
+
+### Blog Images
+- Format: WebP (quality 82, converted via `cwebp -q 82`)
+- Dimensions: 1536x1024 (16:9 ratio approximation)
+- Stored in: `public/images/blog/`
+
+---
+
+## 16. Hero Enhancements (All Pages)
+
+### Landing Page Hero
+- CSS `@property` animated gradient shift (40s cycle)
+- SVG noise/grain texture at 3% opacity
+- Two `motion.path` gold lines with draw animation
+- Mouse parallax on founder photos (desktop only)
+
+### All Page Heroes (About, Team, Services, Blog, Contact)
+- Noise grain texture: SVG `feTurbulence` at 3% opacity, unique filter IDs per page
+- Gold line art: two `motion.path` curves with staggered draw animation (1.2s/1.5s delay)
+- Scroll parallax: `useScroll`/`useTransform` content moves -50px on scroll
+- Gold shimmer line at top: `animate-shimmer 3s ease-in-out infinite`
+- Gold radial glow on right side
+
+### Individual Pages (Member Profile, Service Detail)
+- Same noise + gold lines pattern
+- Server components: use CSS `stroke-dasharray`/`stroke-dashoffset` animation (no framer-motion)
+- Client components: use `motion.path` with `pathLength`

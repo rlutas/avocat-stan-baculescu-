@@ -9,6 +9,7 @@ type Post = {
   slug: string;
   date: string;
   author: string;
+  authorImage?: string;
   category: string;
   image?: string;
 };

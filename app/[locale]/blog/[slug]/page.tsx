@@ -89,6 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
       slug: p.slug,
       date: p.date,
       author: p.author,
+      authorImage: p.authorImage,
       category: p.category,
       image: p.image,
     }));
@@ -129,8 +130,10 @@ export default async function BlogPostPage({ params }: Props) {
         description={post.description}
         date={post.date}
         author={post.author}
+        authorImage={post.authorImage}
         category={post.category}
         content={post.body}
+        image={post.image}
       />
       <RelatedArticles posts={relatedPosts} />
       <BlogCta />

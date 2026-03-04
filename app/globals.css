@@ -3,6 +3,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Hero gradient animation custom properties */
+@property --hero-angle {
+  syntax: '<angle>';
+  initial-value: 135deg;
+  inherits: false;
+}
+@property --hero-stop1 {
+  syntax: '<color>';
+  initial-value: #002a52;
+  inherits: false;
+}
+@property --hero-stop2 {
+  syntax: '<color>';
+  initial-value: #003a70;
+  inherits: false;
+}
+@property --hero-stop3 {
+  syntax: '<color>';
+  initial-value: #004a8f;
+  inherits: false;
+}
+
 /* Brand Color Variables */
 :root {
   /* Primary Brand Colors */

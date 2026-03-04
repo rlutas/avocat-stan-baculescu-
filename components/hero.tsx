@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { Clock, Phone, ArrowRight } from 'lucide-react';
 import { GlowWrapper } from '@/components/ui/glow-button';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import { useEffect } from 'react';
 
 const founders = [
   {
@@ -23,9 +25,60 @@ const founders = [
 export function Hero() {
   const t = useTranslations('HomePage.hero');
 
+  // Layer 4: Mouse parallax for founder photos
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springConfig = { damping: 25, stiffness: 150 };
+  const photoX = useSpring(useTransform(mouseX, [0, 1], [-8, 8]), springConfig);
+  const photoY = useSpring(useTransform(mouseY, [0, 1], [-6, 6]), springConfig);
+
+  useEffect(() => {
+    const handleMouse = (e: MouseEvent) => {
+      mouseX.set(e.clientX / window.innerWidth);
+      mouseY.set(e.clientY / window.innerHeight);
+    };
+    window.addEventListener('mousemove', handleMouse);
+    return () => window.removeEventListener('mousemove', handleMouse);
+  }, [mouseX, mouseY]);
+
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-navy">
+    <section className="hero-gradient-animated relative w-full min-h-screen overflow-hidden">
       <style jsx>{`
+        .hero-gradient-animated {
+          background: linear-gradient(
+            var(--hero-angle, 135deg),
+            var(--hero-stop1, #002a52) 0%,
+            var(--hero-stop2, #003a70) 50%,
+            var(--hero-stop3, #004a8f) 100%
+          );
+          animation: heroGradientShift 40s ease-in-out infinite alternate;
+        }
+        @keyframes heroGradientShift {
+          0% {
+            --hero-angle: 135deg;
+            --hero-stop1: #002a52;
+            --hero-stop2: #003a70;
+            --hero-stop3: #004a8f;
+          }
+          33% {
+            --hero-angle: 160deg;
+            --hero-stop1: #00325f;
+            --hero-stop2: #003d75;
+            --hero-stop3: #003a70;
+          }
+          66% {
+            --hero-angle: 120deg;
+            --hero-stop1: #003a70;
+            --hero-stop2: #002a52;
+            --hero-stop3: #004a8f;
+          }
+          100% {
+            --hero-angle: 145deg;
+            --hero-stop1: #002d58;
+            --hero-stop2: #004080;
+            --hero-stop3: #003a70;
+          }
+        }
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -127,6 +180,42 @@ export function Hero() {
         }
       `}</style>
 
+      {/* Layer 1: SVG Noise/Grain Texture */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.03] mix-blend-soft-light" aria-hidden="true">
+        <filter id="heroNoise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#heroNoise)" />
+      </svg>
+
+      {/* Layer 3: Animated Gold Line Art */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+        <motion.path
+          d="M-50 800 Q350 400 700 500 T1450 100"
+          stroke="rgba(208, 156, 17, 0.10)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{
+            pathLength: { duration: 3, ease: "easeInOut", delay: 1.2 },
+            opacity: { duration: 0.5, delay: 1.2 }
+          }}
+        />
+        <motion.path
+          d="M-50 830 Q350 430 700 530 T1450 130"
+          stroke="rgba(208, 156, 17, 0.05)"
+          strokeWidth="1"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{
+            pathLength: { duration: 3.5, ease: "easeInOut", delay: 1.5 },
+            opacity: { duration: 0.5, delay: 1.5 }
+          }}
+        />
+      </svg>
+
       <div className="mx-auto flex min-h-screen max-w-[1400px] items-start lg:items-center px-4 sm:px-6 lg:px-8">
         <div className="grid w-full items-center gap-8 pt-28 pb-16 sm:pt-32 sm:pb-20 lg:grid-cols-[1fr_auto] lg:gap-12 lg:pt-28 lg:pb-28">
 
@@ -180,8 +269,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Side - Founders + Stats (Desktop) */}
-          <div className="relative hidden lg:flex lg:items-start lg:justify-center">
+          {/* Right Side - Founders + Stats (Desktop) - Layer 4: Mouse Parallax */}
+          <motion.div style={{ x: photoX, y: photoY }} className="relative hidden lg:flex lg:items-start lg:justify-center">
             {/* Strong radial glow behind photos */}
             <div
               className="animate-glow delay-500 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -270,7 +359,7 @@ export function Hero() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Tablet & Mobile - Founders */}
           <div className="relative lg:hidden mt-8 sm:mt-10">

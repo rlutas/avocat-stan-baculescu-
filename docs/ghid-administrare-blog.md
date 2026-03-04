@@ -69,11 +69,13 @@ La inceputul fiecarui articol, adaugati informatiile despre articol:
 title: "Titlul Articolului"
 slug: "titlul-articolului"
 description: "O scurta descriere a articolului (150-160 caractere)"
-date: "2026-01-21"
+date: 2026-01-21
 author: "Camelia Stan"
-category: "drept-civil"
-locale: "ro"
-image: "/images/blog/nume-imagine.jpg"
+authorImage: "/images/team/camelia-stan.webp"
+category: "Malpraxis Medical"
+locale: ro
+image: "/images/blog/nume-imagine.webp"
+published: true
 ---
 ```
 
@@ -86,20 +88,22 @@ image: "/images/blog/nume-imagine.jpg"
 | `description` | Descriere pentru SEO si previzualizare | Da |
 | `date` | Data publicarii (format: YYYY-MM-DD) | Da |
 | `author` | Numele autorului | Da |
+| `authorImage` | Calea catre poza autorului din echipa | Da |
 | `category` | Categoria articolului | Da |
 | `locale` | Limba: "ro" pentru romana, "en" pentru engleza | Da |
-| `image` | Calea catre imaginea principala | Nu |
+| `image` | Calea catre imaginea principala (format WebP) | Nu |
+| `published` | Afiseaza articolul pe site (true/false) | Da |
 
 ### Categorii Disponibile
 
-- `drept-civil` - Drept Civil
-- `drept-penal` - Drept Penal
-- `malpraxis` - Malpraxis Medical
-- `drept-familiei` - Dreptul Familiei
-- `dreptul-muncii` - Dreptul Muncii
-- `drept-comercial` - Drept Comercial
-- `accidente-rutiere` - Accidente Rutiere
-- `general` - Articole Generale
+- `Malpraxis Medical` - Malpraxis Medical
+- `Drept Civil` - Drept Civil
+- `Drept Penal` - Drept Penal
+- `Dreptul Familiei` - Dreptul Familiei
+- `Dreptul Muncii` - Dreptul Muncii
+- `Drept Comercial` - Drept Comercial
+- `Accidente Rutiere` - Accidente Rutiere
+- `Drept Administrativ si Fiscal` - Drept Administrativ si Fiscal
 
 ### Pasul 3: Scrieti Continutul
 
@@ -226,8 +230,8 @@ Art. 1357 - Conditiile raspunderii
 
 ### Pasul 1: Pregatiti Imaginea
 
-1. **Format recomandat:** JPG sau PNG
-2. **Dimensiune:** Maximum 1920x1080 pixeli
+1. **Format recomandat:** WebP (convertiti din PNG/JPG folosind `cwebp -q 82 input.png -o output.webp`)
+2. **Dimensiune:** Maximum 1536x1024 pixeli
 3. **Marime fisier:** Sub 500KB pentru performanta
 
 ### Pasul 2: Salvati Imaginea
@@ -418,11 +422,13 @@ Copiati acest sablon pentru articole noi:
 title: "Titlul Articolului"
 slug: "titlul-articolului"
 description: "Descriere scurta pentru SEO (150-160 caractere)"
-date: "2026-01-21"
+date: 2026-01-21
 author: "Camelia Stan"
-category: "drept-civil"
-locale: "ro"
-image: "/images/blog/imagine-articol.jpg"
+authorImage: "/images/team/camelia-stan.webp"
+category: "Malpraxis Medical"
+locale: ro
+image: "/images/blog/imagine-articol.webp"
+published: true
 ---
 
 ## Introducere
@@ -448,4 +454,4 @@ Pentru asistenta juridica, contactati-ne la [contact](/contact).
 
 ---
 
-*Ultima actualizare: 21 Ianuarie 2026*
+*Ultima actualizare: 4 Martie 2026*

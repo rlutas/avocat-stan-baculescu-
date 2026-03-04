@@ -61,11 +61,15 @@ function getClientIp(request: NextRequest): string {
 }
 
 interface ContactFormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  phone?: string;
+  phone: string;
+  preferredContact: 'phone' | 'email' | 'whatsapp';
   subject: string;
+  urgency: 'normal' | 'urgent';
   message: string;
+  gdprConsent: boolean;
   honeypot?: string;
 }
 
@@ -104,7 +108,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate required fields
-    if (!data.name || !data.email || !data.subject || !data.message) {
+    if (!data.firstName || !data.lastName || !data.email || !data.phone || !data.subject || !data.message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -225,25 +229,27 @@ export async function POST(request: NextRequest) {
   <div class="content">
     <div class="field">
       <div class="label">Nume</div>
-      <div class="value">${escapeHtml(data.name)}</div>
+      <div class="value">${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}</div>
     </div>
     <div class="field">
       <div class="label">Email</div>
       <div class="value"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></div>
     </div>
-    ${
-      data.phone
-        ? `
     <div class="field">
       <div class="label">Telefon</div>
       <div class="value"><a href="tel:${escapeHtml(data.phone)}">${escapeHtml(data.phone)}</a></div>
     </div>
-    `
-        : ''
-    }
+    <div class="field">
+      <div class="label">Metoda preferata de contact</div>
+      <div class="value">${escapeHtml(data.preferredContact === 'phone' ? 'Telefon' : data.preferredContact === 'email' ? 'Email' : 'WhatsApp')}</div>
+    </div>
     <div class="field">
       <div class="label">Domeniu de interes</div>
       <div class="value">${escapeHtml(serviceLabel)}</div>
+    </div>
+    <div class="field">
+      <div class="label">Urgenta</div>
+      <div class="value">${data.urgency === 'urgent' ? '🔴 Urgent (24h)' : 'Normal (48h)'}</div>
     </div>
     <div class="field">
       <div class="label">Mesaj</div>
@@ -264,10 +270,12 @@ export async function POST(request: NextRequest) {
 Cerere noua de contact - ${timestamp}
 ======================================
 
-Nume: ${data.name}
+Nume: ${data.firstName} ${data.lastName}
 Email: ${data.email}
-${data.phone ? `Telefon: ${data.phone}` : ''}
+Telefon: ${data.phone}
+Metoda preferata de contact: ${data.preferredContact === 'phone' ? 'Telefon' : data.preferredContact === 'email' ? 'Email' : 'WhatsApp'}
 Domeniu de interes: ${serviceLabel}
+Urgenta: ${data.urgency === 'urgent' ? 'Urgent (24h)' : 'Normal (48h)'}
 
 Mesaj:
 ${data.message}
@@ -281,7 +289,7 @@ Acest email a fost trimis prin formularul de contact de pe site-ul Stan Baculesc
       from: `Stan Baculescu Contact <${FROM_EMAIL}>`,
       to: [RECIPIENT_EMAIL],
       replyTo: data.email,
-      subject: `[Contact] ${serviceLabel} - ${data.name}`,
+      subject: `[Contact] ${serviceLabel} - ${data.firstName} ${data.lastName}${data.urgency === 'urgent' ? ' [URGENT]' : ''}`,
       html: emailHtml,
       text: emailText,
     });

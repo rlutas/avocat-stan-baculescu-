@@ -52,6 +52,36 @@ export function ServiceDetailHero({ serviceId }: ServiceDetailHeroProps) {
       {/* Gold shimmer top bar */}
       <div className="absolute left-0 right-0 top-0 z-20 h-[2px] animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(90deg,transparent_0%,#d09c11_25%,#e6b520_50%,#d09c11_75%,transparent_100%)]" />
 
+      {/* Noise grain texture */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.03] mix-blend-soft-light" aria-hidden="true">
+        <filter id="serviceDetailHeroNoise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#serviceDetailHeroNoise)" />
+      </svg>
+
+      {/* Animated gold line art */}
+      <svg className="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+        <motion.path
+          d="M-50 800 Q350 400 700 500 T1450 100"
+          stroke="rgba(208, 156, 17, 0.10)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{ duration: 3, ease: 'easeInOut', delay: 1.2 }}
+        />
+        <motion.path
+          d="M-50 830 Q350 430 700 530 T1450 130"
+          stroke="rgba(208, 156, 17, 0.05)"
+          strokeWidth="1"
+          strokeLinecap="round"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{ duration: 3.5, ease: 'easeInOut', delay: 1.5 }}
+        />
+      </svg>
+
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <motion.nav

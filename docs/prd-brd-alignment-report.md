@@ -328,3 +328,24 @@ The PRD is well-constructed and demonstrates strong alignment with Variant 1 bus
 - Section 1.1 (Hero) updated to reflect founders photos instead of generic team photo
 - Section 1.1 (Lawyer profiles) updated to reflect current 7-member team roster
 - Section 5.3 (Framer Motion) reclassified from excluded to actively used
+
+### Update: March 4, 2026 (Continued)
+
+**Contact page redesigned:**
+- Removed floating badge/pill pattern ("CONTACTEAZA-NE", "LOCATIE") - replaced with proper section header pattern (gold text label, heading, gold bar, description)
+- Form enhanced: split first/last name, preferred contact method (Phone/Email/WhatsApp radio pills), urgency level (Normal 48h/Urgent 24h), GDPR consent checkbox with privacy policy link, phone now required
+- Map section integrated inline within contact section (no more separate section with visual break)
+- Google Maps embed updated to use correct business CID (search query format for reliable pin display)
+- Contact API route updated to handle new form fields, [URGENT] tag in email subject
+
+**Blog system fixed:**
+- MDX content rendering: replaced `dangerouslySetInnerHTML` with proper `useMDXComponent` pattern (velite's `s.mdx()` outputs compiled JS, not HTML)
+- Created `lib/mdx.ts` utility for rendering velite MDX content
+- Author photos: blog articles and cards now display team member photos from `authorImage` frontmatter field
+- Removed decorative gold circle animation from blog article hero (not relevant to content)
+- Blog images converted from PNG to WebP (quality 82), all MDX frontmatter references updated
+- Author image references updated from .jpg to .webp to match actual team photo files
+
+**Technical notes:**
+- Velite's `s.mdx()` compiles MDX to a JavaScript function string, NOT HTML - requires `new Function()` + `react/jsx-runtime` to render
+- Blog admin guide updated to reflect WebP image format requirement and `authorImage` frontmatter field

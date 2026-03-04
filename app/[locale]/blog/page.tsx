@@ -55,6 +55,7 @@ export default async function BlogPage({ params }: Props) {
       slug: post.slug,
       date: post.date,
       author: post.author,
+      authorImage: post.authorImage,
       category: post.category,
       image: post.image,
     }));

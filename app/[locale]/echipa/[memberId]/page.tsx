@@ -232,6 +232,32 @@ export default async function MemberProfilePage({ params }: Props) {
         {/* Gold shimmer top bar */}
         <div className="absolute left-0 right-0 top-0 h-[2px] animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(90deg,transparent_0%,#d09c11_25%,#e6b520_50%,#d09c11_75%,transparent_100%)]" />
 
+        {/* Noise grain texture */}
+        <svg className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.03] mix-blend-soft-light" aria-hidden="true">
+          <filter id="memberHeroNoise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#memberHeroNoise)" />
+        </svg>
+
+        {/* Animated gold line art */}
+        <svg className="pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+          <path
+            d="M-50 800 Q350 400 700 500 T1450 100"
+            stroke="rgba(208, 156, 17, 0.10)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            style={{ animation: 'lineDrawIn 3s ease-in-out 1.2s both' }}
+          />
+          <path
+            d="M-50 830 Q350 430 700 530 T1450 130"
+            stroke="rgba(208, 156, 17, 0.05)"
+            strokeWidth="1"
+            strokeLinecap="round"
+            style={{ animation: 'lineDrawIn 3.5s ease-in-out 1.5s both' }}
+          />
+        </svg>
+
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
@@ -396,6 +422,18 @@ export default async function MemberProfilePage({ params }: Props) {
           @keyframes heroBadgePop {
             from { opacity: 0; transform: scale(0.85) translateY(8px); }
             to   { opacity: 1; transform: scale(1) translateY(0); }
+          }
+          @keyframes lineDrawIn {
+            from {
+              stroke-dasharray: 2000;
+              stroke-dashoffset: 2000;
+              opacity: 0;
+            }
+            to {
+              stroke-dasharray: 2000;
+              stroke-dashoffset: 0;
+              opacity: 1;
+            }
           }
         `}} />
       </section>
