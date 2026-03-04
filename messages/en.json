@@ -7,7 +7,8 @@
       "team": "Team",
       "services": "Services",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "allServices": "All Services"
     },
     "language": {
       "ro": "Romana",
@@ -20,10 +21,10 @@
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "Law Firm",
       "subtitle": "Professionalism. Dedication. Results.",
-      "description": "We provide excellent legal services in Satu Mare and throughout Romania. With over 15 years of experience, our team represents you with dedication in civil law, criminal law, family law, commercial law, and more.",
+      "description": "We provide excellent legal services in Satu Mare and throughout Romania. With nearly 20 years of experience, our founders represent you with dedication in civil law, criminal law, family law, commercial law, medical malpractice, and more.",
       "cta": "Schedule a Consultation",
       "secondaryCta": "Discover Our Services",
-      "trustBadge": "15+ years of legal excellence",
+      "trustBadge": "Serving justice since 2006",
       "callNow": "Call now",
       "schedule": "Hours: Monday - Friday, 09:00 - 17:00",
       "founder": "Founder",
@@ -43,14 +44,14 @@
       "titleLine1": "Your Legal Partner",
       "titleLine2": "Why Stan-Baculescu",
       "description": "With a dedicated team and extensive experience, we stand by you at every step in resolving your legal matters.",
-      "stat1Value": "15+",
+      "stat1Value": "20+",
       "stat1Label": "Years of Experience",
       "stat2Value": "1000+",
       "stat2Label": "Satisfied Clients",
       "stat3Value": "8",
       "stat3Label": "Practice Areas",
       "value1Title": "Proven Experience",
-      "value1Description": "Over 15 years of legal practice and hundreds of cases successfully resolved in court.",
+      "value1Description": "Members of the Satu Mare Bar since 2006, with nearly two decades of legal practice and hundreds of cases successfully resolved in court.",
       "value2Title": "Personalized Approach",
       "value2Description": "Every case receives individual attention and a strategy tailored to the specific situation.",
       "value3Title": "Transparent Communication",
@@ -71,6 +72,7 @@
       "viewAll": "View Full Team"
     },
     "cta": {
+      "label": "Legal Assistance",
       "title": "Need Legal Assistance?",
       "description": "Schedule a consultation and speak with one of our attorneys about your situation. We are here to help.",
       "button": "Schedule a Consultation",
@@ -81,19 +83,26 @@
   "AboutPage": {
     "hero": {
       "title": "About Us",
+      "label": "Stan-Baculescu Law Firm",
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "About Us",
-      "subtitle": "Tradition and Excellence in Legal Practice",
-      "trustBadge": "15+ years of legal excellence"
+      "subtitle": "Since 2006 we have been providing excellent legal services in Satu Mare and throughout Romania, with total dedication to every client.",
+      "trustBadge": "Serving justice since 2006",
+      "stat1": "Years Experience",
+      "stat2": "Satisfied Clients",
+      "stat3": "Commitment"
     },
     "history": {
+      "label": "Our Story",
+      "foundedLabel": "Founded",
       "title": "Our Story",
-      "description": "Stan-Baculescu Law Firm is based in Satu Mare and has been providing high-quality legal services for over 15 years. Founded by attorneys Camelia Stan and Vlad Baculescu, our firm has continuously grown, becoming a trusted partner for clients in the northwestern region of Romania and beyond.",
-      "milestone1": "Over 15 years of experience in the legal field",
+      "description": "Stan-Baculescu Law Firm was founded in 2009 in Satu Mare. Its founders, attorneys Camelia Stan and Vlad Baculescu, have been members of the Satu Mare Bar since 2006, each bringing nearly two decades of legal experience. The firm has continuously grown, becoming a trusted partner for clients in the northwestern region of Romania and beyond.",
+      "milestone1": "Founders with legal experience since 2006",
       "milestone2": "Hundreds of successfully resolved cases",
       "milestone3": "Team of specialized attorneys across various fields"
     },
     "values": {
+      "label": "Our Values",
       "title": "Our Values",
       "subtitle": "Principles that guide us every day",
       "professionalism": {
@@ -110,6 +119,7 @@
       }
     },
     "principles": {
+      "label": "Our Principles",
       "title": "Our Principles",
       "subtitle": "The foundation of our success",
       "statMotivation": "Commitment",
@@ -129,8 +139,9 @@
       }
     },
     "methodology": {
+      "label": "How We Work",
       "title": "Our Working Methodology",
-      "subtitle": "How we approach each case",
+      "subtitle": "Every case follows a structured, transparent process oriented towards the best possible outcome for our clients.",
       "step1": {
         "title": "Initial Consultation",
         "description": "We analyze your situation and identify the best legal solutions."
@@ -149,9 +160,12 @@
       }
     },
     "cta": {
+      "label": "Get Started",
       "title": "Need Legal Assistance?",
-      "description": "Contact us for an initial consultation and discover how we can help you.",
-      "button": "Contact Us"
+      "description": "Contact us for an initial consultation and discover how we can help you. We are here for you.",
+      "button": "Schedule a Consultation",
+      "callLabel": "Call now",
+      "available": "Hours: Monday - Friday, 09:00 - 17:00"
     }
   },
   "TeamPage": {
@@ -165,7 +179,9 @@
     "sections": {
       "founders": "Founders",
       "collaborators": "Associate Attorneys",
-      "staff": "Support Team"
+      "staff": "Support Team",
+      "support": "Client Relations",
+      "supportTitle": "Client Relations"
     },
     "roles": {
       "founder": "Founding Attorney",
@@ -178,59 +194,158 @@
     "members": {
       "cameliaStan": {
         "name": "Camelia Stan",
-        "shortBio": "Founding attorney with over 15 years of experience in civil and family law. Dedicated to defending clients' rights with professionalism and empathy.",
-        "fullBio": "Attorney Camelia Stan is co-founder of Stan-Baculescu Law Firm, with over 15 years of experience in the legal field. Specializing in civil law and family law, she has successfully represented hundreds of clients in court, achieving remarkable results in complex divorce, custody, and property division cases. Her approach combines deep legal knowledge with an empathetic understanding of clients' needs.",
+        "shortBio": "Founding attorney, member of the Satu Mare Bar since 2006. Specialized in civil law, administrative litigation, business law, and medical malpractice.",
+        "fullBio": "Camelia Stan is a partner at Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2006, representing her clients' interests with professionalism. She is an experienced trial attorney who has provided legal assistance and represented clients in civil law litigation, administrative and tax litigation, business and corporate law, medical malpractice, public procurement, insurance law, insolvency matters, family law, labor law, misdemeanor law, and domestic arbitration cases. She has participated in numerous consulting projects regarding contractual law, real estate law, business and corporate law matters, assisting clients in negotiating and concluding civil and commercial contracts, as well as in the amicable termination of legal relationships.",
+        "pullQuote": "Professionalism and dedication in defending our clients' interests.",
+        "phone": "+40 745 466 720",
+        "email": "camelia.stan@stanbaculescu.ro",
+        "barYear": "2006",
         "specializations": {
           "spec1": "Civil Law",
-          "spec2": "Family Law",
-          "spec3": "Inheritances and Successions",
-          "spec4": "Civil Contracts"
+          "spec1Slug": "drept-civil",
+          "spec1Icon": "balance-scale",
+          "spec2": "Administrative & Tax Litigation",
+          "spec2Slug": "drept-administrativ-fiscal",
+          "spec2Icon": "document",
+          "spec3": "Business & Corporate Law",
+          "spec3Slug": "drept-comercial",
+          "spec3Icon": "contract",
+          "spec4": "Medical Malpractice",
+          "spec4Slug": "malpraxis-medical",
+          "spec4Icon": "justice",
+          "spec5": "Public Procurement",
+          "spec5Slug": "",
+          "spec5Icon": "approval",
+          "spec5Image": "/images/services/achizitii-publice.webp",
+          "spec6": "Insurance Law",
+          "spec6Slug": "",
+          "spec6Icon": "shield",
+          "spec6Image": "/images/services/dreptul-asigurarilor.webp",
+          "spec7": "Family Law",
+          "spec7Slug": "drept-familiei",
+          "spec7Icon": "family",
+          "spec8": "Labor Law",
+          "spec8Slug": "dreptul-muncii",
+          "spec8Icon": "suitcase",
+          "spec9": "Misdemeanor Law",
+          "spec9Slug": "",
+          "spec9Icon": "gavel",
+          "spec9Image": "/images/services/drept-contraventional.webp",
+          "spec10": "Domestic Arbitration",
+          "spec10Slug": "",
+          "spec10Icon": "court",
+          "spec10Image": "/images/services/arbitraj-intern.webp",
+          "spec1Desc": "Consultation and representation in civil litigation, contracts, property and successions.",
+          "spec2Desc": "Administrative challenges, tax litigation and representation before authorities.",
+          "spec3Desc": "Consulting for commercial companies, contracts, commercial litigation and insolvency.",
+          "spec4Desc": "Representation in medical negligence cases and obtaining compensation for damages suffered.",
+          "spec5Desc": "Legal assistance in public procurement procedures and CNSC challenges.",
+          "spec6Desc": "Representation in insurance litigation and obtaining due compensation.",
+          "spec7Desc": "Divorces, child custody, partition, alimony and other family matters.",
+          "spec8Desc": "Protection of employee rights, employment contracts, dismissals and labor disputes.",
+          "spec9Desc": "Defense in misdemeanor cases, fine challenges and official reports.",
+          "spec10Desc": "Representation in domestic arbitration procedures and alternative dispute resolution."
         },
         "education": {
-          "edu1": "Law Degree - University of Oradea",
-          "edu2": "Member of the Satu Mare Bar Association"
+          "edu1": "Member of the Satu Mare Bar since 2006",
+          "edu2": "Law Degree"
         },
         "experience": {
-          "exp1": "Co-Founder - SCA Stan-Baculescu (2009 - present)",
-          "exp2": "Licensed Attorney - Satu Mare Bar"
+          "exp1": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
+          "exp2": "Experienced trial attorney in complex civil litigation",
+          "exp3": "Consulting in contractual and real estate law"
         }
       },
       "vladBaculescu": {
         "name": "Vlad Baculescu",
-        "shortBio": "Founding attorney specializing in criminal and commercial law. Expert in complex litigation with a high success rate.",
-        "fullBio": "Attorney Vlad Baculescu is co-founder of Stan-Baculescu Law Firm, with extensive experience in criminal and commercial law. He has successfully handled highly complex criminal cases and advised numerous commercial companies on various legal matters. His work style is characterized by rigor, attention to detail, and a strategic approach to each case.",
+        "shortBio": "Founding attorney, member of the Satu Mare Bar since 2006. Specialized in criminal law, business law, insolvency, and civil law.",
+        "fullBio": "Vlad Baculescu is a partner at Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2006. He has extensive experience in criminal law, civil law, insolvency, and business law. He has provided legal consulting and ensured assistance and representation of parties in civil and criminal litigation. His work style is characterized by empathy, rigor, and a strategic approach — he truly listens to clients and puts himself in their situation to find the optimal solution for the problems they face.",
+        "pullQuote": "I try to truly listen to people and put myself in their situation — only then can I find the optimal solution for the problems they face.",
+        "phone": "+40 744 201 694",
+        "email": "vlad.baculescu@stanbaculescu.ro",
+        "barYear": "2006",
         "specializations": {
           "spec1": "Criminal Law",
-          "spec2": "Commercial Law",
-          "spec3": "Commercial Litigation",
-          "spec4": "Administrative Law"
+          "spec1Slug": "drept-penal",
+          "spec1Icon": "gavel",
+          "spec1Desc": "Defense and representation in complex criminal cases, from investigation through final judgment.",
+          "spec2": "Business & Corporate Law",
+          "spec2Slug": "drept-comercial",
+          "spec2Icon": "contract",
+          "spec2Desc": "Consulting for commercial companies, contracts, commercial litigation and reorganization.",
+          "spec3": "Family Law",
+          "spec3Slug": "drept-familiei",
+          "spec3Icon": "family",
+          "spec3Desc": "Divorces, child custody, partition, alimony and other family matters.",
+          "spec4": "Insolvency Practitioner",
+          "spec4Slug": "",
+          "spec4Icon": "law-book",
+          "spec4Image": "/images/services/practician-insolventa.webp",
+          "spec4Desc": "Insolvency proceedings, judicial reorganization and bankruptcy for debtors and creditors.",
+          "spec5": "Civil Law",
+          "spec5Slug": "drept-civil",
+          "spec5Icon": "balance-scale",
+          "spec5Desc": "Consultation and representation in civil litigation, contracts, property and successions.",
+          "spec6": "Medical Malpractice",
+          "spec6Slug": "malpraxis-medical",
+          "spec6Icon": "justice",
+          "spec6Desc": "Representation in medical negligence cases and obtaining compensation for damages suffered."
         },
         "education": {
-          "edu1": "Law Degree - Babes-Bolyai University of Cluj-Napoca",
-          "edu2": "Member of the Satu Mare Bar Association"
+          "edu1": "Member of the Satu Mare Bar since 2006",
+          "edu2": "Postgraduate studies in law",
+          "edu3": "Continuous professional development conferences"
         },
         "experience": {
-          "exp1": "Co-Founder - SCA Stan-Baculescu (2009 - present)",
-          "exp2": "Licensed Attorney - Satu Mare Bar"
+          "exp1": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
+          "exp2": "Extensive experience in complex criminal litigation",
+          "exp3": "Legal consulting in business law and insolvency"
         }
       },
       "dianaChincea": {
         "name": "Diana Antonia Chincea",
-        "shortBio": "Associate attorney with expertise in labor law and civil litigation. Dedicated to protecting employees' rights.",
-        "fullBio": "Diana Antonia Chincea is an associate attorney at our firm, specializing in labor law and civil litigation. With a meticulous approach and deep understanding of labor legislation, she has successfully represented both employees and employers in various labor disputes. She is known for her ability to find balanced and efficient solutions.",
+        "shortBio": "Collaborating attorney, member of the Satu Mare Bar since 2019. Specialized in civil law, commercial law, administrative litigation, and family law.",
+        "fullBio": "Diana Antonia Chincea is a collaborating attorney at Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2019, and a graduate of the Faculty of Law at the University of Bucharest. During her university studies, she developed a strong interest in commercial law, a field in which she has continued to specialize. She has provided legal assistance and represented clients in civil law litigation, administrative and tax litigation, family law, labor law, misdemeanor law, as well as in consulting projects. She has actively participated in the negotiation and conclusion of civil and commercial contracts.",
+        "pullQuote": "Every case deserves a dedicated approach and a legal solution tailored to the client's needs.",
+        "phone": "+40 748 094 106",
+        "email": "diana.chincea@stanbaculescu.ro",
+        "barYear": "2019",
         "specializations": {
-          "spec1": "Labor Law",
-          "spec2": "Civil Litigation",
-          "spec3": "Contract Law",
-          "spec4": "Administrative Litigation"
+          "spec1": "Civil Law",
+          "spec1Slug": "drept-civil",
+          "spec1Icon": "balance-scale",
+          "spec1Desc": "Legal assistance and representation in civil litigation, contracts, property and successions.",
+          "spec2": "Commercial Law",
+          "spec2Slug": "drept-comercial",
+          "spec2Icon": "contract",
+          "spec2Desc": "Consulting and representation in business law, negotiation and conclusion of commercial contracts.",
+          "spec3": "Administrative & Tax Litigation",
+          "spec3Slug": "drept-administrativ-fiscal",
+          "spec3Icon": "document",
+          "spec3Desc": "Administrative challenges, tax litigation and representation before public authorities.",
+          "spec4": "Family Law",
+          "spec4Slug": "drept-familiei",
+          "spec4Icon": "family",
+          "spec4Desc": "Divorces, child custody, partition, alimony and other family law matters.",
+          "spec5": "Misdemeanor Law",
+          "spec5Slug": "",
+          "spec5Icon": "gavel",
+          "spec5Image": "/images/services/drept-contraventional.webp",
+          "spec5Desc": "Defense in misdemeanor cases, fine challenges and contravention reports.",
+          "spec6": "Labor Law",
+          "spec6Slug": "dreptul-muncii",
+          "spec6Icon": "suitcase",
+          "spec6Desc": "Protection of employee and employer rights, employment contracts and labor disputes."
         },
         "education": {
-          "edu1": "Law Degree - University of Oradea",
-          "edu2": "Member of the Satu Mare Bar Association"
+          "edu1": "Member of the Satu Mare Bar since 2019",
+          "edu2": "Law Degree - Faculty of Law, University of Bucharest",
+          "edu3": "Master's in Business Law - University of Bucharest"
         },
         "experience": {
-          "exp1": "Associate Attorney - SCA Stan-Baculescu",
-          "exp2": "Professional Internship - Satu Mare Bar"
+          "exp1": "Collaborating Attorney - SCA Stan-Baculescu (2019 - present)",
+          "exp2": "Legal assistance and representation in civil and commercial litigation",
+          "exp3": "Consulting in contractual law and contract negotiation"
         }
       },
       "cristinaBlan": {
@@ -254,21 +369,43 @@
       },
       "alexandraRusu": {
         "name": "Alexandra Rusu",
-        "shortBio": "Associate attorney specializing in traffic accidents and medical malpractice. Dedicated to obtaining fair compensation.",
-        "fullBio": "Alexandra Rusu is an associate attorney with a distinct specialization in traffic accident cases and medical malpractice. With an empathetic and determined approach, she has helped numerous clients obtain fair compensation for injuries suffered. Her experience in this niche field makes her a trusted ally for victims of accidents and medical negligence.",
+        "shortBio": "Associate attorney, member of the Satu Mare Bar since 2019. Specialized in civil law, criminal law, family law, and business law.",
+        "fullBio": "Alexandra Rusu is an associate attorney at Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2019. As a fully qualified attorney, she has provided legal assistance and represented clients in criminal law litigation (traffic violations, crimes against persons and property, state border matters), family law, commercial law, and administrative violations. She has also handled contractual disputes, tort cases, civil litigation, corporate law, and real property matters, approaching each case with dedication.",
+        "pullQuote": "I see things through to completion, regardless of the effort required to achieve it.",
+        "phone": "+40 729 052 954",
+        "email": "alexandra.rusu@stanbaculescu.ro",
+        "barYear": "2019",
         "specializations": {
-          "spec1": "Traffic Accidents",
-          "spec2": "Medical Malpractice",
-          "spec3": "Compensation Claims",
-          "spec4": "Civil Law"
+          "spec1": "Civil Law",
+          "spec1Slug": "drept-civil",
+          "spec1Icon": "balance-scale",
+          "spec1Desc": "Consultation and representation in civil litigation, contracts, property, tort liability and successions.",
+          "spec2": "Criminal Law",
+          "spec2Slug": "drept-penal",
+          "spec2Icon": "gavel",
+          "spec2Desc": "Defense in criminal cases, including traffic offenses, crimes against persons, property and state border matters.",
+          "spec3": "Family Law",
+          "spec3Slug": "drept-familiei",
+          "spec3Icon": "family",
+          "spec3Desc": "Divorces, child custody, partition, alimony and other family matters.",
+          "spec4": "Business & Corporate Law",
+          "spec4Slug": "drept-comercial",
+          "spec4Icon": "contract",
+          "spec4Desc": "Consulting for commercial companies, contracts, commercial litigation and corporate law.",
+          "spec5": "Misdemeanor Law",
+          "spec5Slug": "",
+          "spec5Icon": "gavel",
+          "spec5Image": "/images/services/drept-contraventional.webp",
+          "spec5Desc": "Defense in misdemeanor cases, fine challenges and official reports."
         },
         "education": {
-          "edu1": "Law Degree - University of Oradea",
-          "edu2": "Member of the Satu Mare Bar Association"
+          "edu1": "Member of the Satu Mare Bar since 2019",
+          "edu2": "Law Degree"
         },
         "experience": {
-          "exp1": "Associate Attorney - SCA Stan-Baculescu",
-          "exp2": "Specialization in damages and compensation"
+          "exp1": "Associate Attorney - SCA Stan-Baculescu (2020 - present)",
+          "exp2": "Trial attorney with experience in criminal and civil litigation",
+          "exp3": "Consulting in contractual and real estate law"
         }
       },
       "dianaVeres": {
@@ -277,13 +414,10 @@
         "fullBio": "Diana Veres is part of the administrative team at Stan-Baculescu Law Firm in Satu Mare, serving as client relations manager. With a warm and professional attitude, she welcomes clients, manages appointments, and facilitates efficient communication between clients and attorneys. Through her dedication and attention to detail, she contributes to the smooth operation of the firm and a positive experience for every client.",
         "specializations": {
           "spec1": "Client Relations",
-          "spec2": "Appointment Coordination",
-          "spec3": "Administrative Support",
-          "spec4": "Communication and Reception"
+          "spec2": "Appointment Coordination"
         },
         "education": {
-          "edu1": "Studies in Administration and Secretarial Work",
-          "edu2": "Communication and public relations courses"
+          "edu1": "Graduate of the Faculty of Law, Babes-Bolyai University, Cluj-Napoca"
         },
         "experience": {
           "exp1": "Client Relations Manager - SCA Stan-Baculescu",
@@ -296,13 +430,24 @@
       "specializations": "Specializations",
       "education": "Education",
       "experience": "Experience",
+      "contactLabel": "Schedule a Consultation",
       "contactTitle": "Want to schedule a consultation?",
-      "contactDescription": "We are here to help. Contact us to discuss your case."
+      "contactDescription": "We are here to help. Contact us to discuss your case.",
+      "practiceAreas": "Practice Areas",
+      "yearsLabel": "Years of Experience",
+      "barMemberLabel": "Bar Member Since",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "pullQuote": "Professionalism and dedication in defending our clients' interests.",
+      "viewDetails": "Details"
     },
     "cta": {
+      "label": "Our Team",
       "title": "Want to meet our team?",
       "description": "Schedule a consultation and speak directly with one of our attorneys about your case.",
-      "button": "Contact Us"
+      "button": "Contact Us",
+      "callLabel": "Or call directly",
+      "available": "Available Monday - Friday, 09:00 - 17:00"
     }
   },
   "ServicesPage": {
@@ -312,7 +457,15 @@
       "titleLine2": "Our Practice Areas",
       "subtitle": "Practice Areas",
       "trustBadge": "8 Practice Areas",
-      "description": "We provide comprehensive legal assistance across various areas of law. Our team of specialized attorneys is here to represent your interests with professionalism."
+      "description": "We provide comprehensive legal assistance across various areas of law. Our team of specialized attorneys is here to represent your interests with professionalism.",
+      "breadcrumbHome": "Home",
+      "breadcrumbServices": "Services",
+      "scrollLabel": "Discover"
+    },
+    "grid": {
+      "label": "Practice Areas",
+      "title": "Legal Services",
+      "description": "Select the legal area relevant to your situation. Our specialized attorneys provide professional consultation and representation."
     },
     "viewDetails": "Learn more",
     "services": {
@@ -350,18 +503,30 @@
       }
     },
     "cta": {
+      "label": "Legal Services",
       "title": "Need Legal Assistance?",
       "description": "Contact us for an initial consultation. Our team of attorneys is here to help you.",
-      "button": "Contact Us"
+      "button": "Contact Us",
+      "callLabel": "Or call directly",
+      "available": "Available Monday - Friday, 09:00 - 17:00"
     }
   },
   "ServiceDetail": {
     "backToServices": "Back to Services",
-    "relatedServices": "Related Services",
+    "relatedServices": "Other Services",
+    "relatedLabel": "Related Services",
+    "breadcrumbHome": "Home",
+    "breadcrumbServices": "Services",
+    "sectionLabelDescription": "About This Service",
+    "sectionLabelCases": "Common Cases",
+    "sectionLabelApproach": "Our Methodology",
     "cta": {
+      "label": "Free Consultation",
       "title": "Need Legal Assistance?",
       "description": "Contact us for a free consultation. Our team of specialized attorneys is at your service.",
-      "button": "Schedule a Consultation"
+      "button": "Schedule a Consultation",
+      "callLabel": "Or call directly",
+      "available": "Available Monday - Friday, 09:00 - 17:00"
     },
     "malpraxis-medical": {
       "title": "Medical Malpractice",
@@ -403,7 +568,7 @@
         "description": "Complete civil law services: litigation, contracts, property, successions. Specialized attorneys in Satu Mare with extensive court experience."
       },
       "descriptionTitle": "Civil Law Services",
-      "description": "Civil law governs relationships between individuals and legal entities regarding property, contracts, obligations, and civil liability. Our team offers consultation and representation in all areas of civil law, from drafting and negotiating contracts to resolving disputes in court. With over 15 years of experience, we have successfully represented hundreds of clients in diverse civil cases.",
+      "description": "Civil law governs relationships between individuals and legal entities regarding property, contracts, obligations, and civil liability. Our team offers consultation and representation in all areas of civil law, from drafting and negotiating contracts to resolving disputes in court. With nearly two decades of experience, we have successfully represented hundreds of clients in diverse civil cases.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Property disputes and real estate claims",
@@ -617,9 +782,12 @@
     "shareArticle": "Share this article:",
     "relatedArticles": "Related articles",
     "cta": {
+      "label": "Legal Advice",
       "title": "Need legal advice?",
       "description": "Our team of attorneys is available to help you with any legal questions.",
-      "button": "Contact Us"
+      "button": "Contact Us",
+      "callLabel": "Or call directly",
+      "available": "Available Monday - Friday, 09:00 - 17:00"
     }
   },
   "Testimonials": {
@@ -635,7 +803,7 @@
     "viewAllReviews": "View all reviews on Google"
   },
   "Footer": {
-    "description": "We provide excellent legal services in Satu Mare and throughout Romania. With over 15 years of experience, we are here for you in matters of civil, criminal, family, and commercial law.",
+    "description": "We provide excellent legal services in Satu Mare and throughout Romania. With nearly 20 years of experience, we are here for you in matters of civil, criminal, family, and commercial law.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contactInfo": "Contact Information",

@@ -58,7 +58,7 @@ export function HomeTeam() {
               <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl lg:text-6xl">
                 {t('titleLine2')}
               </h2>
-              <div className="mt-4 h-[2px] w-16 bg-gold" />
+              <div className="mt-4 h-[2px] w-12 bg-gold" />
             </ScrollAnimate>
             <ScrollAnimate delay={0.2}>
               <p className="mt-6 text-lg leading-relaxed text-text-secondary">

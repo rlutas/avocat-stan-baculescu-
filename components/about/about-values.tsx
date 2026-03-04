@@ -1,82 +1,107 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { LawIcon } from '@/components/icons';
 import type { LawIconName } from '@/components/icons';
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
+
+const values: { iconName: LawIconName; titleKey: string }[] = [
+  { iconName: 'certificate', titleKey: 'professionalism' },
+  { iconName: 'shield',      titleKey: 'adaptability'    },
+  { iconName: 'medal',       titleKey: 'loyalty'          },
+];
 
 export function AboutValues() {
   const t = useTranslations('AboutPage.values');
 
-  const values: { iconName: LawIconName; titleKey: string }[] = [
-    {
-      iconName: 'certificate',
-      titleKey: 'professionalism',
-    },
-    {
-      iconName: 'shield',
-      titleKey: 'adaptability',
-    },
-    {
-      iconName: 'medal',
-      titleKey: 'loyalty',
-    },
-  ];
-
   return (
-    <section className="bg-[#f8f9fa] py-16 sm:py-24">
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 1s ease-out both;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-        .delay-500 { animation-delay: 500ms; }
-      `}</style>
+    <section className="relative overflow-hidden bg-white py-20 sm:py-32">
+      {/* Subtle top line */}
+      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-navy/10 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-12 text-center">
-          <h2 className="animate-fade-in-up font-heading mb-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            {t('title')}
-          </h2>
-          <p className="animate-fade-in-up delay-100 mx-auto max-w-2xl text-lg text-[#4b5563]">
-            {t('subtitle')}
-          </p>
+        {/* Section header — centered */}
+        <div className="mb-14 text-center sm:mb-16">
+          <ScrollAnimate>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+              {t('label')}
+            </p>
+          </ScrollAnimate>
+
+          <ScrollAnimate delay={0.1}>
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl lg:text-6xl">
+              {t('title')}
+            </h2>
+            <div className="mx-auto mt-4 h-[2px] w-24 bg-gold" />
+          </ScrollAnimate>
+
+          <ScrollAnimate delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+              {t('subtitle')}
+            </p>
+          </ScrollAnimate>
         </div>
 
-        {/* Values Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="animate-fade-in-up group rounded-2xl border border-transparent bg-white p-8 shadow-sm ring-2 ring-transparent transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:ring-gold/60 hover:shadow-xl"
-              style={{ animationDelay: `${(index + 2) * 100}ms` }}
-            >
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#fef9e7] transition-transform duration-300 group-hover:scale-110">
-                <LawIcon name={value.iconName} size={28} variant="gold" />
-              </div>
-              <h3 className="mb-3 text-xl font-semibold text-navy font-heading">
-                {t(`${value.titleKey}.title`)}
-              </h3>
-              <p className="leading-relaxed text-[#4b5563]">
-                {t(`${value.titleKey}.description`)}
-              </p>
+        {/* Team meeting photo banner */}
+        <ScrollAnimate delay={0.3} variant="fadeIn">
+          <div className="relative mb-12 overflow-hidden rounded-2xl sm:mb-14">
+            <div className="relative h-56 sm:h-72 lg:h-80">
+              <Image
+                src="/images/team/echipa-in-meeting-2.webp"
+                alt="Echipa Stan-Baculescu in sedinta de lucru"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+              {/* Subtle gradient overlay for polish */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-navy/10" />
+              {/* Gold bottom accent */}
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
             </div>
+          </div>
+        </ScrollAnimate>
+
+        {/* Values grid */}
+        <StaggerContainer
+          className="grid gap-6 md:grid-cols-3"
+          staggerDelay={0.12}
+        >
+          {values.map((value) => (
+            <StaggerItem key={value.titleKey} variant="scaleUp">
+              {/* Card with gold bottom line reveal on hover */}
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-navy/10">
+
+                {/* Top accent: thin gold bar that reveals on hover */}
+                <div className="absolute left-0 top-0 h-[3px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+
+                <div className="flex flex-1 flex-col p-8">
+                  {/* Icon container */}
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#fef9e7] transition-all duration-300 group-hover:scale-110 group-hover:bg-gold/20">
+                    <LawIcon name={value.iconName} size={32} variant="gold" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="mb-3 font-heading text-xl font-semibold text-navy transition-colors duration-300 group-hover:text-gold sm:text-2xl">
+                    {t(`${value.titleKey}.title`)}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="flex-1 text-base leading-relaxed text-text-secondary">
+                    {t(`${value.titleKey}.description`)}
+                  </p>
+                </div>
+
+                {/* Gold bottom line reveal */}
+                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
+
+      {/* Bottom transition line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
     </section>
   );
 }

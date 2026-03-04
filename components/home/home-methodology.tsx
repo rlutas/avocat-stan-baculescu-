@@ -26,7 +26,7 @@ export function HomeMethodology() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-14 text-center sm:mb-16">
+        <div className="mb-14 sm:mb-16">
           <ScrollAnimate>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
               {t('titleLine1')}
@@ -36,10 +36,10 @@ export function HomeMethodology() {
             <h2 className="font-heading text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
               {t('titleLine2')}
             </h2>
-            <div className="mx-auto mt-4 h-[2px] w-16 bg-gold" />
+            <div className="mt-4 h-[2px] w-20 bg-gold" />
           </ScrollAnimate>
           <ScrollAnimate delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
               {t('description')}
             </p>
           </ScrollAnimate>

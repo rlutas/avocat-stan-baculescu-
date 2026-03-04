@@ -4,7 +4,8 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { Clock, Award, Phone, ArrowRight } from 'lucide-react';
+import { Clock, Phone, ArrowRight } from 'lucide-react';
+import { GlowWrapper } from '@/components/ui/glow-button';
 
 const founders = [
   {
@@ -23,7 +24,7 @@ export function Hero() {
   const t = useTranslations('HomePage.hero');
 
   return (
-    <section className="relative w-full overflow-hidden bg-navy">
+    <section className="relative w-full min-h-screen overflow-hidden bg-navy">
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -108,19 +109,29 @@ export function Hero() {
         .delay-900 { animation-delay: 900ms; }
         .delay-1000 { animation-delay: 1000ms; }
         .delay-1100 { animation-delay: 1100ms; }
+        @keyframes gentleFloat {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-6px);
+          }
+        }
+        .animate-gentle-float {
+          animation: gentleFloat 5s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+        .animate-gentle-float-alt {
+          animation: gentleFloat 6s ease-in-out infinite;
+          animation-delay: 2.5s;
+        }
       `}</style>
 
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-8 py-28 sm:py-36 lg:grid-cols-[1fr_auto] lg:gap-12 lg:py-44">
+      <div className="mx-auto flex min-h-screen max-w-[1400px] items-start lg:items-center px-4 sm:px-6 lg:px-8">
+        <div className="grid w-full items-center gap-8 pt-28 pb-16 sm:pt-32 sm:pb-20 lg:grid-cols-[1fr_auto] lg:gap-12 lg:pt-28 lg:pb-28">
 
           {/* Left Content */}
           <div className="max-w-xl">
-            {/* Trust Badge */}
-            <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2 ring-1 ring-gold/20">
-              <Award className="h-4 w-4 text-gold" />
-              <span className="text-sm font-medium text-gold">{t('trustBadge')}</span>
-            </div>
-
             {/* Headline */}
             <h1 className="animate-fade-in-up delay-100 mb-6 font-heading font-bold leading-tight text-white">
               <span className="block text-2xl sm:text-3xl lg:text-[2.5rem] text-white/70 font-medium">{t('titleLine1')}</span>
@@ -134,16 +145,18 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div className="animate-fade-in-up delay-300 mb-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button
-                asChild
-                size="lg"
-                className="group h-14 rounded-full bg-gold px-8 text-base font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)]"
-              >
-                <Link href="/contact">
-                  {t('cta')}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
+              <GlowWrapper className="rounded-full">
+                <Button
+                  asChild
+                  size="lg"
+                  className="group h-14 rounded-full bg-gold px-8 text-base font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)]"
+                >
+                  <Link href="/contact">
+                    {t('cta')}
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </GlowWrapper>
               <a
                 href="tel:+40745466720"
                 className="group relative flex h-14 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/15 hover:ring-gold/40 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0"
@@ -169,37 +182,20 @@ export function Hero() {
 
           {/* Right Side - Founders + Stats (Desktop) */}
           <div className="relative hidden lg:flex lg:items-start lg:justify-center">
-            {/* Geometric gold decorations */}
-            {/* Static radial glow behind photos */}
+            {/* Strong radial glow behind photos */}
             <div
               className="animate-glow delay-500 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{
-                width: '520px',
-                height: '520px',
-                background: 'radial-gradient(circle, rgba(208, 156, 17, 0.12) 0%, rgba(208, 156, 17, 0.04) 40%, transparent 70%)',
+                width: '550px',
+                height: '550px',
+                background: 'radial-gradient(circle, rgba(208, 156, 17, 0.18) 0%, rgba(208, 156, 17, 0.08) 35%, rgba(208, 156, 17, 0.02) 55%, transparent 70%)',
               }}
             />
 
-            {/* Diagonal gold lines */}
-            <div
-              className="animate-line-x delay-700 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[1px] w-[600px] origin-center -rotate-[30deg] bg-gradient-to-r from-transparent via-gold/[0.08] to-transparent"
-            />
-            <div
-              className="animate-line-x delay-800 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[40%] h-[1px] w-[500px] origin-center -rotate-[30deg] bg-gradient-to-r from-transparent via-gold/[0.06] to-transparent"
-            />
-            <div
-              className="animate-line-x delay-900 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[60%] h-[1px] w-[550px] origin-center -rotate-[30deg] bg-gradient-to-r from-transparent via-gold/[0.06] to-transparent"
-            />
-
-            {/* Corner accent - top left */}
-            <div className="animate-line-x delay-800 pointer-events-none absolute -left-4 top-8 h-[1px] w-20 origin-left bg-gradient-to-r from-gold/30 to-transparent" />
-            <div className="animate-line-y delay-800 pointer-events-none absolute -left-4 top-8 h-20 w-[1px] origin-top bg-gradient-to-b from-gold/30 to-transparent" />
-
-            {/* Corner accent - bottom right */}
-            <div className="animate-line-x delay-900 pointer-events-none absolute -right-4 bottom-8 h-[1px] w-20 origin-right bg-gradient-to-l from-gold/30 to-transparent" />
-            <div className="animate-line-y delay-900 pointer-events-none absolute -right-4 bottom-8 h-20 w-[1px] origin-bottom bg-gradient-to-t from-gold/30 to-transparent" />
-
             <div className="relative z-10 flex items-start gap-5">
+              {/* Gold vertical separator between photos */}
+              <div className="pointer-events-none absolute left-1/2 top-[5%] z-20 h-[90%] w-[2px] -translate-x-1/2 origin-top animate-line-y delay-800 bg-gradient-to-b from-gold/10 via-gold/40 to-gold/10" />
+
               {/* Founder 1 column - with badge below */}
               <div className="flex flex-col items-center">
                 <Link
@@ -226,7 +222,7 @@ export function Hero() {
 
                 {/* Badge below Camelia */}
                 <div className="animate-badge delay-1000 mt-8">
-                  <div className="rounded-2xl bg-white px-5 py-3 shadow-xl">
+                  <div className="animate-gentle-float rounded-2xl bg-white px-5 py-3 shadow-xl">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
                         <span className="text-base font-bold text-navy">1K+</span>
@@ -241,10 +237,10 @@ export function Hero() {
               <div className="flex flex-col items-center mt-16">
                 {/* Badge above Vlad */}
                 <div className="animate-badge delay-900 mb-8">
-                  <div className="rounded-2xl bg-white px-5 py-3 shadow-xl">
+                  <div className="animate-gentle-float-alt rounded-2xl bg-white px-5 py-3 shadow-xl">
                     <div className="flex items-center gap-3">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
-                        <span className="text-base font-bold text-navy">15+</span>
+                        <span className="text-base font-bold text-navy">20+</span>
                       </div>
                       <p className="text-sm font-bold text-navy whitespace-nowrap">{t('yearsExperience')}</p>
                     </div>
@@ -278,17 +274,14 @@ export function Hero() {
 
           {/* Tablet & Mobile - Founders */}
           <div className="relative lg:hidden mt-8 sm:mt-10">
-            {/* Geometric gold decorations - smaller */}
+            {/* Strong radial glow - smaller */}
             <div
               className="animate-glow delay-500 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{
-                width: '340px',
-                height: '340px',
-                background: 'radial-gradient(circle, rgba(208, 156, 17, 0.10) 0%, rgba(208, 156, 17, 0.03) 40%, transparent 70%)',
+                width: '360px',
+                height: '360px',
+                background: 'radial-gradient(circle, rgba(208, 156, 17, 0.15) 0%, rgba(208, 156, 17, 0.06) 35%, transparent 70%)',
               }}
-            />
-            <div
-              className="animate-line-x delay-700 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[1px] w-[380px] origin-center -rotate-[30deg] bg-gradient-to-r from-transparent via-gold/[0.07] to-transparent"
             />
 
             {/* Tablet (md to lg): Side by side layout */}
@@ -319,7 +312,7 @@ export function Hero() {
 
                 {/* Badge below Camelia */}
                 <div className="animate-badge delay-1000 mt-6">
-                  <div className="rounded-xl bg-white px-4 py-2.5 shadow-xl">
+                  <div className="animate-gentle-float rounded-xl bg-white px-4 py-2.5 shadow-xl">
                     <div className="flex items-center gap-2.5">
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
                         <span className="text-sm font-bold text-navy">1K+</span>
@@ -334,10 +327,10 @@ export function Hero() {
               <div className="flex flex-col items-center mt-12">
                 {/* Badge above Vlad */}
                 <div className="animate-badge delay-900 mb-6">
-                  <div className="rounded-xl bg-white px-4 py-2.5 shadow-xl">
+                  <div className="animate-gentle-float-alt rounded-xl bg-white px-4 py-2.5 shadow-xl">
                     <div className="flex items-center gap-2.5">
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
-                        <span className="text-sm font-bold text-navy">15+</span>
+                        <span className="text-sm font-bold text-navy">20+</span>
                       </div>
                       <p className="text-xs font-bold text-navy whitespace-nowrap">{t('yearsExperience')}</p>
                     </div>
@@ -376,13 +369,13 @@ export function Hero() {
                   href={`/echipa/${founders[0].id}`}
                   className="group relative"
                 >
-                  <div className="animate-photo delay-600 relative h-[200px] w-[140px] sm:h-[240px] sm:w-[165px] overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-b from-gold/5 to-navy-light/20 shadow-2xl ring-2 ring-white/20 transition-all duration-500 group-hover:ring-gold/60 group-hover:-translate-y-2 group-hover:shadow-gold/30">
+                  <div className="animate-photo delay-600 relative h-[230px] w-[150px] sm:h-[280px] sm:w-[185px] overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-b from-gold/5 to-navy-light/20 shadow-2xl ring-2 ring-white/20 transition-all duration-500 group-hover:ring-gold/60 group-hover:-translate-y-2 group-hover:shadow-gold/30">
                     <Image
                       src={founders[0].image}
                       alt={founders[0].name}
                       fill
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="165px"
+                      sizes="185px"
                       priority
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/70 to-transparent pt-10 pb-2">
@@ -396,7 +389,7 @@ export function Hero() {
 
                 {/* Badge below Camelia */}
                 <div className="animate-badge delay-1000 mt-4 sm:mt-6">
-                  <div className="rounded-xl bg-white px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl">
+                  <div className="animate-gentle-float rounded-xl bg-white px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl">
                     <div className="flex items-center gap-2">
                       <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
                         <span className="text-xs sm:text-sm font-bold text-navy">1K+</span>
@@ -411,10 +404,10 @@ export function Hero() {
               <div className="flex flex-col items-center mt-10 sm:mt-12">
                 {/* Badge above Vlad */}
                 <div className="animate-badge delay-900 mb-4 sm:mb-6">
-                  <div className="rounded-xl bg-white px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl">
+                  <div className="animate-gentle-float-alt rounded-xl bg-white px-3 py-2 sm:px-4 sm:py-2.5 shadow-xl">
                     <div className="flex items-center gap-2">
                       <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
-                        <span className="text-xs sm:text-sm font-bold text-navy">15+</span>
+                        <span className="text-xs sm:text-sm font-bold text-navy">20+</span>
                       </div>
                       <p className="text-[10px] sm:text-xs font-bold text-navy whitespace-nowrap">{t('yearsExperience')}</p>
                     </div>
@@ -425,13 +418,13 @@ export function Hero() {
                   href={`/echipa/${founders[1].id}`}
                   className="group relative"
                 >
-                  <div className="animate-photo delay-700 relative h-[200px] w-[140px] sm:h-[240px] sm:w-[165px] overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-b from-gold/5 to-navy-light/20 shadow-2xl ring-2 ring-white/20 transition-all duration-500 group-hover:ring-gold/60 group-hover:-translate-y-2 group-hover:shadow-gold/30">
+                  <div className="animate-photo delay-700 relative h-[230px] w-[150px] sm:h-[280px] sm:w-[185px] overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-b from-gold/5 to-navy-light/20 shadow-2xl ring-2 ring-white/20 transition-all duration-500 group-hover:ring-gold/60 group-hover:-translate-y-2 group-hover:shadow-gold/30">
                     <Image
                       src={founders[1].image}
                       alt={founders[1].name}
                       fill
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="165px"
+                      sizes="185px"
                       priority
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/70 to-transparent pt-10 pb-2">

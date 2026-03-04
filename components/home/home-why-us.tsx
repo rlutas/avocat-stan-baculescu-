@@ -153,6 +153,9 @@ export function HomeWhyUs() {
           </div>
         </div>
       </div>
+
+      {/* Section transition line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
     </section>
   );
 }

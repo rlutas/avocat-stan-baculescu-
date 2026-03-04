@@ -232,6 +232,7 @@
   --animate-fade-in: fadeIn 0.5s ease-in;
   --animate-slide-up: slideUp 0.5s ease-out;
   --animate-slide-down: slideDown 0.5s ease-out;
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
 }
 
 @keyframes fadeIn {
@@ -262,6 +263,15 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }
 
@@ -296,6 +306,10 @@
 
 .group:hover .icon-hover-white {
   filter: brightness(0) invert(1) !important;
+}
+
+.font-heading {
+  letter-spacing: -0.01em;
 }
 
 @layer base {

@@ -4,13 +4,19 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
+import {
+  ScrollAnimate,
+  StaggerContainer,
+  StaggerItem,
+} from '@/components/ui/scroll-animate';
 
 type TeamMember = {
   id: string;
   nameKey: string;
   roleKey: string;
   image: string;
-  category: 'founder' | 'collaborator' | 'staff';
+  category: 'founder' | 'collaborator' | 'support';
+  specializationKeys?: string[];
 };
 
 const teamMembers: TeamMember[] = [
@@ -20,6 +26,7 @@ const teamMembers: TeamMember[] = [
     roleKey: 'founder',
     image: '/images/team/camielia-stan.webp',
     category: 'founder',
+    specializationKeys: ['spec1', 'spec2'],
   },
   {
     id: 'vlad-baculescu',
@@ -27,6 +34,7 @@ const teamMembers: TeamMember[] = [
     roleKey: 'founder',
     image: '/images/team/vlad-baculescu.webp',
     category: 'founder',
+    specializationKeys: ['spec1', 'spec2'],
   },
   {
     id: 'diana-chincea',
@@ -34,6 +42,7 @@ const teamMembers: TeamMember[] = [
     roleKey: 'collaborator',
     image: '/images/team/diana-chincea.webp',
     category: 'collaborator',
+    specializationKeys: ['spec1', 'spec2'],
   },
   {
     id: 'cristina-blan',
@@ -41,6 +50,7 @@ const teamMembers: TeamMember[] = [
     roleKey: 'collaborator',
     image: '/images/team/cristina-blan.webp',
     category: 'collaborator',
+    specializationKeys: ['spec1', 'spec2'],
   },
   {
     id: 'alexandra-rusu',
@@ -48,13 +58,15 @@ const teamMembers: TeamMember[] = [
     roleKey: 'collaborator',
     image: '/images/team/alexandra-rusu.webp',
     category: 'collaborator',
+    specializationKeys: ['spec1', 'spec2'],
   },
   {
     id: 'diana-veres',
     nameKey: 'dianaVeres',
     roleKey: 'clientRelations',
     image: '/images/team/diana-veres.webp',
-    category: 'staff',
+    category: 'support',
+    specializationKeys: ['spec1', 'spec2'],
   },
 ];
 
@@ -63,197 +75,227 @@ export function TeamGrid() {
 
   const founders = teamMembers.filter((m) => m.category === 'founder');
   const collaborators = teamMembers.filter((m) => m.category === 'collaborator');
-  const staff = teamMembers.filter((m) => m.category === 'staff');
+  const support = teamMembers.filter((m) => m.category === 'support');
 
   return (
-    <section className="py-16 sm:py-24">
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes photoFadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-      `}</style>
-
+    <section className="bg-white py-20 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Founders Section */}
-        <div className="mb-20">
-          <div
-            className="mb-12 text-center"
-            style={{ animation: 'fadeInUp 1s ease-out both' }}
-          >
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+
+        {/* ── Founders ── */}
+        <div className="mb-20 sm:mb-28">
+          <ScrollAnimate className="mb-12 sm:mb-14">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
               Conducere
             </p>
-            <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
               {t('sections.founders')}
             </h2>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
-            {founders.map((member, index) => (
-              <TeamCard key={member.id} member={member} t={t} variant="gold" index={index} />
+            <div className="mt-4 h-[2px] w-12 bg-gold" />
+          </ScrollAnimate>
+
+          <StaggerContainer
+            className="grid gap-6 sm:grid-cols-2 lg:gap-8"
+            staggerDelay={0.15}
+          >
+            {founders.map((member) => (
+              <StaggerItem key={member.id} variant="scaleUp">
+                <FounderCard member={member} t={t} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
-        {/* Collaborators Section */}
-        <div className="mb-20">
-          <div
-            className="mb-12 text-center"
-            style={{ animation: 'fadeInUp 1s ease-out 200ms both' }}
-          >
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
+        {/* ── Collaborators ── */}
+        <div className="mb-20 sm:mb-28">
+          <ScrollAnimate className="mb-12 sm:mb-14">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
               Echipa
             </p>
-            <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
               {t('sections.collaborators')}
             </h2>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
-            {collaborators.map((member, index) => (
-              <TeamCard key={member.id} member={member} t={t} variant="navy" index={index + 2} />
+            <div className="mt-4 h-[2px] w-12 bg-gold" />
+          </ScrollAnimate>
+
+          <StaggerContainer
+            className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8"
+            staggerDelay={0.1}
+          >
+            {collaborators.map((member) => (
+              <StaggerItem key={member.id} variant="scaleUp">
+                <CollaboratorCard member={member} t={t} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
-        {/* Staff Section */}
-        <div>
-          <div
-            className="mb-12 text-center"
-            style={{ animation: 'fadeInUp 1s ease-out 400ms both' }}
-          >
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
-              Suport
-            </p>
-            <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
-              {t('sections.staff')}
-            </h2>
+        {/* ── Support / Client Relations ── */}
+        {support.length > 0 && (
+          <div>
+            <ScrollAnimate className="mb-12 sm:mb-14">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                {t('sections.support')}
+              </p>
+              <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
+                {t('sections.supportTitle')}
+              </h2>
+              <div className="mt-4 h-[2px] w-12 bg-gold" />
+            </ScrollAnimate>
+
+            <StaggerContainer
+              className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8"
+              staggerDelay={0.1}
+            >
+              {support.map((member) => (
+                <StaggerItem key={member.id} variant="scaleUp">
+                  <CollaboratorCard member={member} t={t} />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
-          <div className="mx-auto max-w-2xl">
-            {staff.map((member, index) => (
-              <TeamCard key={member.id} member={member} t={t} variant="light" index={index + 5} />
-            ))}
-          </div>
-        </div>
+        )}
+
       </div>
     </section>
   );
 }
 
-// Universal Team Card with variant support and animations
-function TeamCard({
+/* ─────────────────────────────────────────────
+   FOUNDER CARD  (large, photo + info overlay)
+───────────────────────────────────────────── */
+function FounderCard({
   member,
   t,
-  variant,
-  index,
 }: {
   member: TeamMember;
   t: ReturnType<typeof useTranslations<'TeamPage'>>;
-  variant: 'gold' | 'navy' | 'light';
-  index: number;
 }) {
-  const isGold = variant === 'gold';
-  const isLight = variant === 'light';
-
-  // Colors based on variant
-  const accentColor = isGold ? 'bg-gold' : isLight ? 'bg-gray-300' : 'bg-navy';
-  const bgGradient = isGold
-    ? 'bg-gradient-to-br from-[#fdf6e3] via-[#fef9ed] to-[#fffbf5]'
-    : isLight
-    ? 'bg-gradient-to-br from-[#f0f5fa] via-[#f5f8fc] to-[#f8fafc]'
-    : 'bg-gradient-to-br from-[#e3ecf4] via-[#edf3f9] to-[#f5f9fc]';
-  const badgeBg = isGold
-    ? 'bg-gold/10 text-gold'
-    : isLight
-    ? 'bg-gray-100 text-gray-600'
-    : 'bg-navy/10 text-navy';
-  const hoverColor = isGold
-    ? 'group-hover:text-gold'
-    : isLight
-    ? 'group-hover:text-gray-600'
-    : 'group-hover:text-gold';
-
   return (
-    <Link
-      href={`/echipa/${member.id}`}
-      className="group block"
-      style={{ animation: `photoFadeIn 1s ease-out ${index * 100}ms both` }}
-    >
-      <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-transparent transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:ring-2 hover:ring-gold/60">
-        {/* Accent line on top with animation */}
-        <div className={`absolute left-0 right-0 top-0 z-10 h-1 origin-left scale-x-0 ${accentColor} transition-transform duration-300 group-hover:scale-x-100`} />
+    <Link href={`/echipa/${member.id}`} className="group block">
+      <div className="relative overflow-hidden rounded-2xl bg-navy">
+        {/* Photo */}
+        <div className="relative aspect-[3/4] sm:aspect-[4/5]">
+          <Image
+            src={member.image}
+            alt={t(`members.${member.nameKey}.name`)}
+            fill
+            className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+            sizes="(max-width: 640px) 100vw, 50vw"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+        </div>
 
-        <div className="flex flex-col sm:flex-row">
-          {/* Image Section with shimmer effect */}
-          <div className="relative sm:w-2/5">
-            <div className={`relative h-64 w-full overflow-hidden sm:h-full sm:min-h-[280px] ${bgGradient}`}>
-              {/* Shimmer effect */}
-              <div className="pointer-events-none absolute inset-0 z-[1] overflow-hidden opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div
-                  className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent)]"
-                  style={{ animation: 'shimmer 2s infinite' }}
-                />
-              </div>
+        {/* Content at bottom */}
+        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+          {/* Role badge */}
+          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.18em] text-gold">
+            {t(`roles.${member.roleKey}`)}
+          </span>
 
-              {/* Image positioned to be flush with left, bottom, and fill horizontally */}
-              <div className="absolute bottom-0 left-0 right-0 top-0">
-                <Image
-                  src={member.image}
-                  alt={t(`members.${member.nameKey}.name`)}
-                  fill
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.05]"
-                  sizes="(max-width: 640px) 100vw, 40vw"
-                />
-              </div>
+          {/* Name */}
+          <h3 className="mb-2 font-heading text-2xl font-bold text-white transition-colors duration-300 group-hover:text-gold sm:text-3xl">
+            {t(`members.${member.nameKey}.name`)}
+          </h3>
+
+          {/* Short bio */}
+          <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-white/65 sm:text-base">
+            {t(`members.${member.nameKey}.shortBio`)}
+          </p>
+
+          {/* Specialization tags */}
+          {member.specializationKeys && (
+            <div className="mb-4 flex flex-wrap gap-2">
+              {member.specializationKeys.map((specKey) => {
+                const fullKey = `members.${member.nameKey}.specializations.${specKey}` as Parameters<typeof t>[0];
+                return (
+                  <span
+                    key={specKey}
+                    className="rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[11px] font-medium text-gold/90"
+                  >
+                    {t(fullKey)}
+                  </span>
+                );
+              })}
             </div>
-          </div>
+          )}
 
-          {/* Content Section */}
-          <div className="flex flex-col justify-center p-6 sm:w-3/5 sm:p-8">
-            <div className="mb-3">
-              <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider ${badgeBg}`}>
-                {t(`roles.${member.roleKey}`)}
-              </span>
-            </div>
-
-            <h3 className={`mb-3 font-heading text-2xl font-bold text-navy transition-colors duration-300 ${hoverColor}`}>
-              {t(`members.${member.nameKey}.name`)}
-            </h3>
-
-            <p className="mb-5 line-clamp-3 text-sm leading-relaxed text-text-secondary">
-              {t(`members.${member.nameKey}.shortBio`)}
-            </p>
-
-            <div className={`mt-auto flex items-center text-sm font-medium text-navy transition-colors duration-300 ${hoverColor}`}>
-              <span>{t('viewProfile')}</span>
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
+          {/* View profile link — reveals on hover */}
+          <div className="flex items-center gap-2 text-sm font-semibold text-gold opacity-0 transition-all duration-300 group-hover:opacity-100">
+            {t('viewProfile')}
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </div>
         </div>
+
+        {/* Gold top accent line — reveals on hover */}
+        <div className="absolute left-0 right-0 top-0 h-[3px] origin-left scale-x-0 bg-gold transition-transform duration-500 group-hover:scale-x-100" />
       </div>
     </Link>
   );
 }
+
+/* ─────────────────────────────────────────────
+   COLLABORATOR CARD  (compact 3-column)
+───────────────────────────────────────────── */
+function CollaboratorCard({
+  member,
+  t,
+}: {
+  member: TeamMember;
+  t: ReturnType<typeof useTranslations<'TeamPage'>>;
+}) {
+  return (
+    <Link href={`/echipa/${member.id}`} className="group block">
+      <div className="relative overflow-hidden rounded-xl bg-navy sm:rounded-2xl">
+        {/* Photo */}
+        <div className="relative aspect-[3/4]">
+          <Image
+            src={member.image}
+            alt={t(`members.${member.nameKey}.name`)}
+            fill
+            className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.05]"
+            sizes="(max-width: 640px) 33vw, 33vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/25 to-transparent" />
+        </div>
+
+        {/* Name / role at bottom */}
+        <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5">
+          <span className="mb-1 hidden text-[10px] font-semibold uppercase tracking-[0.15em] text-gold sm:block">
+            {t(`roles.${member.roleKey}`)}
+          </span>
+          <h3 className="font-heading text-sm font-bold text-white transition-colors duration-300 group-hover:text-gold sm:text-lg">
+            {t(`members.${member.nameKey}.name`)}
+          </h3>
+
+          {/* Specialization tags (hidden on mobile, show on sm+) */}
+          {member.specializationKeys && (
+            <div className="mt-2 hidden flex-wrap gap-1.5 sm:flex">
+              {member.specializationKeys.map((specKey) => {
+                const fullKey = `members.${member.nameKey}.specializations.${specKey}` as Parameters<typeof t>[0];
+                return (
+                  <span
+                    key={specKey}
+                    className="rounded-full border border-gold/25 bg-gold/10 px-2 py-0.5 text-[10px] font-medium text-gold/85"
+                  >
+                    {t(fullKey)}
+                  </span>
+                );
+              })}
+            </div>
+          )}
+
+          {/* View profile — reveals on hover */}
+          <div className="mt-2 hidden items-center gap-1.5 text-xs font-semibold text-gold opacity-0 transition-all duration-300 group-hover:opacity-100 sm:flex">
+            {t('viewProfile')}
+            <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </div>
+        </div>
+
+        {/* Gold top accent */}
+        <div className="absolute left-0 right-0 top-0 h-[2px] origin-left scale-x-0 bg-gold transition-transform duration-500 group-hover:scale-x-100" />
+      </div>
+    </Link>
+  );
+}
+

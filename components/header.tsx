@@ -36,25 +36,29 @@ const serviceItems = [
 ] as const;
 
 // Animated hamburger icon component
-function AnimatedHamburger({ isOpen }: { isOpen: boolean }) {
+function AnimatedHamburger({ isOpen, isTransparent }: { isOpen: boolean; isTransparent?: boolean }) {
+  const barColor = isOpen ? 'bg-gold' : isTransparent ? 'bg-white' : 'bg-navy';
   return (
     <div className="relative h-6 w-7 flex flex-col justify-center items-center">
       <span
         className={cn(
-          'absolute h-0.5 w-7 bg-navy rounded-full transition-all duration-300 ease-out',
-          isOpen ? 'rotate-45 bg-gold' : '-translate-y-2'
+          'absolute h-0.5 w-7 rounded-full transition-all duration-300 ease-out',
+          barColor,
+          isOpen ? 'rotate-45' : '-translate-y-2'
         )}
       />
       <span
         className={cn(
-          'absolute h-0.5 w-5 bg-navy rounded-full transition-all duration-300 ease-out',
+          'absolute h-0.5 w-5 rounded-full transition-all duration-300 ease-out',
+          barColor,
           isOpen ? 'opacity-0 translate-x-3' : 'opacity-100'
         )}
       />
       <span
         className={cn(
-          'absolute h-0.5 w-7 bg-navy rounded-full transition-all duration-300 ease-out',
-          isOpen ? '-rotate-45 bg-gold' : 'translate-y-2'
+          'absolute h-0.5 w-7 rounded-full transition-all duration-300 ease-out',
+          barColor,
+          isOpen ? '-rotate-45' : 'translate-y-2'
         )}
       />
     </div>
@@ -70,6 +74,11 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesExpanded, setIsServicesExpanded] = useState(false);
+
+  // Detect if we're on the homepage
+  // usePathname from next-intl returns the path without locale prefix, so '/' is always the homepage
+  const isHomepage = pathname === '/';
+  const isTransparent = isHomepage && !isScrolled;
 
   // Handle scroll for sticky header
   useEffect(() => {
@@ -90,9 +99,11 @@ export function Header() {
     <header
       className={cn(
         'fixed left-0 right-0 top-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] backdrop-blur-sm'
-          : 'bg-white'
+        isTransparent
+          ? 'bg-transparent'
+          : isScrolled
+            ? 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] backdrop-blur-sm'
+            : 'bg-white'
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -104,7 +115,10 @@ export function Header() {
               alt={t('siteName')}
               width={220}
               height={73}
-              className="h-16 w-auto"
+              className={cn(
+                'h-16 w-auto transition-all duration-300',
+                isTransparent && 'brightness-0 invert'
+              )}
               priority
             />
           </Link>
@@ -120,10 +134,14 @@ export function Header() {
                     <Link
                       href={item.href}
                       className={cn(
-                        'relative flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors',
+                        'relative flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-300',
                         pathname === item.href || pathname.startsWith('/servicii/')
-                          ? 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
-                          : 'text-navy hover:text-gold'
+                          ? isTransparent
+                            ? 'text-white after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                            : 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                          : isTransparent
+                            ? 'text-white/90 hover:text-gold'
+                            : 'text-navy hover:text-gold'
                       )}
                     >
                       {t(`nav.${item.key}`)}
@@ -157,10 +175,14 @@ export function Header() {
                   key={item.key}
                   href={item.href}
                   className={cn(
-                    'relative px-4 py-2 text-sm font-medium transition-colors',
+                    'relative px-4 py-2 text-sm font-medium transition-all duration-300',
                     pathname === item.href
-                      ? 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
-                      : 'text-navy hover:text-gold'
+                      ? isTransparent
+                        ? 'text-white after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                        : 'text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold'
+                      : isTransparent
+                        ? 'text-white/90 hover:text-gold'
+                        : 'text-navy hover:text-gold'
                   )}
                 >
                   {t(`nav.${item.key}`)}
@@ -172,14 +194,21 @@ export function Header() {
           {/* Desktop Language Switcher & CTA */}
           <div className="hidden items-center gap-4 lg:flex">
             {/* Language Switcher */}
-            <div className="flex items-center rounded-full border border-navy/20 p-1">
+            <div className={cn(
+              'flex items-center rounded-full border p-1 transition-all duration-300',
+              isTransparent ? 'border-white/30' : 'border-navy/20'
+            )}>
               <button
                 onClick={() => switchLanguage('ro')}
                 className={cn(
-                  'rounded-full px-3 py-1 text-sm font-medium transition-all',
+                  'rounded-full px-3 py-1 text-sm font-medium transition-all duration-300',
                   locale === 'ro'
-                    ? 'bg-navy text-white'
-                    : 'text-navy/60 hover:text-navy'
+                    ? isTransparent
+                      ? 'bg-white/20 text-white'
+                      : 'bg-navy text-white'
+                    : isTransparent
+                      ? 'text-white/60 hover:text-white'
+                      : 'text-navy/60 hover:text-navy'
                 )}
               >
                 RO
@@ -187,10 +216,14 @@ export function Header() {
               <button
                 onClick={() => switchLanguage('en')}
                 className={cn(
-                  'rounded-full px-3 py-1 text-sm font-medium transition-all',
+                  'rounded-full px-3 py-1 text-sm font-medium transition-all duration-300',
                   locale === 'en'
-                    ? 'bg-navy text-white'
-                    : 'text-navy/60 hover:text-navy'
+                    ? isTransparent
+                      ? 'bg-white/20 text-white'
+                      : 'bg-navy text-white'
+                    : isTransparent
+                      ? 'text-white/60 hover:text-white'
+                      : 'text-navy/60 hover:text-navy'
                 )}
               >
                 EN
@@ -215,7 +248,7 @@ export function Header() {
                   className="flex h-12 w-12 items-center justify-center transition-all duration-300 active:scale-95"
                   aria-label="Toggle menu"
                 >
-                  <AnimatedHamburger isOpen={isMobileMenuOpen} />
+                  <AnimatedHamburger isOpen={isMobileMenuOpen} isTransparent={isTransparent} />
                 </button>
               </SheetTrigger>
               <SheetContent
@@ -251,10 +284,10 @@ export function Header() {
                             <button
                               onClick={() => setIsServicesExpanded(!isServicesExpanded)}
                               className={cn(
-                                'group relative flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300',
+                                'group relative flex w-full items-center justify-between rounded-xl px-4 py-3.5 font-heading text-base font-medium transition-all duration-300',
                                 pathname === item.href || pathname.startsWith('/servicii/')
                                   ? 'bg-gold/20 text-gold'
-                                  : 'text-white/90 hover:bg-white/5 hover:text-gold'
+                                  : 'text-white/90 hover:bg-white/5 hover:text-gold hover:translate-x-1'
                               )}
                               style={{ animationDelay: `${index * 50}ms` }}
                             >
@@ -292,7 +325,7 @@ export function Header() {
                                   )}
                                 >
                                   <LawIcon name="balance-scale" size={16} className="icon-hover-gold" variant="white" />
-                                  <span>Toate Serviciile</span>
+                                  <span>{t('nav.allServices')}</span>
                                 </Link>
                                 {serviceItems.map((service) => (
                                     <Link
@@ -322,7 +355,7 @@ export function Header() {
                           href={item.href}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={cn(
-                            'group relative flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300',
+                            'group relative flex items-center gap-3 rounded-xl px-4 py-3.5 font-heading text-base font-medium transition-all duration-300',
                             pathname === item.href
                               ? 'bg-gold/20 text-gold'
                               : 'text-white/90 hover:bg-white/5 hover:text-gold hover:translate-x-1'
@@ -350,11 +383,11 @@ export function Header() {
                         className={cn(
                           'flex-1 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300',
                           locale === 'ro'
-                            ? 'bg-gold text-navy shadow-lg'
+                            ? 'bg-gold text-navy shadow-[var(--shadow-gold)]'
                             : 'text-white/70 hover:text-white'
                         )}
                       >
-                        🇷🇴 Română
+                        RO
                       </button>
                       <button
                         onClick={() => {
@@ -364,11 +397,11 @@ export function Header() {
                         className={cn(
                           'flex-1 rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300',
                           locale === 'en'
-                            ? 'bg-gold text-navy shadow-lg'
+                            ? 'bg-gold text-navy shadow-[var(--shadow-gold)]'
                             : 'text-white/70 hover:text-white'
                         )}
                       >
-                        🇬🇧 English
+                        EN
                       </button>
                     </div>
 
@@ -391,7 +424,7 @@ export function Header() {
                     <Button
                       asChild
                       variant="outline"
-                      className="w-full h-12 bg-transparent border-white/20 text-white text-base hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+                      className="w-full h-12 bg-transparent border-white/20 text-white text-base hover:bg-white/10 hover:border-gold/40 hover:text-gold transition-all duration-300"
                     >
                       <Link
                         href="/contact"

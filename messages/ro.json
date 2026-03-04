@@ -7,7 +7,8 @@
       "team": "Echipa",
       "services": "Servicii",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "allServices": "Toate Serviciile"
     },
     "language": {
       "ro": "Romana",
@@ -20,10 +21,10 @@
       "titleLine1": "Societate Civila de Avocati",
       "titleLine2": "Stan-Baculescu",
       "subtitle": "Profesionalism. Dedicare. Rezultate.",
-      "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata Romania. Cu peste 15 ani de experienta, echipa noastra va reprezinta cu dedicare in domenii precum drept civil, penal, al familiei, comercial si multe altele.",
+      "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata Romania. Cu aproape 20 de ani de experienta, fondatorii nostri va reprezinta cu dedicare in domenii precum drept civil, penal, al familiei, comercial, malpraxis medical si multe altele.",
       "cta": "Programeaza o Consultatie",
       "secondaryCta": "Descopera Serviciile",
-      "trustBadge": "15+ ani de excelenta juridica",
+      "trustBadge": "Din 2006 in slujba justitiei",
       "callNow": "Suna acum",
       "schedule": "Program: Luni - Vineri, 09:00 - 17:00",
       "founder": "Fondator",
@@ -43,14 +44,14 @@
       "titleLine1": "Partenerul Dvs. Juridic",
       "titleLine2": "De Ce Stan-Baculescu",
       "description": "Cu o echipa dedicata si experienta vasta, suntem alaturi de dumneavoastra la fiecare pas in rezolvarea problemelor juridice.",
-      "stat1Value": "15+",
+      "stat1Value": "20+",
       "stat1Label": "Ani de Experienta",
       "stat2Value": "1000+",
       "stat2Label": "Clienti Multumiti",
       "stat3Value": "8",
       "stat3Label": "Arii de Practica",
       "value1Title": "Experienta Dovedita",
-      "value1Description": "Peste 15 ani de practica juridica si sute de cazuri rezolvate cu succes in instanta.",
+      "value1Description": "Membri ai Baroului Satu Mare din 2006, cu aproape doua decenii de practica juridica si sute de cazuri rezolvate cu succes in instanta.",
       "value2Title": "Abordare Personalizata",
       "value2Description": "Fiecare caz primeste atentie individuala si o strategie adaptata situatiei specifice.",
       "value3Title": "Comunicare Transparenta",
@@ -71,6 +72,7 @@
       "viewAll": "Vezi Intreaga Echipa"
     },
     "cta": {
+      "label": "Asistenta Juridica",
       "title": "Aveti Nevoie de Asistenta Juridica?",
       "description": "Programati o consultatie si discutati cu unul dintre avocatii nostri despre situatia dumneavoastra. Suntem aici sa va ajutam.",
       "button": "Programeaza o Consultatie",
@@ -81,19 +83,26 @@
   "AboutPage": {
     "hero": {
       "title": "Despre Noi",
-      "titleLine1": "Societate Civila de Avocati",
+      "label": "Societate Civila de Avocati",
+      "titleLine1": "Stan-Baculescu",
       "titleLine2": "Despre Noi",
-      "subtitle": "Traditie si Excelenta in Avocatura",
-      "trustBadge": "15+ ani de excelenta juridica"
+      "subtitle": "Din 2006 oferim servicii juridice de excelenta in Satu Mare si in toata Romania, cu dedicare totala pentru fiecare client.",
+      "trustBadge": "Din 2006 in slujba justitiei",
+      "stat1": "Ani Experienta",
+      "stat2": "Clienti Multumiti",
+      "stat3": "Angajament"
     },
     "history": {
+      "label": "Povestea Noastra",
+      "foundedLabel": "Infiintat",
       "title": "Povestea Noastra",
-      "description": "Societatea Civila de Avocati Stan-Baculescu isi are sediul in Satu Mare si ofera servicii juridice de inalta calitate de peste 15 ani. Fondata de avocatii Camelia Stan si Vlad Baculescu, firma noastra s-a dezvoltat continuu, devenind un partener de incredere pentru clientii din regiunea de nord-vest a Romaniei si nu numai.",
-      "milestone1": "Peste 15 ani de experienta in domeniul juridic",
+      "description": "Societatea Civila de Avocati Stan-Baculescu a fost infiintata in 2009 in Satu Mare. Fondatorii, avocatii Camelia Stan si Vlad Baculescu, sunt membri ai Baroului Satu Mare din 2006, aducand fiecare aproape doua decenii de experienta juridica. Firma s-a dezvoltat continuu, devenind un partener de incredere pentru clientii din regiunea de nord-vest a Romaniei si nu numai.",
+      "milestone1": "Fondatori cu experienta din 2006 in domeniul juridic",
       "milestone2": "Sute de cazuri rezolvate cu succes",
       "milestone3": "Echipa de avocati specializati pe diverse domenii"
     },
     "values": {
+      "label": "Valorile Noastre",
       "title": "Valorile Noastre",
       "subtitle": "Principii care ne ghideaza in fiecare zi",
       "professionalism": {
@@ -110,6 +119,7 @@
       }
     },
     "principles": {
+      "label": "Principiile Noastre",
       "title": "Principiile Noastre",
       "subtitle": "Fundamentul succesului nostru",
       "statMotivation": "Angajament",
@@ -129,8 +139,9 @@
       }
     },
     "methodology": {
+      "label": "Cum Lucram",
       "title": "Metodologia Noastra de Lucru",
-      "subtitle": "Cum abordam fiecare caz",
+      "subtitle": "Fiecare caz urmeaza un proces structurat, transparent si orientat catre rezultate optime pentru client.",
       "step1": {
         "title": "Consultatie Initiala",
         "description": "Analizam situatia dumneavoastra si identificam cele mai bune solutii juridice."
@@ -149,9 +160,12 @@
       }
     },
     "cta": {
+      "label": "Incepe Acum",
       "title": "Aveti nevoie de asistenta juridica?",
-      "description": "Contactati-ne pentru o consultatie initiala si descoperiti cum va putem ajuta.",
-      "button": "Contactati-ne"
+      "description": "Contactati-ne pentru o consultatie initiala si descoperiti cum va putem ajuta. Suntem aici pentru dumneavoastra.",
+      "button": "Programeaza o Consultatie",
+      "callLabel": "Suna acum",
+      "available": "Program: Luni - Vineri, 09:00 - 17:00"
     }
   },
   "TeamPage": {
@@ -165,7 +179,9 @@
     "sections": {
       "founders": "Fondatori",
       "collaborators": "Avocati Colaboratori",
-      "staff": "Echipa de Suport"
+      "staff": "Echipa de Suport",
+      "support": "Relatii cu Clientii",
+      "supportTitle": "Relatii cu Clientii"
     },
     "roles": {
       "founder": "Avocat Fondator",
@@ -178,59 +194,158 @@
     "members": {
       "cameliaStan": {
         "name": "Camelia Stan",
-        "shortBio": "Avocat fondator cu peste 15 ani de experienta in drept civil si familiei. Dedicata apararii drepturilor clientilor cu profesionalism si empatie.",
-        "fullBio": "Avocat Camelia Stan este cofondatoare a Societatii Civile de Avocati Stan-Baculescu, avand o experienta de peste 15 ani in domeniul juridic. Specializata in drept civil si dreptul familiei, a reprezentat cu succes sute de clienti in instanta, obtinand rezultate remarcabile in cazuri complexe de divort, custodie si partaj. Abordarea sa combina cunostintele juridice aprofundate cu o intelegere empatica a nevoilor clientilor.",
+        "shortBio": "Avocat fondator, membra a Baroului Satu Mare din 2006. Specializata in drept civil, contencios administrativ, dreptul afacerilor si malpraxis medical.",
+        "fullBio": "Camelia Stan este partener al Societatii Civile de Avocati Stan - Baculescu, membra a Baroului Satu Mare din anul 2006, reprezinta cu profesionalism interesele clientilor sai. Este un experimentat avocat pledant, a acordat asistenta juridica si a reprezentat clienti in litigii de drept civil, contencios administrativ si fiscal, dreptul afacerilor si societar, malpraxis medical, achizitii publice, dreptul asigurarilor, in materia insolventei, dreptul familiei, dreptul muncii, drept contraventional si in cauze arbitrale interne. A participat in numeroase proiecte de consultanta privind probleme de drept contractual, imobiliar, in dreptul afacerilor si societar, asistind clientii atat la negocierea si incheierea contractelor civile si comerciale, cat si la incetarea amiabila a raporturilor juridice.",
+        "pullQuote": "Profesionalism si dedicare in apararea intereselor clientilor nostri.",
+        "phone": "+40 745 466 720",
+        "email": "camelia.stan@stanbaculescu.ro",
+        "barYear": "2006",
         "specializations": {
           "spec1": "Drept Civil",
-          "spec2": "Dreptul Familiei",
-          "spec3": "Succesiuni si Mosteniri",
-          "spec4": "Contracte Civile"
+          "spec1Slug": "drept-civil",
+          "spec1Icon": "balance-scale",
+          "spec2": "Contencios Administrativ si Fiscal",
+          "spec2Slug": "drept-administrativ-fiscal",
+          "spec2Icon": "document",
+          "spec3": "Dreptul Afacerilor si Societar",
+          "spec3Slug": "drept-comercial",
+          "spec3Icon": "contract",
+          "spec4": "Malpraxis Medical",
+          "spec4Slug": "malpraxis-medical",
+          "spec4Icon": "justice",
+          "spec5": "Achizitii Publice",
+          "spec5Slug": "",
+          "spec5Icon": "approval",
+          "spec5Image": "/images/services/achizitii-publice.webp",
+          "spec6": "Dreptul Asigurarilor",
+          "spec6Slug": "",
+          "spec6Icon": "shield",
+          "spec6Image": "/images/services/dreptul-asigurarilor.webp",
+          "spec7": "Dreptul Familiei",
+          "spec7Slug": "drept-familiei",
+          "spec7Icon": "family",
+          "spec8": "Dreptul Muncii",
+          "spec8Slug": "dreptul-muncii",
+          "spec8Icon": "suitcase",
+          "spec9": "Drept Contraventional",
+          "spec9Slug": "",
+          "spec9Icon": "gavel",
+          "spec9Image": "/images/services/drept-contraventional.webp",
+          "spec10": "Arbitraj Intern",
+          "spec10Slug": "",
+          "spec10Icon": "court",
+          "spec10Image": "/images/services/arbitraj-intern.webp",
+          "spec1Desc": "Consultanta si reprezentare in litigii civile, contracte, proprietate si succesiuni.",
+          "spec2Desc": "Contestatii administrative, litigii fiscale si reprezentare in fata autoritatilor.",
+          "spec3Desc": "Consultanta pentru societati comerciale, contracte, litigii comerciale si insolventa.",
+          "spec4Desc": "Reprezentare in cazuri de neglijenta medicala si obtinerea de despagubiri pentru prejudiciile suferite.",
+          "spec5Desc": "Asistenta juridica in proceduri de achizitii publice si contestatii la CNSC.",
+          "spec6Desc": "Reprezentare in litigii de asigurari si obtinerea despagubirilor cuvenite.",
+          "spec7Desc": "Divorturi, custodia copiilor, partaj, pensii alimentare si alte aspecte familiale.",
+          "spec8Desc": "Protectia drepturilor angajatilor, contracte de munca, concedieri si litigii de munca.",
+          "spec9Desc": "Aparare in cauze contraventionale, contestatii la amenzi si procese-verbale.",
+          "spec10Desc": "Reprezentare in proceduri arbitrale interne si solutionarea alternativa a disputelor."
         },
         "education": {
-          "edu1": "Licenta in Drept - Universitatea din Oradea",
-          "edu2": "Membru al Baroului Satu Mare"
+          "edu1": "Membra a Baroului Satu Mare din anul 2006",
+          "edu2": "Licenta in Drept"
         },
         "experience": {
-          "exp1": "Cofondator - SCA Stan-Baculescu (2009 - prezent)",
-          "exp2": "Avocat titular - Baroul Satu Mare"
+          "exp1": "Partener fondator - SCA Stan-Baculescu (2009 - prezent)",
+          "exp2": "Avocat pledant cu experienta in litigii civile complexe",
+          "exp3": "Consultanta in drept contractual si imobiliar"
         }
       },
       "vladBaculescu": {
         "name": "Vlad Baculescu",
-        "shortBio": "Avocat fondator specializat in drept penal si comercial. Expert in litigii complexe cu o rata ridicata de succes.",
-        "fullBio": "Avocat Vlad Baculescu este cofondator al Societatii Civile de Avocati Stan-Baculescu, cu o vasta experienta in drept penal si comercial. A gestionat cu succes cazuri penale de mare complexitate si a consiliat numeroase societati comerciale in probleme juridice diverse. Stilul sau de lucru se caracterizeaza prin rigurozitate, atentie la detalii si o abordare strategica a fiecarui caz.",
+        "shortBio": "Avocat fondator, membru al Baroului Satu Mare din 2006. Specializat in drept penal, dreptul afacerilor, insolventa si drept civil.",
+        "fullBio": "Vlad Baculescu este partener al Societatii Civile de Avocati Stan - Baculescu, membru al Baroului Satu Mare din anul 2006. Are o bogata experienta in domeniul dreptului penal, dreptului civil, insolventei si al dreptului afacerilor. A acordat consultanta juridica si a asigurat asistenta si reprezentarea partilor in litigii civile si penale. Stilul sau de lucru se caracterizeaza prin empatie, rigurozitate si o abordare strategica — asculta cu adevarat clientii si se transpune in situatia lor pentru a gasi solutia optima pentru problemele pe care le intampina.",
+        "pullQuote": "Incerc sa ascult omul cu adevarat si sa ma transpun in situatia lui, doar asa reusesc sa gasesc solutia optima pentru problemele pe care le intampina.",
+        "phone": "+40 744 201 694",
+        "email": "vlad.baculescu@stanbaculescu.ro",
+        "barYear": "2006",
         "specializations": {
           "spec1": "Drept Penal",
-          "spec2": "Drept Comercial",
-          "spec3": "Litigii Comerciale",
-          "spec4": "Drept Administrativ"
+          "spec1Slug": "drept-penal",
+          "spec1Icon": "gavel",
+          "spec1Desc": "Aparare si reprezentare in cauze penale complexe, de la ancheta pana la judecata definitiva.",
+          "spec2": "Dreptul Afacerilor si Societar",
+          "spec2Slug": "drept-comercial",
+          "spec2Icon": "contract",
+          "spec2Desc": "Consultanta pentru societati comerciale, contracte, litigii comerciale si reorganizare.",
+          "spec3": "Dreptul Familiei",
+          "spec3Slug": "drept-familiei",
+          "spec3Icon": "family",
+          "spec3Desc": "Divorturi, custodia copiilor, partaj, pensii alimentare si alte aspecte familiale.",
+          "spec4": "Practician in Insolventa",
+          "spec4Slug": "",
+          "spec4Icon": "law-book",
+          "spec4Image": "/images/services/practician-insolventa.webp",
+          "spec4Desc": "Proceduri de insolventa, reorganizare judiciara si faliment pentru debitori si creditori.",
+          "spec5": "Drept Civil",
+          "spec5Slug": "drept-civil",
+          "spec5Icon": "balance-scale",
+          "spec5Desc": "Consultanta si reprezentare in litigii civile, contracte, proprietate si succesiuni.",
+          "spec6": "Malpraxis Medical",
+          "spec6Slug": "malpraxis-medical",
+          "spec6Icon": "justice",
+          "spec6Desc": "Reprezentare in cazuri de neglijenta medicala si obtinerea de despagubiri pentru prejudiciile suferite."
         },
         "education": {
-          "edu1": "Licenta in Drept - Universitatea din Cluj-Napoca",
-          "edu2": "Membru al Baroului Satu Mare"
+          "edu1": "Membru al Baroului Satu Mare din anul 2006",
+          "edu2": "Studii postuniversitare in domeniul juridic",
+          "edu3": "Conferinte de pregatire profesionala continua"
         },
         "experience": {
-          "exp1": "Cofondator - SCA Stan-Baculescu (2009 - prezent)",
-          "exp2": "Avocat titular - Baroul Satu Mare"
+          "exp1": "Partener fondator - SCA Stan-Baculescu (2009 - prezent)",
+          "exp2": "Experienta vasta in litigii penale complexe",
+          "exp3": "Consultanta juridica in dreptul afacerilor si insolventa"
         }
       },
       "dianaChincea": {
         "name": "Diana Antonia Chincea",
-        "shortBio": "Avocat colaborator cu expertiza in dreptul muncii si litigii civile. Dedicata protejarii drepturilor angajatilor.",
-        "fullBio": "Diana Antonia Chincea este avocat colaborator in cadrul cabinetului nostru, specializata in dreptul muncii si litigii civile. Cu o abordare meticuloasa si o intelegere profunda a legislatiei muncii, a reprezentat cu succes atat angajati cat si angajatori in diverse dispute de munca. Este cunoscuta pentru capacitatea sa de a gasi solutii echilibrate si eficiente.",
+        "shortBio": "Avocat colaborator, membra a Baroului Satu Mare din 2019. Specializata in drept civil, drept comercial, contencios administrativ si dreptul familiei.",
+        "fullBio": "Diana Antonia Chincea este avocat colaborator in cadrul Societatii Civile de Avocati Stan - Baculescu, membra a Baroului Satu Mare din anul 2019, absolventa a Facultatii de Drept din cadrul Universitatii din Bucuresti. Inca din timpul studiilor universitare si-a dezvoltat un interes deosebit pentru dreptul comercial, domeniu in care a continuat sa se perfectioneze. A acordat asistenta juridica si a reprezentat clienti in litigii de drept civil, contencios administrativ si fiscal, dreptul familiei, dreptul muncii, drept contraventional, precum si in proiecte de consultanta. A participat activ la negocierea si incheierea contractelor civile si comerciale.",
+        "pullQuote": "Fiecare caz merita o abordare dedicata si o solutie juridica adaptata nevoilor clientului.",
+        "phone": "+40 748 094 106",
+        "email": "diana.chincea@stanbaculescu.ro",
+        "barYear": "2019",
         "specializations": {
-          "spec1": "Dreptul Muncii",
-          "spec2": "Litigii Civile",
-          "spec3": "Drept Contractual",
-          "spec4": "Contencios Administrativ"
+          "spec1": "Drept Civil",
+          "spec1Slug": "drept-civil",
+          "spec1Icon": "balance-scale",
+          "spec1Desc": "Asistenta juridica si reprezentare in litigii civile, contracte, proprietate si succesiuni.",
+          "spec2": "Drept Comercial",
+          "spec2Slug": "drept-comercial",
+          "spec2Icon": "contract",
+          "spec2Desc": "Consultanta si reprezentare in dreptul afacerilor, negocierea si incheierea contractelor comerciale.",
+          "spec3": "Contencios Administrativ si Fiscal",
+          "spec3Slug": "drept-administrativ-fiscal",
+          "spec3Icon": "document",
+          "spec3Desc": "Contestatii administrative, litigii fiscale si reprezentare in fata autoritatilor publice.",
+          "spec4": "Dreptul Familiei",
+          "spec4Slug": "drept-familiei",
+          "spec4Icon": "family",
+          "spec4Desc": "Divorturi, custodia copiilor, partaj, pensii alimentare si alte aspecte de dreptul familiei.",
+          "spec5": "Drept Contraventional",
+          "spec5Slug": "",
+          "spec5Icon": "gavel",
+          "spec5Image": "/images/services/drept-contraventional.webp",
+          "spec5Desc": "Aparare in cauze contraventionale, contestatii la amenzi si procese-verbale de contraventie.",
+          "spec6": "Dreptul Muncii",
+          "spec6Slug": "dreptul-muncii",
+          "spec6Icon": "suitcase",
+          "spec6Desc": "Protectia drepturilor angajatilor si angajatorilor, contracte de munca si litigii de munca."
         },
         "education": {
-          "edu1": "Licenta in Drept - Universitatea din Oradea",
-          "edu2": "Membru al Baroului Satu Mare"
+          "edu1": "Membra a Baroului Satu Mare din anul 2019",
+          "edu2": "Licenta in Drept - Facultatea de Drept, Universitatea din Bucuresti",
+          "edu3": "Master in Dreptul Afacerilor - Universitatea din Bucuresti"
         },
         "experience": {
-          "exp1": "Avocat Colaborator - SCA Stan-Baculescu",
-          "exp2": "Stagiu profesional - Baroul Satu Mare"
+          "exp1": "Avocat colaborator - SCA Stan-Baculescu (2019 - prezent)",
+          "exp2": "Asistenta juridica si reprezentare in litigii civile si comerciale",
+          "exp3": "Consultanta in drept contractual si negocierea contractelor"
         }
       },
       "cristinaBlan": {
@@ -254,21 +369,43 @@
       },
       "alexandraRusu": {
         "name": "Alexandra Rusu",
-        "shortBio": "Avocat colaborator specializat in accidente rutiere si malpraxis medical. Dedicata obtinerii de despagubiri corecte.",
-        "fullBio": "Alexandra Rusu este avocat colaborator cu o specializare distincta in cazuri de accidente rutiere si malpraxis medical. Cu o abordare empatica si determinata, a ajutat numerosi clienti sa obtina despagubiri corecte pentru prejudiciile suferite. Experienta sa in acest domeniu de nisa o face un aliat de incredere pentru victimele accidentelor si ale neglijentei medicale.",
+        "shortBio": "Avocat colaborator, membra a Baroului Satu Mare din 2019. Specializata in drept civil, drept penal, dreptul familiei si dreptul afacerilor.",
+        "fullBio": "Alexandra Rusu este avocat colaborator in cadrul Societatii Civile de Avocati Stan - Baculescu, membra a Baroului Satu Mare din anul 2019. Avocat definitiv, a acordat asistenta juridica si a reprezentat clienti in litigii de drept penal (infractiuni la regimul circulatiei pe drumurile publice, infractiuni contra persoanei si contra patrimoniului, la regimul frontierei de stat), dreptul familiei, drept comercial, drept contraventional. De asemenea, s-a ocupat de litigii contractuale, raspundere civila delictuala, contencios civil, dreptul societar si dreptul imobiliar, abordand fiecare caz cu dedicare.",
+        "pullQuote": "Duc lucrurile pana la capat, indiferent de efortul pe care il presupune acest lucru.",
+        "phone": "+40 729 052 954",
+        "email": "alexandra.rusu@stanbaculescu.ro",
+        "barYear": "2019",
         "specializations": {
-          "spec1": "Accidente Rutiere",
-          "spec2": "Malpraxis Medical",
-          "spec3": "Despagubiri",
-          "spec4": "Drept Civil"
+          "spec1": "Drept Civil",
+          "spec1Slug": "drept-civil",
+          "spec1Icon": "balance-scale",
+          "spec1Desc": "Consultanta si reprezentare in litigii civile, contracte, proprietate, raspundere civila delictuala si succesiuni.",
+          "spec2": "Drept Penal",
+          "spec2Slug": "drept-penal",
+          "spec2Icon": "gavel",
+          "spec2Desc": "Aparare in cauze penale, inclusiv infractiuni rutiere, contra persoanei, patrimoniului si regimul frontierei.",
+          "spec3": "Dreptul Familiei",
+          "spec3Slug": "drept-familiei",
+          "spec3Icon": "family",
+          "spec3Desc": "Divorturi, custodia copiilor, partaj, pensii alimentare si alte aspecte familiale.",
+          "spec4": "Dreptul Afacerilor si Societar",
+          "spec4Slug": "drept-comercial",
+          "spec4Icon": "contract",
+          "spec4Desc": "Consultanta pentru societati comerciale, contracte, litigii comerciale si drept societar.",
+          "spec5": "Drept Contraventional",
+          "spec5Slug": "",
+          "spec5Icon": "gavel",
+          "spec5Image": "/images/services/drept-contraventional.webp",
+          "spec5Desc": "Aparare in cauze contraventionale, contestatii la amenzi si procese-verbale."
         },
         "education": {
-          "edu1": "Licenta in Drept - Universitatea din Oradea",
-          "edu2": "Membru al Baroului Satu Mare"
+          "edu1": "Membra a Baroului Satu Mare din anul 2019",
+          "edu2": "Licenta in Drept"
         },
         "experience": {
-          "exp1": "Avocat Colaborator - SCA Stan-Baculescu",
-          "exp2": "Specializare in daune si despagubiri"
+          "exp1": "Avocat Colaborator - SCA Stan-Baculescu (2020 - prezent)",
+          "exp2": "Avocat pledant cu experienta in litigii penale si civile",
+          "exp3": "Consultanta in drept contractual si imobiliar"
         }
       },
       "dianaVeres": {
@@ -277,13 +414,10 @@
         "fullBio": "Diana Vereș face parte din echipa administrativa a Cabinetului de Avocatura Stan-Baculescu din Satu Mare, ocupand functia de responsabil relatii cu clientii. Cu o atitudine calda si profesionala, asigura primirea clientilor, gestioneaza programarile si faciliteaza comunicarea eficienta intre clienti si avocati. Prin dedicarea si atentia sa la detalii, contribuie la buna functionare a cabinetului si la o experienta pozitiva pentru fiecare client.",
         "specializations": {
           "spec1": "Relatii cu Clientii",
-          "spec2": "Coordonare Programari",
-          "spec3": "Suport Administrativ",
-          "spec4": "Comunicare si Receptie"
+          "spec2": "Coordonare Programari"
         },
         "education": {
-          "edu1": "Studii in Administratie si Secretariat",
-          "edu2": "Cursuri de comunicare si relatii publice"
+          "edu1": "Absolventa a Facultatii de Drept, Universitatea Babes-Bolyai, Cluj-Napoca"
         },
         "experience": {
           "exp1": "Responsabil Relatii Clienti - SCA Stan-Baculescu",
@@ -296,13 +430,24 @@
       "specializations": "Specializari",
       "education": "Educatie",
       "experience": "Experienta",
+      "contactLabel": "Programeaza o Consultatie",
       "contactTitle": "Doriti sa programati o consultatie?",
-      "contactDescription": "Suntem aici sa va ajutam. Contactati-ne pentru a discuta despre cazul dumneavoastra."
+      "contactDescription": "Suntem aici sa va ajutam. Contactati-ne pentru a discuta despre cazul dumneavoastra.",
+      "practiceAreas": "Domenii de Practica",
+      "yearsLabel": "Ani de Experienta",
+      "barMemberLabel": "Membru Barou din",
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email",
+      "pullQuote": "Profesionalism si dedicare in apararea intereselor clientilor nostri.",
+      "viewDetails": "Detalii"
     },
     "cta": {
+      "label": "Echipa Noastra",
       "title": "Doriti sa cunoasteti echipa noastra?",
       "description": "Programati o consultatie si discutati direct cu unul dintre avocatii nostri despre cazul dumneavoastra.",
-      "button": "Contactati-ne"
+      "button": "Contactati-ne",
+      "callLabel": "Sau sunati direct",
+      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
     }
   },
   "ServicesPage": {
@@ -312,7 +457,15 @@
       "titleLine2": "Ariile Noastre de Practica",
       "subtitle": "Domenii de Practica",
       "trustBadge": "8 Arii de Practica",
-      "description": "Oferim asistenta juridica completa in diverse domenii ale dreptului. Echipa noastra de avocati specializati va sta la dispozitie pentru a va reprezenta interesele cu profesionalism."
+      "description": "Oferim asistenta juridica completa in diverse domenii ale dreptului. Echipa noastra de avocati specializati va sta la dispozitie pentru a va reprezenta interesele cu profesionalism.",
+      "breadcrumbHome": "Acasa",
+      "breadcrumbServices": "Servicii",
+      "scrollLabel": "Descopera"
+    },
+    "grid": {
+      "label": "Domenii de Practica",
+      "title": "Servicii Juridice",
+      "description": "Selectati domeniul juridic relevant pentru situatia dumneavoastra. Avocatii nostri specializati va ofera consultanta si reprezentare profesionala."
     },
     "viewDetails": "Afla mai multe",
     "services": {
@@ -350,18 +503,30 @@
       }
     },
     "cta": {
+      "label": "Servicii Juridice",
       "title": "Aveti nevoie de asistenta juridica?",
       "description": "Contactati-ne pentru o consultatie initiala. Echipa noastra de avocati va sta la dispozitie pentru a va ajuta.",
-      "button": "Contactati-ne"
+      "button": "Contactati-ne",
+      "callLabel": "Sau sunati direct",
+      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
     }
   },
   "ServiceDetail": {
     "backToServices": "Inapoi la Servicii",
-    "relatedServices": "Servicii Conexe",
+    "relatedServices": "Alte Servicii",
+    "relatedLabel": "Servicii Conexe",
+    "breadcrumbHome": "Acasa",
+    "breadcrumbServices": "Servicii",
+    "sectionLabelDescription": "Despre Serviciu",
+    "sectionLabelCases": "Cazuri Frecvente",
+    "sectionLabelApproach": "Metodologie",
     "cta": {
+      "label": "Consultatie Gratuita",
       "title": "Aveti nevoie de asistenta juridica?",
       "description": "Contactati-ne pentru o consultatie gratuita. Echipa noastra de avocati specializati va sta la dispozitie.",
-      "button": "Programeaza o Consultatie"
+      "button": "Programeaza o Consultatie",
+      "callLabel": "Sau sunati direct",
+      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
     },
     "malpraxis-medical": {
       "title": "Malpraxis Medical",
@@ -403,7 +568,7 @@
         "description": "Servicii complete de drept civil: litigii, contracte, proprietate, succesiuni. Avocati specializati in Satu Mare cu experienta vasta in instanta."
       },
       "descriptionTitle": "Servicii de Drept Civil",
-      "description": "Dreptul civil reglementeaza raporturile dintre persoane fizice si juridice in ceea ce priveste proprietatea, contractele, obligatiile si raspunderea civila. Echipa noastra ofera consultanta si reprezentare in toate domeniile dreptului civil, de la redactarea si negocierea contractelor pana la solutionarea litigiilor in instanta. Cu o experienta de peste 15 ani, am reprezentat cu succes sute de clienti in cauze civile diverse.",
+      "description": "Dreptul civil reglementeaza raporturile dintre persoane fizice si juridice in ceea ce priveste proprietatea, contractele, obligatiile si raspunderea civila. Echipa noastra ofera consultanta si reprezentare in toate domeniile dreptului civil, de la redactarea si negocierea contractelor pana la solutionarea litigiilor in instanta. Cu o experienta de aproape doua decenii, am reprezentat cu succes sute de clienti in cauze civile diverse.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Litigii privind proprietatea si revendicarile imobiliare",
@@ -617,9 +782,12 @@
     "shareArticle": "Distribuie articolul:",
     "relatedArticles": "Articole similare",
     "cta": {
+      "label": "Consultanta Juridica",
       "title": "Aveti nevoie de consultanta juridica?",
       "description": "Echipa noastra de avocati va sta la dispozitie pentru a va ajuta cu orice intrebare legala.",
-      "button": "Contactati-ne"
+      "button": "Contactati-ne",
+      "callLabel": "Sau sunati direct",
+      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
     }
   },
   "Testimonials": {
@@ -635,7 +803,7 @@
     "viewAllReviews": "Vezi toate recenziile pe Google"
   },
   "Footer": {
-    "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata Romania. Cu peste 15 ani de experienta, suntem alaturi de dumneavoastra in probleme de drept civil, penal, familiei si comercial.",
+    "description": "Oferim servicii juridice de excelenta in Satu Mare si in toata Romania. Cu aproape 20 de ani de experienta, suntem alaturi de dumneavoastra in probleme de drept civil, penal, familiei si comercial.",
     "quickLinks": "Navigare Rapida",
     "services": "Servicii",
     "contactInfo": "Informatii Contact",

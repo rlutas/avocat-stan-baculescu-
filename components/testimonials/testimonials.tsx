@@ -50,37 +50,31 @@ function StarRating({ rating }: { rating: number }) {
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10">
-      {/* Visual header */}
-      <div className="relative flex h-28 items-center justify-center bg-gradient-to-br from-[#002a52] to-[#004a8f] sm:h-32">
-        {/* Pattern */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.4) 1px, transparent 0)', backgroundSize: '20px 20px' }} />
-        </div>
-
-        {/* Large quote icon */}
-        <Quote className="relative z-10 h-12 w-12 text-gold/40 transition-colors duration-300 group-hover:text-gold/60" />
-
-        {/* Author avatar */}
-        <div className="absolute -bottom-6 left-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-gold text-lg font-bold text-navy shadow-lg ring-4 ring-white sm:left-7">
-          {testimonial.authorName.charAt(0)}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="flex flex-1 flex-col p-6 pt-10 sm:p-7 sm:pt-10">
-        <div className="mb-1 flex items-center justify-between">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-6 sm:p-7 shadow-sm ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10">
+      {/* Top: avatar + info + stars */}
+      <div className="mb-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-base font-bold text-gold ring-2 ring-gold/20">
+            {testimonial.authorName.charAt(0)}
+          </div>
           <div>
             <p className="text-sm font-semibold text-navy">{testimonial.authorName}</p>
-            <p className="text-xs text-text-muted">{testimonial.relativeTime}</p>
+            <p className="text-xs text-text-secondary">{testimonial.relativeTime}</p>
           </div>
-          <StarRating rating={testimonial.rating} />
         </div>
-
-        <p className="mt-4 flex-grow font-heading text-base italic leading-relaxed text-navy/75 sm:text-lg">
-          &ldquo;{testimonial.text}&rdquo;
-        </p>
+        <StarRating rating={testimonial.rating} />
       </div>
+
+      {/* Decorative quote */}
+      <Quote className="mb-2 h-8 w-8 text-gold/20" />
+
+      {/* Text */}
+      <p className="flex-grow font-heading text-base italic leading-relaxed text-navy/75 sm:text-lg">
+        &ldquo;{testimonial.text}&rdquo;
+      </p>
+
+      {/* Gold line hover accent */}
+      <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
     </div>
   );
 }
@@ -120,10 +114,12 @@ export function Testimonials() {
             </p>
           </ScrollAnimate>
           <ScrollAnimate delay={0.1}>
-            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl lg:text-6xl">
-              {t('titleLine2')}
-            </h2>
-            <div className="mx-auto mt-4 h-[2px] w-16 bg-gold" />
+            <div className="relative inline-block">
+              <span className="pointer-events-none absolute -left-4 -top-8 select-none font-heading text-8xl leading-none text-gold/10" aria-hidden="true">&ldquo;</span>
+              <h2 className="relative font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl lg:text-6xl">
+                {t('titleLine2')}
+              </h2>
+            </div>
           </ScrollAnimate>
           <ScrollAnimate delay={0.2}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">

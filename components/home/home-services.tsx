@@ -42,10 +42,10 @@ export function HomeServices() {
             </p>
           </ScrollAnimate>
           <ScrollAnimate delay={0.1}>
-            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl lg:text-6xl">
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">
               {t('titleLine2')}
             </h2>
-            <div className="mx-auto mt-4 h-[2px] w-16 bg-gold" />
+            <div className="mx-auto mt-4 h-[2px] w-24 bg-gold" />
           </ScrollAnimate>
           <ScrollAnimate delay={0.2}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
@@ -56,7 +56,7 @@ export function HomeServices() {
 
         {/* Cards Grid - 2 cols desktop, 1 mobile */}
         <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:gap-6" staggerDelay={0.08}>
-          {services.map((service) => (
+          {services.map((service, index) => (
             <StaggerItem key={service.id} variant="scaleUp">
               <Link
                 href={service.slug}

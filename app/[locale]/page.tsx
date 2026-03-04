@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Stan-Baculescu Law Firm | Satu Mare, Romania';
   const description =
     locale === 'ro'
-      ? 'Societate civila de avocati cu experienta de peste 15 ani in Satu Mare. Servicii juridice profesionale: malpraxis medical, drept civil, drept penal, drept al familiei.'
-      : 'Law firm with over 15 years of experience in Satu Mare, Romania. Professional legal services: medical malpractice, civil law, criminal law, family law.';
+      ? 'Societate civila de avocati cu experienta de aproape 20 de ani in Satu Mare. Servicii juridice profesionale: malpraxis medical, drept civil, drept penal, drept al familiei.'
+      : 'Law firm with nearly 20 years of experience in Satu Mare, Romania. Professional legal services: medical malpractice, civil law, criminal law, family law.';
 
   return {
     title,

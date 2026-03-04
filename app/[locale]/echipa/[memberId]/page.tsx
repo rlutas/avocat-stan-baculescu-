@@ -3,16 +3,13 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
 import {
   ArrowLeft,
   Mail,
   Phone,
-  MapPin,
-  Briefcase,
-  GraduationCap,
-  Award,
 } from 'lucide-react';
+import { LawIcon } from '@/components/icons';
+import { MemberAnimatedSections } from '@/components/team/member-animated-sections';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -113,192 +110,324 @@ export default async function MemberProfilePage({ params }: Props) {
   const memberKey = memberKeyMap[memberId];
   const role = memberRoleMap[memberId];
 
+  const name = t(`members.${memberKey}.name`);
+  const shortBio = t(`members.${memberKey}.shortBio`);
+  const fullBio = t(`members.${memberKey}.fullBio`);
+  const roleLabel = t(`roles.${role}`);
+
+  const bioLabel = t('profile.biography');
+  const specializationsLabel = t('profile.specializations');
+  const practiceAreasLabel = t('profile.practiceAreas');
+  const educationLabel = t('profile.education');
+  const experienceLabel = t('profile.experience');
+  const contactLabel = t('profile.contactLabel');
+  const contactTitle = t('profile.contactTitle');
+  const contactDescription = t('profile.contactDescription');
+  const barMemberLabel = t('profile.barMemberLabel');
+  const yearsLabel = t('profile.yearsLabel');
+  const phoneLabel = t('profile.phoneLabel');
+  const emailLabel = t('profile.emailLabel');
+  const pullQuoteKey = `members.${memberKey}.pullQuote` as Parameters<typeof t>[0];
+  const pullQuote = t.has(pullQuoteKey) ? t(pullQuoteKey) : t('profile.pullQuote');
+  const backLabel = t('backToTeam');
+  const ctaButtonLabel = t('cta.button');
+
+  // Member phone & email (optional per member)
+  const phoneKey = `members.${memberKey}.phone` as Parameters<typeof t>[0];
+  const emailKey = `members.${memberKey}.email` as Parameters<typeof t>[0];
+  const barYearKey = `members.${memberKey}.barYear` as Parameters<typeof t>[0];
+  const memberPhone = t.has(phoneKey) ? t(phoneKey) : '';
+  const memberEmail = t.has(emailKey) ? t(emailKey) : '';
+  const memberBarYear = t.has(barYearKey) ? t(barYearKey) : '';
+
+  // Calculate years of experience from barYear
+  const currentYear = new Date().getFullYear();
+  const yearsExp = memberBarYear ? currentYear - parseInt(memberBarYear) : 0;
+
+  // Specializations (up to 10)
+  const specializations: string[] = [];
+  const specializationSlugs: string[] = [];
+  const specializationIcons: string[] = [];
+  const specializationDescs: string[] = [];
+  const specializationImages: string[] = [];
+  for (let i = 1; i <= 10; i++) {
+    const key = `members.${memberKey}.specializations.spec${i}` as Parameters<typeof t>[0];
+    if (t.has(key)) {
+      specializations.push(t(key));
+      const slugKey = `members.${memberKey}.specializations.spec${i}Slug` as Parameters<typeof t>[0];
+      const iconKey = `members.${memberKey}.specializations.spec${i}Icon` as Parameters<typeof t>[0];
+      const descKey = `members.${memberKey}.specializations.spec${i}Desc` as Parameters<typeof t>[0];
+      const imageKey = `members.${memberKey}.specializations.spec${i}Image` as Parameters<typeof t>[0];
+      const slug = t.has(slugKey) ? t(slugKey) : '';
+      specializationSlugs.push(slug);
+      specializationIcons.push(t.has(iconKey) ? t(iconKey) : '');
+      specializationDescs.push(t.has(descKey) ? t(descKey) : '');
+      // Image: use slug-derived path if available, otherwise check for explicit image key
+      specializationImages.push(
+        slug ? `/images/services/${slug}.webp` : (t.has(imageKey) ? t(imageKey) : '')
+      );
+    }
+  }
+
+  const viewDetailsLabel = t('profile.viewDetails');
+
+  // Education (up to 3)
+  const education: string[] = [];
+  for (let i = 1; i <= 3; i++) {
+    const key = `members.${memberKey}.education.edu${i}` as Parameters<typeof t>[0];
+    if (t.has(key)) {
+      education.push(t(key));
+    }
+  }
+
+  // Experience (up to 5)
+  const experience: string[] = [];
+  for (let i = 1; i <= 5; i++) {
+    const key = `members.${memberKey}.experience.exp${i}` as Parameters<typeof t>[0];
+    if (t.has(key)) {
+      experience.push(t(key));
+    }
+  }
+
   return (
-    <main>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] py-16 sm:py-24">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_24%,rgba(255,255,255,0.04)_25%,rgba(255,255,255,0.04)_26%,transparent_27%,transparent_74%,rgba(255,255,255,0.04)_75%,rgba(255,255,255,0.04)_76%,transparent_77%)] bg-[length:50px_50px]" />
+    <main className="overflow-x-hidden">
+      {/* ── Hero ───────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] pt-32 pb-20 sm:pt-40 sm:pb-28">
+        {/* Grid texture */}
+        <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+              backgroundSize: '60px 60px',
+            }}
+          />
         </div>
+
+        {/* Gold radial glow */}
+        <div
+          className="pointer-events-none absolute right-0 top-0 -translate-y-1/4 translate-x-1/4 opacity-60"
+          style={{
+            width: '700px',
+            height: '700px',
+            borderRadius: '50%',
+            background:
+              'radial-gradient(circle, rgba(208,156,17,0.14) 0%, rgba(208,156,17,0.04) 50%, transparent 70%)',
+          }}
+        />
+
+        {/* Secondary glow bottom-left */}
+        <div
+          className="pointer-events-none absolute -bottom-32 -left-32 opacity-40"
+          style={{
+            width: '500px',
+            height: '500px',
+            borderRadius: '50%',
+            background:
+              'radial-gradient(circle, rgba(208,156,17,0.1) 0%, transparent 60%)',
+          }}
+        />
+
+        {/* Gold shimmer top bar */}
+        <div className="absolute left-0 right-0 top-0 h-[2px] animate-shimmer bg-[length:200%_100%] bg-[linear-gradient(90deg,transparent_0%,#d09c11_25%,#e6b520_50%,#d09c11_75%,transparent_100%)]" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Back link */}
           <Link
             href="/echipa"
-            className="mb-8 inline-flex items-center text-sm font-medium text-white/70 transition-colors hover:text-gold"
+            className="group mb-10 inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-colors duration-300 hover:text-gold"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            {t('backToTeam')}
+            <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
+            {backLabel}
           </Link>
 
-          <div className="lg:flex lg:items-center lg:gap-12">
-            {/* Profile Image */}
-            <div className="mb-8 lg:mb-0 lg:w-1/3">
-              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-navy/50 shadow-2xl">
-                <Image
-                  src={memberImageMap[memberId]}
-                  alt={t(`members.${memberKey}.name`)}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  priority
-                />
-              </div>
-            </div>
+          {/* Split layout */}
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
 
-            {/* Profile Info */}
-            <div className="lg:w-2/3">
-              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
-                {t(`roles.${role}`)}
-              </p>
-              <h1 className="font-heading mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                {t(`members.${memberKey}.name`)}
-              </h1>
-              <p className="mb-8 text-lg leading-relaxed text-white/80">
-                {t(`members.${memberKey}.shortBio`)}
-              </p>
-
-              {/* Contact Info */}
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  asChild
-                  variant="default"
-                  className="bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]"
-                >
-                  <Link href="/contact">
-                    <Mail className="mr-2 h-4 w-4" />
-                    {t('contactMember')}
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-      </section>
-
-      {/* Biography Section */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-heading mb-6 text-2xl font-bold text-navy sm:text-3xl">
-            {t('profile.biography')}
-          </h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="leading-relaxed text-[#4b5563]">
-              {t(`members.${memberKey}.fullBio`)}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Specializations Section */}
-      <section className="bg-[#f8f9fa] py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-heading mb-8 text-2xl font-bold text-navy sm:text-3xl">
-            {t('profile.specializations')}
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[1, 2, 3, 4].map((i) => {
-              const specKey = `members.${memberKey}.specializations.spec${i}` as const;
-              const specValue = t.has(specKey) ? t(specKey) : null;
-              if (!specValue) return null;
-              return (
-                <div
-                  key={i}
-                  className="flex items-center rounded-lg border border-transparent bg-white p-4 shadow-sm transition-all duration-300 hover:border-gold"
-                >
-                  <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#fef9e7]">
-                    <Briefcase className="h-5 w-5 text-gold" />
-                  </div>
-                  <span className="font-medium text-navy">{specValue}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Education & Experience Section */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            {/* Education */}
-            <div>
-              <h2 className="font-heading mb-6 flex items-center text-2xl font-bold text-navy">
-                <GraduationCap className="mr-3 h-6 w-6 text-gold" />
-                {t('profile.education')}
-              </h2>
-              <div className="space-y-4">
-                {[1, 2].map((i) => {
-                  const eduKey = `members.${memberKey}.education.edu${i}` as const;
-                  const eduValue = t.has(eduKey) ? t(eduKey) : null;
-                  if (!eduValue) return null;
-                  return (
-                    <div key={i} className="rounded-lg bg-[#f8f9fa] p-4">
-                      <p className="text-[#4b5563]">{eduValue}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Experience */}
-            <div>
-              <h2 className="font-heading mb-6 flex items-center text-2xl font-bold text-navy">
-                <Award className="mr-3 h-6 w-6 text-gold" />
-                {t('profile.experience')}
-              </h2>
-              <div className="space-y-4">
-                {[1, 2].map((i) => {
-                  const expKey = `members.${memberKey}.experience.exp${i}` as const;
-                  const expValue = t.has(expKey) ? t(expKey) : null;
-                  if (!expValue) return null;
-                  return (
-                    <div key={i} className="rounded-lg bg-[#f8f9fa] p-4">
-                      <p className="text-[#4b5563]">{expValue}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info Section */}
-      <section className="bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="font-heading mb-4 text-3xl font-bold text-white sm:text-4xl">
-            {t('profile.contactTitle')}
-          </h2>
-          <p className="mb-8 text-lg text-white/80">
-            {t('profile.contactDescription')}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center text-white/80">
-              <Phone className="mr-2 h-5 w-5 text-gold" />
-              <span>+40 745 466 720</span>
-            </div>
-            <div className="flex items-center text-white/80">
-              <Mail className="mr-2 h-5 w-5 text-gold" />
-              <span>office@stanbaculescu.ro</span>
-            </div>
-            <div className="flex items-center text-white/80">
-              <MapPin className="mr-2 h-5 w-5 text-gold" />
-              <span>Str. Decebal Nr. 4, Satu Mare</span>
-            </div>
-          </div>
-          <div className="mt-8">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gold text-navy hover:bg-gold/90 shadow-[0_4px_6px_rgba(208,156,17,0.2)]"
+            {/* Photo column with gold frame effect and floating badges */}
+            <div
+              className="mx-auto w-full max-w-xs flex-shrink-0 lg:mx-0 lg:w-[360px]"
+              style={{ animation: 'heroFadeLeft 0.9s ease-out 0.1s both' }}
             >
-              <Link href="/contact">{t('cta.button')}</Link>
-            </Button>
+              <div className="relative">
+                {/* Decorative gold corner frame — top-left */}
+                <div className="absolute -left-3 -top-3 z-10 h-16 w-16">
+                  <div className="absolute left-0 top-0 h-full w-[2px] bg-gold/50" />
+                  <div className="absolute left-0 top-0 h-[2px] w-full bg-gold/50" />
+                </div>
+                {/* Decorative gold corner frame — bottom-right */}
+                <div className="absolute -bottom-3 -right-3 z-10 h-16 w-16">
+                  <div className="absolute bottom-0 right-0 h-full w-[2px] bg-gold/50" />
+                  <div className="absolute bottom-0 right-0 h-[2px] w-full bg-gold/50" />
+                </div>
+
+                {/* Main photo */}
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
+                  <Image
+                    src={memberImageMap[memberId]}
+                    alt={name}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 80vw, 360px"
+                    priority
+                  />
+                  {/* Gradient overlay at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy/70 via-navy/30 to-transparent" />
+                </div>
+
+                {/* Floating stat badge — years of experience (top-right) */}
+                {yearsExp > 0 && (
+                  <div
+                    className="absolute -right-4 -top-6 z-20 rounded-xl border border-white/10 bg-navy/90 px-4 py-3 shadow-xl backdrop-blur-sm sm:-right-8 sm:-top-7"
+                    style={{ animation: 'heroBadgePop 0.6s ease-out 0.7s both' }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/15">
+                        <LawIcon name="medal" size={22} variant="gold" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-white/50">{yearsLabel}</p>
+                        <p className="font-heading text-lg font-bold text-white">{yearsExp}+</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Floating stat badge — bar member (bottom-left) */}
+                {memberBarYear && (
+                  <div
+                    className="absolute -bottom-6 -left-4 z-20 rounded-xl border border-white/10 bg-navy/90 px-4 py-3 shadow-xl backdrop-blur-sm sm:-bottom-7 sm:-left-8"
+                    style={{ animation: 'heroBadgePop 0.6s ease-out 0.9s both' }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/15">
+                        <LawIcon name="certificate" size={22} variant="gold" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-medium text-white/50">{barMemberLabel}</p>
+                        <p className="font-heading text-lg font-bold text-white">{memberBarYear}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Info column */}
+            <div
+              className="flex-1"
+              style={{ animation: 'heroFadeRight 0.9s ease-out 0.2s both' }}
+            >
+              {/* Role badge */}
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold/10 px-4 py-2">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                  {roleLabel}
+                </span>
+              </div>
+
+              {/* Name */}
+              <h1 className="font-heading mb-5 text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                {name}
+              </h1>
+
+              {/* Gold bar */}
+              <div className="mb-6 h-[2px] w-14 bg-gold" />
+
+              {/* Short bio */}
+              <p className="mb-8 max-w-xl text-lg leading-relaxed text-white/70">
+                {shortBio}
+              </p>
+
+              {/* Specialization pills (first 4) */}
+              {specializations.length > 0 && (
+                <div className="mb-8 flex flex-wrap gap-2">
+                  {specializations.slice(0, 4).map((spec, i) => (
+                    <span
+                      key={i}
+                      className="rounded-full border border-white/10 bg-white/[0.06] px-4 py-1.5 text-sm font-medium text-white/80"
+                    >
+                      {spec}
+                    </span>
+                  ))}
+                  {specializations.length > 4 && (
+                    <span className="rounded-full border border-gold/20 bg-gold/10 px-4 py-1.5 text-sm font-semibold text-gold">
+                      +{specializations.length - 4}
+                    </span>
+                  )}
+                </div>
+              )}
+
+              {/* Contact pills — phone and email */}
+              <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+                {memberPhone && (
+                  <a
+                    href={`tel:${memberPhone.replace(/\s/g, '')}`}
+                    className="group inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 transition-all duration-300 hover:border-gold/30 hover:bg-gold/10"
+                  >
+                    <Phone className="h-4 w-4 text-gold" />
+                    <span className="text-sm font-medium text-white/80 transition-colors duration-300 group-hover:text-gold">{memberPhone}</span>
+                  </a>
+                )}
+                {memberEmail && (
+                  <a
+                    href={`mailto:${memberEmail}`}
+                    className="group inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 transition-all duration-300 hover:border-gold/30 hover:bg-gold/10"
+                  >
+                    <Mail className="h-4 w-4 text-gold" />
+                    <span className="text-sm font-medium text-white/80 transition-colors duration-300 group-hover:text-gold">{memberEmail}</span>
+                  </a>
+                )}
+              </div>
+
+            </div>
           </div>
         </div>
+
+        <style dangerouslySetInnerHTML={{ __html: `
+          @keyframes heroFadeLeft {
+            from { opacity: 0; transform: translateX(-32px); }
+            to   { opacity: 1; transform: translateX(0); }
+          }
+          @keyframes heroFadeRight {
+            from { opacity: 0; transform: translateX(32px); }
+            to   { opacity: 1; transform: translateX(0); }
+          }
+          @keyframes heroBadgePop {
+            from { opacity: 0; transform: scale(0.85) translateY(8px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+          }
+        `}} />
       </section>
+
+      {/* ── Animated body sections (client component) ── */}
+      <MemberAnimatedSections
+        fullBio={fullBio}
+        specializations={specializations}
+        specializationSlugs={specializationSlugs}
+        specializationIcons={specializationIcons}
+        specializationDescs={specializationDescs}
+        specializationImages={specializationImages}
+        education={education}
+        experience={experience}
+        bioLabel={bioLabel}
+        specializationsLabel={specializationsLabel}
+        practiceAreasLabel={practiceAreasLabel}
+        educationLabel={educationLabel}
+        experienceLabel={experienceLabel}
+        contactLabel={contactLabel}
+        contactTitle={contactTitle}
+        contactDescription={contactDescription}
+        ctaButtonLabel={ctaButtonLabel}
+        memberPhone={memberPhone}
+        memberEmail={memberEmail}
+        memberName={name}
+        memberImage={memberImageMap[memberId]}
+        pullQuote={pullQuote}
+        phoneLabel={phoneLabel}
+        emailLabel={emailLabel}
+        viewDetailsLabel={viewDetailsLabel}
+      />
     </main>
   );
 }

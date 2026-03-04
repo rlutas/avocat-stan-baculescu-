@@ -3,113 +3,134 @@
 import { useTranslations } from 'next-intl';
 import { LawIcon } from '@/components/icons';
 import type { LawIconName } from '@/components/icons';
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
+
+const principles: {
+  iconName: LawIconName;
+  titleKey: string;
+  stat: string;
+  statKey: string;
+  number: string;
+}[] = [
+  {
+    iconName: 'target',
+    titleKey: 'motivation',
+    stat: '100%',
+    statKey: 'statMotivation',
+    number: '01',
+  },
+  {
+    iconName: 'shield-badge',
+    titleKey: 'seriousness',
+    stat: '24/7',
+    statKey: 'statSeriousness',
+    number: '02',
+  },
+  {
+    iconName: 'diploma',
+    titleKey: 'experience',
+    stat: '20+',
+    statKey: 'statExperience',
+    number: '03',
+  },
+];
 
 export function AboutPrinciples() {
   const t = useTranslations('AboutPage.principles');
 
-  const principles: { iconName: LawIconName; titleKey: string; stat: string; statLabel: string }[] = [
-    {
-      iconName: 'target',
-      titleKey: 'motivation',
-      stat: '100%',
-      statLabel: t('statMotivation'),
-    },
-    {
-      iconName: 'shield-badge',
-      titleKey: 'seriousness',
-      stat: '24/7',
-      statLabel: t('statSeriousness'),
-    },
-    {
-      iconName: 'diploma',
-      titleKey: 'experience',
-      stat: '15+',
-      statLabel: t('statExperience'),
-    },
-  ];
-
   return (
-    <section className="bg-white py-16 sm:py-24">
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-8px);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 1s ease-out both;
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-        .delay-500 { animation-delay: 500ms; }
-      `}</style>
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#002a52_0%,#003a70_60%,#004a8f_100%)] py-20 sm:py-28">
+      {/* Subtle grid pattern */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
+        />
+      </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-12 text-center">
-          <h2 className="animate-fade-in-up font-heading mb-4 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            {t('title')}
-          </h2>
-          <p className="animate-fade-in-up delay-100 mx-auto max-w-2xl text-lg text-[#4b5563]">
-            {t('subtitle')}
-          </p>
+      {/* Gold radial glow */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        style={{
+          width: '800px',
+          height: '800px',
+          background:
+            'radial-gradient(circle, rgba(208,156,17,0.08) 0%, rgba(208,156,17,0.02) 50%, transparent 70%)',
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="mb-14 text-center sm:mb-16">
+          <ScrollAnimate>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+              {t('label')}
+            </p>
+          </ScrollAnimate>
+
+          <ScrollAnimate delay={0.1}>
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+              {t('title')}
+            </h2>
+            <div className="mx-auto mt-4 h-[2px] w-24 bg-gold" />
+          </ScrollAnimate>
+
+          <ScrollAnimate delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+              {t('subtitle')}
+            </p>
+          </ScrollAnimate>
         </div>
 
-        {/* Principles */}
-        <div className="grid gap-8 md:grid-cols-3">
-          {principles.map((principle, index) => (
-            <div
-              key={index}
-              className="animate-fade-in-up group relative overflow-hidden rounded-2xl border border-[#e5e7eb] bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:ring-2 hover:ring-gold/60 hover:shadow-xl"
-              style={{ animationDelay: `${(index + 2) * 100}ms` }}
-            >
-              {/* Background Number */}
-              <div className="absolute -right-4 -top-4 text-[120px] font-bold leading-none text-[#f3f4f6] transition-colors duration-300 group-hover:text-gold/10">
-                {index + 1}
-              </div>
+        {/* Principles grid */}
+        <StaggerContainer
+          className="grid gap-5 sm:gap-6 md:grid-cols-3"
+          staggerDelay={0.12}
+        >
+          {principles.map((p) => (
+            <StaggerItem key={p.titleKey} variant="scaleUp">
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] shadow-lg shadow-black/10 transition-all duration-500 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.10] hover:shadow-xl hover:shadow-gold/5">
 
-              {/* Floating Stat Badge */}
-              <div className="animate-float absolute -right-2 top-6 rounded-xl bg-white px-4 py-2 shadow-lg ring-1 ring-gold/20" style={{ animationDelay: `${index * 200}ms` }}>
-                <div className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-gold to-gold-light shadow-md">
-                    <span className="text-xs font-bold text-navy">{principle.stat}</span>
+                {/* Gold top accent */}
+                <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent transition-all duration-500 group-hover:via-gold/80" />
+
+                <div className="relative flex flex-1 flex-col p-6 sm:p-8">
+                  {/* Top row: icon + stat */}
+                  <div className="mb-5 flex items-center justify-between">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gold/10 ring-1 ring-gold/20 transition-all duration-300 group-hover:scale-110 group-hover:bg-gold/20 group-hover:ring-gold/40">
+                      <LawIcon name={p.iconName} size={26} variant="gold" />
+                    </div>
+                    <div className="text-right">
+                      <span className="font-heading text-3xl font-bold text-gold sm:text-4xl">
+                        {p.stat}
+                      </span>
+                      <p className="text-xs font-medium text-white/50">
+                        {t(p.statKey)}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs font-medium text-navy whitespace-nowrap">{principle.statLabel}</p>
-                </div>
-              </div>
 
-              <div className="relative">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-navy transition-transform duration-300 group-hover:scale-110">
-                  <LawIcon name={principle.iconName} size={24} variant="white" />
+                  {/* Title */}
+                  <h3 className="mb-3 font-heading text-xl font-bold text-white transition-colors duration-300 group-hover:text-gold">
+                    {t(`${p.titleKey}.title`)}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="flex-1 text-[15px] leading-relaxed text-white/60">
+                    {t(`${p.titleKey}.description`)}
+                  </p>
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-navy font-heading">
-                  {t(`${principle.titleKey}.title`)}
-                </h3>
-                <p className="leading-relaxed text-[#4b5563]">
-                  {t(`${principle.titleKey}.description`)}
-                </p>
+
+                {/* Gold bottom line reveal */}
+                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

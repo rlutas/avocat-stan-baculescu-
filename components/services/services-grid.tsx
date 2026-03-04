@@ -2,210 +2,182 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 import { LawIcon, type LawIconName } from '@/components/icons';
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
 
 interface Service {
   id: string;
-  icon: LawIconName;
+  iconName: LawIconName;
   slug: string;
   num: string;
-  caseKeys: string[];
+  gradient: string;
+  image: string;
 }
 
 const services: Service[] = [
   {
     id: 'malpraxis-medical',
-    icon: 'justice',
+    iconName: 'justice',
     slug: '/servicii/malpraxis-medical',
     num: '01',
-    caseKeys: ['case1', 'case2', 'case4'],
+    gradient: 'from-[#002a52] to-[#004a8f]',
+    image: '/images/services/malpraxis-medical.webp',
   },
   {
     id: 'drept-civil',
-    icon: 'balance-scale',
+    iconName: 'balance-scale',
     slug: '/servicii/drept-civil',
     num: '02',
-    caseKeys: ['case1', 'case3', 'case5'],
+    gradient: 'from-[#003a70] to-[#1a5a90]',
+    image: '/images/services/drept-civil.webp',
   },
   {
     id: 'drept-penal',
-    icon: 'gavel',
+    iconName: 'gavel',
     slug: '/servicii/drept-penal',
     num: '03',
-    caseKeys: ['case1', 'case2', 'case4'],
+    gradient: 'from-[#1a1a2e] to-[#16213e]',
+    image: '/images/services/drept-penal.webp',
   },
   {
     id: 'drept-familiei',
-    icon: 'family',
+    iconName: 'family',
     slug: '/servicii/drept-familiei',
     num: '04',
-    caseKeys: ['case1', 'case2', 'case3'],
+    gradient: 'from-[#002a52] to-[#003a70]',
+    image: '/images/services/drept-familiei.webp',
   },
   {
     id: 'dreptul-muncii',
-    icon: 'suitcase',
+    iconName: 'suitcase',
     slug: '/servicii/dreptul-muncii',
     num: '05',
-    caseKeys: ['case1', 'case2', 'case3'],
+    gradient: 'from-[#16213e] to-[#1a3a5c]',
+    image: '/images/services/dreptul-muncii.webp',
   },
   {
     id: 'drept-comercial',
-    icon: 'contract',
+    iconName: 'contract',
     slug: '/servicii/drept-comercial',
     num: '06',
-    caseKeys: ['case1', 'case2', 'case4'],
+    gradient: 'from-[#003a70] to-[#002a52]',
+    image: '/images/services/drept-comercial.webp',
   },
   {
     id: 'accidente-rutiere',
-    icon: 'police-car',
+    iconName: 'police-car',
     slug: '/servicii/accidente-rutiere',
     num: '07',
-    caseKeys: ['case1', 'case2', 'case3'],
+    gradient: 'from-[#1a1a2e] to-[#002a52]',
+    image: '/images/services/accidente-rutiere.webp',
   },
   {
     id: 'drept-administrativ-fiscal',
-    icon: 'document',
+    iconName: 'document',
     slug: '/servicii/drept-administrativ-fiscal',
     num: '08',
-    caseKeys: ['case1', 'case2', 'case3'],
+    gradient: 'from-[#002a52] to-[#16213e]',
+    image: '/images/services/drept-administrativ-fiscal.webp',
   },
 ];
 
 export function ServicesGrid() {
   const t = useTranslations('ServicesPage');
-  const tDetail = useTranslations('ServiceDetail');
 
   return (
-    <section className="bg-[#f8f9fa] py-16 sm:py-24">
-      <style jsx>{`
-        @keyframes revealCard {
-          0% {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-            filter: blur(2px);
-          }
-          65% {
-            opacity: 1;
-            transform: translateY(-3px) scale(1.005);
-            filter: blur(0);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            filter: blur(0);
-          }
-        }
-        @keyframes shimmerSweep {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        @keyframes iconFloat {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-6px);
-          }
-        }
-        .service-showcase {
-          animation: revealCard 1s cubic-bezier(0.22, 1, 0.36, 1) both;
-        }
-        .service-showcase::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          z-index: 1;
-          background: linear-gradient(
-            105deg,
-            transparent 40%,
-            rgba(208, 156, 17, 0.05) 45%,
-            rgba(208, 156, 17, 0.08) 50%,
-            rgba(208, 156, 17, 0.05) 55%,
-            transparent 60%
-          );
-          transform: translateX(-100%);
-          pointer-events: none;
-          border-radius: inherit;
-        }
-        .service-showcase:hover::after {
-          animation: shimmerSweep 0.8s ease-out;
-        }
-        .service-showcase:hover .icon-float {
-          animation: iconFloat 2s ease-in-out infinite;
-        }
-      `}</style>
-
+    <section className="bg-[#f8f9fa] py-20 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          {services.map((service, index) => {
-            return (
-              <Link
-                key={service.id}
-                href={service.slug}
-                className="service-showcase group relative flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white transition-all duration-500 hover:-translate-y-2 hover:border-gold/30 hover:shadow-[0_25px_50px_rgba(0,58,112,0.1),0_0_0_1px_rgba(208,156,17,0.15)] sm:flex-row"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Left: Icon Area */}
-                <div className="relative flex flex-shrink-0 items-center justify-center bg-gradient-to-br from-[#fefcf3] to-[#fef6de] p-8 sm:w-44 sm:p-10 lg:w-48">
-                  {/* Number watermark */}
-                  <span className="absolute left-3 top-2 select-none font-heading text-6xl font-bold text-gold/[0.08] transition-all duration-500 group-hover:text-gold/[0.18] sm:text-7xl">
-                    {service.num}
-                  </span>
+        {/* Section header */}
+        <div className="mb-14 text-center sm:mb-16">
+          <ScrollAnimate>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+              {t('grid.label')}
+            </p>
+          </ScrollAnimate>
+          <ScrollAnimate delay={0.1}>
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+              {t('grid.title')}
+            </h2>
+            <div className="mx-auto mt-4 h-[2px] w-24 bg-gold" />
+          </ScrollAnimate>
+          <ScrollAnimate delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+              {t('grid.description')}
+            </p>
+          </ScrollAnimate>
+        </div>
 
-                  {/* Icon circle */}
-                  <div className="icon-float relative z-10">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-md ring-2 ring-gold/15 transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-gold group-hover:ring-gold/40 group-hover:shadow-lg group-hover:shadow-gold/20 sm:h-24 sm:w-24 sm:rounded-3xl">
-                      <LawIcon name={service.icon} size={48} variant="gold" />
+        {/* Cards grid — 2-column with staggered offset on right column */}
+        <StaggerContainer
+          className="grid gap-5 sm:grid-cols-2 lg:gap-6"
+          staggerDelay={0.08}
+        >
+          {services.map((service, index) => (
+            <StaggerItem
+              key={service.id}
+              variant="scaleUp"
+              className={index % 2 === 1 ? 'sm:mt-8' : ''}
+            >
+              <Link href={service.slug} className="group block h-full">
+                <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-navy/10">
+
+                  {/* Visual header — photo with gradient overlay */}
+                  <div
+                    className={`relative flex h-52 items-center justify-center overflow-hidden bg-gradient-to-br ${service.gradient} sm:h-60`}
+                  >
+                    {/* Background service image */}
+                    <Image
+                      src={service.image}
+                      alt=""
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+
+                    {/* Dark gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/55 to-navy/25 transition-opacity duration-500 group-hover:from-navy/75 group-hover:via-navy/45 group-hover:to-navy/15" />
+
+                    {/* Number watermark */}
+                    <span className="absolute -right-2 -top-4 z-[1] select-none font-heading text-[120px] font-bold leading-none text-white/[0.06] transition-all duration-500 group-hover:text-white/[0.10] sm:text-[150px]">
+                      {service.num}
+                    </span>
+
+                    {/* Icon in glassmorphism container */}
+                    <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-500 group-hover:scale-110 group-hover:bg-white/15 group-hover:ring-gold/40 sm:h-24 sm:w-24">
+                      <LawIcon name={service.iconName} size={40} variant="white" />
+                    </div>
+
+                    {/* Gold bottom line reveal */}
+                    <div className="absolute bottom-0 left-0 z-[1] h-[3px] w-0 bg-gradient-to-r from-gold via-gold-light to-gold/60 transition-all duration-500 group-hover:w-full" />
+                  </div>
+
+                  {/* Content area */}
+                  <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <h3 className="mb-2 font-heading text-xl font-semibold text-navy transition-colors duration-300 group-hover:text-gold">
+                      {t(`services.${service.id}.title`)}
+                    </h3>
+                    <p className="mb-5 flex-grow text-sm leading-relaxed text-text-secondary line-clamp-3">
+                      {t(`services.${service.id}.shortDescription`)}
+                    </p>
+
+                    {/* CTA link row */}
+                    <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
+                      <span className="flex items-center gap-2 text-sm font-semibold text-gold transition-all duration-300 group-hover:gap-3">
+                        {t('viewDetails')}
+                        <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </span>
+                      <span className="rounded-full bg-navy/[0.04] px-3 py-1 text-xs font-medium text-navy/50">
+                        {service.num}
+                      </span>
                     </div>
                   </div>
-
-                  {/* Decorative corner */}
-                  <div className="absolute bottom-0 right-0 h-16 w-16 bg-gradient-to-tl from-gold/[0.06] to-transparent" />
-                </div>
-
-                {/* Right: Content */}
-                <div className="relative flex flex-1 flex-col p-6 sm:p-7">
-                  {/* Title */}
-                  <h3 className="font-heading mb-3 text-xl font-bold text-navy sm:text-2xl">
-                    {t(`services.${service.id}.title`)}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="mb-5 text-sm leading-relaxed text-[#4b5563] sm:text-base sm:leading-relaxed">
-                    {t(`services.${service.id}.shortDescription`)}
-                  </p>
-
-                  {/* Case Type Tags */}
-                  <div className="mb-5 flex flex-wrap gap-2">
-                    {service.caseKeys.map((caseKey) => (
-                      <span
-                        key={caseKey}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-navy/[0.04] px-3 py-1.5 text-xs font-medium text-navy/70 transition-colors duration-300 group-hover:bg-gold/10 group-hover:text-navy"
-                      >
-                        <span className="h-1 w-1 rounded-full bg-gold" />
-                        {tDetail(`${service.id}.cases.${caseKey}`)}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <div className="relative z-10 mt-auto flex items-center gap-2 text-sm font-semibold text-gold transition-all duration-300 group-hover:gap-3">
-                    {t('viewDetails')}
-                    <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1.5" />
-                  </div>
-
-                  {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-6 right-6 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-gold via-gold-light to-gold/0 transition-transform duration-500 group-hover:scale-x-100" />
                 </div>
               </Link>
-            );
-          })}
-        </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
       </div>
     </section>
   );
