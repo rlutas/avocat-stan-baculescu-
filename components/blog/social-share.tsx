@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Facebook, Twitter, Linkedin, Link2, Check, Share2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type SocialShareProps = {
   title: string;
@@ -12,33 +12,33 @@ type SocialShareProps = {
 export function SocialShare({ title, description }: SocialShareProps) {
   const t = useTranslations('BlogPage');
   const [copied, setCopied] = useState(false);
+  const [shareUrl, setShareUrl] = useState('');
 
-  const getFullUrl = () => {
-    if (typeof window !== 'undefined') {
-      return window.location.href;
-    }
-    return '';
-  };
+  useEffect(() => {
+    setShareUrl(window.location.href);
+  }, []);
 
-  const shareUrl = getFullUrl();
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
 
-  const shareLinks = {
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-    linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
-  };
+  const shareLinks = shareUrl
+    ? {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+        twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+        linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
+      }
+    : { facebook: '#', twitter: '#', linkedin: '#' };
 
   const copyToClipboard = async () => {
+    const url = window.location.href;
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
       const textArea = document.createElement('textarea');
-      textArea.value = shareUrl;
+      textArea.value = url;
       document.body.appendChild(textArea);
       textArea.select();
       document.execCommand('copy');
