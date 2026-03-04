@@ -7,6 +7,7 @@ import {
   ServiceDetailRelated,
   ServiceDetailCta,
 } from '@/components/service-detail';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -109,6 +110,13 @@ export default async function ServiceDetailPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: locale === 'ro' ? 'Servicii' : 'Services', url: `https://stanbaculescu.ro/${locale}/servicii` },
+          { name: title },
+        ]}
       />
       <main>
         <ServiceDetailHero serviceId={serviceId} />

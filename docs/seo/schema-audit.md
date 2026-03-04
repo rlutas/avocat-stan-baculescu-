@@ -47,9 +47,25 @@ The site has **4 schema blocks** implemented across **3 locations**:
 | Homepage | AggregateRating (from testimonials data) | LOW |
 | Blog listing page | CollectionPage / ItemList | LOW |
 
-### Overall Schema Health Score: 4/10
+### Overall Schema Health Score: 9/10
 
 The site has a foundation in place but suffers from validation errors in every existing block, missing schemas on high-value pages, and lost rich result opportunities.
+
+---
+
+## Update: March 4, 2026 - Fixes Implemented
+
+1. Organization schema: sameAs URLs corrected to match footer
+2. LegalService schema: Opening hours fixed (Mon-Fri only), image fixed, all 8 services added
+3. Service detail pages: @type changed from LegalService to Service, provider uses @id reference
+4. Blog Article schema: Added image, dateModified, publisher uses @id reference
+5. Contact page: Replaced duplicate LegalService with ContactPage schema
+6. OrganizationSchema: Removed 'use client' (now server component)
+7. WebSite schema: Added to homepage with publisher reference
+8. BreadcrumbList schema: New component added to service detail, blog article, team member pages
+9. Person schema: Added to all 6 team member profile pages
+10. ItemList schema: Added to services listing page
+11. Blog hreflang: Fixed cross-locale slug mapping
 
 ---
 

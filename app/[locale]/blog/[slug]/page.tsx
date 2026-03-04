@@ -3,8 +3,21 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { posts } from '#site/content';
 import { BlogArticle, RelatedArticles, BlogCta } from '@/components/blog';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
+
+// Cross-locale blog slug mapping for hreflang
+const blogSlugPairs: Record<string, string> = {
+  // RO → EN
+  'drepturile-pacientului-malpraxis': 'patient-rights-malpractice',
+  'procedura-divortului-romania': 'divorce-procedure-romania',
+  'drepturile-angajatului-concediere': 'employee-rights-dismissal',
+  // EN → RO
+  'patient-rights-malpractice': 'drepturile-pacientului-malpraxis',
+  'divorce-procedure-romania': 'procedura-divortului-romania',
+  'employee-rights-dismissal': 'drepturile-angajatului-concediere',
+};
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -53,9 +66,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${BASE_URL}/${locale}/blog/${slug}`,
       languages: {
-        'ro-RO': `${BASE_URL}/ro/blog/${slug}`,
-        'en-US': `${BASE_URL}/en/blog/${slug}`,
-        'x-default': `${BASE_URL}/ro/blog/${slug}`,
+        'ro-RO': `${BASE_URL}/ro/blog/${locale === 'ro' ? slug : (blogSlugPairs[slug] || slug)}`,
+        'en-US': `${BASE_URL}/en/blog/${locale === 'en' ? slug : (blogSlugPairs[slug] || slug)}`,
+        'x-default': `${BASE_URL}/ro/blog/${locale === 'ro' ? slug : (blogSlugPairs[slug] || slug)}`,
       },
     },
   };
@@ -122,6 +135,13 @@ export default async function BlogPostPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: 'Blog', url: `https://stanbaculescu.ro/${locale}/blog` },
+          { name: post.title },
+        ]}
       />
       <BlogArticle
         title={post.title}

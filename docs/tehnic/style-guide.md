@@ -476,3 +476,51 @@ Standard padding handles this: `py-20 sm:py-32`
 - Same noise + gold lines pattern
 - Server components: use CSS `stroke-dasharray`/`stroke-dashoffset` animation (no framer-motion)
 - Client components: use `motion.path` with `pathLength`
+
+---
+
+## 17. SEO & Structured Data Patterns
+
+### Schema Types Used
+- **Organization** + **LegalService** (global, all pages via layout.tsx)
+- **WebSite** (homepage only)
+- **Service** (individual service detail pages)
+- **Article** (blog posts, with image + dateModified)
+- **Person** (team member profiles)
+- **BreadcrumbList** (service detail, blog article, team member pages)
+- **ItemList** (services listing page)
+- **ContactPage** (contact page)
+
+### Schema Components
+- `components/seo/organization-schema.tsx` — Global Organization + LegalService
+- `components/seo/breadcrumb-schema.tsx` — Reusable BreadcrumbList
+- `components/seo/index.ts` — Barrel exports
+
+### Hreflang Pattern
+Every page must include in `generateMetadata`:
+```typescript
+alternates: {
+  canonical: `${BASE_URL}/${locale}/page-path`,
+  languages: {
+    'ro-RO': `${BASE_URL}/ro/page-path`,
+    'en-US': `${BASE_URL}/en/page-path`,
+    'x-default': `${BASE_URL}/ro/page-path`,
+  },
+},
+```
+
+### Blog Hreflang
+Blog posts use different slugs per locale. Cross-locale mapping is maintained in:
+- `app/[locale]/blog/[slug]/page.tsx` — `blogSlugPairs` constant
+- `app/sitemap.ts` — `blogPostPairs` array
+
+Both must be updated when adding new blog posts.
+
+### robots.txt
+AI crawlers (GPTBot, CCBot, ClaudeBot, etc.) are blocked. Normal search engine crawlers are allowed.
+
+### Sitemap
+- All pages must be in `app/sitemap.ts`
+- Use static lastmod dates (update when content actually changes)
+- Include x-default in all alternates
+- Blog posts need cross-locale hreflang alternates

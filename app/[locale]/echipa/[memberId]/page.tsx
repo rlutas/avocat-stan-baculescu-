@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { LawIcon } from '@/components/icons';
 import { MemberAnimatedSections } from '@/components/team/member-animated-sections';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -190,8 +191,46 @@ export default async function MemberProfilePage({ params }: Props) {
     }
   }
 
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${BASE_URL}/${locale}/echipa/${memberId}#person`,
+    name,
+    jobTitle: roleLabel,
+    description: shortBio,
+    image: `${BASE_URL}${memberImageMap[memberId]}`,
+    url: `${BASE_URL}/${locale}/echipa/${memberId}`,
+    telephone: memberPhone || undefined,
+    email: memberEmail || undefined,
+    worksFor: {
+      '@id': `${BASE_URL}/#organization`,
+    },
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Baroul Satu Mare',
+    },
+    knowsAbout: specializations.length > 0 ? specializations : undefined,
+    alumniOf: education.length > 0
+      ? education.map((edu: string) => ({
+          '@type': 'EducationalOrganization',
+          name: edu,
+        }))
+      : undefined,
+  };
+
   return (
     <main className="overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: locale === 'ro' ? 'Echipă' : 'Team', url: `https://stanbaculescu.ro/${locale}/echipa` },
+          { name },
+        ]}
+      />
       {/* ── Hero ───────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-[linear-gradient(135deg,#002a52_0%,#003a70_50%,#004a8f_100%)] pt-32 pb-20 sm:pt-40 sm:pb-28">
         {/* Grid texture */}

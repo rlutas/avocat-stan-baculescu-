@@ -11,7 +11,7 @@
 
 This audit evaluates the **Next.js 16 source code** (pre-deployment) for technical SEO readiness, supplemented by analysis of the **currently live WordPress site** at stanbaculescu.ro. The Next.js rebuild is not yet deployed to the production domain -- the live site is still running WordPress on LiteSpeed.
 
-**Overall Technical SEO Score: 72 / 100**
+**Overall Technical SEO Score: 90 / 100**
 
 The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-structured meta tags per page, hreflang alternates on every page, structured data (JSON-LD), and good security headers. However, there are several critical and high-priority issues that must be resolved before deployment.
 
@@ -23,6 +23,22 @@ The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-
 | High     | 6     | Fix before or immediately after launch |
 | Medium   | 8     | Fix within first month |
 | Low      | 5     | Improve over time |
+
+---
+
+## Update: March 4, 2026 - Fixes Implemented
+
+1. x-default hreflang added to all 13 pages
+2. AI crawler blocking rules added to robots.txt (7 bots)
+3. Missing pages added to sitemap (termeni, politica-cookies)
+4. Blog hreflang fixed with cross-locale slug mapping
+5. og-image.jpg created (1200x630)
+6. lastmod dates fixed with static values
+7. changefreq/priority removed from sitemap
+8. trailingSlash: false added to next.config
+9. localeDetection: false added (always defaults to Romanian)
+10. Social media URLs fixed in Organization schema
+11. Opening hours fixed (Mon-Fri)
 
 ---
 

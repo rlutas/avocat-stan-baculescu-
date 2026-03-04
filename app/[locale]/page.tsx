@@ -51,8 +51,27 @@ export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${BASE_URL}/#website`,
+    name:
+      locale === 'ro'
+        ? 'SCA Stan-Baculescu - Societate Civila de Avocati'
+        : 'Stan-Baculescu Law Firm',
+    url: BASE_URL,
+    publisher: {
+      '@id': `${BASE_URL}/#organization`,
+    },
+    inLanguage: locale === 'ro' ? 'ro-RO' : 'en-US',
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <Hero />
       <HomeServices />
       <HomeWhyUs />
