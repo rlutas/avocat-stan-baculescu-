@@ -10,10 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/static/'],
       },
       {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      {
         userAgent: 'CCBot',
         disallow: '/',
       },
@@ -31,10 +27,6 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'Bytespider',
-        disallow: '/',
-      },
-      {
-        userAgent: 'PerplexityBot',
         disallow: '/',
       },
     ],

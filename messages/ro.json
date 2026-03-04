@@ -539,7 +539,7 @@
         "description": "Reprezentare specializata in cazuri de malpraxis medical. Obtineti despagubirile cuvenite pentru neglijenta medicala cu ajutorul avocatilor nostri experti din Satu Mare."
       },
       "descriptionTitle": "Ce este Malpraxisul Medical?",
-      "description": "Malpraxisul medical reprezinta o eroare sau neglijenta din partea unui profesionist din domeniul sanatatii care cauzeaza prejudicii pacientului. Aceste cazuri pot include diagnostice gresite, erori chirurgicale, prescrierea gresita a medicamentelor, lipsa consimtamantului informat sau ingrijire deficitara. Cabinetul nostru are experienta extinsa in reprezentarea victimelor malpraxisului medical, ajutandu-le sa obtina despagubirile cuvenite pentru suferinta fizica, emotionala si financiara provocata.",
+      "description": "Malpraxisul medical reprezinta orice act sau omisiune savarsita de un profesionist din domeniul sanatatii care cauzeaza un prejudiciu pacientului prin nerespectarea standardelor medicale acceptate. Conform Legii nr. 95/2006 privind reforma in domeniul sanatatii, Titlul XVI, personalul medical raspunde pentru daunele produse pacientilor prin acte de malpraxis. De asemenea, Legea nr. 46/2003 privind drepturile pacientilor garanteaza dreptul la ingrijiri medicale de cea mai inalta calitate, la informare completa si la consimtamant informat.\n\nCazurile de malpraxis medical pot imbraca forme diverse: diagnostice gresite sau intarziate, erori chirurgicale, prescrierea inadecvata a medicamentelor, infectii nosocomiale dobandite in unitatile sanitare, neglijenta in monitorizarea pacientului sau lipsa consimtamantului informat prevazut de art. 649-653 din Legea nr. 95/2006. Fiecare caz necesita o analiza medicala si juridica aprofundata pentru a stabili legatura de cauzalitate dintre actul medical si prejudiciul suferit.\n\nReprezentarea juridica in cazurile de malpraxis este esentiala deoarece aceste dosare implica aspecte medicale complexe, expertize de specialitate si termene legale stricte. Cabinetul nostru colaboreaza cu experti medicali independenti pentru evaluarea corecta a cazurilor si calculeaza despagubirile cuvenite incluzand costurile medicale, veniturile pierdute, daunele morale si prejudiciul estetic. Va reprezentam atat in procedura amiabila in fata Comisiei de monitorizare si competenta profesionala, cat si in instanta de judecata.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Erori de diagnostic sau diagnostic intarziat",
@@ -555,6 +555,17 @@
         "point2": "Documentam prejudiciul suferit si calculam despagubirile cuvenite (costuri medicale, venituri pierdute, daune morale).",
         "point3": "Negociem cu societatile de asigurare sau reprezentam clientul in instanta pentru obtinerea compensatiei.",
         "point4": "Va tinem la curent cu fiecare etapa a procesului si va oferim suport pe toata durata cazului."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Care este termenul de prescriptie pentru o actiune de malpraxis medical?",
+        "a1": "Conform art. 674 din Legea nr. 95/2006 si art. 2.517 din Codul Civil, termenul general de prescriptie pentru actiunile in raspundere civila delictuala este de 3 ani de la data la care pacientul a cunoscut sau trebuia sa cunoasca paguba si pe cel responsabil. In cazurile in care prejudiciul se manifesta ulterior actului medical, termenul curge de la momentul descoperirii prejudiciului, dar nu mai tarziu de 10 ani de la data actului medical.",
+        "q2": "Cum depun o plangere pentru malpraxis medical?",
+        "a2": "Primul pas este formularea unei sesizari catre Comisia de monitorizare si competenta profesionala din cadrul Directiei de Sanatate Publica sau a Colegiului Medicilor, conform Legii nr. 95/2006. Comisia va analiza cazul si va emite o decizie. In paralel sau ulterior, puteti formula o actiune in instanta civila prin care sa solicitati despagubiri. Este recomandat sa consultati un avocat specializat care sa va ghideze in intreaga procedura si sa va ajute sa adunati probele necesare.",
+        "q3": "Ce despagubiri pot obtine intr-un caz de malpraxis medical?",
+        "a3": "Victimele malpraxisului medical pot solicita despagubiri materiale (cheltuieli medicale, costuri de tratament si recuperare, venituri pierdute pe perioada incapacitatii de munca) si despagubiri morale (pentru suferinta fizica si psihica). In cazuri grave, se pot acorda si despagubiri pentru prejudiciul estetic sau pentru pierderea sanselor de vindecare. Cuantumul despagubirilor este stabilit de instanta pe baza probelor medicale si a expertizelor.",
+        "q4": "Cat dureaza un proces de malpraxis medical?",
+        "a4": "Durata unui proces de malpraxis medical variaza in functie de complexitatea cazului, de numarul de expertize medicale necesare si de incarcarea instantelor. In general, un proces in prima instanta poate dura intre 1 si 3 ani. La aceasta se adauga eventualele cai de atac (apel), care pot prelungi procedura cu inca 6 luni pana la 1 an. In faza administrativa, procedura in fata Comisiei poate dura 3-6 luni."
       }
     },
     "drept-civil": {
@@ -568,7 +579,7 @@
         "description": "Servicii complete de drept civil: litigii, contracte, proprietate, succesiuni. Avocati specializati in Satu Mare cu experienta vasta in instanta."
       },
       "descriptionTitle": "Servicii de Drept Civil",
-      "description": "Dreptul civil reglementeaza raporturile dintre persoane fizice si juridice in ceea ce priveste proprietatea, contractele, obligatiile si raspunderea civila. Echipa noastra ofera consultanta si reprezentare in toate domeniile dreptului civil, de la redactarea si negocierea contractelor pana la solutionarea litigiilor in instanta. Cu o experienta de aproape doua decenii, am reprezentat cu succes sute de clienti in cauze civile diverse.",
+      "description": "Dreptul civil, reglementat in principal de Codul Civil (Legea nr. 287/2009), constituie ramura fundamentala a sistemului juridic romanesc, guvernand raporturile patrimoniale si nepatrimoniale dintre persoane fizice si juridice. Acesta acopera domenii esentiale precum dreptul de proprietate (art. 555-774), contractele civile (art. 1166-1323), obligatiile (art. 1164-1649), succesiunile (art. 953-1163) si raspunderea civila delictuala (art. 1349-1395).\n\nServiciile noastre de drept civil cuprind consultanta si reprezentare in litigii privind proprietatea si revendicarile imobiliare, actiuni in granituire si servituti, partaje succesorale si intre fosti soti, redactarea si negocierea contractelor civile, actiuni in raspundere contractuala si delictuala, executari silite si recuperarea creantelor. De asemenea, oferim asistenta in materie de carte funciara, uzucapiune, actiuni posesorii si actiuni in constatare.\n\nReprezentarea juridica in litigiile civile este esentiala pentru protejarea drepturilor si intereselor dumneavoastra. Procedura civila implica termene stricte de prescriptie si decadere, reguli probatorii complexe si strategii procesuale specifice. Cu o experienta de aproape doua decenii si sute de cauze civile solutionate cu succes, echipa noastra va garanteaza o reprezentare profesionala in fata tuturor instantelor de judecata, de la judecatorie pana la Inalta Curte de Casatie si Justitie.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Litigii privind proprietatea si revendicarile imobiliare",
@@ -584,6 +595,17 @@
         "point2": "Elaboram o strategie adaptata obiectivelor si circumstantelor specifice ale cazului.",
         "point3": "Reprezentam interesele dumneavoastra in negocieri, mediere sau in fata instantelor de judecata.",
         "point4": "Urmarim executarea hotararilor judecatoresti pentru a va asigura ca drepturile va sunt respectate."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Cat costa un proces civil?",
+        "a1": "Costurile unui proces civil includ taxa judiciara de timbru (calculata conform OUG nr. 80/2013 in functie de valoarea obiectului cererii), onorariul avocatului si eventualele cheltuieli cu expertizele. Pentru cererile evaluabile in bani, taxa de timbru variaza intre 20 lei si un procent din valoare. Exista posibilitatea de a solicita ajutor public judiciar daca nu va permiteti costurile, conform OUG nr. 51/2008.",
+        "q2": "Cat dureaza un proces civil?",
+        "a2": "Durata unui proces civil depinde de complexitatea cauzei, numarul de parti implicate, probele necesare si incarcarea instantei. In medie, un proces in prima instanta dureaza intre 6 luni si 2 ani. La aceasta se adauga caile de atac: apelul (6-12 luni) si, dupa caz, recursul. Cauzele simple, cum ar fi somatiile de plata, pot fi solutionate in 1-3 luni.",
+        "q3": "Ce documente am nevoie pentru un proces civil?",
+        "a3": "Documentele necesare variaza in functie de tipul cauzei. In general, aveti nevoie de: actul de identitate, documentele care dovedesc dreptul pretins (contracte, acte de proprietate, facturi, chitante), corespondenta relevanta si orice alte inscrisuri care sustin pretentiile dumneavoastra. In cazul litigiilor imobiliare, sunt necesare si extras de carte funciara, planuri cadastrale si acte de proprietate. Avocatul dumneavoastra va indica exact actele necesare.",
+        "q4": "Ce inseamna executarea silita si cum functioneaza?",
+        "a4": "Executarea silita este procedura prevazuta de art. 622-914 din Codul de Procedura Civila prin care se asigura realizarea efectiva a drepturilor stabilite printr-un titlu executoriu (hotarare judecatoreasca, contract autentificat etc.). Executarea se realizeaza prin intermediul unui executor judecatoresc si poate imbraca mai multe forme: poprire pe conturi bancare si venituri, urmarirea si vanzarea bunurilor mobile sau imobile, sau obligarea debitorului la o anumita conduita."
       }
     },
     "drept-penal": {
@@ -597,7 +619,7 @@
         "description": "Aparare penala profesionala in Satu Mare. Asistenta la audieri, reprezentare in instanta, recursuri. Avocat penal cu experienta."
       },
       "descriptionTitle": "Servicii de Drept Penal",
-      "description": "Dreptul penal este unul dintre cele mai complexe si sensibile domenii juridice, unde libertatea si reputatia unei persoane sunt puse in joc. Echipa noastra ofera aparare penala profesionala, de la asistenta in faza de urmarire penala pana la reprezentare in instanta si caile de atac. Ne asiguram ca drepturile dumneavoastra sunt respectate pe parcursul intregii proceduri penale.",
+      "description": "Dreptul penal, reglementat de Codul Penal (Legea nr. 286/2009) si Codul de Procedura Penala (Legea nr. 135/2010), este domeniul juridic care protejeaza valorile sociale fundamentale prin incriminarea faptelor periculoase si stabilirea sanctiunilor corespunzatoare. Procedura penala parcurge mai multe faze: urmarirea penala, camera preliminara, judecata in prima instanta si caile de atac (apel si, in cazuri exceptionale, contestatie in anulare sau revizuire).\n\nEchipa noastra de avocati penalisti ofera asistenta juridica completa in toate fazele procesului penal, atat pentru persoanele acuzate, cat si pentru victimele infractiunilor. Gama de infractiuni in care asiguram reprezentare include: infractiuni contra persoanei (art. 188-227 Cod Penal), infractiuni contra patrimoniului (art. 228-256), infractiuni de coruptie (art. 289-294), infractiuni economice si de evaziune fiscala, infractiuni rutiere, infractiuni informatice si infractiuni privind regimul drogurilor.\n\nReprezentarea de catre un avocat specializat in drept penal este un drept fundamental garantat de Constitutia Romaniei (art. 24) si de Codul de Procedura Penala (art. 10). Asistenta juridica este obligatorie in numeroase situatii prevazute de art. 90 din Codul de Procedura Penala, inclusiv cand inculpatul este minor, retinut sau arestat. Ne asiguram ca toate drepturile procesuale va sunt respectate, ca probele sunt administrate legal si ca beneficiati de cea mai eficienta aparare posibila.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Infractiuni contra persoanei (vatamari corporale, amenintari)",
@@ -613,6 +635,17 @@
         "point2": "Analizam probele si identificam eventualele vicii de procedura sau incalcari ale drepturilor.",
         "point3": "Elaboram o strategie de aparare personalizata, adaptata circumstantelor cazului.",
         "point4": "Va reprezentam in fata organelor de urmarire penala si in toate fazele procesului."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Am dreptul la un avocat din oficiu in procesul penal?",
+        "a1": "Da, dreptul la aparare este garantat de art. 24 din Constitutia Romaniei. Conform art. 90 din Codul de Procedura Penala, asistenta juridica este obligatorie cand suspectul sau inculpatul este minor, retinut, arestat sau supus unei masuri preventive, cand organul judiciar apreciaza ca persoana nu si-ar putea face singura apararea, precum si in alte cazuri prevazute de lege. Daca nu va permiteti un avocat ales, statul va desemna un avocat din oficiu, al carui onorariu este suportat de stat.",
+        "q2": "Cat dureaza un proces penal in Romania?",
+        "a2": "Durata procesului penal variaza semnificativ. Faza de urmarire penala poate dura de la cateva luni la mai multi ani, in functie de complexitate. Camera preliminara dureaza aproximativ 60 de zile. Judecata in prima instanta poate dura 6 luni - 2 ani, iar apelul inca 6-12 luni. In total, un proces penal poate dura de la 1 an pentru cauze simple pana la 5-7 ani pentru dosare complexe cu mai multi inculpati.",
+        "q3": "Ce se intampla daca sunt retinut de politie?",
+        "a3": "Retinerea este o masura preventiva privativa de libertate reglementata de art. 209-210 din Codul de Procedura Penala. Poate fi dispusa de organul de urmarire penala pentru cel mult 24 de ore. In acest timp, aveti dreptul la un avocat (ales sau din oficiu), dreptul de a fi informat cu privire la faptele de care sunteti suspectat, dreptul de a nu face nicio declaratie si dreptul de a fi consultat de un medic. Dupa expirarea celor 24 de ore, trebuie sa fiti eliberat sau sa se propuna arestarea preventiva, care poate fi dispusa doar de judecator.",
+        "q4": "Ce inseamna controlul judiciar si ce obligatii implica?",
+        "a4": "Controlul judiciar este o masura preventiva neprivativa de libertate prevazuta de art. 211-215 din Codul de Procedura Penala. Poate fi dispus de procuror sau judecator pe o durata de cel mult 60 de zile (cu posibilitatea prelungirii). Persoana supusa controlului judiciar trebuie sa respecte anumite obligatii: sa se prezinte la organul judiciar cand este chemata, sa nu depaseasca o anumita limita teritoriala, sa informeze despre schimbarea locuintei. Judecatorul poate impune si alte obligatii, precum interdictia de a contacta anumite persoane sau de a exercita anumite activitati."
       }
     },
     "drept-familiei": {
@@ -626,7 +659,7 @@
         "description": "Divorturi, custodie, pensii alimentare, partaj. Avocat specializat in dreptul familiei in Satu Mare. Abordare sensibila si profesionala."
       },
       "descriptionTitle": "Servicii de Dreptul Familiei",
-      "description": "Problemele de familie sunt printre cele mai delicate si emotionale situatii juridice. Echipa noastra abordeaza fiecare caz cu sensibilitate si profesionalism, intelegand impactul emotional pe care aceste situatii il au asupra clientilor nostri. Oferim solutii care protejeaza interesele dumneavoastra si ale copiilor, incercand ori de cate ori este posibil sa gasim solutii amiabile.",
+      "description": "Dreptul familiei este reglementat de Cartea a II-a din Codul Civil (Legea nr. 287/2009), art. 258-534, si cuprinde normele juridice care guverneaza relatiile de familie: casatoria, divortul, filitatia, autoritatea parinteasca, obligatia de intretinere si protectia copilului. Aceasta ramura de drept se intersecteaza frecvent cu dreptul procesual civil, dreptul international privat si dreptul protectiei sociale.\n\nServiciile noastre acopera intreaga gama de probleme de dreptul familiei: divorturi amiabile si contencioase (art. 373-404 Cod Civil), stabilirea si exercitarea autoritatii parintesti (art. 483-512), stabilirea domiciliului copilului si a programului de relatii personale, calcularea si modificarea pensiei alimentare (art. 513-534), partajul bunurilor comune ale sotilor (art. 339-372), recunoasterea si contestarea paternitatii (art. 408-437), adoptii, tutela si curatela. De asemenea, oferim asistenta in procedurile de mediere familiala, obligatorie conform Legii nr. 192/2006 in cazurile de divort.\n\nReprezentarea juridica in cauzele de dreptul familiei este deosebit de importanta datorita implicatiilor emotionale si pe termen lung ale deciziilor luate. Prioritatea noastra absoluta este protejarea interesului superior al copilului, principiu fundamental consacrat de art. 263 din Codul Civil. Abordam fiecare caz cu empatie si profesionalism, cautand solutii amiabile ori de cate ori este posibil, dar pregatiti sa va reprezentam ferm in instanta cand negocierile esueaza.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Divorturi prin acord sau pe cale judiciara",
@@ -642,6 +675,17 @@
         "point2": "Exploram toate optiunile, inclusiv medierea, pentru a gasi solutii amiabile cand este posibil.",
         "point3": "Protejam cu prioritate interesul superior al copiilor in toate deciziile.",
         "point4": "Va reprezentam ferm in instanta atunci cand negocierile nu sunt posibile."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Cat dureaza o procedura de divort?",
+        "a1": "Durata depinde de tipul divortului. Divortul prin acord mutual la notar sau la ofiterul de stare civila (cand nu exista copii minori) poate fi finalizat in 30-60 de zile. Divortul prin acord mutual la instanta dureaza de obicei 2-4 luni. Divortul contencios, in care sotii nu se inteleg cu privire la culpa, custodia copiilor sau partajul bunurilor, poate dura de la 6 luni la peste 2 ani, in functie de complexitatea cauzei si de numarul de probe administrate.",
+        "q2": "Cum se stabileste custodia copilului in caz de divort?",
+        "a2": "Conform art. 396-403 din Codul Civil, instanta stabileste exercitarea autoritatii parintesti avand ca principiu fundamental interesul superior al copilului (art. 263). Regula este exercitarea in comun a autoritatii parintesti de catre ambii parinti, chiar si dupa divort. Instanta stabileste locuinta copilului la unul dintre parinti si un program de relatii personale cu celalalt parinte. Se iau in considerare varsta copilului, atasamentul fata de fiecare parinte, capacitatea fiecaruia de a asigura nevoile copilului si, daca are peste 10 ani, opinia copilului.",
+        "q3": "Cat este pensia alimentara si cum se calculeaza?",
+        "a3": "Pensia alimentara pentru copii este reglementata de art. 529-530 din Codul Civil. Cuantumul se stabileste in functie de veniturile parintelui obligat la plata: pana la o patrime din venituri pentru un copil, o treime pentru doi copii si o jumatate pentru trei sau mai multi copii. Se iau in calcul toate veniturile parintelui, inclusiv salariu, bonusuri, chirii, dividende. Pensia poate fi modificata ulterior daca se schimba circumstantele (cresterea sau scaderea veniturilor, aparitia altor obligatii de intretinere).",
+        "q4": "Pot obtine divort rapid la notariat?",
+        "a4": "Da, divortul la notar este posibil conform art. 375-378 din Codul Civil, dar numai daca ambii soti sunt de acord cu divortul si nu exista copii minori nascuti din casatorie, adoptati sau asupra carora se exercita autoritatea parinteasca. Procedura dureaza aproximativ 30 de zile (termenul de reflectie prevazut de lege) si este mai rapida si mai putin costisitoare decat procedura judiciara. Daca exista copii minori, divortul prin acord se poate realiza la instanta de judecata sau prin procedura administrativa la ofiterul de stare civila."
       }
     },
     "dreptul-muncii": {
@@ -655,7 +699,7 @@
         "description": "Consultanta si reprezentare in dreptul muncii. Concedieri abuzive, drepturi salariale, hartuire la locul de munca. Avocat specializat Satu Mare."
       },
       "descriptionTitle": "Servicii de Dreptul Muncii",
-      "description": "Relatiile de munca sunt reglementate de norme speciale menite sa protejeze atat angajatii, cat si angajatorii. Cabinetul nostru ofera consultanta si reprezentare in toate aspectele dreptului muncii, ajutand angajatii sa-si apere drepturile si angajatorii sa respecte legislatia in vigoare. Avem experienta in negocierea contractelor, solutionarea conflictelor si reprezentarea in litigiile de munca.",
+      "description": "Dreptul muncii este reglementat in principal de Codul Muncii (Legea nr. 53/2003), care stabileste cadrul juridic al raporturilor individuale si colective de munca, mecanismele de protectie a salariatilor si conditiile de desfasurare a activitatii profesionale. Legislatia muncii este completata de Legea dialogului social nr. 367/2022, Legea nr. 81/2018 privind telemunca, OUG nr. 158/2005 privind concediile medicale si alte acte normative specifice.\n\nServiciile noastre de dreptul muncii acopera o gama larga de situatii: contestarea concedierilor abuzive sau nelegale (art. 58-75 Codul Muncii), recuperarea drepturilor salariale restante, negocierea si redactarea contractelor individuale si colective de munca, asistenta in cazuri de hartuire morala la locul de munca (conform Legii nr. 167/2020), discriminare (OG nr. 137/2000), accidente de munca si boli profesionale, restructurari si concedieri colective (art. 68-74 Codul Muncii), precum si consultanta pentru angajatori privind conformitatea cu legislatia muncii.\n\nReprezentarea juridica specializata in litigiile de munca este esentiala deoarece legislatia prevede termene scurte de contestare (30 de zile calendaristice de la comunicarea deciziei de concediere, conform art. 268 Codul Muncii) si reguli procedurale specifice. Litigiile de munca sunt scutite de taxa judiciara de timbru pentru salariati, iar sarcina probei revine angajatorului in majoritatea cazurilor. Echipa noastra va reprezinta atat in fata Inspectoratului Teritorial de Munca, cat si in instanta de judecata.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Concedieri abuzive sau nelegale",
@@ -671,6 +715,17 @@
         "point2": "Incercam sa solutionam conflictul pe cale amiabila prin negociere sau mediere.",
         "point3": "Reprezentam clientul in fata Inspectoratului Teritorial de Munca si in instanta.",
         "point4": "Urmarim executarea hotararilor pentru a asigura recuperarea efectiva a drepturilor."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Pot fi concediat fara motiv de catre angajator?",
+        "a1": "Nu. Conform art. 58 din Codul Muncii, concedierea dispusa de angajator trebuie sa fie intotdeauna motivata, in caz contrar fiind lovita de nulitate. Concedierea poate interveni pentru motive care tin de persoana salariatului (abatere disciplinara, necorespundere profesionala, inaptitudine medicala) sau pentru motive care nu tin de persoana salariatului (desfiintarea locului de munca din motive economice). Decizia de concediere trebuie sa contina motivele de fapt si de drept, durata preavizului si termenul de contestare.",
+        "q2": "Cat este termenul de preaviz la concediere?",
+        "a2": "Conform art. 75 din Codul Muncii, termenul minim de preaviz este de 20 de zile lucratoare pentru salariatii cu functii de executie si poate fi mai lung pentru functiile de conducere, conform contractului colectiv sau individual de munca. In caz de demisie, termenul de preaviz este de cel mult 20 de zile lucratoare pentru functii de executie si de cel mult 45 de zile lucratoare pentru functii de conducere. Preavizul nu este obligatoriu in cazul concedierii disciplinare.",
+        "q3": "Cum pot contesta o concediere pe care o consider abuziva?",
+        "a3": "Aveti dreptul de a contesta decizia de concediere la tribunalul in a carui raza teritoriala aveti domiciliul sau locul de munca, in termen de 30 de zile calendaristice de la comunicare, conform art. 268 alin. (1) lit. a) din Codul Muncii. Contestatia este scutita de taxa judiciara de timbru. Daca instanta constata nelegalitatea concedierii, poate dispune anularea deciziei, reintegrarea in functie si plata salariilor compensatorii de la data concedierii pana la reintegrare.",
+        "q4": "Ce drepturi am in cazul unei concedieri colective?",
+        "a4": "Concedierea colectiva este reglementata de art. 68-74 din Codul Muncii. Angajatorul are obligatia de a informa si consulta sindicatul sau reprezentantii salariatilor cu cel putin 30 de zile inainte, de a notifica Inspectoratul Teritorial de Munca si Agentia de Ocupare a Fortei de Munca. Salariatii afectati au dreptul la un preaviz de minimum 20 de zile lucratoare, la compensatii prevazute de contractul colectiv de munca, la masuri active de recalificare si la prioritate la reangajare daca angajatorul reia activitatea in termen de 45 de zile."
       }
     },
     "drept-comercial": {
@@ -684,7 +739,7 @@
         "description": "Consultanta juridica pentru afaceri: contracte comerciale, litigii, insolventa, fuziuni. Cabinet de avocat specializat in Satu Mare."
       },
       "descriptionTitle": "Servicii de Drept Comercial",
-      "description": "Mediul de afaceri necesita consiliere juridica strategica si proactiva. Cabinetul nostru ofera servicii complete de drept comercial, de la infiintarea societatilor si redactarea contractelor pana la solutionarea litigiilor comerciale si procedurile de insolventa. Intelegem ca timpul inseamna bani in afaceri, de aceea oferim solutii eficiente si pragmatice.",
+      "description": "Dreptul comercial romanesc este reglementat in principal de Legea societatilor nr. 31/1990 (republicata), care guverneaza constituirea, organizarea, functionarea si dizolvarea societatilor, si de Codul Civil (Legea nr. 287/2009), Cartea a V-a, care reglementeaza contractele si obligatiile comerciale. Cadrul legal este completat de Legea nr. 85/2014 privind procedurile de prevenire a insolventei si de insolventa, Legea nr. 26/1990 privind registrul comertului si alte acte normative specifice.\n\nServiciile noastre de drept comercial cuprind: constituirea si inregistrarea societatilor (SRL, SA, SNC, SCS), modificarea actelor constitutive, cesiuni de parti sociale si actiuni, fuziuni si divizari, dizolvare si lichidare, redactarea si negocierea contractelor comerciale, asistenta in procedurile de insolventa si reorganizare judiciara, recuperarea creantelor comerciale prin somatii de plata si executare silita, litigii comerciale si arbitraj, consultanta in materie de concurenta si proprietate intelectuala.\n\nConsilierea juridica profesionala in domeniul comercial este esentiala pentru prevenirea riscurilor si protejarea investitiilor. Un contract bine redactat, o structura societara adecvata si cunoasterea obligatiilor legale pot face diferenta intre succesul si esecul unei afaceri. Echipa noastra combina expertiza juridica cu intelegerea realitatilor economice pentru a oferi solutii pragmatice, eficiente si adaptate nevoilor fiecarui client, fie ca este vorba de un start-up sau de o companie cu traditie.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Constituirea si modificarea societatilor comerciale",
@@ -700,6 +755,17 @@
         "point2": "Redactam contracte clare care protejeaza interesele si minimizeaza riscurile.",
         "point3": "Reprezentam interesele comerciale in negocieri, mediere sau instanta.",
         "point4": "Oferim solutii rapide si eficiente pentru a minimiza impactul asupra afacerii."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Ce forme juridice de societate exista in Romania?",
+        "a1": "Conform Legii societatilor nr. 31/1990, in Romania pot fi constituite urmatoarele forme de societati: Societatea cu Raspundere Limitata (SRL) - cea mai populara forma, cu capital social minim de 200 lei; Societatea pe Actiuni (SA) - cu capital social minim de 90.000 lei, indicata pentru afaceri de mare anvergura; Societatea in Nume Colectiv (SNC); Societatea in Comandita Simpla (SCS) si Societatea in Comandita pe Actiuni (SCA). De asemenea, se pot constitui Intreprinderi Individuale, PFA-uri si Intreprinderi Familiale conform OUG nr. 44/2008.",
+        "q2": "Cat costa infiintarea unei firme (SRL)?",
+        "a2": "Costurile pentru infiintarea unui SRL includ: capitalul social minim de 200 lei, taxele de inregistrare la Registrul Comertului (aproximativ 100-200 lei, cu posibilitatea scutirii pentru anumite categorii), onorariul notarial pentru autentificarea actului constitutiv (daca este cazul), taxa pentru publicarea in Monitorul Oficial (daca este obligatorie) si onorariul avocatului. In total, costurile variaza intre 500 si 2.000 lei, in functie de complexitatea structurii societare si de serviciile solicitate.",
+        "q3": "Ce inseamna insolventa si care sunt consecintele?",
+        "a3": "Insolventa, reglementata de Legea nr. 85/2014, este situatia in care debitorul nu poate face fata datoriilor exigibile cu sumele de bani disponibile. Procedura poate fi declansata de debitor sau de creditorii cu creante mai mari de 50.000 lei. Insolventa nu inseamna neaparat faliment: prima etapa este observatia (maxim 12 luni), urmata eventual de reorganizarea judiciara, care permite continuarea activitatii sub un plan aprobat de creditori. Doar daca reorganizarea esueaza se trece la faliment, cu lichidarea bunurilor.",
+        "q4": "Cum pot recupera o creanta comerciala restanta?",
+        "a4": "Exista mai multe modalitati de recuperare a creantelor comerciale: somatia de plata (reglementata de art. 1014-1025 din Codul de Procedura Civila), care permite obtinerea unui titlu executoriu in termen de 45 de zile; ordonanta de plata (art. 1026-1033), pentru creantele certe, lichide si exigibile rezultate din contracte; actiunea de drept comun in instanta; si executarea silita prin intermediul unui executor judecatoresc. Alegerea procedurii depinde de existenta unui contract scris, de cuantumul creantei si de comportamentul debitorului."
       }
     },
     "accidente-rutiere": {
@@ -713,7 +779,7 @@
         "description": "Reprezentare victime accidente rutiere. Obtineti despagubiri de la asigurator: daune materiale, morale, venituri pierdute. Avocat specializat Satu Mare."
       },
       "descriptionTitle": "Servicii pentru Victime ale Accidentelor Rutiere",
-      "description": "Accidentele rutiere pot avea consecinte devastatoare pentru victime si familiile acestora. Cabinetul nostru este specializat in reprezentarea victimelor accidentelor de circulatie, ajutandu-le sa obtina despagubirile complete la care au dreptul de la societatile de asigurare sau de la vinovati. Ne ocupam de toate aspectele juridice pentru ca dumneavoastra sa va puteti concentra pe recuperare.",
+      "description": "Accidentele rutiere sunt reglementate de un cadru legislativ complex care include OUG nr. 195/2002 privind circulatia pe drumurile publice, Legea nr. 132/2017 privind asigurarea obligatorie de raspundere civila auto (RCA), Codul Penal (pentru infractiunile rutiere) si Codul Civil (pentru raspunderea civila delictuala). Dreptul la despagubiri al victimelor accidentelor de circulatie este garantat atat prin mecanismul asigurarii RCA, cat si prin raspunderea civila directa a persoanei vinovate.\n\nServiciile noastre pentru victimele accidentelor rutiere acopera intregul spectru de actiuni necesare: documentarea completa a prejudiciului suferit (daune materiale, cheltuieli medicale, venituri pierdute, daune morale), formularea cererii de despagubire catre societatea de asigurare RCA conform procedurii prevazute de Legea nr. 132/2017, negocierea cu asiguratorii pentru obtinerea despagubirilor maxime, reprezentarea in instanta civila si penala, precum si asistenta in cazurile speciale de accidente cu vehicule neasigurate sau cu autori neidentificati (despagubiri prin BAAR - Biroul Asiguratorilor de Autovehicule din Romania).\n\nReprezentarea juridica specializata este esentiala deoarece societatile de asigurare ofera frecvent despagubiri semnificativ mai mici decat cele cuvenite legal. Un avocat experimentat cunoaste jurisprudenta actuala, criteriile de evaluare a prejudiciului corporal si metodele de calcul ale despagubirilor morale, putand obtine compensatii de pana la 5-10 ori mai mari decat ofertele initiale ale asiguratorilor.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Vatamari corporale suferite in accidente rutiere",
@@ -729,6 +795,17 @@
         "point2": "Negociem direct cu societatile de asigurare pentru obtinerea despagubirilor maxime.",
         "point3": "Reprezentam victima in instanta daca asiguratorul refuza plata corecta.",
         "point4": "Va asistam pe intreaga durata a procesului, fara costuri initiale in multe cazuri."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Ce trebuie sa fac imediat dupa un accident rutier?",
+        "a1": "Imediat dupa accident, conform OUG nr. 195/2002, trebuie sa: opriti vehiculul si sa semnalizati locul accidentului, sa acordati primul ajutor victimelor si sa apelati numarul de urgenta 112, sa nu mutati vehiculele din pozitia in care se afla (decat daca blocheaza traficul si exista pericol), sa completati formularul de constatare amiabila daca nu exista victime, sa fotografiati locul accidentului si avariile, si sa obtineti datele de contact ale martorilor. Este important sa nu recunoasteti nicio culpa la fata locului si sa contactati un avocat cat mai curand.",
+        "q2": "Cum obtin despagubiri de la societatea de asigurare RCA?",
+        "a2": "Conform Legii nr. 132/2017, trebuie sa depuneti cererea de despagubire la asiguratorul RCA al vehiculului vinovat, insotita de: procesul-verbal de constatare a accidentului, documente medicale, facturi si chitante pentru cheltuielile efectuate, dovada veniturilor pierdute si alte documente justificative. Asiguratorul are obligatia de a formula o oferta de despagubire in termen de 30 de zile de la depunerea documentatiei complete sau de a comunica motivele pentru care nu poate face o oferta. Daca nu sunteti multumit de oferta, puteti contesta in instanta.",
+        "q3": "Cat dureaza solutionarea unui dosar de dauna RCA?",
+        "a3": "Procedura extrajudiciara (la asigurator) trebuie finalizata in termen de 30 de zile de la depunerea documentatiei complete pentru daunele materiale si 90 de zile pentru vatamari corporale, conform Legii nr. 132/2017. Daca dosarul ajunge in instanta (cand asiguratorul refuza plata sau ofera sume insuficiente), procesul poate dura intre 6 luni si 2 ani in prima instanta, plus eventualul apel. In total, de la accident pana la incasarea despagubirilor, pot trece intre 3 luni si 3 ani.",
+        "q4": "Ce fac daca soferul vinovat nu avea asigurare RCA valida?",
+        "a4": "In cazul in care vehiculul vinovat nu avea asigurare RCA valabila sau daca autorul accidentului nu a fost identificat, despagubirile pot fi solicitate de la BAAR (Biroul Asiguratorilor de Autovehicule din Romania), conform art. 33-34 din Legea nr. 132/2017. BAAR functioneaza ca fond de garantare si acopera despagubirile pentru vatamari corporale si daune materiale. Procedura este similara cu cea de la asigurator, dar poate dura mai mult. De asemenea, puteti actiona in instanta direct impotriva persoanei vinovate pentru recuperarea prejudiciului."
       }
     },
     "drept-administrativ-fiscal": {
@@ -742,7 +819,7 @@
         "description": "Contestatii administrative si fiscale, litigii cu ANAF, reprezentare in fata autoritatilor. Avocat specializat in drept fiscal Satu Mare."
       },
       "descriptionTitle": "Servicii de Drept Administrativ si Fiscal",
-      "description": "Relatia cu autoritatile statului poate fi complexa si intimidanta. Cabinetul nostru ofera reprezentare profesionala in fata organelor administrative si fiscale, contestand deciziile ilegale si aparand drepturile contribuabililor. Cu o intelegere profunda a legislatiei administrative si fiscale, va ajutam sa navigati prin procedurile birocratice si sa va aparati interesele.",
+      "description": "Cabinetul nostru ofera asistenta juridica specializata in contestarea actelor administrative si fiscale abuzive emise de autoritatile publice centrale si locale. Dreptul administrativ si fiscal romanesc este guvernat de Legea contenciosului administrativ nr. 554/2004, Codul de Procedura Fiscala (Legea nr. 207/2015), Codul Fiscal (Legea nr. 227/2015) si Codul de Procedura Civila, acte normative care reglementeaza raporturile dintre cetateni si stat, precum si caile de atac impotriva deciziilor nelegale.\n\nPrincipalele servicii pe care le oferim includ: anularea actelor administrative nelegale prin actiuni in contencios administrativ conform Legii nr. 554/2004, contestarea deciziilor de impunere emise de ANAF si a altor titluri de creanta fiscala, apararea drepturilor contribuabililor in cadrul procedurilor de executare silita fiscala reglementate de art. 220-267 din Codul de Procedura Fiscala, reprezentarea in litigiile cu autoritatile locale privind taxe, impozite si autorizatii, recuperarea sumelor platite nedatorat catre bugetul de stat sau bugetele locale, precum si obtinerea suspendarii executarii actelor administrative in conditiile art. 14-15 din Legea nr. 554/2004.\n\nReprezentarea juridica specializata este esentiala in raporturile cu autoritatile publice, deoarece termenele de contestare sunt foarte scurte: 45 de zile pentru contestatia administrativa fiscala (art. 270 din Codul de Procedura Fiscala), 6 luni pentru actiunile in contencios administrativ (art. 11 din Legea nr. 554/2004) si 15 zile pentru plangerile contraventionale. Nerespectarea acestor termene atrage decaderea definitiva din dreptul de a contesta. Echipa noastra va asigura ca drepturile dumneavoastra sunt pe deplin aparate in fata oricarei autoritati publice.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionam",
       "cases": {
         "case1": "Contestarea deciziilor de impunere ale ANAF",
@@ -758,6 +835,17 @@
         "point2": "Pregatim contestatia administrativa in termenele legale si cu argumentatie solida.",
         "point3": "Reprezentam clientul in fata organelor administrative si in instanta de contencios.",
         "point4": "Urmarim executarea hotararilor favorabile si recuperarea sumelor datorate."
+      },
+      "faq": {
+        "title": "Intrebari Frecvente",
+        "q1": "Ce este contenciosul administrativ?",
+        "a1": "Contenciosul administrativ reprezinta activitatea de solutionare de catre instantele de judecata competente a litigiilor in care cel putin una dintre parti este o autoritate publica, iar conflictul s-a nascut fie din emiterea sau incheierea unui act administrativ nelegal, fie din nesolutionarea in termenul legal a unei cereri, conform Legii nr. 554/2004. Practic, orice persoana care se considera vatamata intr-un drept sau interes legitim de catre o autoritate publica poate sesiza instanta de contencios administrativ pentru anularea actului, recunoasterea dreptului pretins si repararea pagubei. Inainte de a se adresa instantei, persoana vatamata trebuie sa parcurga procedura prealabila, adica sa solicite autoritatii emitente revocarea actului, in termen de 30 de zile de la comunicare.",
+        "q2": "Cum contest o decizie de impunere ANAF?",
+        "a2": "Contestatia impotriva unei decizii de impunere emise de ANAF se formuleaza in scris si se depune la organul fiscal emitent in termen de 45 de zile de la data comunicarii deciziei, conform art. 270 din Codul de Procedura Fiscala (Legea nr. 207/2015). Contestatia trebuie sa cuprinda datele de identificare ale contestatarului, obiectul contestatiei, motivele de fapt si de drept, precum si dovezile pe care se intemeiaza. Organul fiscal transmite contestatia spre solutionare Directiei Generale de Solutionare a Contestatiilor din cadrul ANAF, care emite o decizie in termen de 45 de zile (cu posibilitate de prelungire). Daca decizia de solutionare este nefavorabila, puteti ataca aceasta decizie la instanta de contencios administrativ in termen de 6 luni de la comunicare.",
+        "q3": "Care este termenul pentru contestarea unui act administrativ?",
+        "a3": "Termenul general pentru introducerea actiunii in contencios administrativ este de 6 luni de la data comunicarii actului administrativ sau de la data luarii la cunostinta a acestuia, conform art. 11 alin. (1) din Legea nr. 554/2004. In cazuri justificate, termenul poate fi prelungit pana la 1 an de la comunicare, conform art. 11 alin. (2) din aceeasi lege. Pentru actele administrativ-fiscale, contestatia administrativa se depune in 45 de zile de la comunicare (art. 270 Cod de Procedura Fiscala), iar pentru procesele-verbale de contraventie termenul este de 15 zile. Depasirea acestor termene atrage decaderea din dreptul de a mai contesta actul, motiv pentru care este esential sa actionati prompt.",
+        "q4": "Pot obtine suspendarea executarii unui act administrativ?",
+        "a4": "Da, suspendarea executarii unui act administrativ poate fi obtinuta in baza art. 14-15 din Legea nr. 554/2004. Instanta de contencios administrativ poate dispune suspendarea executarii actului atunci cand sunt indeplinite cumulativ doua conditii: existenta unui caz bine justificat, adica imprejurari care creeaza o indoiala serioasa asupra legalitatii actului, si necesitatea prevenirii unei pagube iminente, respectiv un prejudiciu material viitor si previzibil care nu ar putea fi reparat. Cererea de suspendare poate fi formulata odata cu plangerea prealabila (art. 14) sau odata cu actiunea pe fond (art. 15). In materie fiscala, suspendarea poate fi obtinuta si pe cale administrativa prin depunerea unei garantii echivalente cu suma contestata, conform art. 278 din Codul de Procedura Fiscala."
       }
     }
   },

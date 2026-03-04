@@ -30,6 +30,17 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
     }
   }
 
+  // Collect FAQ items (up to 4)
+  const faqItems: { question: string; answer: string }[] = [];
+  for (let i = 1; i <= 4; i++) {
+    const qKey = `${serviceId}.faq.q${i}` as const;
+    const aKey = `${serviceId}.faq.a${i}` as const;
+    if (t.has(qKey) && t.has(aKey)) {
+      faqItems.push({ question: t(qKey), answer: t(aKey) });
+    }
+  }
+  const faqTitle = t.has(`${serviceId}.faq.title` as const) ? t(`${serviceId}.faq.title` as const) : '';
+
   return (
     <>
       {/* ── Description section ─────────────────────────────────── */}
@@ -50,9 +61,13 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
                 <div className="mt-4 h-[2px] w-16 bg-gold" />
               </ScrollAnimate>
               <ScrollAnimate delay={0.2}>
-                <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-                  {t(`${serviceId}.description`)}
-                </p>
+                <div className="mt-6 space-y-4">
+                  {t(`${serviceId}.description`).split('\n\n').map((paragraph: string, i: number) => (
+                    <p key={i} className="text-lg leading-relaxed text-text-secondary">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </ScrollAnimate>
             </div>
 
@@ -162,6 +177,42 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
                     <div className="flex-shrink-0 self-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                       <div className="h-1.5 w-1.5 rounded-full bg-gold" />
                     </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </div>
+        </section>
+      )}
+
+      {/* ── FAQ section ─────────────────────────────────────── */}
+      {faqItems.length > 0 && (
+        <section className="bg-[#f8f9fa] py-20 sm:py-32">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 sm:mb-16">
+              <ScrollAnimate>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                  FAQ
+                </p>
+              </ScrollAnimate>
+              <ScrollAnimate delay={0.1}>
+                <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
+                  {faqTitle}
+                </h2>
+                <div className="mt-4 h-[2px] w-16 bg-gold" />
+              </ScrollAnimate>
+            </div>
+
+            <StaggerContainer className="space-y-4" staggerDelay={0.08}>
+              {faqItems.map((faq, index) => (
+                <StaggerItem key={index} variant="fadeUp">
+                  <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm ring-1 ring-black/[0.04] sm:p-8">
+                    <h3 className="font-heading text-lg font-bold text-navy sm:text-xl">
+                      {faq.question}
+                    </h3>
+                    <p className="mt-3 text-base leading-relaxed text-text-secondary">
+                      {faq.answer}
+                    </p>
                   </div>
                 </StaggerItem>
               ))}

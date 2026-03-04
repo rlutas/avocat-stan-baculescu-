@@ -1,0 +1,30 @@
+# SCA Stan-Baculescu - Societate Civila de Avocati
+
+> Law firm based in Satu Mare, Romania, providing professional legal services since 2006. Specializing in medical malpractice, civil law, criminal law, family law, labor law, commercial law, traffic accidents, and administrative-fiscal law.
+
+## About
+- [About the Firm](https://stanbaculescu.ro/ro/despre-noi): History, values, and methodology of SCA Stan-Baculescu
+- [Our Team](https://stanbaculescu.ro/ro/echipa): Meet our team of experienced lawyers
+
+## Legal Services
+- [Medical Malpractice](https://stanbaculescu.ro/ro/servicii/malpraxis-medical): Legal representation for medical negligence cases
+- [Civil Law](https://stanbaculescu.ro/ro/servicii/drept-civil): Property disputes, contracts, inheritance, civil litigation
+- [Criminal Law](https://stanbaculescu.ro/ro/servicii/drept-penal): Criminal defense and victim representation
+- [Family Law](https://stanbaculescu.ro/ro/servicii/drept-familiei): Divorce, custody, child support, property division
+- [Labor Law](https://stanbaculescu.ro/ro/servicii/dreptul-muncii): Employee rights, wrongful dismissal, workplace disputes
+- [Commercial Law](https://stanbaculescu.ro/ro/servicii/drept-comercial): Company formation, commercial litigation, insolvency
+- [Traffic Accidents](https://stanbaculescu.ro/ro/servicii/accidente-rutiere): Insurance claims, accident compensation
+- [Administrative-Fiscal Law](https://stanbaculescu.ro/ro/servicii/drept-administrativ-fiscal): Tax disputes, administrative appeals
+
+## Contact
+- Phone: +40-745-466-720
+- Email: office@stanbaculescu.ro
+- Address: Str. Decebal Nr. 4, Et. 1, Satu Mare, 440014, Romania
+- Hours: Monday-Friday, 09:00-17:00
+
+## Key Facts
+- Founded: 2006
+- Location: Satu Mare, Romania
+- Languages: Romanian, English
+- Bar Association: Baroul Satu Mare
+- Founders: Camelia Stan, Vlad Baculescu
