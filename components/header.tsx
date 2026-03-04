@@ -10,18 +10,8 @@ import {
   SheetTrigger,
   SheetTitle,
 } from '@/components/ui/sheet';
-import {
-  Phone,
-  ChevronDown,
-  Stethoscope,
-  Scale,
-  Gavel,
-  Users,
-  Briefcase,
-  Building2,
-  Car,
-  FileText,
-} from 'lucide-react';
+import { Phone, ChevronDown } from 'lucide-react';
+import { LawIcon, serviceIconMap } from '@/components/icons';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -35,14 +25,14 @@ const navItems = [
 ] as const;
 
 const serviceItems = [
-  { id: 'malpraxis-medical', href: '/servicii/malpraxis-medical', icon: Stethoscope },
-  { id: 'drept-civil', href: '/servicii/drept-civil', icon: Scale },
-  { id: 'drept-penal', href: '/servicii/drept-penal', icon: Gavel },
-  { id: 'drept-familiei', href: '/servicii/drept-familiei', icon: Users },
-  { id: 'dreptul-muncii', href: '/servicii/dreptul-muncii', icon: Briefcase },
-  { id: 'drept-comercial', href: '/servicii/drept-comercial', icon: Building2 },
-  { id: 'accidente-rutiere', href: '/servicii/accidente-rutiere', icon: Car },
-  { id: 'drept-administrativ-fiscal', href: '/servicii/drept-administrativ-fiscal', icon: FileText },
+  { id: 'malpraxis-medical', href: '/servicii/malpraxis-medical' },
+  { id: 'drept-civil', href: '/servicii/drept-civil' },
+  { id: 'drept-penal', href: '/servicii/drept-penal' },
+  { id: 'drept-familiei', href: '/servicii/drept-familiei' },
+  { id: 'dreptul-muncii', href: '/servicii/dreptul-muncii' },
+  { id: 'drept-comercial', href: '/servicii/drept-comercial' },
+  { id: 'accidente-rutiere', href: '/servicii/accidente-rutiere' },
+  { id: 'drept-administrativ-fiscal', href: '/servicii/drept-administrativ-fiscal' },
 ] as const;
 
 // Animated hamburger icon component
@@ -110,7 +100,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt={t('siteName')}
               width={220}
               height={73}
@@ -143,22 +133,19 @@ export function Header() {
                     {/* Dropdown Menu */}
                     <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                       <div className="bg-navy rounded-lg shadow-xl py-2 min-w-[280px] border border-navy-light/10">
-                        {serviceItems.map((service) => {
-                          const Icon = service.icon;
-                          return (
+                        {serviceItems.map((service) => (
                             <Link
                               key={service.id}
                               href={service.href}
                               className={cn(
-                                'flex items-center gap-3 px-4 py-3 text-sm text-white/90 hover:bg-white/10 hover:text-gold transition-colors',
+                                'group flex items-center gap-3 px-4 py-3 text-sm text-white/90 hover:bg-white/10 hover:text-gold transition-colors',
                                 pathname === service.href && 'bg-white/10 text-gold'
                               )}
                             >
-                              <Icon className="h-5 w-5 flex-shrink-0" />
+                              <LawIcon name={serviceIconMap[service.id]} size={20} className="flex-shrink-0 icon-hover-gold" variant="white" />
                               <span>{tServices(`${service.id}.title`)}</span>
                             </Link>
-                          );
-                        })}
+                          ))}
                       </div>
                     </div>
                   </div>
@@ -233,7 +220,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[85vw] max-w-sm border-l-gold/20 bg-gradient-to-br from-[#002a52] via-[#003a70] to-[#004a8f] p-0 overflow-hidden"
+                className="w-[85vw] max-w-sm border-l-gold/20 bg-gradient-to-br from-navy-dark via-navy to-navy-light p-0 overflow-hidden"
                 closeClassName="top-6 right-6 z-20 text-white hover:text-gold hover:bg-white/10 p-2 rounded-lg"
               >
                 {/* Decorative gold circle */}
@@ -244,7 +231,7 @@ export function Header() {
                   {/* Logo */}
                   <SheetTitle className="flex items-center pb-6 border-b border-white/10">
                     <Image
-                      src="/images/logo.png"
+                      src="/images/logo.webp"
                       alt={t('siteName')}
                       width={160}
                       height={53}
@@ -298,34 +285,31 @@ export function Header() {
                                   href="/servicii"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                   className={cn(
-                                    'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200',
+                                    'group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200',
                                     pathname === '/servicii'
                                       ? 'bg-gold/20 text-gold'
                                       : 'text-white/70 hover:bg-white/5 hover:text-gold'
                                   )}
                                 >
-                                  <Scale className="h-4 w-4" />
+                                  <LawIcon name="balance-scale" size={16} className="icon-hover-gold" variant="white" />
                                   <span>Toate Serviciile</span>
                                 </Link>
-                                {serviceItems.map((service) => {
-                                  const Icon = service.icon;
-                                  return (
+                                {serviceItems.map((service) => (
                                     <Link
                                       key={service.id}
                                       href={service.href}
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className={cn(
-                                        'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200',
+                                        'group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200',
                                         pathname === service.href
                                           ? 'bg-gold/20 text-gold'
                                           : 'text-white/70 hover:bg-white/5 hover:text-gold'
                                       )}
                                     >
-                                      <Icon className="h-4 w-4" />
+                                      <LawIcon name={serviceIconMap[service.id]} size={16} className="icon-hover-gold" variant="white" />
                                       <span>{tServices(`${service.id}.title`)}</span>
                                     </Link>
-                                  );
-                                })}
+                                  ))}
                               </div>
                             </div>
                           </div>
@@ -391,7 +375,7 @@ export function Header() {
                     {/* CTA Button */}
                     <Button
                       asChild
-                      className="w-full h-12 bg-gold font-semibold text-navy text-base hover:bg-gold-light shadow-[0_4px_20px_rgba(208,156,17,0.3)] hover:shadow-[0_6px_30px_rgba(208,156,17,0.4)] transition-all duration-300"
+                      className="w-full h-12 bg-gold font-semibold text-navy text-base hover:bg-gold-light shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-gold-lg)] transition-all duration-300"
                     >
                       <Link
                         href="tel:+40745466720"

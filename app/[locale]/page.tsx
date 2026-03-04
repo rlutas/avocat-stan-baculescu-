@@ -4,6 +4,7 @@ import { Hero } from '@/components/hero';
 import { HomeServices } from '@/components/home/home-services';
 import { HomeWhyUs } from '@/components/home/home-why-us';
 import { HomeMethodology } from '@/components/home/home-methodology';
+import { HomeTeam } from '@/components/home/home-team';
 import { Testimonials } from '@/components/testimonials';
 import { HomeCta } from '@/components/home/home-cta';
 
@@ -55,6 +56,7 @@ export default async function Home({ params }: Props) {
       <HomeServices />
       <HomeWhyUs />
       <HomeMethodology />
+      <HomeTeam />
       <Testimonials />
       <HomeCta />
     </>

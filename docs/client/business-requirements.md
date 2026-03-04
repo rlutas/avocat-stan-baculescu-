@@ -1,8 +1,8 @@
 # Business Requirements Document
 ## Avocat Stan Baculescu - Website Platform
 
-**Document Version:** 2.0
-**Date:** October 2, 2025
+**Document Version:** 2.1
+**Date:** October 2, 2025 (Updated: March 4, 2026)
 **Client:** Societate Civilă de Avocați Stan-Baculescu
 **Contact Person:** Camelia
 **Current Website:** stanbaculescu.ro (WordPress)
@@ -173,7 +173,7 @@ Create a cutting-edge web platform that:
 
 **Core Features:**
 - Modern, responsive design using shadcn/ui components
-- Homepage with firm overview and value proposition
+- Homepage with firm overview and value proposition (Hero with founders photos, Services, Why Us, Methodology, Team, Testimonials, CTA)
 - Practice areas/services pages
 - Lawyer profiles with bios and photos
 - Contact information and forms
@@ -318,9 +318,9 @@ Create a cutting-edge web platform that:
 
 | ID | Requirement | Priority | Acceptance Criteria |
 |----|-------------|----------|---------------------|
-| FR1.1.1 | Homepage displays firm overview, services, and call-to-action | MUST | Clear value proposition, responsive design, loads <2s |
+| FR1.1.1 | Homepage displays firm overview with Hero (founders photos), Services (8 practice areas with photo cards), Why Us (reception photo + stats + value propositions), Methodology (4 steps with photo cards), Team (founders + collaborators), Testimonials (Google reviews), and CTA sections | MUST | Clear value proposition, responsive design, loads <2s |
 | FR1.1.2 | Practice areas page lists all legal services | MUST | Each service has description, displayed in cards |
-| FR1.1.3 | Lawyer profiles page with bios and photos | MUST | Minimum fields: name, title, specialization, bio, photo |
+| FR1.1.3 | Lawyer profiles page with bios and photos. Current team: Founders (Av. Camelia Stan, Av. Vlad Baculescu), Collaborators (Diana Chincea, Cristina Blan, Alexandra Rusu), Client Relations (Diana Vereș) | MUST | Minimum fields: name, title, specialization, bio, photo |
 | FR1.1.4 | Contact page with form and office information | MUST | Form validation, spam protection, email notification |
 | FR1.1.5 | About us page with firm history and values | SHOULD | Rich content with images and formatting |
 | FR1.1.6 | Responsive navigation menu | MUST | Works on mobile, tablet, desktop |
@@ -446,7 +446,7 @@ Create a cutting-edge web platform that:
 | FR2.8.3 | Article categorization and tagging | MUST | Multiple categories, unlimited tags |
 | FR2.8.4 | SEO metadata per article | MUST | Title, description, keywords, OG tags |
 | FR2.8.5 | Article scheduling | SHOULD | Publish at future date/time |
-| FR2.8.6 | Image optimization and management | SHOULD | Auto-resize, lazy loading, WebP format |
+| FR2.8.6 | Image optimization and management | SHOULD | Auto-resize, lazy loading, WebP format (all site images now served in WebP) |
 | FR2.8.7 | Related articles suggestions | SHOULD | Based on categories/tags |
 
 #### FR2.9 Google Workspace Integration
@@ -2373,6 +2373,7 @@ Any changes to requirements after approval of this document must follow this pro
 | Date | Version | Change Description | Approved By |
 |------|---------|-------------------|-------------|
 | 2025-10-02 | 1.0 | Initial BRD creation | Pending |
+| 2026-03-04 | 2.1 | Team roster update: removed Gabriela Tarta (replaced by Cristina Blan) and Cristina Tentes (replaced by Diana Vereș). Updated homepage sections to reflect current implementation (Hero, Services, Why Us, Methodology, Team, Testimonials, CTA). Confirmed Framer Motion in active use for animations. All images now in WebP format. | Development Team |
 
 ---
 

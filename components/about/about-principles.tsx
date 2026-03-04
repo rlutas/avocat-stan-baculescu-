@@ -1,26 +1,27 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Target, ShieldCheck, GraduationCap } from 'lucide-react';
+import { LawIcon } from '@/components/icons';
+import type { LawIconName } from '@/components/icons';
 
 export function AboutPrinciples() {
   const t = useTranslations('AboutPage.principles');
 
-  const principles = [
+  const principles: { iconName: LawIconName; titleKey: string; stat: string; statLabel: string }[] = [
     {
-      icon: Target,
+      iconName: 'target',
       titleKey: 'motivation',
       stat: '100%',
       statLabel: t('statMotivation'),
     },
     {
-      icon: ShieldCheck,
+      iconName: 'shield-badge',
       titleKey: 'seriousness',
       stat: '24/7',
       statLabel: t('statSeriousness'),
     },
     {
-      icon: GraduationCap,
+      iconName: 'diploma',
       titleKey: 'experience',
       stat: '15+',
       statLabel: t('statExperience'),
@@ -97,7 +98,7 @@ export function AboutPrinciples() {
 
               <div className="relative">
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-navy transition-transform duration-300 group-hover:scale-110">
-                  <principle.icon className="h-6 w-6 text-gold" />
+                  <LawIcon name={principle.iconName} size={24} variant="white" />
                 </div>
                 <h3 className="mb-3 text-xl font-semibold text-navy font-heading">
                   {t(`${principle.titleKey}.title`)}

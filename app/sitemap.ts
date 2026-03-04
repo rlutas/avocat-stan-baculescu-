@@ -30,9 +30,9 @@ const teamMemberIds = [
   'camelia-stan',
   'vlad-baculescu',
   'diana-chincea',
-  'gabriela-tarta',
+  'cristina-blan',
   'alexandra-rusu',
-  'cristina-tentes',
+  'diana-veres',
 ];
 
 // Blog post slugs - in real app, these would be fetched from Velite

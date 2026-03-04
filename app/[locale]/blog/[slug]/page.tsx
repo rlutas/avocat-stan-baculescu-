@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
       name: 'Societate Civila de Avocati Stan-Baculescu',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://stanbaculescu.ro/images/logo.png',
+        url: 'https://stanbaculescu.ro/images/logo.webp',
       },
     },
     mainEntityOfPage: {

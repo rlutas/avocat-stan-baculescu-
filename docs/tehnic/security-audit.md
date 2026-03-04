@@ -2,6 +2,7 @@
 
 **Project:** Stan Baculescu Law Firm Website
 **Audit Date:** 2026-01-22
+**Last Updated:** 2026-03-04
 **Next.js Version:** 16.1.4
 **Auditor:** Security Audit Specialist
 
@@ -394,6 +395,9 @@ npm update prettier
 **API & Services:**
 - `resend@6.8.0` - Official email SDK ✅
 - `@supabase/supabase-js@2.91.0` - Official SDK ✅
+
+**Animation (added March 2026):**
+- `framer-motion@12.34.5` - Widely-used animation library ✅
 
 **Security Status:** All dependencies are up-to-date and actively maintained.
 
@@ -954,7 +958,8 @@ The Stan Baculescu Law Firm website demonstrates solid security fundamentals wit
 ---
 
 **Report Generated:** 2026-01-22
-**Next Review Date:** 2026-04-22 (90 days)
+**Last Updated:** 2026-03-04
+**Next Review Date:** 2026-06-04 (90 days from last update)
 
 ---
 
@@ -1140,5 +1145,12 @@ export async function POST(request: NextRequest) {
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 
 ---
+
+---
+
+## Changelog
+
+- **2026-03-04**: Added Framer Motion to dependency review. Updated review date and next review schedule. All dependencies remain vulnerability-free. Team roster updated (6 members: Camelia Stan, Vlad Baculescu, Diana Chincea, Cristina Blan, Alexandra Rusu, Diana Veres).
+- **2026-01-22**: Initial security audit report.
 
 **End of Security Audit Report**

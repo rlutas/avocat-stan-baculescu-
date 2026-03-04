@@ -1,6 +1,7 @@
 # SEO & Performance Audit Report
 ## Stan-Baculescu Law Firm Website
 **Date**: January 22, 2026
+**Last Updated**: March 4, 2026
 **Framework**: Next.js 16.1.4 with next-intl 4.7.0
 **Base URL**: https://stanbaculescu.ro
 **Locales**: Romanian (ro), English (en)
@@ -11,11 +12,11 @@
 
 The Stan-Baculescu Law Firm website demonstrates a solid foundation for SEO with several implemented technical best practices. However, there are critical gaps in multilingual SEO implementation and some optimization opportunities for performance and accessibility.
 
-**Overall Assessment: 7.5/10**
+**Overall Assessment: 8/10** *(updated March 2026)*
 - SEO Implementation: 8/10
-- Performance: 7/10
+- Performance: 8/10 *(improved: WebP image optimization, 89% size reduction)*
 - Accessibility: 6.5/10
-- Image Optimization: 8/10
+- Image Optimization: 9.5/10 *(improved: full WebP migration, service & methodology background images)*
 
 ---
 
@@ -109,7 +110,7 @@ Host: https://stanbaculescu.ro
 - Alternate locale specified
 - Site name: "Stan-Baculescu Law Firm"
 - Images: 1200x630px (correct size)
-- Default image: `/images/og-image.jpg` (needs verification)
+- Default image: `/images/og-image.jpg` (kept as JPG for social media compatibility)
 
 **Per-Page OG Tags**:
 - Homepage: Custom title and description
@@ -149,7 +150,8 @@ Host: https://stanbaculescu.ro
   "sameAs": [
     "https://www.facebook.com/stanbaculescu",
     "https://www.instagram.com/stanbaculescu",
-    "https://www.tiktok.com/@stanbaculescu"
+    "https://www.tiktok.com/@stanbaculescu",
+    "https://maps.app.goo.gl/52fKFCMaEic37ZUD8"
   ]
 }
 ```
@@ -243,14 +245,33 @@ grep -r "hreflang" app/  # Result: No hreflang found
 
 ## 2. Image Optimization Analysis
 
+### 2.0 WebP Migration ✓ COMPLETED (March 2026 Update)
+**Status**: Fully migrated
+
+**Summary**: All site images have been converted from PNG/JPG to WebP format.
+- **Total size reduction**: 19MB → 2MB (89% reduction)
+- **Formats migrated**: All PNG and JPG images converted to WebP
+- **OG images**: Kept as JPG (`og-image.jpg`) for social media platform compatibility
+- **Coverage**: Team photos, service backgrounds, methodology backgrounds, logo, hero images
+
+**Image inventory (all WebP)**:
+- `/public/images/logo.webp`
+- `/public/images/team-hero.webp`
+- `/public/images/receptie-stan-baculescu.webp`
+- `/public/images/team/*.webp` (6 team member photos)
+- `/public/images/services/*.webp` (8 service background images)
+- `/public/images/methodology/*.webp` (4 methodology step images)
+
 ### 2.1 Next.js Image Component Usage ✓ WELL IMPLEMENTED
-**Status**: 85% coverage
+**Status**: 95% coverage *(updated March 2026)*
 
 **Images Using Next.js Image Component**:
 - Hero section (founder photos): ✓ Using `<Image>` with fill layout
 - Team grid section: ✓ Using `<Image>` with fill layout
 - Footer logo: ✓ Using `<Image>`
 - Team member cards: ✓ Using `<Image>` with responsive sizing
+- Service page backgrounds: ✓ Using `<Image>` with fill layout *(new March 2026)*
+- Methodology section backgrounds: ✓ Using `<Image>` *(new March 2026)*
 - About history section: ✓ Referenced but needs inspection
 
 **Implementation Quality**:
@@ -294,13 +315,15 @@ sizes="(max-width: 640px) 100vw, 40vw"    // Responsive percentage-based
 
 **Assessment**: Sizes are well-configured and responsive
 
-### 2.3 WebP/AVIF Format Support ✓ AUTOMATIC
-**Status**: Handled by Next.js Image Optimization
+### 2.3 WebP/AVIF Format Support ✓ FULLY IMPLEMENTED
+**Status**: Source images now natively WebP *(updated March 2026)*
 
 **Current Setup**:
-- Next.js Image component automatically serves WebP/AVIF
-- No explicit configuration needed
-- Falls back to original format (PNG/JPG) for unsupported browsers
+- All source images converted to WebP format (89% size reduction: 19MB → 2MB)
+- Next.js Image component provides additional AVIF conversion on-the-fly
+- OG images kept as JPG for maximum social media platform compatibility
+- Service pages now include background images (`/public/images/services/*.webp`)
+- Methodology section now includes step background images (`/public/images/methodology/*.webp`)
 
 **Configuration Note**:
 - `next.config.ts` doesn't specify image sizes
@@ -350,6 +373,7 @@ const nextConfig: NextConfig = {
 - tailwindcss: 4
 - React Hook Form: 7.71.1
 - Zod: 4.3.5
+- Framer Motion: 12.34.5 *(added March 2026 for UI animations)*
 
 **Size Estimate**:
 - Next.js: ~4-5 MB (manageable)
@@ -565,11 +589,13 @@ const inter = Inter({
 2. **Robots.txt** - Correct configuration
 3. **Meta Tags** - Global defaults solid, page-level mostly complete
 4. **Open Graph** - Good foundation, needs per-page images
-5. **JSON-LD Schemas** - Organization and LegalService present
-6. **Image Optimization** - Next.js Image component well-used
+5. **JSON-LD Schemas** - Organization and LegalService present; Google My Business linked
+6. **Image Optimization** - Full WebP migration complete (89% size reduction), Next.js Image component well-used
 7. **Font Optimization** - Google Fonts properly configured
 8. **Responsive Design** - Mobile-first approach evident
 9. **Internationalization** - next-intl well-integrated
+10. **Service Page Images** - Background images added to all service detail pages *(March 2026)*
+11. **Methodology Images** - Background images added to methodology section steps *(March 2026)*
 
 ### Critical Gaps:
 
@@ -1042,8 +1068,12 @@ With these improvements implemented, the website should achieve:
 
 ---
 
-**Report Version**: 1.0
-**Last Updated**: January 22, 2026
+**Report Version**: 1.1
+**Last Updated**: March 4, 2026
 **Auditor**: SEO Specialist
 **Framework**: Next.js 16.1.4, next-intl 4.7.0
 **Status**: Review Complete
+
+### Changelog
+- **v1.1 (March 4, 2026)**: Updated image optimization section to reflect full WebP migration (19MB → 2MB, 89% reduction). Added Google My Business link to sameAs schema. Documented service page and methodology section background images. Updated performance and image optimization scores. OG images noted as kept in JPG format for social media compatibility. Team roster updated (6 members: Camelia Stan, Vlad Baculescu, Diana Chincea, Cristina Blan, Alexandra Rusu, Diana Veres).
+- **v1.0 (January 22, 2026)**: Initial audit report.

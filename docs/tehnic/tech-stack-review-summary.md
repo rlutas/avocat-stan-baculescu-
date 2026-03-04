@@ -2,6 +2,7 @@
 ## Stan-Baculescu Law Firm Website
 
 **Review Date:** 2026-01-20
+**Last Updated:** 2026-03-04
 **Status:** ✅ APPROVED WITH MODIFICATIONS
 **Confidence:** 9/10
 
@@ -20,6 +21,7 @@ The proposed tech stack is **excellent and well-suited** for a professional law 
 | Framework | Next.js 14+ App Router | ✅ Excellent | Perfect choice |
 | Language | TypeScript | ✅ Excellent | Strong typing essential |
 | Styling | Tailwind CSS + shadcn/ui | ✅ Excellent | Rapid development |
+| Animations | Framer Motion | ✅ Excellent | Scroll-triggered animations, custom wrapper components |
 | i18n | next-intl | ✅ Good | Best for App Router |
 | CMS | MDX + Contentlayer | ⚠️ NEEDS CHANGE | Contentlayer deprecated |
 | Forms | React Hook Form + Zod | ✅ Excellent | Industry standard |
@@ -60,6 +62,7 @@ The proposed tech stack is **excellent and well-suited** for a professional law 
 
 **Key Success Factors:**
 - Next.js Image optimization for team photos
+- All images converted to WebP format (total payload reduced from 19MB to 2MB, an 89% reduction)
 - Static generation for most pages
 - Vercel CDN for global delivery
 - Lazy loading for third-party scripts (Google Maps, Analytics)
@@ -104,7 +107,7 @@ The proposed tech stack is **excellent and well-suited** for a professional law 
 
 1. **Local SEO** - Add geo coordinates to schema for "Satu Mare" targeting
 2. **Breadcrumbs** - Improve navigation and search appearance
-3. **Person schema** - For lawyer profiles (rich results)
+3. **Person schema** - For team profiles: Camelia Stan, Vlad Baculescu (founders), Diana Chincea, Cristina Blan, Alexandra Rusu (collaborators), Diana Veres (client relations)
 4. **FAQ section** - With FAQPage schema (rich snippets)
 
 ---
@@ -141,7 +144,7 @@ The proposed tech stack is **excellent and well-suited** for a professional law 
 |------|------------|--------|-----------|
 | Contentlayer deprecation causes issues | Medium | Medium | **Switch to Velite early** |
 | Email deliverability problems | Low | High | **Set up domain auth early, thorough testing** |
-| Performance targets not met on mobile | Medium | Medium | **Early testing, image optimization** |
+| Performance targets not met on mobile | Medium | Medium | **Image optimization complete (WebP, 89% reduction); continue real-device testing** |
 | Security vulnerabilities in form | Low | High | **Server-side validation, rate limiting** |
 
 ### Overall Risk Level: LOW-MEDIUM
@@ -202,6 +205,8 @@ The tech stack choices reduce development time through:
 
 **Strengths:**
 - Modern, performant tech stack
+- All images optimized to WebP (89% payload reduction)
+- Professional scroll-triggered animations via Framer Motion
 - Future-ready architecture
 - Excellent developer experience
 - Strong type safety
@@ -218,6 +223,7 @@ The stack will deliver a professional, fast, and scalable law firm website that 
 - **Framework:** Next.js 14+
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS + shadcn/ui
+- **Animations:** Framer Motion (whileInView scroll animations; custom ScrollAnimate, StaggerContainer, StaggerItem components; variants: fadeUp, fadeIn, fadeLeft, fadeRight, scaleUp, slideUp)
 - **i18n:** next-intl
 
 ### Content & Forms

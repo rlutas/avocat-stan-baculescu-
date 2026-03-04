@@ -11,7 +11,7 @@ const organizationSchema = {
   url: BASE_URL,
   logo: {
     '@type': 'ImageObject',
-    url: `${BASE_URL}/images/logo.png`,
+    url: `${BASE_URL}/images/logo.webp`,
     width: 200,
     height: 60,
   },

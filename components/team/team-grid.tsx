@@ -18,42 +18,42 @@ const teamMembers: TeamMember[] = [
     id: 'camelia-stan',
     nameKey: 'cameliaStan',
     roleKey: 'founder',
-    image: '/images/team/camelia-stan.png',
+    image: '/images/team/camielia-stan.webp',
     category: 'founder',
   },
   {
     id: 'vlad-baculescu',
     nameKey: 'vladBaculescu',
     roleKey: 'founder',
-    image: '/images/team/vlad-baculescu.png',
+    image: '/images/team/vlad-baculescu.webp',
     category: 'founder',
   },
   {
     id: 'diana-chincea',
     nameKey: 'dianaChincea',
     roleKey: 'collaborator',
-    image: '/images/team/diana-chincea.png',
+    image: '/images/team/diana-chincea.webp',
     category: 'collaborator',
   },
   {
-    id: 'gabriela-tarta',
-    nameKey: 'gabrielaTarta',
+    id: 'cristina-blan',
+    nameKey: 'cristinaBlan',
     roleKey: 'collaborator',
-    image: '/images/team/gabriela-tarta.png',
+    image: '/images/team/cristina-blan.webp',
     category: 'collaborator',
   },
   {
     id: 'alexandra-rusu',
     nameKey: 'alexandraRusu',
     roleKey: 'collaborator',
-    image: '/images/team/alexandra-rusu.png',
+    image: '/images/team/alexandra-rusu.webp',
     category: 'collaborator',
   },
   {
-    id: 'cristina-tentes',
-    nameKey: 'cristinaTentes',
+    id: 'diana-veres',
+    nameKey: 'dianaVeres',
     roleKey: 'clientRelations',
-    image: '/images/team/cristina-tentes.png',
+    image: '/images/team/diana-veres.webp',
     category: 'staff',
   },
 ];
@@ -224,7 +224,7 @@ function TeamCard({
                   src={member.image}
                   alt={t(`members.${member.nameKey}.name`)}
                   fill
-                  className="object-contain object-bottom transition-transform duration-500 group-hover:scale-[1.05]"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.05]"
                   sizes="(max-width: 640px) 100vw, 40vw"
                 />
               </div>

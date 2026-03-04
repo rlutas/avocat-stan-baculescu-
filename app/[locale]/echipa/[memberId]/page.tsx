@@ -20,27 +20,36 @@ const validMemberIds = [
   'camelia-stan',
   'vlad-baculescu',
   'diana-chincea',
-  'gabriela-tarta',
+  'cristina-blan',
   'alexandra-rusu',
-  'cristina-tentes',
+  'diana-veres',
 ];
 
 const memberKeyMap: Record<string, string> = {
   'camelia-stan': 'cameliaStan',
   'vlad-baculescu': 'vladBaculescu',
   'diana-chincea': 'dianaChincea',
-  'gabriela-tarta': 'gabrielaTarta',
+  'cristina-blan': 'cristinaBlan',
   'alexandra-rusu': 'alexandraRusu',
-  'cristina-tentes': 'cristinaTentes',
+  'diana-veres': 'dianaVeres',
 };
 
 const memberRoleMap: Record<string, string> = {
   'camelia-stan': 'founder',
   'vlad-baculescu': 'founder',
   'diana-chincea': 'collaborator',
-  'gabriela-tarta': 'collaborator',
+  'cristina-blan': 'collaborator',
   'alexandra-rusu': 'collaborator',
-  'cristina-tentes': 'clientRelations',
+  'diana-veres': 'clientRelations',
+};
+
+const memberImageMap: Record<string, string> = {
+  'camelia-stan': '/images/team/camielia-stan.webp',
+  'vlad-baculescu': '/images/team/vlad-baculescu.webp',
+  'diana-chincea': '/images/team/diana-chincea.webp',
+  'cristina-blan': '/images/team/cristina-blan.webp',
+  'alexandra-rusu': '/images/team/alexandra-rusu.webp',
+  'diana-veres': '/images/team/diana-veres.webp',
 };
 
 type Props = {
@@ -126,7 +135,7 @@ export default async function MemberProfilePage({ params }: Props) {
             <div className="mb-8 lg:mb-0 lg:w-1/3">
               <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl bg-navy/50 shadow-2xl">
                 <Image
-                  src={`/images/team/${memberId}.png`}
+                  src={memberImageMap[memberId]}
                   alt={t(`members.${memberKey}.name`)}
                   fill
                   className="object-cover"

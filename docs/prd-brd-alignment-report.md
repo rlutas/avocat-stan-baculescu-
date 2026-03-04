@@ -28,9 +28,9 @@ The PRD is **largely well-aligned** with the Variant 1 scope from the BRD. The d
 | BRD Requirement (Section 5.1) | PRD Coverage | Status |
 |-------------------------------|--------------|--------|
 | Modern, responsive design using shadcn/ui | US-015, Technical Stack specifies shadcn/ui + Tailwind | Aligned |
-| Homepage with firm overview and value proposition | US-001 Hero Section with team photo, headline, CTA | Aligned |
+| Homepage with firm overview and value proposition | US-001 Hero Section with founders photos, headline, CTA | Aligned |
 | Practice areas/services pages | US-005 (overview) + US-006 (8 individual pages) | Aligned |
-| Lawyer profiles with bios and photos | US-004 with 6 team members and individual profiles | Aligned |
+| Lawyer profiles with bios and photos | US-004 with 7 team members (2 founders: Av. Camelia Stan, Av. Vlad Baculescu; 3 collaborators: Diana Chincea, Cristina Blan, Alexandra Rusu; 1 client relations: Diana Vereș) and individual profiles | Aligned |
 | Contact information and forms | US-008 with validation, anti-spam, email delivery | Aligned |
 | Mobile-first responsive design | US-015 with specific breakpoints | Aligned |
 | Fast loading performance | Performance targets: LCP <2.5s, Lighthouse 90+ | Aligned |
@@ -221,7 +221,7 @@ The PRD is **largely well-aligned** with the Variant 1 scope from the BRD. The d
 | BRD Technology | Reason for Exclusion |
 |----------------|---------------------|
 | TanStack Query | Not needed for V1 static/SSG pages |
-| Framer Motion | Nice-to-have, not essential for V1 |
+| Framer Motion | Now actively used for scroll-triggered animations (fadeUp, fadeIn, scaleUp, etc.) via custom ScrollAnimate wrapper components |
 | Prisma ORM | Not needed if using MDX for content |
 | date-fns | Not needed without booking system |
 
@@ -297,3 +297,34 @@ The PRD is well-constructed and demonstrates strong alignment with Variant 1 bus
 
 *Report prepared by Business Analyst*
 *Review date: 2026-01-20*
+
+---
+
+## 9. Update Log
+
+### Update: March 4, 2026
+
+**Team composition updated:**
+- Removed Gabriela Tarta (collaborator) — replaced by Cristina Blan
+- Removed Cristina Tentes (client relations) — replaced by Diana Vereș
+- Current team: Founders (Av. Camelia Stan, Av. Vlad Baculescu), Collaborators (Diana Chincea, Cristina Blan, Alexandra Rusu), Client Relations (Diana Vereș)
+
+**Tech stack updated:**
+- Framer Motion is now actively used in production for scroll-triggered animations via custom ScrollAnimate wrapper components (no longer classified as "nice-to-have")
+
+**Image format updated:**
+- All site images are now served in WebP format
+
+**Landing page sections updated to current implementation:**
+1. **Hero** — Founders photos (Av. Camelia Stan, Av. Vlad Baculescu) with headline and CTA
+2. **Services** — 8 practice areas displayed as photo cards
+3. **Why Us** — Reception photo + statistics counters + value propositions
+4. **Methodology** — 4 steps displayed as photo cards
+5. **Team** — Founders + collaborators section
+6. **Testimonials** — Google reviews integration
+7. **CTA** — Final call-to-action section
+
+**PRD alignment notes:**
+- Section 1.1 (Hero) updated to reflect founders photos instead of generic team photo
+- Section 1.1 (Lawyer profiles) updated to reflect current 7-member team roster
+- Section 5.3 (Framer Motion) reclassified from excluded to actively used

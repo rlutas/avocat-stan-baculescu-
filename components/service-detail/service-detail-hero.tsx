@@ -3,28 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ArrowLeft } from 'lucide-react';
-import {
-  Stethoscope,
-  Scale,
-  Gavel,
-  Users,
-  Briefcase,
-  Building2,
-  Car,
-  FileText,
-  LucideIcon,
-} from 'lucide-react';
-
-const serviceIcons: Record<string, LucideIcon> = {
-  'malpraxis-medical': Stethoscope,
-  'drept-civil': Scale,
-  'drept-penal': Gavel,
-  'drept-familiei': Users,
-  'dreptul-muncii': Briefcase,
-  'drept-comercial': Building2,
-  'accidente-rutiere': Car,
-  'drept-administrativ-fiscal': FileText,
-};
+import { LawIcon, serviceIconMap, type LawIconName } from '@/components/icons';
 
 interface ServiceDetailHeroProps {
   serviceId: string;
@@ -32,7 +11,7 @@ interface ServiceDetailHeroProps {
 
 export function ServiceDetailHero({ serviceId }: ServiceDetailHeroProps) {
   const t = useTranslations('ServiceDetail');
-  const Icon = serviceIcons[serviceId] || Scale;
+  const iconName: LawIconName = serviceIconMap[serviceId] || 'balance-scale';
 
   return (
     <section className="relative w-full overflow-hidden bg-navy">
@@ -143,7 +122,7 @@ export function ServiceDetailHero({ serviceId }: ServiceDetailHeroProps) {
           {/* Icon with gold accent */}
           <div className="animate-fade-in-up delay-100 mb-8 lg:mb-0">
             <div className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20 transition-all duration-300 hover:bg-gold hover:text-navy hover:ring-gold sm:h-24 sm:w-24">
-              <Icon className="h-10 w-10 sm:h-12 sm:w-12" />
+              <LawIcon name={iconName} size={48} variant="gold" />
             </div>
           </div>
 
@@ -151,7 +130,7 @@ export function ServiceDetailHero({ serviceId }: ServiceDetailHeroProps) {
           <div className="lg:flex-1">
             {/* Trust Badge */}
             <div className="animate-fade-in-up delay-100 mb-4 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2 ring-1 ring-gold/20">
-              <Icon className="h-4 w-4 text-gold" />
+              <LawIcon name={iconName} size={16} variant="gold" />
               <span className="text-sm font-medium text-gold">{t(`${serviceId}.trustBadge`)}</span>
             </div>
 

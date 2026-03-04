@@ -265,6 +265,39 @@
   }
 }
 
+/* Law icon color filters - converts black SVGs to brand colors */
+.icon-gold {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(85%) saturate(500%) hue-rotate(12deg)
+    brightness(92%) contrast(87%);
+  transition: filter 0.3s ease;
+}
+
+.icon-navy {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(2500%) hue-rotate(196deg)
+    brightness(60%) contrast(105%);
+  transition: filter 0.3s ease;
+}
+
+.icon-white {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+/* Hover transitions: parent must have 'group' class */
+.group:hover .icon-hover-navy {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(2500%) hue-rotate(196deg)
+    brightness(60%) contrast(105%) !important;
+}
+
+.group:hover .icon-hover-gold {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(85%) saturate(500%) hue-rotate(12deg)
+    brightness(92%) contrast(87%) !important;
+}
+
+.group:hover .icon-hover-white {
+  filter: brightness(0) invert(1) !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

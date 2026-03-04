@@ -4,7 +4,7 @@
 
 ---
 
-## Recent Design Changes (January 2026)
+## Recent Design Changes (March 2026)
 
 This section documents the most recent design updates implemented across the website. Always refer to these standards when creating new components.
 
@@ -84,6 +84,111 @@ The call button has been completely redesigned with an integrated icon pattern:
 - Link format: `+40261848015` (no spaces, no special characters)
 - Address: Multi-line format with street on first line, city on second line
 
+### 5. Animation System - Framer Motion
+
+The project uses **Framer Motion** for scroll-triggered animations. Custom wrapper components are provided in `components/ui/scroll-animate.tsx`.
+
+**Animation Components:**
+- `ScrollAnimate` - Wraps a single element with scroll-triggered animation
+- `StaggerContainer` - Container for stagger-animated children
+- `StaggerItem` - Child element within a StaggerContainer
+
+**Available Variants:**
+| Variant | Description |
+|---------|-------------|
+| `fadeUp` | Fade in + translate up (default) |
+| `fadeIn` | Simple opacity fade |
+| `fadeLeft` | Fade in + translate from left |
+| `fadeRight` | Fade in + translate from right |
+| `scaleUp` | Fade in + scale up |
+| `slideUp` | Slide up with larger translate distance |
+
+**Usage:**
+```jsx
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
+
+{/* Single element animation */}
+<ScrollAnimate variant="fadeUp">
+  <h2>Section Title</h2>
+</ScrollAnimate>
+
+{/* Staggered children */}
+<StaggerContainer>
+  <StaggerItem>Card 1</StaggerItem>
+  <StaggerItem>Card 2</StaggerItem>
+  <StaggerItem>Card 3</StaggerItem>
+</StaggerContainer>
+```
+
+For more complex animations, use Framer Motion's `whileInView` directly:
+```jsx
+import { motion } from 'framer-motion';
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
+  Content
+</motion.div>
+```
+
+### 6. Landing Page Sections (Current Implementation)
+
+**Services Section:**
+- Cards with service photos (from `public/images/services/`) + navy gradient overlay
+- Gold icons for each service
+- Zoom-on-hover effect on images
+- Links to individual service detail pages
+
+**Why Us Section:**
+- Split layout: reception photo (`receptie-stan-baculescu.webp`) with stats overlay | navy panel with value propositions
+- Icons used: Medal (experience), Users/Conference (team), Shield (trust/protection)
+- Stats badges floating over the photo
+
+**Methodology Section:**
+- 4 step cards with methodology photos (from `public/images/methodology/`) + gradient overlay
+- Steps: Consultanta Initiala, Strategie Personalizata, Implementare, Rezultate
+
+**Team Section (Homepage):**
+- 2 founder cards (Camelia Stan, Vlad Baculescu) - larger/featured
+- 3 collaborator cards (Diana Chincea, Cristina Blan, Alexandra Rusu)
+- All photos from `public/images/team/`
+
+**Testimonials Section:**
+- Google Reviews from clients
+- Link to Google My Business: https://maps.app.goo.gl/52fKFCMaEic37ZUD8
+
+**CTA Section:**
+- Navy rounded card with gold CTA button
+- Phone link and contact form link
+
+### 7. Design Tokens (CSS Custom Properties)
+
+The following CSS custom properties are defined in `globals.css`:
+
+```css
+:root {
+  --shadow-gold: 0 4px 6px rgba(208, 156, 17, 0.2);
+  --shadow-gold-lg: 0 8px 16px rgba(208, 156, 17, 0.3);
+}
+```
+
+**Core Colors:**
+| Token | Value | Usage |
+|-------|-------|-------|
+| Navy | `#003a70` | Primary brand, headers, nav, hero |
+| Navy Dark | `#002a52` | Darker navy for depth |
+| Navy Light | `#004a8f` | Lighter navy for hover states |
+| Gold | `#d09c11` | Accent, CTAs, highlights, icons |
+
+**Fonts:**
+| Token | Value | Usage |
+|-------|-------|-------|
+| `font-heading` | Playfair Display | Headings, hero text |
+| `font-body` (Inter) | Inter | Body text, navigation, buttons |
+
 ### Design System Consistency Checklist
 
 When implementing new pages or components, ensure:
@@ -94,7 +199,10 @@ When implementing new pages or components, ensure:
 - [ ] Services navigation includes dropdown (desktop) and expandable menu (mobile)
 - [ ] Contact information uses the updated address and phone format
 - [ ] All interactive elements have proper hover/active states
-- [ ] Animations follow the established timing patterns (300ms standard)
+- [ ] Animations use Framer Motion via ScrollAnimate/StaggerContainer components
+- [ ] All images are WebP format (no PNG/JPG)
+- [ ] Team member names and roles are correct (see Image Treatment section)
+- [ ] Google My Business link: https://maps.app.goo.gl/52fKFCMaEic37ZUD8
 
 ---
 
@@ -1510,7 +1618,7 @@ The footer uses the actual logo image converted to white using CSS filters.
 **Next.js Image Implementation:**
 ```jsx
 <Image
-  src="/images/logo.png"
+  src="/images/logo.webp"
   alt="Stan Baculescu Law Firm"
   width={200}
   height={56}
@@ -1776,16 +1884,53 @@ All hero sections must follow these updated standards:
     </div>
 
     <div class="team-grid">
-      <!-- Team Card -->
+      <!-- Founders -->
       <div class="card-team">
-        <img src="/images/team-member.jpg" alt="Team Member" class="card-team-image">
+        <img src="/images/team/camielia-stan.webp" alt="Camelia Stan" class="card-team-image">
         <div class="card-team-content">
-          <h3 class="card-team-name">John Doe</h3>
-          <p class="card-team-title">Senior Partner</p>
+          <h3 class="card-team-name">Camelia Stan</h3>
+          <p class="card-team-title">Fondator / Avocat</p>
           <p class="card-team-bio">Brief bio or specialization</p>
         </div>
       </div>
-      <!-- Repeat for other team members -->
+      <div class="card-team">
+        <img src="/images/team/vlad-baculescu.webp" alt="Vlad Baculescu" class="card-team-image">
+        <div class="card-team-content">
+          <h3 class="card-team-name">Vlad Baculescu</h3>
+          <p class="card-team-title">Fondator / Avocat</p>
+          <p class="card-team-bio">Brief bio or specialization</p>
+        </div>
+      </div>
+      <!-- Collaborators -->
+      <div class="card-team">
+        <img src="/images/team/diana-chincea.webp" alt="Diana Chincea" class="card-team-image">
+        <div class="card-team-content">
+          <h3 class="card-team-name">Diana Chincea</h3>
+          <p class="card-team-title">Colaborator / Avocat</p>
+        </div>
+      </div>
+      <div class="card-team">
+        <img src="/images/team/cristina-blan.webp" alt="Cristina Blan" class="card-team-image">
+        <div class="card-team-content">
+          <h3 class="card-team-name">Cristina Blan</h3>
+          <p class="card-team-title">Colaborator / Avocat</p>
+        </div>
+      </div>
+      <div class="card-team">
+        <img src="/images/team/alexandra-rusu.webp" alt="Alexandra Rusu" class="card-team-image">
+        <div class="card-team-content">
+          <h3 class="card-team-name">Alexandra Rusu</h3>
+          <p class="card-team-title">Colaborator / Avocat</p>
+        </div>
+      </div>
+      <!-- Client Relations -->
+      <div class="card-team">
+        <img src="/images/team/diana-veres.webp" alt="Diana Vereș" class="card-team-image">
+        <div class="card-team-content">
+          <h3 class="card-team-name">Diana Vereș</h3>
+          <p class="card-team-title">Relații Clienți</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1806,30 +1951,40 @@ All hero sections must follow these updated standards:
 }
 ```
 
-### Testimonials
+### Testimonials (Google Reviews)
+
+Testimonials are sourced from Google My Business reviews. The section includes a link to the firm's GMB page for users to leave their own reviews.
+
+**Google My Business Link:** [https://maps.app.goo.gl/52fKFCMaEic37ZUD8](https://maps.app.goo.gl/52fKFCMaEic37ZUD8)
 
 ```html
 <section class="testimonials">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Client Testimonials</h2>
-      <p class="section-subtitle">What our clients say</p>
+      <p class="section-subtitle">Google Reviews</p>
     </div>
 
     <div class="testimonials-grid">
-      <!-- Testimonial Card -->
+      <!-- Google Review Card -->
       <div class="card-testimonial">
         <div class="testimonial-quote-icon">"</div>
-        <p class="testimonial-text">Client testimonial text goes here...</p>
+        <p class="testimonial-text">Client testimonial text from Google reviews...</p>
         <div class="testimonial-author">
-          <img src="/images/client.jpg" alt="Client" class="testimonial-avatar">
           <div>
             <p class="testimonial-name">Client Name</p>
-            <p class="testimonial-role">Role/Company</p>
+            <p class="testimonial-role">Google Review</p>
           </div>
         </div>
       </div>
-      <!-- Repeat for other testimonials -->
+      <!-- Repeat for other reviews -->
+    </div>
+
+    <!-- Link to Google My Business -->
+    <div class="text-center mt-8">
+      <a href="https://maps.app.goo.gl/52fKFCMaEic37ZUD8" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        Vezi toate recenziile pe Google
+      </a>
     </div>
   </div>
 </section>
@@ -2223,13 +2378,15 @@ All hero sections must follow these updated standards:
 --shadow-xl: 0 12px 24px rgba(0, 58, 112, 0.15);
 --shadow-2xl: 0 24px 48px rgba(0, 58, 112, 0.2);
 
-/* Colored Shadows (for CTAs) */
+/* Colored Shadows (for CTAs) - also defined as CSS variables in globals.css */
 --shadow-gold: 0 4px 6px rgba(208, 156, 17, 0.2);
 --shadow-gold-lg: 0 8px 16px rgba(208, 156, 17, 0.3);
 
 /* Inner Shadow */
 --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
 ```
+
+> **Note:** `--shadow-gold` and `--shadow-gold-lg` are also available as CSS custom properties defined in `globals.css` for use outside of Tailwind classes.
 
 ### Border Radius
 
@@ -2277,6 +2434,42 @@ All hero sections must follow these updated standards:
 ```
 
 ### Image Treatment
+
+**ALL images use WebP format.** No PNG or JPG files are used in the project.
+
+**Image File Structure:**
+```
+public/images/
+├── logo.webp                              # Firm logo
+├── receptie-stan-baculescu.webp           # Reception/office photo
+├── team-hero.webp                         # Team page hero background
+├── team/
+│   ├── camielia-stan.webp                 # Founder
+│   ├── vlad-baculescu.webp                # Founder
+│   ├── diana-chincea.webp                 # Collaborator
+│   ├── cristina-blan.webp                 # Collaborator
+│   ├── alexandra-rusu.webp                # Collaborator
+│   └── diana-veres.webp                   # Client Relations
+├── services/
+│   ├── malpraxis-medical.webp
+│   ├── drept-civil.webp
+│   ├── drept-penal.webp
+│   ├── drept-familiei.webp
+│   ├── dreptul-muncii.webp
+│   ├── drept-comercial.webp
+│   ├── accidente-rutiere.webp
+│   └── drept-administrativ-fiscal.webp
+└── methodology/
+    ├── consultanta-initiala.webp
+    ├── strategie-personalizata.webp
+    ├── implementare.webp
+    └── rezultate.webp
+```
+
+**Team Members:**
+- **Founders:** Camelia Stan, Vlad Baculescu
+- **Collaborators:** Diana Chincea, Cristina Blan, Alexandra Rusu
+- **Client Relations:** Diana Vereș
 
 **Photography Style:**
 - Professional headshots with neutral backgrounds
@@ -2584,7 +2777,7 @@ a:focus-visible {
 ## 9. Performance Considerations
 
 ### Image Optimization
-- Use WebP format with JPEG fallback
+- **ALL images are WebP format** (no PNG/JPG fallbacks needed)
 - Implement lazy loading for images below fold
 - Use Next.js Image component for automatic optimization
 - Serve responsive images with srcset
@@ -2652,6 +2845,8 @@ npx shadcn-ui@latest add toast
 ---
 
 ## 12. Animation & Transitions
+
+> **Note:** The project now primarily uses **Framer Motion** for scroll-triggered animations via `ScrollAnimate`, `StaggerContainer`, and `StaggerItem` components (see Section "Animation System - Framer Motion" above). The CSS keyframe animations documented below are still used for hero entry animations, floating effects, and shimmer effects.
 
 ### Default Transitions
 ```css
@@ -3400,4 +3595,4 @@ This style guide provides a comprehensive foundation for building the Stan Bacul
 
 ---
 
-*Style Guide Version 1.0 | Created: January 2026 | For: Stan Baculescu Law Firm*
+*Style Guide Version 2.0 | Created: January 2026 | Updated: March 2026 | For: Stan Baculescu Law Firm*

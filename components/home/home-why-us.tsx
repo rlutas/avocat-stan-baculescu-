@@ -1,7 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { CheckCircle2, Shield } from 'lucide-react';
+import Image from 'next/image';
+import { LawIcon } from '@/components/icons';
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
+import { motion } from 'framer-motion';
 
 export function HomeWhyUs() {
   const t = useTranslations('HomePage.whyUs');
@@ -13,132 +16,140 @@ export function HomeWhyUs() {
   ];
 
   const values = [
-    { title: t('value1Title'), description: t('value1Description') },
-    { title: t('value2Title'), description: t('value2Description') },
-    { title: t('value3Title'), description: t('value3Description') },
+    { title: t('value1Title'), description: t('value1Description'), icon: 'medal' as const },
+    { title: t('value2Title'), description: t('value2Description'), icon: 'conference' as const },
+    { title: t('value3Title'), description: t('value3Description'), icon: 'shield' as const },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-navy py-16 sm:py-24">
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes gold-pulse {
-          0%, 100% {
-            opacity: 0.15;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.25;
-            transform: scale(1.05);
-          }
-        }
-        @keyframes countUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .gold-orb {
-          position: absolute;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(208, 156, 17, 0.2) 0%, transparent 70%);
-          animation: gold-pulse 6s ease-in-out infinite;
-          pointer-events: none;
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s ease-out both;
-        }
-        .animate-count-up {
-          animation: countUp 1s ease-out both;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-      `}</style>
+    <section className="relative overflow-hidden bg-white py-20 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-stretch gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-0">
 
-      {/* Background decorative orbs */}
-      <div
-        className="gold-orb"
-        style={{ top: '10%', right: '-100px', width: '300px', height: '300px' }}
-      />
-      <div
-        className="gold-orb"
-        style={{ bottom: '10%', left: '-150px', width: '400px', height: '400px', animationDelay: '3s' }}
-      />
+          {/* Left: Full-bleed photo panel */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <div className="relative h-full min-h-[500px] overflow-hidden rounded-2xl lg:rounded-r-none lg:rounded-l-2xl sm:min-h-[600px] lg:min-h-[650px]">
+              {/* Photo - full coverage */}
+              <Image
+                src="/images/receptie-stan-baculescu.webp"
+                alt="Cabinet Stan-Baculescu"
+                fill
+                className="object-cover object-left"
+                sizes="(max-width: 1024px) 100vw, 55vw"
+                priority
+              />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-12 text-center lg:mb-16">
-          <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2">
-            <Shield className="h-4 w-4 text-gold" />
-            <span className="text-sm font-semibold text-gold">{t('trustBadge')}</span>
-          </div>
+              {/* Gradient overlay - darker at bottom for text, lighter at top to show photo */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/20" />
 
-          <p className="animate-fade-in-up delay-100 mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
-            {t('titleLine1')}
-          </p>
-          <h2 className="animate-fade-in-up delay-200 font-heading mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-            {t('titleLine2')}
-          </h2>
-          <p className="animate-fade-in-up delay-300 mx-auto max-w-2xl text-lg text-white/70">
-            {t('description')}
-          </p>
-        </div>
+              {/* Stats positioned at the bottom of the image */}
+              <div className="absolute inset-x-0 bottom-0 z-10 p-8 sm:p-10 lg:p-12">
+                {/* Main stat - dramatic entrance */}
+                <motion.div
+                  className="mb-6"
+                  initial={{ opacity: 0, scale: 1.3, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                >
+                  <div className="font-heading text-7xl font-bold text-gold drop-shadow-[0_2px_20px_rgba(208,156,17,0.4)] sm:text-8xl lg:text-9xl">
+                    {stats[0].value}
+                  </div>
+                  <motion.div
+                    className="mt-1 text-base font-medium uppercase tracking-[0.15em] text-white/80 sm:text-lg"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                  >
+                    {stats[0].label}
+                  </motion.div>
+                </motion.div>
 
-        {/* Content Grid */}
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left: Value Propositions */}
-          <div className="space-y-5">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="animate-fade-in-up group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:border-gold/30 hover:bg-white/10"
-                style={{ animationDelay: `${(index + 4) * 100}ms` }}
-              >
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gold/20 transition-colors duration-300 group-hover:bg-gold/30">
-                  <CheckCircle2 className="h-5 w-5 text-gold" />
-                </div>
-                <div>
-                  <h3 className="mb-1 font-heading text-lg font-semibold text-white">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/60">
-                    {value.description}
-                  </p>
+                {/* Secondary stats - slide up with gold divider */}
+                <div className="flex items-center gap-6 sm:gap-8">
+                  {stats.slice(1).map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center gap-6 sm:gap-8"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.7, delay: 0.8 + index * 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+                    >
+                      {index > 0 && (
+                        <div className="h-10 w-[1px] bg-white/20" />
+                      )}
+                      <div>
+                        <div className="font-heading text-3xl font-bold text-white drop-shadow-[0_1px_10px_rgba(255,255,255,0.15)] sm:text-4xl">
+                          {stat.value}
+                        </div>
+                        <div className="mt-0.5 text-xs font-medium uppercase tracking-wider text-white/50 sm:text-sm">
+                          {stat.label}
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* Right: Statistics */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-1 lg:gap-5">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="animate-count-up group rounded-2xl border border-white/10 bg-white/5 p-6 text-center transition-all duration-300 hover:border-gold/30 hover:bg-white/10 lg:flex lg:items-center lg:gap-6 lg:text-left"
-                style={{ animationDelay: `${(index + 4) * 150}ms` }}
-              >
-                <div className="mb-2 font-heading text-5xl font-bold text-gold transition-transform duration-300 group-hover:scale-110 lg:mb-0 lg:min-w-[120px] lg:text-6xl">
-                  {stat.value}
-                </div>
-                <div className="text-sm font-medium uppercase tracking-wider text-white/60 lg:text-base">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              {/* Subtle gold line at right edge */}
+              <motion.div
+                className="absolute right-0 top-[10%] hidden h-[80%] w-[2px] bg-gradient-to-b from-transparent via-gold/40 to-transparent lg:block"
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, delay: 0.5, ease: 'easeOut' }}
+                style={{ transformOrigin: 'top' }}
+              />
+            </div>
+          </motion.div>
+
+          {/* Right: Content panel */}
+          <div className="flex flex-col justify-center rounded-2xl bg-navy p-8 sm:p-10 lg:rounded-l-none lg:rounded-r-2xl lg:p-14">
+            <ScrollAnimate>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                {t('titleLine1')}
+              </p>
+            </ScrollAnimate>
+            <ScrollAnimate delay={0.1}>
+              <h2 className="font-heading text-3xl font-bold leading-[1.1] text-white sm:text-4xl lg:text-5xl">
+                {t('titleLine2')}
+              </h2>
+              <div className="mt-4 h-[2px] w-16 bg-gold" />
+            </ScrollAnimate>
+            <ScrollAnimate delay={0.2}>
+              <p className="mt-5 text-base leading-relaxed text-white/60 sm:text-lg">
+                {t('description')}
+              </p>
+            </ScrollAnimate>
+
+            {/* Value propositions */}
+            <StaggerContainer className="mt-8 space-y-4 sm:mt-10" staggerDelay={0.1}>
+              {values.map((value, index) => (
+                <StaggerItem key={index}>
+                  <div className="group flex gap-4 rounded-xl border border-white/[0.06] bg-white/[0.03] p-4 transition-all duration-400 hover:border-gold/20 hover:bg-white/[0.06] sm:p-5">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gold/15 transition-colors duration-300 group-hover:bg-gold/25">
+                      <LawIcon name={value.icon} size={28} variant="gold" />
+                    </div>
+                    <div>
+                      <h3 className="mb-1 font-heading text-base font-semibold text-white transition-colors duration-300 group-hover:text-gold sm:text-lg">
+                        {value.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-white/45">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </div>
       </div>

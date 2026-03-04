@@ -3,6 +3,7 @@
 
 **Project:** WEB0001/2026
 **Review Date:** 2026-01-20
+**Last Updated:** 2026-03-04
 **Reviewer:** Tech Stack Advisor
 **PRD Version:** Initial (from tasks/prd-stan-baculescu-website.md)
 
@@ -93,7 +94,35 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 ---
 
-### 1.4 Internationalization: next-intl
+### 1.4 Animations: Framer Motion
+
+**Status:** ✅ EXCELLENT ADDITION (added March 2026)
+
+**Analysis:**
+- **Strengths:**
+  - Industry-standard React animation library with declarative API
+  - `whileInView` prop enables performant scroll-triggered animations without custom observers
+  - Lightweight bundle impact with tree-shaking support
+  - Works seamlessly with React Server Components (client component boundary)
+
+- **Project Fit:**
+  - Scroll-triggered animations enhance the professional presentation of the law firm website
+  - Custom wrapper components created for consistent usage across the codebase:
+    - `ScrollAnimate` - general-purpose scroll-triggered animation wrapper
+    - `StaggerContainer` / `StaggerItem` - staggered reveal for lists and grids
+  - Pre-defined animation variants: `fadeUp`, `fadeIn`, `fadeLeft`, `fadeRight`, `scaleUp`, `slideUp`
+  - Enhances perceived quality of the site without heavy custom animation code
+
+- **Considerations:**
+  - All animation components must be client components (`"use client"`)
+  - Animations should respect `prefers-reduced-motion` accessibility setting
+  - Keep animation durations subtle (200-600ms) for professional tone
+
+**Recommendation:** Continue with Framer Motion. The custom wrapper components provide a clean, reusable API for consistent animations throughout the site.
+
+---
+
+### 1.5 Internationalization: next-intl
 
 **Status:** ✅ GOOD CHOICE
 
@@ -118,7 +147,7 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 ---
 
-### 1.5 Content Management: MDX + Contentlayer
+### 1.6 Content Management: MDX + Contentlayer
 
 **Status:** ⚠️ GOOD BUT NEEDS UPDATE
 
@@ -147,7 +176,7 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 ---
 
-### 1.6 Forms: React Hook Form + Zod
+### 1.7 Forms: React Hook Form + Zod
 
 **Status:** ✅ EXCELLENT CHOICE
 
@@ -169,7 +198,7 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 ---
 
-### 1.7 Email: Resend API
+### 1.8 Email: Resend API
 
 **Status:** ✅ EXCELLENT CHOICE
 
@@ -194,7 +223,7 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 ---
 
-### 1.8 Database: Supabase (prepared)
+### 1.9 Database: Supabase (prepared)
 
 **Status:** ✅ GOOD FORWARD-THINKING CHOICE
 
@@ -219,7 +248,7 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 ---
 
-### 1.9 Hosting: Vercel
+### 1.10 Hosting: Vercel
 
 **Status:** ✅ PERFECT CHOICE
 
@@ -264,7 +293,7 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 - shadcn/ui components are accessible by default
 
 **Potential Blockers:**
-- Heavy images (team photos) - mitigated by Next.js Image optimization
+- Heavy images (team photos) - mitigated by Next.js Image optimization and WebP conversion (all images converted to WebP, reducing total payload from 19MB to 2MB -- an 89% reduction)
 - Google Maps embed - can lazy load
 - Google Analytics - load after consent only
 - Third-party scripts (Facebook, Instagram embeds)
@@ -285,16 +314,16 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 **Key Strategies:**
 - Hero image is largest contentful paint element
 - Use Next.js Image with `priority` flag and `loading="eager"`
-- Optimize image size (WebP format, appropriate dimensions)
+- Optimize image size (all images now converted to WebP format, appropriate dimensions)
 - Preconnect to Google Fonts and other origins
 - Use server components for above-the-fold content
 
 **Risk Factors:**
-- Large team photo could delay LCP
+- Large team photo could delay LCP (mitigated: all images now WebP, total payload reduced from 19MB to 2MB)
 - Slow DNS or network conditions in Romania
 
 **Mitigation:**
-- Compress images to ~150KB max for hero
+- All images converted to WebP format (89% size reduction achieved)
 - Use blur placeholder for perceived performance
 - Test with Romanian VPN/network conditions
 
@@ -436,7 +465,12 @@ The proposed tech stack is well-suited for a professional law firm presentation 
 
 **Impact:** Lawyer profiles could appear in rich results.
 
-**Recommendation:** Add Person schema with:
+**Current Team:**
+- **Founders:** Camelia Stan, Vlad Baculescu
+- **Collaborators:** Diana Chincea, Cristina Blan, Alexandra Rusu
+- **Client Relations:** Diana Veres
+
+**Recommendation:** Add Person schema for each team member with:
 - Name, photo, jobTitle
 - worksFor (link to firm Organization)
 - expertise/knowsAbout (legal specializations)
@@ -784,6 +818,7 @@ For transparency, here are alternatives that were implicitly or explicitly not c
 | Framework | Next.js | Remix, Astro, SvelteKit | Next.js best for React ecosystem, SEO, Vercel integration |
 | CMS | MDX + Contentlayer | Sanity, Contentful, Strapi | Git-based simpler for small blog, no monthly fees |
 | Styling | Tailwind | CSS Modules, Emotion, styled-components | Tailwind faster for small team, no runtime cost |
+| Animations | Framer Motion | GSAP, CSS animations, react-spring | Framer Motion best React integration, declarative API, whileInView support |
 | Forms | React Hook Form | Formik, TanStack Form | RHF is lighter, better performance |
 | Email | Resend | SendGrid, Mailgun, AWS SES | Resend more developer-friendly, better DX |
 | Database | Supabase | Firebase, PlanetScale, Railway Postgres | Supabase complete (auth + DB), PostgreSQL familiar |
@@ -799,7 +834,7 @@ For transparency, here are alternatives that were implicitly or explicitly not c
 |------|------------|--------|-----------|
 | Contentlayer deprecation causes issues | Medium | Medium | Switch to Velite or next-mdx-remote early |
 | Email deliverability problems | Low | High | Set up domain auth early, thorough testing |
-| Performance targets not met on mobile | Medium | Medium | Early testing, image optimization, budget monitoring |
+| Performance targets not met on mobile | Medium | Medium | Early testing, image optimization (WebP conversion complete, 89% reduction), budget monitoring |
 | Security vulnerabilities in form | Low | High | Server-side validation, rate limiting, CSP headers |
 
 ### 7.2 Medium Priority Risks
@@ -895,6 +930,7 @@ For transparency, here are alternatives that were implicitly or explicitly not c
 | Next.js + shadcn/ui | ✅ | Designed for Next.js | Perfect fit |
 | Next.js + next-intl | ✅ | App Router support | Well maintained |
 | Next.js + MDX | ✅ | Native support | Built-in |
+| Next.js + Framer Motion | ✅ | Widely used combo | Client components only |
 | React Hook Form + Zod | ✅ | Popular combo | Great DX |
 | Next.js + Resend | ✅ | Next.js examples | Smooth integration |
 | Next.js + Supabase | ✅ | Official SDK | Good docs |
@@ -989,7 +1025,8 @@ The Stan-Baculescu law firm website technical stack is **well-designed and appro
 **Key Strengths:**
 - Solid foundation with Next.js 14 App Router
 - Type safety with TypeScript
-- Performance-oriented tech choices
+- Performance-oriented tech choices (all images converted to WebP, 89% payload reduction)
+- Professional scroll-triggered animations via Framer Motion
 - Future-ready architecture with Supabase
 - Modern development experience
 

@@ -1,29 +1,30 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { MessageSquare, FileText, Cog, CheckCircle2 } from 'lucide-react';
+import { LawIcon } from '@/components/icons';
+import type { LawIconName } from '@/components/icons';
 
 export function AboutMethodology() {
   const t = useTranslations('AboutPage.methodology');
 
-  const steps = [
+  const steps: { iconName: LawIconName; stepKey: string; number: string }[] = [
     {
-      icon: MessageSquare,
+      iconName: 'conference',
       stepKey: 'step1',
       number: '01',
     },
     {
-      icon: FileText,
+      iconName: 'law-book',
       stepKey: 'step2',
       number: '02',
     },
     {
-      icon: Cog,
+      iconName: 'detective',
       stepKey: 'step3',
       number: '03',
     },
     {
-      icon: CheckCircle2,
+      iconName: 'approval',
       stepKey: 'step4',
       number: '04',
     },
@@ -79,7 +80,7 @@ export function AboutMethodology() {
 
               {/* Icon */}
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#fef9e7] transition-transform duration-300 group-hover:scale-110">
-                <step.icon className="h-6 w-6 text-gold" />
+                <LawIcon name={step.iconName} size={24} variant="gold" />
               </div>
 
               {/* Content */}

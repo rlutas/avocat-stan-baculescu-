@@ -62,6 +62,14 @@
       "titleLine2": "4 Simple Steps",
       "description": "A clear and transparent process, from the initial consultation to achieving the desired result."
     },
+    "team": {
+      "trustBadge": "Legal Team",
+      "titleLine1": "Our Professionals",
+      "titleLine2": "Meet the Team",
+      "description": "A team of experienced and dedicated lawyers, ready to represent you with professionalism in any legal matter.",
+      "viewProfile": "View Profile",
+      "viewAll": "View Full Team"
+    },
     "cta": {
       "title": "Need Legal Assistance?",
       "description": "Schedule a consultation and speak with one of our attorneys about your situation. We are here to help.",
@@ -225,10 +233,10 @@
           "exp2": "Professional Internship - Satu Mare Bar"
         }
       },
-      "gabrielaTarta": {
-        "name": "Gabriela Tarta",
+      "cristinaBlan": {
+        "name": "Cristina Blan",
         "shortBio": "Associate attorney focused on civil law and enforcement proceedings. Solid experience in debt recovery.",
-        "fullBio": "Gabriela Tarta is an associate attorney specializing in civil law and enforcement procedures. With significant experience in debt recovery, she has assisted clients in complex enforcement procedures, ensuring their rights are fully respected. Her professional and efficient approach guarantees optimal results for clients.",
+        "fullBio": "Cristina Blan is an associate attorney specializing in civil law and enforcement procedures. With significant experience in debt recovery, she has assisted clients in complex enforcement procedures, ensuring their rights are fully respected. Her professional and efficient approach guarantees optimal results for clients.",
         "specializations": {
           "spec1": "Civil Law",
           "spec2": "Enforcement Proceedings",
@@ -263,23 +271,23 @@
           "exp2": "Specialization in damages and compensation"
         }
       },
-      "cristinaTentes": {
-        "name": "Cristina Tentes",
-        "shortBio": "Client relations manager, ensuring efficient communication and administrative support for the firm.",
-        "fullBio": "Cristina Tentes is part of the firm's administrative team, serving as client relations manager. With a professional and friendly attitude, she ensures efficient communication between clients and attorneys, manages appointments, and provides essential administrative support for the smooth operation of the firm. Her dedication significantly contributes to our clients' positive experience.",
+      "dianaVeres": {
+        "name": "Diana Veres",
+        "shortBio": "Client relations manager, ensuring a warm welcome and efficient administrative support for the firm.",
+        "fullBio": "Diana Veres is part of the administrative team at Stan-Baculescu Law Firm in Satu Mare, serving as client relations manager. With a warm and professional attitude, she welcomes clients, manages appointments, and facilitates efficient communication between clients and attorneys. Through her dedication and attention to detail, she contributes to the smooth operation of the firm and a positive experience for every client.",
         "specializations": {
           "spec1": "Client Relations",
           "spec2": "Appointment Coordination",
           "spec3": "Administrative Support",
-          "spec4": "Communication"
+          "spec4": "Communication and Reception"
         },
         "education": {
-          "edu1": "Studies in Administration",
+          "edu1": "Studies in Administration and Secretarial Work",
           "edu2": "Communication and public relations courses"
         },
         "experience": {
           "exp1": "Client Relations Manager - SCA Stan-Baculescu",
-          "exp2": "Experience in office administration"
+          "exp2": "Experience in administration and reception"
         }
       }
     },

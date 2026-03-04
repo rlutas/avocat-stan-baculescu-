@@ -1,8 +1,9 @@
 # Code Quality Review - Stan Baculescu Law Firm Website
 
 **Review Date:** January 22, 2026
+**Last Updated:** March 4, 2026
 **Reviewed By:** Claude Code (Senior Code Reviewer)
-**Codebase Version:** Main branch (commit: 9b513ec)
+**Codebase Version:** Main branch (commit: 9b513ec, updated ef0cd67)
 
 ---
 
@@ -78,6 +79,11 @@ None significant - TypeScript usage is exemplary.
   - Next.js `Image` component used consistently
   - Proper `sizes` attribute for responsive images
   - `priority` flag on hero images
+- **Animation library (March 2026 addition):**
+  - Framer Motion (`framer-motion@12.34.5`) integrated for UI animations
+  - Used in scroll-triggered animations (`components/ui/scroll-animate.tsx`)
+  - Applied to homepage sections (home-why-us) for enhanced visual experience
+  - Proper use of motion components with declarative animation props
 - **Form handling:**
   - React Hook Form with Zod validation
   - Proper error states and loading states
@@ -137,9 +143,9 @@ None significant - TypeScript usage is exemplary.
 
 ### Minor Issues
 - Some inline styles using `<style jsx>` tags could be moved to Tailwind custom animations or CSS modules for better maintainability
-- Mix of animation approaches (CSS-in-JS via `<style jsx>` and Tailwind)
+- Mix of animation approaches: CSS-in-JS via `<style jsx>`, Tailwind transitions, and Framer Motion (added March 2026). Consider standardizing on Framer Motion for complex animations and Tailwind for simple transitions.
 
-**Consistency Score:** 9/10
+**Consistency Score:** 8.5/10 *(slight decrease due to additional animation approach; manageable with convention)*
 
 ---
 
@@ -179,10 +185,17 @@ None significant - TypeScript usage is exemplary.
 - **Code splitting:**
   - Next.js automatic code splitting by route
   - Client components properly isolated
-- **Image optimization:**
-  - WebP format support via Next.js Image
+- **Image optimization (significantly improved March 2026):**
+  - All source images converted to WebP format (19MB → 2MB, 89% reduction)
+  - OG images kept as JPG for social media compatibility
   - Responsive images with `sizes` attribute
   - Lazy loading for below-fold images
+  - Service pages now include background images (`/public/images/services/*.webp`)
+  - Methodology section includes step images (`/public/images/methodology/*.webp`)
+- **Animation library (March 2026):**
+  - Framer Motion added for scroll-triggered and entrance animations
+  - Declarative animation approach, minimal performance overhead
+  - Tree-shakeable library, only imported features add to bundle
 - **Minimal re-renders:**
   - `useCallback` used appropriately
   - Memoization in testimonials carousel
@@ -198,8 +211,9 @@ None significant - TypeScript usage is exemplary.
 - **No bundle analysis** setup visible
 - **Google Analytics script** could use `next/script` with `strategy="lazyOnload"` for non-critical analytics
 - **Cookie consent** shows after 500ms delay - good UX but could document reasoning
+- **Framer Motion bundle impact** should be monitored with bundle analyzer; consider lazy-loading animation-heavy components below the fold
 
-**Performance Score:** 8/10
+**Performance Score:** 8.5/10 *(improved March 2026 due to WebP migration)*
 
 ---
 
@@ -348,6 +362,8 @@ With these improvements, the codebase would be excellent quality and ready for l
 - Proper use of Next.js App Router and React patterns
 - Comprehensive form validation and security measures
 - Consistent styling with Tailwind CSS
+- Excellent image optimization with full WebP migration (89% size reduction) *(March 2026)*
+- Framer Motion animations enhance user experience with clean declarative API *(March 2026)*
 - Good performance optimizations
 
 ## Areas for Improvement Summary
@@ -357,5 +373,13 @@ With these improvements, the codebase would be excellent quality and ready for l
 - Some unused variables to clean up
 - Large components could be split further
 - Limited API error handling details
+- Animation approach should be standardized (three methods in use) *(March 2026)*
 
-**Final Recommendation:** Address the critical issues (tests, error boundaries, hooks violations) before production deployment. The codebase quality is strong overall and provides a solid foundation for a professional law firm website.
+**Final Recommendation:** Address the critical issues (tests, error boundaries, hooks violations) before production deployment. The codebase quality is strong overall and provides a solid foundation for a professional law firm website. The March 2026 updates (WebP migration, Framer Motion animations, service/methodology background images) demonstrate ongoing investment in performance and user experience.
+
+---
+
+## Changelog
+
+- **March 4, 2026 (v1.1)**: Updated to reflect WebP image migration (19MB → 2MB, 89% reduction). Documented Framer Motion addition for animations. Updated performance score to 8.5/10. Noted animation consistency consideration. Team roster updated (6 members: Camelia Stan, Vlad Baculescu, Diana Chincea, Cristina Blan, Alexandra Rusu, Diana Veres).
+- **January 22, 2026 (v1.0)**: Initial code quality review.

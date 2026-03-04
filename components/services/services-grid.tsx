@@ -2,22 +2,12 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import {
-  Stethoscope,
-  Scale,
-  Gavel,
-  Users,
-  Briefcase,
-  Building2,
-  Car,
-  FileText,
-  ArrowRight,
-} from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { LawIcon, type LawIconName } from '@/components/icons';
 
 interface Service {
   id: string;
-  icon: LucideIcon;
+  icon: LawIconName;
   slug: string;
   num: string;
   caseKeys: string[];
@@ -26,56 +16,56 @@ interface Service {
 const services: Service[] = [
   {
     id: 'malpraxis-medical',
-    icon: Stethoscope,
+    icon: 'justice',
     slug: '/servicii/malpraxis-medical',
     num: '01',
     caseKeys: ['case1', 'case2', 'case4'],
   },
   {
     id: 'drept-civil',
-    icon: Scale,
+    icon: 'balance-scale',
     slug: '/servicii/drept-civil',
     num: '02',
     caseKeys: ['case1', 'case3', 'case5'],
   },
   {
     id: 'drept-penal',
-    icon: Gavel,
+    icon: 'gavel',
     slug: '/servicii/drept-penal',
     num: '03',
     caseKeys: ['case1', 'case2', 'case4'],
   },
   {
     id: 'drept-familiei',
-    icon: Users,
+    icon: 'family',
     slug: '/servicii/drept-familiei',
     num: '04',
     caseKeys: ['case1', 'case2', 'case3'],
   },
   {
     id: 'dreptul-muncii',
-    icon: Briefcase,
+    icon: 'suitcase',
     slug: '/servicii/dreptul-muncii',
     num: '05',
     caseKeys: ['case1', 'case2', 'case3'],
   },
   {
     id: 'drept-comercial',
-    icon: Building2,
+    icon: 'contract',
     slug: '/servicii/drept-comercial',
     num: '06',
     caseKeys: ['case1', 'case2', 'case4'],
   },
   {
     id: 'accidente-rutiere',
-    icon: Car,
+    icon: 'police-car',
     slug: '/servicii/accidente-rutiere',
     num: '07',
     caseKeys: ['case1', 'case2', 'case3'],
   },
   {
     id: 'drept-administrativ-fiscal',
-    icon: FileText,
+    icon: 'document',
     slug: '/servicii/drept-administrativ-fiscal',
     num: '08',
     caseKeys: ['case1', 'case2', 'case3'],
@@ -153,7 +143,6 @@ export function ServicesGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-2">
           {services.map((service, index) => {
-            const Icon = service.icon;
             return (
               <Link
                 key={service.id}
@@ -171,7 +160,7 @@ export function ServicesGrid() {
                   {/* Icon circle */}
                   <div className="icon-float relative z-10">
                     <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-md ring-2 ring-gold/15 transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-gold group-hover:ring-gold/40 group-hover:shadow-lg group-hover:shadow-gold/20 sm:h-24 sm:w-24 sm:rounded-3xl">
-                      <Icon className="h-9 w-9 text-gold transition-colors duration-300 group-hover:text-navy sm:h-10 sm:w-10" />
+                      <LawIcon name={service.icon} size={48} variant="gold" />
                     </div>
                   </div>
 

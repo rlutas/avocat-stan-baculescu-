@@ -1,22 +1,23 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Briefcase, RefreshCw, Heart } from 'lucide-react';
+import { LawIcon } from '@/components/icons';
+import type { LawIconName } from '@/components/icons';
 
 export function AboutValues() {
   const t = useTranslations('AboutPage.values');
 
-  const values = [
+  const values: { iconName: LawIconName; titleKey: string }[] = [
     {
-      icon: Briefcase,
+      iconName: 'certificate',
       titleKey: 'professionalism',
     },
     {
-      icon: RefreshCw,
+      iconName: 'shield',
       titleKey: 'adaptability',
     },
     {
-      icon: Heart,
+      iconName: 'medal',
       titleKey: 'loyalty',
     },
   ];
@@ -64,7 +65,7 @@ export function AboutValues() {
               style={{ animationDelay: `${(index + 2) * 100}ms` }}
             >
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#fef9e7] transition-transform duration-300 group-hover:scale-110">
-                <value.icon className="h-7 w-7 text-gold" />
+                <LawIcon name={value.iconName} size={28} variant="gold" />
               </div>
               <h3 className="mb-3 text-xl font-semibold text-navy font-heading">
                 {t(`${value.titleKey}.title`)}

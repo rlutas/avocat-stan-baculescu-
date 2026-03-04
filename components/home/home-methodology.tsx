@@ -1,13 +1,16 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { MessageSquare, FileText, Cog, CheckCircle2, Workflow } from 'lucide-react';
+import Image from 'next/image';
+import { LawIcon } from '@/components/icons';
+import type { LawIconName } from '@/components/icons';
+import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
 
-const steps = [
-  { icon: MessageSquare, stepKey: 'step1', number: '01' },
-  { icon: FileText, stepKey: 'step2', number: '02' },
-  { icon: Cog, stepKey: 'step3', number: '03' },
-  { icon: CheckCircle2, stepKey: 'step4', number: '04' },
+const steps: { iconName: LawIconName; stepKey: string; number: string; gradient: string; image: string }[] = [
+  { iconName: 'conference', stepKey: 'step1', number: '01', gradient: 'from-[#002a52] to-[#004a8f]', image: '/images/methodology/consultanta-initiala.webp' },
+  { iconName: 'law-book', stepKey: 'step2', number: '02', gradient: 'from-[#003a70] to-[#1a5a90]', image: '/images/methodology/strategie-personalizata.webp' },
+  { iconName: 'detective', stepKey: 'step3', number: '03', gradient: 'from-[#1a1a2e] to-[#16213e]', image: '/images/methodology/implementare.webp' },
+  { iconName: 'approval', stepKey: 'step4', number: '04', gradient: 'from-[#002a52] to-[#003a70]', image: '/images/methodology/rezultate.webp' },
 ];
 
 export function HomeMethodology() {
@@ -15,81 +18,82 @@ export function HomeMethodology() {
   const tSteps = useTranslations('AboutPage.methodology');
 
   return (
-    <section className="bg-white py-16 sm:py-24">
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s ease-out both;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-      `}</style>
+    <section className="bg-navy py-20 sm:py-32">
+      {/* Subtle pattern */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+      </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-12 text-center">
-          <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-2">
-            <Workflow className="h-4 w-4 text-gold" />
-            <span className="text-sm font-semibold text-gold">{t('trustBadge')}</span>
-          </div>
-
-          <p className="animate-fade-in-up delay-100 mb-2 text-sm font-semibold uppercase tracking-widest text-gold">
-            {t('titleLine1')}
-          </p>
-          <h2 className="animate-fade-in-up delay-200 font-heading mb-4 text-3xl font-bold text-navy md:text-4xl lg:text-5xl">
-            {t('titleLine2')}
-          </h2>
-          <p className="animate-fade-in-up delay-300 mx-auto max-w-2xl text-lg text-[#4b5563]">
-            {t('description')}
-          </p>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-14 text-center sm:mb-16">
+          <ScrollAnimate>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+              {t('titleLine1')}
+            </p>
+          </ScrollAnimate>
+          <ScrollAnimate delay={0.1}>
+            <h2 className="font-heading text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+              {t('titleLine2')}
+            </h2>
+            <div className="mx-auto mt-4 h-[2px] w-16 bg-gold" />
+          </ScrollAnimate>
+          <ScrollAnimate delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
+              {t('description')}
+            </p>
+          </ScrollAnimate>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <div
-                key={index}
-                className="animate-fade-in-up group relative rounded-2xl border border-transparent bg-[#f8f9fa] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-gold hover:bg-white hover:ring-2 hover:ring-gold/60 hover:shadow-xl"
-                style={{ animationDelay: `${(index + 4) * 100}ms` }}
-              >
-                {/* Step Number Watermark */}
-                <div className="mb-4 text-4xl font-bold text-gold/20 transition-colors duration-300 group-hover:text-gold/40">
-                  {step.number}
-                </div>
+        {/* Steps - large visual cards */}
+        <StaggerContainer className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6" staggerDelay={0.1}>
+          {steps.map((step) => (
+            <StaggerItem key={step.number} variant="scaleUp">
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-500 hover:-translate-y-2 hover:border-gold/20 hover:bg-white/[0.06]">
+                {/* Visual header with large number */}
+                <div className={`relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br ${step.gradient} sm:h-48`}>
+                  {/* Background image */}
+                  <Image
+                    src={step.image}
+                    alt=""
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
 
-                {/* Icon */}
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#fef9e7] transition-all duration-300 group-hover:bg-gold group-hover:shadow-lg group-hover:shadow-gold/20">
-                  <Icon className="h-6 w-6 text-gold transition-colors duration-300 group-hover:text-navy" />
+                  {/* Dark gradient overlay for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/50 to-navy/30 transition-opacity duration-500 group-hover:from-navy/70 group-hover:via-navy/40 group-hover:to-navy/20" />
+
+                  {/* Number watermark */}
+                  <span className="absolute inset-0 z-[1] flex items-center justify-center font-heading text-[120px] font-bold leading-none text-white/[0.06] transition-all duration-500 group-hover:text-white/[0.1] sm:text-[140px]">
+                    {step.number}
+                  </span>
+
+                  {/* Icon */}
+                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-500 group-hover:scale-110 group-hover:bg-gold/20 group-hover:ring-gold/30">
+                    <LawIcon name={step.iconName} size={32} variant="white" />
+                  </div>
+
+                  {/* Gold line bottom */}
+                  <div className="absolute bottom-0 left-0 z-[1] h-[2px] w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-2 font-heading text-lg font-semibold text-navy">
-                  {tSteps(`${step.stepKey}.title`)}
-                </h3>
-                <p className="text-sm leading-relaxed text-[#4b5563]">
-                  {tSteps(`${step.stepKey}.description`)}
-                </p>
-
-                {/* Connector Line (desktop only, except last) */}
-                {index < steps.length - 1 && (
-                  <div className="absolute -right-4 top-1/2 hidden h-px w-8 bg-gradient-to-r from-gold/40 to-transparent lg:block" />
-                )}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <div className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-gold">
+                    {step.number}
+                  </div>
+                  <h3 className="mb-2 font-heading text-lg font-semibold text-white transition-colors duration-300 group-hover:text-gold sm:text-xl">
+                    {tSteps(`${step.stepKey}.title`)}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-white/50">
+                    {tSteps(`${step.stepKey}.description`)}
+                  </p>
+                </div>
               </div>
-            );
-          })}
-        </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
       </div>
     </section>
   );

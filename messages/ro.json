@@ -62,6 +62,14 @@
       "titleLine2": "4 Pasi Simpli",
       "description": "Un proces clar si transparent, de la prima consultatie pana la obtinerea rezultatului dorit."
     },
+    "team": {
+      "trustBadge": "Echipa de Avocati",
+      "titleLine1": "Profesionistii Nostri",
+      "titleLine2": "Cunoaste Echipa",
+      "description": "O echipa de avocati cu experienta si dedicare, pregatita sa va reprezinte cu profesionalism in orice situatie juridica.",
+      "viewProfile": "Vezi Profil",
+      "viewAll": "Vezi Intreaga Echipa"
+    },
     "cta": {
       "title": "Aveti Nevoie de Asistenta Juridica?",
       "description": "Programati o consultatie si discutati cu unul dintre avocatii nostri despre situatia dumneavoastra. Suntem aici sa va ajutam.",
@@ -225,10 +233,10 @@
           "exp2": "Stagiu profesional - Baroul Satu Mare"
         }
       },
-      "gabrielaTarta": {
-        "name": "Gabriela Tarta",
+      "cristinaBlan": {
+        "name": "Cristina Blan",
         "shortBio": "Avocat colaborator cu focus pe drept civil si executari silite. Experienta solida in recuperarea creantelor.",
-        "fullBio": "Gabriela Tarta este avocat colaborator specializat in drept civil si proceduri de executare silita. Cu o experienta semnificativa in domeniul recuperarii creantelor, a asistat clientii in proceduri complexe de executare, asigurandu-se ca drepturile acestora sunt pe deplin respectate. Abordarea sa profesionala si eficienta garanteaza rezultate optime pentru clienti.",
+        "fullBio": "Cristina Blan este avocat colaborator specializat in drept civil si proceduri de executare silita. Cu o experienta semnificativa in domeniul recuperarii creantelor, a asistat clientii in proceduri complexe de executare, asigurandu-se ca drepturile acestora sunt pe deplin respectate. Abordarea sa profesionala si eficienta garanteaza rezultate optime pentru clienti.",
         "specializations": {
           "spec1": "Drept Civil",
           "spec2": "Executari Silite",
@@ -263,23 +271,23 @@
           "exp2": "Specializare in daune si despagubiri"
         }
       },
-      "cristinaTentes": {
-        "name": "Cristina Tentes",
-        "shortBio": "Responsabil relatii cu clientii, asigurand comunicarea eficienta si suportul administrativ pentru cabinet.",
-        "fullBio": "Cristina Tentes face parte din echipa administrativa a cabinetului, ocupand functia de responsabil relatii cu clientii. Cu o atitudine profesionala si prietenoasa, asigura comunicarea eficienta intre clienti si avocati, gestioneaza programarile si ofera suport administrativ esential pentru buna functionare a cabinetului. Dedicarea sa contribuie semnificativ la experienta pozitiva a clientilor nostri.",
+      "dianaVeres": {
+        "name": "Diana Vereș",
+        "shortBio": "Responsabil relatii cu clientii, asigurand primirea si orientarea clientilor, precum si suportul administrativ al cabinetului.",
+        "fullBio": "Diana Vereș face parte din echipa administrativa a Cabinetului de Avocatura Stan-Baculescu din Satu Mare, ocupand functia de responsabil relatii cu clientii. Cu o atitudine calda si profesionala, asigura primirea clientilor, gestioneaza programarile si faciliteaza comunicarea eficienta intre clienti si avocati. Prin dedicarea si atentia sa la detalii, contribuie la buna functionare a cabinetului si la o experienta pozitiva pentru fiecare client.",
         "specializations": {
           "spec1": "Relatii cu Clientii",
           "spec2": "Coordonare Programari",
           "spec3": "Suport Administrativ",
-          "spec4": "Comunicare"
+          "spec4": "Comunicare si Receptie"
         },
         "education": {
-          "edu1": "Studii in Administratie",
+          "edu1": "Studii in Administratie si Secretariat",
           "edu2": "Cursuri de comunicare si relatii publice"
         },
         "experience": {
           "exp1": "Responsabil Relatii Clienti - SCA Stan-Baculescu",
-          "exp2": "Experienta in administrare birouri"
+          "exp2": "Experienta in administrare si receptie"
         }
       }
     },

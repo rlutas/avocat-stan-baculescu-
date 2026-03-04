@@ -126,6 +126,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </head>
       <body
         className={`${playfairDisplay.variable} ${inter.variable} font-body antialiased`}
+        suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
           <GoogleAnalytics />

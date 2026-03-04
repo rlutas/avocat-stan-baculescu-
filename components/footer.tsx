@@ -63,7 +63,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt={t('siteName')}
                 width={180}
                 height={60}
@@ -107,7 +107,7 @@ export function Footer() {
 
           {/* Column 2: Quick Navigation */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-6 font-heading text-sm font-semibold uppercase tracking-wider text-gold">
               {tFooter('quickLinks')}
             </h3>
             <ul className="space-y-3">
@@ -126,7 +126,7 @@ export function Footer() {
 
           {/* Column 3: Services */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-6 font-heading text-sm font-semibold uppercase tracking-wider text-gold">
               {tFooter('services')}
             </h3>
             <ul className="space-y-3">
@@ -145,7 +145,7 @@ export function Footer() {
 
           {/* Column 4: Contact Info */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold uppercase tracking-wider text-gold">
+            <h3 className="mb-6 font-heading text-sm font-semibold uppercase tracking-wider text-gold">
               {tFooter('contactInfo')}
             </h3>
             <ul className="space-y-4">
