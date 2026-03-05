@@ -445,6 +445,39 @@ Standard padding handles this: `py-20 sm:py-32`
 - Gold ornamental divider between sections
 - Author photos from team (`authorImage` MDX frontmatter field)
 
+### Blog Article Content Styling
+Custom `.blog-content` CSS class replaces Tailwind prose for MDX rendering, giving full control over article typography and decorative elements.
+
+**Headings:**
+- **H2:** Gold left border (`4px solid gold`), Playfair Display (`font-heading`), `1.625rem` mobile / `1.875rem` desktop, `text-navy`
+- **H3:** Gold underline accent via `::after` pseudo-element (`2.5rem` width, `2px` height), proper hierarchy below H2
+
+**Lists:**
+- **UL:** Custom gold diamond bullet markers — 7px rotated squares (`rotate(45deg)`) positioned via `::before`. Nested lists get outlined diamonds (border-only, no fill)
+- **OL:** Gold numbered markers in Playfair Display inside rounded badge containers (`1.75rem` diameter circle, `bg-gold/10` fill, gold text)
+
+**Blockquote:**
+- Gold left border (`4px solid gold`) + light gold gradient background (`gold/3` to `gold/8`)
+- Text in Playfair Display, slightly larger (`1.0625rem` / `1.125rem`)
+
+**Tables:**
+- Navy header row (`bg-navy`, white text, Playfair Display)
+- Striped even rows (`#f8f9fa`)
+- Gold hover on rows (`bg-gold/5`)
+- Rounded corners on container, subtle ring border
+
+**HR:**
+- Gold gradient line with center diamond ornament (8px rotated square, gold fill)
+- Uses `::before` pseudo-element on a wrapper `div`
+
+**Code:**
+- Inline: gray background (`#f3f4f6`), slightly smaller text, rounded
+- Blocks: dark background (`#1f2937`), rounded-xl, horizontal scroll
+
+**Special treatments:**
+- First paragraph: slightly larger (`1.125rem` / `1.1875rem`) for editorial feel
+- Images: `rounded-xl` with subtle shadow (`shadow-md`)
+
 ### MDX Content Rendering
 - Velite `s.mdx()` outputs compiled JS function strings, not HTML
 - Use `useMDXComponent` from `lib/mdx.ts` (uses `new Function()` + `react/jsx-runtime`)
@@ -517,7 +550,13 @@ Blog posts use different slugs per locale. Cross-locale mapping is maintained in
 Both must be updated when adding new blog posts.
 
 ### robots.txt
-AI crawlers (GPTBot, CCBot, ClaudeBot, etc.) are blocked. Normal search engine crawlers are allowed.
+Search AI crawlers (GPTBot, PerplexityBot) ALLOWED for AI search visibility. Training crawlers (CCBot, anthropic-ai, ClaudeBot, Google-Extended, Bytespider) BLOCKED. Normal search engine crawlers are allowed.
+
+### llms.txt
+`llms.txt` file at `/public/llms.txt` provides AI crawlers with structured content guidance about the firm, services, and site structure.
+
+### proxy.ts (Next.js 16)
+`middleware.ts` renamed to `proxy.ts` per Next.js 16 convention. Handles locale routing via `next-intl`.
 
 ### Sitemap
 - All pages must be in `app/sitemap.ts`

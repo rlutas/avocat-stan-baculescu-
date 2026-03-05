@@ -1,4 +1,5 @@
 import { defineConfig, defineCollection, s } from 'velite';
+import rehypeSlug from 'rehype-slug';
 
 const posts = defineCollection({
   name: 'Post',
@@ -16,6 +17,7 @@ const posts = defineCollection({
       locale: s.enum(['ro', 'en']),
       published: s.boolean().default(true),
       body: s.mdx(),
+      raw: s.raw(),
     })
     .transform((data) => ({
       ...data,
@@ -34,7 +36,7 @@ export default defineConfig({
   },
   collections: { posts },
   mdx: {
-    rehypePlugins: [],
+    rehypePlugins: [rehypeSlug],
     remarkPlugins: [],
   },
 });

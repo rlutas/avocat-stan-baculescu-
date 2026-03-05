@@ -6,3 +6,8 @@ export { BlogCta } from './blog-cta';
 export { BlogArticle } from './blog-article';
 export { SocialShare } from './social-share';
 export { RelatedArticles } from './related-articles';
+export { KeyPoints } from './key-points';
+export { Callout } from './callout';
+export { LegalCitation } from './legal-citation';
+export { TableOfContents } from './table-of-contents';
+export { ReadingProgress } from './reading-progress';

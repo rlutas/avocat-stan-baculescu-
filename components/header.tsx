@@ -14,6 +14,7 @@ import { Phone, ChevronDown } from 'lucide-react';
 import { LawIcon, serviceIconMap } from '@/components/icons';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import { mapBlogSlugInPathname } from '@/lib/blog-slugs';
 
 const navItems = [
   { href: '/', key: 'home' },
@@ -91,8 +92,10 @@ export function Header() {
   }, []);
 
   // Language switcher handler
+  // Maps blog article slugs to the other locale's slug before navigating
   const switchLanguage = (newLocale: 'ro' | 'en') => {
-    router.replace(pathname, { locale: newLocale });
+    const targetPathname = mapBlogSlugInPathname(pathname);
+    router.replace(targetPathname, { locale: newLocale });
   };
 
   return (

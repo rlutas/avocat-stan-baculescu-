@@ -4,20 +4,9 @@ import { setRequestLocale } from 'next-intl/server';
 import { posts } from '#site/content';
 import { BlogArticle, RelatedArticles } from '@/components/blog';
 import { BreadcrumbSchema } from '@/components/seo';
+import { blogSlugMap } from '@/lib/blog-slugs';
 
 const BASE_URL = 'https://stanbaculescu.ro';
-
-// Cross-locale blog slug mapping for hreflang
-const blogSlugPairs: Record<string, string> = {
-  // RO → EN
-  'drepturile-pacientului-malpraxis': 'patient-rights-malpractice',
-  'procedura-divortului-romania': 'divorce-procedure-romania',
-  'drepturile-angajatului-concediere': 'employee-rights-dismissal',
-  // EN → RO
-  'patient-rights-malpractice': 'drepturile-pacientului-malpraxis',
-  'divorce-procedure-romania': 'procedura-divortului-romania',
-  'employee-rights-dismissal': 'drepturile-angajatului-concediere',
-};
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -66,9 +55,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `${BASE_URL}/${locale}/blog/${slug}`,
       languages: {
-        'ro-RO': `${BASE_URL}/ro/blog/${locale === 'ro' ? slug : (blogSlugPairs[slug] || slug)}`,
-        'en-US': `${BASE_URL}/en/blog/${locale === 'en' ? slug : (blogSlugPairs[slug] || slug)}`,
-        'x-default': `${BASE_URL}/ro/blog/${locale === 'ro' ? slug : (blogSlugPairs[slug] || slug)}`,
+        'ro-RO': `${BASE_URL}/ro/blog/${locale === 'ro' ? slug : (blogSlugMap[slug] || slug)}`,
+        'en-US': `${BASE_URL}/en/blog/${locale === 'en' ? slug : (blogSlugMap[slug] || slug)}`,
+        'x-default': `${BASE_URL}/ro/blog/${locale === 'ro' ? slug : (blogSlugMap[slug] || slug)}`,
       },
     },
   };
@@ -151,6 +140,7 @@ export default async function BlogPostPage({ params }: Props) {
         authorImage={post.authorImage}
         category={post.category}
         content={post.body}
+        raw={post.raw}
         image={post.image}
       />
       <RelatedArticles posts={relatedPosts} />

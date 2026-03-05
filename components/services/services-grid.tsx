@@ -118,7 +118,6 @@ export function ServicesGrid() {
             <StaggerItem
               key={service.id}
               variant="scaleUp"
-              className={index % 2 === 1 ? 'sm:mt-8' : ''}
             >
               <Link href={service.slug} className="group block h-full">
                 <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-navy/10">

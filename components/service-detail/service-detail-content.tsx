@@ -1,7 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { LawIcon, serviceIconMap, type LawIconName } from '@/components/icons';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+import { LawIcon } from '@/components/icons';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
 
 interface ServiceDetailContentProps {
@@ -10,7 +13,7 @@ interface ServiceDetailContentProps {
 
 export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
   const t = useTranslations('ServiceDetail');
-  const iconName: LawIconName = serviceIconMap[serviceId] || 'balance-scale';
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   // Collect cases (up to 6)
   const cases: string[] = [];
@@ -43,60 +46,35 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
 
   return (
     <>
-      {/* ── Description section ─────────────────────────────────── */}
+      {/* -- Description section ----------------------------------------- */}
       <section className="bg-white py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
-            {/* Left: text */}
-            <div>
-              <ScrollAnimate>
-                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-                  {t('sectionLabelDescription')}
-                </p>
-              </ScrollAnimate>
-              <ScrollAnimate delay={0.1}>
-                <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
-                  {t(`${serviceId}.descriptionTitle`)}
-                </h2>
-                <div className="mt-4 h-[2px] w-16 bg-gold" />
-              </ScrollAnimate>
-              <ScrollAnimate delay={0.2}>
-                <div className="mt-6 space-y-4">
-                  {t(`${serviceId}.description`).split('\n\n').map((paragraph: string, i: number) => (
-                    <p key={i} className="text-lg leading-relaxed text-text-secondary">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </ScrollAnimate>
-            </div>
-
-            {/* Right: decorative stat/feature card */}
-            <ScrollAnimate delay={0.3} variant="fadeRight">
-              <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-[#f8f9fa] p-8 shadow-sm">
-                {/* Gold corner accent */}
-                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[80px] bg-gold/[0.07]" />
-
-                <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm ring-2 ring-gold/15">
-                  <LawIcon name={iconName} size={28} variant="gold" />
-                </div>
-
-                <h3 className="mt-5 font-heading text-2xl font-bold text-navy">
-                  {t(`${serviceId}.descriptionTitle`)}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-text-secondary line-clamp-4">
-                  {t(`${serviceId}.description`)}
-                </p>
-
-                {/* Gold bottom accent line */}
-                <div className="mt-6 h-[2px] w-full bg-gradient-to-r from-gold/60 via-gold to-gold/0" />
+          <div className="mx-auto max-w-3xl">
+            <ScrollAnimate>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                {t('sectionLabelDescription')}
+              </p>
+            </ScrollAnimate>
+            <ScrollAnimate delay={0.1}>
+              <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
+                {t(`${serviceId}.descriptionTitle`)}
+              </h2>
+              <div className="mt-4 h-[2px] w-16 bg-gold" />
+            </ScrollAnimate>
+            <ScrollAnimate delay={0.2}>
+              <div className="mt-6 space-y-4">
+                {t(`${serviceId}.description`).split('\n\n').map((paragraph: string, i: number) => (
+                  <p key={i} className="text-lg leading-relaxed text-text-secondary">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </ScrollAnimate>
           </div>
         </div>
       </section>
 
-      {/* ── Common Cases section ─────────────────────────────────── */}
+      {/* -- Common Cases section ---------------------------------------- */}
       {cases.length > 0 && (
         <section className="bg-[#f8f9fa] py-20 sm:py-32">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -122,18 +100,16 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
             >
               {cases.map((caseItem, index) => (
                 <StaggerItem key={index} variant="scaleUp">
-                  <div className="group flex h-full items-start gap-4 overflow-hidden rounded-2xl border border-transparent bg-white p-5 shadow-sm ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-1 hover:border-gold/20 hover:shadow-xl hover:shadow-navy/[0.06]">
-                    {/* Gold check icon */}
-                    <div className="mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#fef9e7] transition-all duration-300 group-hover:bg-gold group-hover:shadow-[0_4px_12px_rgba(208,156,17,0.35)]">
-                      <LawIcon name="approval" size={20} variant="gold" />
+                  <div className="group flex h-full items-start gap-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/[0.04] transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/[0.06]">
+                    {/* Gold icon container */}
+                    <div className="mt-0.5 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gold/10 transition-all duration-300 group-hover:bg-gold group-hover:shadow-[0_4px_12px_rgba(208,156,17,0.35)]">
+                      <LawIcon name="approval" size={20} variant="gold" className="icon-hover-white" />
                     </div>
-                    <div className="flex-1 pt-1">
+                    <div className="flex-1 pt-0.5">
                       <p className="text-sm font-medium leading-snug text-[#1f2937]">
                         {caseItem}
                       </p>
                     </div>
-                    {/* Gold bottom line reveal */}
-                    <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-gold to-gold/0 transition-all duration-500 group-hover:w-full" />
                   </div>
                 </StaggerItem>
               ))}
@@ -142,12 +118,12 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
         </section>
       )}
 
-      {/* ── Approach section ─────────────────────────────────────── */}
+      {/* -- Approach section -------------------------------------------- */}
       {approachPoints.length > 0 && (
         <section className="bg-white py-20 sm:py-32">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Header */}
-            <div className="mb-14 sm:mb-16">
+            <div className="mb-14 text-center sm:mb-16">
               <ScrollAnimate>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
                   {t('sectionLabelApproach')}
@@ -157,35 +133,90 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
                 <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
                   {t(`${serviceId}.approachTitle`)}
                 </h2>
-                <div className="mt-4 h-[2px] w-16 bg-gold" />
+                <div className="mx-auto mt-4 h-[2px] w-16 bg-gold" />
               </ScrollAnimate>
             </div>
 
-            {/* Approach steps — vertical numbered list */}
-            <StaggerContainer className="space-y-4" staggerDelay={0.1}>
-              {approachPoints.map((point, index) => (
-                <StaggerItem key={index} variant="fadeLeft">
-                  <div className="group flex items-start gap-6 overflow-hidden rounded-2xl border border-transparent bg-[#f8f9fa] p-5 shadow-sm ring-1 ring-black/[0.03] transition-all duration-500 hover:-translate-y-1 hover:border-gold/20 hover:shadow-xl hover:shadow-navy/[0.06] sm:p-6">
-                    {/* Step number */}
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-navy font-heading text-lg font-bold text-gold shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_4px_16px_rgba(0,58,112,0.3)]">
-                      {String(index + 1).padStart(2, '0')}
+            {/* ── Desktop: Horizontal timeline (lg+) ── */}
+            <div className="hidden lg:block">
+              {/* Connector line row — sits behind the circles */}
+              <div className="relative mb-8">
+                <div className="flex items-center">
+                  {approachPoints.map((_, index) => (
+                    <div key={index} className="flex flex-1 items-center">
+                      {/* Circle node */}
+                      <ScrollAnimate delay={0.15 + index * 0.12}>
+                        <div className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-navy font-heading text-lg font-bold text-gold shadow-lg ring-4 ring-white">
+                          {String(index + 1).padStart(2, '0')}
+                        </div>
+                      </ScrollAnimate>
+                      {/* Connecting line between circles (not after last) */}
+                      {index < approachPoints.length - 1 && (
+                        <div className="relative mx-1 h-[2px] flex-1">
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-gold/50 to-gold/20"
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.6, delay: 0.3 + index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+                            style={{ transformOrigin: 'left' }}
+                          />
+                          {/* Small gold diamond at midpoint */}
+                          <motion.div
+                            className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-gold/30"
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3, delay: 0.6 + index * 0.15 }}
+                          />
+                        </div>
+                      )}
                     </div>
-                    <div className="flex-1 pt-1.5">
-                      <p className="text-base leading-relaxed text-[#1f2937]">{point}</p>
+                  ))}
+                </div>
+              </div>
+
+              {/* Content cards row — aligned under each circle */}
+              <StaggerContainer className="grid grid-cols-4 gap-5" staggerDelay={0.1}>
+                {approachPoints.map((point, index) => (
+                  <StaggerItem key={index} variant="fadeUp">
+                    <div className="group h-full rounded-2xl border border-transparent bg-[#f8f9fa] p-5 ring-1 ring-black/[0.03] transition-all duration-500 hover:-translate-y-1 hover:border-gold/20 hover:shadow-xl hover:shadow-navy/[0.06]">
+                      <p className="text-sm leading-relaxed text-[#1f2937]">{point}</p>
                     </div>
-                    {/* Right indicator */}
-                    <div className="flex-shrink-0 self-center opacity-0 transition-all duration-300 group-hover:opacity-100">
-                      <div className="h-1.5 w-1.5 rounded-full bg-gold" />
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+            </div>
+
+            {/* ── Mobile: Vertical timeline (< lg) ── */}
+            <div className="lg:hidden">
+              <div className="relative ml-6">
+                {/* Vertical gold line */}
+                <div className="absolute left-0 top-2 bottom-2 w-[2px] bg-gradient-to-b from-gold/40 via-gold/25 to-gold/10" />
+
+                <div className="space-y-6">
+                  {approachPoints.map((point, index) => (
+                    <ScrollAnimate key={index} delay={index * 0.1}>
+                      <div className="group relative flex items-start gap-5">
+                        {/* Circle on the line */}
+                        <div className="relative z-10 -ml-6 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-navy font-heading text-base font-bold text-gold shadow-md ring-4 ring-white">
+                          {String(index + 1).padStart(2, '0')}
+                        </div>
+                        {/* Card */}
+                        <div className="flex-1 rounded-xl bg-[#f8f9fa] p-4 ring-1 ring-black/[0.03]">
+                          <p className="text-sm leading-relaxed text-[#1f2937]">{point}</p>
+                        </div>
+                      </div>
+                    </ScrollAnimate>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       )}
 
-      {/* ── FAQ section ─────────────────────────────────────── */}
+      {/* -- FAQ section ------------------------------------------------- */}
       {faqItems.length > 0 && (
         <section className="bg-[#f8f9fa] py-20 sm:py-32">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -203,20 +234,61 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
               </ScrollAnimate>
             </div>
 
-            <StaggerContainer className="space-y-4" staggerDelay={0.08}>
-              {faqItems.map((faq, index) => (
-                <StaggerItem key={index} variant="fadeUp">
-                  <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm ring-1 ring-black/[0.04] sm:p-8">
-                    <h3 className="font-heading text-lg font-bold text-navy sm:text-xl">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-3 text-base leading-relaxed text-text-secondary">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+            <div className="space-y-4">
+              {faqItems.map((faq, index) => {
+                const isOpen = openFaq === index;
+                return (
+                  <ScrollAnimate key={index} delay={index * 0.08}>
+                    <div
+                      className={`rounded-2xl bg-white shadow-sm ring-1 ring-black/[0.04] transition-all duration-300 ${
+                        isOpen ? 'border-l-2 border-gold' : 'border-l-2 border-transparent'
+                      }`}
+                    >
+                      {/* Clickable header */}
+                      <button
+                        type="button"
+                        className="flex w-full items-center gap-4 p-6 text-left sm:p-8"
+                        onClick={() => setOpenFaq(isOpen ? null : index)}
+                        aria-expanded={isOpen}
+                      >
+                        {/* Numbered badge */}
+                        <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-gold/10 font-heading text-sm font-bold text-gold">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                        {/* Question text */}
+                        <span className="flex-1 font-heading text-lg font-bold text-navy sm:text-xl">
+                          {faq.question}
+                        </span>
+                        {/* Chevron */}
+                        <ChevronDown
+                          className={`h-5 w-5 flex-shrink-0 text-gold transition-transform duration-300 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+
+                      {/* Answer with animation */}
+                      <div className="overflow-hidden">
+                        <AnimatePresence initial={false}>
+                          {isOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                            >
+                              <p className="px-6 pb-6 pt-0 text-base leading-relaxed text-text-secondary sm:px-8 sm:pb-8">
+                                {faq.answer}
+                              </p>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    </div>
+                  </ScrollAnimate>
+                );
+              })}
+            </div>
           </div>
         </section>
       )}

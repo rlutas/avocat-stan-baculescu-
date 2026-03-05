@@ -10,41 +10,23 @@ export default function NotFound() {
   const t = useTranslations('NotFound');
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center bg-[linear-gradient(135deg,#002a52_0%,#003a70_60%,#004a8f_100%)] relative overflow-hidden">
+    <div className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-[linear-gradient(135deg,#002a52_0%,#003a70_60%,#004a8f_100%)] relative overflow-hidden">
       <style jsx>{`
         @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
         }
         @keyframes float {
-          0%, 100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-10px) rotate(5deg);
-          }
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(5deg); }
         }
         @keyframes pulse-glow {
-          0%, 100% {
-            box-shadow: 0 4px 15px rgba(208, 156, 17, 0.3);
-          }
-          50% {
-            box-shadow: 0 6px 25px rgba(208, 156, 17, 0.6);
-          }
+          0%, 100% { box-shadow: 0 4px 15px rgba(208, 156, 17, 0.3); }
+          50% { box-shadow: 0 6px 25px rgba(208, 156, 17, 0.6); }
         }
         @keyframes number-glow {
-          0%, 100% {
-            text-shadow: 0 0 30px rgba(208, 156, 17, 0.3);
-          }
-          50% {
-            text-shadow: 0 0 50px rgba(208, 156, 17, 0.5);
-          }
+          0%, 100% { text-shadow: 0 0 30px rgba(208, 156, 17, 0.3); }
+          50% { text-shadow: 0 0 50px rgba(208, 156, 17, 0.5); }
         }
       `}</style>
 
@@ -106,77 +88,53 @@ export default function NotFound() {
         />
       </svg>
 
-      <div className="max-w-3xl mx-auto px-4 py-16 text-center relative z-10">
+      <div className="max-w-3xl mx-auto px-4 py-12 text-center relative z-10">
         {/* Site Logo */}
-        <div
-          style={{
-            animation: 'fadeInUp 0.8s ease-out both',
-          }}
-        >
-          <Image src="/images/logo.webp" alt="SCA Stan-Baculescu" width={160} height={50} className="mx-auto mb-6 brightness-0 invert" />
+        <div style={{ animation: 'fadeInUp 0.8s ease-out both' }}>
+          <Image src="/images/logo.webp" alt="SCA Stan-Baculescu" width={160} height={50} className="mx-auto mb-8 brightness-0 invert" />
         </div>
 
-        {/* Animated Scale Icon */}
-        <div
-          className="mb-6 flex justify-center"
-          style={{
-            animation: 'fadeInUp 0.8s ease-out both',
-          }}
-        >
-          <div
-            className="w-24 h-24 rounded-full bg-gold/20 flex items-center justify-center"
-            style={{
-              animation: 'float 4s ease-in-out infinite',
-            }}
+        {/* 404 Number with Scale icon to the right */}
+        <div className="relative mb-4" style={{ animation: 'fadeInUp 0.8s ease-out 0.1s both' }}>
+          <h1
+            className="font-heading text-[100px] md:text-[150px] font-bold text-gold leading-none"
+            style={{ animation: 'number-glow 3s ease-in-out infinite' }}
           >
-            <Scale className="w-12 h-12 text-gold" />
+            404
+          </h1>
+          {/* Scale icon — floating to the right of 404 */}
+          <div
+            className="absolute -right-4 top-1/2 -translate-y-1/2 md:right-8"
+            style={{ animation: 'float 4s ease-in-out infinite' }}
+          >
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/20 md:h-24 md:w-24">
+              <Scale className="h-10 w-10 text-gold md:h-12 md:w-12" />
+            </div>
           </div>
         </div>
 
-        {/* 404 Number with gold glow */}
-        <h1
-          className="font-heading text-[120px] md:text-[180px] font-bold text-gold leading-none mb-2"
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.1s both, number-glow 3s ease-in-out infinite',
-          }}
-        >
-          404
-        </h1>
-
-        {/* Two-line title */}
-        <div
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.2s both',
-          }}
-        >
+        {/* Title */}
+        <div style={{ animation: 'fadeInUp 0.8s ease-out 0.2s both' }}>
           <p className="text-white/60 text-lg md:text-xl mb-2">{t('titleLine1')}</p>
-          <h2 className="font-heading text-3xl md:text-5xl font-semibold text-white mb-6">
+          <h2 className="font-heading text-2xl md:text-4xl font-semibold text-white mb-4">
             {t('titleLine2')}
           </h2>
         </div>
 
         {/* Description */}
         <p
-          className="text-white/70 text-lg mb-10 max-w-xl mx-auto"
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.3s both',
-          }}
+          className="text-white/70 text-base md:text-lg mb-8 max-w-xl mx-auto"
+          style={{ animation: 'fadeInUp 0.8s ease-out 0.3s both' }}
         >
           {t('description')}
         </p>
 
-        {/* Primary CTA - Homepage with pulse-glow */}
-        <div
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.4s both',
-          }}
-        >
+        {/* Primary CTA */}
+        <div style={{ animation: 'fadeInUp 0.8s ease-out 0.4s both' }}>
           <Link
             href="/"
-            className="group inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-4 rounded-full hover:bg-gold/90 transition-all duration-300"
-            style={{
-              animation: 'pulse-glow 2s ease-in-out infinite',
-            }}
+            className="group inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-3.5 rounded-full hover:bg-gold/90 transition-all duration-300"
+            style={{ animation: 'pulse-glow 2s ease-in-out infinite' }}
           >
             <Home className="w-5 h-5" />
             {t('backToHome')}
@@ -185,12 +143,7 @@ export default function NotFound() {
         </div>
 
         {/* Divider */}
-        <div
-          className="relative my-10"
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.5s both',
-          }}
-        >
+        <div className="relative my-8" style={{ animation: 'fadeInUp 0.8s ease-out 0.5s both' }}>
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-white/10"></div>
           </div>
@@ -199,40 +152,30 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* Secondary Links as cards */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.6s both',
-          }}
-        >
+        {/* Secondary Links */}
+        <div className="flex flex-col sm:flex-row gap-3 justify-center" style={{ animation: 'fadeInUp 0.8s ease-out 0.6s both' }}>
           <Link
             href="/servicii"
-            className="group relative inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 hover:border-gold/50 hover:-translate-y-1 transition-all duration-300"
+            className="group inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-medium px-6 py-3 rounded-xl hover:bg-white/10 hover:border-gold/50 hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="w-10 h-10 rounded-lg bg-gold/20 flex items-center justify-center group-hover:bg-gold group-hover:text-navy transition-all duration-300">
-              <Briefcase className="w-5 h-5 text-gold group-hover:text-navy transition-colors duration-300" />
+            <div className="w-9 h-9 rounded-lg bg-gold/20 flex items-center justify-center group-hover:bg-gold transition-all duration-300">
+              <Briefcase className="w-4 h-4 text-gold group-hover:text-navy transition-colors duration-300" />
             </div>
             <span>{t('viewServices')}</span>
           </Link>
           <Link
             href="/contact"
-            className="group relative inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 hover:border-gold/50 hover:-translate-y-1 transition-all duration-300"
+            className="group inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-medium px-6 py-3 rounded-xl hover:bg-white/10 hover:border-gold/50 hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="w-10 h-10 rounded-lg bg-gold/20 flex items-center justify-center group-hover:bg-gold group-hover:text-navy transition-all duration-300">
-              <Phone className="w-5 h-5 text-gold group-hover:text-navy transition-colors duration-300" />
+            <div className="w-9 h-9 rounded-lg bg-gold/20 flex items-center justify-center group-hover:bg-gold transition-all duration-300">
+              <Phone className="w-4 h-4 text-gold group-hover:text-navy transition-colors duration-300" />
             </div>
             <span>{t('contactUs')}</span>
           </Link>
         </div>
 
         {/* Contact info */}
-        <div
-          className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-white/50 text-sm"
-          style={{
-            animation: 'fadeInUp 0.8s ease-out 0.7s both',
-          }}
-        >
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-white/50 text-sm" style={{ animation: 'fadeInUp 0.8s ease-out 0.7s both' }}>
           <a href="mailto:office@stanbaculescu.ro" className="flex items-center gap-2 hover:text-gold transition-colors">
             <Mail className="w-4 h-4" />
             office@stanbaculescu.ro

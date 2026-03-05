@@ -12,6 +12,7 @@ type BlogCardProps = {
   slug: string;
   date: string;
   author: string;
+  authorImage?: string;
   category: string;
   image?: string;
   index?: number;
@@ -23,6 +24,7 @@ export function BlogCard({
   slug,
   date,
   author,
+  authorImage,
   category,
   image,
 }: BlogCardProps) {
@@ -66,8 +68,20 @@ export function BlogCard({
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         {/* Meta info */}
         <div className="mb-3 flex items-center gap-4 text-xs text-navy/50">
-          <div className="flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+          <div className="flex items-center gap-2">
+            {authorImage ? (
+              <div className="relative h-6 w-6 overflow-hidden rounded-full ring-1 ring-gold/30">
+                <Image
+                  src={authorImage}
+                  alt={author}
+                  fill
+                  className="object-cover object-top"
+                  sizes="24px"
+                />
+              </div>
+            ) : (
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+            )}
             <span className="font-medium">{author}</span>
           </div>
           <div className="flex items-center gap-1.5">

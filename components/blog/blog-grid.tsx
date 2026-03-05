@@ -100,6 +100,7 @@ export function BlogGrid({
                   slug={post.slug}
                   date={post.date}
                   author={post.author}
+                  authorImage={post.authorImage}
                   category={post.category}
                   image={post.image}
                 />

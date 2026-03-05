@@ -11,18 +11,19 @@
 
 This audit evaluates the **Next.js 16 source code** (pre-deployment) for technical SEO readiness, supplemented by analysis of the **currently live WordPress site** at stanbaculescu.ro. The Next.js rebuild is not yet deployed to the production domain -- the live site is still running WordPress on LiteSpeed.
 
-**Overall Technical SEO Score: 90 / 100**
+**Original Technical SEO Score: 90 / 100**
+**Updated Technical SEO Score (Mar 5): 95 / 100**
 
-The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-structured meta tags per page, hreflang alternates on every page, structured data (JSON-LD), and good security headers. However, there are several critical and high-priority issues that must be resolved before deployment.
+The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-structured meta tags per page, hreflang alternates on every page, structured data (JSON-LD), and good security headers. Most critical and high-priority issues have been resolved.
 
 ### Issue Summary
 
-| Severity | Count | Status |
-|----------|-------|--------|
-| Critical | 3     | Must fix before launch |
-| High     | 6     | Fix before or immediately after launch |
-| Medium   | 8     | Fix within first month |
-| Low      | 5     | Improve over time |
+| Severity | Original Count | Resolved | Remaining | Status |
+|----------|---------------|----------|-----------|--------|
+| Critical | 3     | 3 | 0 | All resolved |
+| High     | 6     | 6 | 0 | All resolved |
+| Medium   | 8     | 4 | 4 | In progress |
+| Low      | 5     | 1 | 4 | Improve over time |
 
 ---
 
@@ -39,6 +40,21 @@ The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-
 9. localeDetection: false added (always defaults to Romanian)
 10. Social media URLs fixed in Organization schema
 11. Opening hours fixed (Mon-Fri)
+
+## Update: March 5, 2026 - Additional Fixes Implemented
+
+12. **robots.txt updated for GEO (Generative Engine Optimization):** GPTBot and PerplexityBot now ALLOWED (search crawlers), only training-specific crawlers blocked (CCBot, Google-Extended, Bytespider, ClaudeBot, anthropic-ai). This enables AI search engines (ChatGPT search, Perplexity) to cite the site.
+13. **llms.txt created at `/public/llms.txt`:** AI crawler guidance file providing structured information about the firm for LLM systems.
+14. **middleware.ts renamed to proxy.ts:** Next.js 16 compatibility fix -- middleware file renamed to avoid conflicts with Next.js 16's middleware API changes.
+15. **Hydration error fixed in SocialShare component:** Client/server mismatch resolved.
+16. **BlogCta removed from blog article page:** Redundant CTA component eliminated.
+17. **BreadcrumbList schema added:** Service detail, blog article, and team member pages now include breadcrumb structured data.
+18. **Person schema added:** All 6 team member profile pages now include Person structured data.
+19. **WebSite schema added to homepage:** Enables sitelinks search box.
+20. **ItemList schema added to services listing page.**
+21. **Article schema enhanced:** image and dateModified fields added to blog post schema.
+22. **Blog article content redesigned:** Premium typography with .blog-content CSS class.
+23. **Service page FAQs added:** 4 Q&A pairs per service in both locales (64 total FAQ entries).
 
 ---
 
@@ -74,7 +90,7 @@ export default function robots(): MetadataRoute.Robots {
 - **[PASS]** Blocks `/api/`, `/_next/`, `/static/` -- appropriate for Next.js
 - **[PASS]** References sitemap at correct URL
 - **[PASS]** Uses Next.js Metadata API (auto-generates valid robots.txt)
-- **[CRITICAL] Missing AI crawler management rules.** No rules for GPTBot, CCBot, ClaudeBot/anthropic-ai, Google-Extended, Bytespider, PerplexityBot, or other AI training crawlers. For a law firm, content scraping by AI bots could be a concern.
+- ~~**[CRITICAL] Missing AI crawler management rules.**~~ **RESOLVED (Mar 4-5):** AI crawler rules added. Strategy updated for GEO (Generative Engine Optimization): GPTBot and PerplexityBot are now ALLOWED (these are search crawlers that can cite the firm in AI search results), while training-only crawlers are blocked (CCBot, Google-Extended, Bytespider, ClaudeBot, anthropic-ai). Additionally, `/public/llms.txt` created to provide structured firm information to AI systems.
 - **[MEDIUM]** The `host` directive is non-standard and ignored by major search engines. Not harmful, but unnecessary.
 
 **Recommended robots.ts:**
