@@ -29,7 +29,7 @@ const authorData: Record<string, { role: string; bio: string }> = {
     role: 'Avocat Colaborator',
     bio: 'Avocat in Baroul Satu Mare cu experienta in drept comercial si executare silita. Colaborator al SCA Stan-Baculescu.',
   },
-  'Diana Veres': {
+  'Diana Veress': {
     role: 'Relatii Clienti',
     bio: 'Responsabila de relatia cu clientii la SCA Stan-Baculescu, asigurand o comunicare eficienta si un serviciu de calitate.',
   },
