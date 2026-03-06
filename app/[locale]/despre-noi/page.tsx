@@ -6,6 +6,7 @@ import { AboutValues } from '@/components/about/about-values';
 import { AboutPrinciples } from '@/components/about/about-principles';
 import { AboutMethodology } from '@/components/about/about-methodology';
 import { AboutCta } from '@/components/about/about-cta';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -18,12 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Despre Noi | SCA Stan-Baculescu'
-      : 'About Us | Stan-Baculescu Law Firm';
+      ? 'Despre Noi - Avocati cu Experienta | SCA Stan-Baculescu'
+      : 'About Us - Experienced Lawyers | SCA Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Descopera povestea, valorile si metodologia de lucru a SCA Stan-Baculescu din Satu Mare. Peste 15 ani de experienta in servicii juridice.'
-      : 'Discover the story, values, and working methodology of Stan-Baculescu Law Firm in Satu Mare. Over 15 years of experience in legal services.';
+      ? 'Descopera povestea, valorile si metodologia de lucru a SCA Stan-Baculescu din Satu Mare. Peste 20 de ani de experienta in servicii juridice de excelenta.'
+      : 'Discover the story, values and working methodology of Stan-Baculescu Law Firm in Satu Mare. Over 20 years of experience delivering excellent legal services.';
 
   return {
     title,
@@ -51,13 +52,21 @@ export default async function AboutPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main>
-      <AboutHero />
-      <AboutHistory />
-      <AboutValues />
-      <AboutPrinciples />
-      <AboutMethodology />
-      <AboutCta />
-    </main>
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: locale === 'ro' ? 'Despre Noi' : 'About Us' },
+        ]}
+      />
+      <main>
+        <AboutHero />
+        <AboutHistory />
+        <AboutValues />
+        <AboutPrinciples />
+        <AboutMethodology />
+        <AboutCta />
+      </main>
+    </>
   );
 }

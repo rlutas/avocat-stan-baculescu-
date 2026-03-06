@@ -10,9 +10,6 @@ const staticPages = [
   { path: '/servicii', lastmod: '2026-02-15' },
   { path: '/blog', lastmod: '2026-01-15' },
   { path: '/contact', lastmod: '2026-03-01' },
-  { path: '/politica-confidentialitate', lastmod: '2025-12-01' },
-  { path: '/termeni', lastmod: '2025-12-01' },
-  { path: '/politica-cookies', lastmod: '2025-12-01' },
 ];
 
 // Service pages

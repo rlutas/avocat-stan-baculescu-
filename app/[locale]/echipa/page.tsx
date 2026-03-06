@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { TeamHero, TeamGrid, TeamCta } from '@/components/team';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -13,8 +14,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Echipa Noastra | SCA Stan-Baculescu'
-      : 'Our Team | Stan-Baculescu Law Firm';
+      ? 'Echipa de Avocati Satu Mare | SCA Stan-Baculescu'
+      : 'Our Legal Team in Satu Mare | SCA Stan-Baculescu';
   const description =
     locale === 'ro'
       ? 'Cunoasteti echipa de avocati profesionisti de la SCA Stan-Baculescu. Avocati cu experienta in drept civil, penal, familiei si comercial din Satu Mare.'
@@ -45,11 +46,44 @@ export default async function TeamPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const teamMemberIds = [
+    'camelia-stan',
+    'vlad-baculescu',
+    'diana-chincea',
+    'cristina-blan',
+    'alexandra-rusu',
+    'diana-veres',
+  ];
+
+  const teamListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: locale === 'ro' ? 'Echipa de Avocati' : 'Legal Team',
+    numberOfItems: teamMemberIds.length,
+    itemListElement: teamMemberIds.map((memberId, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${BASE_URL}/${locale}/echipa/${memberId}`,
+    })),
+  };
+
   return (
-    <main>
-      <TeamHero />
-      <TeamGrid />
-      <TeamCta />
-    </main>
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: locale === 'ro' ? 'Echipa' : 'Team' },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamListJsonLd) }}
+      />
+      <main>
+        <TeamHero />
+        <TeamGrid />
+        <TeamCta />
+      </main>
+    </>
   );
 }

@@ -181,7 +181,7 @@ export function MemberAnimatedSections({
                       {image && (
                         <Image
                           src={image}
-                          alt=""
+                          alt={spec}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                           sizes="(max-width: 640px) 100vw, 50vw"

@@ -69,7 +69,7 @@ export function HomeServices() {
                     {service.image && (
                       <Image
                         src={service.image}
-                        alt=""
+                        alt={tServices(`${service.id}.title`)}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 640px) 100vw, 50vw"

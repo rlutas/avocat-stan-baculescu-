@@ -7,6 +7,7 @@ import {
   ContactMap,
 } from '@/components/contact';
 import { ScrollAnimate } from '@/components/ui/scroll-animate';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -53,6 +54,12 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: 'Contact' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

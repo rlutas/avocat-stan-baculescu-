@@ -3,6 +3,10 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   trailingSlash: false,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
+  },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;

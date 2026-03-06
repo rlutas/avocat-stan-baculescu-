@@ -129,7 +129,7 @@ export function ServicesGrid() {
                     {/* Background service image */}
                     <Image
                       src={service.image}
-                      alt=""
+                      alt={t(`services.${service.id}.title`)}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 640px) 100vw, 50vw"

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServicesHero, ServicesGrid, ServicesCta } from '@/components/services';
+import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -13,12 +14,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Servicii Juridice | SCA Stan-Baculescu'
-      : 'Legal Services | Stan-Baculescu Law Firm';
+      ? 'Servicii Juridice Complete Satu Mare | SCA Stan-Baculescu'
+      : 'Complete Legal Services Satu Mare | SCA Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Descopera serviciile juridice oferite de SCA Stan-Baculescu: malpraxis medical, drept civil, penal, familiei, muncii, comercial, accidente rutiere si drept administrativ.'
-      : 'Discover the legal services offered by Stan-Baculescu Law Firm: medical malpractice, civil law, criminal law, family law, labor law, commercial law, traffic accidents, and administrative law.';
+      ? 'Servicii juridice oferite de SCA Stan-Baculescu in Satu Mare: malpraxis medical, drept civil, penal, familiei, muncii, comercial si administrativ.'
+      : 'Legal services by Stan-Baculescu Law Firm in Satu Mare: medical malpractice, civil, criminal, family, labor, commercial and administrative law.';
 
   return {
     title,
@@ -47,12 +48,12 @@ export default async function ServicesPage({ params }: Props) {
 
   const title =
     locale === 'ro'
-      ? 'Servicii Juridice | SCA Stan-Baculescu'
-      : 'Legal Services | Stan-Baculescu Law Firm';
+      ? 'Servicii Juridice Complete Satu Mare | SCA Stan-Baculescu'
+      : 'Complete Legal Services Satu Mare | SCA Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Descopera serviciile juridice oferite de SCA Stan-Baculescu: malpraxis medical, drept civil, penal, familiei, muncii, comercial, accidente rutiere si drept administrativ.'
-      : 'Discover the legal services offered by Stan-Baculescu Law Firm: medical malpractice, civil law, criminal law, family law, labor law, commercial law, traffic accidents, and administrative law.';
+      ? 'Servicii juridice oferite de SCA Stan-Baculescu in Satu Mare: malpraxis medical, drept civil, penal, familiei, muncii, comercial si administrativ.'
+      : 'Legal services by Stan-Baculescu Law Firm in Satu Mare: medical malpractice, civil, criminal, family, labor, commercial and administrative law.';
 
   const serviceIds = [
     'malpraxis-medical',
@@ -80,6 +81,12 @@ export default async function ServicesPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: locale === 'ro' ? 'Acasă' : 'Home', url: `https://stanbaculescu.ro/${locale}` },
+          { name: locale === 'ro' ? 'Servicii' : 'Services' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListJsonLd) }}

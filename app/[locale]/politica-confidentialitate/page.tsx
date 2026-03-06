@@ -30,6 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
       url: `${BASE_URL}/${locale}/politica-confidentialitate`,
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
       canonical: `${BASE_URL}/${locale}/politica-confidentialitate`,
       languages: {

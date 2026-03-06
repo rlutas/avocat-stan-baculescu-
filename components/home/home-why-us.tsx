@@ -42,7 +42,6 @@ export function HomeWhyUs() {
                 fill
                 className="object-cover object-left"
                 sizes="(max-width: 1024px) 100vw, 55vw"
-                priority
               />
 
               {/* Gradient overlay - darker at bottom for text, lighter at top to show photo */}
