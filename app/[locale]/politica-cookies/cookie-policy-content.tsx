@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
-import { ArrowLeft, Cookie, Settings, BarChart3, Megaphone, Clock, Shield, Mail } from 'lucide-react';
+import { ArrowLeft, Cookie, Settings, BarChart3, Megaphone, Clock, Shield, Mail, Share2 } from 'lucide-react';
 
 export default function CookiePolicyContent() {
   const t = useTranslations('CookiePolicy');
@@ -68,6 +68,11 @@ export default function CookiePolicyContent() {
           purpose: t('sections.analyticsCookies.cookies.gaId.purpose'),
           duration: t('sections.analyticsCookies.cookies.gaId.duration'),
         },
+        {
+          name: '_gid',
+          purpose: t('sections.analyticsCookies.cookies.gid.purpose'),
+          duration: t('sections.analyticsCookies.cookies.gid.duration'),
+        },
       ],
     },
     {
@@ -75,6 +80,29 @@ export default function CookiePolicyContent() {
       icon: Megaphone,
       title: t('sections.marketingCookies.title'),
       content: t('sections.marketingCookies.content'),
+      cookies: [
+        {
+          name: '_fbp',
+          purpose: t('sections.marketingCookies.cookies.fbp.purpose'),
+          duration: t('sections.marketingCookies.cookies.fbp.duration'),
+        },
+        {
+          name: '_fbc',
+          purpose: t('sections.marketingCookies.cookies.fbc.purpose'),
+          duration: t('sections.marketingCookies.cookies.fbc.duration'),
+        },
+      ],
+    },
+    {
+      id: 'thirdPartyServices',
+      icon: Share2,
+      title: t('sections.thirdPartyServices.title'),
+      content: t('sections.thirdPartyServices.content'),
+      items: [
+        t('sections.thirdPartyServices.items.item1'),
+        t('sections.thirdPartyServices.items.item2'),
+        t('sections.thirdPartyServices.items.item3'),
+      ],
     },
     {
       id: 'manageCookies',

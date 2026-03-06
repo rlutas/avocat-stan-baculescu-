@@ -996,11 +996,11 @@
     },
     "backToHome": "Inapoi la pagina principala",
     "lastUpdated": "Ultima actualizare",
-    "lastUpdatedDate": "15 Ianuarie 2026",
+    "lastUpdatedDate": "6 Martie 2026",
     "sections": {
       "introduction": {
         "title": "1. Introducere",
-        "content": "Societatea Civila de Avocati Stan-Baculescu (denumita in continuare \"Cabinetul\", \"noi\" sau \"nostru\") se angajeaza sa protejeze confidentialitatea si securitatea datelor dumneavoastra personale. Aceasta Politica de Confidentialitate descrie modul in care colectam, utilizam, stocam si protejam informatiile dumneavoastra atunci cand vizitati site-ul nostru web sau utilizati serviciile noastre juridice."
+        "content": "Societatea Civila de Avocati Stan-Baculescu (denumita in continuare \"Cabinetul\", \"noi\" sau \"nostru\"), cu sediul in Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare, in calitate de operator de date cu caracter personal, se angajeaza sa protejeze confidentialitatea si securitatea datelor dumneavoastra personale in conformitate cu Regulamentul (UE) 2016/679 (GDPR) si Legea nr. 190/2018 privind masuri de punere in aplicare a GDPR."
       },
       "dataCollected": {
         "title": "2. Date Personale Colectate",
@@ -1017,10 +1017,10 @@
         "title": "3. Scopul Prelucrarii Datelor",
         "content": "Prelucram datele dumneavoastra personale in urmatoarele scopuri:",
         "items": {
-          "item1": "Furnizarea serviciilor juridice solicitate si gestionarea relatiei contractuale cu clientii",
-          "item2": "Raspunsul la intrebarile si solicitarile primite prin formularul de contact",
-          "item3": "Imbunatatirea site-ului web si a experientei utilizatorilor (cu consimtamantul dumneavoastra pentru cookie-uri de analiza)",
-          "item4": "Indeplinirea obligatiilor legale, inclusiv cele fiscale si contabile"
+          "item1": "Furnizarea serviciilor juridice solicitate si gestionarea relatiei contractuale cu clientii (temei legal: executarea contractului - art. 6 alin. 1 lit. b GDPR)",
+          "item2": "Raspunsul la intrebarile si solicitarile primite prin formularul de contact (temei legal: interesul nostru legitim - art. 6 alin. 1 lit. f GDPR)",
+          "item3": "Analiza traficului si imbunatatirea site-ului web prin Google Analytics 4 si Google Tag Manager (temei legal: consimtamantul dumneavoastra - art. 6 alin. 1 lit. a GDPR)",
+          "item4": "Indeplinirea obligatiilor legale, inclusiv cele fiscale, contabile si profesionale (temei legal: obligatie legala - art. 6 alin. 1 lit. c GDPR)"
         }
       },
       "retention": {
@@ -1043,14 +1043,14 @@
         "title": "6. Partajarea cu Terti",
         "content": "Nu vindem si nu inchiriem datele dumneavoastra personale tertilor. Putem partaja date in urmatoarele situatii:",
         "items": {
-          "item1": "Cu furnizorii de servicii care ne ajuta sa operam site-ul web (de ex. hosting, analiza web) - acestia sunt obligati contractual sa protejeze datele",
-          "item2": "Cu autoritatile competente, atunci cand legea ne obliga",
-          "item3": "Pentru protejarea drepturilor, proprietatii sau sigurantei noastre sau a tertilor"
+          "item1": "Google LLC (Google Analytics 4, Google Tag Manager) — pentru analiza traficului pe site. Google proceseaza date conform Clauzelor Contractuale Standard (SCC) si Cadrul UE-SUA privind confidentialitatea datelor (EU-US Data Privacy Framework). Acord de prelucrare a datelor activ.",
+          "item2": "Vercel Inc. — pentru gazduirea si livrarea site-ului web. Datele tehnice (adresa IP, user agent) sunt procesate tranzitoriu pe serverele Vercel din UE si SUA, conform acordului de prelucrare a datelor.",
+          "item3": "Resend Inc. — pentru trimiterea emailurilor tranzactionale din formularul de contact. Datele din formular (nume, email, mesaj) sunt transmise catre serverele Resend pentru livrarea emailului, conform acordului de prelucrare a datelor."
         }
       },
       "contact": {
         "title": "7. Contact",
-        "content": "Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau pentru exercitarea drepturilor dumneavoastra, ne puteti contacta la adresa de email office@stanbaculescu.ro sau la sediul nostru din Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare."
+        "content": "Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau pentru exercitarea drepturilor dumneavoastra, ne puteti contacta la adresa de email office@stanbaculescu.ro sau la sediul nostru din Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare. Daca considerati ca drepturile dumneavoastra privind protectia datelor au fost incalcate, aveti dreptul de a depune o plangere la Autoritatea Nationala de Supraveghere a Prelucrarii Datelor cu Caracter Personal (ANSPDCP), B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, Bucuresti, email: anspdcp@dataprotection.ro, website: www.dataprotection.ro."
       }
     },
     "dataProtection": {
@@ -1176,7 +1176,7 @@
     },
     "backToHome": "Inapoi la pagina principala",
     "lastUpdated": "Ultima actualizare",
-    "lastUpdatedDate": "15 Ianuarie 2026",
+    "lastUpdatedDate": "6 Martie 2026",
     "table": {
       "name": "Nume Cookie",
       "purpose": "Scop",
@@ -1211,7 +1211,7 @@
       },
       "analyticsCookies": {
         "title": "4. Cookie-uri de Analiza",
-        "content": "Aceste cookie-uri ne permit sa masuram si sa analizam modul in care vizitatorii interactioneaza cu site-ul nostru. Ne ajuta sa intelegem care pagini sunt cele mai populare, cum navigheaza vizitatorii pe site si daca intampina erori. Toate datele colectate de aceste cookie-uri sunt agregate si anonime. Folosim Google Analytics pentru aceasta.",
+        "content": "Aceste cookie-uri ne permit sa masuram si sa analizam modul in care vizitatorii interactioneaza cu site-ul nostru. Ne ajuta sa intelegem care pagini sunt cele mai populare, cum navigheaza vizitatorii pe site si daca intampina erori. Toate datele colectate de aceste cookie-uri sunt agregate si anonime. Folosim Google Tag Manager (GTM) pentru gestionarea scripturilor si Google Analytics 4 (GA4) pentru analiza traficului.",
         "cookies": {
           "ga": {
             "purpose": "Folosit de Google Analytics pentru a distinge utilizatorii unici",
@@ -1220,15 +1220,38 @@
           "gaId": {
             "purpose": "Folosit de Google Analytics pentru a mentine starea sesiunii",
             "duration": "2 ani"
+          },
+          "gid": {
+            "purpose": "Folosit de Google Analytics pentru a distinge utilizatorii unici pe parcursul unei zile",
+            "duration": "24 ore"
           }
         }
       },
       "marketingCookies": {
         "title": "5. Cookie-uri de Marketing",
-        "content": "In prezent, site-ul nostru nu utilizeaza cookie-uri de marketing sau publicitate. Daca vom introduce astfel de cookie-uri in viitor, vom actualiza aceasta politica si vom solicita consimtamantul dumneavoastra inainte de a le activa."
+        "content": "Aceste cookie-uri sunt utilizate pentru a va afisa reclame relevante si pentru a masura eficacitatea campaniilor publicitare. Se activeaza doar cu consimtamantul dumneavoastra explicit. In prezent, folosim Facebook Pixel (Meta) in aceasta categorie.",
+        "cookies": {
+          "fbp": {
+            "purpose": "Folosit de Facebook/Meta Pixel pentru a identifica browserul in vederea afisarii de reclame relevante",
+            "duration": "3 luni"
+          },
+          "fbc": {
+            "purpose": "Stocheaza identificatorul de click din reclamele Facebook pentru masurarea conversiilor",
+            "duration": "2 ani"
+          }
+        }
+      },
+      "thirdPartyServices": {
+        "title": "6. Tehnologii si Servicii Terte",
+        "content": "Pe langa cookie-uri, site-ul nostru utilizeaza urmatoarele servicii terte pentru functionare si imbunatatire:",
+        "items": {
+          "item1": "Google Tag Manager (GTM) — un sistem de gestionare a etichetelor (tag-uri) care ne permite sa administram scripturile de pe site. GTM nu seteaza cookie-uri proprii si nu colecteaza date personale in mod direct, dar faciliteaza incarcarea altor servicii (Google Analytics, Facebook Pixel) care pot seta cookie-uri.",
+          "item2": "Vercel — platforma de hosting pe care este gazduit site-ul nostru. Vercel nu seteaza cookie-uri de tracking pe dispozitivul dumneavoastra. Datele tehnice necesare livrarii paginilor web (adresa IP, user agent) sunt procesate tranzitoriu conform politicii de confidentialitate a Vercel Inc.",
+          "item3": "Resend — serviciul de email tranzactional pe care il folosim pentru procesarea mesajelor trimise prin formularul de contact. Resend nu seteaza cookie-uri pe site-ul nostru. Datele din formular (nume, email, mesaj) sunt transmise catre serverele Resend pentru livrarea emailului, conform acordului de prelucrare a datelor incheiat cu acest furnizor."
+        }
       },
       "manageCookies": {
-        "title": "6. Cum puteti gestiona Cookie-urile",
+        "title": "7. Cum puteti gestiona Cookie-urile",
         "content": "Aveti control deplin asupra cookie-urilor pe care le acceptati. Puteti gestiona preferintele dumneavoastra in urmatoarele moduri:",
         "items": {
           "item1": "Prin bannerul de consimtamant: La prima vizita pe site, vi se afiseaza un banner care va permite sa acceptati toate cookie-urile, sa le refuzati pe cele neesentiale sau sa va personalizati alegerea.",
@@ -1238,11 +1261,11 @@
         }
       },
       "retention": {
-        "title": "7. Perioada de Stocare",
-        "content": "Cookie-urile esentiale si de preferinte sunt stocate timp de 1 an. Cookie-urile de analiza (Google Analytics) sunt stocate timp de 2 ani. Puteti sterge cookie-urile oricand din setarile browserului dumneavoastra sau revocand consimtamantul prin setarile cookie-urilor de pe site-ul nostru."
+        "title": "8. Perioada de Stocare",
+        "content": "Cookie-urile esentiale si de preferinte sunt stocate timp de 1 an. Cookie-urile de analiza (Google Analytics) sunt stocate timp de 2 ani. Cookie-urile de marketing (Facebook Pixel) sunt stocate intre 3 luni si 2 ani, in functie de tipul cookie-ului. Puteti sterge cookie-urile oricand din setarile browserului dumneavoastra sau revocand consimtamantul prin setarile cookie-urilor de pe site-ul nostru."
       },
       "contact": {
-        "title": "8. Contact",
+        "title": "9. Contact",
         "content": "Pentru orice intrebari sau preocupari legate de utilizarea cookie-urilor pe site-ul nostru, ne puteti contacta la adresa de email office@stanbaculescu.ro sau prin formularul de contact disponibil pe site."
       }
     },

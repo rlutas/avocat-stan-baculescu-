@@ -996,11 +996,11 @@
     },
     "backToHome": "Back to homepage",
     "lastUpdated": "Last updated",
-    "lastUpdatedDate": "January 15, 2026",
+    "lastUpdatedDate": "March 6, 2026",
     "sections": {
       "introduction": {
         "title": "1. Introduction",
-        "content": "Stan-Baculescu Law Firm (hereinafter referred to as \"the Firm\", \"we\" or \"our\") is committed to protecting the privacy and security of your personal data. This Privacy Policy describes how we collect, use, store, and protect your information when you visit our website or use our legal services."
+        "content": "Stan-Baculescu Law Firm (hereinafter referred to as \"the Firm\", \"we\" or \"our\"), headquartered at Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare, as a personal data controller, is committed to protecting the privacy and security of your personal data in accordance with Regulation (EU) 2016/679 (GDPR) and Romanian Law No. 190/2018 on measures for the implementation of GDPR."
       },
       "dataCollected": {
         "title": "2. Personal Data Collected",
@@ -1017,10 +1017,10 @@
         "title": "3. Purpose of Data Processing",
         "content": "We process your personal data for the following purposes:",
         "items": {
-          "item1": "Providing requested legal services and managing the contractual relationship with clients",
-          "item2": "Responding to inquiries and requests received through the contact form",
-          "item3": "Improving the website and user experience (with your consent for analytics cookies)",
-          "item4": "Fulfilling legal obligations, including tax and accounting requirements"
+          "item1": "Providing requested legal services and managing the contractual relationship with clients (legal basis: contract performance - Art. 6(1)(b) GDPR)",
+          "item2": "Responding to inquiries and requests received through the contact form (legal basis: our legitimate interest - Art. 6(1)(f) GDPR)",
+          "item3": "Traffic analysis and website improvement through Google Analytics 4 and Google Tag Manager (legal basis: your consent - Art. 6(1)(a) GDPR)",
+          "item4": "Fulfilling legal obligations, including tax, accounting, and professional requirements (legal basis: legal obligation - Art. 6(1)(c) GDPR)"
         }
       },
       "retention": {
@@ -1043,14 +1043,14 @@
         "title": "6. Sharing with Third Parties",
         "content": "We do not sell or rent your personal data to third parties. We may share data in the following situations:",
         "items": {
-          "item1": "With service providers who help us operate the website (e.g., hosting, web analytics) - they are contractually obligated to protect the data",
-          "item2": "With competent authorities when required by law",
-          "item3": "To protect our rights, property, or safety, or that of third parties"
+          "item1": "Google LLC (Google Analytics 4, Google Tag Manager) — for website traffic analysis. Google processes data in accordance with Standard Contractual Clauses (SCCs) and the EU-US Data Privacy Framework. Active data processing agreement in place.",
+          "item2": "Vercel Inc. — for website hosting and delivery. Technical data (IP address, user agent) is processed transiently on Vercel's servers in the EU and USA, in accordance with the data processing agreement.",
+          "item3": "Resend Inc. — for sending transactional emails from the contact form. Form data (name, email, message) is transmitted to Resend's servers for email delivery, in accordance with the data processing agreement."
         }
       },
       "contact": {
         "title": "7. Contact",
-        "content": "For any questions or requests related to this Privacy Policy or to exercise your rights, you can contact us at the email address office@stanbaculescu.ro or at our office at Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare."
+        "content": "For any questions or requests related to this Privacy Policy or to exercise your rights, you can contact us at the email address office@stanbaculescu.ro or at our office at Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare. If you believe your data protection rights have been violated, you have the right to file a complaint with the National Supervisory Authority for Personal Data Processing (ANSPDCP), B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, Bucharest, Romania, email: anspdcp@dataprotection.ro, website: www.dataprotection.ro."
       }
     },
     "dataProtection": {
@@ -1176,7 +1176,7 @@
     },
     "backToHome": "Back to homepage",
     "lastUpdated": "Last updated",
-    "lastUpdatedDate": "January 15, 2026",
+    "lastUpdatedDate": "March 6, 2026",
     "table": {
       "name": "Cookie Name",
       "purpose": "Purpose",
@@ -1211,7 +1211,7 @@
       },
       "analyticsCookies": {
         "title": "4. Analytics Cookies",
-        "content": "These cookies allow us to measure and analyze how visitors interact with our website. They help us understand which pages are most popular, how visitors navigate the site, and if they encounter errors. All data collected by these cookies is aggregated and anonymous. We use Google Analytics for this purpose.",
+        "content": "These cookies allow us to measure and analyze how visitors interact with our website. They help us understand which pages are most popular, how visitors navigate the site, and if they encounter errors. All data collected by these cookies is aggregated and anonymous. We use Google Tag Manager (GTM) for script management and Google Analytics 4 (GA4) for traffic analysis.",
         "cookies": {
           "ga": {
             "purpose": "Used by Google Analytics to distinguish unique users",
@@ -1220,15 +1220,38 @@
           "gaId": {
             "purpose": "Used by Google Analytics to maintain session state",
             "duration": "2 years"
+          },
+          "gid": {
+            "purpose": "Used by Google Analytics to distinguish unique users throughout a single day",
+            "duration": "24 hours"
           }
         }
       },
       "marketingCookies": {
         "title": "5. Marketing Cookies",
-        "content": "Currently, our website does not use marketing or advertising cookies. If we introduce such cookies in the future, we will update this policy and request your consent before activating them."
+        "content": "These cookies are used to display relevant advertisements and to measure the effectiveness of advertising campaigns. They are only activated with your explicit consent. Currently, we use Facebook Pixel (Meta) in this category.",
+        "cookies": {
+          "fbp": {
+            "purpose": "Used by Facebook/Meta Pixel to identify the browser for displaying relevant advertisements",
+            "duration": "3 months"
+          },
+          "fbc": {
+            "purpose": "Stores the click identifier from Facebook ads for conversion measurement",
+            "duration": "2 years"
+          }
+        }
+      },
+      "thirdPartyServices": {
+        "title": "6. Technologies and Third-Party Services",
+        "content": "In addition to cookies, our website uses the following third-party services for operation and improvement:",
+        "items": {
+          "item1": "Google Tag Manager (GTM) — a tag management system that allows us to manage scripts on the site. GTM does not set its own cookies and does not directly collect personal data, but it facilitates the loading of other services (Google Analytics, Facebook Pixel) that may set cookies.",
+          "item2": "Vercel — the hosting platform on which our website is hosted. Vercel does not set tracking cookies on your device. Technical data necessary for delivering web pages (IP address, user agent) is processed transiently according to Vercel Inc.'s privacy policy.",
+          "item3": "Resend — the transactional email service we use to process messages sent through the contact form. Resend does not set cookies on our website. Form data (name, email, message) is transmitted to Resend's servers for email delivery, in accordance with the data processing agreement entered into with this provider."
+        }
       },
       "manageCookies": {
-        "title": "6. How to Manage Cookies",
+        "title": "7. How to Manage Cookies",
         "content": "You have full control over the cookies you accept. You can manage your preferences in the following ways:",
         "items": {
           "item1": "Through the consent banner: On your first visit to the site, a banner is displayed allowing you to accept all cookies, reject non-essential ones, or customize your choice.",
@@ -1238,11 +1261,11 @@
         }
       },
       "retention": {
-        "title": "7. Retention Period",
-        "content": "Essential and preference cookies are stored for 1 year. Analytics cookies (Google Analytics) are stored for 2 years. You can delete cookies at any time from your browser settings or by revoking consent through the cookie settings on our website."
+        "title": "8. Retention Period",
+        "content": "Essential and preference cookies are stored for 1 year. Analytics cookies (Google Analytics) are stored for 2 years. Marketing cookies (Facebook Pixel) are stored between 3 months and 2 years, depending on the cookie type. You can delete cookies at any time from your browser settings or by revoking consent through the cookie settings on our website."
       },
       "contact": {
-        "title": "8. Contact",
+        "title": "9. Contact",
         "content": "For any questions or concerns regarding the use of cookies on our website, you can contact us at the email address office@stanbaculescu.ro or through the contact form available on the site."
       }
     },
