@@ -113,74 +113,103 @@ const emailColors = {
   border: '#e5e7eb',
 };
 
-function buildNotificationEmail(data: ContactFormData, serviceLabel: string, timestamp: string): string {
-  return `<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+function darkModeHead(): string {
+  return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin:0;padding:0;background:${emailColors.bg};font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:${emailColors.text};">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${emailColors.bg};">
-    <tr><td align="center" style="padding:30px 20px;">
-      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:${emailColors.white};border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,42,82,0.08);">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
+  <style>
+    :root { color-scheme: light only; }
+    @media (prefers-color-scheme: dark) {
+      body, .email-body { background-color: #f8f9fa !important; }
+      .email-card { background-color: #ffffff !important; }
+      .email-text { color: #1f2937 !important; }
+      .email-label { color: #003a70 !important; }
+      .email-navy-bg { background-color: #002a52 !important; }
+    }
+  </style>`;
+}
 
-        <!-- Header with logo -->
-        <tr><td style="background:linear-gradient(135deg,${emailColors.navy} 0%,${emailColors.navyMid} 50%,${emailColors.navyLight} 100%);padding:28px 30px;text-align:center;">
-          <img src="${LOGO_URL}" alt="${FIRM.name}" width="160" height="53" style="display:inline-block;height:auto;max-width:160px;filter:brightness(0) invert(1);" />
+function buildNotificationEmail(data: ContactFormData, serviceLabel: string, timestamp: string): string {
+  const c = emailColors;
+  return `<!DOCTYPE html>
+<html lang="ro">
+<head>${darkModeHead()}</head>
+<body class="email-body" style="margin:0;padding:0;background-color:${c.bg};font-family:Georgia,'Times New Roman',serif;line-height:1.6;color:${c.text};-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:${c.bg};">
+    <tr><td align="center" style="padding:24px 16px;">
+      <table class="email-card" role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:${c.white};border-radius:8px;overflow:hidden;border:1px solid ${c.border};">
+
+        <!-- Header -->
+        <tr><td class="email-navy-bg" style="background-color:${c.navy};padding:24px 28px;text-align:center;">
+          <img src="${LOGO_URL}" alt="${FIRM.name}" width="150" height="50" style="display:inline-block;height:auto;max-width:150px;" />
         </td></tr>
+        <tr><td style="height:3px;background-color:${c.gold};"></td></tr>
 
-        <!-- Gold accent line -->
-        <tr><td style="height:3px;background:linear-gradient(90deg,${emailColors.gold},${emailColors.goldLight},${emailColors.gold});"></td></tr>
-
-        <!-- Title bar -->
-        <tr><td style="background:${emailColors.navy};padding:16px 30px;text-align:center;">
-          <span style="color:${emailColors.white};font-size:18px;font-weight:600;">Cerere noua de contact</span>
+        <!-- Title -->
+        <tr><td style="padding:20px 28px;text-align:center;border-bottom:1px solid ${c.border};">
+          <span style="font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:${c.navy};">Cerere noua de contact</span>
           <br/>
-          <span style="display:inline-block;margin-top:8px;background:rgba(208,156,17,0.15);color:${emailColors.goldLight};padding:5px 14px;border-radius:20px;font-size:12px;font-weight:500;">${timestamp}</span>
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:${c.gold};font-weight:600;">${timestamp}</span>
         </td></tr>
 
         <!-- Content -->
-        <tr><td style="padding:30px;">
+        <tr><td style="padding:24px 28px;">
 
-          <!-- Client name -->
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;border-bottom:1px solid ${emailColors.border};padding-bottom:16px;">
+          <!-- Name -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
             <tr>
-              <td style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;padding-bottom:4px;">Nume complet</td>
+              <td class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;padding-bottom:4px;">Nume</td>
             </tr>
             <tr>
-              <td style="font-size:17px;font-weight:600;color:${emailColors.navy};">${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}</td>
-            </tr>
-          </table>
-
-          <!-- Contact details row -->
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;border-bottom:1px solid ${emailColors.border};padding-bottom:16px;">
-            <tr>
-              <td width="50%" valign="top" style="padding-right:10px;">
-                <span style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;">Email</span><br/>
-                <a href="mailto:${escapeHtml(data.email)}" style="color:${emailColors.navyMid};text-decoration:none;font-size:15px;">${escapeHtml(data.email)}</a>
-              </td>
-              <td width="50%" valign="top" style="padding-left:10px;">
-                <span style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;">Telefon</span><br/>
-                <a href="tel:${escapeHtml(data.phone)}" style="color:${emailColors.navyMid};text-decoration:none;font-size:15px;">${escapeHtml(data.phone)}</a>
-              </td>
+              <td class="email-text" style="font-size:16px;font-weight:700;color:${c.navy};padding-bottom:12px;border-bottom:1px solid ${c.border};">${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}</td>
             </tr>
           </table>
 
-          <!-- Service + Urgency + Contact method -->
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;border-bottom:1px solid ${emailColors.border};padding-bottom:16px;">
+          <!-- Email -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
             <tr>
-              <td width="33%" valign="top">
-                <span style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;">Domeniu</span><br/>
-                <span style="font-size:14px;color:${emailColors.text};">${escapeHtml(serviceLabel)}</span>
+              <td class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;padding-bottom:4px;">Email</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:12px;border-bottom:1px solid ${c.border};">
+                <a href="mailto:${escapeHtml(data.email)}" style="color:${c.navyMid};text-decoration:none;font-size:15px;">${escapeHtml(data.email)}</a>
               </td>
-              <td width="33%" valign="top">
-                <span style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;">Urgenta</span><br/>
-                <span style="display:inline-block;margin-top:2px;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:600;${data.urgency === 'urgent' ? `background:#fef2f2;color:#dc2626;` : `background:${emailColors.bg};color:${emailColors.textLight};`}">${data.urgency === 'urgent' ? 'URGENT (24h)' : 'Normal (48h)'}</span>
+            </tr>
+          </table>
+
+          <!-- Phone -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
+            <tr>
+              <td class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;padding-bottom:4px;">Telefon</td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:12px;border-bottom:1px solid ${c.border};">
+                <a href="tel:${escapeHtml(data.phone)}" style="color:${c.navyMid};text-decoration:none;font-size:15px;">${escapeHtml(data.phone)}</a>
               </td>
-              <td width="33%" valign="top">
-                <span style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;">Contact preferat</span><br/>
-                <span style="font-size:14px;color:${emailColors.text};">${data.preferredContact === 'phone' ? 'Telefon' : data.preferredContact === 'email' ? 'Email' : 'WhatsApp'}</span>
+            </tr>
+          </table>
+
+          <!-- Service -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
+            <tr>
+              <td class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;padding-bottom:4px;">Domeniu</td>
+            </tr>
+            <tr>
+              <td class="email-text" style="font-size:15px;color:${c.text};padding-bottom:12px;border-bottom:1px solid ${c.border};">${escapeHtml(serviceLabel)}</td>
+            </tr>
+          </table>
+
+          <!-- Urgency + Contact preference -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
+            <tr>
+              <td width="50%" valign="top">
+                <span style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;">Urgenta</span><br/>
+                <span class="email-text" style="font-size:14px;color:${c.text};font-weight:600;">${data.urgency === 'urgent' ? 'URGENT (24h)' : 'Normal (48h)'}</span>
+              </td>
+              <td width="50%" valign="top">
+                <span style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;">Contact preferat</span><br/>
+                <span class="email-text" style="font-size:14px;color:${c.text};">${data.preferredContact === 'phone' ? 'Telefon' : data.preferredContact === 'email' ? 'Email' : 'WhatsApp'}</span>
               </td>
             </tr>
           </table>
@@ -188,11 +217,11 @@ function buildNotificationEmail(data: ContactFormData, serviceLabel: string, tim
           <!-- Message -->
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
             <tr>
-              <td style="font-size:11px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.8px;padding-bottom:8px;">Mesaj</td>
+              <td class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;padding-bottom:8px;">Mesaj</td>
             </tr>
             <tr>
-              <td style="background:${emailColors.bg};padding:20px;border-radius:8px;border-left:4px solid ${emailColors.gold};">
-                <span style="font-size:15px;color:${emailColors.text};line-height:1.7;">${escapeHtml(data.message).replace(/\n/g, '<br/>')}</span>
+              <td style="background-color:${c.bg};padding:16px;border-left:3px solid ${c.gold};">
+                <span class="email-text" style="font-size:14px;color:${c.text};line-height:1.7;">${escapeHtml(data.message).replace(/\n/g, '<br/>')}</span>
               </td>
             </tr>
           </table>
@@ -200,8 +229,8 @@ function buildNotificationEmail(data: ContactFormData, serviceLabel: string, tim
         </td></tr>
 
         <!-- Footer -->
-        <tr><td style="background:${emailColors.bg};padding:16px 30px;text-align:center;border-top:1px solid ${emailColors.border};">
-          <span style="font-size:12px;color:${emailColors.textLight};">Trimis prin formularul de contact de pe <a href="${BASE_URL}" style="color:${emailColors.navyMid};text-decoration:none;font-weight:600;">stanbaculescu.ro</a></span>
+        <tr><td style="background-color:${c.bg};padding:14px 28px;text-align:center;border-top:1px solid ${c.border};">
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:${c.textLight};">Formularul de contact &mdash; <a href="${BASE_URL}" style="color:${c.navyMid};text-decoration:none;font-weight:600;">stanbaculescu.ro</a></span>
         </td></tr>
 
       </table>
@@ -212,125 +241,95 @@ function buildNotificationEmail(data: ContactFormData, serviceLabel: string, tim
 }
 
 function buildConfirmationEmail(data: ContactFormData, serviceLabel: string, timestamp: string): string {
+  const c = emailColors;
   return `<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin:0;padding:0;background:${emailColors.bg};font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:${emailColors.text};">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${emailColors.bg};">
-    <tr><td align="center" style="padding:30px 20px;">
-      <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:${emailColors.white};border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,42,82,0.08);">
+<html lang="ro">
+<head>${darkModeHead()}</head>
+<body class="email-body" style="margin:0;padding:0;background-color:${c.bg};font-family:Georgia,'Times New Roman',serif;line-height:1.6;color:${c.text};-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:${c.bg};">
+    <tr><td align="center" style="padding:24px 16px;">
+      <table class="email-card" role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:${c.white};border-radius:8px;overflow:hidden;border:1px solid ${c.border};">
 
-        <!-- Header with logo -->
-        <tr><td style="background:linear-gradient(135deg,${emailColors.navy} 0%,${emailColors.navyMid} 50%,${emailColors.navyLight} 100%);padding:32px 30px;text-align:center;">
-          <img src="${LOGO_URL}" alt="${FIRM.name}" width="180" height="60" style="display:inline-block;height:auto;max-width:180px;filter:brightness(0) invert(1);" />
-          <br/>
-          <span style="display:inline-block;margin-top:8px;font-size:13px;color:rgba(255,255,255,0.7);letter-spacing:0.5px;">${FIRM.fullName}</span>
+        <!-- Header -->
+        <tr><td class="email-navy-bg" style="background-color:${c.navy};padding:28px 24px;text-align:center;">
+          <img src="${LOGO_URL}" alt="${FIRM.name}" width="160" height="53" style="display:inline-block;height:auto;max-width:160px;" />
         </td></tr>
-
-        <!-- Gold accent line -->
-        <tr><td style="height:3px;background:linear-gradient(90deg,${emailColors.gold},${emailColors.goldLight},${emailColors.gold});"></td></tr>
+        <tr><td style="height:3px;background-color:${c.gold};"></td></tr>
 
         <!-- Content -->
-        <tr><td style="padding:35px 30px 25px;">
+        <tr><td style="padding:28px 24px 20px;">
 
-          <!-- Greeting -->
-          <p style="font-size:16px;margin:0 0 20px;color:${emailColors.text};">
-            Stimate/Stimata <strong>${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}</strong>,
+          <p class="email-text" style="font-size:16px;margin:0 0 16px;color:${c.text};">
+            Stimate/Stimata <strong style="color:${c.navy};">${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)}</strong>,
           </p>
-          <p style="font-size:15px;margin:0 0 24px;color:${emailColors.text};line-height:1.7;">
+          <p class="email-text" style="font-size:15px;margin:0 0 24px;color:${c.text};line-height:1.7;">
             Va multumim pentru mesajul dumneavoastra. Cererea a fost inregistrata cu succes si va fi analizata de echipa noastra de avocati.
           </p>
 
-          <!-- Summary box -->
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;background:${emailColors.bg};border-radius:8px;border-left:4px solid ${emailColors.gold};overflow:hidden;">
-            <tr><td style="padding:20px;">
-              <span style="font-size:13px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.5px;">Rezumat cerere</span>
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;">
+          <!-- Summary -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;background-color:${c.bg};border-left:3px solid ${c.gold};">
+            <tr><td style="padding:16px;">
+              <span class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;">Rezumat cerere</span>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
                 <tr>
-                  <td style="padding:5px 0;font-size:14px;font-weight:600;color:${emailColors.navyMid};width:120px;">Domeniu:</td>
-                  <td style="padding:5px 0;font-size:14px;color:${emailColors.text};">${escapeHtml(serviceLabel)}</td>
+                  <td class="email-label" style="padding:4px 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;color:${c.navyMid};width:100px;">Domeniu:</td>
+                  <td class="email-text" style="padding:4px 0;font-size:13px;color:${c.text};">${escapeHtml(serviceLabel)}</td>
                 </tr>
                 <tr>
-                  <td style="padding:5px 0;font-size:14px;font-weight:600;color:${emailColors.navyMid};">Urgenta:</td>
-                  <td style="padding:5px 0;font-size:14px;color:${emailColors.text};">${data.urgency === 'urgent' ? 'Urgent (raspuns in 24h)' : 'Normal (raspuns in 48h)'}</td>
+                  <td class="email-label" style="padding:4px 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;color:${c.navyMid};">Urgenta:</td>
+                  <td class="email-text" style="padding:4px 0;font-size:13px;color:${c.text};">${data.urgency === 'urgent' ? 'Urgent (raspuns in 24h)' : 'Normal (raspuns in 48h)'}</td>
                 </tr>
                 <tr>
-                  <td style="padding:5px 0;font-size:14px;font-weight:600;color:${emailColors.navyMid};">Data:</td>
-                  <td style="padding:5px 0;font-size:14px;color:${emailColors.text};">${timestamp}</td>
+                  <td class="email-label" style="padding:4px 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;color:${c.navyMid};">Data:</td>
+                  <td class="email-text" style="padding:4px 0;font-size:13px;color:${c.text};">${timestamp}</td>
                 </tr>
               </table>
             </td></tr>
           </table>
 
           <!-- Next steps -->
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:24px;background:#fef9e7;border-radius:8px;overflow:hidden;">
-            <tr><td style="padding:20px;">
-              <span style="font-size:13px;font-weight:700;color:${emailColors.navyMid};text-transform:uppercase;letter-spacing:0.5px;">Pasii urmatori</span>
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
-                <tr>
-                  <td style="padding:4px 0;font-size:14px;color:${emailColors.text};line-height:1.6;">
-                    &#9670; Un avocat din echipa noastra va analiza cererea dumneavoastra
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:4px 0;font-size:14px;color:${emailColors.text};line-height:1.6;">
-                    &#9670; Veti fi contactat/a ${data.urgency === 'urgent' ? 'in maxim 24 de ore' : 'in maxim 48 de ore'} prin ${data.preferredContact === 'phone' ? 'telefon' : data.preferredContact === 'email' ? 'email' : 'WhatsApp'}
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:4px 0;font-size:14px;color:${emailColors.text};line-height:1.6;">
-                    &#9670; Prima consultatie telefonica este gratuita si fara obligatii
-                  </td>
-                </tr>
-              </table>
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
+            <tr><td style="padding:16px;background-color:#faf8f0;border-left:3px solid ${c.gold};">
+              <span class="email-label" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;color:${c.navyMid};text-transform:uppercase;letter-spacing:1px;">Pasii urmatori</span>
+              <p class="email-text" style="margin:10px 0 0;font-size:14px;color:${c.text};line-height:1.8;">
+                &#8226; Un avocat din echipa noastra va analiza cererea dumneavoastra<br/>
+                &#8226; Veti fi contactat/a ${data.urgency === 'urgent' ? 'in maxim 24 de ore' : 'in maxim 48 de ore'} prin ${data.preferredContact === 'phone' ? 'telefon' : data.preferredContact === 'email' ? 'email' : 'WhatsApp'}<br/>
+                &#8226; Prima consultatie telefonica este gratuita si fara obligatii
+              </p>
             </td></tr>
           </table>
 
-          <p style="font-size:14px;margin:0;color:${emailColors.textLight};line-height:1.6;">
-            Daca aveti intrebari urgente intre timp, nu ezitati sa ne contactati direct.
+          <p class="email-text" style="font-size:14px;margin:0;color:${c.textLight};line-height:1.6;">
+            Daca aveti intrebari urgente, nu ezitati sa ne contactati direct.
           </p>
 
         </td></tr>
 
-        <!-- Contact info bar -->
-        <tr><td style="background:${emailColors.navy};padding:20px 30px;text-align:center;">
-          <table role="presentation" cellpadding="0" cellspacing="0" align="center">
-            <tr>
-              <td style="padding:0 12px;">
-                <a href="tel:${FIRM.phoneTel}" style="color:${emailColors.goldLight};text-decoration:none;font-size:14px;font-weight:600;">${FIRM.phone}</a>
-              </td>
-              <td style="color:rgba(255,255,255,0.3);font-size:14px;">|</td>
-              <td style="padding:0 12px;">
-                <a href="mailto:${FIRM.email}" style="color:${emailColors.goldLight};text-decoration:none;font-size:14px;font-weight:600;">${FIRM.email}</a>
-              </td>
-            </tr>
-          </table>
-          <p style="margin:8px 0 0;font-size:13px;color:rgba(255,255,255,0.5);">${FIRM.address}</p>
-          <p style="margin:4px 0 0;font-size:12px;color:rgba(255,255,255,0.4);">${FIRM.hours}</p>
+        <!-- Contact bar -->
+        <tr><td class="email-navy-bg" style="background-color:${c.navy};padding:20px 24px;text-align:center;">
+          <a href="tel:${FIRM.phoneTel}" style="color:${c.goldLight};text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;">${FIRM.phone}</a>
+          <br/>
+          <a href="mailto:${FIRM.email}" style="color:${c.goldLight};text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:600;">${FIRM.email}</a>
+          <br/>
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:rgba(255,255,255,0.5);line-height:2;">${FIRM.address}</span>
+          <br/>
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:rgba(255,255,255,0.4);">${FIRM.hours}</span>
         </td></tr>
 
         <!-- Footer -->
-        <tr><td style="background:${emailColors.bg};padding:16px 30px;text-align:center;">
-          <span style="font-size:11px;color:${emailColors.textLight};">
-            Acest email a fost trimis automat. Va rugam sa nu raspundeti la acest mesaj.
+        <tr><td style="background-color:${c.bg};padding:14px 24px;text-align:center;">
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:${c.textLight};">
+            Acest email a fost trimis automat.
+            &copy; ${new Date().getFullYear()} ${FIRM.name}
           </span>
           <br/>
-          <span style="font-size:11px;color:${emailColors.textLight};">
-            &copy; ${new Date().getFullYear()} ${FIRM.name}. Toate drepturile rezervate.
+          <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;">
+            <a href="${FIRM.facebook}" style="color:${c.navyMid};text-decoration:none;">Facebook</a>
+            &nbsp;&middot;&nbsp;
+            <a href="${FIRM.instagram}" style="color:${c.navyMid};text-decoration:none;">Instagram</a>
+            &nbsp;&middot;&nbsp;
+            <a href="${BASE_URL}" style="color:${c.navyMid};text-decoration:none;">stanbaculescu.ro</a>
           </span>
-          <br/>
-          <table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin-top:10px;">
-            <tr>
-              <td style="padding:0 6px;"><a href="${FIRM.facebook}" style="color:${emailColors.navyMid};text-decoration:none;font-size:12px;">Facebook</a></td>
-              <td style="color:${emailColors.border};font-size:12px;">|</td>
-              <td style="padding:0 6px;"><a href="${FIRM.instagram}" style="color:${emailColors.navyMid};text-decoration:none;font-size:12px;">Instagram</a></td>
-              <td style="color:${emailColors.border};font-size:12px;">|</td>
-              <td style="padding:0 6px;"><a href="${BASE_URL}" style="color:${emailColors.navyMid};text-decoration:none;font-size:12px;">stanbaculescu.ro</a></td>
-            </tr>
-          </table>
         </td></tr>
 
       </table>
