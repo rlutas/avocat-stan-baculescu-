@@ -168,7 +168,7 @@
 | Transa | Procent | Suma (EUR + TVA) | Status |
 |---|---|---|---|
 | 1. Avans (la semnare) | 50% | 2,117.50 EUR | ✅ Platit |
-| 2. Aprobare design | 25% | 1,058.75 EUR | ✅ Platit |
+| 2. Aprobare design | 25% | 1,058.75 EUR | ❌ De achitat |
 | 3. Lansare website | 25% | 1,058.75 EUR | ❌ La lansare |
 | **Total** | **100%** | **4,235.00 EUR** | |
 

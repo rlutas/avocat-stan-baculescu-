@@ -103,9 +103,9 @@ Nota: Perioada de 12 luni incepe de la data lansarii website-ului.
 | Transa | Suma | Status |
 |--------|------|--------|
 | 1. Avans (la semnare) — 50% | 2,117.50 EUR | PLATIT |
-| 2. Aprobare design — 25% | 1,058.75 EUR | PLATIT |
+| 2. Aprobare design — 25% | 1,058.75 EUR | DE ACHITAT (la meeting) |
 | 3. Lansare website — 25% | 1,058.75 EUR | LA LANSARE |
-| **TOTAL** | **4,235.00 EUR** | **75% achitat** |
+| **TOTAL** | **4,235.00 EUR** | **50% achitat** |
 
 ---
 
@@ -140,8 +140,9 @@ Din contract (Art. 9):
 1. **Website-ul este 97-98% gata** — toate paginile, functionalitati si traduceri livrate
 2. **Am facut extra ~1,650 EUR** in lucrari neinclude in contract (SEO avansat, email system, animatii, AI readiness, FAQ-uri)
 3. **Ramane doar deploy-ul** — avem nevoie de acces DNS de la client
-4. **Transa finala** de 1,058.75 EUR se achita la lansare
-5. **Bonusurile** (9 articole + 60 posturi social media + ads + GMB) incep dupa lansare si sunt valabile 12 luni
+4. **Transa 2** (aprobare design) de 1,058.75 EUR — de achitat acum
+5. **Transa 3** (lansare) de 1,058.75 EUR — se achita la lansare
+6. **Bonusurile** (9 articole + 60 posturi social media + ads + GMB) incep dupa lansare si sunt valabile 12 luni
 
 ---
 
