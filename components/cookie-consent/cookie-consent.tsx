@@ -315,22 +315,23 @@ export function CookieConsent() {
               <>
                 <div className="mb-6 space-y-3">
                   {/* Essential cookies - always on */}
-                  <div className="group flex items-center justify-between rounded-xl border border-gray-200 bg-[#f8f9fa] p-4 transition-all duration-300">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-navy/10 transition-all duration-300 group-hover:bg-navy group-hover:text-white">
-                        <Shield className="h-5 w-5 text-navy group-hover:text-white" />
+                  <div className="group flex items-center justify-between rounded-xl border border-navy/15 bg-gradient-to-r from-navy/[0.04] to-transparent p-4 transition-all duration-300">
+                    <div className="flex items-center gap-4">
+                      <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy shadow-sm transition-all duration-300">
+                        <Shield className="h-5 w-5 text-gold" />
+                        <div className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-emerald-500" />
                       </div>
-                      <div>
-                        <h3 className="font-medium text-navy">
+                      <div className="min-w-0">
+                        <h3 className="text-sm font-semibold text-navy">
                           {t('categories.essential.title')}
                         </h3>
-                        <p className="text-xs text-[#4b5563]">
+                        <p className="mt-0.5 text-xs leading-relaxed text-[#6b7280]">
                           {t('categories.essential.description')}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-medium text-gold">
+                    <div className="ml-3 flex shrink-0 items-center gap-2">
+                      <span className="rounded-full bg-gold/15 px-2.5 py-0.5 text-[11px] font-semibold tracking-wide text-gold">
                         {t('alwaysOn')}
                       </span>
                       <ToggleSwitch checked={true} onChange={() => {}} disabled />
@@ -339,60 +340,84 @@ export function CookieConsent() {
 
                   {/* Analytics cookies */}
                   <div
-                    className="group flex cursor-pointer items-center justify-between rounded-xl border border-gray-200 p-4 transition-all duration-300 hover:border-gold hover:shadow-md"
+                    className={cn(
+                      'group flex cursor-pointer items-center justify-between rounded-xl border p-4 transition-all duration-300 hover:shadow-md',
+                      preferences.analytics
+                        ? 'border-gold/30 bg-gradient-to-r from-gold/[0.06] to-transparent'
+                        : 'border-gray-200 hover:border-gold/40'
+                    )}
                     onClick={() => togglePreference('analytics')}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-4">
                       <div className={cn(
-                        'flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-300',
+                        'relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl shadow-sm transition-all duration-300',
                         preferences.analytics
-                          ? 'bg-gold text-navy'
-                          : 'bg-[#fef9e7] text-gold group-hover:bg-gold group-hover:text-navy'
+                          ? 'bg-gold'
+                          : 'bg-[#f0f1f3] group-hover:bg-navy'
                       )}>
-                        <BarChart3 className="h-5 w-5" />
+                        <BarChart3 className={cn(
+                          'h-5 w-5 transition-colors duration-300',
+                          preferences.analytics
+                            ? 'text-navy'
+                            : 'text-[#6b7280] group-hover:text-gold'
+                        )} />
                       </div>
-                      <div>
-                        <h3 className="font-medium text-navy">
+                      <div className="min-w-0">
+                        <h3 className="text-sm font-semibold text-navy">
                           {t('categories.analytics.title')}
                         </h3>
-                        <p className="text-xs text-[#4b5563]">
+                        <p className="mt-0.5 text-xs leading-relaxed text-[#6b7280]">
                           {t('categories.analytics.description')}
                         </p>
                       </div>
                     </div>
-                    <ToggleSwitch
-                      checked={preferences.analytics}
-                      onChange={() => togglePreference('analytics')}
-                    />
+                    <div className="ml-3 shrink-0">
+                      <ToggleSwitch
+                        checked={preferences.analytics}
+                        onChange={() => togglePreference('analytics')}
+                      />
+                    </div>
                   </div>
 
                   {/* Marketing cookies */}
                   <div
-                    className="group flex cursor-pointer items-center justify-between rounded-xl border border-gray-200 p-4 transition-all duration-300 hover:border-gold hover:shadow-md"
+                    className={cn(
+                      'group flex cursor-pointer items-center justify-between rounded-xl border p-4 transition-all duration-300 hover:shadow-md',
+                      preferences.marketing
+                        ? 'border-gold/30 bg-gradient-to-r from-gold/[0.06] to-transparent'
+                        : 'border-gray-200 hover:border-gold/40'
+                    )}
                     onClick={() => togglePreference('marketing')}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-4">
                       <div className={cn(
-                        'flex h-10 w-10 items-center justify-center rounded-lg transition-all duration-300',
+                        'relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl shadow-sm transition-all duration-300',
                         preferences.marketing
-                          ? 'bg-gold text-navy'
-                          : 'bg-[#fef9e7] text-gold group-hover:bg-gold group-hover:text-navy'
+                          ? 'bg-gold'
+                          : 'bg-[#f0f1f3] group-hover:bg-navy'
                       )}>
-                        <Megaphone className="h-5 w-5" />
+                        <Megaphone className={cn(
+                          'h-5 w-5 transition-colors duration-300',
+                          preferences.marketing
+                            ? 'text-navy'
+                            : 'text-[#6b7280] group-hover:text-gold'
+                        )} />
                       </div>
-                      <div>
-                        <h3 className="font-medium text-navy">
+                      <div className="min-w-0">
+                        <h3 className="text-sm font-semibold text-navy">
                           {t('categories.marketing.title')}
                         </h3>
-                        <p className="text-xs text-[#4b5563]">
+                        <p className="mt-0.5 text-xs leading-relaxed text-[#6b7280]">
                           {t('categories.marketing.description')}
                         </p>
                       </div>
                     </div>
-                    <ToggleSwitch
-                      checked={preferences.marketing}
-                      onChange={() => togglePreference('marketing')}
-                    />
+                    <div className="ml-3 shrink-0">
+                      <ToggleSwitch
+                        checked={preferences.marketing}
+                        onChange={() => togglePreference('marketing')}
+                      />
+                    </div>
                   </div>
                 </div>
 
