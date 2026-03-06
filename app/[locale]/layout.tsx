@@ -7,7 +7,7 @@ import { routing } from '@/i18n/routing';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { CookieConsent } from '@/components/cookie-consent';
-import { GoogleAnalytics } from '@/components/analytics';
+import { GoogleAnalytics, GTMProvider } from '@/components/analytics';
 import { OrganizationSchema } from '@/components/seo';
 import '../globals.css';
 
@@ -130,6 +130,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
+          <GTMProvider />
           <GoogleAnalytics />
           <Header />
           <main>{children}</main>

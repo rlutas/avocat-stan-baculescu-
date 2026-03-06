@@ -15,6 +15,7 @@ import { LawIcon, serviceIconMap } from '@/components/icons';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { mapBlogSlugInPathname } from '@/lib/blog-slugs';
+import { trackPhoneClick, trackCtaClick } from '@/lib/analytics';
 
 const navItems = [
   { href: '/', key: 'home' },
@@ -238,7 +239,7 @@ export function Header() {
               asChild
               className="bg-gold font-semibold text-navy shadow-[var(--shadow-gold)] transition-all hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[var(--shadow-gold-lg)]"
             >
-              <Link href="/contact">{t('nav.contact')}</Link>
+              <Link href="/contact" onClick={() => trackCtaClick({ cta_text: t('nav.contact'), cta_location: 'header', cta_destination: '/contact', page_type: 'unknown' })}>{t('nav.contact')}</Link>
             </Button>
           </div>
 
@@ -415,7 +416,7 @@ export function Header() {
                     >
                       <Link
                         href="tel:+40745466720"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { trackPhoneClick('header', 'unknown'); setIsMobileMenuOpen(false); }}
                         className="flex items-center justify-center gap-2"
                       >
                         <Phone className="h-4 w-4" />
@@ -431,7 +432,7 @@ export function Header() {
                     >
                       <Link
                         href="/contact"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => { trackCtaClick({ cta_text: t('nav.contact'), cta_location: 'header', cta_destination: '/contact', page_type: 'unknown' }); setIsMobileMenuOpen(false); }}
                       >
                         {t('nav.contact')}
                       </Link>

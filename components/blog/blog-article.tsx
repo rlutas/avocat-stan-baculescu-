@@ -14,6 +14,9 @@ import { KeyPoints } from '@/components/blog/key-points';
 import { Callout } from '@/components/blog/callout';
 import { LegalCitation } from '@/components/blog/legal-citation';
 import { ReadingProgress } from '@/components/blog/reading-progress';
+import { useBlogTracking } from '@/hooks/use-blog-tracking';
+import { useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 const mdxComponents = {
   KeyPoints,
@@ -45,6 +48,12 @@ export function BlogArticle({
   image,
 }: BlogArticleProps) {
   const t = useTranslations('BlogPage');
+  const locale = useLocale();
+  const pathname = usePathname();
+  const slug = pathname.split('/').pop() || '';
+
+  // Blog engagement tracking (scroll depth + article read)
+  useBlogTracking({ articleTitle: title, articleSlug: slug, language: locale });
   const formattedDate = new Date(date).toLocaleDateString('ro-RO', {
     year: 'numeric',
     month: 'long',

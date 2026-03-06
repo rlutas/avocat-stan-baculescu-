@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Cookie } from 'lucide-react';
 import Image from 'next/image';
 import { openCookieSettings } from '@/components/cookie-consent';
+import { trackPhoneClick, trackEmailClick, trackSocialClick } from '@/lib/analytics';
 
 const navItems = [
   { href: '/', key: 'home' },
@@ -79,6 +80,7 @@ export function Footer() {
                 href="https://www.facebook.com/cabinetavocaturastanbaculescu"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick({ social_platform: 'facebook', click_location: 'footer', action: 'profile_visit' })}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy"
                 aria-label="Facebook"
               >
@@ -88,6 +90,7 @@ export function Footer() {
                 href="https://www.instagram.com/cabinet_stan_baculescu/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick({ social_platform: 'instagram', click_location: 'footer', action: 'profile_visit' })}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy"
                 aria-label="Instagram"
               >
@@ -97,6 +100,7 @@ export function Footer() {
                 href="https://www.tiktok.com/@cabinetavocat"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick({ social_platform: 'tiktok', click_location: 'footer', action: 'profile_visit' })}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy"
                 aria-label="TikTok"
               >
@@ -160,6 +164,7 @@ export function Footer() {
                 <Phone className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
                   href="tel:+40745466720"
+                  onClick={() => trackPhoneClick('footer', 'unknown')}
                   className="text-sm text-white/70 transition-colors hover:text-gold"
                 >
                   +40 745 466 720
@@ -169,6 +174,7 @@ export function Footer() {
                 <Mail className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
                   href="mailto:office@stanbaculescu.ro"
+                  onClick={() => trackEmailClick('footer')}
                   className="text-sm text-white/70 transition-colors hover:text-gold"
                 >
                   office@stanbaculescu.ro

@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { trackFormSubmission, setUserDataForEnhancedConversions } from '@/lib/analytics';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -53,6 +54,7 @@ const serviceOptions = [
 export function ContactForm() {
   const t = useTranslations('ContactPage.form');
   const tServices = useTranslations('ServicesPage.services');
+  const locale = useLocale();
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
   >('idle');
@@ -106,6 +108,18 @@ export function ContactForm() {
           value: 1,
         });
       }
+
+      setUserDataForEnhancedConversions({
+        email: data.email,
+        phone: data.phone,
+        firstName: data.firstName,
+        lastName: data.lastName,
+      });
+      trackFormSubmission({
+        form_name: 'contact_form',
+        service_area: data.subject || undefined,
+        language: locale || 'ro',
+      });
     } catch {
       setSubmitStatus('error');
     }

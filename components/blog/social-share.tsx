@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Facebook, Twitter, Linkedin, Link2, Check, Share2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { trackBlogShare } from '@/lib/analytics';
 
 type SocialShareProps = {
   title: string;
@@ -17,6 +18,9 @@ export function SocialShare({ title, description }: SocialShareProps) {
   useEffect(() => {
     setShareUrl(window.location.href);
   }, []);
+
+  // Derive slug from the current URL path (e.g., /ro/blog/some-slug → some-slug)
+  const slug = shareUrl ? new URL(shareUrl).pathname.split('/').pop() || '' : '';
 
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedTitle = encodeURIComponent(title);
@@ -61,6 +65,7 @@ export function SocialShare({ title, description }: SocialShareProps) {
           href={shareLinks.facebook}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackBlogShare({ article_title: title, article_slug: slug, share_platform: 'facebook' })}
           className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           aria-label="Share on Facebook"
         >
@@ -70,6 +75,7 @@ export function SocialShare({ title, description }: SocialShareProps) {
           href={shareLinks.twitter}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackBlogShare({ article_title: title, article_slug: slug, share_platform: 'twitter' })}
           className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           aria-label="Share on Twitter"
         >
@@ -79,6 +85,7 @@ export function SocialShare({ title, description }: SocialShareProps) {
           href={shareLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackBlogShare({ article_title: title, article_slug: slug, share_platform: 'linkedin' })}
           className="flex items-center justify-center w-11 h-11 rounded-xl bg-navy text-white transition-all duration-300 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           aria-label="Share on LinkedIn"
         >

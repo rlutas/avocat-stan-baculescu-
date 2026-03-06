@@ -9,6 +9,7 @@ import { GlowWrapper } from '@/components/ui/glow-button';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { cn } from '@/lib/utils';
+import { trackCtaClick, trackPhoneClick } from '@/lib/analytics';
 
 interface CtaSectionProps {
   imageSrc: string;
@@ -126,7 +127,7 @@ export function CtaSection({
                         size="lg"
                         className="group h-14 rounded-full bg-gold px-8 text-base font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)]"
                       >
-                        <Link href={buttonHref as '/contact'}>
+                        <Link href={buttonHref as '/contact'} onClick={() => trackCtaClick({ cta_text: buttonText, cta_location: 'cta_section', cta_destination: buttonHref, page_type: 'unknown' })}>
                           {buttonText}
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
@@ -136,6 +137,7 @@ export function CtaSection({
                     {phoneText && phoneHref && (
                       <a
                         href={phoneHref}
+                        onClick={() => trackPhoneClick('cta_section', 'unknown')}
                         className="group flex h-14 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:ring-gold/30 hover:shadow-lg hover:shadow-gold/20"
                       >
                         <div className="flex h-full w-12 flex-shrink-0 items-center justify-center bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 sm:w-14">
