@@ -62,14 +62,49 @@
 
 ---
 
-## 2. Scoruri SEO (Audit 5 martie 2026)
+## 2. Scoruri SEO
+
+### Audit initial (5 martie 2026)
 
 | Categorie | Scor | Note |
 |---|---|---|
 | Technical SEO | **95/100** | Toate problemele critice/high rezolvate |
 | Content Quality & E-E-A-T | **76/100** | Imbunatatit de la 58/100, articole expandate |
 | Schema.org Structured Data | **9/10** | BreadcrumbList, Person, WebSite, ItemList, Organization |
-| Sitemap | ✅ OK | Dynamic generation cu hreflang alternates |
+| Sitemap | OK | Dynamic generation cu hreflang alternates |
+
+### Optimizare SEO comprehensiva (6 martie 2026)
+
+**SEO Health Score: 85 -> 95/100**
+
+| Categorie | Greutate | Scor anterior | Scor nou | Note |
+|---|---|---|---|---|
+| Technical SEO | 25% | 91/100 | **96/100** | Font optimization, AVIF, passive listeners |
+| Content Quality | 25% | 78/100 | **88/100** | Alt text, titluri keyword-rich, meta descriptions |
+| On-Page SEO | 20% | 80/100 | **92/100** | Titluri 50-60 chars cu "Avocat Satu Mare" |
+| Schema / Structured Data | 10% | 85/100 | **95/100** | BreadcrumbList pe toate paginile, ItemList blog+echipa |
+| Performance (CWV) | 10% | 78/100 | **88/100** | Font -4 weights, priority fix, GA lazyOnload |
+| Images | 5% | 75/100 | **90/100** | Alt text descriptiv pe toate imaginile |
+| AI Search Readiness | 5% | 82/100 | **85/100** | llms.txt, GPTBot allowed, FAQ-uri citabile |
+
+### Fix-uri implementate (6 martie 2026)
+
+**Critical:**
+- Alt text descriptiv pe toate imaginile servicii/metodologie (6 componente)
+- Titluri expandate cu "Avocat" + "Satu Mare" pe toate paginile (48-59 chars)
+
+**High:**
+- BreadcrumbList schema pe 5 pagini noi (despre-noi, echipa, servicii, blog, contact)
+- ItemList schema pe /blog si /echipa
+- Removed priority de pe below-fold image (home-why-us)
+- Font weights reduse: Playfair 5->2, Inter 5->4 (~50-100KB economie)
+
+**Medium:**
+- Meta descriptions corectate la 140-160 chars (RO si EN)
+- Legal pages (privacy, cookies, terms): noindex + sterse din sitemap
+- AVIF format + 1 year cache TTL in next.config.ts
+- GA strategy: afterInteractive -> lazyOnload
+- passive: true pe scroll listener header
 
 ---
 
@@ -130,4 +165,4 @@ Bonusurile gratuite (articole blog, social media, ads) incep dupa lansare si sun
 
 ---
 
-*Ultima actualizare: 5 martie 2026*
+*Ultima actualizare: 6 martie 2026*

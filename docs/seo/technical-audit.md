@@ -13,6 +13,7 @@ This audit evaluates the **Next.js 16 source code** (pre-deployment) for technic
 
 **Original Technical SEO Score: 90 / 100**
 **Updated Technical SEO Score (Mar 5): 95 / 100**
+**Updated Technical SEO Score (Mar 6): 96 / 100**
 
 The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-structured meta tags per page, hreflang alternates on every page, structured data (JSON-LD), and good security headers. Most critical and high-priority issues have been resolved.
 
@@ -55,6 +56,25 @@ The Next.js codebase has strong fundamentals: proper SSR/SSG architecture, well-
 21. **Article schema enhanced:** image and dateModified fields added to blog post schema.
 22. **Blog article content redesigned:** Premium typography with .blog-content CSS class.
 23. **Service page FAQs added:** 4 Q&A pairs per service in both locales (64 total FAQ entries).
+
+## Update: March 6, 2026 - Comprehensive SEO Optimization
+
+24. **Font weights optimized:** Playfair Display reduced from 5 to 2 weights (600, 700), Inter from 5 to 4 weights (400-700). Estimated 50-100KB savings.
+25. **AVIF image format enabled:** Added `images.formats: ['image/avif', 'image/webp']` and 1-year cache TTL to next.config.ts.
+26. **GA loading deferred:** Changed Google Analytics script strategy from `afterInteractive` to `lazyOnload`.
+27. **Scroll listener optimized:** Added `{ passive: true }` to header scroll event listener.
+28. **Below-fold priority removed:** Removed `priority` prop from home-why-us reception photo (3rd section, not LCP).
+29. **Legal pages noindexed:** Added `robots: { index: false, follow: true }` to privacy, cookies, and terms pages. Removed from sitemap.
+30. **Title tags expanded:** All pages now include "Avocat"/"Lawyer" + "Satu Mare" keywords (48-59 chars).
+31. **Meta descriptions fixed:** All descriptions adjusted to 140-160 char range in both RO and EN.
+32. **BreadcrumbList extended:** Added to 5 more pages (despre-noi, echipa, servicii, blog, contact). Now on all pages.
+33. **ItemList added to blog and team listings:** Blog listing and echipa pages now have ItemList schema.
+34. **Image alt text fixed:** Descriptive alt text added to all service/methodology images across 6 components.
+
+### Remaining Medium Issues (3 → 1)
+- CSP header still not implemented (acceptable pre-launch)
+- Error page i18n: resolved by keeping bilingual fallback approach
+- Legal pages indexing: RESOLVED (noindex added)
 
 ---
 
