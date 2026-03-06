@@ -7,10 +7,12 @@ export const blogSlugMap: Record<string, string> = {
   'drepturile-pacientului-malpraxis': 'patient-rights-malpractice',
   'procedura-divortului-romania': 'divorce-procedure-romania',
   'drepturile-angajatului-concediere': 'employee-rights-dismissal',
+  'fals-inscrisuri-semnatura-privata': 'forgery-private-documents',
   // EN -> RO
   'patient-rights-malpractice': 'drepturile-pacientului-malpraxis',
   'divorce-procedure-romania': 'procedura-divortului-romania',
   'employee-rights-dismissal': 'drepturile-angajatului-concediere',
+  'forgery-private-documents': 'fals-inscrisuri-semnatura-privata',
 };
 
 /**
