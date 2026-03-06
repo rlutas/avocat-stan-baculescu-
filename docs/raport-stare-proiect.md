@@ -1,6 +1,6 @@
 # Raport: Contract vs. Stare Actuala
 
-**Contract:** WEB0001/2026 | **Data raport:** 5 martie 2026
+**Contract:** WEB0001/2026 | **Data raport:** 6 martie 2026
 **Client:** SCA Stan-Baculescu | **Prestator:** eDigitalizare S.R.L.
 
 ---
@@ -44,7 +44,7 @@
 | Google Reviews / Testimoniale | ✅ Done | Sectiune pe homepage cu link GMB |
 | Social media links | ✅ Done | Facebook, Instagram, TikTok in footer |
 | Formular contact + anti-spam | ✅ Done | React Hook Form + Zod + rate limiting (5 req/h/IP) |
-| Email notifications (Resend) | ⚠️ Partial | Cod implementat, **lipseste API key pe productie** |
+| Email notifications (Resend) | ✅ Done | Notificare birou + confirmare client, template-uri branded, audienta Resend |
 | GDPR (Privacy, Cookies, Terms) | ✅ Done | 3 pagini legale + cookie consent banner cu preferinte |
 | Pagina 404 custom | ✅ Done | Cu catch-all route pentru next-intl |
 | Documentatie administrare blog | ✅ Done | `docs/ghid-administrare-blog.md` |
@@ -106,6 +106,25 @@
 - GA strategy: afterInteractive -> lazyOnload
 - passive: true pe scroll listener header
 
+### Sistem Email (Resend) — implementat 6 martie 2026
+
+| Componenta | Status | Detalii |
+|---|---|---|
+| Email notificare birou | ✅ Done | Template branded navy/gold, Georgia font, toate campurile formular |
+| Email confirmare client | ✅ Done | Auto-reply cu rezumat, pasi urmatori, date contact firma |
+| Template dark mode | ✅ Done | `color-scheme: light only`, meta tags, CSS overrides |
+| Layout mobil | ✅ Done | Stacked vertical (telefon, email, adresa pe linii separate) |
+| Audienta Resend | ✅ Done | Contacte salvate automat in audienta `d6085ddf-9f37-480d-b1e5-db5e43c36cf1` |
+| Rate limiting | ✅ Done | 5 cereri/ora/IP, honeypot anti-spam |
+| API Key | ⚠️ Local | Configurat in `.env.local`, de adaugat pe Vercel la deploy |
+
+### Blog CTA — implementat 6 martie 2026
+
+| Componenta | Status | Detalii |
+|---|---|---|
+| CTA pe pagina listing blog | ✅ Done | Existent anterior |
+| CTA pe articol individual | ✅ Done | Adaugat `BlogCta` dupa `RelatedArticles` |
+
 ---
 
 ## 3. Bonusuri gratuite (12 luni post-lansare)
@@ -126,7 +145,7 @@
 ### Critici (blocante pentru lansare)
 
 1. **Deploy pe Vercel** — configurare proiect + domeniu `stanbaculescu.ro`
-2. **Resend API key** — configurare variabila de mediu pe productie pentru email-uri contact
+2. **~~Resend API key~~** — ✅ Configurat local, de adaugat pe Vercel la deploy
 3. **DNS** — configurare domeniu catre Vercel (acces de la client)
 4. **Google Search Console** — verificare proprietate dupa deploy
 
@@ -157,12 +176,12 @@
 
 ## 6. Sumar
 
-**Progres general: ~95-97% complet** pentru Varianta 1 (scope contractat).
+**Progres general: ~97-98% complet** pentru Varianta 1 (scope contractat).
 
-Website-ul este functional si feature-complete. Toate paginile, serviciile, echipa, blogul, formularul de contact, SEO-ul si traducerile sunt implementate. Ramane deploy-ul pe productie, configurarea Resend API key si training-ul clientului.
+Website-ul este functional si feature-complete. Toate paginile, serviciile, echipa, blogul, formularul de contact, SEO-ul, traducerile si sistemul de email (Resend) sunt implementate. Ramane deploy-ul pe Vercel, configurarea DNS si training-ul clientului.
 
 Bonusurile gratuite (articole blog, social media, ads) incep dupa lansare si sunt valabile 12 luni.
 
 ---
 
-*Ultima actualizare: 6 martie 2026*
+*Ultima actualizare: 6 martie 2026 (v3 — Resend email + blog CTA)*
