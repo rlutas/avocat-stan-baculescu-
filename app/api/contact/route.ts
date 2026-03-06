@@ -284,7 +284,7 @@ ${data.message}
 Acest email a fost trimis prin formularul de contact de pe site-ul Stan Baculescu.
 `;
 
-    // Send email via Resend
+    // Send notification email to office
     const { error } = await resend.emails.send({
       from: `Stan Baculescu Contact <${FROM_EMAIL}>`,
       to: [RECIPIENT_EMAIL],
@@ -300,6 +300,199 @@ Acest email a fost trimis prin formularul de contact de pe site-ul Stan Baculesc
         { error: 'Failed to send email' },
         { status: 500 }
       );
+    }
+
+    // Send confirmation email to client (auto-reply)
+    const confirmationHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .header {
+      background: linear-gradient(135deg, #002a52 0%, #003a70 50%, #004a8f 100%);
+      color: white;
+      padding: 35px 30px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0 0 5px 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .header p {
+      margin: 0;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .gold-line {
+      height: 3px;
+      background: linear-gradient(90deg, #d09c11, #e6b520, #d09c11);
+    }
+    .content {
+      padding: 30px;
+    }
+    .greeting {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .summary {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #d09c11;
+    }
+    .summary-row {
+      display: flex;
+      padding: 6px 0;
+      font-size: 14px;
+    }
+    .summary-label {
+      font-weight: 600;
+      color: #003a70;
+      min-width: 120px;
+    }
+    .next-steps {
+      background: #fef9e7;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .next-steps h3 {
+      margin: 0 0 10px 0;
+      color: #003a70;
+      font-size: 15px;
+    }
+    .next-steps ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .next-steps li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .contact-info {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+    }
+    .contact-info a {
+      color: #003a70;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 11px;
+      color: #9ca3af;
+      background: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>SCA Stan-Baculescu</h1>
+      <p>Societate Civila de Avocati</p>
+    </div>
+    <div class="gold-line"></div>
+    <div class="content">
+      <div class="greeting">
+        Stimate/Stimata ${escapeHtml(data.firstName)} ${escapeHtml(data.lastName)},
+      </div>
+      <p>Va multumim pentru mesajul dumneavoastra. Cererea a fost inregistrata cu succes si va fi analizata de echipa noastra.</p>
+
+      <div class="summary">
+        <div class="summary-row">
+          <span class="summary-label">Domeniu:</span>
+          <span>${escapeHtml(serviceLabel)}</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Urgenta:</span>
+          <span>${data.urgency === 'urgent' ? 'Urgent (raspuns in 24h)' : 'Normal (raspuns in 48h)'}</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Data:</span>
+          <span>${timestamp}</span>
+        </div>
+      </div>
+
+      <div class="next-steps">
+        <h3>Pasii urmatori:</h3>
+        <ul>
+          <li>Un avocat din echipa noastra va analiza cererea dumneavoastra</li>
+          <li>Veti fi contactat/a ${data.urgency === 'urgent' ? 'in maxim 24 de ore' : 'in maxim 48 de ore'} prin ${data.preferredContact === 'phone' ? 'telefon' : data.preferredContact === 'email' ? 'email' : 'WhatsApp'}</li>
+          <li>Prima consultatie telefonica este gratuita si fara obligatii</li>
+        </ul>
+      </div>
+
+      <p style="font-size: 14px; color: #6b7280;">Daca aveti intrebari urgente intre timp, nu ezitati sa ne contactati direct.</p>
+    </div>
+    <div class="contact-info">
+      <a href="tel:+40744201694">+40 744 201 694</a> &nbsp;|&nbsp;
+      <a href="mailto:office@stanbaculescu.ro">office@stanbaculescu.ro</a><br>
+      Str. Mihai Viteazu Nr. 4, Satu Mare
+    </div>
+    <div class="footer">
+      Acest email a fost trimis automat. Va rugam sa nu raspundeti la acest mesaj.<br>
+      &copy; ${new Date().getFullYear()} SCA Stan-Baculescu. Toate drepturile rezervate.
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+    const confirmationText = `
+Stimate/Stimata ${data.firstName} ${data.lastName},
+
+Va multumim pentru mesajul dumneavoastra. Cererea a fost inregistrata cu succes.
+
+Domeniu: ${serviceLabel}
+Urgenta: ${data.urgency === 'urgent' ? 'Urgent (raspuns in 24h)' : 'Normal (raspuns in 48h)'}
+Data: ${timestamp}
+
+Pasii urmatori:
+- Un avocat din echipa noastra va analiza cererea dumneavoastra
+- Veti fi contactat/a ${data.urgency === 'urgent' ? 'in maxim 24 de ore' : 'in maxim 48 de ore'}
+- Prima consultatie telefonica este gratuita si fara obligatii
+
+Contact direct: +40 744 201 694 | office@stanbaculescu.ro
+
+---
+SCA Stan-Baculescu | Str. Mihai Viteazu Nr. 4, Satu Mare
+`;
+
+    // Send confirmation (non-blocking - don't fail if this fails)
+    try {
+      await resend.emails.send({
+        from: `SCA Stan-Baculescu <${FROM_EMAIL}>`,
+        to: [data.email],
+        subject: `Confirmare cerere - SCA Stan-Baculescu`,
+        html: confirmationHtml,
+        text: confirmationText,
+      });
+    } catch (confirmError) {
+      // Log but don't fail the request - the office notification was already sent
+      console.error('Confirmation email error:', confirmError);
     }
 
     return NextResponse.json({ success: true });
