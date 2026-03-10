@@ -8,7 +8,7 @@ export function BlogCta() {
 
   return (
     <CtaSection
-      imageSrc="/images/team/team-stan-baculescu-portarit.webp"
+      imageSrc="/images/team/echipa-cta.webp"
       imageAlt="Echipa Stan-Baculescu"
       label={t('label')}
       title={t('title')}
