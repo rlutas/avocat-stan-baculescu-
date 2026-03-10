@@ -14,10 +14,12 @@ export function BlogCta() {
       title={t('title')}
       description={t('description')}
       buttonText={t('button')}
+      buttonTextShort="Consultație"
       buttonHref="/contact"
       phoneText="+40 745 466 720"
       phoneHref="tel:+40745466720"
       callLabel={t('callLabel')}
+      callLabelShort="Sună"
       availableText={t('available')}
     />
   );

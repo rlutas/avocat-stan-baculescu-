@@ -18,11 +18,13 @@ interface CtaSectionProps {
   title: string;
   description: string;
   buttonText: string;
+  buttonTextShort?: string;
   buttonHref: string;
   phoneText?: string;
   phoneHref?: string;
   availableText?: string;
   callLabel?: string;
+  callLabelShort?: string;
   className?: string;
   imagePosition?: string;
 }
@@ -34,11 +36,13 @@ export function CtaSection({
   title,
   description,
   buttonText,
+  buttonTextShort,
   buttonHref,
   phoneText,
   phoneHref,
   availableText,
   callLabel,
+  callLabelShort,
   className,
   imagePosition,
 }: CtaSectionProps) {
@@ -128,7 +132,14 @@ export function CtaSection({
                         className="group h-11 rounded-full bg-gold px-4 text-xs font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)] sm:h-14 sm:px-8 sm:text-base"
                       >
                         <Link href={buttonHref as '/contact'} onClick={() => trackCtaClick({ cta_text: buttonText, cta_location: 'cta_section', cta_destination: buttonHref, page_type: 'unknown' })}>
-                          {buttonText}
+                          {buttonTextShort ? (
+                            <>
+                              <span className="sm:hidden">{buttonTextShort}</span>
+                              <span className="hidden sm:inline">{buttonText}</span>
+                            </>
+                          ) : (
+                            buttonText
+                          )}
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                       </Button>
@@ -150,7 +161,7 @@ export function CtaSection({
                             </p>
                           )}
                           <p className="whitespace-nowrap text-sm font-semibold text-white sm:text-sm">
-                            <span className="sm:hidden">{callLabel || 'Sună acum'}</span>
+                            <span className="sm:hidden">{callLabelShort || 'Sună'}</span>
                             <span className="hidden sm:inline">{phoneText}</span>
                           </p>
                         </div>

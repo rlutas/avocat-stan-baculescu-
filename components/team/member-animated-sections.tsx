@@ -480,10 +480,12 @@ export function MemberAnimatedSections({
         title={contactTitle}
         description={contactDescription}
         buttonText={ctaButtonLabel}
+        buttonTextShort="Consultație"
         buttonHref="/contact"
         phoneText={memberPhone || undefined}
         phoneHref={memberPhone ? `tel:${memberPhone.replace(/\s/g, '')}` : undefined}
         callLabel={phoneLabel}
+        callLabelShort="Sună"
         className="bg-white"
         imagePosition="object-top"
       />
