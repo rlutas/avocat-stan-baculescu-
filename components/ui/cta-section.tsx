@@ -125,7 +125,7 @@ export function CtaSection({
                       <Button
                         asChild
                         size="lg"
-                        className="group h-11 rounded-full bg-gold px-5 text-sm font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)] sm:h-14 sm:px-8 sm:text-base"
+                        className="group h-11 rounded-full bg-gold px-4 text-xs font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)] sm:h-14 sm:px-8 sm:text-base"
                       >
                         <Link href={buttonHref as '/contact'} onClick={() => trackCtaClick({ cta_text: buttonText, cta_location: 'cta_section', cta_destination: buttonHref, page_type: 'unknown' })}>
                           {buttonText}
@@ -138,7 +138,7 @@ export function CtaSection({
                       <a
                         href={phoneHref}
                         onClick={() => trackPhoneClick('cta_section', 'unknown')}
-                        className="group flex h-11 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:ring-gold/30 hover:shadow-lg hover:shadow-gold/20 sm:h-14"
+                        className="group flex h-11 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:ring-gold/30 hover:shadow-lg hover:shadow-gold/20 sm:h-14 flex-shrink-0"
                       >
                         <div className="flex h-full w-10 flex-shrink-0 items-center justify-center bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 sm:w-14">
                           <Phone className="h-4 w-4 text-gold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 sm:h-5 sm:w-5" />
