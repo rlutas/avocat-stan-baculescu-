@@ -30,6 +30,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
       url: `${BASE_URL}/${locale}/echipa`,
+      images: [
+        {
+          url: `${BASE_URL}/images/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: locale === 'ro' ? 'Echipa SCA Stan-Baculescu' : 'SCA Stan-Baculescu Team',
+        },
+      ],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}/echipa`,

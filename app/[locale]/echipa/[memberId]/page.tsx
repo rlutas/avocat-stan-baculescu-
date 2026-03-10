@@ -90,6 +90,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'profile',
       locale: locale === 'ro' ? 'ro_RO' : 'en_US',
       url: `${BASE_URL}/${locale}/echipa/${memberId}`,
+      images: [
+        {
+          url: `${BASE_URL}${memberImageMap[memberId]}`,
+          width: 600,
+          height: 800,
+          alt: name,
+        },
+      ],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}/echipa/${memberId}`,
