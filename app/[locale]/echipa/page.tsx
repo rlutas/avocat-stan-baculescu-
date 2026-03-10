@@ -60,7 +60,7 @@ export default async function TeamPage({ params }: Props) {
     'diana-chincea',
     'cristina-blan',
     'alexandra-rusu',
-    'diana-veres',
+    'diana-veress',
   ];
 
   const teamListJsonLd = {

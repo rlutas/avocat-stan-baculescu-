@@ -61,10 +61,10 @@ const teamMembers: TeamMember[] = [
     specializationKeys: ['spec1', 'spec2'],
   },
   {
-    id: 'diana-veres',
+    id: 'diana-veress',
     nameKey: 'dianaVeres',
     roleKey: 'clientRelations',
-    image: '/images/team/diana-veres.webp',
+    image: '/images/team/diana-veress.webp',
     category: 'support',
     specializationKeys: ['spec1', 'spec2'],
   },

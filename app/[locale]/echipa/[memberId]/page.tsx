@@ -22,7 +22,7 @@ const validMemberIds = [
   'diana-chincea',
   'cristina-blan',
   'alexandra-rusu',
-  'diana-veres',
+  'diana-veress',
 ];
 
 const memberKeyMap: Record<string, string> = {
@@ -31,7 +31,7 @@ const memberKeyMap: Record<string, string> = {
   'diana-chincea': 'dianaChincea',
   'cristina-blan': 'cristinaBlan',
   'alexandra-rusu': 'alexandraRusu',
-  'diana-veres': 'dianaVeres',
+  'diana-veress': 'dianaVeres',
 };
 
 const memberRoleMap: Record<string, string> = {
@@ -40,7 +40,7 @@ const memberRoleMap: Record<string, string> = {
   'diana-chincea': 'collaborator',
   'cristina-blan': 'collaborator',
   'alexandra-rusu': 'collaborator',
-  'diana-veres': 'clientRelations',
+  'diana-veress': 'clientRelations',
 };
 
 const memberImageMap: Record<string, string> = {
@@ -49,7 +49,7 @@ const memberImageMap: Record<string, string> = {
   'diana-chincea': '/images/team/diana-chincea.webp',
   'cristina-blan': '/images/team/cristina-blan.webp',
   'alexandra-rusu': '/images/team/alexandra-rusu.webp',
-  'diana-veres': '/images/team/diana-veres.webp',
+  'diana-veress': '/images/team/diana-veress.webp',
 };
 
 type Props = {

@@ -40,9 +40,9 @@ const collaborators = [
     roleKey: 'collaborator' as const,
   },
   {
-    id: 'diana-veres',
+    id: 'diana-veress',
     nameKey: 'dianaVeres',
-    image: '/images/team/diana-veres.webp',
+    image: '/images/team/diana-veress.webp',
     roleKey: 'clientRelations' as const,
   },
 ];

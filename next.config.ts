@@ -24,6 +24,10 @@ const nextConfig: NextConfig = {
       { source: '/diana-antonia-chincea', destination: '/ro/echipa/diana-chincea', permanent: true },
       { source: '/diana-antonia-chincea/', destination: '/ro/echipa/diana-chincea', permanent: true },
 
+      // Old slug redirect (diana-veres -> diana-veress)
+      { source: '/ro/echipa/diana-veres', destination: '/ro/echipa/diana-veress', permanent: true },
+      { source: '/en/echipa/diana-veres', destination: '/en/echipa/diana-veress', permanent: true },
+
       // Team members (former - redirect to team page)
       { source: '/ana-gabriela-tarta', destination: '/ro/echipa', permanent: true },
       { source: '/ana-gabriela-tarta/', destination: '/ro/echipa', permanent: true },

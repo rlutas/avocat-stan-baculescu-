@@ -31,7 +31,7 @@ const teamMemberIds = [
   'diana-chincea',
   'cristina-blan',
   'alexandra-rusu',
-  'diana-veres',
+  'diana-veress',
 ];
 
 // Blog post slug mapping between languages (ro <-> en)
