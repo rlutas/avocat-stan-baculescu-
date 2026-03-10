@@ -11,6 +11,9 @@ import {
   Award,
   ArrowRight,
   ArrowUpRight,
+  ExternalLink,
+  Newspaper,
+  Play,
 } from 'lucide-react';
 
 interface MemberAnimatedSectionsProps {
@@ -39,6 +42,12 @@ interface MemberAnimatedSectionsProps {
   phoneLabel: string;
   emailLabel: string;
   viewDetailsLabel: string;
+  linkedin?: string;
+  youtubeVideo?: string;
+  youtubeTitle?: string;
+  pressItems?: { title: string; source: string; url: string }[];
+  pressLabel?: string;
+  videoLabel?: string;
 }
 
 export function MemberAnimatedSections({
@@ -67,6 +76,12 @@ export function MemberAnimatedSections({
   phoneLabel,
   emailLabel,
   viewDetailsLabel,
+  linkedin,
+  youtubeVideo,
+  youtubeTitle,
+  pressItems,
+  pressLabel = 'In Presa',
+  videoLabel = 'Video',
 }: MemberAnimatedSectionsProps) {
   return (
     <>
@@ -135,7 +150,8 @@ export function MemberAnimatedSections({
 
       {/* ── 2. Practice Areas / Specializations — off-white bg ── */}
       {specializations.length > 0 && (
-        <section className="bg-[#f8f9fa] py-20 sm:py-32">
+        <section className="relative bg-[#f8f9fa] py-20 sm:py-32">
+          <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {/* Centered section header */}
             <div className="mb-14 text-center sm:mb-16">
@@ -359,7 +375,104 @@ export function MemberAnimatedSections({
         </section>
       )}
 
-      {/* ── 4. Contact CTA — off-white bg, navy card ───── */}
+      {/* ── 4. Video & Press — off-white bg ───── */}
+      {(youtubeVideo || (pressItems && pressItems.length > 0)) && (
+        <section className="relative bg-[#f8f9fa] py-20 sm:py-32">
+          <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            {/* YouTube Video */}
+            {youtubeVideo && (
+              <div className="mb-16">
+                <div className="mb-10">
+                  <ScrollAnimate>
+                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                      {videoLabel}
+                    </p>
+                  </ScrollAnimate>
+                  <ScrollAnimate delay={0.1}>
+                    <h2 className="font-heading text-3xl font-bold leading-[1.1] text-navy sm:text-4xl">
+                      {youtubeTitle || videoLabel}
+                    </h2>
+                    <div className="mt-4 h-[2px] w-16 bg-gold" />
+                  </ScrollAnimate>
+                </div>
+
+                <ScrollAnimate delay={0.2}>
+                  <div className="relative mx-auto max-w-3xl">
+                    {/* Decorative corner accents */}
+                    <div className="absolute -left-3 -top-3 z-10 h-8 w-8 border-l-2 border-t-2 border-gold/40 sm:-left-4 sm:-top-4 sm:h-10 sm:w-10" />
+                    <div className="absolute -right-3 -top-3 z-10 h-8 w-8 border-r-2 border-t-2 border-gold/40 sm:-right-4 sm:-top-4 sm:h-10 sm:w-10" />
+                    <div className="absolute -bottom-3 -left-3 z-10 h-8 w-8 border-b-2 border-l-2 border-gold/40 sm:-bottom-4 sm:-left-4 sm:h-10 sm:w-10" />
+                    <div className="absolute -bottom-3 -right-3 z-10 h-8 w-8 border-b-2 border-r-2 border-gold/40 sm:-bottom-4 sm:-right-4 sm:h-10 sm:w-10" />
+
+                    <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-gold/10 via-navy/5 to-gold/10 blur-sm" />
+
+                    <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-navy/10" style={{ aspectRatio: '16/9' }}>
+                      <iframe
+                        src={`https://www.youtube.com/embed/${youtubeVideo.split('v=')[1]}`}
+                        title={youtubeTitle || 'Video'}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </ScrollAnimate>
+              </div>
+            )}
+
+            {/* Press Mentions */}
+            {pressItems && pressItems.length > 0 && (
+              <div>
+                <div className="mb-10">
+                  <ScrollAnimate>
+                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                      {pressLabel}
+                    </p>
+                  </ScrollAnimate>
+                  <ScrollAnimate delay={0.1}>
+                    <h2 className="font-heading text-3xl font-bold leading-[1.1] text-navy sm:text-4xl">
+                      Aparitii Media
+                    </h2>
+                    <div className="mt-4 h-[2px] w-16 bg-gold" />
+                  </ScrollAnimate>
+                </div>
+
+                <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
+                  {pressItems.map((item, i) => (
+                    <StaggerItem key={i} variant="scaleUp">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex h-full flex-col rounded-2xl border border-black/[0.04] bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/[0.08] sm:p-6"
+                      >
+                        <div className="mb-3 flex items-center gap-2">
+                          <Newspaper className="h-4 w-4 text-gold" />
+                          <span className="text-xs font-semibold uppercase tracking-wider text-gold">
+                            {item.source}
+                          </span>
+                        </div>
+                        <h3 className="mb-4 flex-grow font-heading text-base font-semibold leading-snug text-navy transition-colors duration-300 group-hover:text-gold sm:text-lg">
+                          {item.title}
+                        </h3>
+                        <div className="mt-auto flex items-center gap-1.5 text-sm font-medium text-navy/50 transition-colors duration-300 group-hover:text-gold">
+                          Citeste articolul
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </div>
+                      </a>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+              </div>
+            )}
+
+          </div>
+        </section>
+      )}
+
+      {/* ── 5. Contact CTA — off-white bg, navy card ───── */}
       <CtaSection
         imageSrc={memberImage}
         imageAlt={memberName}
@@ -371,8 +484,8 @@ export function MemberAnimatedSections({
         phoneText={memberPhone || undefined}
         phoneHref={memberPhone ? `tel:${memberPhone.replace(/\s/g, '')}` : undefined}
         callLabel={phoneLabel}
-        className="bg-[#f8f9fa]"
-        imagePosition="object-center"
+        className="bg-white"
+        imagePosition="object-top"
       />
     </>
   );

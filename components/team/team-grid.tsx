@@ -24,7 +24,7 @@ const teamMembers: TeamMember[] = [
     id: 'camelia-stan',
     nameKey: 'cameliaStan',
     roleKey: 'founder',
-    image: '/images/team/camielia-stan.webp',
+    image: '/images/team/camelia-stan.webp',
     category: 'founder',
     specializationKeys: ['spec1', 'spec2'],
   },

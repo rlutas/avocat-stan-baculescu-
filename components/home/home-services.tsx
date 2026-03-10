@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Handshake } from 'lucide-react';
 import { LawIcon } from '@/components/icons';
 import type { LawIconName } from '@/components/icons';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
@@ -25,6 +25,10 @@ const services: {
   { id: 'drept-comercial', iconName: 'contract', slug: '/servicii/drept-comercial', num: '06', gradient: 'from-[#003a70] to-[#002a52]', image: '/images/services/drept-comercial.webp' },
   { id: 'accidente-rutiere', iconName: 'police-car', slug: '/servicii/accidente-rutiere', num: '07', gradient: 'from-[#1a1a2e] to-[#002a52]', image: '/images/services/accidente-rutiere.webp' },
   { id: 'drept-administrativ-fiscal', iconName: 'document', slug: '/servicii/drept-administrativ-fiscal', num: '08', gradient: 'from-[#002a52] to-[#16213e]', image: '/images/services/drept-administrativ-fiscal.webp' },
+  { id: 'achizitii-publice', iconName: 'certificate', slug: '/servicii/achizitii-publice', num: '09', gradient: 'from-[#003a70] to-[#004a8f]', image: '/images/services/achizitii-publice.webp' },
+  { id: 'drept-contraventional', iconName: 'shield', slug: '/servicii/drept-contraventional', num: '10', gradient: 'from-[#1a1a2e] to-[#003a70]', image: '/images/services/drept-contraventional.webp' },
+  { id: 'dreptul-asigurarilor', iconName: 'shield-badge', slug: '/servicii/dreptul-asigurarilor', num: '11', gradient: 'from-[#002a52] to-[#1a5a90]', image: '/images/services/dreptul-asigurarilor.webp' },
+  { id: 'practician-insolventa', iconName: 'law-book', slug: '/servicii/practician-insolventa', num: '12', gradient: 'from-[#16213e] to-[#002a52]', image: '/images/services/practician-insolventa.webp' },
 ];
 
 export function HomeServices() {
@@ -111,6 +115,22 @@ export function HomeServices() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        {/* Collaboration callout */}
+        <ScrollAnimate delay={0.2} className="mt-10">
+          <div className="mx-auto max-w-3xl rounded-xl border border-gold/20 bg-white px-6 py-5 shadow-sm sm:px-8 sm:py-6">
+            <div className="flex gap-4 sm:gap-5">
+              <div className="flex-shrink-0 pt-0.5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
+                  <Handshake className="h-5 w-5 text-gold" />
+                </div>
+              </div>
+              <p className="text-base leading-relaxed text-navy/80">
+                {t('collaboration')}
+              </p>
+            </div>
+          </div>
+        </ScrollAnimate>
 
         {/* View All */}
         <ScrollAnimate delay={0.3} className="mt-12 text-center">

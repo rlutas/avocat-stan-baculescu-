@@ -85,7 +85,7 @@ export function CtaSection({
             {/* Split layout */}
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-stretch">
               {/* Image — left column */}
-              <div className="relative h-64 w-full shrink-0 sm:h-80 lg:h-auto lg:w-[38%]">
+              <div className="relative h-80 w-full shrink-0 min-h-[320px] sm:h-80 lg:h-auto lg:min-h-0 lg:w-[38%]">
                 <Image
                   src={imageSrc}
                   alt={imageAlt}
@@ -120,12 +120,12 @@ export function CtaSection({
 
                 {/* Buttons */}
                 <ScrollAnimate delay={0.4}>
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="flex flex-row items-center gap-3 sm:gap-4">
                     <GlowWrapper className="rounded-full">
                       <Button
                         asChild
                         size="lg"
-                        className="group h-14 rounded-full bg-gold px-8 text-base font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)]"
+                        className="group h-11 rounded-full bg-gold px-5 text-sm font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)] sm:h-14 sm:px-8 sm:text-base"
                       >
                         <Link href={buttonHref as '/contact'} onClick={() => trackCtaClick({ cta_text: buttonText, cta_location: 'cta_section', cta_destination: buttonHref, page_type: 'unknown' })}>
                           {buttonText}
@@ -138,19 +138,20 @@ export function CtaSection({
                       <a
                         href={phoneHref}
                         onClick={() => trackPhoneClick('cta_section', 'unknown')}
-                        className="group flex h-14 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:ring-gold/30 hover:shadow-lg hover:shadow-gold/20"
+                        className="group flex h-11 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:ring-gold/30 hover:shadow-lg hover:shadow-gold/20 sm:h-14"
                       >
-                        <div className="flex h-full w-12 flex-shrink-0 items-center justify-center bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 sm:w-14">
-                          <Phone className="h-5 w-5 text-gold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                        <div className="flex h-full w-10 flex-shrink-0 items-center justify-center bg-gold/10 transition-colors duration-300 group-hover:bg-gold/20 sm:w-14">
+                          <Phone className="h-4 w-4 text-gold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 sm:h-5 sm:w-5" />
                         </div>
-                        <div className="flex items-center gap-1.5 px-3 sm:block sm:px-5 sm:text-left">
+                        <div className="px-3 sm:px-5 sm:text-left">
                           {callLabel && (
-                            <p className="whitespace-nowrap text-sm text-white/40 sm:text-xs">
+                            <p className="hidden whitespace-nowrap text-xs text-white/40 sm:block">
                               {callLabel}
                             </p>
                           )}
-                          <p className="whitespace-nowrap text-base font-semibold text-white sm:text-sm">
-                            {phoneText}
+                          <p className="whitespace-nowrap text-sm font-semibold text-white sm:text-sm">
+                            <span className="sm:hidden">{callLabel || 'Sună acum'}</span>
+                            <span className="hidden sm:inline">{phoneText}</span>
                           </p>
                         </div>
                       </a>

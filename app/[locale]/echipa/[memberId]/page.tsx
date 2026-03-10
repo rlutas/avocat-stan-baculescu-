@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import {
   ArrowLeft,
+  ExternalLink,
+  Linkedin,
   Mail,
   Phone,
 } from 'lucide-react';
@@ -42,7 +44,7 @@ const memberRoleMap: Record<string, string> = {
 };
 
 const memberImageMap: Record<string, string> = {
-  'camelia-stan': '/images/team/camielia-stan.webp',
+  'camelia-stan': '/images/team/camelia-stan.webp',
   'vlad-baculescu': '/images/team/vlad-baculescu.webp',
   'diana-chincea': '/images/team/diana-chincea.webp',
   'cristina-blan': '/images/team/cristina-blan.webp',
@@ -188,6 +190,29 @@ export default async function MemberProfilePage({ params }: Props) {
     const key = `members.${memberKey}.experience.exp${i}` as Parameters<typeof t>[0];
     if (t.has(key)) {
       experience.push(t(key));
+    }
+  }
+
+  // LinkedIn, YouTube, Press (optional per member)
+  const linkedinKey = `members.${memberKey}.linkedin` as Parameters<typeof t>[0];
+  const youtubeVideoKey = `members.${memberKey}.youtubeVideo` as Parameters<typeof t>[0];
+  const youtubeTitleKey = `members.${memberKey}.youtubeTitle` as Parameters<typeof t>[0];
+  const linkedin = t.has(linkedinKey) ? t(linkedinKey) : '';
+  const youtubeVideo = t.has(youtubeVideoKey) ? t(youtubeVideoKey) : '';
+  const youtubeTitle = t.has(youtubeTitleKey) ? t(youtubeTitleKey) : '';
+
+  // Press items (up to 10)
+  const pressItems: { title: string; source: string; url: string }[] = [];
+  for (let i = 1; i <= 10; i++) {
+    const titleKey = `members.${memberKey}.press.item${i}Title` as Parameters<typeof t>[0];
+    if (t.has(titleKey)) {
+      const sourceKey = `members.${memberKey}.press.item${i}Source` as Parameters<typeof t>[0];
+      const urlKey = `members.${memberKey}.press.item${i}Url` as Parameters<typeof t>[0];
+      pressItems.push({
+        title: t(titleKey),
+        source: t.has(sourceKey) ? t(sourceKey) : '',
+        url: t.has(urlKey) ? t(urlKey) : '',
+      });
     }
   }
 
@@ -444,6 +469,18 @@ export default async function MemberProfilePage({ params }: Props) {
                     <span className="text-sm font-medium text-white/80 transition-colors duration-300 group-hover:text-gold">{memberEmail}</span>
                   </a>
                 )}
+                {linkedin && (
+                  <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 transition-all duration-300 hover:border-[#0a66c2]/40 hover:bg-[#0a66c2]/15"
+                  >
+                    <Linkedin className="h-4 w-4 text-[#0a66c2]" />
+                    <span className="text-sm font-medium text-white/80 transition-colors duration-300 group-hover:text-[#0a66c2]">LinkedIn</span>
+                    <ExternalLink className="h-3 w-3 text-white/40 transition-colors duration-300 group-hover:text-[#0a66c2]" />
+                  </a>
+                )}
               </div>
 
             </div>
@@ -505,6 +542,12 @@ export default async function MemberProfilePage({ params }: Props) {
         phoneLabel={phoneLabel}
         emailLabel={emailLabel}
         viewDetailsLabel={viewDetailsLabel}
+        linkedin={linkedin || undefined}
+        youtubeVideo={youtubeVideo || undefined}
+        youtubeTitle={youtubeTitle || undefined}
+        pressItems={pressItems.length > 0 ? pressItems : undefined}
+        pressLabel={locale === 'ro' ? 'In Presa' : 'In the Press'}
+        videoLabel={locale === 'ro' ? 'Video' : 'Video'}
       />
     </main>
   );

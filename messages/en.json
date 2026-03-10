@@ -23,8 +23,9 @@
       "subtitle": "Professionalism. Dedication. Results.",
       "description": "We provide excellent legal services in Satu Mare and throughout Romania. With nearly 20 years of experience, our founders represent you with dedication in civil law, criminal law, family law, commercial law, medical malpractice, and more.",
       "cta": "Schedule a Consultation",
+      "ctaShort": "Consultation",
       "secondaryCta": "Discover Our Services",
-      "trustBadge": "Serving justice since 2006",
+      "trustBadge": "Attorneys since 2006 · Firm est. 2009",
       "callNow": "Call now",
       "schedule": "Hours: Monday - Friday, 09:00 - 17:00",
       "founder": "Founder",
@@ -37,7 +38,8 @@
       "titleLine2": "Our Practice Areas",
       "description": "We provide comprehensive legal assistance across various areas of law, from civil and criminal law to medical malpractice and traffic accidents.",
       "viewAll": "View All Services",
-      "viewDetails": "Learn more"
+      "viewDetails": "Learn more",
+      "collaboration": "We collaborate with experts from all fields: surveyors, tax experts, accountants, bailiffs, notaries, mediators, appraisers, certified translators, and other specialists, to provide you with comprehensive legal solutions."
     },
     "whyUs": {
       "trustBadge": "Why Choose Us",
@@ -56,6 +58,14 @@
       "value2Description": "Every case receives individual attention and a strategy tailored to the specific situation.",
       "value3Title": "Transparent Communication",
       "value3Description": "We keep you informed at every stage and clearly explain the available options."
+    },
+    "video": {
+      "label": "Video Presentation",
+      "title": "Meet the Stan-Baculescu Team",
+      "description": "Discover who we are, how we work, and why our clients have trusted us for nearly 20 years. Our founders invite you to get to know the team and our office in Satu Mare.",
+      "highlight1": "Founders practicing since 2006",
+      "highlight2": "Professional and dedicated approach",
+      "highlight3": "Availability and direct communication"
     },
     "methodology": {
       "trustBadge": "Our Process",
@@ -86,8 +96,8 @@
       "label": "Stan-Baculescu Law Firm",
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "About Us",
-      "subtitle": "Since 2006 we have been providing excellent legal services in Satu Mare and throughout Romania, with total dedication to every client.",
-      "trustBadge": "Serving justice since 2006",
+      "subtitle": "Our founders have practiced law since 2006, and Stan-Baculescu Law Firm was established in 2009. We provide excellent legal services in Satu Mare and throughout Romania.",
+      "trustBadge": "Attorneys since 2006 · Firm est. 2009",
       "stat1": "Years Experience",
       "stat2": "Satisfied Clients",
       "stat3": "Commitment"
@@ -214,11 +224,11 @@
           "spec4Slug": "malpraxis-medical",
           "spec4Icon": "justice",
           "spec5": "Public Procurement",
-          "spec5Slug": "",
+          "spec5Slug": "achizitii-publice",
           "spec5Icon": "approval",
           "spec5Image": "/images/services/achizitii-publice.webp",
           "spec6": "Insurance Law",
-          "spec6Slug": "",
+          "spec6Slug": "dreptul-asigurarilor",
           "spec6Icon": "shield",
           "spec6Image": "/images/services/dreptul-asigurarilor.webp",
           "spec7": "Family Law",
@@ -228,11 +238,11 @@
           "spec8Slug": "dreptul-muncii",
           "spec8Icon": "suitcase",
           "spec9": "Misdemeanor Law",
-          "spec9Slug": "",
+          "spec9Slug": "drept-contraventional",
           "spec9Icon": "gavel",
           "spec9Image": "/images/services/drept-contraventional.webp",
           "spec10": "Domestic Arbitration",
-          "spec10Slug": "",
+          "spec10Slug": "arbitraj-intern",
           "spec10Icon": "court",
           "spec10Image": "/images/services/arbitraj-intern.webp",
           "spec1Desc": "Consultation and representation in civil litigation, contracts, property and successions.",
@@ -254,12 +264,17 @@
           "exp1": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
           "exp2": "Experienced trial attorney in complex civil litigation",
           "exp3": "Consulting in contractual and real estate law"
+        },
+        "press": {
+          "item1Title": "Lawyer's opinion: How to defend your rights when Tax Authorities made mistakes",
+          "item1Source": "PresaSM.ro",
+          "item1Url": "https://presasm.ro/opinia-avocatului-cum-poti-sa-iti-aperi-drepturile-daca-au-gresit-finantele/42423"
         }
       },
       "vladBaculescu": {
         "name": "Vlad Baculescu",
-        "shortBio": "Founding attorney, member of the Satu Mare Bar since 2006. Specialized in criminal law, business law, insolvency, and civil law.",
-        "fullBio": "Vlad Baculescu is a partner at Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2006. He has extensive experience in criminal law, civil law, insolvency, and business law. He has provided legal consulting and ensured assistance and representation of parties in civil and criminal litigation. His work style is characterized by empathy, rigor, and a strategic approach — he truly listens to clients and puts himself in their situation to find the optimal solution for the problems they face.",
+        "shortBio": "Founding attorney and Dean of the Satu Mare Bar. Member of the Bar since 2006. Specialized in criminal law, business law, insolvency, and civil law.",
+        "fullBio": "Vlad Baculescu is a partner at Stan-Baculescu Law Firm and Dean of the Satu Mare Bar, first elected in 2019 and re-elected in 2023. A member of the Satu Mare Bar since 2006, he has extensive experience in criminal law, civil law, insolvency, and business law. He has provided legal consulting and ensured assistance and representation of parties in civil and criminal litigation. His work style is characterized by empathy, rigor, and a strategic approach — he truly listens to clients and puts himself in their situation to find the optimal solution for the problems they face.",
         "pullQuote": "I try to truly listen to people and put myself in their situation — only then can I find the optimal solution for the problems they face.",
         "phone": "+40 744 201 694",
         "email": "vlad.baculescu@stanbaculescu.ro",
@@ -278,7 +293,7 @@
           "spec3Icon": "family",
           "spec3Desc": "Divorces, child custody, partition, alimony and other family matters.",
           "spec4": "Insolvency Practitioner",
-          "spec4Slug": "",
+          "spec4Slug": "practician-insolventa",
           "spec4Icon": "law-book",
           "spec4Image": "/images/services/practician-insolventa.webp",
           "spec4Desc": "Insolvency proceedings, judicial reorganization and bankruptcy for debtors and creditors.",
@@ -297,9 +312,36 @@
           "edu3": "Continuous professional development conferences"
         },
         "experience": {
-          "exp1": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
-          "exp2": "Extensive experience in complex criminal litigation",
-          "exp3": "Legal consulting in business law and insolvency"
+          "exp1": "Dean of the Satu Mare Bar (2019 - present, re-elected 2023)",
+          "exp2": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
+          "exp3": "Extensive experience in complex criminal litigation",
+          "exp4": "Legal consulting in business law and insolvency"
+        },
+        "linkedin": "https://www.linkedin.com/in/vlad-baculescu-552025b3",
+        "youtubeVideo": "https://www.youtube.com/watch?v=6auLeDRIE1Q",
+        "youtubeTitle": "Podcast — Vlad Baculescu, Dean of the Satu Mare Bar",
+        "press": {
+          "item1Title": "Beyond cliches: what it truly means to be a magistrate in Romania",
+          "item1Source": "Juridice.ro",
+          "item1Url": "https://www.juridice.ro/794910/dincolo-de-clisee-ce-inseamna-cu-adevarat-sa-fii-magistrat-in-romania-perspectiva-unui-avocat-sot-de-judecator.html",
+          "item2Title": "The Dean of the Satu Mare Bar attended the centenary of the Nyiregyhaza Bar in Hungary",
+          "item2Source": "Juridice.ro",
+          "item2Url": "https://www.juridice.ro/773616/decanul-baroului-satu-mare-a-participat-la-centenarul-baroului-nyiregyhaza-din-ungaria.html",
+          "item3Title": "Modern law practice is only done in a team — Interview with Vlad Baculescu",
+          "item3Source": "BihorJust.ro",
+          "item3Url": "https://www.bihorjust.ro/interviu-cu-av-vlad-baculescu-decanul-baroului-satu-mare-avocatura-moderna-se-face-doar-in-echipa/",
+          "item4Title": "Satu Mare lawyer Vlad Baculescu explains the chances of a convicted criminal escaping punishment",
+          "item4Source": "PresaSM.ro",
+          "item4Url": "https://presasm.ro/avocatul-satmarean-vlad-baculescu-explica-sansele-de-scapare-a-unui-infractor-dovedit/46995",
+          "item5Title": "Vlad Baculescu is the new Dean of the Satu Mare Bar",
+          "item5Source": "Jurnalul de Satu Mare",
+          "item5Url": "https://www.jurnaluldesatumare.ro/avocatul-baculescu-vlad-victor-este-noul-decan-al-baroului-satu-mare/",
+          "item6Title": "Vlad Baculescu, re-elected Dean of the Satu Mare Bar",
+          "item6Source": "Ziare.com",
+          "item6Url": "https://m.ziare.com/satu-mare/stiri-actualitate/vlad-baculescu-reales-decan-al-baroului-satu-mare-8839075",
+          "item7Title": "Satu Mare Bar Warning: \"Parallel Bars\"/Clandestine Lawyers, a Major Risk for Litigants",
+          "item7Source": "PresaSM.ro",
+          "item7Url": "https://presasm.ro/avertisment-al-baroului-satu-mare-barourile-paralele-avocatii-clandestini-un-risc-major-pentru/50048"
         }
       },
       "dianaChincea": {
@@ -328,7 +370,7 @@
           "spec4Icon": "family",
           "spec4Desc": "Divorces, child custody, partition, alimony and other family law matters.",
           "spec5": "Misdemeanor Law",
-          "spec5Slug": "",
+          "spec5Slug": "drept-contraventional",
           "spec5Icon": "gavel",
           "spec5Image": "/images/services/drept-contraventional.webp",
           "spec5Desc": "Defense in misdemeanor cases, fine challenges and contravention reports.",
@@ -393,7 +435,7 @@
           "spec4Icon": "contract",
           "spec4Desc": "Consulting for commercial companies, contracts, commercial litigation and corporate law.",
           "spec5": "Misdemeanor Law",
-          "spec5Slug": "",
+          "spec5Slug": "drept-contraventional",
           "spec5Icon": "gavel",
           "spec5Image": "/images/services/drept-contraventional.webp",
           "spec5Desc": "Defense in misdemeanor cases, fine challenges and official reports."
@@ -458,6 +500,7 @@
       "subtitle": "Practice Areas",
       "trustBadge": "8 Practice Areas",
       "description": "We provide comprehensive legal assistance across various areas of law. Our team of specialized attorneys is here to represent your interests with professionalism.",
+      "collaboration": "We collaborate with experts from all fields: surveyors, tax experts, accountants, bailiffs, notaries, mediators, appraisers, certified translators, and other specialists, to provide you with comprehensive legal solutions.",
       "breadcrumbHome": "Home",
       "breadcrumbServices": "Services",
       "scrollLabel": "Discover"
@@ -500,6 +543,26 @@
       "drept-administrativ-fiscal": {
         "title": "Administrative and Tax Law",
         "shortDescription": "Administrative appeals, tax litigation, and representation before authorities."
+      },
+      "achizitii-publice": {
+        "title": "Public Procurement",
+        "shortDescription": "Legal counsel for tender procedures, CNSC appeals, and public contract disputes."
+      },
+      "drept-contraventional": {
+        "title": "Contravention Law",
+        "shortDescription": "Challenging contravention fines, official reports, and defending your rights in court."
+      },
+      "dreptul-asigurarilor": {
+        "title": "Insurance Law",
+        "shortDescription": "Insurance claims, disputes with insurance companies, and damage recovery."
+      },
+      "practician-insolventa": {
+        "title": "Insolvency Practitioner",
+        "shortDescription": "Insolvency proceedings, judicial reorganization, and liquidation for commercial companies."
+      },
+      "arbitraj-intern": {
+        "title": "Domestic Arbitration",
+        "shortDescription": "Alternative dispute resolution for commercial conflicts through arbitration and mediation."
       }
     },
     "cta": {
@@ -847,6 +910,206 @@
         "a3": "Under Art. 11 of Legea nr. 554/2004 privind contenciosul administrativ (Law no. 554/2004 on Administrative Disputes), the action in administrative litigation must be filed within 6 months from the date of communication of the authority's response to the prior complaint (plangere prealabila), or from the date when the legal deadline for the authority to respond has expired without a reply. There is also an absolute limitation period of 1 year from the date of communication of the administrative act itself, beyond which the right to challenge is lost regardless of circumstances. For tax matters specifically, the fiscal appeal under Art. 270 of the Tax Procedure Code (Legea nr. 207/2015) must be filed within 45 days from communication of the tax assessment decision. These deadlines are mandatory and their expiration extinguishes the right to bring an action, which is why it is critical to consult a specialized attorney immediately upon receiving an unfavorable administrative or tax decision.",
         "q4": "Can I obtain suspension of an administrative act's enforcement?",
         "a4": "Yes, under Art. 14-15 of Legea nr. 554/2004 privind contenciosul administrativ (Law no. 554/2004 on Administrative Disputes), the injured party may request the court to suspend the enforcement of an administrative act. To obtain suspension, two cumulative conditions must be met: the existence of a well-founded case (caz bine justificat), meaning serious arguments suggesting the administrative act may be unlawful, and the risk of imminent damage (paguba iminenta) - harm of a certain degree that cannot be remedied if the act continues to produce effects. Suspension can be requested either together with the prior complaint (Art. 14, decided by the court without the main action being filed yet) or alongside the main action for annulment (Art. 15). The court may require the applicant to post a security deposit (cautiune). In tax matters, filing a fiscal appeal (contestatie fiscala) does not automatically suspend enforcement under Art. 278 of the Tax Procedure Code, but the court may grant suspension under the same conditions of Art. 14-15 of Law no. 554/2004. Our attorneys evaluate the strength of your case, prepare the suspension request with supporting evidence, and represent you in the urgent hearing before the administrative court."
+      }
+    },
+    "achizitii-publice": {
+      "title": "Public Procurement",
+      "subtitle": "Specialized legal counsel in public procurement procedures and administrative contracts.",
+      "trustBadge": "Public Procurement Expertise",
+      "titleLine1": "Tenders & Appeals",
+      "titleLine2": "Public Procurement",
+      "meta": {
+        "title": "Public Procurement Lawyer Satu Mare | SCA Stan-Baculescu",
+        "description": "Legal counsel for public procurement procedures, CNSC appeals and public contract litigation. Specialized procurement lawyer Satu Mare Romania."
+      },
+      "descriptionTitle": "Public Procurement Services",
+      "description": "Public procurement in Romania is governed by Legea nr. 98/2016 privind achizitiile publice (Law no. 98/2016 on Public Procurement), which transposes the EU Directive 2014/24/EU, along with Legea nr. 99/2016 on sectoral procurement and Legea nr. 100/2016 on concession contracts. These laws establish the procedures for awarding public contracts, including open tenders, restricted procedures, competitive dialogue, and negotiation procedures. The system is overseen by ANAP (Agentia Nationala pentru Achizitii Publice - National Agency for Public Procurement) and all procurement procedures are conducted through the electronic platform SEAP (Sistemul Electronic de Achizitii Publice).\n\nOur firm provides comprehensive legal assistance throughout the entire public procurement cycle. We advise economic operators on qualification requirements, preparation of tender documentation, and compliance with technical and financial criteria. When procurement decisions are contested, we represent clients before CNSC (Consiliul National de Solutionare a Contestatiilor - National Council for Solving Complaints), the specialized administrative-jurisdictional body established under Legea nr. 101/2016 privind remediile si caile de atac in materie de atribuire a contractelor de achizitie publica (Law no. 101/2016 on Remedies and Appeals in Public Procurement). We also handle appeals before the competent courts of appeal against CNSC decisions.\n\nFor foreign companies seeking to participate in Romanian public tenders, navigating the legal framework requires specialized knowledge of both Romanian procurement law and EU directives. Our bilingual team assists international clients with registration on SEAP, preparation of European Single Procurement Documents (ESPD), understanding of Romanian-specific qualification criteria, and representation in any disputes arising during or after the award procedure. We ensure that your rights as an economic operator are fully protected, whether you are challenging an exclusion decision, contesting an award, or seeking damages for unlawful procurement practices.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Preparation and review of tender documentation and bids",
+        "case2": "Filing complaints before CNSC against award decisions",
+        "case3": "Challenging procurement award results in courts of appeal",
+        "case4": "Disputes arising from execution of public contracts",
+        "case5": "Damages claims for unlawful exclusion from tender procedures",
+        "case6": "Legal counsel for public-private partnership agreements"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We analyze the procurement documentation, evaluation reports, and identify procedural or substantive violations.",
+        "point2": "We prepare and file the complaint before CNSC within the legal deadlines established by Legea nr. 101/2016.",
+        "point3": "We represent the client before CNSC and, if necessary, before the competent court of appeal in judicial review proceedings.",
+        "point4": "We monitor contract execution and advise on compliance, amendments, and dispute resolution mechanisms."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What is CNSC and what role does it play in public procurement?",
+        "a1": "CNSC (Consiliul National de Solutionare a Contestatiilor - National Council for Solving Complaints) is Romania's specialized administrative-jurisdictional body that resolves complaints in public procurement matters. Established under Legea nr. 101/2016 privind remediile si caile de atac (Law no. 101/2016 on Remedies and Appeals), CNSC has exclusive competence to review complaints filed by economic operators who consider that their rights have been violated during a procurement procedure. CNSC must issue a decision within 20 days of receiving the complete file, and its decisions can be appealed before the competent court of appeal within 10 days from communication.",
+        "q2": "What are the deadlines for filing a complaint in public procurement?",
+        "a2": "Under Legea nr. 101/2016 privind remediile si caile de atac (Law no. 101/2016 on Remedies and Appeals), the deadline for filing a complaint before CNSC depends on the estimated contract value. For contracts above the EU thresholds, the complaint must be filed within 10 days from the date when the complainant became aware of the act considered unlawful. For contracts below the EU thresholds, the deadline is 5 days. These deadlines are mandatory and their non-observance leads to the rejection of the complaint as belated. Prior notification of the contracting authority under Art. 6 of Law 101/2016 is also required before filing with CNSC.",
+        "q3": "Can I challenge an exclusion from a tender procedure?",
+        "a3": "Yes, an economic operator excluded from a public procurement procedure has the right to challenge the exclusion decision before CNSC or directly before the competent court. Under Legea nr. 98/2016 (Law no. 98/2016 on Public Procurement), exclusion must be based on specific grounds enumerated in Art. 164-167, including criminal convictions, tax debts, or serious professional misconduct. If the contracting authority applied the exclusion grounds incorrectly, failed to allow the operator to provide clarifications, or did not properly apply the self-cleaning mechanism under Art. 171, the decision may be annulled. Our attorneys carefully review the exclusion reasoning and prepare a well-founded complaint to protect your right to participate.",
+        "q4": "Can I claim damages for an unlawful procurement decision?",
+        "a4": "Yes, under Art. 53 of Legea nr. 101/2016 privind remediile si caile de atac (Law no. 101/2016 on Remedies and Appeals), any person who has suffered harm as a result of an unlawful act or decision during a procurement procedure may seek damages before the competent court. To succeed, the claimant must prove the unlawfulness of the contracting authority's act, the actual damage suffered (including lost profit from not being awarded the contract), and the causal link between the two. The claim must be filed within the general civil statute of limitations of three years. Our firm assists with quantifying the damages, gathering evidence, and representing clients in court to recover compensation."
+      }
+    },
+    "drept-contraventional": {
+      "title": "Contravention Law",
+      "subtitle": "Expert defense against contravention fines and sanctions before Romanian courts.",
+      "trustBadge": "Contravention Law Expertise",
+      "titleLine1": "Fines & Sanctions",
+      "titleLine2": "Contravention Law",
+      "meta": {
+        "title": "Contravention Law Lawyer Satu Mare | SCA Stan-Baculescu",
+        "description": "Challenging contravention fines and official reports in Satu Mare. Specialized contravention law attorney for traffic, construction, and commercial sanctions."
+      },
+      "descriptionTitle": "Contravention Law Services",
+      "description": "Contravention law in Romania is primarily governed by OG nr. 2/2001 privind regimul juridic al contraventiilor (Government Ordinance no. 2/2001 on the Legal Regime of Contraventions), which establishes the general framework for defining contraventions, applying sanctions, and challenging contravention reports. A contravention (contraventie) is a deed committed with guilt, established and sanctioned by law, ordinance, or local council decision, distinct from criminal offenses by its lower degree of social danger. Sanctions range from warnings (avertisment) to fines (amenda) and complementary sanctions such as confiscation or suspension of activity.\n\nOur firm specializes in challenging contravention reports (procese-verbale de constatare si sanctionare a contraventiei) before Romanian courts. Under Art. 31 of OG 2/2001, the sanctioned person has the right to file a complaint (plangere contraventionala) within 15 days from the date of communication of the report. The complaint is filed with the judecatorie (local court) in whose jurisdiction the contravention was committed. The court examines both the legality and the merits of the report, and may annul it, reduce the fine, or replace it with a warning. Importantly, under ECHR case-law applied by Romanian courts, contravention proceedings must respect fair trial guarantees, including the presumption of innocence.\n\nFor foreign nationals and English speakers who receive contravention fines in Romania - whether for traffic violations, construction irregularities, or commercial activities - understanding your rights is crucial. Many contravention reports contain procedural defects that may lead to annulment, such as failure to properly identify the person sanctioned, incorrect legal classification, or failure to describe the deed with sufficient precision. Our bilingual attorneys review the report for both formal and substantive defects, prepare the legal complaint within the 15-day deadline, and represent you before the competent court to ensure the best possible outcome.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Traffic fines and driving-related contraventions",
+        "case2": "Construction and urban planning violations",
+        "case3": "Commercial and consumer protection sanctions",
+        "case4": "Environmental protection fines",
+        "case5": "Public order and public safety contraventions",
+        "case6": "Labor law and workplace safety violations"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We carefully review the contravention report for procedural defects and substantive errors that may lead to annulment.",
+        "point2": "We prepare and file the complaint (plangere contraventionala) within the mandatory 15-day deadline under OG 2/2001.",
+        "point3": "We represent the client before the competent judecatorie, presenting evidence and legal arguments for annulment or reduction.",
+        "point4": "If necessary, we pursue the appeal before the tribunal to overturn unfavorable first-instance decisions."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What is the deadline for challenging a contravention fine in Romania?",
+        "a1": "Under Art. 31 of OG nr. 2/2001 privind regimul juridic al contraventiilor (Government Ordinance no. 2/2001 on the Legal Regime of Contraventions), the person sanctioned must file a complaint (plangere contraventionala) within 15 days from the date of communication or receipt of the contravention report (proces-verbal). The complaint is filed with the judecatorie (local court) in whose jurisdiction the contravention was committed. This deadline is mandatory, and failure to file within 15 days results in the report becoming final and enforceable. If you have received a fine, it is essential to contact an attorney immediately to preserve your right to challenge.",
+        "q2": "What aspects of a contravention report can be challenged?",
+        "a2": "A contravention report can be challenged on both legality (legalitate) and merits (temeinicie). On legality grounds, the court verifies whether the report contains all mandatory elements required by Art. 16-17 of OG 2/2001, such as correct identification of the sanctioned person, precise description of the deed, legal classification, and the agent's signature. Absence of these elements may lead to absolute nullity. On the merits, the court examines whether the deed was actually committed, whether it constitutes a contravention, and whether the sanction applied is proportionate. Romanian courts also apply ECHR principles, including the presumption of innocence, meaning the burden of proof rests with the sanctioning authority.",
+        "q3": "What happens if I do not pay a contravention fine?",
+        "a3": "If the contravention report becomes final (either because the 15-day challenge period expired or the court rejected the complaint), the fine becomes enforceable. Under OG 2/2001 and the Codul de Procedura Fiscala (Tax Procedure Code), unpaid fines are collected through forced execution (executare silita) by ANAF or local tax authorities. This may involve garnishment of bank accounts, seizure of income, or seizure of movable and immovable property. Additionally, under Art. 28 of OG 2/2001, if the fine is paid within 15 days from communication, the sanctioned person benefits from paying only half of the minimum fine amount. For foreign nationals, unpaid fines may also affect future visa or residence applications in Romania.",
+        "q4": "Can a contravention fine be replaced with a warning?",
+        "a4": "Yes, under Art. 7 of OG nr. 2/2001, the warning (avertisment) is the mildest contravention sanction and can be applied when the deed is of minor gravity. If the sanctioning agent applied a fine, the court hearing the complaint may replace it with a warning if it considers that the circumstances justify a milder sanction, taking into account the nature and gravity of the deed, the circumstances of its commission, the person's conduct, and whether any harm was caused. Romanian courts frequently apply the proportionality principle and replace disproportionate fines with warnings, particularly for first-time offenders and minor violations. Our attorneys present all mitigating factors to maximize the chances of obtaining a warning instead of a fine."
+      }
+    },
+    "dreptul-asigurarilor": {
+      "title": "Insurance Law",
+      "subtitle": "Specialized representation in insurance claims, disputes, and damage recovery.",
+      "trustBadge": "Insurance Law Expertise",
+      "titleLine1": "Claims & Disputes",
+      "titleLine2": "Insurance Law",
+      "meta": {
+        "title": "Insurance Law Lawyer Satu Mare | SCA Stan-Baculescu",
+        "description": "Insurance claims, disputes with insurance companies, and damage recovery. Specialized insurance law attorney in Satu Mare Romania."
+      },
+      "descriptionTitle": "Insurance Law Services",
+      "description": "Insurance law in Romania is governed by Legea nr. 132/2017 privind asigurarea obligatorie de raspundere civila auto (Law no. 132/2017 on Mandatory Motor Vehicle Liability Insurance - RCA), the Codul Civil (Civil Code) provisions on insurance contracts (Art. 2199-2242), and ASF (Autoritatea de Supraveghere Financiara - Financial Supervisory Authority) regulations. The insurance framework covers mandatory motor vehicle liability insurance (RCA), optional comprehensive insurance (CASCO), life insurance, property insurance, professional liability insurance, and various other insurance products. ASF supervises and regulates the insurance market to ensure consumer protection and market stability.\n\nOur firm handles the full spectrum of insurance disputes, from filing initial damage claims to representing clients in court against insurance companies that refuse or undervalue compensation. We assist clients with RCA claims following traffic accidents, including obtaining fair compensation for vehicle repairs, medical expenses, lost income, and moral damages. For CASCO policyholders, we challenge unjustified claim denials and underpayments. We also represent beneficiaries in life insurance disputes, property insurance claims following natural disasters or other covered events, and professional liability insurance matters. Our experience with ASF complaint procedures provides an additional avenue for resolving disputes before resorting to litigation.\n\nFor foreigners and English speakers involved in insurance matters in Romania - particularly traffic accident claims under the RCA system - understanding local procedures is essential. Romania's insurance claim process involves strict notification deadlines, mandatory damage assessment procedures (constatare amiabila de accident or police reports), and specific documentation requirements. Insurance companies frequently attempt to minimize payouts or invoke technical exclusions. Our bilingual attorneys ensure you receive the full compensation you are entitled to under Romanian law, handling all communication with the insurer, arranging independent damage assessments, and pursuing court action when the insurer fails to offer a fair settlement.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "RCA (mandatory liability) claims following traffic accidents",
+        "case2": "CASCO (comprehensive) insurance disputes and claim denials",
+        "case3": "Life insurance benefit claims and policy disputes",
+        "case4": "Property insurance claims for damage or loss",
+        "case5": "Professional liability insurance disputes",
+        "case6": "ASF complaints and regulatory proceedings against insurers"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We review the insurance policy, assess the claim, and gather all necessary documentation to support your case.",
+        "point2": "We file the damage claim with the insurer within legal deadlines and negotiate for fair compensation.",
+        "point3": "If the insurer refuses or undervalues the claim, we initiate court proceedings to obtain full damages.",
+        "point4": "We pursue all categories of compensation including material damages, lost income, and moral damages (daune morale)."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What is the deadline for filing an insurance claim in Romania?",
+        "a1": "The deadline for filing an insurance claim depends on the type of insurance. For RCA (mandatory motor vehicle liability insurance) under Legea nr. 132/2017, the injured party must notify the insurer within a reasonable time, and the insurer must respond with a compensation offer or reasoned rejection within 30 days from the date the complete file was submitted (or 90 days for bodily injury claims requiring medical assessment). The general civil statute of limitations for insurance claims under Art. 2517 of the Codul Civil is three years from the date the insured event occurred or when the insured became aware of the damage. For CASCO policies, the notification deadline is typically specified in the policy terms, usually 24-48 hours for theft and 5-7 days for other events. Missing these deadlines can jeopardize your right to compensation.",
+        "q2": "What can I do if the insurance company refuses my claim?",
+        "a2": "If an insurance company refuses your claim or offers insufficient compensation, you have several legal options. First, you may file a complaint with ASF (Autoritatea de Supraveghere Financiara - Financial Supervisory Authority), which supervises the insurance market and can sanction insurers for unfair practices. Second, you may pursue mediation or the SAL-Fin (Entitatea de Solutionare Alternativa a Litigiilor in Domeniul Financiar-Nebancar) alternative dispute resolution procedure. Third and most effectively, you may file a civil lawsuit against the insurer before the competent Romanian court, seeking full compensation plus legal interest from the date the payment was due. Romanian courts have consistently awarded damages exceeding insurer offers, particularly in bodily injury cases. Our attorneys evaluate the insurer's refusal, gather independent expert evidence, and pursue the most effective legal strategy.",
+        "q3": "What is the difference between RCA and CASCO insurance?",
+        "a3": "RCA (asigurare obligatorie de raspundere civila auto - mandatory motor vehicle liability insurance) is compulsory for all vehicle owners in Romania under Legea nr. 132/2017. It covers damages caused by the insured vehicle to third parties, including bodily injuries, property damage, and moral damages. The injured third party can claim directly against the at-fault driver's RCA insurer. CASCO (asigurare auto comprehensiva) is a voluntary comprehensive insurance that covers damage to the policyholder's own vehicle, regardless of fault, including theft, natural disasters, vandalism, and accidents. While RCA protects third-party victims, CASCO protects the vehicle owner. In practice, after a traffic accident, the victim claims from the at-fault party's RCA, while the at-fault party may claim from their own CASCO for their vehicle damage.",
+        "q4": "Can I claim moral damages (daune morale) from an insurance company?",
+        "a4": "Yes, moral damages (daune morale) are recoverable in insurance claims under Romanian law, particularly in cases involving bodily injuries or death resulting from traffic accidents covered by RCA insurance. Under Legea nr. 132/2017 and the Codul Civil provisions on civil liability, the insurer must compensate not only material damages but also non-patrimonial harm including physical suffering, emotional distress, loss of quality of life, and loss of consortium. Romanian courts have developed a substantial body of case-law on quantifying moral damages, considering factors such as severity of injuries, duration of suffering, permanent disability, age of the victim, and impact on daily life. Awards for moral damages in serious injury cases can reach significant amounts. Our firm works with medical experts to document the full extent of harm suffered and presents compelling arguments to maximize the moral damages awarded."
+      }
+    },
+    "practician-insolventa": {
+      "title": "Insolvency Practitioner",
+      "subtitle": "Comprehensive legal assistance in insolvency proceedings, reorganization, and liquidation.",
+      "trustBadge": "Insolvency Expertise",
+      "titleLine1": "Reorganization & Liquidation",
+      "titleLine2": "Insolvency Practitioner",
+      "meta": {
+        "title": "Insolvency Practitioner Lawyer Satu Mare | SCA Stan-Baculescu",
+        "description": "Insolvency proceedings, judicial reorganization, and liquidation for commercial companies. Specialized insolvency practitioner in Satu Mare Romania."
+      },
+      "descriptionTitle": "Insolvency Services",
+      "description": "Insolvency law in Romania is governed by Legea nr. 85/2014 privind procedurile de prevenire a insolventei si de insolventa (Law no. 85/2014 on Insolvency Prevention and Insolvency Proceedings). Under Art. 5 pct. 29 of this law, insolvency is defined as the state of the debtor's patrimony characterized by insufficient available funds to pay certain, liquid, and due debts. The law provides two main procedural paths: the general procedure (procedura generala), which includes an observation period, judicial reorganization, and potentially bankruptcy (faliment), and the simplified procedure (procedura simplificata), which leads directly to bankruptcy for debtors who do not meet the criteria for reorganization.\n\nOur firm provides full legal assistance to both debtors and creditors throughout all stages of insolvency proceedings. For debtor companies facing financial difficulty, we advise on the option of filing a voluntary insolvency petition, assist with the preparation and implementation of reorganization plans (plan de reorganizare) aimed at restructuring debts and continuing business operations, and represent the debtor before the syndic judge (judecator-sindic) and the creditors' assembly (adunarea creditorilor). For creditors, we handle the registration of claims (declaratii de creanta) within the legal deadlines, challenge the preliminary and final tables of claims (tabel preliminar si tabel definitiv de creante), and pursue recovery of debts through the insolvency procedure.\n\nFor foreign creditors or international companies with exposure to Romanian debtors in insolvency, understanding the Romanian insolvency framework is critical for protecting your interests. The claims registration deadline under Art. 100 of Legea nr. 85/2014 is strict and typically set at 45 days from the opening of proceedings, with failure to register resulting in forfeiture of the right to participate in distributions. Our bilingual team assists foreign creditors with preparing and filing claims, attending creditors' meetings, challenging the insolvency practitioner's decisions, and pursuing all available remedies to maximize recovery. We also advise on cross-border insolvency matters and the recognition of foreign insolvency proceedings under EU Regulation 2015/848 on insolvency proceedings.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Filing for opening of insolvency proceedings (voluntary or by creditor petition)",
+        "case2": "Drafting and implementing judicial reorganization plans",
+        "case3": "Registration of creditor claims and challenging tables of claims",
+        "case4": "Challenging insolvency practitioner decisions and actions",
+        "case5": "Bankruptcy and liquidation proceedings for insolvent companies",
+        "case6": "Personal insolvency proceedings under Legea nr. 151/2015"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We assess the debtor's financial situation and advise on the best strategy - reorganization, voluntary filing, or creditor petition.",
+        "point2": "We prepare and file all necessary documentation, claims, and legal submissions within strict insolvency deadlines.",
+        "point3": "We represent the client before the syndic judge, creditors' assembly, and in any related litigation (voidance actions, liability claims).",
+        "point4": "We monitor the entire insolvency procedure and pursue maximum recovery for creditors or optimal restructuring for debtors."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What is the legal definition of insolvency in Romania?",
+        "a1": "Under Art. 5 pct. 29 of Legea nr. 85/2014 privind procedurile de prevenire a insolventei si de insolventa (Law no. 85/2014 on Insolvency Prevention and Insolvency Proceedings), insolvency is defined as the state of the debtor's patrimony characterized by insufficient available funds to pay certain, liquid, and due debts (datorii certe, lichide si exigibile). Insolvency is presumed when the debtor has not paid its debt within 60 days of the due date. There is also the concept of imminent insolvency (insolventa iminenta) under Art. 5 pct. 30, when the debtor proves that it will not be able to pay its debts as they fall due. The minimum threshold for opening insolvency proceedings is a claim of at least 50,000 RON (approximately EUR 10,000). A debtor may also voluntarily file for insolvency when it anticipates inability to pay debts.",
+        "q2": "What is the difference between judicial reorganization and liquidation (bankruptcy)?",
+        "a2": "Judicial reorganization (reorganizare judiciara) and liquidation/bankruptcy (faliment) represent two distinct phases of insolvency proceedings under Legea nr. 85/2014. Reorganization is a rescue procedure aimed at enabling the debtor to continue its business activities while restructuring its debts according to a reorganization plan approved by creditors and confirmed by the syndic judge. The plan may involve debt rescheduling, partial debt write-offs, operational restructuring, or sale of assets. If reorganization succeeds, the debtor emerges from insolvency as a viable business. Liquidation (bankruptcy) occurs when reorganization fails or is not feasible, and involves the sale of the debtor's assets to pay creditors according to the order of priority established by Art. 159 of the law, followed by dissolution of the company. The general insolvency procedure allows for both stages, while the simplified procedure leads directly to bankruptcy.",
+        "q3": "What is the deadline for registering creditor claims?",
+        "a3": "Under Art. 100 alin. (1) of Legea nr. 85/2014, creditors must file their claims (declaratii de creanta) with the insolvency court and the insolvency practitioner within the deadline established by the syndic judge in the judgment opening the insolvency proceedings, which is typically 45 days from the date of the opening decision. Late claims can still be registered under Art. 100 alin. (4) up until the final date for establishing the updated table of claims, but late-filing creditors lose the right to challenge the preliminary table, to vote on the reorganization plan, and to participate in distributions made prior to their registration. Complete failure to register results in forfeiture of the claim against the insolvent debtor. Given these severe consequences, it is critical to monitor the Buletinul Procedurilor de Insolventa (Insolvency Proceedings Bulletin) and register claims promptly.",
+        "q4": "Can directors be held personally liable in insolvency?",
+        "a4": "Yes, under Art. 169 of Legea nr. 85/2014, the syndic judge may order members of the management or supervisory bodies (directors, board members, shareholders with control) to bear personal liability for part or all of the debtor's outstanding debts if their actions contributed to the company's insolvency. Grounds for personal liability include: using the company's assets for personal benefit, conducting fictitious commercial activities, continuing business operations when insolvency was inevitable in order to increase the state of insolvency, keeping fictitious or incomplete accounting records, misappropriating or concealing company assets, and using ruinous methods to obtain funds to delay insolvency. The action for personal liability can be brought by the insolvency practitioner, the creditors' committee, or creditors holding at least 50% of the total claims. The amounts recovered through personal liability increase the funds available for distribution to creditors."
+      }
+    },
+    "arbitraj-intern": {
+      "title": "Domestic Arbitration",
+      "subtitle": "Alternative dispute resolution for commercial conflicts through arbitration and mediation.",
+      "trustBadge": "Arbitration Expertise",
+      "titleLine1": "Arbitration & Mediation",
+      "titleLine2": "Domestic Arbitration",
+      "meta": {
+        "title": "Domestic Arbitration Lawyer Satu Mare | SCA Stan-Baculescu",
+        "description": "Alternative dispute resolution through arbitration and mediation for commercial disputes. Specialized arbitration lawyer in Satu Mare Romania."
+      },
+      "descriptionTitle": "Domestic Arbitration Services",
+      "description": "Domestic arbitration in Romania is regulated by the Codul de Procedura Civila (Code of Civil Procedure), specifically Art. 541-621 under Book IV on Arbitration. Arbitration is a private, alternative method of resolving disputes in which the parties agree to submit their conflict to one or more arbitrators rather than to state courts. The arbitration agreement (conventia arbitrala) may take the form of an arbitration clause (clauza compromisorie) included in a contract, or a separate submission agreement (compromis) concluded after the dispute has arisen. Romania also hosts institutional arbitration through the Curtea de Arbitraj Comercial International de pe langa Camera de Comert si Industrie a Romaniei (Court of International Commercial Arbitration attached to the Chamber of Commerce and Industry of Romania).\n\nOur firm provides comprehensive arbitration services, from drafting effective arbitration clauses in commercial contracts to representing clients throughout the entire arbitration proceedings. We handle both ad-hoc arbitration governed directly by the Civil Procedure Code and institutional arbitration conducted under the rules of established arbitration institutions. Additionally, we advise on and represent clients in mediation proceedings under Legea nr. 192/2006 privind medierea si organizarea profesiei de mediator (Law no. 192/2006 on Mediation and the Organization of the Mediator Profession), which provides a flexible, confidential, and cost-effective method of dispute resolution that can be used independently or in conjunction with arbitration.\n\nFor foreign companies and English-speaking individuals involved in commercial disputes in Romania, arbitration offers significant advantages over traditional litigation: faster resolution (typically 6-12 months versus 2-5 years in courts), confidentiality of proceedings, flexibility in choosing applicable rules and language, and the enforceability of arbitral awards under the New York Convention for international disputes. Our bilingual team assists international clients with selecting appropriate arbitration forums, negotiating arbitration agreements, preparing and presenting their case before the arbitral tribunal, and enforcing or challenging arbitral awards under Art. 608-613 of the Civil Procedure Code. We also represent foreign parties in mediation sessions conducted in English or Romanian.",
+      "casesTitle": "Types of Cases We Handle",
+      "cases": {
+        "case1": "Commercial contract disputes resolved through arbitration",
+        "case2": "Construction and infrastructure disputes before arbitral tribunals",
+        "case3": "Corporate and shareholder disputes submitted to arbitration",
+        "case4": "International trade disputes with Romanian-seated arbitration",
+        "case5": "Enforcement and challenge of arbitral awards under Art. 608 CPC",
+        "case6": "Commercial and civil mediation under Legea nr. 192/2006"
+      },
+      "approachTitle": "Our Approach",
+      "approach": {
+        "point1": "We evaluate the dispute and advise on the most effective resolution method - arbitration, mediation, or a combined approach.",
+        "point2": "We draft or review arbitration clauses and mediation agreements to ensure enforceability and protect client interests.",
+        "point3": "We prepare the statement of claim or defense, present evidence, and advocate before the arbitral tribunal or mediator.",
+        "point4": "We handle post-award procedures including enforcement of favorable awards and challenging defective awards under Art. 608-613 CPC."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What is the difference between arbitration and litigation in Romania?",
+        "a1": "Arbitration and litigation are two distinct methods of resolving disputes. Litigation is conducted before Romanian state courts (judecatorie, tribunal, curtea de apel, Inalta Curte de Casatie si Justitie) under the Codul de Procedura Civila, with proceedings open to the public, strict procedural rules, and the possibility of multiple levels of appeal. Arbitration, governed by Art. 541-621 of the same Code, is a private mechanism where the parties choose one or more arbitrators to decide their dispute. Key differences include speed (arbitration typically resolves in 6-12 months versus 2-5 years for litigation), confidentiality (arbitration proceedings are private), flexibility (parties can choose procedural rules and language), and finality (arbitral awards are generally not subject to appeal on the merits, only to annulment for limited procedural grounds under Art. 608 CPC). However, arbitration requires an agreement between the parties and is generally limited to patrimonial disputes that can be subject to a settlement.",
+        "q2": "Are arbitral awards enforceable in Romania?",
+        "a2": "Yes, arbitral awards are fully enforceable in Romania. Under Art. 615 of the Codul de Procedura Civila, a domestic arbitral award that is no longer subject to annulment constitutes an enforceable title (titlu executoriu) and can be enforced through forced execution just like a court judgment. For enforcement, the party must obtain an executory formula (incuviintarea executarii silite) from the competent court. International arbitral awards rendered abroad are recognized and enforced in Romania under the 1958 New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards, to which Romania is a signatory, as well as under Art. 1123-1132 of the Civil Procedure Code. The Romanian court may only refuse recognition or enforcement on narrow grounds specified in the New York Convention, such as invalidity of the arbitration agreement, violation of due process, or public policy concerns.",
+        "q3": "On what grounds can an arbitral award be challenged?",
+        "a3": "Under Art. 608 of the Codul de Procedura Civila, an arbitral award can be challenged through an action for annulment (actiune in anulare) filed before the competent court of appeal within one month from communication of the award. The grounds for annulment are strictly limited and include: the dispute was not capable of being resolved through arbitration; the arbitral tribunal was constituted in violation of the arbitration agreement; the award was rendered after the expiry of the arbitration term; the tribunal ruled on matters not submitted to it (ultra petita) or failed to rule on a submitted matter; the award violates public policy, good morals, or mandatory legal provisions; and the award does not contain the required elements under Art. 603 CPC. Importantly, the court reviewing the annulment action does not re-examine the merits of the dispute but only verifies whether the procedural grounds for annulment are met. Our attorneys carefully analyze the award and advise on the viability and strategy of any annulment action.",
+        "q4": "What is mediation and when is it recommended?",
+        "a4": "Mediation in Romania is governed by Legea nr. 192/2006 privind medierea si organizarea profesiei de mediator (Law no. 192/2006 on Mediation and the Organization of the Mediator Profession). It is a voluntary, confidential process in which a neutral, trained mediator facilitates communication between the parties to help them reach a mutually acceptable agreement. Unlike arbitration or litigation, the mediator does not impose a decision - the parties retain full control over the outcome. Mediation is particularly recommended for disputes where the parties wish to preserve their business relationship, when confidentiality is important, when a creative solution beyond what a court could order is desired, or when speed and cost-efficiency are priorities. Under Romanian law, for certain types of disputes (including commercial disputes above 50,000 RON), parties are required to attend an informative mediation session before filing a court action, although actual participation in mediation remains voluntary. A mediation agreement has the legal force of a contract between the parties and can be authenticated by a notary to become an enforceable title."
       }
     }
   },

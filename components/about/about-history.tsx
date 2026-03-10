@@ -34,7 +34,7 @@ export function AboutHistory() {
             <div className="relative h-full min-h-[480px] overflow-hidden rounded-2xl lg:rounded-r-none lg:rounded-l-2xl sm:min-h-[560px] lg:min-h-[600px]">
               {/* Photo */}
               <Image
-                src="/images/team/fondatori.webp"
+                src="/images/team/fondatori-societatea-civila-de-avocat-stan-baculescu.webp"
                 alt="Fondatorii Stan-Baculescu - Camelia Stan si Vlad Baculescu"
                 fill
                 className="object-cover object-top transition-transform duration-700 hover:scale-105"

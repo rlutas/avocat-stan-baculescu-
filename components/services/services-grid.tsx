@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Handshake } from 'lucide-react';
 import { LawIcon, type LawIconName } from '@/components/icons';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
 
@@ -80,6 +80,46 @@ const services: Service[] = [
     num: '08',
     gradient: 'from-[#002a52] to-[#16213e]',
     image: '/images/services/drept-administrativ-fiscal.webp',
+  },
+  {
+    id: 'achizitii-publice',
+    iconName: 'certificate',
+    slug: '/servicii/achizitii-publice',
+    num: '09',
+    gradient: 'from-[#003a70] to-[#004a8f]',
+    image: '/images/services/achizitii-publice.webp',
+  },
+  {
+    id: 'drept-contraventional',
+    iconName: 'shield',
+    slug: '/servicii/drept-contraventional',
+    num: '10',
+    gradient: 'from-[#1a1a2e] to-[#003a70]',
+    image: '/images/services/drept-contraventional.webp',
+  },
+  {
+    id: 'dreptul-asigurarilor',
+    iconName: 'shield-badge',
+    slug: '/servicii/dreptul-asigurarilor',
+    num: '11',
+    gradient: 'from-[#002a52] to-[#1a5a90]',
+    image: '/images/services/dreptul-asigurarilor.webp',
+  },
+  {
+    id: 'practician-insolventa',
+    iconName: 'law-book',
+    slug: '/servicii/practician-insolventa',
+    num: '12',
+    gradient: 'from-[#16213e] to-[#002a52]',
+    image: '/images/services/practician-insolventa.webp',
+  },
+  {
+    id: 'arbitraj-intern',
+    iconName: 'court',
+    slug: '/servicii/arbitraj-intern',
+    num: '13',
+    gradient: 'from-[#003a70] to-[#16213e]',
+    image: '/images/services/arbitraj-intern.webp',
   },
 ];
 
@@ -177,6 +217,18 @@ export function ServicesGrid() {
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        {/* Collaboration callout */}
+        <ScrollAnimate delay={0.3}>
+          <div className="mx-auto mt-14 max-w-2xl rounded-2xl border border-gold/20 bg-white p-6 text-center shadow-sm sm:mt-16 sm:p-8">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10">
+              <Handshake className="h-6 w-6 text-gold" />
+            </div>
+            <p className="text-base leading-relaxed text-navy/70">
+              {t('hero.collaboration')}
+            </p>
+          </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

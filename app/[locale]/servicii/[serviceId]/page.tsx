@@ -20,6 +20,11 @@ const validServiceIds = [
   'drept-comercial',
   'accidente-rutiere',
   'drept-administrativ-fiscal',
+  'achizitii-publice',
+  'drept-contraventional',
+  'dreptul-asigurarilor',
+  'practician-insolventa',
+  'arbitraj-intern',
 ];
 
 type Props = {

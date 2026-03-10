@@ -104,7 +104,9 @@ export function Testimonials() {
   const googleMapsUrl = 'https://maps.app.goo.gl/52fKFCMaEic37ZUD8';
 
   return (
-    <section className="bg-[#f8f9fa] py-20 sm:py-32">
+    <section className="relative bg-[#f8f9fa] py-20 sm:py-32">
+      {/* Gold accent line */}
+      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-14 text-center sm:mb-16">

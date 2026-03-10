@@ -11,7 +11,7 @@ const founders = [
   {
     id: 'camelia-stan',
     nameKey: 'cameliaStan',
-    image: '/images/team/camielia-stan.webp',
+    image: '/images/team/camelia-stan.webp',
   },
   {
     id: 'vlad-baculescu',
@@ -25,16 +25,25 @@ const collaborators = [
     id: 'diana-chincea',
     nameKey: 'dianaChincea',
     image: '/images/team/diana-chincea.webp',
+    roleKey: 'collaborator' as const,
   },
   {
     id: 'cristina-blan',
     nameKey: 'cristinaBlan',
     image: '/images/team/cristina-blan.webp',
+    roleKey: 'collaborator' as const,
   },
   {
     id: 'alexandra-rusu',
     nameKey: 'alexandraRusu',
     image: '/images/team/alexandra-rusu.webp',
+    roleKey: 'collaborator' as const,
+  },
+  {
+    id: 'diana-veres',
+    nameKey: 'dianaVeres',
+    image: '/images/team/diana-veres.webp',
+    roleKey: 'clientRelations' as const,
   },
 ];
 
@@ -123,7 +132,7 @@ export function HomeTeam() {
         </StaggerContainer>
 
         {/* Collaborators */}
-        <StaggerContainer className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8" staggerDelay={0.1}>
+        <StaggerContainer className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-6 lg:gap-8" staggerDelay={0.1}>
           {collaborators.map((member) => (
             <StaggerItem key={member.id} variant="scaleUp">
               <Link
@@ -144,7 +153,7 @@ export function HomeTeam() {
 
                   <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5">
                     <span className="mb-1 hidden text-[10px] font-semibold uppercase tracking-[0.15em] text-gold sm:block">
-                      {tRoles('collaborator')}
+                      {tRoles(member.roleKey)}
                     </span>
                     <h3 className="font-heading text-sm font-bold text-white transition-colors duration-300 group-hover:text-gold sm:text-lg">
                       {tMembers(`${member.nameKey}.name`)}

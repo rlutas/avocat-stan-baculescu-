@@ -13,7 +13,7 @@ const founders = [
   {
     id: 'camelia-stan',
     name: 'Camelia Stan',
-    image: '/images/team/camielia-stan.webp',
+    image: '/images/team/camelia-stan.webp',
   },
   {
     id: 'vlad-baculescu',
@@ -233,31 +233,36 @@ export function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="animate-fade-in-up delay-300 mb-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <GlowWrapper className="rounded-full">
+            <div className="animate-fade-in-up delay-300 mb-10 flex flex-row items-center gap-2.5 sm:gap-4">
+              <GlowWrapper className="flex-1 rounded-full sm:flex-none">
                 <Button
                   asChild
                   size="lg"
-                  className="group h-14 rounded-full bg-gold px-8 text-base font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)]"
+                  className="group h-12 w-full rounded-full bg-gold px-4 text-sm font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)] sm:h-14 sm:px-8 sm:text-base"
                 >
                   <Link href="/contact">
-                    {t('cta')}
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <span className="sm:hidden">{t('ctaShort')}</span>
+                    <span className="hidden sm:inline">{t('cta')}</span>
+                    <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1 sm:ml-2" />
                   </Link>
                 </Button>
               </GlowWrapper>
               <a
                 href="tel:+40745466720"
-                className="group relative flex h-14 items-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/15 hover:ring-gold/40 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0"
+                className="group relative flex h-12 flex-1 items-center justify-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/15 hover:ring-gold/40 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 sm:h-14 sm:flex-none sm:justify-start"
               >
                 {/* Icon section with distinct background */}
-                <div className="flex h-full w-12 sm:w-14 flex-shrink-0 items-center justify-center self-stretch bg-gold/10 transition-all duration-300 group-hover:bg-gold/20 group-active:bg-gold/30">
-                  <Phone className="h-5 w-5 text-gold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 group-active:scale-95" />
+                <div className="flex h-full w-10 flex-shrink-0 items-center justify-center self-stretch bg-gold/10 transition-all duration-300 group-hover:bg-gold/20 group-active:bg-gold/30 sm:w-14">
+                  <Phone className="h-4 w-4 text-gold transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 group-active:scale-95 sm:h-5 sm:w-5" />
                 </div>
-                {/* Text section */}
-                <div className="flex items-center gap-1.5 px-3 sm:block sm:px-5 sm:text-left">
-                  <p className="text-sm sm:text-xs text-white/50 transition-colors duration-300 group-hover:text-white/70 whitespace-nowrap">{t('callNow')}</p>
-                  <p className="text-base sm:text-sm font-semibold text-white whitespace-nowrap">+40 745 466 720</p>
+                {/* Mobile: just "Sună acum" */}
+                <div className="flex flex-1 items-center justify-center px-2 sm:hidden">
+                  <p className="text-sm font-semibold text-white whitespace-nowrap">{t('callNow')}</p>
+                </div>
+                {/* Desktop: label + number */}
+                <div className="hidden sm:block sm:px-5 sm:text-left">
+                  <p className="text-xs text-white/50 transition-colors duration-300 group-hover:text-white/70 whitespace-nowrap">{t('callNow')}</p>
+                  <p className="text-sm font-semibold text-white whitespace-nowrap">+40 745 466 720</p>
                 </div>
               </a>
             </div>
