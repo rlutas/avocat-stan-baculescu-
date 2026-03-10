@@ -25,7 +25,7 @@
       "cta": "Programează o Consultație",
       "ctaShort": "Consultație",
       "secondaryCta": "Descoperă Serviciile",
-      "trustBadge": "Avocați din 2006 · Societate înființată în 2009",
+      "trustBadge": "Avocați din 2006 · Societate înființată în 2020",
       "callNow": "Sună acum",
       "schedule": "Program: Luni - Vineri, 09:00 - 17:00",
       "founder": "Fondator",
@@ -96,8 +96,8 @@
       "label": "Societate Civilă de Avocați",
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "Despre Noi",
-      "subtitle": "Fondatorii noștri practică dreptul din 2006, iar Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2009. Oferim servicii juridice de excelență în Satu Mare și în toată România.",
-      "trustBadge": "Avocați din 2006 · Societate înființată în 2009",
+      "subtitle": "Fondatorii noștri practică dreptul din 2006, iar Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2020. Oferim servicii juridice de excelență în Satu Mare și în toată România.",
+      "trustBadge": "Avocați din 2006 · Societate înființată în 2020",
       "stat1": "Ani Experiență",
       "stat2": "Clienți Mulțumiți",
       "stat3": "Angajament"
@@ -106,7 +106,7 @@
       "label": "Povestea Noastră",
       "foundedLabel": "Înființat",
       "title": "Povestea Noastră",
-      "description": "Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2009 în Satu Mare. Fondatorii, avocații Camelia Stan și Vlad Baculescu, sunt membri ai Baroului Satu Mare din 2006, aducând fiecare aproape două decenii de experiență juridică. Firma s-a dezvoltat continuu, devenind un partener de încredere pentru clienții din regiunea de nord-vest a României și nu numai.",
+      "description": "Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2020 în Satu Mare. Fondatorii, avocații Camelia Stan și Vlad Baculescu, sunt membri ai Baroului Satu Mare din 2006, aducând fiecare aproape două decenii de experiență juridică. Firma s-a dezvoltat continuu, devenind un partener de încredere pentru clienții din regiunea de nord-vest a României și nu numai.",
       "milestone1": "Fondatori cu experiență din 2006 în domeniul juridic",
       "milestone2": "Sute de cazuri rezolvate cu succes",
       "milestone3": "Echipă de avocați specializați pe diverse domenii"
@@ -261,7 +261,7 @@
           "edu2": "Licență în Drept"
         },
         "experience": {
-          "exp1": "Partener fondator - SCA Stan-Baculescu (2009 - prezent)",
+          "exp1": "Partener fondator - SCA Stan-Baculescu (2020 - prezent)",
           "exp2": "Avocat pledant cu experiență în litigii civile complexe",
           "exp3": "Consultanță în drept contractual și imobiliar"
         },
@@ -313,7 +313,7 @@
         },
         "experience": {
           "exp1": "Decan al Baroului Satu Mare (2019 - prezent, reales 2023)",
-          "exp2": "Partener fondator - SCA Stan-Baculescu (2009 - prezent)",
+          "exp2": "Partener fondator - SCA Stan-Baculescu (2020 - prezent)",
           "exp3": "Experiență vastă în litigii penale complexe",
           "exp4": "Consultanță juridică în dreptul afacerilor și insolvență"
         },

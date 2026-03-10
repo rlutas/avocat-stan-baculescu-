@@ -25,7 +25,7 @@
       "cta": "Schedule a Consultation",
       "ctaShort": "Consultation",
       "secondaryCta": "Discover Our Services",
-      "trustBadge": "Attorneys since 2006 · Firm est. 2009",
+      "trustBadge": "Attorneys since 2006 · Firm est. 2020",
       "callNow": "Call now",
       "schedule": "Hours: Monday - Friday, 09:00 - 17:00",
       "founder": "Founder",
@@ -96,8 +96,8 @@
       "label": "Stan-Baculescu Law Firm",
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "About Us",
-      "subtitle": "Our founders have practiced law since 2006, and Stan-Baculescu Law Firm was established in 2009. We provide excellent legal services in Satu Mare and throughout Romania.",
-      "trustBadge": "Attorneys since 2006 · Firm est. 2009",
+      "subtitle": "Our founders have practiced law since 2006, and Stan-Baculescu Law Firm was established in 2020. We provide excellent legal services in Satu Mare and throughout Romania.",
+      "trustBadge": "Attorneys since 2006 · Firm est. 2020",
       "stat1": "Years Experience",
       "stat2": "Satisfied Clients",
       "stat3": "Commitment"
@@ -106,7 +106,7 @@
       "label": "Our Story",
       "foundedLabel": "Founded",
       "title": "Our Story",
-      "description": "Stan-Baculescu Law Firm was founded in 2009 in Satu Mare. Its founders, attorneys Camelia Stan and Vlad Baculescu, have been members of the Satu Mare Bar since 2006, each bringing nearly two decades of legal experience. The firm has continuously grown, becoming a trusted partner for clients in the northwestern region of Romania and beyond.",
+      "description": "Stan-Baculescu Law Firm was founded in 2020 in Satu Mare. Its founders, attorneys Camelia Stan and Vlad Baculescu, have been members of the Satu Mare Bar since 2006, each bringing nearly two decades of legal experience. The firm has continuously grown, becoming a trusted partner for clients in the northwestern region of Romania and beyond.",
       "milestone1": "Founders with legal experience since 2006",
       "milestone2": "Hundreds of successfully resolved cases",
       "milestone3": "Team of specialized attorneys across various fields"
@@ -261,7 +261,7 @@
           "edu2": "Law Degree"
         },
         "experience": {
-          "exp1": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
+          "exp1": "Founding Partner - SCA Stan-Baculescu (2020 - present)",
           "exp2": "Experienced trial attorney in complex civil litigation",
           "exp3": "Consulting in contractual and real estate law"
         },
@@ -313,7 +313,7 @@
         },
         "experience": {
           "exp1": "Dean of the Satu Mare Bar (2019 - present, re-elected 2023)",
-          "exp2": "Founding Partner - SCA Stan-Baculescu (2009 - present)",
+          "exp2": "Founding Partner - SCA Stan-Baculescu (2020 - present)",
           "exp3": "Extensive experience in complex criminal litigation",
           "exp4": "Legal consulting in business law and insolvency"
         },

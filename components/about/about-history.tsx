@@ -53,7 +53,7 @@ export function AboutHistory() {
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
                 <div className="rounded-xl bg-navy/80 px-4 py-3 ring-1 ring-white/20">
-                  <p className="font-heading text-3xl font-bold text-gold">2009</p>
+                  <p className="font-heading text-3xl font-bold text-gold">2020</p>
                   <p className="text-xs font-medium uppercase tracking-wider text-white/70">
                     {t('foundedLabel')}
                   </p>
