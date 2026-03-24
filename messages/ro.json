@@ -21,13 +21,13 @@
       "titleLine1": "Societate Civilă de Avocați",
       "titleLine2": "Stan-Baculescu",
       "subtitle": "Profesionalism. Dedicare. Rezultate.",
-      "description": "Oferim servicii juridice de excelență în Satu Mare și în toată România. Cu aproape 20 de ani de experiență, fondatorii noștri vă reprezintă cu dedicare în domenii precum drept civil, penal, al familiei, comercial, malpraxis medical și multe altele.",
+      "description": "Stan-Baculescu este o societate de avocatură, formată din avocați specializați la cel mai înalt nivel juridic, unde indiferent de nevoia dumneavoastră, veți găsi cu siguranță un avocat mereu pregătit să ofere soluții legale, recomandări rapide și eficiente. Cu experiență juridică solidă dobândită în peste 20 de ani de activitate, echipa Stan-Baculescu acordă clienților servicii de consultanță juridică, de asistare și reprezentare în litigii de drept civil, penal, comercial, achiziții publice, malpraxis medical, administrativ și fiscal, precum și în arbitraj.",
       "cta": "Programează o Consultație",
       "ctaShort": "Consultație",
       "secondaryCta": "Descoperă Serviciile",
       "trustBadge": "Avocați din 2006 · Societate înființată în 2020",
       "callNow": "Sună acum",
-      "schedule": "Program: Luni - Vineri, 09:00 - 17:00",
+      "schedule": "Program non stop",
       "founder": "Fondator",
       "satisfiedClients": "Clienți Mulțumiți",
       "yearsExperience": "Ani Experiență"
@@ -36,10 +36,10 @@
       "trustBadge": "13 Arii de Practică",
       "titleLine1": "Servicii Juridice",
       "titleLine2": "Ariile Noastre de Practică",
-      "description": "Oferim asistență juridică completă în diverse domenii ale dreptului, de la drept civil și penal la malpraxis medical și accidente rutiere.",
+      "description": "Oferim servicii de consultanță juridică, de asistare și reprezentare în litigii de drept civil, penal, comercial, achiziții publice, malpraxis medical, administrativ și fiscal, precum și în arbitraj.",
       "viewAll": "Vezi Toate Serviciile",
       "viewDetails": "Află mai multe",
-      "collaboration": "Colaborăm cu experți din toate domeniile: topografi, experți fiscali, contabili, executori judecătorești, notari, mediatori, evaluatori, traducători autorizați și alți specialiști, pentru a vă oferi soluții juridice complete."
+      "collaboration": "Colaborăm cu experți din toate domeniile: experți fiscali, contabili, topografi, executori judecătorești, notari, mediatori, evaluatori, traducători autorizați și alți specialiști, pentru a vă oferi soluții juridice complete."
     },
     "whyUs": {
       "trustBadge": "De Ce Să Ne Alegeți",
@@ -53,31 +53,31 @@
       "stat3Value": "13",
       "stat3Label": "Arii de Practică",
       "value1Title": "Experiență Dovedită",
-      "value1Description": "Membri ai Baroului Satu Mare din 2006, cu aproape două decenii de practică juridică și sute de cazuri rezolvate cu succes în instanță.",
+      "value1Description": "Membri ai Baroului Satu Mare din 2006, cu mai mult de două decenii de practică judiciară și sute de cauze soluționate cu succes în instanță.",
       "value2Title": "Abordare Personalizată",
-      "value2Description": "Fiecare caz primește atenție individuală și o strategie adaptată situației specifice.",
+      "value2Description": "Fiecare caz este tratat cu maximă atenție și o strategie adaptată situației specifice.",
       "value3Title": "Comunicare Transparentă",
       "value3Description": "Vă ținem la curent cu fiecare etapă și vă explicăm clar opțiunile disponibile."
     },
     "video": {
       "label": "Prezentare Video",
       "title": "Cunoașteți Echipa Stan-Baculescu",
-      "description": "Descoperi cine suntem, cum lucrăm și de ce clienții noștri ne aleg de aproape 20 de ani. Fondatorii societății vă invită să faceți cunoștință cu echipa și biroul nostru din Satu Mare.",
+      "description": "Descoperi cine suntem, cum lucrăm și de ce clienții noștri ne aleg de mai bine de 20 de ani. Fondatorii societății vă invită să faceți cunoștință cu echipa din Satu Mare.",
       "highlight1": "Fondatori cu experiență din 2006",
-      "highlight2": "Abordare profesională și dedicată",
-      "highlight3": "Disponibilitate și comunicare directă"
+      "highlight2": "Abordare profesionistă și dedicație",
+      "highlight3": "Disponibilitate de comunicare directă"
     },
     "methodology": {
       "trustBadge": "Procesul Nostru",
       "titleLine1": "Cum Lucrăm",
       "titleLine2": "4 Pași Simpli",
-      "description": "Un proces clar și transparent, de la prima consultație până la obținerea rezultatului dorit."
+      "description": "Un proces clar și transparent, de la prima consultație până la obținerea rezultatului final"
     },
     "team": {
       "trustBadge": "Echipa de Avocați",
       "titleLine1": "Profesioniștii Noștri",
       "titleLine2": "Cunoaște Echipa",
-      "description": "O echipă de avocați cu experiență și dedicare, pregătită să vă reprezinte cu profesionalism în orice situație juridică.",
+      "description": "O echipă de avocați cu experiență pregătită să vă reprezinte cu profesionalism în orice situație juridică.",
       "viewProfile": "Vezi Profil",
       "viewAll": "Vezi Întreaga Echipă"
     },
@@ -87,7 +87,7 @@
       "description": "Programați o consultație și discutați cu unul dintre avocații noștri despre situația dumneavoastră. Suntem aici să vă ajutăm.",
       "button": "Programează o Consultație",
       "callLabel": "Sau sunați direct",
-      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
+      "available": "Non Stop"
     }
   },
   "AboutPage": {
@@ -96,7 +96,7 @@
       "label": "Societate Civilă de Avocați",
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "Despre Noi",
-      "subtitle": "Fondatorii noștri practică dreptul din 2006, iar Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2020. Oferim servicii juridice de excelență în Satu Mare și în toată România.",
+      "subtitle": "Fondatorii societății desfășoară activitatea de avocat din anul 2006, iar Societatea Civilă de Avocați Stan-Baculescu a fost înființată în anul 2020. Oferim servicii juridice la cele mai înalte standarde profesionale în Satu Mare, precum și la nivel național, pe întreg teritoriul României.",
       "trustBadge": "Avocați din 2006 · Societate înființată în 2020",
       "stat1": "Ani Experiență",
       "stat2": "Clienți Mulțumiți",
@@ -106,10 +106,10 @@
       "label": "Povestea Noastră",
       "foundedLabel": "Înființat",
       "title": "Povestea Noastră",
-      "description": "Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2020 în Satu Mare. Fondatorii, avocații Camelia Stan și Vlad Baculescu, sunt membri ai Baroului Satu Mare din 2006, aducând fiecare aproape două decenii de experiență juridică. Firma s-a dezvoltat continuu, devenind un partener de încredere pentru clienții din regiunea de nord-vest a României și nu numai.",
-      "milestone1": "Fondatori cu experiență din 2006 în domeniul juridic",
-      "milestone2": "Sute de cazuri rezolvate cu succes",
-      "milestone3": "Echipă de avocați specializați pe diverse domenii"
+      "description": "Societatea Civilă de Avocați Stan-Baculescu a fost înființată în 2020 în Satu Mare. Avocații fondatori, Camelia Stan și Vlad Baculescu, sunt membri ai Baroului Satu Mare din anul 2006, având fiecare mai bine de două decenii de experiență juridică. Societatea s-a dezvoltat continuu, devenind un partener de încredere pentru clienții din regiunea de nord-vest a României și nu numai.",
+      "milestone1": "Avocați cu experiență din anul 2006 în domeniul juridic",
+      "milestone2": "Sute de cazuri soluționate cu succes",
+      "milestone3": "Echipă de avocați specializați în diverse domenii"
     },
     "values": {
       "label": "Valorile Noastre",
@@ -117,7 +117,7 @@
       "subtitle": "Principii care ne ghidează în fiecare zi",
       "professionalism": {
         "title": "Profesionalism",
-        "description": "Oferim servicii juridice de cea mai înaltă calitate, bazate pe cunoștințe solide și experiență vastă în domeniu."
+        "description": "Oferim servicii juridice de înaltă calitate, bazate pe cunoștințe solide și experiență vastă în domeniu."
       },
       "adaptability": {
         "title": "Adaptabilitate",
@@ -175,7 +175,7 @@
       "description": "Contactați-ne pentru o consultație inițială și descoperiți cum vă putem ajuta. Suntem aici pentru dumneavoastră.",
       "button": "Programează o Consultație",
       "callLabel": "Sună acum",
-      "available": "Program: Luni - Vineri, 09:00 - 17:00"
+      "available": "Program non stop"
     }
   },
   "TeamPage": {
@@ -204,8 +204,8 @@
     "members": {
       "cameliaStan": {
         "name": "Camelia Stan",
-        "shortBio": "Avocat fondator, membră a Baroului Satu Mare din 2006. Specializată în drept civil, contencios administrativ, dreptul afacerilor și malpraxis medical.",
-        "fullBio": "Camelia Stan este partener al Societății Civile de Avocați Stan - Baculescu, membră a Baroului Satu Mare din anul 2006, reprezintă cu profesionalism interesele clienților săi. Este un experimentat avocat pledant, a acordat asistență juridică și a reprezentat clienți în litigii de drept civil, contencios administrativ și fiscal, dreptul afacerilor și societar, malpraxis medical, achiziții publice, dreptul asigurărilor, în materia insolvenței, dreptul familiei, dreptul muncii, drept contravențional și în cauze arbitrale interne. A participat în numeroase proiecte de consultanță privind probleme de drept contractual, imobiliar, în dreptul afacerilor și societar, asistând clienții atât la negocierea și încheierea contractelor civile și comerciale, cât și la încetarea amiabilă a raporturilor juridice.",
+        "shortBio": "Avocat fondator, membră a Baroului Satu Mare din 2006. Specializată în drept civil, contencios administrativ, achiziții publice, dreptul afacerilor, dreptul familiei",
+        "fullBio": "Camelia Stan este avocat fondator a Societății Civile de Avocați Stan - Baculescu, membră a Baroului Satu Mare din anul 2006, reprezintă cu profesionalism interesele clienților săi. Este un experimentat avocat pledant, a acordat asistență juridică și a reprezentat clienți în litigii de drept civil, contencios administrativ și fiscal, dreptul afacerilor și societar, malpraxis medical, achiziții publice, dreptul asigurărilor, în materia insolvenței, dreptul familiei, dreptul muncii, drept contravențional și în cauze arbitrale interne. A participat în numeroase proiecte de consultanță privind probleme de drept contractual, imobiliar, în dreptul afacerilor și societar, asistând clienții la negocierea și încheierea contractelor civile și comerciale.",
         "pullQuote": "Profesionalism și dedicare în apărarea intereselor clienților noștri.",
         "phone": "+40 745 466 720",
         "email": "camelia.stan@stanbaculescu.ro",
@@ -254,7 +254,7 @@
           "spec7Desc": "Divorțuri, custodia copiilor, partaj, pensii alimentare și alte aspecte familiale.",
           "spec8Desc": "Protecția drepturilor angajaților, contracte de muncă, concedieri și litigii de muncă.",
           "spec9Desc": "Apărare în cauze contravenționale, contestații la amenzi și procese-verbale.",
-          "spec10Desc": "Reprezentare în proceduri arbitrale interne și soluționarea alternativă a disputelor."
+          "spec10Desc": "Reprezentare în proceduri arbitrale interne și soluționarea alternativă a litigilor."
         },
         "education": {
           "edu1": "Membră a Baroului Satu Mare din anul 2006",
@@ -273,8 +273,8 @@
       },
       "vladBaculescu": {
         "name": "Vlad Baculescu",
-        "shortBio": "Avocat fondator și Decan al Baroului Satu Mare. Membru al Baroului din 2006. Specializat în drept penal, dreptul afacerilor, insolvență și drept civil.",
-        "fullBio": "Vlad Baculescu este partener al Societății Civile de Avocați Stan - Baculescu și Decan al Baroului Satu Mare, ales pentru prima dată în 2019 și reales în 2023. Membru al Baroului Satu Mare din anul 2006, are o bogată experiență în domeniul dreptului penal, dreptului civil, insolvenței și al dreptului afacerilor. A acordat consultanță juridică și a asigurat asistență și reprezentarea părților în litigii civile și penale. Stilul său de lucru se caracterizează prin empatie, rigurozitate și o abordare strategică — ascultă cu adevărat clienții și se transpune în situația lor pentru a găsi soluția optimă pentru problemele pe care le întâmpină.",
+        "shortBio": "Avocat fondator. Membru al Baroului din 2006. Specializat în drept penal, dreptul afacerilor, insolvență și drept civil.",
+        "fullBio": "Vlad Baculescu este avocat fondator al Societății Civile de Avocați Stan - Baculescu. Membru al Baroului Satu Mare din anul 2006, are o bogată experiență în domeniul dreptului penal (infracțiuni de evaziune fiscală, infracțiuni la regimul circulației, infracțiuni economice, infracțiuni privind frontiera de stat etc.) atât în fața organelor de cercetare/urmărire penală cât și în fața instanțelor penale, insolvenței și al dreptului afacerilor. A acordat consultanță juridică și a asigurat asistență și reprezentarea inculpaților și a persoanelor vătămate în cauzele penale complexe. Stilul său de lucru se caracterizează prin empatie, rigurozitate și o abordare strategică — ascultă cu adevărat clienții și se transpune în situația lor pentru a găsi soluția optimă pentru problemele pe care le întâmpină aceștia.",
         "pullQuote": "Încerc să ascult omul cu adevărat și să mă transpun în situația lui, doar așa reușesc să găsesc soluția optimă pentru problemele pe care le întâmpină.",
         "phone": "+40 744 201 694",
         "email": "vlad.baculescu@stanbaculescu.ro",
@@ -296,7 +296,7 @@
           "spec4Slug": "practician-insolventa",
           "spec4Icon": "law-book",
           "spec4Image": "/images/services/practician-insolventa.webp",
-          "spec4Desc": "Proceduri de insolvență, reorganizare judiciară și faliment pentru debitori și creditori.",
+          "spec4Desc": "Proceduri de insolvență, reorganizare, faliment",
           "spec5": "Drept Civil",
           "spec5Slug": "drept-civil",
           "spec5Icon": "balance-scale",
@@ -312,7 +312,7 @@
           "edu3": "Conferințe de pregătire profesională continuă"
         },
         "experience": {
-          "exp1": "Decan al Baroului Satu Mare (2019 - prezent, reales 2023)",
+          "exp1": "Decan al Baroului Satu Mare (2019 - prezent)",
           "exp2": "Partener fondator - SCA Stan-Baculescu (2020 - prezent)",
           "exp3": "Experiență vastă în litigii penale complexe",
           "exp4": "Consultanță juridică în dreptul afacerilor și insolvență"
@@ -452,8 +452,8 @@
       },
       "dianaVeres": {
         "name": "Gabriella Diana Veress",
-        "shortBio": "Responsabil relații cu clienții, asigurând primirea și orientarea clienților, precum și suportul administrativ al cabinetului.",
-        "fullBio": "Gabriella Diana Veress face parte din echipa administrativă a Cabinetului de Avocatură Stan-Baculescu din Satu Mare, ocupând funcția de responsabil relații cu clienții. Cu o atitudine caldă și profesională, asigură primirea clienților, gestionează programările și facilitează comunicarea eficientă între clienți și avocați. Prin dedicarea și atenția sa la detalii, contribuie la buna funcționare a cabinetului și la o experiență pozitivă pentru fiecare client.",
+        "shortBio": "Responsabil relații cu clienții, asigurând primirea și orientarea clienților, precum și suportul administrativ al societății.",
+        "fullBio": "Gabriella Diana Veress face parte din echipa administrativă a Cabinetului de Avocatură Stan-Baculescu din Satu Mare, ocupând funcția de responsabil relații cu clienții. Cu o atitudine caldă și o abordare profesionistă, asigură primirea clienților, gestionează programările și facilitează comunicarea eficientă între clienți și avocați. Prin dedicarea și atenția sa la detalii, contribuie la buna funcționare a societății și la o experiență plăcută pentru fiecare client.",
         "specializations": {
           "spec1": "Relații cu Clienții",
           "spec2": "Coordonare Programări"
@@ -486,10 +486,10 @@
     "cta": {
       "label": "Echipa Noastră",
       "title": "Doriți să cunoașteți echipa noastră?",
-      "description": "Programați o consultație și discutați direct cu unul dintre avocații noștri despre cazul dumneavoastră.",
+      "description": "Programați o consultație și discutați direct cu unul dintre avocații noștri și discutați despre cazul dumneavoastră.",
       "button": "Contactați-ne",
       "callLabel": "Sau sunați direct",
-      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
+      "available": "Non Stop"
     }
   },
   "ServicesPage": {
@@ -499,8 +499,8 @@
       "titleLine2": "Ariile Noastre de Practică",
       "subtitle": "Domenii de Practică",
       "trustBadge": "13 Arii de Practică",
-      "description": "Oferim asistență juridică completă în diverse domenii ale dreptului. Echipa noastră de avocați specializați vă stă la dispoziție pentru a vă reprezenta interesele cu profesionalism.",
-      "collaboration": "Colaborăm cu experți din toate domeniile: topografi, experți fiscali, contabili, executori judecătorești, notari, mediatori, evaluatori, traducători autorizați și alți specialiști, pentru a vă oferi soluții juridice complete.",
+      "description": "Oferim asistență juridică completă în toate domeniile dreptului. Echipa noastră de avocați specializați vă stă la dispoziție pentru a vă reprezenta interesele cu profesionalism.",
+      "collaboration": "Colaborăm cu experți din toate domeniile: experți fiscali, contabili, topografi, executori judecătorești, notari, mediatori, evaluatori, traducători autorizați și alți specialiști, pentru a vă oferi soluții juridice complete.",
       "breadcrumbHome": "Acasă",
       "breadcrumbServices": "Servicii",
       "scrollLabel": "Descoperă"
@@ -508,7 +508,7 @@
     "grid": {
       "label": "Domenii de Practică",
       "title": "Servicii Juridice",
-      "description": "Selectați domeniul juridic relevant pentru situația dumneavoastră. Avocații noștri specializați vă oferă consultanță și reprezentare profesională."
+      "description": "Selectați domeniul juridic relevant pentru situația dumneavoastră. Avocații noștri specializați vă oferă consultanță și reprezentare profesionistă."
     },
     "viewDetails": "Află mai multe",
     "services": {
@@ -550,7 +550,7 @@
       },
       "drept-contraventional": {
         "title": "Drept Contravențional",
-        "shortDescription": "Contestarea amenzilor contravenționale, a proceselor-verbale și apărarea drepturilor în fața instanțelor."
+        "shortDescription": "Contestarea amenzilor contravenționale, a proceselor-verbale și apărarea drepturilor în fața instanțelor de judecată."
       },
       "dreptul-asigurarilor": {
         "title": "Dreptul Asigurărilor",
@@ -571,7 +571,7 @@
       "description": "Contactați-ne pentru o consultație inițială. Echipa noastră de avocați vă stă la dispoziție pentru a vă ajuta.",
       "button": "Contactați-ne",
       "callLabel": "Sau sunați direct",
-      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
+      "available": "Non Stop"
     }
   },
   "ServiceDetail": {
@@ -590,20 +590,20 @@
       "description": "Contactați-ne pentru o consultație gratuită. Echipa noastră de avocați specializați vă stă la dispoziție.",
       "button": "Programează o Consultație",
       "callLabel": "Sau sunați direct",
-      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
+      "available": "Non Stop"
     },
     "malpraxis-medical": {
       "title": "Malpraxis Medical",
-      "subtitle": "Reprezentare profesională în cazuri de neglijență medicală pentru obținerea despăgubirilor cuvenite.",
+      "subtitle": "Reprezentare profesionistă în cazuri de neglijență medicală pentru obținerea despăgubirilor cuvenite.",
       "trustBadge": "Expertiză în Malpraxis Medical",
       "titleLine1": "Servicii Juridice Specializate",
       "titleLine2": "Malpraxis Medical",
       "meta": {
         "title": "Avocat Malpraxis Medical Satu Mare | SCA Stan-Baculescu",
-        "description": "Reprezentare specializată în cazuri de malpraxis medical în Satu Mare. Obțineți despăgubirile cuvenite pentru neglijență medicală cu avocați experți."
+        "description": "Reprezentare specializată în cazuri de malpraxis medical. Uneori medicii și întreg personalul medical sunt copleșiți de volumul mare de muncă și pot să fie acuzați de malpraxis, suntem aici ca să le oferim sprijin juridic. Pacienții sau aparținătorii acestora merită să beneficieze de un act medical, suntem alături de ei pentru a fi siguri că obțin acest lucru."
       },
       "descriptionTitle": "Ce este Malpraxisul Medical?",
-      "description": "Malpraxisul medical reprezintă orice act sau omisiune săvârșită de un profesionist din domeniul sănătății care cauzează un prejudiciu pacientului prin nerespectarea standardelor medicale acceptate. Conform Legii nr. 95/2006 privind reforma în domeniul sănătății, Titlul XVI, personalul medical răspunde pentru daunele produse pacienților prin acte de malpraxis. De asemenea, Legea nr. 46/2003 privind drepturile pacienților garantează dreptul la îngrijiri medicale de cea mai înaltă calitate, la informare completă și la consimțământ informat.\n\nCazurile de malpraxis medical pot îmbrăca forme diverse: diagnostice greșite sau întârziate, erori chirurgicale, prescrierea inadecvată a medicamentelor, infecții nosocomiale dobândite în unitățile sanitare, neglijența în monitorizarea pacientului sau lipsa consimțământului informat prevăzut de art. 649-653 din Legea nr. 95/2006. Fiecare caz necesită o analiză medicală și juridică aprofundată pentru a stabili legătura de cauzalitate dintre actul medical și prejudiciul suferit.\n\nReprezentarea juridică în cazurile de malpraxis este esențială deoarece aceste dosare implică aspecte medicale complexe, expertize de specialitate și termene legale stricte. Cabinetul nostru colaborează cu experți medicali independenți pentru evaluarea corectă a cazurilor și calculează despăgubirile cuvenite incluzând costurile medicale, veniturile pierdute, daunele morale și prejudiciul estetic. Vă reprezentăm atât în procedura amiabilă în fața Comisiei de monitorizare și competență profesională, cât și în instanța de judecată.",
+      "description": "Uneori medicii și întreg personalul medical sunt copleșiți de volumul mare de muncă și pot să fie acuzați de malpraxis, suntem aici ca să le oferim sprijin juridic. Pacienții merită să beneficieze de un act medical corect, suntem alături de ei pentru a fi siguri că obțin acest lucru.\n\nMalpraxisul medical reprezintă orice act sau omisiune săvârșită de un profesionist din domeniul sănătății care cauzează un prejudiciu pacientului prin nerespectarea standardelor medicale acceptate. Conform Legii nr. 95/2006 privind reforma în domeniul sănătății, Titlul XVI, personalul medical răspunde pentru daunele produse pacienților prin acte de malpraxis. De asemenea, Legea nr. 46/2003 privind drepturile pacienților garantează dreptul la îngrijiri medicale de cea mai înaltă calitate, la informare completă și la consimțământ informat. Cazurile de malpraxis medical pot îmbrăca forme diverse: diagnostice greșite sau întârziate, erori chirurgicale, prescrierea inadecvată a medicamentelor, infecții nosocomiale dobândite în unitățile sanitare. Reprezentarea juridică în cazurile de malpraxis este esențială deoarece aceste dosare implică aspecte medicale complexe, expertize de specialitate și termene legale stricte",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Erori de diagnostic sau diagnostic întârziat",
@@ -640,24 +640,24 @@
       "titleLine2": "Drept Civil",
       "meta": {
         "title": "Avocat Drept Civil Satu Mare | SCA Stan-Baculescu",
-        "description": "Servicii complete de drept civil: litigii, contracte, proprietate, succesiuni. Avocați specializați în Satu Mare cu experiență vastă în instanță."
+        "description": "Servicii complete de drept civil: litigii, redactare contracte, dreptul proprietății, succesiuni. Avocați specializați în Satu Mare cu experiență vastă în domeniu."
       },
       "descriptionTitle": "Servicii de Drept Civil",
-      "description": "Dreptul civil, reglementat în principal de Codul Civil (Legea nr. 287/2009), constituie ramura fundamentală a sistemului juridic românesc, guvernând raporturile patrimoniale și nepatrimoniale dintre persoane fizice și juridice. Acesta acoperă domenii esențiale precum dreptul de proprietate (art. 555-774), contractele civile (art. 1166-1323), obligațiile (art. 1164-1649), succesiunile (art. 953-1163) și răspunderea civilă delictuală (art. 1349-1395).\n\nServiciile noastre de drept civil cuprind consultanță și reprezentare în litigii privind proprietatea și revendicările imobiliare, acțiuni în grănițuire și servituți, partaje succesorale și între foști soți, redactarea și negocierea contractelor civile, acțiuni în răspundere contractuală și delictuală, executări silite și recuperarea creanțelor. De asemenea, oferim asistență în materie de carte funciară, uzucapiune, acțiuni posesorii și acțiuni în constatare.\n\nReprezentarea juridică în litigiile civile este esențială pentru protejarea drepturilor și intereselor dumneavoastră. Procedura civilă implică termene stricte de prescripție și decădere, reguli probatorii complexe și strategii procesuale specifice. Cu o experiență de aproape două decenii și sute de cauze civile soluționate cu succes, echipa noastră vă garantează o reprezentare profesională în fața tuturor instanțelor de judecată, de la judecătorie până la Înalta Curte de Casație și Justiție.",
-      "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
+      "description": "Dreptul civil, reglementat în principal de Codul Civil (Legea nr. 287/2009), constituie ramura fundamentală a sistemului juridic românesc, guvernând raporturile patrimoniale și nepatrimoniale dintre persoane fizice și juridice. Acesta acoperă domenii esențiale precum dreptul de proprietate (art. 555-774), contractele civile (art. 1166-1323), obligațiile (art. 1164-1649), succesiunile (art. 953-1163) și răspunderea civilă delictuală (art. 1349-1395).\n\nServiciile noastre de drept civil cuprind consultanță și reprezentare în litigii privind proprietatea și revendicările imobiliare, acțiuni în grănițuire și servituți, partaje succesorale și între foști soți, redactarea și negocierea contractelor civile, acțiuni în răspundere contractuală și delictuală, executări silite și recuperarea creanțelor. De asemenea, oferim asistență în materie de carte funciară, uzucapiune, acțiuni posesorii și acțiuni în constatare.\n\nReprezentarea juridică în litigiile civile este esențială pentru protejarea drepturilor și intereselor dumneavoastră. Procedura civilă implică termene stricte de prescripție și decădere, reguli probatorii complexe și strategii procesuale specifice. Cu o experiență de peste două decenii și sute de cauze civile soluționate cu succes, echipa noastră vă asigură o abordare profesionistă în fața tuturor instanțelor de judecată, de la judecătorie până la Înalta Curte de Casație și Justiție.",
+      "casesTitle": "Tipuri de Cauze pe Care le Gestionăm",
       "cases": {
         "case1": "Litigii privind proprietatea și revendicările imobiliare",
         "case2": "Redactarea și negocierea contractelor civile",
-        "case3": "Succesiuni, moșteniri și partaje",
-        "case4": "Despăgubiri pentru prejudicii cauzate",
+        "case3": "Succesiuni și partaje",
+        "case4": "Despăgubiri pentru diferite tipuri de prejudicii",
         "case5": "Executări silite și recuperare creanțe",
-        "case6": "Litigii de vecinătate și servituți"
+        "case6": "Litigii privind vecinătatea și servituți"
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
         "point1": "Analizăm situația dumneavoastră și identificăm toate opțiunile legale disponibile.",
-        "point2": "Elaborăm o strategie adaptată obiectivelor și circumstanțelor specifice ale cazului.",
-        "point3": "Reprezentăm interesele dumneavoastră în negocieri, mediere sau în fața instanțelor de judecată.",
+        "point2": "Elaborăm o strategie adaptată obiectivelor și circumstanțelor specifice cazului.",
+        "point3": "Reprezentăm interesele dumneavoastră în cadrul procedurii extrajudiciare dar și în fața instanțelor de judecată.",
         "point4": "Urmărim executarea hotărârilor judecătorești pentru a vă asigura că drepturile vă sunt respectate."
       },
       "faq": {
@@ -667,38 +667,38 @@
         "q2": "Cât durează un proces civil?",
         "a2": "Durata unui proces civil depinde de complexitatea cauzei, numărul de părți implicate, probele necesare și încărcarea instanței. În medie, un proces în prima instanță durează între 6 luni și 2 ani. La aceasta se adaugă căile de atac: apelul (6-12 luni) și, după caz, recursul. Cauzele simple, cum ar fi somațiile de plată, pot fi soluționate în 1-3 luni.",
         "q3": "Ce documente am nevoie pentru un proces civil?",
-        "a3": "Documentele necesare variază în funcție de tipul cauzei. În general, aveți nevoie de: actul de identitate, documentele care dovedesc dreptul pretins (contracte, acte de proprietate, facturi, chitanțe), corespondența relevantă și orice alte înscrisuri care susțin pretențiile dumneavoastră. În cazul litigiilor imobiliare, sunt necesare și extras de carte funciară, planuri cadastrale și acte de proprietate. Avocatul dumneavoastră vă indica exact actele necesare.",
+        "a3": "Documentele necesare variază în funcție de tipul cauzei. În general, aveți nevoie de: actul de identitate, documentele care dovedesc dreptul pretins (contracte, acte de proprietate, facturi, chitanțe), corespondența relevantă și orice alte înscrisuri care susțin pretențiile dumneavoastră. În cazul litigiilor imobiliare, sunt necesare și extrase de carte funciară, planuri cadastrale și acte de proprietate. Avocatul dumneavoastră vă va indica exact actele necesare.",
         "q4": "Ce înseamnă executarea silită și cum funcționează?",
-        "a4": "Executarea silită este procedura prevăzută de art. 622-914 din Codul de Procedură Civilă prin care se asigură realizarea efectivă a drepturilor stabilite printr-un titlu executoriu (hotărâre judecătorească, contract autentificat etc.). Executarea se realizează prin intermediul unui executor judecătoresc și poate îmbrăca mai multe forme: poprire pe conturi bancare și venituri, urmărirea și vânzarea bunurilor mobile sau imobile, sau obligarea debitorului la o anumită conduită."
+        "a4": "Executarea silită este procedura prevăzută de art. 622-914 din Codul de Procedură Civilă prin care se asigură realizarea efectivă a drepturilor stabilite printr-un titlu executoriu (hotărâre judecătorească, contract autentificat etc.). Executarea se realizează prin intermediul unui executor judecătoresc și poate îmbrăca mai multe forme: poprire pe conturi bancare și venituri, urmărirea și vânzarea bunurilor mobile sau imobile, însă în funcție de situația concretă, perioada poate varia."
       }
     },
     "drept-penal": {
       "title": "Drept Penal",
-      "subtitle": "Apărare eficientă în procese penale și asistență juridică specializată la toate etapele procedurii.",
-      "trustBadge": "Apărare Penală Profesională",
+      "subtitle": "Apărare eficientă în procese penale și asistență juridică specializată în toate etapele procesului.",
+      "trustBadge": "Apărare Penală Profesionistă",
       "titleLine1": "Asistență Juridică Specializată",
       "titleLine2": "Drept Penal",
       "meta": {
         "title": "Avocat Drept Penal Satu Mare | SCA Stan-Baculescu",
-        "description": "Apărare penală profesională în Satu Mare. Asistență la audieri, reprezentare în instanță și recursuri. Avocat penal cu experiență în cauze complexe."
+        "description": "Asistarea suspectului/inculpatului, a persoanei vătămate sau a martorului la audieri, reprezentare/asistare în fața instanței de judecată, redactarea de căi de atac. Societatea noastră are în componență avocați de drept penal cu experiență în cauze complexe."
       },
-      "descriptionTitle": "Servicii de Drept Penal",
-      "description": "Dreptul penal, reglementat de Codul Penal (Legea nr. 286/2009) și Codul de Procedură Penală (Legea nr. 135/2010), este domeniul juridic care protejează valorile sociale fundamentale prin incriminarea faptelor periculoase și stabilirea sancțiunilor corespunzătoare. Procedura penală parcurge mai multe faze: urmărirea penală, camera preliminară, judecata în prima instanță și căile de atac (apel și, în cazuri excepționale, contestație în anulare sau revizuire).\n\nEchipa noastră de avocați penaliști oferă asistență juridică completă în toate fazele procesului penal, atât pentru persoanele acuzate, cât și pentru victimele infracțiunilor. Gama de infracțiuni în care asigurăm reprezentare include: infracțiuni contra persoanei (art. 188-227 Cod Penal), infracțiuni contra patrimoniului (art. 228-256), infracțiuni de corupție (art. 289-294), infracțiuni economice și de evaziune fiscală, infracțiuni rutiere, infracțiuni informatice și infracțiuni privind regimul drogurilor.\n\nReprezentarea de către un avocat specializat în drept penal este un drept fundamental garantat de Constituția României (art. 24) și de Codul de Procedură Penală (art. 10). Asistența juridică este obligatorie în numeroase situații prevăzute de art. 90 din Codul de Procedură Penală, inclusiv când inculpatul este minor, reținut sau arestat. Ne asigurăm că toate drepturile procesuale vă sunt respectate, că probele sunt administrate legal și că beneficiați de cea mai eficientă apărare posibilă.",
+      "descriptionTitle": "Servicii în domeniul Dreptului Penal",
+      "description": "Dreptul penal, reglementat de Codul Penal (Legea nr. 286/2009) și Codul de Procedură Penală (Legea nr. 135/2010), este domeniul juridic care protejează valorile sociale fundamentale prin incriminarea faptelor periculoase și stabilirea sancțiunilor corespunzătoare. Procedura penală parcurge mai multe faze: urmărirea penală, camera preliminară, judecata în prima instanță și căile de atac (apel și, în cazuri excepționale, contestație în anulare sau revizuire).\n\nEchipa noastră de avocați penaliști oferă asistență juridică completă în toate fazele procesului penal, atât pentru persoanele acuzate, cât și pentru victimele infracțiunilor. Gama de infracțiuni în care asigurăm reprezentare include: infracțiuni contra persoanei (art. 188-227 Cod Penal), infracțiuni contra patrimoniului (art. 228-256), infracțiuni de corupție (art. 289-294), infracțiuni economice și de evaziune fiscală, infracțiuni rutiere, infracțiuni informatice și infracțiuni privind regimul drogurilor.\n\nReprezentarea de către un avocat specializat în drept penal este un drept fundamental garantat de Constituția României (art. 24) și de Codul de Procedură Penală (art. 10). Asistența juridică este obligatorie în numeroase situații prevăzute de art. 90 din Codul de Procedură Penală, inclusiv când inculpatul este minor, reținut sau arestat. Ne asigurăm că toate drepturile procesuale vă sunt respectate, că probele sunt administrate în mod legal și că beneficiați de cea mai eficientă apărare posibilă.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Infracțiuni contra persoanei (vătămări corporale, amenințări)",
         "case2": "Infracțiuni contra patrimoniului (furt, înșelăciune, delapidare)",
         "case3": "Infracțiuni economice și de evaziune fiscală",
-        "case4": "Infracțiuni rutiere (conducere sub influența alcoolului)",
+        "case4": "Infracțiuni rutiere (conducere sub influența alcoolului, părăsirea locului accidentului, conducere fără permis etc.)",
         "case5": "Infracțiuni informatice",
         "case6": "Reprezentare victime în procese penale"
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
-        "point1": "Oferim asistență juridică imediată și confidențială de la primul contact.",
-        "point2": "Analizăm probele și identificăm eventualele vicii de procedură sau încălcări ale drepturilor.",
+        "point1": "Oferim asistență juridică exact în momentul în care dvs. aveți nevoie",
+        "point2": "Analizăm probele și identificăm eventualele vicii de procedură sau încălcări ale drepturilor dvs.",
         "point3": "Elaborăm o strategie de apărare personalizată, adaptată circumstanțelor cazului.",
-        "point4": "Vă reprezentăm în fața organelor de urmărire penală și în toate fazele procesului."
+        "point4": "Vă reprezentăm în fața organelor de urmărire penală și în toate fazele procesului penal"
       },
       "faq": {
         "title": "Întrebări Frecvente",
@@ -714,42 +714,42 @@
     },
     "drept-familiei": {
       "title": "Dreptul Familiei",
-      "subtitle": "Asistență juridică sensibilă și profesională în toate aspectele legate de familie și relații.",
-      "trustBadge": "Abordare Sensibilă și Profesională",
+      "subtitle": "Asistență juridică profesionistă cu privire la toate aspectele legate de familie și minori.",
+      "trustBadge": "Abordare profesionistă",
       "titleLine1": "Consultanță Juridică pentru Familie",
       "titleLine2": "Dreptul Familiei",
       "meta": {
         "title": "Avocat Dreptul Familiei Satu Mare | SCA Stan-Baculescu",
-        "description": "Divorțuri, custodie, pensii alimentare și partaj bunuri comune. Avocat specializat în dreptul familiei în Satu Mare cu abordare sensibilă și profesională."
+        "description": "Divorțuri, stabilire locuință minori, pensii alimentare și partaj bunuri comune. Avocați cu o vastă experiență în dreptul familiei"
       },
-      "descriptionTitle": "Servicii de Dreptul Familiei",
-      "description": "Dreptul familiei este reglementat de Cartea a II-a din Codul Civil (Legea nr. 287/2009), art. 258-534, și cuprinde normele juridice care guvernează relațiile de familie: căsătoria, divorțul, filiația, autoritatea părintească, obligația de întreținere și protecția copilului. Această ramură de drept se intersectează frecvent cu dreptul procesual civil, dreptul internațional privat și dreptul protecției sociale.\n\nServiciile noastre acoperă întreaga gamă de probleme de dreptul familiei: divorțuri amiabile și contencioase (art. 373-404 Cod Civil), stabilirea și exercitarea autorității părintești (art. 483-512), stabilirea domiciliului copilului și a programului de relații personale, calcularea și modificarea pensiei alimentare (art. 513-534), partajul bunurilor comune ale soților (art. 339-372), recunoașterea și contestarea paternității (art. 408-437), adopții, tutelă și curatelă. De asemenea, oferim asistență în procedurile de mediere familială, obligatorie conform Legii nr. 192/2006 în cazurile de divorț.\n\nReprezentarea juridică în cauzele de dreptul familiei este deosebit de importantă datorită implicațiilor emoționale și pe termen lung ale deciziilor luate. Prioritatea noastră absolută este protejarea interesului superior al copilului, principiu fundamental consacrat de art. 263 din Codul Civil. Abordăm fiecare caz cu empatie și profesionalism, căutând soluții amiabile ori de câte ori este posibil, dar pregătiți să vă reprezentăm ferm în instanță când negocierile eșuează.",
+      "descriptionTitle": "Consultanță Juridică în dreptul familiei",
+      "description": "Dreptul familiei este reglementat de Cartea a II-a din Codul Civil (Legea nr. 287/2009), art. 258-534, și cuprinde normele juridice care guvernează relațiile de familie: căsătoria, divorțul, filiația, autoritatea părintească, obligația de întreținere și protecția copilului.\n\nServiciile noastre acoperă întreaga gamă de probleme de dreptul familiei: divorțuri amiabile și contencioase (art. 373-404 Cod Civil), stabilirea și exercitarea autorității părintești (art. 483-512), stabilirea domiciliului copilului și a programului de relații personale, calcularea și modificarea pensiei alimentare (art. 513-534), partajul bunurilor comune ale soților (art. 339-372), recunoașterea și contestarea paternității (art. 408-437), adopții, tutelă și curatelă.\n\nReprezentarea juridică în cauzele de dreptul familiei este deosebit de importantă datorită implicațiilor emoționale și pe termen lung ale deciziilor luate. Prioritatea noastră absolută este protejarea interesului superior al copilului, principiu fundamental consacrat de art. 263 din Codul Civil. Abordăm fiecare caz cu empatie și profesionalism, căutând soluții extrajudiciare (fără un proces în instanță sau prin încheierea unei tranzacții) ori de câte ori este posibil, dar pregătiți să vă reprezentăm ferm în fața instanțelor atunci când negocierile eșuează.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
-        "case1": "Divorțuri prin acord sau pe cale judiciară",
-        "case2": "Custodia și programul de vizită al copiilor",
+        "case1": "Divorțuri prin acord, din culpă exclusivă, din cauze medicale, pentru despărțire în fapt",
+        "case2": "Exercitare autoritate părintească, stabilirea programul de vizită al minorilor",
         "case3": "Stabilirea și modificarea pensiei alimentare",
         "case4": "Partajul bunurilor comune",
-        "case5": "Recunoașterea sau contestarea paternității",
+        "case5": "Stabilirea sau tăgada paternității",
         "case6": "Adopții și tutelă"
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
-        "point1": "Ascultăm și înțelegem situația dumneavoastră cu empatie și fără judecată.",
+        "point1": "Ascultăm problemele dvs. și încercăm să le înțelegem cu empatie și fără a vă judeca.",
         "point2": "Explorăm toate opțiunile, inclusiv medierea, pentru a găsi soluții amiabile când este posibil.",
-        "point3": "Protejăm cu prioritate interesul superior al copiilor în toate deciziile.",
-        "point4": "Vă reprezentăm ferm în instanță atunci când negocierile nu sunt posibile."
+        "point3": "Protejăm cu prioritate interesul superior al copiilor în toate acțiunile pe care le întreprindem.",
+        "point4": "Vă reprezentăm cu implicare profesională în instanță atunci când găsirea unei soluții extrajudiciare nu mai este posibilă."
       },
       "faq": {
         "title": "Întrebări Frecvente",
         "q1": "Cât durează o procedură de divorț?",
-        "a1": "Durata depinde de tipul divorțului. Divorțul prin acord mutual la notar sau la ofițerul de stare civilă (când nu există copii minori) poate fi finalizat în 30-60 de zile. Divorțul prin acord mutual la instanță durează de obicei 2-4 luni. Divorțul contencios, în care soții nu se înțeleg cu privire la culpă, custodia copiilor sau partajul bunurilor, poate dura de la 6 luni la peste 2 ani, în funcție de complexitatea cauzei și de numărul de probe administrate.",
+        "a1": "Durata depinde de tipul divorțului. Divorțul prin acordul soților la instanța de judecată durează de obicei 2-4 luni. Divorțul contencios în care soții nu se înțeleg cu privire la culpa acestora, custodia copiilor sau alte aspecte privitoare la viața de familie, poate avea o durată mult mai mare, în funcție de complexitatea cauzei și de numărul de probe administrate.",
         "q2": "Cum se stabilește custodia copilului în caz de divorț?",
-        "a2": "Conform art. 396-403 din Codul Civil, instanța stabilește exercitarea autorității părintești având ca principiu fundamental interesul superior al copilului (art. 263). Regula este exercitarea în comun a autorității părintești de către ambii părinți, chiar și după divorț. Instanța stabilește locuința copilului la unul dintre părinți și un program de relații personale cu celălalt părinte. Se iau în considerare vârsta copilului, atașamentul față de fiecare părinte, capacitatea fiecăruia de a asigura nevoile copilului și, dacă are peste 10 ani, opinia copilului.",
+        "a2": "Conform art. 396-403 Cod Civil, instanța stabilește exercitarea autorității părintești având ca principiu fundamental interesul superior al copilului (art. 263 Cod civil). Regula este exercitarea în comun a autorității părintești de către ambii părinți, chiar și după divorț. Instanța stabilește locuința copilului la unul dintre părinți și un program de relații personale cu celălalt părinte. Se iau în considerare vârsta copilului, atașamentul față de fiecare părinte, capacitatea fiecăruia de a asigura nevoile copilului și de opinia copilului, dacă acesta are peste 10 ani.",
         "q3": "Cât este pensia alimentară și cum se calculează?",
-        "a3": "Pensia alimentară pentru copii este reglementată de art. 529-530 din Codul Civil. Cuantumul se stabilește în funcție de veniturile părintelui obligat la plată: până la o pătrime din venituri pentru un copil, o treime pentru doi copii și o jumătate pentru trei sau mai mulți copii. Se iau în calcul toate veniturile părintelui, inclusiv salariu, bonusuri, chirii, dividende. Pensia poate fi modificată ulterior dacă se schimbă circumstanțele (creșterea sau scăderea veniturilor, apariția altor obligații de întreținere).",
-        "q4": "Pot obține divorț rapid la notariat?",
-        "a4": "Da, divorțul la notar este posibil conform art. 375-378 din Codul Civil, dar numai dacă ambii soți sunt de acord cu divorțul și nu există copii minori născuți din căsătorie, adoptați sau asupra cărora se exercită autoritatea părintească. Procedura durează aproximativ 30 de zile (termenul de reflecție prevăzut de lege) și este mai rapidă și mai puțin costisitoare decât procedura judiciară. Dacă există copii minori, divorțul prin acord se poate realiza la instanța de judecată sau prin procedura administrativă la ofițerul de stare civilă."
+        "a3": "Pensia alimentară (obligația de întreținere) pentru copii este reglementată de art. 529-530 Cod Civil. Cuantumul se stabilește în funcție de veniturile părintelui obligat la plată: până la o pătrime din venituri pentru un copil, o treime pentru doi copii și o jumătate pentru trei sau mai mulți copii. Se iau în calcul toate veniturile părintelui, inclusiv salariu, bonusuri, chirii, dividende. Pensia poate fi modificată ulterior dacă se schimbă circumstanțele (creșterea sau scăderea veniturilor, apariția altor obligații de întreținere).",
+        "q4": "",
+        "a4": ""
       }
     },
     "dreptul-muncii": {
@@ -763,10 +763,10 @@
         "description": "Consultanță și reprezentare în dreptul muncii. Concedieri abuzive, drepturi salariale, hărțuire la locul de muncă. Avocat specializat Satu Mare."
       },
       "descriptionTitle": "Servicii de Dreptul Muncii",
-      "description": "Dreptul muncii este reglementat în principal de Codul Muncii (Legea nr. 53/2003), care stabilește cadrul juridic al raporturilor individuale și colective de muncă, mecanismele de protecție a salariaților și condițiile de desfășurare a activității profesionale. Legislația muncii este completată de Legea dialogului social nr. 367/2022, Legea nr. 81/2018 privind telemunca, OUG nr. 158/2005 privind concediile medicale și alte acte normative specifice.\n\nServiciile noastre de dreptul muncii acoperă o gamă largă de situații: contestarea concedierilor abuzive sau nelegale (art. 58-75 Codul Muncii), recuperarea drepturilor salariale restante, negocierea și redactarea contractelor individuale și colective de muncă, asistență în cazuri de hărțuire morală la locul de muncă (conform Legii nr. 167/2020), discriminare (OG nr. 137/2000), accidente de muncă și boli profesionale, restructurări și concedieri colective (art. 68-74 Codul Muncii), precum și consultanță pentru angajatori privind conformitatea cu legislația muncii.\n\nReprezentarea juridică specializată în litigiile de muncă este esențială deoarece legislația prevede termene scurte de contestare (30 de zile calendaristice de la comunicarea deciziei de concediere, conform art. 268 Codul Muncii) și reguli procedurale specifice. Litigiile de muncă sunt scutite de taxa judiciară de timbru pentru salariați, iar sarcina probei revine angajatorului în majoritatea cazurilor. Echipa noastră vă reprezintă atât în fața Inspectoratului Teritorial de Muncă, cât și în instanța de judecată.",
+      "description": "Dreptul muncii este reglementat în principal de Legea nr. 53/2003 - Codul Muncii, care stabilește cadrul juridic al raporturilor individuale și colective de muncă, mecanismele de protecție a salariaților și condițiile de desfășurare a activității profesionale. Legislația muncii este completată de Legea dialogului social nr. 367/2022, Legea nr. 81/2018 privind telemunca și alte acte normative specifice.\n\nServiciile noastre de dreptul muncii acoperă o gamă largă de situații: contestarea concedierilor nelegale (art. 58-75 Codul muncii), recuperarea drepturilor salariale restante, negocierea și redactarea contractelor individuale și colective de muncă, asistență în cazuri de hărțuire la locul de muncă (conform Legii nr. 167/2020), discriminare (OG nr. 137/2000), accidente de muncă și boli profesionale, restructurări și concedieri colective (art. 68-74 Codul muncii), precum și consultanță pentru angajatori privind conformitatea cu legislația muncii.\n\nReprezentarea juridică specializată în litigiile de muncă este esențială deoarece legislația prevede termene scurte de contestare (30 de zile calendaristice de la comunicarea deciziei de concediere, conform art. 268 Codul muncii) și reguli procedurale specifice. Litigiile de muncă sunt scutite de taxa judiciară de timbru pentru salariați, iar sarcina probei revine angajatorului în majoritatea cazurilor. Echipa noastră vă reprezintă atât în procedura extrajudiciară, cât și în procedura judiciară în instanța de judecată.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
-        "case1": "Concedieri abuzive sau nelegale",
+        "case1": "Concedieri nelegale",
         "case2": "Recuperarea drepturilor salariale restante",
         "case3": "Hărțuire și discriminare la locul de muncă",
         "case4": "Accidente de muncă și boli profesionale",
@@ -775,21 +775,21 @@
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
-        "point1": "Analizăm contractul de muncă și documentele relevante pentru a identifica încălcările.",
-        "point2": "Încercăm să soluționăm conflictul pe cale amiabilă prin negociere sau mediere.",
-        "point3": "Reprezentăm clientul în fața Inspectoratului Teritorial de Muncă și în instanță.",
+        "point1": "Analizăm contractul de muncă și documentele relevante pentru a identifica încălcările și clauzele abuzive",
+        "point2": "Încercăm să soluționăm conflictul pe cale amiabilă prin negociere.",
+        "point3": "Reprezentăm clientul în procedura extrajudiciară și în procedura judiciară în instanța de judecată.",
         "point4": "Urmărim executarea hotărârilor pentru a asigura recuperarea efectivă a drepturilor."
       },
       "faq": {
         "title": "Întrebări Frecvente",
         "q1": "Pot fi concediat fără motiv de către angajator?",
-        "a1": "Nu. Conform art. 58 din Codul Muncii, concedierea dispusă de angajator trebuie să fie întotdeauna motivată, în caz contrar fiind lovită de nulitate. Concedierea poate interveni pentru motive care țin de persoana salariatului (abatere disciplinară, necorespundere profesională, inaptitudine medicală) sau pentru motive care nu țin de persoana salariatului (desființarea locului de muncă din motive economice). Decizia de concediere trebuie să conțină motivele de fapt și de drept, durata preavizului și termenul de contestare.",
+        "a1": "Nu. Conform art. 58 din Codul muncii, concedierea dispusă de angajator trebuie să fie întotdeauna motivată, în caz contrar fiind lovită de nulitate. Concedierea poate interveni pentru motive care țin de persoana salariatului (abatere disciplinară, necorespundere profesională, inaptitudine medicală) sau pentru motive care nu țin de persoana salariatului (desființarea locului de muncă din motive economice). Decizia de concediere trebuie să conțină motivele de fapt și de drept, durata preavizului și termenul de contestare.",
         "q2": "Cât este termenul de preaviz la concediere?",
-        "a2": "Conform art. 75 din Codul Muncii, termenul minim de preaviz este de 20 de zile lucrătoare pentru salariații cu funcții de execuție și poate fi mai lung pentru funcțiile de conducere, conform contractului colectiv sau individual de muncă. În caz de demisie, termenul de preaviz este de cel mult 20 de zile lucrătoare pentru funcții de execuție și de cel mult 45 de zile lucrătoare pentru funcții de conducere. Preavizul nu este obligatoriu în cazul concedierii disciplinare.",
+        "a2": "Conform art. 75 din Codul muncii, termenul minim de preaviz este de 20 de zile lucrătoare pentru salariații cu funcții de execuție și poate fi mai lung pentru funcțiile de conducere, conform contractului colectiv sau individual de muncă. În caz de demisie, termenul de preaviz este de cel mult 20 de zile lucrătoare pentru funcții de execuție și de cel mult 45 de zile lucrătoare pentru funcții de conducere. Preavizul nu este obligatoriu în cazul concedierii disciplinare.",
         "q3": "Cum pot contesta o concediere pe care o consider abuzivă?",
-        "a3": "Aveți dreptul de a contesta decizia de concediere la tribunalul în a cărui rază teritorială aveți domiciliul sau locul de muncă, în termen de 30 de zile calendaristice de la comunicare, conform art. 268 alin. (1) lit. a) din Codul Muncii. Contestația este scutită de taxa judiciară de timbru. Dacă instanța constată nelegalitatea concedierii, poate dispune anularea deciziei, reintegrarea în funcție și plata salariilor compensatorii de la data concedierii până la reintegrare.",
+        "a3": "Aveți dreptul de a contesta decizia de concediere la tribunalul în a cărui rază teritorială aveți domiciliul sau locul de muncă, în termenul prevăzut de art. 268 alin. (1) lit. a) din Codul muncii. Contestația este scutită de taxa judiciară de timbru. Dacă instanța constată nelegalitatea concedierii, poate dispune anularea deciziei, reintegrarea în funcție și plata salariilor compensatorii de la data concedierii până la reintegrare.",
         "q4": "Ce drepturi am în cazul unei concedieri colective?",
-        "a4": "Concedierea colectivă este reglementată de art. 68-74 din Codul Muncii. Angajatorul are obligația de a informa și consulta sindicatul sau reprezentanții salariaților cu cel puțin 30 de zile înainte, de a notifica Inspectoratul Teritorial de Muncă și Agenția de Ocupare a Forței de Muncă. Salariații afectați au dreptul la un preaviz de minimum 20 de zile lucrătoare, la compensații prevăzute de contractul colectiv de muncă, la măsuri active de recalificare și la prioritate la reangajare dacă angajatorul reia activitatea în termen de 45 de zile."
+        "a4": "Concedierea colectivă este reglementată de art. 68-74 din Codul muncii. Angajatorul are obligația de a informa și consulta sindicatul sau reprezentanții salariaților cu cel puțin 30 de zile înainte, de a notifica Inspectoratul Teritorial de Muncă și Agenția de Ocupare a Forței de Muncă. Salariații afectați au dreptul la un preaviz de minimum 20 de zile lucrătoare, la compensații prevăzute de contractul colectiv de muncă, la măsuri active de recalificare și la prioritate la reangajare dacă angajatorul reia activitatea în termen de 45 de zile."
       }
     },
     "drept-comercial": {
@@ -800,10 +800,10 @@
       "titleLine2": "Drept Comercial",
       "meta": {
         "title": "Avocat Drept Comercial Satu Mare | SCA Stan-Baculescu",
-        "description": "Consultanță juridică pentru afaceri în Satu Mare: contracte comerciale, litigii, insolvență și fuziuni. Cabinet de avocat cu experiență în drept comercial."
+        "description": "Consultanță juridică pentru afaceri: contracte comerciale, litigii de specialitate, insolvență și fuziuni. Societate de avocați cu experiență în dreptul comercial și societar."
       },
-      "descriptionTitle": "Servicii de Drept Comercial",
-      "description": "Dreptul comercial românesc este reglementat în principal de Legea societăților nr. 31/1990 (republicată), care guvernează constituirea, organizarea, funcționarea și dizolvarea societăților, și de Codul Civil (Legea nr. 287/2009), Cartea a V-a, care reglementează contractele și obligațiile comerciale. Cadrul legal este completat de Legea nr. 85/2014 privind procedurile de prevenire a insolvenței și de insolvență, Legea nr. 26/1990 privind registrul comerțului și alte acte normative specifice.\n\nServiciile noastre de drept comercial cuprind: constituirea și înregistrarea societăților (SRL, SA, SNC, SCS), modificarea actelor constitutive, cesiuni de părți sociale și acțiuni, fuziuni și divizări, dizolvare și lichidare, redactarea și negocierea contractelor comerciale, asistență în procedurile de insolvență și reorganizare judiciară, recuperarea creanțelor comerciale prin somații de plată și executare silită, litigii comerciale și arbitraj, consultanță în materie de concurență și proprietate intelectuală.\n\nConsilierea juridică profesională în domeniul comercial este esențială pentru prevenirea riscurilor și protejarea investițiilor. Un contract bine redactat, o structură societară adecvată și cunoașterea obligațiilor legale pot face diferența între succesul și eșecul unei afaceri. Echipa noastră combină expertiza juridică cu înțelegerea realităților economice pentru a oferi soluții pragmatice, eficiente și adaptate nevoilor fiecărui client, fie că este vorba de un start-up sau de o companie cu tradiție.",
+      "descriptionTitle": "Servicii juridice pentru companii",
+      "description": "Dreptul comercial românesc este reglementat în principal de Legea nr. 31/1990 privind societățile comerciale, care guvernează constituirea, organizarea, funcționarea și dizolvarea societăților, și de Codul Civil (Legea nr. 287/2009), Cartea a V-a, care reglementează contractele și obligațiile comerciale. Cadrul legal este completat de Legea nr. 85/2014 privind procedurile de prevenire a insolvenței și de insolvență, Legea nr. 26/1990 privind registrul comerțului și alte acte normative specifice.\n\nServiciile noastre de drept comercial cuprind: constituirea și înregistrarea societăților (SRL, SA, SNC, SCS), modificarea actelor constitutive, cesiuni de părți sociale și acțiuni, fuziuni și divizări, dizolvare și lichidare, redactarea și negocierea contractelor comerciale, asistență în procedurile de insolvență și reorganizare judiciară, recuperarea creanțelor comerciale prin somații de plată și executare silită, litigii comerciale și arbitraj, \n\nConsilierea juridică profesionistă în domeniul comercial este esențială pentru prevenirea riscurilor și protejarea investițiilor. Un contract bine redactat, o structură societară adecvată și cunoașterea obligațiilor legale pot face diferența între succesul și eșecul unei afaceri. Echipa noastră combină expertiza juridică cu înțelegerea realităților economice pentru a oferi soluții pragmatice, eficiente și adaptate nevoilor fiecărui client.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Constituirea și modificarea societăților comerciale",
@@ -815,21 +815,21 @@
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
-        "point1": "Înțelegem obiectivele de afaceri și oferim consiliere juridică aliniată strategiei dumneavoastră.",
+        "point1": "Înțelegem obiectivele unei afaceri și oferim consiliere juridică aliniată strategiei dumneavoastră.",
         "point2": "Redactăm contracte clare care protejează interesele și minimizează riscurile.",
         "point3": "Reprezentăm interesele comerciale în negocieri, mediere sau instanță.",
-        "point4": "Oferim soluții rapide și eficiente pentru a minimiza impactul asupra afacerii."
+        "point4": "Oferim soluții rapide și eficiente pentru a minimiza impactul negativ asupra afacerii."
       },
       "faq": {
         "title": "Întrebări Frecvente",
         "q1": "Ce forme juridice de societate există în România?",
-        "a1": "Conform Legii societăților nr. 31/1990, în România pot fi constituite următoarele forme de societăți: Societatea cu Răspundere Limitată (SRL) - cea mai populară formă, cu capital social minim de 200 lei; Societatea pe Acțiuni (SA) - cu capital social minim de 90.000 lei, indicată pentru afaceri de mare anvergură; Societatea în Nume Colectiv (SNC); Societatea în Comandită Simplă (SCS) și Societatea în Comandită pe Acțiuni (SCA). De asemenea, se pot constitui Întreprinderi Individuale, PFA-uri și Întreprinderi Familiale conform OUG nr. 44/2008.",
+        "a1": "Conform Legii nr. 31/1990, în România pot fi constituite următoarele forme de societăți: Societatea cu Răspundere Limitată (SRL) - cea mai populară formă; Societatea pe Acțiuni (SA) - indicată pentru afaceri de mare anvergură; Societatea în Nume Colectiv (SNC); Societatea în Comandită Simplă (SCS) și Societatea în Comandită pe Acțiuni (SCA). De asemenea, se pot constitui Întreprinderi Individuale, PFA-uri și Întreprinderi Familiale conform OUG nr. 44/2008.",
         "q2": "Cât costă înființarea unei firme (SRL)?",
-        "a2": "Costurile pentru înființarea unui SRL includ: capitalul social minim de 200 lei, taxele de înregistrare la Registrul Comerțului (aproximativ 100-200 lei, cu posibilitatea scutirii pentru anumite categorii), onorariul notarial pentru autentificarea actului constitutiv (dacă este cazul), taxa pentru publicarea în Monitorul Oficial (dacă este obligatorie) și onorariul avocatului. În total, costurile variază între 500 și 2.000 lei, în funcție de complexitatea structurii societare și de serviciile solicitate.",
+        "a2": "Costurile pentru înființarea unui SRL includ: capitalul social, taxele de înregistrare la Registrul Comerțului, onorariul notarial pentru autentificarea actului constitutiv (dacă este cazul), taxa pentru publicarea în Monitorul Oficial (dacă este obligatorie) și onorariul avocatului. Costurile variază în funcție de complexitatea structurii societare și de serviciile solicitate.",
         "q3": "Ce înseamnă insolvența și care sunt consecințele?",
         "a3": "Insolvența, reglementată de Legea nr. 85/2014, este situația în care debitorul nu poate face față datoriilor exigibile cu sumele de bani disponibile. Procedura poate fi declanșată de debitor sau de creditorii cu creanțe mai mari de 50.000 lei. Insolvența nu înseamnă neapărat faliment: prima etapă este observația (maxim 12 luni), urmată eventual de reorganizarea judiciară, care permite continuarea activității sub un plan aprobat de creditori. Doar dacă reorganizarea eșuează se trece la faliment, cu lichidarea bunurilor.",
         "q4": "Cum pot recupera o creanță comercială restantă?",
-        "a4": "Există mai multe modalități de recuperare a creanțelor comerciale: somația de plată (reglementată de art. 1014-1025 din Codul de Procedură Civilă), care permite obținerea unui titlu executoriu în termen de 45 de zile; ordonanța de plată (art. 1026-1033), pentru creanțele certe, lichide și exigibile rezultate din contracte; acțiunea de drept comun în instanță; și executarea silită prin intermediul unui executor judecătoresc. Alegerea procedurii depinde de existența unui contract scris, de cuantumul creanței și de comportamentul debitorului."
+        "a4": "Există mai multe modalități de recuperare a creanțelor comerciale: somația de plată (reglementată de art. 1014-1025 din Codul de Procedură Civilă), acțiunea de drept comun în instanță și executarea silită prin intermediul unui executor judecătoresc. Alegerea procedurii depinde de existența unui contract scris, de cuantumul creanței și de comportamentul debitorului."
       }
     },
     "accidente-rutiere": {
@@ -843,7 +843,7 @@
         "description": "Reprezentare victime accidente rutiere. Obțineți despăgubiri de la asigurător: daune materiale, morale, venituri pierdute. Avocat specializat Satu Mare."
       },
       "descriptionTitle": "Servicii pentru Victime ale Accidentelor Rutiere",
-      "description": "Accidentele rutiere sunt reglementate de un cadru legislativ complex care include OUG nr. 195/2002 privind circulația pe drumurile publice, Legea nr. 132/2017 privind asigurarea obligatorie de răspundere civilă auto (RCA), Codul Penal (pentru infracțiunile rutiere) și Codul Civil (pentru răspunderea civilă delictuală). Dreptul la despăgubiri al victimelor accidentelor de circulație este garantat atât prin mecanismul asigurării RCA, cât și prin răspunderea civilă directă a persoanei vinovate.\n\nServiciile noastre pentru victimele accidentelor rutiere acoperă întregul spectru de acțiuni necesare: documentarea completă a prejudiciului suferit (daune materiale, cheltuieli medicale, venituri pierdute, daune morale), formularea cererii de despăgubire către societatea de asigurare RCA conform procedurii prevăzute de Legea nr. 132/2017, negocierea cu asigurătorii pentru obținerea despăgubirilor maxime, reprezentarea în instanța civilă și penală, precum și asistența în cazurile speciale de accidente cu vehicule neasigurate sau cu autori neidentificați (despăgubiri prin BAAR - Biroul Asigurătorilor de Autovehicule din România).\n\nReprezentarea juridică specializată este esențială deoarece societățile de asigurare oferă frecvent despăgubiri semnificativ mai mici decât cele cuvenite legal. Un avocat experimentat cunoaște jurisprudența actuală, criteriile de evaluare a prejudiciului corporal și metodele de calcul ale despăgubirilor morale, putând obține compensații de până la 5-10 ori mai mari decât ofertele inițiale ale asigurătorilor.",
+      "description": "Accidentele rutiere sunt reglementate de un cadru legislativ complex care include OUG nr. 195/2002 privind circulația pe drumurile publice, Legea nr. 132/2017 privind asigurarea obligatorie de răspundere civilă auto (RCA), Codul Penal (pentru infracțiunile rutiere) și Codul Civil (pentru răspunderea civilă delictuală). Dreptul la despăgubiri al victimelor accidentelor de circulație este garantat atât prin mecanismul asigurării RCA, cât și prin răspunderea civilă directă a persoanei vinovate.\n\nServiciile noastre pentru victimele accidentelor rutiere acoperă întregul spectru de acțiuni necesare: documentarea completă a prejudiciului suferit (daune materiale, cheltuieli medicale, venituri pierdute, daune morale), formularea cererii de despăgubire către societatea de asigurare RCA conform procedurii prevăzute de Legea nr. 132/2017, negocierea cu asigurătorii pentru obținerea despăgubirilor maxime, reprezentarea în instanța civilă și penală, precum și asistența în cazurile speciale de accidente cu vehicule neasigurate sau cu autori neidentificați (despăgubiri prin BAAR - Biroul Asigurătorilor de Autovehicule din România).\n\nReprezentarea juridică specializată este esențială deoarece societățile de asigurare oferă frecvent despăgubiri semnificativ mai mici decât cele cuvenite legal. Un avocat experimentat cunoaște jurisprudența actuală, criteriile de evaluare a prejudiciului corporal și metodele de calcul ale despăgubirilor morale, putând obține compensații mult mai mari decât ofertele inițiale ale asigurătorilor.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Vătămări corporale suferite în accidente rutiere",
@@ -851,7 +851,7 @@
         "case3": "Despăgubiri pentru pierderea capacității de muncă",
         "case4": "Despăgubiri pentru urmași în caz de deces",
         "case5": "Contestarea deciziilor societăților de asigurare",
-        "case6": "Accidente cu vehicule neasigurate sau fugate"
+        "case6": "Accidente cu vehicule neasigurate sau furate"
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
@@ -867,7 +867,7 @@
         "q2": "Cum obțin despăgubiri de la societatea de asigurare RCA?",
         "a2": "Conform Legii nr. 132/2017, trebuie să depuneți cererea de despăgubire la asigurătorul RCA al vehiculului vinovat, însoțită de: procesul-verbal de constatare a accidentului, documente medicale, facturi și chitanțe pentru cheltuielile efectuate, dovada veniturilor pierdute și alte documente justificative. Asigurătorul are obligația de a formula o ofertă de despăgubire în termen de 30 de zile de la depunerea documentației complete sau de a comunica motivele pentru care nu poate face o ofertă. Dacă nu sunteți mulțumit de ofertă, puteți contesta în instanță.",
         "q3": "Cât durează soluționarea unui dosar de daună RCA?",
-        "a3": "Procedura extrajudiciară (la asigurător) trebuie finalizată în termen de 30 de zile de la depunerea documentației complete pentru daunele materiale și 90 de zile pentru vătămări corporale, conform Legii nr. 132/2017. Dacă dosarul ajunge în instanță (când asigurătorul refuză plata sau oferă sume insuficiente), procesul poate dura între 6 luni și 2 ani în prima instanță, plus eventualul apel. În total, de la accident până la încasarea despăgubirilor, pot trece între 3 luni și 3 ani.",
+        "a3": "Procedura extrajudiciară (la asigurător) trebuie finalizată în termen de 30 de zile de la depunerea documentației complete pentru daunele materiale și 90 de zile pentru vătămări corporale, conform Legii nr. 132/2017. Dacă dosarul ajunge în instanță (când asigurătorul refuză plata sau oferă sume insuficiente), procesul poate dura mai mult.",
         "q4": "Ce fac dacă șoferul vinovat nu avea asigurare RCA validă?",
         "a4": "În cazul în care vehiculul vinovat nu avea asigurare RCA valabilă sau dacă autorul accidentului nu a fost identificat, despăgubirile pot fi solicitate de la BAAR (Biroul Asigurătorilor de Autovehicule din România), conform art. 33-34 din Legea nr. 132/2017. BAAR funcționează ca fond de garantare și acoperă despăgubirile pentru vătămări corporale și daune materiale. Procedura este similară cu cea de la asigurător, dar poate dura mai mult. De asemenea, puteți acționa în instanță direct împotriva persoanei vinovate pentru recuperarea prejudiciului."
       }
@@ -880,18 +880,18 @@
       "titleLine2": "Drept Administrativ și Fiscal",
       "meta": {
         "title": "Avocat Drept Administrativ Satu Mare | SCA Stan-Baculescu",
-        "description": "Contestații administrative și fiscale, litigii cu ANAF și reprezentare în fața autorităților. Avocat specializat în drept administrativ și fiscal Satu Mare."
+        "description": "Contestații administrative și fiscale, litigii și reprezentare în fața autorităților. Avocat specializat în drept administrativ și fiscal Satu Mare."
       },
       "descriptionTitle": "Servicii de Drept Administrativ și Fiscal",
-      "description": "Cabinetul nostru oferă asistență juridică specializată în contestarea actelor administrative și fiscale abuzive emise de autoritățile publice centrale și locale. Dreptul administrativ și fiscal românesc este guvernat de Legea contenciosului administrativ nr. 554/2004, Codul de Procedură Fiscală (Legea nr. 207/2015), Codul Fiscal (Legea nr. 227/2015) și Codul de Procedură Civilă, acte normative care reglementează raporturile dintre cetățeni și stat, precum și căile de atac împotriva deciziilor nelegale.\n\nPrincipalele servicii pe care le oferim includ: anularea actelor administrative nelegale prin acțiuni în contencios administrativ conform Legii nr. 554/2004, contestarea deciziilor de impunere emise de ANAF și a altor titluri de creanță fiscală, apărarea drepturilor contribuabililor în cadrul procedurilor de executare silită fiscală reglementate de art. 220-267 din Codul de Procedură Fiscală, reprezentarea în litigiile cu autoritățile locale privind taxe, impozite și autorizații, recuperarea sumelor plătite nedatorat către bugetul de stat sau bugetele locale, precum și obținerea suspendării executării actelor administrative în condițiile art. 14-15 din Legea nr. 554/2004.\n\nReprezentarea juridică specializată este esențială în raporturile cu autoritățile publice, deoarece termenele de contestare sunt foarte scurte: 45 de zile pentru contestația administrativă fiscală (art. 270 din Codul de Procedură Fiscală), 6 luni pentru acțiunile în contencios administrativ (art. 11 din Legea nr. 554/2004) și 15 zile pentru plângerile contravenționale. Nerespectarea acestor termene atrage decăderea definitivă din dreptul de a contesta. Echipa noastră vă asigură că drepturile dumneavoastră sunt pe deplin apărate în fața oricărei autorități publice.",
+      "description": "Societatea noastră oferă asistență juridică specializată în contestarea actelor administrative și fiscale nelegal emise de autoritățile publice centrale și locale. Dreptul administrativ și fiscal românesc este guvernat de Legea contenciosului administrativ nr. 554/2004, Codul de Procedură Fiscală (Legea nr. 207/2015), Codul Fiscal (Legea nr. 227/2015) și Codul de Procedură Civilă, acte normative care reglementează procedura de contestare a deciziilor nelegale.\n\nPrincipalele servicii pe care le oferim includ: demersuri privind anularea actelor administrative nelegale prin acțiuni în contencios administrativ conform Legii nr. 554/2004, contestarea deciziilor de impunere emise de ANAF și a altor titluri de creanță fiscală, apărarea drepturilor contribuabililor în cadrul procedurilor de executare silită fiscală reglementate de art. 220-267 din Codul de Procedură Fiscală, reprezentarea în litigiile cu autoritățile locale privind taxe, impozite și autorizații, recuperarea sumelor nedatorate plătite către bugetul de stat sau bugetele locale, precum și demersuri pentru obținerea suspendării executării actelor administrative în condițiile art. 14-15 din Legea nr. 554/2004.\n\nReprezentarea juridică specializată este esențială în raporturile cu autoritățile publice, deoarece termenele de contestare sunt foarte scurte. Nerespectarea acestor termene atrage decăderea definitivă din dreptul de a contesta. Echipa noastră vă asigură că drepturile dumneavoastră sunt pe deplin apărate în fața oricărei autorități publice.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Contestarea deciziilor de impunere ale ANAF",
         "case2": "Litigii fiscale și recuperarea sumelor plătite necuvenit",
         "case3": "Contestarea amenzilor și sancțiunilor contravenționale",
-        "case4": "Autorizații și permise refuzate de autorități",
+        "case4": "Autorizații refuzate de autorități",
         "case5": "Exproprieri și despăgubiri pentru utilitate publică",
-        "case6": "Contencios administrativ și acțiuni împotriva autorităților"
+        "case6": "Contencios administrativ și acțiuni împotriva actelor administrative"
       },
       "approachTitle": "Abordarea Noastră",
       "approach": {
@@ -903,7 +903,7 @@
       "faq": {
         "title": "Întrebări Frecvente",
         "q1": "Ce este contenciosul administrativ?",
-        "a1": "Contenciosul administrativ reprezintă activitatea de soluționare de către instanțele de judecată competente a litigiilor în care cel puțin una dintre părți este o autoritate publică, iar conflictul s-a născut fie din emiterea sau încheierea unui act administrativ nelegal, fie din nesoluționarea în termenul legal a unei cereri, conform Legii nr. 554/2004. Practic, orice persoană care se consideră vătămată într-un drept sau interes legitim de către o autoritate publică poate sesiza instanța de contencios administrativ pentru anularea actului, recunoașterea dreptului pretins și repararea pagubei. Înainte de a se adresa instanței, persoana vătămată trebuie să parcurgă procedura prealabilă, adică să solicite autorității emitente revocarea actului, în termen de 30 de zile de la comunicare.",
+        "a1": "Contenciosul administrativ reprezintă activitatea de soluționare de către instanțele de judecată competente a litigiilor în care cel puțin una dintre părți este o autoritate publică, iar conflictul s-a născut fie din emiterea sau încheierea unui act administrativ nelegal, fie din nesoluționarea în termenul legal a unei cereri, conform Legii nr. 554/2004. Practic, orice persoană care se consideră vătămată într-un drept sau interes legitim de către o autoritate publică poate sesiza instanța de contencios administrativ pentru anularea actului, recunoașterea dreptului pretins și repararea pagubei. Înainte de a se adresa instanței, persoana vătămată trebuie să parcurgă procedura prealabilă, adică să solicite autorității emitente revocarea actului, în termenul prevăzut de lege.",
         "q2": "Cum contest o decizie de impunere ANAF?",
         "a2": "Contestația împotriva unei decizii de impunere emise de ANAF se formulează în scris și se depune la organul fiscal emitent în termen de 45 de zile de la data comunicării deciziei, conform art. 270 din Codul de Procedură Fiscală (Legea nr. 207/2015). Contestația trebuie să cuprindă datele de identificare ale contestatarului, obiectul contestației, motivele de fapt și de drept, precum și dovezile pe care se întemeiază. Organul fiscal transmite contestația spre soluționare Direcției Generale de Soluționare a Contestațiilor din cadrul ANAF, care emite o decizie în termen de 45 de zile (cu posibilitate de prelungire). Dacă decizia de soluționare este nefavorabilă, puteți ataca această decizie la instanța de contencios administrativ în termen de 6 luni de la comunicare.",
         "q3": "Care este termenul pentru contestarea unui act administrativ?",
@@ -920,10 +920,10 @@
       "titleLine2": "Achiziții Publice",
       "meta": {
         "title": "Avocat Achizitii Publice Satu Mare | SCA Stan-Baculescu",
-        "description": "Consultanță în proceduri de achiziție publică, contestații la CNSC și litigii contracte publice. Avocat specializat achiziții publice Satu Mare."
+        "description": "Consultanță în proceduri de achiziție publică, contestații la CNSC și litigii contracte publice. Avocați specializați achiziții publice."
       },
       "descriptionTitle": "Servicii de Achiziții Publice",
-      "description": "Achizițiile publice în România sunt reglementate printr-un cadru legislativ complex, având la bază Legea nr. 98/2016 privind achizițiile publice, Legea nr. 99/2016 privind achizițiile sectoriale și Legea nr. 100/2016 privind concesiunile de lucrări și de servicii. Procedurile de atribuire — licitația deschisă, licitația restrânsă, negocierea competitivă, dialogul competitiv și parteneriatul pentru inovare — sunt supuse unor reguli stricte de transparență și egalitate de tratament, conform art. 2 din Legea nr. 98/2016. Cabinetul nostru oferă consultanță completă operatorilor economici care doresc să participe la proceduri de achiziție publică, de la analiza documentației de atribuire și pregătirea ofertelor tehnice și financiare, până la contestarea deciziilor autorităților contractante.\n\nSistemul de remedii în materia achizițiilor publice este reglementat de Legea nr. 101/2016 privind remediile și căile de atac. Consiliul Național de Soluționare a Contestațiilor (CNSC) este organismul administrativ-jurisdicțional competent să soluționeze contestațiile formulate împotriva actelor autorităților contractante. Conform art. 8 din Legea nr. 101/2016, contestația se poate depune în termen de 10 zile de la data luării la cunoștință a actului considerat nelegal, pentru procedurile cu valoare estimată peste pragurile prevăzute de art. 7 alin. (1) din Legea nr. 98/2016. Deciziile CNSC pot fi atacate cu plângere la Curtea de Apel București, secția de contencios administrativ, în termen de 10 zile de la comunicare, conform art. 29 din Legea nr. 101/2016.\n\nExperiența noastră în domeniul achizițiilor publice acoperă întregul ciclu al procedurii: asistență în elaborarea ofertelor conforme cu cerințele documentației de atribuire, formularea contestațiilor la CNSC împotriva rezultatelor procedurii sau a clauzelor restrictive din caietul de sarcini, reprezentarea în fața Curții de Apel în cazul plângerii împotriva deciziilor CNSC, precum și asistența în executarea contractelor de achiziție publică. De asemenea, oferim consultanță privind parteneriatele public-private reglementate de OUG nr. 39/2018, contestațiile privind atribuirea contractelor sectoriale și litigiile născute din executarea contractelor administrative, inclusiv pretenții de despăgubire pentru excluderea nelegală din procedură.",
+      "description": "Achizițiile publice în România sunt reglementate printr-un cadru legislativ complex, având la bază Legea nr. 98/2016 privind achizițiile publice, Legea nr. 99/2016 privind achizițiile sectoriale și Legea nr. 100/2016 privind concesiunile de lucrări și de servicii. Procedurile de atribuire — licitația deschisă, licitația restrânsă, negocierea competitivă, dialogul competitiv și parteneriatul pentru inovare — sunt supuse unor reguli stricte de transparență și egalitate de tratament, conform art. 2 din Legea nr. 98/2016. Societatea noastră oferă consultanță completă operatorilor economici care doresc să participe la proceduri de achiziție publică, de la analiza documentației de atribuire și pregătirea ofertelor tehnice și financiare, până la contestarea deciziilor autorităților contractante.\n\nSistemul de remedii în materia achizițiilor publice este reglementat de Legea nr. 101/2016 privind remediile și căile de atac. Consiliul Național de Soluționare a Contestațiilor (CNSC) este organismul administrativ-jurisdicțional competent să soluționeze contestațiile formulate împotriva actelor autorităților contractante. Conform art. 8 din Legea nr. 101/2016, contestația se poate depune în termenul prevăzut de lege de la data luării la cunoștință a actului considerat nelegal, pentru procedurile cu valoare estimată peste pragurile prevăzute de art. 7 alin. (1) din Legea nr. 98/2016. Deciziile CNSC pot fi atacate cu plângere la instanțele competente, secția de contencios administrativ, în termenul prevăzut de lege, conform art. 29 din Legea nr. 101/2016.\n\nExperiența noastră în domeniul achizițiilor publice acoperă întregul ciclu al procedurii: asistență în elaborarea ofertelor conforme cu cerințele documentației de atribuire, formularea contestațiilor la CNSC împotriva rezultatelor procedurii sau a clauzelor restrictive din caietul de sarcini, reprezentarea în fața Curții de Apel în cazul plângerii împotriva deciziilor CNSC, precum și asistența în executarea contractelor de achiziție publică. De asemenea, oferim consultanță privind parteneriatele public-private reglementate de OUG nr. 39/2018, contestațiile privind atribuirea contractelor sectoriale și litigiile născute din executarea contractelor administrative, inclusiv pretenții de despăgubire pentru excluderea nelegală din procedură.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Asistență în pregătirea și depunerea ofertelor în proceduri de licitație",
@@ -936,8 +936,8 @@
       "approachTitle": "Abordarea Noastră",
       "approach": {
         "point1": "Analizăm documentația de atribuire și identificăm eventualele clauze restrictive sau nelegale care pot fi contestate.",
-        "point2": "Pregătim contestația la CNSC cu respectarea termenelor legale de 10 zile și cu argumentație juridică solidă bazată pe Legea nr. 101/2016.",
-        "point3": "Reprezentăm clientul în fața CNSC și, dacă este necesar, în fața Curții de Apel București pentru exercitarea căii de atac.",
+        "point2": "Pregătim contestația la CNSC cu respectarea termenelor legale și cu argumentație juridică solidă bazată pe Legea nr. 101/2016.",
+        "point3": "Reprezentăm clientul în fața CNSC și, dacă este necesar, în fața instanțelor competente pentru exercitarea căii de atac.",
         "point4": "Monitorizăm executarea contractului de achiziție publică și oferim asistență în soluționarea disputelor contractuale."
       },
       "faq": {
@@ -945,9 +945,9 @@
         "q1": "Ce este CNSC și cum se depune o contestație?",
         "a1": "Consiliul Național de Soluționare a Contestațiilor (CNSC) este un organism administrativ-jurisdicțional independent, competent să soluționeze contestațiile formulate în cadrul procedurilor de achiziție publică, conform art. 2 din Legea nr. 101/2016. Contestația se depune în scris la CNSC și se comunică autorității contractante în același termen. Aceasta trebuie să cuprindă identificarea contestatarului, actul contestat, motivele de fapt și de drept, precum și probele pe care se întemeiază. CNSC soluționează contestația printr-o decizie motivată în termen de 20 de zile de la primirea dosarului complet.",
         "q2": "Care este termenul legal pentru depunerea contestației?",
-        "a2": "Termenul pentru depunerea contestației la CNSC este de 10 zile de la data luării la cunoștință a actului autorității contractante considerat nelegal, pentru procedurile a căror valoare estimată depășește pragurile prevăzute de art. 7 alin. (1) din Legea nr. 98/2016, conform art. 8 alin. (1) lit. a) din Legea nr. 101/2016. Pentru procedurile sub aceste praguri, termenul este de 5 zile, conform art. 8 alin. (1) lit. b). Depășirea termenului atrage decăderea din dreptul de contestare, motiv pentru care este esențial să acționați imediat după primirea comunicării rezultatului. De asemenea, trebuie să transmiteți o copie a contestației autorității contractante în aceeași zi.",
+        "a2": "Termenul pentru depunerea contestației la CNSC este prevăzut de art. 8 din Legea nr. 101/2016 și variază în funcție de valoarea estimată a procedurii. Depășirea termenului atrage decăderea din dreptul de contestare, motiv pentru care este esențial să acționați imediat după primirea comunicării rezultatului. De asemenea, trebuie să transmiteți o copie a contestației autorității contractante în aceeași zi.",
         "q3": "Ce se întâmplă dacă sunt exclus nelegal din procedură?",
-        "a3": "Dacă un operator economic este exclus nelegal dintr-o procedură de achiziție publică, acesta poate contesta decizia de excludere la CNSC în termenul legal de 10 zile. CNSC poate dispune anularea actului de excludere și reluarea procedurii de la etapa la care s-a produs încălcarea. În cazul în care contractul a fost deja semnat, operatorul economic poate solicita despăgubiri prin acțiune în instanță. Conform art. 58 din Legea nr. 101/2016, instanța poate acorda despăgubiri pentru cheltuielile de participare la procedură și pentru profitul nerealizat, dacă se dovedește că ofertantul ar fi câștigat contractul în absența încălcării.",
+        "a3": "Dacă un operator economic este exclus nelegal dintr-o procedură de achiziție publică, acesta poate contesta decizia de excludere la CNSC în termenul legal. CNSC poate dispune anularea actului de excludere și reluarea procedurii de la etapa la care s-a produs încălcarea. În cazul în care contractul a fost deja semnat, operatorul economic poate solicita despăgubiri prin acțiune în instanță. Conform art. 58 din Legea nr. 101/2016, instanța poate acorda despăgubiri pentru cheltuielile de participare la procedură și pentru profitul nerealizat, dacă se dovedește că ofertantul ar fi câștigat contractul în absența încălcării.",
         "q4": "Pot obține despăgubiri pentru excluderea nelegală din licitație?",
         "a4": "Da, conform art. 58 din Legea nr. 101/2016, orice persoană care se consideră vătămată printr-un act al autorității contractante poate solicita despăgubiri pe cale judiciară. Acțiunea se introduce la instanța civilă competentă și trebuie să dovedească existența actului nelegal, prejudiciul suferit și legătura de cauzalitate. Despăgubirile pot acoperi cheltuielile efectuate pentru participarea la procedură (costuri de elaborare a ofertei, garanții de participare, onorarii consultanți) și, în anumite condiții, profitul nerealizat din contractul pierdut. Instanța va evalua probele și va stabili cuantumul despăgubirilor în funcție de împrejurările concrete ale cazului."
       }
@@ -963,7 +963,7 @@
         "description": "Contestarea amenzilor contravenționale, proceselor-verbale și sancțiunilor. Avocat specializat drept contravențional Satu Mare."
       },
       "descriptionTitle": "Servicii de Drept Contravențional",
-      "description": "Dreptul contravențional românesc este reglementat în principal de Ordonanța Guvernului nr. 2/2001 privind regimul juridic al contravențiilor, care stabilește cadrul general pentru constatarea și sancționarea faptelor contravenționale. Contravenția este definită ca faptă săvârșită cu vinovăție, stabilită și sancționată prin lege, ordonanță sau hotărâre a Guvernului, ori prin hotărâre a consiliului local. Sancțiunile contravenționale principale sunt avertismentul, amenda contravențională și prestarea unei activități în folosul comunității, conform art. 5 alin. (2) din OG nr. 2/2001. Procesul-verbal de constatare a contravenției, întocmit de agentul constatator, trebuie să respecte o serie de condiții de formă și de fond, a căror nerespectare poate atrage nulitatea actului.\n\nContestarea procesului-verbal de contravenție se realizează prin formularea unei plângeri contravenționale la judecătoria în a cărei circumscripție a fost săvârșită contravenția, în termen de 15 zile de la data comunicării sau înmânării procesului-verbal, conform art. 31 din OG nr. 2/2001. Plângerea suspendă executarea sancțiunilor aplicate. În analiza plângerii, instanța verifică atât legalitatea cât și temeinicia procesului-verbal, aplicând principiile stabilite de Curtea Europeană a Drepturilor Omului în cauza Anghel împotriva României (2007), conform căreia contravenția are natură penală în sensul art. 6 din Convenția Europeană, iar sarcina probei revine organului constatator. Cabinetul nostru analizează fiecare proces-verbal pentru identificarea viciilor de formă (absența mențiunilor obligatorii din art. 16-17 OG nr. 2/2001) și de fond (netemeinicia faptei reținute).\n\nDomeniul contravențional este extrem de vast, cuprinzând contravenții rutiere (OUG nr. 195/2002 privind circulația pe drumurile publice), contravenții în domeniul construcțiilor (Legea nr. 50/1991), contravenții fiscale și comerciale, contravenții privind protecția mediului (OUG nr. 195/2005), contravenții la normele de ordine publică și contravenții în domeniul relațiilor de muncă (Legea nr. 53/2003 - Codul Muncii). Fiecare domeniu are reglementări specifice privind cuantumul amenzilor și termenele de prescripție a executării sancțiunilor. Oferim reprezentare completă în toate aceste materii, de la analiza procesului-verbal și pregătirea plângerii contravenționale până la susținerea cauzei în instanță și exercitarea căii de atac.",
+      "description": "Dreptul contravențional românesc este reglementat în principal de Ordonanța Guvernului nr. 2/2001 privind regimul juridic al contravențiilor, care stabilește cadrul general pentru constatarea și sancționarea faptelor contravenționale. Contravenția este definită ca faptă săvârșită cu vinovăție, stabilită și sancționată prin lege, ordonanță sau hotărâre a Guvernului, ori prin hotărâre a consiliului local. Sancțiunile contravenționale principale sunt avertismentul, amenda contravențională și prestarea unei activități în folosul comunității, conform art. 5 alin. (2) din OG nr. 2/2001. Procesul-verbal de constatare a contravenției, întocmit de agentul constatator, trebuie să respecte o serie de condiții de formă și de fond, a căror nerespectare poate atrage nulitatea actului.\n\nContestarea procesului-verbal de contravenție se realizează prin formularea unei plângeri contravenționale la judecătoria în a cărei circumscripție a fost săvârșită contravenția, în termen de 15 zile de la data comunicării sau înmânării procesului-verbal, conform art. 31 din OG nr. 2/2001. Plângerea suspendă executarea sancțiunilor aplicate. În analiza plângerii, instanța verifică atât legalitatea cât și temeinicia procesului-verbal, iar sarcina probei revine organului constatator. Societatea noastră analizează fiecare proces-verbal pentru identificarea viciilor de formă (absența mențiunilor obligatorii din art. 16-17 OG nr. 2/2001) și de fond (netemeinicia faptei reținute).\n\nDomeniul contravențional este extrem de vast, cuprinzând contravenții rutiere (OUG nr. 195/2002 privind circulația pe drumurile publice), contravenții în domeniul construcțiilor (Legea nr. 50/1991), contravenții fiscale și comerciale, contravenții privind protecția mediului (OUG nr. 195/2005), contravenții la normele de ordine publică și contravenții în domeniul relațiilor de muncă (Legea nr. 53/2003 - Codul Muncii). Fiecare domeniu are reglementări specifice privind cuantumul amenzilor și termenele de prescripție a executării sancțiunilor. Oferim reprezentare completă în toate aceste materii, de la analiza procesului-verbal și pregătirea plângerii contravenționale până la susținerea cauzei în instanță și exercitarea căii de atac.",
       "casesTitle": "Tipuri de Cazuri pe Care le Gestionăm",
       "cases": {
         "case1": "Contestarea amenzilor de circulație și a sancțiunilor rutiere",
@@ -977,15 +977,15 @@
       "approach": {
         "point1": "Analizăm procesul-verbal de contravenție pentru identificarea viciilor de formă și de fond care pot duce la anularea actului.",
         "point2": "Pregătim plângerea contravențională cu respectarea termenului de 15 zile și cu argumentație juridică bazată pe OG nr. 2/2001.",
-        "point3": "Reprezentăm clientul în fața judecătoriei cu probe și argumente solide, invocând principiile CEDO privind sarcina probei.",
-        "point4": "Exercităm calea de atac (apelul) dacă soluția primei instanțe este nefavorabilă, în termenul legal de 30 de zile."
+        "point3": "Reprezentăm clientul în fața judecătoriei cu probe și argumente solide.",
+        "point4": "Exercităm calea de atac (apelul) dacă soluția primei instanțe este nefavorabilă."
       },
       "faq": {
         "title": "Întrebări Frecvente",
         "q1": "Care este termenul pentru contestarea unui proces-verbal de contravenție?",
         "a1": "Termenul pentru formularea plângerii contravenționale este de 15 zile de la data comunicării sau înmânării procesului-verbal, conform art. 31 din OG nr. 2/2001. Plângerea se depune la judecătoria în a cărei circumscripție a fost săvârșită contravenția. Este important de reținut că depunerea plângerii suspendă executarea sancțiunii aplicate, inclusiv a amenzii și a sancțiunilor complementare. Depășirea termenului de 15 zile atrage decăderea din dreptul de contestare, motiv pentru care este esențial să acționați imediat după primirea procesului-verbal.",
         "q2": "Ce motive pot invoca pentru anularea procesului-verbal?",
-        "a2": "Plângerea contravențională poate viza atât legalitatea cât și temeinicia procesului-verbal. Din punct de vedere al legalității, puteți invoca nulitatea absolută pentru lipsa mențiunilor obligatorii prevăzute de art. 17 din OG nr. 2/2001 (numele contravenientului, fapta săvârșită, data comiterii, semnătura agentului constatator) sau nulitatea relativă pentru alte vicii de procedură. Din punct de vedere al temeiniciei, puteți contesta existența faptei, împrejurările reținute sau proporționalitatea sancțiunii aplicate. Conform jurisprudenței CEDO (Anghel c. România), sarcina probei revine autorității, nu contravenientului.",
+        "a2": "Plângerea contravențională poate viza atât legalitatea cât și temeinicia procesului-verbal. Din punct de vedere al legalității, puteți invoca nulitatea absolută pentru lipsa mențiunilor obligatorii prevăzute de art. 17 din OG nr. 2/2001 (numele contravenientului, fapta săvârșită, data comiterii, semnătura agentului constatator) sau nulitatea relativă pentru alte vicii de procedură. Din punct de vedere al temeiniciei, puteți contesta existența faptei, împrejurările reținute sau proporționalitatea sancțiunii aplicate. Sarcina probei revine autorității, nu contravenientului.",
         "q3": "Ce se întâmplă dacă nu plătesc amenda contravențională?",
         "a3": "Dacă nu plătiți amenda în termenul de 15 zile de la comunicarea procesului-verbal și nu formulați plângere contravențională, procesul-verbal devine titlu executoriu conform art. 37 din OG nr. 2/2001. În acest caz, organul fiscal (ANAF sau administrația financiară locală) poate trece la executarea silită a amenzii, prin poprirea conturilor bancare, poprirea veniturilor salariale sau urmărirea bunurilor mobile și imobile. De asemenea, dacă amenda nu este plătită în termen de 30 de zile de la rămânerea definitivă a sancțiunii, contravenientul datorează și majorări de întârziere. Este recomandat să contestați sau să achitați amenda în termenul legal pentru a evita executarea silită.",
         "q4": "Poate fi înlocuită amenda cu avertisment?",
@@ -1147,7 +1147,7 @@
       "description": "Echipa noastră de avocați vă stă la dispoziție pentru a vă ajuta cu orice întrebare legală.",
       "button": "Contactați-ne",
       "callLabel": "Sau sunați direct",
-      "available": "Disponibili Luni - Vineri, 09:00 - 17:00"
+      "available": "Non Stop"
     }
   },
   "Testimonials": {
@@ -1163,11 +1163,11 @@
     "viewAllReviews": "Vezi toate recenziile pe Google"
   },
   "Footer": {
-    "description": "Oferim servicii juridice de excelență în Satu Mare și în toată România. Cu aproape 20 de ani de experiență, suntem alături de dumneavoastră în probleme de drept civil, penal, familiei și comercial.",
+    "description": "Oferim servicii juridice de excelență în Satu Mare și în toată România. Cu mai mult de 20 de ani de experiență, suntem alături de dumneavoastră în probleme de drept civil, penal, familiei și comercial.",
     "quickLinks": "Navigare Rapidă",
     "services": "Servicii",
     "contactInfo": "Informații Contact",
-    "hours": "Luni - Duminică: 09:00 - 17:00",
+    "hours": "Non stop",
     "copyright": "Toate drepturile rezervate.",
     "legal": {
       "privacy": "Politica de Confidențialitate",

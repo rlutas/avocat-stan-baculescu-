@@ -21,13 +21,13 @@
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "Law Firm",
       "subtitle": "Professionalism. Dedication. Results.",
-      "description": "We provide excellent legal services in Satu Mare and throughout Romania. With nearly 20 years of experience, our founders represent you with dedication in civil law, criminal law, family law, commercial law, medical malpractice, and more.",
+      "description": "Stan-Baculescu is a law firm composed of attorneys specialized at the highest legal level, where regardless of your needs, you will always find an attorney ready to provide legal solutions, fast and efficient recommendations. With solid legal experience acquired over more than 20 years of practice, the Stan-Baculescu team provides clients with legal consulting, assistance and representation in civil, criminal, commercial, public procurement, medical malpractice, administrative and tax litigation, as well as in arbitration.",
       "cta": "Schedule a Consultation",
       "ctaShort": "Consultation",
       "secondaryCta": "Discover Our Services",
       "trustBadge": "Attorneys since 2006 · Firm est. 2020",
       "callNow": "Call now",
-      "schedule": "Hours: Monday - Friday, 09:00 - 17:00",
+      "schedule": "Available 24/7",
       "founder": "Founder",
       "satisfiedClients": "Satisfied Clients",
       "yearsExperience": "Years Experience"
@@ -36,10 +36,10 @@
       "trustBadge": "13 Practice Areas",
       "titleLine1": "Legal Services",
       "titleLine2": "Our Practice Areas",
-      "description": "We provide comprehensive legal assistance across various areas of law, from civil and criminal law to medical malpractice and traffic accidents.",
+      "description": "We provide legal consulting, assistance and representation in civil, criminal, commercial, public procurement, medical malpractice, administrative and tax litigation, as well as in arbitration.",
       "viewAll": "View All Services",
       "viewDetails": "Learn more",
-      "collaboration": "We collaborate with experts from all fields: surveyors, tax experts, accountants, bailiffs, notaries, mediators, appraisers, certified translators, and other specialists, to provide you with comprehensive legal solutions."
+      "collaboration": "We collaborate with experts from all fields: tax experts, accountants, surveyors, bailiffs, notaries, mediators, appraisers, certified translators, and other specialists, to provide you with comprehensive legal solutions."
     },
     "whyUs": {
       "trustBadge": "Why Choose Us",
@@ -53,31 +53,31 @@
       "stat3Value": "13",
       "stat3Label": "Practice Areas",
       "value1Title": "Proven Experience",
-      "value1Description": "Members of the Satu Mare Bar since 2006, with nearly two decades of legal practice and hundreds of cases successfully resolved in court.",
+      "value1Description": "Members of the Satu Mare Bar since 2006, with more than two decades of judicial practice and hundreds of cases successfully resolved in court.",
       "value2Title": "Personalized Approach",
-      "value2Description": "Every case receives individual attention and a strategy tailored to the specific situation.",
+      "value2Description": "Every case is treated with the utmost attention and a strategy tailored to the specific situation.",
       "value3Title": "Transparent Communication",
       "value3Description": "We keep you informed at every stage and clearly explain the available options."
     },
     "video": {
       "label": "Video Presentation",
       "title": "Meet the Stan-Baculescu Team",
-      "description": "Discover who we are, how we work, and why our clients have trusted us for nearly 20 years. Our founders invite you to get to know the team and our office in Satu Mare.",
-      "highlight1": "Founders practicing since 2006",
-      "highlight2": "Professional and dedicated approach",
-      "highlight3": "Availability and direct communication"
+      "description": "Discover who we are, how we work, and why our clients have chosen us for more than 20 years. The founders of the firm invite you to get to know the team from Satu Mare.",
+      "highlight1": "Founders with experience since 2006",
+      "highlight2": "Professional approach and dedication",
+      "highlight3": "Availability for direct communication"
     },
     "methodology": {
       "trustBadge": "Our Process",
       "titleLine1": "How We Work",
       "titleLine2": "4 Simple Steps",
-      "description": "A clear and transparent process, from the initial consultation to achieving the desired result."
+      "description": "A clear and transparent process, from the initial consultation to achieving the final result."
     },
     "team": {
       "trustBadge": "Legal Team",
       "titleLine1": "Our Professionals",
       "titleLine2": "Meet the Team",
-      "description": "A team of experienced and dedicated lawyers, ready to represent you with professionalism in any legal matter.",
+      "description": "A team of experienced attorneys ready to represent you with professionalism in any legal situation.",
       "viewProfile": "View Profile",
       "viewAll": "View Full Team"
     },
@@ -87,7 +87,7 @@
       "description": "Schedule a consultation and speak with one of our attorneys about your situation. We are here to help.",
       "button": "Schedule a Consultation",
       "callLabel": "Or call directly",
-      "available": "Available Monday - Friday, 09:00 - 17:00"
+      "available": "Available 24/7"
     }
   },
   "AboutPage": {
@@ -96,7 +96,7 @@
       "label": "Stan-Baculescu Law Firm",
       "titleLine1": "Stan-Baculescu",
       "titleLine2": "About Us",
-      "subtitle": "Our founders have practiced law since 2006, and Stan-Baculescu Law Firm was established in 2020. We provide excellent legal services in Satu Mare and throughout Romania.",
+      "subtitle": "The founders of the firm have practiced law since 2006, and Stan-Baculescu Law Firm was established in 2020. We provide legal services at the highest professional standards in Satu Mare, as well as nationally, throughout the territory of Romania.",
       "trustBadge": "Attorneys since 2006 · Firm est. 2020",
       "stat1": "Years Experience",
       "stat2": "Satisfied Clients",
@@ -106,10 +106,10 @@
       "label": "Our Story",
       "foundedLabel": "Founded",
       "title": "Our Story",
-      "description": "Stan-Baculescu Law Firm was founded in 2020 in Satu Mare. Its founders, attorneys Camelia Stan and Vlad Baculescu, have been members of the Satu Mare Bar since 2006, each bringing nearly two decades of legal experience. The firm has continuously grown, becoming a trusted partner for clients in the northwestern region of Romania and beyond.",
-      "milestone1": "Founders with legal experience since 2006",
-      "milestone2": "Hundreds of successfully resolved cases",
-      "milestone3": "Team of specialized attorneys across various fields"
+      "description": "Stan-Baculescu Law Firm was founded in 2020 in Satu Mare. The founding attorneys, Camelia Stan and Vlad Baculescu, have been members of the Satu Mare Bar since 2006, each with more than two decades of legal experience. The firm has continuously developed, becoming a trusted partner for clients in the northwestern region of Romania and beyond.",
+      "milestone1": "Attorneys with experience since 2006 in the legal field",
+      "milestone2": "Hundreds of cases successfully resolved",
+      "milestone3": "Team of attorneys specialized in various fields"
     },
     "values": {
       "label": "Our Values",
@@ -117,7 +117,7 @@
       "subtitle": "Principles that guide us every day",
       "professionalism": {
         "title": "Professionalism",
-        "description": "We provide the highest quality legal services, based on solid knowledge and extensive experience in the field."
+        "description": "We provide high-quality legal services, based on solid knowledge and extensive experience in the field."
       },
       "adaptability": {
         "title": "Adaptability",
@@ -175,7 +175,7 @@
       "description": "Contact us for an initial consultation and discover how we can help you. We are here for you.",
       "button": "Schedule a Consultation",
       "callLabel": "Call now",
-      "available": "Hours: Monday - Friday, 09:00 - 17:00"
+      "available": "Available 24/7"
     }
   },
   "TeamPage": {
@@ -204,8 +204,8 @@
     "members": {
       "cameliaStan": {
         "name": "Camelia Stan",
-        "shortBio": "Founding attorney, member of the Satu Mare Bar since 2006. Specialized in civil law, administrative litigation, business law, and medical malpractice.",
-        "fullBio": "Camelia Stan is a partner at Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2006, representing her clients' interests with professionalism. She is an experienced trial attorney who has provided legal assistance and represented clients in civil law litigation, administrative and tax litigation, business and corporate law, medical malpractice, public procurement, insurance law, insolvency matters, family law, labor law, misdemeanor law, and domestic arbitration cases. She has participated in numerous consulting projects regarding contractual law, real estate law, business and corporate law matters, assisting clients in negotiating and concluding civil and commercial contracts, as well as in the amicable termination of legal relationships.",
+        "shortBio": "Founding attorney, member of the Satu Mare Bar since 2006. Specialized in civil law, administrative litigation, public procurement, business law, and family law.",
+        "fullBio": "Camelia Stan is a founding attorney of Stan-Baculescu Law Firm, a member of the Satu Mare Bar since 2006, representing her clients' interests with professionalism. She is an experienced trial attorney who has provided legal assistance and represented clients in civil law litigation, administrative and tax litigation, business and corporate law, medical malpractice, public procurement, insurance law, insolvency matters, family law, labor law, misdemeanor law, and domestic arbitration cases. She has participated in numerous consulting projects regarding contractual law, real estate law, business and corporate law matters, assisting clients in negotiating and concluding civil and commercial contracts.",
         "pullQuote": "Professionalism and dedication in defending our clients' interests.",
         "phone": "+40 745 466 720",
         "email": "camelia.stan@stanbaculescu.ro",
@@ -273,8 +273,8 @@
       },
       "vladBaculescu": {
         "name": "Vlad Baculescu",
-        "shortBio": "Founding attorney and Dean of the Satu Mare Bar. Member of the Bar since 2006. Specialized in criminal law, business law, insolvency, and civil law.",
-        "fullBio": "Vlad Baculescu is a partner at Stan-Baculescu Law Firm and Dean of the Satu Mare Bar, first elected in 2019 and re-elected in 2023. A member of the Satu Mare Bar since 2006, he has extensive experience in criminal law, civil law, insolvency, and business law. He has provided legal consulting and ensured assistance and representation of parties in civil and criminal litigation. His work style is characterized by empathy, rigor, and a strategic approach — he truly listens to clients and puts himself in their situation to find the optimal solution for the problems they face.",
+        "shortBio": "Founding attorney. Member of the Bar since 2006. Specialized in criminal law, business law, insolvency, and civil law.",
+        "fullBio": "Vlad Baculescu is a founding attorney of Stan-Baculescu Law Firm. A member of the Satu Mare Bar since 2006, he has extensive experience in criminal law (tax evasion offenses, traffic offenses, economic crimes, state border offenses, etc.) before both criminal investigation bodies and criminal courts, insolvency, and business law. He has provided legal consulting and ensured assistance and representation of defendants and injured parties in complex criminal cases. His work style is characterized by empathy, rigor, and a strategic approach — he truly listens to clients and puts himself in their situation to find the optimal solution for the problems they face.",
         "pullQuote": "I try to truly listen to people and put myself in their situation — only then can I find the optimal solution for the problems they face.",
         "phone": "+40 744 201 694",
         "email": "vlad.baculescu@stanbaculescu.ro",
@@ -296,7 +296,7 @@
           "spec4Slug": "practician-insolventa",
           "spec4Icon": "law-book",
           "spec4Image": "/images/services/practician-insolventa.webp",
-          "spec4Desc": "Insolvency proceedings, judicial reorganization and bankruptcy for debtors and creditors.",
+          "spec4Desc": "Insolvency proceedings, reorganization, bankruptcy.",
           "spec5": "Civil Law",
           "spec5Slug": "drept-civil",
           "spec5Icon": "balance-scale",
@@ -312,7 +312,7 @@
           "edu3": "Continuous professional development conferences"
         },
         "experience": {
-          "exp1": "Dean of the Satu Mare Bar (2019 - present, re-elected 2023)",
+          "exp1": "Dean of the Satu Mare Bar (2019 - present)",
           "exp2": "Founding Partner - SCA Stan-Baculescu (2020 - present)",
           "exp3": "Extensive experience in complex criminal litigation",
           "exp4": "Legal consulting in business law and insolvency"
@@ -452,8 +452,8 @@
       },
       "dianaVeres": {
         "name": "Gabriella Diana Veress",
-        "shortBio": "Client relations manager, ensuring a warm welcome and efficient administrative support for the firm.",
-        "fullBio": "Gabriella Diana Veress is part of the administrative team at Stan-Baculescu Law Firm in Satu Mare, serving as client relations manager. With a warm and professional attitude, she welcomes clients, manages appointments, and facilitates efficient communication between clients and attorneys. Through her dedication and attention to detail, she contributes to the smooth operation of the firm and a positive experience for every client.",
+        "shortBio": "Client relations manager, ensuring the reception and orientation of clients, as well as the administrative support of the firm.",
+        "fullBio": "Gabriella Diana Veress is part of the administrative team at Stan-Baculescu Law Firm in Satu Mare, serving as client relations manager. With a warm attitude and a professional approach, she ensures client reception, manages appointments, and facilitates efficient communication between clients and attorneys. Through her dedication and attention to detail, she contributes to the smooth operation of the firm and a pleasant experience for every client.",
         "specializations": {
           "spec1": "Client Relations",
           "spec2": "Appointment Coordination"
@@ -489,7 +489,7 @@
       "description": "Schedule a consultation and speak directly with one of our attorneys about your case.",
       "button": "Contact Us",
       "callLabel": "Or call directly",
-      "available": "Available Monday - Friday, 09:00 - 17:00"
+      "available": "Available 24/7"
     }
   },
   "ServicesPage": {
@@ -499,8 +499,8 @@
       "titleLine2": "Our Practice Areas",
       "subtitle": "Practice Areas",
       "trustBadge": "13 Practice Areas",
-      "description": "We provide comprehensive legal assistance across various areas of law. Our team of specialized attorneys is here to represent your interests with professionalism.",
-      "collaboration": "We collaborate with experts from all fields: surveyors, tax experts, accountants, bailiffs, notaries, mediators, appraisers, certified translators, and other specialists, to provide you with comprehensive legal solutions.",
+      "description": "We provide comprehensive legal assistance across all areas of law. Our team of specialized attorneys is at your service to represent your interests with professionalism.",
+      "collaboration": "We collaborate with experts from all fields: tax experts, accountants, surveyors, bailiffs, notaries, mediators, appraisers, certified translators, and other specialists, to provide you with comprehensive legal solutions.",
       "breadcrumbHome": "Home",
       "breadcrumbServices": "Services",
       "scrollLabel": "Discover"
@@ -508,7 +508,7 @@
     "grid": {
       "label": "Practice Areas",
       "title": "Legal Services",
-      "description": "Select the legal area relevant to your situation. Our specialized attorneys provide professional consultation and representation."
+      "description": "Select the legal area relevant to your situation. Our specialized attorneys offer professional consultation and representation."
     },
     "viewDetails": "Learn more",
     "services": {
@@ -550,7 +550,7 @@
       },
       "drept-contraventional": {
         "title": "Contravention Law",
-        "shortDescription": "Challenging contravention fines, official reports, and defending your rights in court."
+        "shortDescription": "Challenging contravention fines, official reports, and defending your rights before the courts."
       },
       "dreptul-asigurarilor": {
         "title": "Insurance Law",
@@ -571,7 +571,7 @@
       "description": "Contact us for an initial consultation. Our team of attorneys is here to help you.",
       "button": "Contact Us",
       "callLabel": "Or call directly",
-      "available": "Available Monday - Friday, 09:00 - 17:00"
+      "available": "Available 24/7"
     }
   },
   "ServiceDetail": {
@@ -590,7 +590,7 @@
       "description": "Contact us for a free consultation. Our team of specialized attorneys is at your service.",
       "button": "Schedule a Consultation",
       "callLabel": "Or call directly",
-      "available": "Available Monday - Friday, 09:00 - 17:00"
+      "available": "Available 24/7"
     },
     "malpraxis-medical": {
       "title": "Medical Malpractice",
@@ -600,10 +600,10 @@
       "titleLine2": "Medical Malpractice",
       "meta": {
         "title": "Medical Malpractice Lawyer Satu Mare | SCA Stan-Baculescu",
-        "description": "Specialized representation in medical malpractice cases in Satu Mare. Get the compensation you deserve for medical negligence with expert attorneys."
+        "description": "Specialized representation in medical malpractice cases. Sometimes doctors and medical staff are overwhelmed by their workload and may be accused of malpractice, we are here to provide them with legal support. Patients and their families deserve proper medical care, and we stand by them to ensure they receive it."
       },
       "descriptionTitle": "What is Medical Malpractice?",
-      "description": "Medical malpractice (malpraxis medical) in Romania is primarily governed by Legea nr. 95/2006 privind reforma in domeniul sanatatii (Law no. 95/2006 on Healthcare Reform), specifically Title XVI on civil liability for medical personnel and healthcare providers, along with Legea nr. 46/2003 privind drepturile pacientului (Law no. 46/2003 on Patient Rights). Under Romanian law, medical malpractice occurs when a healthcare professional deviates from accepted medical standards, causing harm to a patient through negligence, incompetence, or failure to obtain informed consent.\n\nOur firm handles a wide range of medical malpractice claims, including diagnostic errors and delayed diagnosis, surgical mistakes and post-operative complications, medication administration errors, negligence during pregnancy and childbirth, hospital-acquired infections, and failure to provide adequate informed consent as required under Art. 649-668 of Law 95/2006. We work with independent medical experts to evaluate the standard of care and establish the causal link between the medical act and the harm suffered.\n\nFor foreigners and English speakers navigating the Romanian healthcare system, legal representation is essential. Medical records, expert reports, and court proceedings are conducted entirely in Romanian. Our bilingual team ensures you fully understand your rights, the procedural steps, and the potential outcomes. We handle communication with hospitals, insurance companies, and the Colegiul Medicilor din Romania (Romanian College of Physicians), allowing you to focus on recovery while we pursue the compensation you deserve for material damages, lost income, and pain and suffering.",
+      "description": "Sometimes doctors and medical staff are overwhelmed by their workload and may be accused of malpractice, we are here to provide them with legal support. Patients deserve proper medical care, and we stand by them to ensure they receive it.\n\nMedical malpractice refers to any act or omission committed by a healthcare professional that causes harm to a patient through failure to comply with accepted medical standards. Under Law no. 95/2006 on Healthcare Reform, Title XVI, medical personnel are liable for damages caused to patients through acts of malpractice. Additionally, Law no. 46/2003 on Patient Rights guarantees the right to medical care of the highest quality, complete information, and informed consent. Medical malpractice cases can take various forms: incorrect or delayed diagnoses, surgical errors, inadequate medication prescriptions, and nosocomial infections acquired in healthcare facilities. Legal representation in malpractice cases is essential because these files involve complex medical aspects, specialized expert evaluations, and strict legal deadlines.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Diagnostic errors or delayed diagnosis",
@@ -640,36 +640,36 @@
       "titleLine2": "Civil Law",
       "meta": {
         "title": "Civil Law Attorney Satu Mare | SCA Stan-Baculescu",
-        "description": "Complete civil law services: litigation, contracts, property, successions. Specialized attorneys in Satu Mare with extensive court experience."
+        "description": "Complete civil law services: litigation, contract drafting, property law, successions. Specialized attorneys in Satu Mare with extensive experience in the field."
       },
       "descriptionTitle": "Civil Law Services",
-      "description": "Civil law in Romania is governed by the Codul Civil (Civil Code), enacted through Legea nr. 287/2009 privind Codul Civil (Law no. 287/2009 on the Civil Code), which entered into force in 2011. This comprehensive legislation regulates the relationships between individuals and legal entities with respect to property rights, contractual obligations, civil liability (tort law), successions and inheritances, and real estate transactions. The Civil Code also incorporates provisions on prescription periods, evidence, and the enforcement of civil rights.\n\nOur firm provides full-spectrum civil law services covering property disputes and land book (carte funciara) rectifications, contract drafting and negotiation, succession proceedings and partition of inherited assets, civil liability claims for material and moral damages, enforcement of court judgments (executare silita), and disputes regarding easements, boundary lines, and co-ownership. We represent clients before all levels of Romanian courts, from the Judecatorie (local court) to the Inalta Curte de Casatie si Justitie (High Court of Cassation and Justice).\n\nFor foreigners and English-speaking individuals involved in civil matters in Romania, whether purchasing property, resolving inheritance disputes, or pursuing damages, professional legal representation is indispensable. Romanian civil proceedings follow strict procedural rules under the Codul de Procedura Civila (Code of Civil Procedure), and all court documents, filings, and hearings are conducted exclusively in Romanian. Our bilingual attorneys ensure clear communication at every step, translate and explain legal documents, and advocate effectively on your behalf to protect your rights and interests.",
+      "description": "Civil law in Romania is governed by the Codul Civil (Civil Code), enacted through Legea nr. 287/2009 privind Codul Civil (Law no. 287/2009 on the Civil Code), which entered into force in 2011. This comprehensive legislation regulates the relationships between individuals and legal entities with respect to property rights, contractual obligations, civil liability (tort law), successions and inheritances, and real estate transactions. The Civil Code also incorporates provisions on prescription periods, evidence, and the enforcement of civil rights.\n\nOur firm provides full-spectrum civil law services covering property disputes and land book (carte funciara) rectifications, contract drafting and negotiation, succession proceedings and partition of inherited assets, civil liability claims for material and moral damages, enforcement of court judgments (executare silita), and disputes regarding easements, boundary lines, and co-ownership. We represent clients before all levels of Romanian courts, from the Judecatorie (local court) to the Inalta Curte de Casatie si Justitie (High Court of Cassation and Justice).\n\nLegal representation in civil litigation is essential for the protection of your rights and interests. Civil procedure involves strict limitation and forfeiture deadlines, complex evidentiary rules, and specific procedural strategies. With more than two decades of experience and hundreds of civil cases successfully resolved, our team ensures a professional approach before all courts, from the local court to the High Court of Cassation and Justice.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Property disputes and real estate claims",
         "case2": "Drafting and negotiating civil contracts",
         "case3": "Successions, inheritances, and property divisions",
-        "case4": "Compensation for damages caused",
+        "case4": "Compensation for various types of damages",
         "case5": "Enforcement proceedings and debt recovery",
         "case6": "Neighborhood disputes and easements"
       },
       "approachTitle": "Our Approach",
       "approach": {
         "point1": "We analyze your situation and identify all available legal options.",
-        "point2": "We develop a strategy tailored to your specific objectives and circumstances.",
-        "point3": "We represent your interests in negotiations, mediation, or before the courts.",
+        "point2": "We develop a strategy tailored to the objectives and specific circumstances of the case.",
+        "point3": "We represent your interests in extrajudicial proceedings as well as before the courts.",
         "point4": "We pursue enforcement of court decisions to ensure your rights are respected."
       },
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "How much does civil litigation cost in Romania?",
-        "a1": "The cost of civil litigation in Romania includes court fees (taxa judiciara de timbru), which are calculated based on the value of the claim and regulated by OUG nr. 80/2013. For property claims, the fee is a percentage of the claimed value (typically between 0.5% and 8%, on a sliding scale). Attorney fees vary depending on the complexity of the case. Our firm provides a transparent fee estimate during the initial consultation so you can make an informed decision before proceeding.",
+        "a1": "The costs of civil litigation include the court fee (calculated according to OUG nr. 80/2013 based on the value of the claim), attorney fees, and potential expert evaluation costs. For monetary claims, the court fee varies between 20 RON and a percentage of the value. There is the possibility of requesting public legal aid if you cannot afford the costs, according to OUG nr. 51/2008.",
         "q2": "How long does a civil lawsuit take in Romania?",
-        "a2": "The duration of a civil case depends on its complexity, the court's workload, and the number of procedural steps involved. A straightforward civil claim at first instance (prima instanta) may take 6 to 18 months. If the losing party appeals (apel), an additional 6 to 12 months should be expected. Cases involving expert reports, multiple parties, or complex evidentiary issues may take longer. Our firm works to minimize delays through thorough preparation and proactive case management.",
+        "a2": "The duration of a civil case depends on its complexity, the number of parties involved, the evidence required, and the court's caseload. On average, a first instance trial takes between 6 months and 2 years. Appeals add additional time: the appeal (6-12 months) and, where applicable, the recourse. Simple cases, such as payment orders, can be resolved in 1-3 months.",
         "q3": "What documents are required to file a civil lawsuit in Romania?",
-        "a3": "To initiate a civil lawsuit (cerere de chemare in judecata), you generally need: proof of identity (identity card or passport), supporting evidence for your claim (contracts, correspondence, invoices, photos, witness statements), proof of payment of the court fee, and any prior correspondence or attempts at amicable resolution. For property-related claims, you will also need a land book extract (extras de carte funciara) and cadastral documentation. Our attorneys assist you in gathering and organizing all required documentation.",
+        "a3": "The required documents vary depending on the type of case. Generally, you need: your identity document, documents proving the claimed right (contracts, property deeds, invoices, receipts), relevant correspondence, and any other documents supporting your claims. In real estate disputes, land book extracts, cadastral plans, and property deeds are also required. Your attorney will indicate exactly which documents are needed.",
         "q4": "What is forced execution (executare silita) and how does it work?",
-        "a4": "Executare silita (forced execution) is the legal procedure through which a court judgment or other enforceable title is enforced against a debtor who fails to comply voluntarily. Under the Romanian Code of Civil Procedure, enforcement is carried out by a bailiff (executor judecatoresc) and may include seizure of bank accounts, garnishment of wages, seizure and sale of movable or immovable property, and eviction. The creditor must first obtain an enforceable title and file an enforcement request with a competent bailiff. Our firm assists clients throughout the enforcement process to ensure effective recovery of their rights."
+        "a4": "Forced execution is the procedure provided by Art. 622-914 of the Code of Civil Procedure through which the effective realization of rights established by an enforceable title (court judgment, authenticated contract, etc.) is ensured. Execution is carried out through a bailiff and can take several forms: garnishment of bank accounts and income, seizure and sale of movable or immovable property, however depending on the specific situation, the timeframe may vary."
       }
     },
     "drept-penal": {
@@ -680,25 +680,25 @@
       "titleLine2": "Criminal Law",
       "meta": {
         "title": "Criminal Defense Lawyer Satu Mare | SCA Stan-Baculescu",
-        "description": "Professional criminal defense in Satu Mare. Assistance at hearings, court representation and appeals. Experienced criminal attorney handling complex cases."
+        "description": "Assistance of suspects/defendants, injured parties or witnesses at hearings, representation/assistance before the court, drafting of appeals. Our firm has criminal law attorneys with experience in complex cases."
       },
-      "descriptionTitle": "Criminal Law Services",
-      "description": "Criminal law in Romania is governed by the Codul Penal (Criminal Code), enacted through Legea nr. 286/2009 privind Codul Penal (Law no. 286/2009 on the Criminal Code), and the Codul de Procedura Penala (Code of Criminal Procedure), enacted through Legea nr. 135/2010. These laws define criminal offenses, penalties, the rights of suspects and defendants, and the procedural framework from criminal investigation through trial and appeals. Romanian criminal law classifies offenses by severity and provides for penalties ranging from fines to imprisonment.\n\nOur firm provides comprehensive criminal defense services covering all categories of offenses: crimes against persons (assault, threats, homicide), crimes against property (theft, robbery, fraud, embezzlement), economic crimes and tax evasion, traffic offenses including driving under the influence, cybercrime, and corruption offenses. We represent both defendants and victims (parti civile) in criminal proceedings, ensuring that constitutional rights guaranteed under Art. 24 of the Romanian Constitution, including the right to defense, are fully protected at every procedural stage.\n\nFor foreign nationals and English speakers facing criminal charges or criminal investigations in Romania, having a skilled attorney is not just advisable but often legally required. Under Romanian law, legal representation is mandatory in serious cases involving potential imprisonment. All proceedings, from police interviews to court hearings, are conducted in Romanian, and procedural errors can have irreversible consequences. Our bilingual criminal defense attorneys provide immediate and confidential assistance, explain your rights clearly, and build a robust defense strategy tailored to your situation.",
+      "descriptionTitle": "Services in the Field of Criminal Law",
+      "description": "Criminal law in Romania is governed by the Codul Penal (Criminal Code), enacted through Legea nr. 286/2009 privind Codul Penal (Law no. 286/2009 on the Criminal Code), and the Codul de Procedura Penala (Code of Criminal Procedure), enacted through Legea nr. 135/2010. These laws define criminal offenses, penalties, the rights of suspects and defendants, and the procedural framework from criminal investigation through trial and appeals. Romanian criminal law classifies offenses by severity and provides for penalties ranging from fines to imprisonment.\n\nOur team of criminal law attorneys provides comprehensive legal assistance at all stages of criminal proceedings, both for accused persons and for crime victims. The range of offenses in which we provide representation includes: crimes against persons (Art. 188-227 Criminal Code), crimes against property (Art. 228-256), corruption offenses (Art. 289-294), economic crimes and tax evasion, traffic offenses, cybercrime, and drug-related offenses.\n\nRepresentation by an attorney specialized in criminal law is a fundamental right guaranteed by the Constitution of Romania (Art. 24) and the Code of Criminal Procedure (Art. 10). Legal assistance is mandatory in numerous situations provided by Art. 90 of the Code of Criminal Procedure, including when the defendant is a minor, detained, or arrested. We ensure that all your procedural rights are respected, that evidence is administered legally, and that you benefit from the most effective defense possible.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Offenses against persons (bodily harm, threats)",
         "case2": "Offenses against property (theft, fraud, embezzlement)",
         "case3": "Economic crimes and tax evasion",
-        "case4": "Traffic offenses (driving under the influence)",
+        "case4": "Traffic offenses (driving under the influence, leaving the scene of an accident, driving without a license, etc.)",
         "case5": "Cybercrime",
         "case6": "Victim representation in criminal proceedings"
       },
       "approachTitle": "Our Approach",
       "approach": {
-        "point1": "We provide immediate and confidential legal assistance from first contact.",
-        "point2": "We analyze evidence and identify any procedural defects or rights violations.",
-        "point3": "We develop a personalized defense strategy adapted to the case circumstances.",
-        "point4": "We represent you before prosecution authorities and in all phases of the trial."
+        "point1": "We provide legal assistance exactly when you need it.",
+        "point2": "We analyze evidence and identify any procedural defects or violations of your rights.",
+        "point3": "We develop a personalized defense strategy adapted to the circumstances of the case.",
+        "point4": "We represent you before criminal investigation authorities and in all phases of the criminal proceedings."
       },
       "faq": {
         "title": "Frequently Asked Questions",
@@ -714,42 +714,42 @@
     },
     "drept-familiei": {
       "title": "Family Law",
-      "subtitle": "Sensitive and professional legal assistance in all matters related to family and relationships.",
-      "trustBadge": "Sensitive and Professional Approach",
+      "subtitle": "Professional legal assistance regarding all aspects related to family and minors.",
+      "trustBadge": "Professional Approach",
       "titleLine1": "Legal Consultation for Families",
       "titleLine2": "Family Law",
       "meta": {
         "title": "Family Law Attorney Satu Mare | SCA Stan-Baculescu",
-        "description": "Divorces, custody, alimony and marital property division. Attorney specialized in family law in Satu Mare offering a sensitive and professional approach."
+        "description": "Divorces, establishing the residence of minors, alimony, and division of common property. Attorneys with extensive experience in family law."
       },
-      "descriptionTitle": "Family Law Services",
-      "description": "Family law in Romania is regulated primarily by the Codul Civil (Civil Code), enacted through Legea nr. 287/2009, specifically Book II on Family (Cartea a II-a - Despre Familie), Articles 258-534. These provisions govern marriage, divorce, parent-child relationships, custody, child support (obligatia de intretinere), adoption, and guardianship. Additional procedural rules are found in the Codul de Procedura Civila (Code of Civil Procedure), and specific matters such as child protection are further regulated by Legea nr. 272/2004 privind protectia si promovarea drepturilor copilului (Law no. 272/2004 on the Protection and Promotion of Children's Rights).\n\nOur firm handles the full spectrum of family law matters, including divorce by mutual consent (divort prin acordul sotilor) and contested divorce (divort din culpa), child custody arrangements and establishment of visitation schedules (program de vizitare), determination and modification of child support (pensie de intretinere), division of marital property (partaj bunuri comune), paternity recognition and contestation, and adoption and guardianship proceedings. We prioritize the best interests of children in all cases, as mandated by Art. 263 of the Civil Code.\n\nFor foreigners and English speakers involved in family law proceedings in Romania, whether through an international marriage, a cross-border custody dispute, or a divorce involving a Romanian spouse, legal representation is essential. Romanian family courts follow specific procedural requirements, and all filings and hearings are conducted in Romanian. Our bilingual attorneys provide compassionate, clear guidance through every stage, from mediation and notarial divorce to contested court proceedings, ensuring your rights and your children's welfare are fully protected.",
+      "descriptionTitle": "Legal Consultation in Family Law",
+      "description": "Family law is regulated by Book II of the Civil Code (Law no. 287/2009), Art. 258-534, and comprises the legal rules governing family relationships: marriage, divorce, filiation, parental authority, the maintenance obligation, and child protection.\n\nOur services cover the entire range of family law matters: amicable and contentious divorces (Art. 373-404 Civil Code), establishing and exercising parental authority (Art. 483-512), establishing the child's domicile and the schedule of personal relations, calculating and modifying alimony (Art. 513-534), division of common property of spouses (Art. 339-372), recognition and contestation of paternity (Art. 408-437), adoptions, guardianship, and curatorship.\n\nLegal representation in family law cases is particularly important due to the emotional and long-term implications of the decisions made. Our absolute priority is protecting the best interest of the child, a fundamental principle enshrined in Art. 263 of the Civil Code. We approach each case with empathy and professionalism, seeking extrajudicial solutions (without a court trial or through a settlement) whenever possible, but prepared to firmly represent you before the courts when negotiations fail.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
-        "case1": "Divorces by mutual consent or through litigation",
-        "case2": "Child custody and visitation schedules",
+        "case1": "Divorces by mutual consent, on exclusive fault, for medical reasons, or for de facto separation",
+        "case2": "Exercising parental authority, establishing visitation schedules for minors",
         "case3": "Establishing and modifying alimony",
         "case4": "Division of marital property",
-        "case5": "Paternity recognition or contestation",
+        "case5": "Establishing or contesting paternity",
         "case6": "Adoptions and guardianship"
       },
       "approachTitle": "Our Approach",
       "approach": {
-        "point1": "We listen and understand your situation with empathy and without judgment.",
+        "point1": "We listen to your problems and try to understand them with empathy and without judgment.",
         "point2": "We explore all options, including mediation, to find amicable solutions when possible.",
-        "point3": "We prioritize the best interests of children in all decisions.",
-        "point4": "We represent you firmly in court when negotiations are not possible."
+        "point3": "We prioritize the best interest of children in all actions we undertake.",
+        "point4": "We represent you with professional commitment in court when finding an extrajudicial solution is no longer possible."
       },
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "How long does a divorce take in Romania?",
-        "a1": "The duration depends on the type of divorce. A divorce by mutual consent (divort prin acordul sotilor) can be finalized before a notary public in as little as 30 days if there are no minor children and both parties agree on all terms. If minor children are involved, a mutual consent divorce is handled by the court and typically takes 2 to 4 months. A contested divorce (divort din culpa), where spouses disagree on fault, custody, or property division, can take 6 months to over 2 years depending on the complexity of the issues and the court's caseload.",
+        "a1": "The duration depends on the type of divorce. A divorce by mutual consent before the court usually takes 2-4 months. A contentious divorce, where the spouses disagree regarding fault, child custody, or other aspects of family life, can take much longer, depending on the complexity of the case and the amount of evidence administered.",
         "q2": "How is child custody determined in Romania?",
-        "a2": "Under Art. 396-403 of the Romanian Civil Code, custody (autoritate parinteasca) is decided based on the best interests of the child. The court considers factors such as the child's age, emotional attachment to each parent, each parent's ability to provide stable living conditions, the child's own wishes (if the child is old enough to express a reasoned opinion, typically from age 10), and any history of domestic violence or neglect. The court may grant sole custody to one parent or joint custody (exercitarea in comun a autoritatii parintesti), which has become more common in recent years. The non-custodial parent retains visitation rights and the obligation to pay child support.",
+        "a2": "Under Art. 396-403 of the Civil Code, the court establishes the exercise of parental authority based on the fundamental principle of the best interest of the child (Art. 263 Civil Code). The rule is joint exercise of parental authority by both parents, even after divorce. The court establishes the child's residence with one of the parents and a schedule of personal relations with the other parent. The child's age, attachment to each parent, each parent's ability to provide for the child's needs, and the child's opinion if over 10 years old are taken into consideration.",
         "q3": "How is child support (pensie de intretinere) calculated in Romania?",
-        "a3": "Child support is regulated by Art. 529-530 of the Civil Code. The amount is set as a proportion of the paying parent's net monthly income: up to one-quarter (25%) for one child, up to one-third (33%) for two children, and up to one-half (50%) for three or more children. The court considers the actual needs of the child and the financial capacity of both parents. Child support can be modified if circumstances change significantly, such as a substantial increase or decrease in the paying parent's income, or changes in the child's needs.",
-        "q4": "Can I get a quick notarial divorce in Romania?",
-        "a4": "Yes, under Art. 375-378 of the Civil Code, spouses who agree on all terms of their divorce can finalize it before a notary public (notar public) if they have no minor children. The procedure involves a mandatory 30-day reflection period after the initial application. If there are minor children, even a mutual consent divorce must go through the court. The notarial divorce is significantly faster and less expensive than court proceedings, but both parties must fully agree on all aspects, including property division. Our firm can assist with preparing all necessary documents and ensuring the agreement protects your interests."
+        "a3": "Child support (maintenance obligation) is regulated by Art. 529-530 of the Civil Code. The amount is established based on the income of the parent obliged to pay: up to one-quarter of income for one child, one-third for two children, and one-half for three or more children. All income of the parent is taken into account, including salary, bonuses, rent, and dividends. Child support can be subsequently modified if circumstances change (increase or decrease of income, emergence of other maintenance obligations).",
+        "q4": "",
+        "a4": ""
       }
     },
     "dreptul-muncii": {
@@ -763,10 +763,10 @@
         "description": "Consultation and representation in labor law matters. Wrongful dismissals, wage rights, workplace harassment. Specialized attorney in Satu Mare."
       },
       "descriptionTitle": "Labor Law Services",
-      "description": "Labor law in Romania is primarily governed by the Codul Muncii (Labor Code), enacted through Legea nr. 53/2003 privind Codul Muncii (Law no. 53/2003 on the Labor Code), which regulates the formation, execution, modification, suspension, and termination of individual employment contracts, working conditions, wages, working time, leave, and workplace safety. Additional legislation includes Legea nr. 62/2011 privind dialogul social (Law no. 62/2011 on Social Dialogue) governing collective labor relations, and Legea nr. 467/2006 regarding the protection of employees' personal data.\n\nOur firm provides comprehensive labor law services for both employees and employers. We handle wrongful and unlawful dismissals (concediere), recovery of unpaid wages and other compensation, workplace harassment (hartuire la locul de munca) and discrimination claims under OG nr. 137/2000, workplace accidents and occupational diseases, negotiation and drafting of individual and collective employment contracts, and disputes arising from restructuring and collective layoffs (concediere colectiva) as regulated by Art. 68-74 of the Labor Code.\n\nFor foreign nationals working in Romania and English-speaking employees, understanding your employment rights under Romanian law is critical. Employment contracts, internal regulations (regulament intern), and all correspondence with the Inspectoratul Teritorial de Munca (Territorial Labor Inspectorate) are in Romanian. Our bilingual attorneys ensure you fully understand your contractual terms, advise on the legality of employer decisions, and represent you before labor courts (tribunalul - sectia de litigii de munca), where employees are exempt from paying court fees, making access to justice more affordable.",
+      "description": "Labor law in Romania is primarily governed by the Codul Muncii (Labor Code), enacted through Legea nr. 53/2003 privind Codul Muncii (Law no. 53/2003 on the Labor Code), which regulates the formation, execution, modification, suspension, and termination of individual employment contracts, working conditions, wages, working time, leave, and workplace safety. Additional legislation includes Legea nr. 62/2011 privind dialogul social (Law no. 62/2011 on Social Dialogue) governing collective labor relations, and Legea nr. 467/2006 regarding the protection of employees' personal data.\n\nOur labor law services cover a wide range of situations: challenging unlawful dismissals (Art. 58-75 of the Labor Code), recovering outstanding wage rights, negotiation and drafting of individual and collective employment contracts, assistance in cases of workplace harassment (under Law no. 167/2020), discrimination (GO no. 137/2000), workplace accidents and occupational diseases, restructuring and collective layoffs (Art. 68-74 of the Labor Code), as well as consulting for employers regarding compliance with labor legislation.\n\nSpecialized legal representation in labor disputes is essential because the legislation provides short challenge deadlines (30 calendar days from notification of the dismissal decision, under Art. 268 of the Labor Code) and specific procedural rules. Labor disputes are exempt from court fees for employees, and the burden of proof lies with the employer in most cases. Our team represents you both in extrajudicial proceedings and in judicial proceedings before the courts.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
-        "case1": "Wrongful or illegal dismissals",
+        "case1": "Unlawful dismissals",
         "case2": "Recovery of outstanding wage rights",
         "case3": "Workplace harassment and discrimination",
         "case4": "Workplace accidents and occupational diseases",
@@ -775,21 +775,21 @@
       },
       "approachTitle": "Our Approach",
       "approach": {
-        "point1": "We analyze the employment contract and relevant documents to identify violations.",
-        "point2": "We try to resolve the conflict amicably through negotiation or mediation.",
-        "point3": "We represent the client before the Labor Inspectorate and in court.",
+        "point1": "We analyze the employment contract and relevant documents to identify violations and abusive clauses.",
+        "point2": "We try to resolve the conflict amicably through negotiation.",
+        "point3": "We represent the client in extrajudicial proceedings and in judicial proceedings before the courts.",
         "point4": "We pursue enforcement of decisions to ensure effective recovery of rights."
       },
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "Can I be fired without cause in Romania?",
-        "a1": "No. Under the Romanian Labor Code (Codul Muncii), an employer cannot dismiss an employee without a valid legal ground. Lawful dismissal must be based on either reasons related to the employee (disciplinary misconduct, professional incompetence, or physical/mental incapacity) or reasons not related to the employee (elimination of the position due to economic, technological, or organizational restructuring). The employer must follow a strict procedural framework, including issuing a written dismissal decision (decizie de concediere) that specifies the factual and legal grounds. Dismissal without following proper procedure is considered unlawful and can be annulled by the court.",
+        "a1": "No. Under Art. 58 of the Labor Code, dismissal ordered by the employer must always be justified, otherwise it is null and void. Dismissal may occur for reasons related to the employee (disciplinary misconduct, professional incompetence, medical incapacity) or for reasons not related to the employee (elimination of the position for economic reasons). The dismissal decision must contain the factual and legal grounds, the notice period, and the deadline for challenge.",
         "q2": "What is the notice period for termination in Romania?",
-        "a2": "Under Art. 75 of the Labor Code, the minimum notice period for employee resignation is 20 working days for non-managerial positions and 45 working days for managerial positions, unless a longer period is stipulated in the employment contract. For employer-initiated dismissal, the minimum notice period is also 20 working days, as provided by Art. 75 para. 1. During the notice period, the employment contract continues to produce its effects, meaning both the employee must work and the employer must pay the salary. Collective labor agreements or individual contracts may provide for longer notice periods.",
+        "a2": "Under Art. 75 of the Labor Code, the minimum notice period is 20 working days for employees in non-managerial positions and may be longer for managerial positions, according to the collective or individual employment contract. In case of resignation, the notice period is maximum 20 working days for non-managerial positions and maximum 45 working days for managerial positions. Notice is not required for disciplinary dismissal.",
         "q3": "Can I contest a dismissal in Romanian courts?",
-        "a3": "Yes. Under Art. 268 of the Labor Code, an employee can contest a dismissal decision before the Tribunal (labor disputes section) within 45 calendar days from the date they were notified of the dismissal decision. The burden of proof lies with the employer, who must demonstrate that the dismissal was lawful both in substance and procedure. If the court finds the dismissal unlawful, it can annul the dismissal decision, order reinstatement to the former position, and award compensation equal to the wages the employee would have earned from the date of dismissal until reinstatement. Employees are exempt from paying court fees in labor disputes.",
+        "a3": "You have the right to challenge the dismissal decision before the tribunal in whose territorial jurisdiction you have your domicile or workplace, within the deadline provided by Art. 268 para. (1) letter a) of the Labor Code. The challenge is exempt from court fees. If the court finds the dismissal unlawful, it may order the annulment of the decision, reinstatement to the position, and payment of compensatory wages from the date of dismissal until reinstatement.",
         "q4": "What are my rights in a collective dismissal (concediere colectiva)?",
-        "a4": "Collective dismissal is regulated by Art. 68-74 of the Labor Code and occurs when an employer lays off a significant number of employees within 30 calendar days for economic, technological, or organizational reasons. The employer must follow a mandatory consultation procedure with trade unions or employee representatives, notify the Agentia Judeteana pentru Ocuparea Fortei de Munca (County Employment Agency) and the Inspectoratul Teritorial de Munca (Territorial Labor Inspectorate) at least 30 days before the layoffs take effect. Affected employees are entitled to the notice period, any severance pay provided by applicable collective agreements, and priority re-hiring if the employer fills similar positions within 45 days. Our firm can verify compliance with these procedural requirements and challenge unlawful collective dismissals."
+        "a4": "Collective dismissal is regulated by Art. 68-74 of the Labor Code. The employer is obliged to inform and consult the trade union or employee representatives at least 30 days in advance, and to notify the Territorial Labor Inspectorate and the Employment Agency. Affected employees are entitled to a notice period of at least 20 working days, compensation provided by the collective employment contract, active retraining measures, and priority for re-employment if the employer resumes operations within 45 days."
       }
     },
     "drept-comercial": {
@@ -800,10 +800,10 @@
       "titleLine2": "Commercial Law",
       "meta": {
         "title": "Commercial Law Attorney Satu Mare | SCA Stan-Baculescu",
-        "description": "Legal consultation for businesses in Satu Mare: commercial contracts, litigation, insolvency and mergers. Law firm with expertise in Romanian commercial law."
+        "description": "Legal consulting for businesses: commercial contracts, specialized litigation, insolvency, and mergers. Law firm with experience in commercial and corporate law."
       },
-      "descriptionTitle": "Commercial Law Services",
-      "description": "Commercial law in Romania is governed by a combination of the Codul Civil (Civil Code), enacted through Legea nr. 287/2009, which unified civil and commercial obligations, and Legea nr. 31/1990 privind societatile (Company Law no. 31/1990), which regulates the formation, organization, functioning, and dissolution of commercial companies. Additional key legislation includes Legea nr. 85/2014 privind procedurile de prevenire a insolventei si de insolventa (Law no. 85/2014 on Insolvency Prevention and Insolvency Procedures) and Legea nr. 26/1990 privind Registrul Comertului (Law no. 26/1990 on the Trade Register).\n\nOur firm provides comprehensive commercial law services, including company formation (SRL, SA, and other legal entities) and registration with the Registrul Comertului (Trade Register), drafting and negotiating commercial contracts, commercial litigation and arbitration before Romanian courts, insolvency and bankruptcy proceedings (both voluntary and creditor-initiated), mergers, acquisitions, and corporate restructuring, and recovery of commercial debts through judicial and extrajudicial means. We advise businesses at every stage of their lifecycle, from startup to exit.\n\nFor foreign investors, entrepreneurs, and English-speaking business owners operating in Romania, navigating the Romanian commercial legal framework requires specialized knowledge of local regulations and business practices. Corporate filings with the Oficiul National al Registrului Comertului (National Trade Register Office), tax registrations, and all contractual and court documents are in Romanian. Our bilingual commercial attorneys bridge the language gap, ensuring you understand your corporate obligations, shareholder rights, and regulatory requirements while we protect your business interests through clear contracts, strategic advice, and effective dispute resolution.",
+      "descriptionTitle": "Legal Services for Companies",
+      "description": "Commercial law in Romania is governed by a combination of the Codul Civil (Civil Code), enacted through Legea nr. 287/2009, which unified civil and commercial obligations, and Legea nr. 31/1990 privind societatile (Company Law no. 31/1990), which regulates the formation, organization, functioning, and dissolution of commercial companies. Additional key legislation includes Legea nr. 85/2014 privind procedurile de prevenire a insolventei si de insolventa (Law no. 85/2014 on Insolvency Prevention and Insolvency Procedures) and Legea nr. 26/1990 privind Registrul Comertului (Law no. 26/1990 on the Trade Register).\n\nOur firm provides comprehensive commercial law services, including company formation (SRL, SA, and other legal entities) and registration with the Registrul Comertului (Trade Register), drafting and negotiating commercial contracts, commercial litigation and arbitration before Romanian courts, insolvency and bankruptcy proceedings (both voluntary and creditor-initiated), mergers, acquisitions, and corporate restructuring, and recovery of commercial debts through judicial and extrajudicial means. We advise businesses at every stage of their lifecycle, from startup to exit.\n\nProfessional legal counsel in the commercial field is essential for risk prevention and investment protection. A well-drafted contract, an adequate corporate structure, and knowledge of legal obligations can make the difference between the success and failure of a business. Our team combines legal expertise with an understanding of economic realities to provide pragmatic, efficient solutions tailored to the needs of each client.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Formation and modification of commercial companies",
@@ -818,18 +818,18 @@
         "point1": "We understand business objectives and provide legal counsel aligned with your strategy.",
         "point2": "We draft clear contracts that protect interests and minimize risks.",
         "point3": "We represent commercial interests in negotiations, mediation, or court.",
-        "point4": "We provide fast and efficient solutions to minimize business impact."
+        "point4": "We provide fast and efficient solutions to minimize the negative impact on the business."
       },
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "What types of legal entities can I establish in Romania?",
-        "a1": "Under Legea nr. 31/1990 privind societatile (Company Law no. 31/1990), the most common types of legal entities in Romania are: SRL (Societate cu Raspundere Limitata) - a limited liability company, which is the most popular form for small and medium businesses, requiring a minimum share capital of 200 RON; SA (Societate pe Actiuni) - a joint-stock company, suitable for larger enterprises, requiring a minimum share capital of 90,000 RON; SNC (Societate in Nume Colectiv) - a general partnership; SCS (Societate in Comandita Simpla) - a limited partnership; and PFA (Persoana Fizica Autorizata) or II (Intreprindere Individuala) for sole traders. The choice depends on your business objectives, number of partners, capital requirements, and liability preferences.",
+        "a1": "Under Law no. 31/1990, the following forms of companies can be established in Romania: Limited Liability Company (SRL) - the most popular form; Joint-Stock Company (SA) - recommended for large-scale businesses; General Partnership (SNC); Limited Partnership (SCS); and Limited Partnership by Shares (SCA). Additionally, Individual Enterprises, Authorized Natural Persons (PFA), and Family Enterprises can be established under GEO no. 44/2008.",
         "q2": "How much does it cost to form a company in Romania?",
-        "a2": "The cost of forming an SRL (the most common business entity) in Romania includes: the minimum share capital of 200 RON (approximately 40 EUR), Trade Register fees of approximately 100-300 RON, notarial fees for authenticating the articles of incorporation, publication fees in the Monitorul Oficial (Official Gazette), and attorney fees for legal assistance with drafting documents and handling the registration process. Total costs typically range from 1,500 to 3,000 RON (300-600 EUR) including professional fees. The registration process at the Oficiul Registrului Comertului (Trade Register Office) usually takes 3 to 5 business days once all documents are submitted.",
+        "a2": "The costs for setting up an SRL include: the share capital, registration fees at the Trade Register, the notarial fee for authenticating the articles of incorporation (if applicable), the fee for publication in the Official Gazette (if mandatory), and the attorney's fee. Costs vary depending on the complexity of the corporate structure and the services requested.",
         "q3": "What is insolvency and how does it work in Romania?",
-        "a3": "Insolvency in Romania is regulated by Legea nr. 85/2014 privind procedurile de prevenire a insolventei si de insolventa (Law no. 85/2014 on Insolvency Prevention and Insolvency Procedures). A company is considered insolvent when it cannot pay its debts as they fall due. The law provides for several procedures: preventive composition (concordatul preventiv), judicial reorganization (reorganizare judiciara), which allows the company to restructure its debts and continue operations under a reorganization plan, and bankruptcy (faliment), which involves liquidation of assets and distribution of proceeds to creditors. Insolvency proceedings are initiated before the Tribunal and managed by a judicial administrator (administrator judiciar) or liquidator (lichidator judiciar). Both debtors and creditors can file insolvency petitions.",
+        "a3": "Insolvency, regulated by Law no. 85/2014, is the situation in which the debtor cannot meet its due debts with available funds. The procedure can be initiated by the debtor or by creditors with claims exceeding 50,000 RON. Insolvency does not necessarily mean bankruptcy: the first stage is observation (maximum 12 months), possibly followed by judicial reorganization, which allows the continuation of activity under a plan approved by creditors. Only if reorganization fails does the procedure proceed to bankruptcy, with liquidation of assets.",
         "q4": "How can I recover a commercial debt in Romania?",
-        "a4": "Romanian law provides several mechanisms for debt recovery. For undisputed debts, you can use the ordonanta de plata (payment order) procedure under Art. 1014-1025 of the Code of Civil Procedure, which provides an expedited resolution within approximately 45 days. For debts evidenced by specific documents (invoices, contracts), the cerere cu valoare redusa (small claims procedure) may apply for claims under 10,000 EUR. If the debt is disputed, standard civil litigation is required. After obtaining an enforceable title (court judgment or payment order), forced execution (executare silita) is carried out by a bailiff (executor judecatoresc) and may include bank account seizure, wage garnishment, and seizure of assets. Our firm handles the entire recovery process from pre-litigation demand letters to enforcement."
+        "a4": "There are several ways to recover commercial debts: payment order (regulated by Art. 1014-1025 of the Code of Civil Procedure), regular court action, and forced execution through a bailiff. The choice of procedure depends on the existence of a written contract, the amount of the debt, and the debtor's behavior."
       }
     },
     "accidente-rutiere": {
@@ -843,7 +843,7 @@
         "description": "Representation for traffic accident victims. Get compensation from insurers: material damages, pain and suffering, lost income. Attorney in Satu Mare."
       },
       "descriptionTitle": "Services for Traffic Accident Victims",
-      "description": "Traffic accident claims in Romania are governed by several key pieces of legislation, including OUG nr. 195/2002 privind circulatia pe drumurile publice (Government Emergency Ordinance no. 195/2002 on Road Traffic), which establishes traffic rules and liability for road accidents, and Legea nr. 132/2017 privind asigurarea obligatorie de raspundere civila auto (Law no. 132/2017 on Mandatory Motor Vehicle Liability Insurance, commonly known as RCA). These laws, together with the Civil Code provisions on tort liability (Art. 1349-1395) and the Criminal Code provisions on bodily harm caused by traffic violations, form the comprehensive legal framework for pursuing compensation.\n\nOur firm represents traffic accident victims in all types of claims, including bodily injury compensation for physical harm, pain, and suffering, material damages to vehicles and personal property, loss of earning capacity and future income, compensation for survivors and family members in fatal accidents, appeals against inadequate insurance company decisions, and claims involving uninsured or unidentified (hit-and-run) vehicles through the Fondul de Protectie a Victimelor Strazii (Street Victims Protection Fund). We also represent clients as parti civile (civil parties) in criminal proceedings against at-fault drivers.\n\nFor foreigners and English speakers involved in traffic accidents in Romania, the claims process can be particularly challenging. Insurance claims must be filed in Romanian with specific documentation requirements and strict deadlines. Police reports, medical certificates, and expert assessments are all in Romanian. Our bilingual attorneys manage the entire process, from filing the initial insurance claim (cerere de despagubire) to negotiating with insurers and, when necessary, litigating in court to secure the full compensation you deserve.",
+      "description": "Traffic accidents are governed by a complex legislative framework that includes GEO no. 195/2002 on road traffic, Law no. 132/2017 on mandatory motor vehicle liability insurance (RCA), the Criminal Code (for traffic offenses), and the Civil Code (for tort liability). The right to compensation for traffic accident victims is guaranteed both through the RCA insurance mechanism and through the direct civil liability of the at-fault person.\n\nOur services for traffic accident victims cover the entire spectrum of necessary actions: complete documentation of the harm suffered (material damages, medical expenses, lost income, moral damages), filing the compensation claim with the RCA insurance company according to the procedure provided by Law no. 132/2017, negotiating with insurers to obtain maximum compensation, representation in civil and criminal courts, as well as assistance in special cases of accidents with uninsured vehicles or unidentified perpetrators (compensation through BAAR - the Romanian Motor Insurers' Bureau).\n\nSpecialized legal representation is essential because insurance companies frequently offer compensation significantly lower than what is legally due. An experienced attorney knows the current case law, the criteria for evaluating bodily harm, and the methods for calculating moral damages, and can obtain compensation much higher than the initial offers of insurers.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Bodily injuries suffered in traffic accidents",
@@ -851,7 +851,7 @@
         "case3": "Compensation for loss of work capacity",
         "case4": "Compensation for survivors in case of death",
         "case5": "Appealing insurance company decisions",
-        "case6": "Accidents with uninsured or hit-and-run vehicles"
+        "case6": "Accidents with uninsured or stolen vehicles"
       },
       "approachTitle": "Our Approach",
       "approach": {
@@ -867,7 +867,7 @@
         "q2": "How do I obtain compensation from the insurance company?",
         "a2": "Under Legea nr. 132/2017, you must file a written compensation claim (cerere de despagubire) with the at-fault driver's RCA insurer. The claim must include the police report, medical documentation, proof of damages (repair estimates, invoices), and a medical-legal certificate if bodily harm is involved. The insurer has 30 days from receiving the complete file to make a compensation offer for material damages, or 90 days for bodily injuries. If the insurer denies the claim, makes an inadequate offer, or fails to respond within the deadline, you have the right to file a lawsuit directly against the insurance company. Our firm handles the entire claims process and negotiates aggressively to maximize your compensation.",
         "q3": "What is the timeline for filing a traffic accident compensation claim?",
-        "a3": "For insurance claims under RCA, you should notify the insurer as soon as possible after the accident. The statute of limitations for filing a civil lawsuit for damages is three years from the date you became aware (or should have become aware) of the damage and the identity of the responsible party. For criminal complaints related to bodily harm caused by traffic violations, the limitation period depends on the severity of the offense. It is important to act promptly, as delays can affect the quality of evidence and your ability to recover compensation. We recommend consulting an attorney within the first few days after an accident.",
+        "a3": "The extrajudicial procedure (with the insurer) must be completed within 30 days of submitting the complete documentation for material damages and 90 days for bodily injuries, according to Law no. 132/2017. If the case reaches court (when the insurer refuses payment or offers insufficient amounts), the process may take longer.",
         "q4": "What happens if the at-fault driver is uninsured or cannot be identified?",
         "a4": "If the at-fault driver does not have valid RCA insurance or cannot be identified (as in hit-and-run accidents), victims can seek compensation from the Biroul Asiguratorilor de Autovehicule din Romania - BAAR (Romanian Motor Insurers' Bureau), specifically through the Fondul de Protectie a Victimelor Strazii (Street Victims Protection Fund). This fund compensates victims for bodily injuries and, in certain cases, material damages when the responsible driver is uninsured or unidentified. The claims procedure has specific requirements and deadlines. Our firm has experience filing claims with BAAR and can guide you through this specialized process to ensure you receive the compensation you are entitled to."
       }
@@ -880,18 +880,18 @@
       "titleLine2": "Administrative and Tax Law",
       "meta": {
         "title": "Administrative Law Attorney Satu Mare | SCA Stan-Baculescu",
-        "description": "Administrative and tax appeals, disputes with ANAF and representation before authorities. Specialized attorney in administrative and tax law in Satu Mare."
+        "description": "Administrative and tax appeals, litigation, and representation before authorities. Attorney specialized in administrative and tax law in Satu Mare."
       },
       "descriptionTitle": "Administrative and Tax Law Services",
-      "description": "Administrative and tax law in Romania is governed by several foundational statutes, including Legea nr. 554/2004 privind contenciosul administrativ (Law no. 554/2004 on Administrative Litigation), which establishes the legal framework for challenging unlawful administrative acts, and Codul de Procedura Fiscala (Tax Procedure Code), enacted through Legea nr. 207/2015 privind Codul de Procedura Fiscala (Law no. 207/2015 on the Tax Procedure Code), which regulates tax administration, tax assessments, tax enforcement, and taxpayer rights. Additional relevant legislation includes Codul Fiscal (Tax Code), Legea nr. 227/2015, governing substantive tax obligations.\n\nOur firm provides comprehensive services in administrative and tax law, including challenging ANAF (Agentia Nationala de Administrare Fiscala - National Agency for Fiscal Administration) tax assessment decisions (decizii de impunere), filing tax appeals (contestatii fiscale) under Art. 268-281 of the Tax Procedure Code, disputing fines and administrative sanctions, challenging refused permits, authorizations, and licenses, handling expropriation and public utility compensation cases, pursuing administrative litigation (contencios administrativ) actions against public authorities, and advising on tax compliance and planning.\n\nFor foreigners and English-speaking individuals or businesses dealing with Romanian tax authorities or administrative bodies, the complexity of local procedures makes professional legal representation indispensable. Tax assessment notices, audit reports, and administrative decisions are issued exclusively in Romanian, with strict appeal deadlines that, if missed, result in the loss of your right to challenge them. Our bilingual attorneys translate and explain every document, file timely appeals, represent you before tax commissions and administrative courts, and work to protect your financial interests against unlawful or disproportionate administrative actions.",
+      "description": "Our firm provides specialized legal assistance in challenging unlawfully issued administrative and tax acts by central and local public authorities. Romanian administrative and tax law is governed by the Administrative Litigation Law no. 554/2004, the Tax Procedure Code (Law no. 207/2015), the Tax Code (Law no. 227/2015), and the Code of Civil Procedure, normative acts that regulate the procedure for challenging unlawful decisions.\n\nThe main services we offer include: actions for the annulment of unlawful administrative acts through administrative litigation according to Law no. 554/2004, challenging tax assessment decisions issued by ANAF and other tax claim titles, defending taxpayer rights in tax enforcement procedures regulated by Art. 220-267 of the Tax Procedure Code, representation in litigation with local authorities regarding taxes, duties, and authorizations, recovery of undue amounts paid to the state budget or local budgets, as well as actions to obtain suspension of enforcement of administrative acts under Art. 14-15 of Law no. 554/2004.\n\nSpecialized legal representation is essential in dealings with public authorities, as appeal deadlines are very short. Failure to comply with these deadlines results in definitive forfeiture of the right to challenge. Our team ensures that your rights are fully defended before any public authority.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Challenging ANAF tax assessment decisions",
         "case2": "Tax disputes and recovery of improperly paid amounts",
         "case3": "Challenging fines and administrative sanctions",
-        "case4": "Permits and authorizations refused by authorities",
+        "case4": "Authorizations refused by authorities",
         "case5": "Expropriations and compensation for public utility",
-        "case6": "Administrative litigation and actions against authorities"
+        "case6": "Administrative litigation and actions against administrative acts"
       },
       "approachTitle": "Our Approach",
       "approach": {
@@ -903,13 +903,13 @@
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "What is administrative litigation in Romania?",
-        "a1": "Administrative litigation (contencios administrativ) is the legal mechanism through which individuals and legal entities can challenge unlawful acts issued by public authorities. It is primarily governed by Legea nr. 554/2004 privind contenciosul administrativ (Law no. 554/2004 on Administrative Disputes). Under this law, any person who considers that a right or legitimate interest has been harmed by an administrative act - or by the failure of an authority to resolve a request within the legal deadline - may bring an action before the administrative courts. Before filing suit, the injured party must generally submit a prior administrative complaint (plangere prealabila) to the issuing authority under Art. 7 of Law no. 554/2004, requesting revocation or modification of the act. If the authority rejects the complaint or fails to respond within 30 days, the person may then file an action in the competent administrative and fiscal court (tribunal - sectia de contencios administrativ si fiscal). The court can annul the administrative act, order the authority to issue a new act, and award damages for the harm suffered.",
+        "a1": "Administrative litigation represents the activity of resolving by competent courts disputes in which at least one party is a public authority, and the conflict arose either from the issuance or conclusion of an unlawful administrative act, or from the failure to resolve a request within the legal deadline, according to Law no. 554/2004. In practice, any person who considers their right or legitimate interest violated by a public authority may petition the administrative court for annulment of the act, recognition of the claimed right, and compensation for damages. Before addressing the court, the injured party must complete the prior procedure, i.e., request the issuing authority to revoke the act, within the deadline provided by law.",
         "q2": "How do I challenge a tax assessment from ANAF?",
-        "a2": "To challenge a tax assessment decision (decizie de impunere) issued by ANAF (Agentia Nationala de Administrare Fiscala - National Agency for Fiscal Administration), you must first file a fiscal appeal (contestatie fiscala) under Art. 268-281 of the Codul de Procedura Fiscala (Tax Procedure Code, Legea nr. 207/2015 privind Codul de Procedura Fiscala). The appeal must be filed in writing with the issuing tax authority within 45 days from the date of communication of the decision, as provided by Art. 270. The issuing authority forwards the file to the competent resolution body - the Directia Generala de Solutionare a Contestatiilor (General Directorate for Resolving Appeals) within ANAF for amounts exceeding 5 million RON, or the relevant regional fiscal authority for smaller amounts. The resolution body must issue a decision within 45 days (extendable to 6 months for complex cases). If your fiscal appeal is rejected in whole or in part, you may then challenge the decision before the administrative and fiscal court under Legea nr. 554/2004 within 6 months from communication of the appellate decision.",
+        "a2": "The appeal against a tax assessment decision issued by ANAF is drafted in writing and submitted to the issuing tax authority within 45 days from the date of communication of the decision, according to Art. 270 of the Tax Procedure Code (Law no. 207/2015). The appeal must include the identification data of the appellant, the subject of the appeal, the factual and legal grounds, and the supporting evidence. The tax authority forwards the appeal for resolution to the General Directorate for Resolving Appeals within ANAF, which issues a decision within 45 days (with the possibility of extension). If the resolution decision is unfavorable, you may challenge this decision before the administrative court within 6 months from communication.",
         "q3": "What is the deadline for challenging an administrative act?",
-        "a3": "Under Art. 11 of Legea nr. 554/2004 privind contenciosul administrativ (Law no. 554/2004 on Administrative Disputes), the action in administrative litigation must be filed within 6 months from the date of communication of the authority's response to the prior complaint (plangere prealabila), or from the date when the legal deadline for the authority to respond has expired without a reply. There is also an absolute limitation period of 1 year from the date of communication of the administrative act itself, beyond which the right to challenge is lost regardless of circumstances. For tax matters specifically, the fiscal appeal under Art. 270 of the Tax Procedure Code (Legea nr. 207/2015) must be filed within 45 days from communication of the tax assessment decision. These deadlines are mandatory and their expiration extinguishes the right to bring an action, which is why it is critical to consult a specialized attorney immediately upon receiving an unfavorable administrative or tax decision.",
+        "a3": "The general deadline for filing an administrative litigation action is 6 months from the date of communication of the administrative act or from the date of becoming aware of it, according to Art. 11 para. (1) of Law no. 554/2004. In justified cases, the deadline may be extended to 1 year from communication, according to Art. 11 para. (2) of the same law. For administrative-tax acts, the administrative appeal must be filed within 45 days from communication (Art. 270 Tax Procedure Code), and for contravention reports the deadline is 15 days. Exceeding these deadlines results in forfeiture of the right to challenge the act, which is why it is essential to act promptly.",
         "q4": "Can I obtain suspension of an administrative act's enforcement?",
-        "a4": "Yes, under Art. 14-15 of Legea nr. 554/2004 privind contenciosul administrativ (Law no. 554/2004 on Administrative Disputes), the injured party may request the court to suspend the enforcement of an administrative act. To obtain suspension, two cumulative conditions must be met: the existence of a well-founded case (caz bine justificat), meaning serious arguments suggesting the administrative act may be unlawful, and the risk of imminent damage (paguba iminenta) - harm of a certain degree that cannot be remedied if the act continues to produce effects. Suspension can be requested either together with the prior complaint (Art. 14, decided by the court without the main action being filed yet) or alongside the main action for annulment (Art. 15). The court may require the applicant to post a security deposit (cautiune). In tax matters, filing a fiscal appeal (contestatie fiscala) does not automatically suspend enforcement under Art. 278 of the Tax Procedure Code, but the court may grant suspension under the same conditions of Art. 14-15 of Law no. 554/2004. Our attorneys evaluate the strength of your case, prepare the suspension request with supporting evidence, and represent you in the urgent hearing before the administrative court."
+        "a4": "Yes, suspension of the enforcement of an administrative act can be obtained under Art. 14-15 of Law no. 554/2004. The administrative court may order suspension of the act when two cumulative conditions are met: the existence of a well-founded case, meaning circumstances creating serious doubt about the legality of the act, and the need to prevent imminent damage, meaning a future and foreseeable material harm that could not be repaired. The suspension request can be filed together with the prior complaint (Art. 14) or together with the action on the merits (Art. 15). In tax matters, suspension can also be obtained administratively by depositing a guarantee equivalent to the contested amount, according to Art. 278 of the Tax Procedure Code."
       }
     },
     "achizitii-publice": {
@@ -920,10 +920,10 @@
       "titleLine2": "Public Procurement",
       "meta": {
         "title": "Public Procurement Lawyer Satu Mare | SCA Stan-Baculescu",
-        "description": "Legal counsel for public procurement procedures, CNSC appeals and public contract litigation. Specialized procurement lawyer Satu Mare Romania."
+        "description": "Legal consulting for public procurement procedures, CNSC appeals, and public contract litigation. Attorneys specialized in public procurement."
       },
       "descriptionTitle": "Public Procurement Services",
-      "description": "Public procurement in Romania is governed by Legea nr. 98/2016 privind achizitiile publice (Law no. 98/2016 on Public Procurement), which transposes the EU Directive 2014/24/EU, along with Legea nr. 99/2016 on sectoral procurement and Legea nr. 100/2016 on concession contracts. These laws establish the procedures for awarding public contracts, including open tenders, restricted procedures, competitive dialogue, and negotiation procedures. The system is overseen by ANAP (Agentia Nationala pentru Achizitii Publice - National Agency for Public Procurement) and all procurement procedures are conducted through the electronic platform SEAP (Sistemul Electronic de Achizitii Publice).\n\nOur firm provides comprehensive legal assistance throughout the entire public procurement cycle. We advise economic operators on qualification requirements, preparation of tender documentation, and compliance with technical and financial criteria. When procurement decisions are contested, we represent clients before CNSC (Consiliul National de Solutionare a Contestatiilor - National Council for Solving Complaints), the specialized administrative-jurisdictional body established under Legea nr. 101/2016 privind remediile si caile de atac in materie de atribuire a contractelor de achizitie publica (Law no. 101/2016 on Remedies and Appeals in Public Procurement). We also handle appeals before the competent courts of appeal against CNSC decisions.\n\nFor foreign companies seeking to participate in Romanian public tenders, navigating the legal framework requires specialized knowledge of both Romanian procurement law and EU directives. Our bilingual team assists international clients with registration on SEAP, preparation of European Single Procurement Documents (ESPD), understanding of Romanian-specific qualification criteria, and representation in any disputes arising during or after the award procedure. We ensure that your rights as an economic operator are fully protected, whether you are challenging an exclusion decision, contesting an award, or seeking damages for unlawful procurement practices.",
+      "description": "Public procurement in Romania is governed by a complex legislative framework, based on Law no. 98/2016 on public procurement, Law no. 99/2016 on sectoral procurement, and Law no. 100/2016 on concession contracts for works and services. The award procedures - open tender, restricted tender, competitive negotiation, competitive dialogue, and innovation partnership - are subject to strict rules of transparency and equal treatment, according to Art. 2 of Law no. 98/2016. Our firm provides comprehensive consulting to economic operators who wish to participate in public procurement procedures, from analyzing the award documentation and preparing technical and financial offers, to challenging the decisions of contracting authorities.\n\nThe remedies system in public procurement is regulated by Law no. 101/2016 on remedies and appeals. The National Council for Solving Complaints (CNSC) is the administrative-jurisdictional body competent to resolve complaints filed against the acts of contracting authorities. According to Art. 8 of Law no. 101/2016, complaints may be filed within the deadline provided by law from the date of becoming aware of the act considered unlawful, for procedures with estimated value above the thresholds provided by Art. 7 para. (1) of Law no. 98/2016. CNSC decisions may be appealed to the competent courts, the administrative litigation section, within the deadline provided by law, according to Art. 29 of Law no. 101/2016.\n\nOur experience in public procurement covers the entire procurement cycle: assistance in preparing bids compliant with award documentation requirements, filing complaints with CNSC against procedure results or restrictive clauses in the specifications, representation before the Court of Appeal in appeals against CNSC decisions, as well as assistance in the execution of public procurement contracts. We also provide consulting on public-private partnerships regulated by GEO no. 39/2018, appeals regarding the award of sectoral contracts, and disputes arising from the execution of administrative contracts, including compensation claims for unlawful exclusion from the procedure.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Preparation and review of tender documentation and bids",
@@ -935,21 +935,21 @@
       },
       "approachTitle": "Our Approach",
       "approach": {
-        "point1": "We analyze the procurement documentation, evaluation reports, and identify procedural or substantive violations.",
-        "point2": "We prepare and file the complaint before CNSC within the legal deadlines established by Legea nr. 101/2016.",
-        "point3": "We represent the client before CNSC and, if necessary, before the competent court of appeal in judicial review proceedings.",
-        "point4": "We monitor contract execution and advise on compliance, amendments, and dispute resolution mechanisms."
+        "point1": "We analyze the award documentation and identify any restrictive or unlawful clauses that can be challenged.",
+        "point2": "We prepare the CNSC complaint in compliance with legal deadlines and with solid legal argumentation based on Law no. 101/2016.",
+        "point3": "We represent the client before CNSC and, if necessary, before the competent courts for exercising the appeal.",
+        "point4": "We monitor the execution of the public procurement contract and provide assistance in resolving contractual disputes."
       },
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "What is CNSC and what role does it play in public procurement?",
-        "a1": "CNSC (Consiliul National de Solutionare a Contestatiilor - National Council for Solving Complaints) is Romania's specialized administrative-jurisdictional body that resolves complaints in public procurement matters. Established under Legea nr. 101/2016 privind remediile si caile de atac (Law no. 101/2016 on Remedies and Appeals), CNSC has exclusive competence to review complaints filed by economic operators who consider that their rights have been violated during a procurement procedure. CNSC must issue a decision within 20 days of receiving the complete file, and its decisions can be appealed before the competent court of appeal within 10 days from communication.",
+        "a1": "The National Council for Solving Complaints (CNSC) is an independent administrative-jurisdictional body competent to resolve complaints filed within public procurement procedures, according to Art. 2 of Law no. 101/2016. The complaint is filed in writing with CNSC and communicated to the contracting authority within the same deadline. It must include the identification of the complainant, the contested act, the factual and legal grounds, and the supporting evidence. CNSC resolves the complaint through a reasoned decision within 20 days from receiving the complete file.",
         "q2": "What are the deadlines for filing a complaint in public procurement?",
-        "a2": "Under Legea nr. 101/2016 privind remediile si caile de atac (Law no. 101/2016 on Remedies and Appeals), the deadline for filing a complaint before CNSC depends on the estimated contract value. For contracts above the EU thresholds, the complaint must be filed within 10 days from the date when the complainant became aware of the act considered unlawful. For contracts below the EU thresholds, the deadline is 5 days. These deadlines are mandatory and their non-observance leads to the rejection of the complaint as belated. Prior notification of the contracting authority under Art. 6 of Law 101/2016 is also required before filing with CNSC.",
+        "a2": "The deadline for filing the complaint with CNSC is provided by Art. 8 of Law no. 101/2016 and varies depending on the estimated value of the procedure. Exceeding the deadline results in forfeiture of the right to challenge, which is why it is essential to act immediately after receiving notification of the result. Additionally, a copy of the complaint must be sent to the contracting authority on the same day.",
         "q3": "Can I challenge an exclusion from a tender procedure?",
-        "a3": "Yes, an economic operator excluded from a public procurement procedure has the right to challenge the exclusion decision before CNSC or directly before the competent court. Under Legea nr. 98/2016 (Law no. 98/2016 on Public Procurement), exclusion must be based on specific grounds enumerated in Art. 164-167, including criminal convictions, tax debts, or serious professional misconduct. If the contracting authority applied the exclusion grounds incorrectly, failed to allow the operator to provide clarifications, or did not properly apply the self-cleaning mechanism under Art. 171, the decision may be annulled. Our attorneys carefully review the exclusion reasoning and prepare a well-founded complaint to protect your right to participate.",
+        "a3": "If an economic operator is unlawfully excluded from a public procurement procedure, they may challenge the exclusion decision before CNSC within the legal deadline. CNSC may order the annulment of the exclusion act and the resumption of the procedure from the stage where the violation occurred. If the contract has already been signed, the economic operator may seek damages through court action. According to Art. 58 of Law no. 101/2016, the court may award damages for participation costs and lost profit, if it is proven that the tenderer would have won the contract in the absence of the violation.",
         "q4": "Can I claim damages for an unlawful procurement decision?",
-        "a4": "Yes, under Art. 53 of Legea nr. 101/2016 privind remediile si caile de atac (Law no. 101/2016 on Remedies and Appeals), any person who has suffered harm as a result of an unlawful act or decision during a procurement procedure may seek damages before the competent court. To succeed, the claimant must prove the unlawfulness of the contracting authority's act, the actual damage suffered (including lost profit from not being awarded the contract), and the causal link between the two. The claim must be filed within the general civil statute of limitations of three years. Our firm assists with quantifying the damages, gathering evidence, and representing clients in court to recover compensation."
+        "a4": "Yes, according to Art. 58 of Law no. 101/2016, any person who considers themselves harmed by an act of the contracting authority may seek damages through court action. The action is filed before the competent civil court and must prove the existence of the unlawful act, the damage suffered, and the causal link. Damages may cover costs incurred for participation in the procedure (bid preparation costs, participation guarantees, consultant fees) and, under certain conditions, lost profit from the lost contract. The court will evaluate the evidence and determine the amount of damages based on the specific circumstances of the case."
       }
     },
     "drept-contraventional": {
@@ -963,7 +963,7 @@
         "description": "Challenging contravention fines and official reports in Satu Mare. Specialized contravention law attorney for traffic, construction, and commercial sanctions."
       },
       "descriptionTitle": "Contravention Law Services",
-      "description": "Contravention law in Romania is primarily governed by OG nr. 2/2001 privind regimul juridic al contraventiilor (Government Ordinance no. 2/2001 on the Legal Regime of Contraventions), which establishes the general framework for defining contraventions, applying sanctions, and challenging contravention reports. A contravention (contraventie) is a deed committed with guilt, established and sanctioned by law, ordinance, or local council decision, distinct from criminal offenses by its lower degree of social danger. Sanctions range from warnings (avertisment) to fines (amenda) and complementary sanctions such as confiscation or suspension of activity.\n\nOur firm specializes in challenging contravention reports (procese-verbale de constatare si sanctionare a contraventiei) before Romanian courts. Under Art. 31 of OG 2/2001, the sanctioned person has the right to file a complaint (plangere contraventionala) within 15 days from the date of communication of the report. The complaint is filed with the judecatorie (local court) in whose jurisdiction the contravention was committed. The court examines both the legality and the merits of the report, and may annul it, reduce the fine, or replace it with a warning. Importantly, under ECHR case-law applied by Romanian courts, contravention proceedings must respect fair trial guarantees, including the presumption of innocence.\n\nFor foreign nationals and English speakers who receive contravention fines in Romania - whether for traffic violations, construction irregularities, or commercial activities - understanding your rights is crucial. Many contravention reports contain procedural defects that may lead to annulment, such as failure to properly identify the person sanctioned, incorrect legal classification, or failure to describe the deed with sufficient precision. Our bilingual attorneys review the report for both formal and substantive defects, prepare the legal complaint within the 15-day deadline, and represent you before the competent court to ensure the best possible outcome.",
+      "description": "Romanian contravention law is primarily governed by Government Ordinance no. 2/2001 on the legal regime of contraventions, which establishes the general framework for the finding and sanctioning of contraventional acts. A contravention is defined as a deed committed with fault, established and sanctioned by law, ordinance, or Government decision, or by local council decision. The main contravention sanctions are the warning, the contravention fine, and community service, according to Art. 5 para. (2) of GO no. 2/2001. The contravention report drawn up by the finding agent must comply with a series of formal and substantive conditions, the non-compliance of which may result in the nullity of the act.\n\nChallenging the contravention report is done by filing a contravention complaint before the local court in whose jurisdiction the contravention was committed, within 15 days from the date of communication or delivery of the report, according to Art. 31 of GO no. 2/2001. The complaint suspends the execution of the applied sanctions. In analyzing the complaint, the court verifies both the legality and the merits of the report, and the burden of proof lies with the finding authority. Our firm analyzes each report to identify formal defects (absence of mandatory mentions from Art. 16-17 of GO no. 2/2001) and substantive defects (lack of merit of the alleged deed).\n\nThe contravention field is extremely vast, encompassing traffic contraventions (GEO no. 195/2002 on road traffic), construction contraventions (Law no. 50/1991), fiscal and commercial contraventions, environmental protection contraventions (GEO no. 195/2005), public order contraventions, and contraventions in the field of labor relations (Law no. 53/2003 - Labor Code). Each field has specific regulations regarding the amount of fines and the limitation periods for enforcement of sanctions. We offer complete representation in all these matters, from analyzing the report and preparing the contravention complaint to arguing the case in court and exercising the appeal.",
       "casesTitle": "Types of Cases We Handle",
       "cases": {
         "case1": "Traffic fines and driving-related contraventions",
@@ -978,18 +978,18 @@
         "point1": "We carefully review the contravention report for procedural defects and substantive errors that may lead to annulment.",
         "point2": "We prepare and file the complaint (plangere contraventionala) within the mandatory 15-day deadline under OG 2/2001.",
         "point3": "We represent the client before the competent judecatorie, presenting evidence and legal arguments for annulment or reduction.",
-        "point4": "If necessary, we pursue the appeal before the tribunal to overturn unfavorable first-instance decisions."
+        "point4": "We pursue the appeal if the first-instance decision is unfavorable."
       },
       "faq": {
         "title": "Frequently Asked Questions",
         "q1": "What is the deadline for challenging a contravention fine in Romania?",
-        "a1": "Under Art. 31 of OG nr. 2/2001 privind regimul juridic al contraventiilor (Government Ordinance no. 2/2001 on the Legal Regime of Contraventions), the person sanctioned must file a complaint (plangere contraventionala) within 15 days from the date of communication or receipt of the contravention report (proces-verbal). The complaint is filed with the judecatorie (local court) in whose jurisdiction the contravention was committed. This deadline is mandatory, and failure to file within 15 days results in the report becoming final and enforceable. If you have received a fine, it is essential to contact an attorney immediately to preserve your right to challenge.",
+        "a1": "The deadline for filing the contravention complaint is 15 days from the date of communication or delivery of the report, according to Art. 31 of GO no. 2/2001. The complaint is filed with the local court in whose jurisdiction the contravention was committed. It is important to note that filing the complaint suspends the execution of the applied sanction, including the fine and complementary sanctions. Exceeding the 15-day deadline results in forfeiture of the right to challenge, which is why it is essential to act immediately after receiving the report.",
         "q2": "What aspects of a contravention report can be challenged?",
-        "a2": "A contravention report can be challenged on both legality (legalitate) and merits (temeinicie). On legality grounds, the court verifies whether the report contains all mandatory elements required by Art. 16-17 of OG 2/2001, such as correct identification of the sanctioned person, precise description of the deed, legal classification, and the agent's signature. Absence of these elements may lead to absolute nullity. On the merits, the court examines whether the deed was actually committed, whether it constitutes a contravention, and whether the sanction applied is proportionate. Romanian courts also apply ECHR principles, including the presumption of innocence, meaning the burden of proof rests with the sanctioning authority.",
+        "a2": "The contravention complaint may challenge both the legality and the merits of the report. From a legality standpoint, you can invoke absolute nullity for the absence of mandatory mentions provided by Art. 17 of GO no. 2/2001 (the offender's name, the deed committed, the date of commission, the agent's signature) or relative nullity for other procedural defects. From a merits standpoint, you can challenge the existence of the deed, the circumstances recorded, or the proportionality of the applied sanction. The burden of proof lies with the authority, not the offender.",
         "q3": "What happens if I do not pay a contravention fine?",
-        "a3": "If the contravention report becomes final (either because the 15-day challenge period expired or the court rejected the complaint), the fine becomes enforceable. Under OG 2/2001 and the Codul de Procedura Fiscala (Tax Procedure Code), unpaid fines are collected through forced execution (executare silita) by ANAF or local tax authorities. This may involve garnishment of bank accounts, seizure of income, or seizure of movable and immovable property. Additionally, under Art. 28 of OG 2/2001, if the fine is paid within 15 days from communication, the sanctioned person benefits from paying only half of the minimum fine amount. For foreign nationals, unpaid fines may also affect future visa or residence applications in Romania.",
+        "a3": "If you do not pay the fine within 15 days of communication of the report and do not file a contravention complaint, the report becomes an enforceable title according to Art. 37 of GO no. 2/2001. In this case, the tax authority (ANAF or the local financial administration) may proceed with forced execution of the fine through garnishment of bank accounts, garnishment of wage income, or seizure of movable and immovable property. Additionally, if the fine is not paid within 30 days from the sanction becoming final, the offender also owes late payment penalties. It is recommended to challenge or pay the fine within the legal deadline to avoid forced execution.",
         "q4": "Can a contravention fine be replaced with a warning?",
-        "a4": "Yes, under Art. 7 of OG nr. 2/2001, the warning (avertisment) is the mildest contravention sanction and can be applied when the deed is of minor gravity. If the sanctioning agent applied a fine, the court hearing the complaint may replace it with a warning if it considers that the circumstances justify a milder sanction, taking into account the nature and gravity of the deed, the circumstances of its commission, the person's conduct, and whether any harm was caused. Romanian courts frequently apply the proportionality principle and replace disproportionate fines with warnings, particularly for first-time offenders and minor violations. Our attorneys present all mitigating factors to maximize the chances of obtaining a warning instead of a fine."
+        "a4": "Yes, the court hearing the contravention complaint may replace the fine with a warning sanction if it considers that the deed is of minor gravity and that the warning is sufficient to fulfill the purpose of the sanction. According to Art. 7 para. (3) of GO no. 2/2001, the warning is applied when the deed is of minor gravity, and the court considers that a pecuniary sanction is not justified. In judicial practice, courts analyze the criteria provided by Art. 21 para. (3) of GO no. 2/2001: the degree of social danger of the deed, the circumstances in which it was committed, the manner and means of commission, the aim pursued, the consequence produced, and the personal circumstances of the offender."
       }
     },
     "dreptul-asigurarilor": {
@@ -1147,7 +1147,7 @@
       "description": "Our team of attorneys is available to help you with any legal questions.",
       "button": "Contact Us",
       "callLabel": "Or call directly",
-      "available": "Available Monday - Friday, 09:00 - 17:00"
+      "available": "Available 24/7"
     }
   },
   "Testimonials": {
@@ -1163,11 +1163,11 @@
     "viewAllReviews": "View all reviews on Google"
   },
   "Footer": {
-    "description": "We provide excellent legal services in Satu Mare and throughout Romania. With nearly 20 years of experience, we are here for you in matters of civil, criminal, family, and commercial law.",
+    "description": "We provide excellent legal services in Satu Mare and throughout Romania. With more than 20 years of experience, we are here for you in matters of civil, criminal, family, and commercial law.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contactInfo": "Contact Information",
-    "hours": "Monday - Sunday: 09:00 - 17:00",
+    "hours": "Non-stop",
     "copyright": "All rights reserved.",
     "legal": {
       "privacy": "Privacy Policy",

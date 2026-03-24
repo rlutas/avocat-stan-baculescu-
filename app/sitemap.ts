@@ -22,6 +22,11 @@ const serviceIds = [
   'drept-comercial',
   'accidente-rutiere',
   'drept-administrativ-fiscal',
+  'achizitii-publice',
+  'drept-contraventional',
+  'dreptul-asigurarilor',
+  'practician-insolventa',
+  'arbitraj-intern',
 ];
 
 // Team member pages
@@ -50,6 +55,11 @@ const blogPostPairs = [
     ro: 'drepturile-angajatului-concediere',
     en: 'employee-rights-dismissal',
     lastmod: '2025-12-20',
+  },
+  {
+    ro: 'fals-inscrisuri-semnatura-privata',
+    en: 'forgery-private-documents',
+    lastmod: '2026-03-06',
   },
 ];
 
