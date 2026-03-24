@@ -4,15 +4,19 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
 
-const photos: { src: string; key: string; tall?: boolean }[] = [
+const photos: { src: string; key: string; tall?: boolean; position?: string }[] = [
   { src: '/images/galerie/echipa-grup.webp',        key: 'photo1', tall: true },
   { src: '/images/galerie/intrare-birou.webp',      key: 'photo2' },
   { src: '/images/galerie/hol-asteptare.webp',      key: 'photo3' },
   { src: '/images/galerie/sala-sedinte.webp',       key: 'photo4' },
   { src: '/images/galerie/receptie.webp',           key: 'photo5' },
   { src: '/images/galerie/birou-avocat.webp',       key: 'photo6' },
-  { src: '/images/galerie/logo-perete.webp',        key: 'photo7' },
-  { src: '/images/galerie/statuia-justitiei.webp',  key: 'photo8' },
+  { src: '/images/galerie/logo-perete.webp',        key: 'photo7', position: 'top' },
+  { src: '/images/galerie/consultanta.webp',        key: 'photo8' },
+  { src: '/images/galerie/statuia-justitiei.webp',  key: 'photo9' },
+  { src: '/images/galerie/sala-conferinte.webp',    key: 'photo10' },
+  { src: '/images/galerie/detaliu-decor.webp',      key: 'photo11' },
+  { src: '/images/galerie/coduri-juridice.webp',    key: 'photo12' },
 ];
 
 export function AboutGallery() {
@@ -70,7 +74,7 @@ export function AboutGallery() {
                     src={photo.src}
                     alt={t(photo.key)}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    className={`object-cover transition-transform duration-700 ease-out group-hover:scale-110 ${photo.position ? `object-${photo.position}` : ''}`}
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 50vw, 33vw"
                   />
 
