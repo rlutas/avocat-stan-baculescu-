@@ -173,12 +173,14 @@
       "label": "Our Office",
       "title": "Our Office in Satu Mare",
       "subtitle": "We welcome you in a professional and inviting space, designed for our clients' comfort.",
-      "photo1": "SCA Stan-Baculescu Headquarters",
+      "photo1": "The Stan-Baculescu Team",
       "photo2": "Office Entrance",
-      "photo3": "Exterior View",
-      "photo4": "Office Sign",
-      "photo5": "Reception Area",
-      "photo6": "Waiting Room"
+      "photo3": "Waiting Area",
+      "photo4": "Meeting Room",
+      "photo5": "Reception",
+      "photo6": "Attorney's Office",
+      "photo7": "Firm Logo",
+      "photo8": "Lady Justice"
     },
     "cta": {
       "label": "Get Started",

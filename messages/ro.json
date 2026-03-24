@@ -173,12 +173,14 @@
       "label": "Biroul Nostru",
       "title": "Sediul Nostru din Satu Mare",
       "subtitle": "Vă așteptăm într-un spațiu profesional și primitor, conceput pentru confortul clienților noștri.",
-      "photo1": "Sediul SCA Stan-Baculescu",
-      "photo2": "Intrarea în cabinet",
-      "photo3": "Vedere exterioară",
-      "photo4": "Panou publicitar",
+      "photo1": "Echipa Stan-Baculescu",
+      "photo2": "Intrarea în sediu",
+      "photo3": "Sala de așteptare",
+      "photo4": "Sala de ședințe",
       "photo5": "Recepția",
-      "photo6": "Sala de așteptare"
+      "photo6": "Biroul avocatului",
+      "photo7": "Logo-ul societății",
+      "photo8": "Statuia Justiției"
     },
     "cta": {
       "label": "Începe Acum",

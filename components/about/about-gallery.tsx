@@ -5,12 +5,14 @@ import Image from 'next/image';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
 
 const photos: { src: string; key: string; tall?: boolean }[] = [
-  { src: '/images/birou/birou-exterior.webp',                          key: 'photo1', tall: true },
-  { src: '/images/birou/birou-exterior-panou-publicitar.webp',         key: 'photo4' },
-  { src: '/images/birou/birou-intrare-parter-cu-panou-publicitar.webp', key: 'photo2' },
-  { src: '/images/birou/birou-exterior-vedere-etaj1-geam.webp',        key: 'photo3' },
-  { src: '/images/birou/receptie1.webp',                               key: 'photo5' },
-  { src: '/images/birou/sala-asteptare.webp',                          key: 'photo6' },
+  { src: '/images/galerie/echipa-grup.webp',        key: 'photo1', tall: true },
+  { src: '/images/galerie/intrare-birou.webp',      key: 'photo2' },
+  { src: '/images/galerie/hol-asteptare.webp',      key: 'photo3' },
+  { src: '/images/galerie/sala-sedinte.webp',       key: 'photo4' },
+  { src: '/images/galerie/receptie.webp',           key: 'photo5' },
+  { src: '/images/galerie/birou-avocat.webp',       key: 'photo6' },
+  { src: '/images/galerie/logo-perete.webp',        key: 'photo7' },
+  { src: '/images/galerie/statuia-justitiei.webp',  key: 'photo8' },
 ];
 
 export function AboutGallery() {
