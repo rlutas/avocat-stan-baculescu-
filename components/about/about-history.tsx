@@ -46,7 +46,7 @@ export function AboutHistory() {
 
               {/* Floating year badge */}
               <motion.div
-                className="absolute left-6 top-6 sm:left-8 sm:top-8"
+                className="absolute bottom-6 left-6 sm:left-8 sm:top-8 sm:bottom-auto"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
