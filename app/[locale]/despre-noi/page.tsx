@@ -6,6 +6,8 @@ import { AboutValues } from '@/components/about/about-values';
 import { AboutPrinciples } from '@/components/about/about-principles';
 import { AboutMethodology } from '@/components/about/about-methodology';
 import { AboutCta } from '@/components/about/about-cta';
+import { AboutGallery } from '@/components/about/about-gallery';
+import { Testimonials } from '@/components/testimonials/testimonials';
 import { BreadcrumbSchema } from '@/components/seo';
 
 const BASE_URL = 'https://stanbaculescu.ro';
@@ -65,6 +67,8 @@ export default async function AboutPage({ params }: Props) {
         <AboutValues />
         <AboutPrinciples />
         <AboutMethodology />
+        <AboutGallery />
+        <Testimonials />
         <AboutCta />
       </main>
     </>

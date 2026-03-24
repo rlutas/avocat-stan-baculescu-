@@ -169,6 +169,17 @@
         "description": "We ensure you get the best possible outcome for your situation."
       }
     },
+    "gallery": {
+      "label": "Our Office",
+      "title": "Our Office in Satu Mare",
+      "subtitle": "We welcome you in a professional and inviting space, designed for our clients' comfort.",
+      "photo1": "SCA Stan-Baculescu Headquarters",
+      "photo2": "Office Entrance",
+      "photo3": "Exterior View",
+      "photo4": "Office Sign",
+      "photo5": "Reception Area",
+      "photo6": "Waiting Room"
+    },
     "cta": {
       "label": "Get Started",
       "title": "Need Legal Assistance?",

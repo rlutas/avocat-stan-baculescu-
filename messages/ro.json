@@ -169,6 +169,17 @@
         "description": "Ne asigurăm că obțineți cel mai bun rezultat posibil pentru situația dumneavoastră."
       }
     },
+    "gallery": {
+      "label": "Biroul Nostru",
+      "title": "Sediul Nostru din Satu Mare",
+      "subtitle": "Vă așteptăm într-un spațiu profesional și primitor, conceput pentru confortul clienților noștri.",
+      "photo1": "Sediul SCA Stan-Baculescu",
+      "photo2": "Intrarea în cabinet",
+      "photo3": "Vedere exterioară",
+      "photo4": "Panou publicitar",
+      "photo5": "Recepția",
+      "photo6": "Sala de așteptare"
+    },
     "cta": {
       "label": "Începe Acum",
       "title": "Aveți nevoie de asistență juridică?",
