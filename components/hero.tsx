@@ -8,6 +8,7 @@ import { Clock, Phone, ArrowRight } from 'lucide-react';
 import { GlowWrapper } from '@/components/ui/glow-button';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
+import { trackPhoneClick } from '@/lib/analytics';
 
 const founders = [
   {
@@ -249,6 +250,7 @@ export function Hero() {
               </GlowWrapper>
               <a
                 href="tel:+40745466720"
+                onClick={() => trackPhoneClick('hero', 'home')}
                 className="group relative flex h-12 flex-1 items-center justify-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/20 transition-all duration-300 hover:bg-white/15 hover:ring-gold/40 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 sm:h-14 sm:flex-none sm:justify-start"
               >
                 {/* Icon section with distinct background */}

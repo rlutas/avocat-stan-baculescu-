@@ -10,6 +10,7 @@ import {
   Instagram,
 } from 'lucide-react';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
+import { trackPhoneClick, trackEmailClick, trackMapsClick } from '@/lib/analytics';
 
 // TikTok icon component since lucide-react doesn't have it
 function TikTokIcon({ className }: { className?: string }) {
@@ -34,24 +35,28 @@ export function ContactInfo() {
       label: t('addressLabel'),
       value: 'Str. Decebal Nr. 4, Et. 1, Mun. Satu Mare, Jud. Satu Mare',
       href: 'https://maps.google.com/?q=Str.+Decebal+4,+Satu+Mare,+Romania',
+      track: () => trackMapsClick('contact_page'),
     },
     {
       icon: Phone,
       label: t('phoneLabel'),
       value: '+40 745 466 720',
       href: 'tel:+40745466720',
+      track: () => trackPhoneClick('contact_page', 'contact'),
     },
     {
       icon: Mail,
       label: t('emailLabel'),
       value: 'office@stanbaculescu.ro',
       href: 'mailto:office@stanbaculescu.ro',
+      track: () => trackEmailClick('contact_page'),
     },
     {
       icon: Clock,
       label: t('hoursLabel'),
       value: t('hoursValue'),
       href: null,
+      track: undefined,
     },
   ];
 
@@ -97,6 +102,7 @@ export function ContactInfo() {
                     {item.href ? (
                       <a
                         href={item.href}
+                        onClick={item.track}
                         target={
                           item.href.startsWith('http') ? '_blank' : undefined
                         }
