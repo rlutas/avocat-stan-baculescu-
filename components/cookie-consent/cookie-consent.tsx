@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { X, Settings, Cookie, Shield, BarChart3, Megaphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { updateConsent } from '@/lib/analytics';
 
 export type CookiePreferences = {
   essential: boolean; // Always true, required
@@ -91,6 +92,9 @@ export function CookieConsent() {
     localStorage.setItem(COOKIE_CONSENT_KEY, 'true');
     localStorage.setItem(COOKIE_PREFERENCES_KEY, JSON.stringify(prefs));
     setPreferences(prefs);
+
+    // Update GTM consent state
+    updateConsent(prefs.analytics, prefs.marketing);
 
     // Dispatch custom event so other components can react
     window.dispatchEvent(
