@@ -21,6 +21,7 @@ import {
 import { CheckCircle, AlertCircle, ArrowRight, Phone, Mail, MessageCircle, Clock, Zap, Check } from 'lucide-react';
 import { GlowWrapper } from '@/components/ui/glow-button';
 import { ScrollAnimate, StaggerContainer, StaggerItem } from '@/components/ui/scroll-animate';
+import { useRef } from 'react';
 
 const contactSchema = z.object({
   firstName: z.string().min(2, 'First name must be at least 2 characters'),
@@ -58,6 +59,7 @@ export function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
   >('idle');
+  const formTopRef = useRef<HTMLDivElement>(null);
 
   const {
     register,
@@ -100,6 +102,7 @@ export function ContactForm() {
 
       setSubmitStatus('success');
       reset();
+      formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'generate_lead', {
@@ -128,7 +131,7 @@ export function ContactForm() {
   if (submitStatus === 'success') {
     return (
       <ScrollAnimate variant="scaleUp">
-        <div className="rounded-2xl bg-white p-8 text-center shadow-lg sm:p-10">
+        <div ref={formTopRef} className="rounded-2xl bg-white p-8 text-center shadow-lg sm:p-10">
           <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-50 ring-4 ring-green-100">
             <CheckCircle className="h-8 w-8 text-green-500" />
           </div>

@@ -257,7 +257,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[85vw] max-w-sm border-l-gold/20 bg-gradient-to-br from-navy-dark via-navy to-navy-light p-0 overflow-hidden"
+                className="w-[85vw] max-w-sm border-l-gold/20 bg-gradient-to-br from-navy-dark via-navy to-navy-light p-0"
                 closeClassName="top-6 right-6 z-20 text-white hover:text-gold hover:bg-white/10 p-2 rounded-lg"
               >
                 {/* Decorative gold circle */}
@@ -277,7 +277,7 @@ export function Header() {
                   </SheetTitle>
 
                   {/* Navigation */}
-                  <nav className="mt-6 flex flex-col gap-1 flex-1">
+                  <nav className="mt-6 flex flex-col gap-1 flex-1 overflow-y-auto">
                     {navItems.map((item, index) => {
                       const hasDropdown = 'hasDropdown' in item && item.hasDropdown;
 
