@@ -59,9 +59,11 @@ const localBusinessSchema = {
         'Wednesday',
         'Thursday',
         'Friday',
+        'Saturday',
+        'Sunday',
       ],
-      opens: '09:00',
-      closes: '17:00',
+      opens: '00:00',
+      closes: '23:59',
     },
   ],
   areaServed: [
