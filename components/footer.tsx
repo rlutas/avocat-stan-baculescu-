@@ -194,44 +194,43 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            {/* Copyright */}
-            <p className="text-sm text-white/50">
-              &copy; {currentYear} {t('siteName')}. {tFooter('copyright')}
-            </p>
+          {/* Row 1: Copyright + Crafted by */}
+          <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
+            <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-3 md:items-start">
+              <p className="text-sm text-white/50">
+                &copy; {currentYear} {t('siteName')}. {tFooter('copyright')}
+              </p>
+              <a
+                href="https://api.whatsapp.com/send/?phone=40745850700&text=Bun%C4%83%21+Am+v%C4%83zut+site-ul+stanbaculescu.ro+%C8%99i+a%C8%99+vrea+s%C4%83+discut%C4%83m+despre+dezvoltarea+unui+website.&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-1.5 text-sm text-white/40 transition-colors hover:text-gold"
+              >
+                <span className="text-gold/50 group-hover:text-gold">&lt;/&gt;</span>
+                Crafted by <span className="font-semibold text-gold/70 group-hover:text-gold">Luțaș Raul</span>
+                <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+              </a>
+            </div>
 
             {/* Legal Links */}
-            <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            <nav className="flex flex-wrap items-center justify-center gap-3 md:gap-5">
               {legalLinks.map((link) => (
                 <Link
                   key={link.key}
                   href={link.href}
-                  className="text-sm text-white/50 transition-colors hover:text-gold"
+                  className="text-xs text-white/40 transition-colors hover:text-gold"
                 >
                   {tFooter(`legal.${link.key}`)}
                 </Link>
               ))}
               <button
                 onClick={openCookieSettings}
-                className="flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-gold"
+                className="flex items-center gap-1 text-xs text-white/40 transition-colors hover:text-gold"
               >
-                <Cookie className="h-3.5 w-3.5" />
+                <Cookie className="h-3 w-3" />
                 {tCookie('settingsLink')}
               </button>
             </nav>
-          </div>
-          {/* Crafted by */}
-          <div className="mt-4 flex items-center justify-center border-t border-white/5 pt-4">
-            <a
-              href="https://api.whatsapp.com/send/?phone=40745850700&text=Bun%C4%83%21+Am+v%C4%83zut+site-ul+stanbaculescu.ro+%C8%99i+a%C8%99+vrea+s%C4%83+discut%C4%83m+despre+dezvoltarea+unui+website.&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-1.5 text-xs text-white/30 transition-colors hover:text-gold"
-            >
-              <span className="text-gold/50 group-hover:text-gold">&lt;/&gt;</span>
-              Crafted by <span className="font-semibold text-gold/60 group-hover:text-gold">Luțaș Raul</span>
-              <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
-            </a>
           </div>
         </div>
       </div>
