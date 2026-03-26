@@ -77,7 +77,7 @@ export function Footer() {
             {/* Social Media Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://www.facebook.com/cabinetavocaturastanbaculescu"
+                href="https://www.facebook.com/avocati.stanbaculescu"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackSocialClick({ social_platform: 'facebook', click_location: 'footer', action: 'profile_visit' })}
@@ -87,7 +87,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://www.instagram.com/cabinet_stan_baculescu/"
+                href="https://www.instagram.com/avocati_stanbaculescu"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackSocialClick({ social_platform: 'instagram', click_location: 'footer', action: 'profile_visit' })}
@@ -97,7 +97,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://www.tiktok.com/@cabinetavocat"
+                href="https://www.tiktok.com/@vladbaculescu"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackSocialClick({ social_platform: 'tiktok', click_location: 'footer', action: 'profile_visit' })}

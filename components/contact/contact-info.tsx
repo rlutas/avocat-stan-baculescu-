@@ -64,17 +64,17 @@ export function ContactInfo() {
     {
       icon: Facebook,
       label: 'Facebook',
-      href: 'https://facebook.com/stanbaculescu',
+      href: 'https://www.facebook.com/avocati.stanbaculescu',
     },
     {
       icon: Instagram,
       label: 'Instagram',
-      href: 'https://instagram.com/stanbaculescu',
+      href: 'https://www.instagram.com/avocati_stanbaculescu',
     },
     {
       icon: TikTokIcon,
       label: 'TikTok',
-      href: 'https://tiktok.com/@stanbaculescu',
+      href: 'https://www.tiktok.com/@vladbaculescu',
     },
   ];
 

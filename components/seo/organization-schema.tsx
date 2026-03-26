@@ -21,9 +21,9 @@ const organizationSchema = {
     areaServed: 'RO',
   },
   sameAs: [
-    'https://www.facebook.com/cabinetavocaturastanbaculescu',
-    'https://www.instagram.com/cabinet_stan_baculescu/',
-    'https://www.tiktok.com/@cabinetavocat',
+    'https://www.facebook.com/avocati.stanbaculescu',
+    'https://www.instagram.com/avocati_stanbaculescu',
+    'https://www.tiktok.com/@vladbaculescu',
   ],
 };
 

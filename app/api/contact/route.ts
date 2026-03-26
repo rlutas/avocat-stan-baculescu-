@@ -16,8 +16,8 @@ const FIRM = {
   email: 'office@stanbaculescu.ro',
   address: 'Str. Decebal Nr. 4, Et. 1, Satu Mare 440014',
   hours: 'Non stop',
-  facebook: 'https://www.facebook.com/cabinetavocaturastanbaculescu',
-  instagram: 'https://www.instagram.com/cabinet_stan_baculescu/',
+  facebook: 'https://www.facebook.com/avocati.stanbaculescu',
+  instagram: 'https://www.instagram.com/avocati_stanbaculescu',
 };
 
 // Rate limiting configuration
