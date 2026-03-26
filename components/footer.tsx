@@ -220,6 +220,19 @@ export function Footer() {
               </button>
             </nav>
           </div>
+          {/* Crafted by */}
+          <div className="mt-4 flex items-center justify-center border-t border-white/5 pt-4">
+            <a
+              href="https://api.whatsapp.com/send/?phone=40745850700&text=Bun%C4%83%21+Am+v%C4%83zut+site-ul+stanbaculescu.ro+%C8%99i+a%C8%99+vrea+s%C4%83+discut%C4%83m+despre+dezvoltarea+unui+website.&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-1.5 text-xs text-white/30 transition-colors hover:text-gold"
+            >
+              <span className="text-gold/50 group-hover:text-gold">&lt;/&gt;</span>
+              Crafted by <span className="font-semibold text-gold/60 group-hover:text-gold">Luțaș Raul</span>
+              <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
