@@ -8,7 +8,7 @@ import { Clock, Phone, ArrowRight } from 'lucide-react';
 import { GlowWrapper } from '@/components/ui/glow-button';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
-import { trackPhoneClick } from '@/lib/analytics';
+import { trackPhoneClick, trackCtaClick } from '@/lib/analytics';
 
 const founders = [
   {
@@ -241,7 +241,7 @@ export function Hero() {
                   size="lg"
                   className="group h-12 w-full rounded-full bg-gold px-4 text-sm font-semibold text-navy shadow-[var(--shadow-gold)] transition-all duration-300 hover:bg-gold-light hover:shadow-[var(--shadow-gold-lg)] sm:h-14 sm:px-8 sm:text-base"
                 >
-                  <Link href="/contact">
+                  <Link href="/contact" onClick={() => trackCtaClick({ cta_text: 'Programează o Consultație', cta_location: 'hero', cta_destination: '/contact', page_type: 'home' })}>
                     <span className="sm:hidden">{t('ctaShort')}</span>
                     <span className="hidden sm:inline">{t('cta')}</span>
                     <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1 sm:ml-2" />
