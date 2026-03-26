@@ -2,9 +2,9 @@ import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
 const RECIPIENT_EMAIL = 'office@stanbaculescu.ro';
-const FROM_EMAIL = 'contact@stanbaculescu.ro';
+const FROM_EMAIL = 'office@stanbaculescu.ro';
 const BASE_URL = 'https://stanbaculescu.ro';
-const LOGO_URL = `${BASE_URL}/images/logo.webp`;
+const LOGO_URL = `${BASE_URL}/images/logo-email-white.png`;
 const AUDIENCE_ID = 'd6085ddf-9f37-480d-b1e5-db5e43c36cf1';
 
 // Firm contact details (single source of truth)
@@ -15,7 +15,7 @@ const FIRM = {
   phoneTel: '+40745466720',
   email: 'office@stanbaculescu.ro',
   address: 'Str. Decebal Nr. 4, Et. 1, Satu Mare 440014',
-  hours: 'Luni - Vineri: 09:00 - 17:00',
+  hours: 'Non stop',
   facebook: 'https://www.facebook.com/cabinetavocaturastanbaculescu',
   instagram: 'https://www.instagram.com/cabinet_stan_baculescu/',
 };
