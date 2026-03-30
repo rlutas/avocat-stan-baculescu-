@@ -64,7 +64,7 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
             <ScrollAnimate delay={0.2}>
               <div className="mt-6 space-y-3 sm:space-y-4">
                 {t(`${serviceId}.description`).split('\n\n').map((paragraph: string, i: number) => (
-                  <p key={i} className="text-base leading-[1.7] text-text-secondary hyphens-auto text-pretty sm:text-lg sm:leading-relaxed">
+                  <p key={i} className="text-base leading-[1.7] text-text-secondary text-justify hyphens-auto sm:text-lg sm:leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
@@ -277,7 +277,7 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                             >
-                              <p className="px-6 pb-6 pt-0 text-base leading-relaxed text-text-secondary hyphens-auto text-pretty sm:px-8 sm:pb-8">
+                              <p className="px-6 pb-6 pt-0 text-base leading-relaxed text-text-secondary text-justify hyphens-auto sm:px-8 sm:pb-8">
                                 {faq.answer}
                               </p>
                             </motion.div>
