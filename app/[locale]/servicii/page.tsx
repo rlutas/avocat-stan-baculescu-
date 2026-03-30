@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Servicii Juridice Complete Satu Mare | SCA Stan-Baculescu'
-      : 'Complete Legal Services Satu Mare | SCA Stan-Baculescu';
+      ? 'Servicii Juridice Complete Satu Mare | Stan-Baculescu'
+      : 'Complete Legal Services Satu Mare | Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Servicii juridice oferite de SCA Stan-Baculescu in Satu Mare: malpraxis medical, drept civil, penal, familiei, muncii, comercial si administrativ.'
+      ? 'Servicii juridice oferite de Stan-Baculescu in Satu Mare: malpraxis medical, drept civil, penal, familiei, muncii, comercial si administrativ.'
       : 'Legal services by Stan-Baculescu Law Firm in Satu Mare: medical malpractice, civil, criminal, family, labor, commercial and administrative law.';
 
   return {
@@ -48,11 +48,11 @@ export default async function ServicesPage({ params }: Props) {
 
   const title =
     locale === 'ro'
-      ? 'Servicii Juridice Complete Satu Mare | SCA Stan-Baculescu'
-      : 'Complete Legal Services Satu Mare | SCA Stan-Baculescu';
+      ? 'Servicii Juridice Complete Satu Mare | Stan-Baculescu'
+      : 'Complete Legal Services Satu Mare | Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Servicii juridice oferite de SCA Stan-Baculescu in Satu Mare: malpraxis medical, drept civil, penal, familiei, muncii, comercial si administrativ.'
+      ? 'Servicii juridice oferite de Stan-Baculescu in Satu Mare: malpraxis medical, drept civil, penal, familiei, muncii, comercial si administrativ.'
       : 'Legal services by Stan-Baculescu Law Firm in Satu Mare: medical malpractice, civil, criminal, family, labor, commercial and administrative law.';
 
   const serviceIds = [

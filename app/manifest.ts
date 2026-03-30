@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'SCA Stan-Baculescu | Societate Civilă de Avocați',
+    name: 'Stan-Baculescu | Societate Civilă de Avocați',
     short_name: 'Stan-Baculescu',
     description:
       'Cabinet de avocatură Stan-Baculescu din Satu Mare. Servicii juridice profesionale.',

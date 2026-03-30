@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Echipa de Avocati Satu Mare | SCA Stan-Baculescu'
-      : 'Our Legal Team in Satu Mare | SCA Stan-Baculescu';
+      ? 'Echipa de Avocati Satu Mare | Stan-Baculescu'
+      : 'Our Legal Team in Satu Mare | Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Cunoasteti echipa de avocati profesionisti de la SCA Stan-Baculescu. Avocati cu experienta in drept civil, penal, familiei si comercial din Satu Mare.'
+      ? 'Cunoasteti echipa de avocati profesionisti de la Stan-Baculescu. Avocati cu experienta in drept civil, penal, familiei si comercial din Satu Mare.'
       : 'Meet the professional team of lawyers at Stan-Baculescu Law Firm. Experienced attorneys in civil, criminal, family, and commercial law in Satu Mare.';
 
   return {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: `${BASE_URL}/images/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: locale === 'ro' ? 'Echipa SCA Stan-Baculescu' : 'SCA Stan-Baculescu Team',
+          alt: locale === 'ro' ? 'Echipa Stan-Baculescu' : 'Stan-Baculescu Team',
         },
       ],
     },

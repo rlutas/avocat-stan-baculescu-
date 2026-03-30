@@ -13,11 +13,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Termeni si Conditii | SCA Stan-Baculescu'
+      ? 'Termeni si Conditii | Stan-Baculescu'
       : 'Terms of Service | Stan-Baculescu Law Firm';
   const description =
     locale === 'ro'
-      ? 'Termenii si conditiile de utilizare a site-ului web al SCA Stan-Baculescu. Cititi cu atentie inainte de a utiliza serviciile noastre.'
+      ? 'Termenii si conditiile de utilizare a site-ului web al Stan-Baculescu. Cititi cu atentie inainte de a utiliza serviciile noastre.'
       : 'Terms and conditions for using the Stan-Baculescu Law Firm website. Please read carefully before using our services.';
 
   return {

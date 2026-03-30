@@ -6,7 +6,7 @@ export function ContactMap() {
   const t = useTranslations('ContactPage.map');
 
   const mapSrc =
-    'https://maps.google.com/maps?q=SCA+Stan-Baculescu,+Satu+Mare,+Romania&t=&z=16&ie=UTF8&iwloc=B&output=embed';
+    'https://maps.google.com/maps?q=Stan-Baculescu,+Satu+Mare,+Romania&t=&z=16&ie=UTF8&iwloc=B&output=embed';
 
   return (
     <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/[0.04] transition-all duration-500 hover:shadow-xl">

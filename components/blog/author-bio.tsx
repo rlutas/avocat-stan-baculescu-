@@ -11,27 +11,27 @@ type AuthorBioProps = {
 const authorData: Record<string, { role: string; bio: string }> = {
   'Camelia Stan': {
     role: 'Avocat Fondator',
-    bio: 'Avocat in Baroul Satu Mare cu experienta in malpraxis medical, drept civil si litigii complexe. Fondator al SCA Stan-Baculescu.',
+    bio: 'Avocat in Baroul Satu Mare cu experienta in malpraxis medical, drept civil si litigii complexe. Fondator al Societății Civile de Avocați Stan-Baculescu.',
   },
   'Vlad Baculescu': {
     role: 'Avocat Fondator',
-    bio: 'Avocat in Baroul Satu Mare specializat in dreptul familiei, drept penal si proceduri de divort. Co-fondator al SCA Stan-Baculescu.',
+    bio: 'Avocat in Baroul Satu Mare specializat in dreptul familiei, drept penal si proceduri de divort. Co-fondator al Societății Civile de Avocați Stan-Baculescu.',
   },
   'Diana Antonia Chincea': {
     role: 'Avocat Colaborator',
-    bio: 'Avocat in Baroul Satu Mare cu experienta in dreptul muncii si drept comercial. Colaborator al SCA Stan-Baculescu.',
+    bio: 'Avocat in Baroul Satu Mare cu experienta in dreptul muncii si drept comercial. Colaborator al Societății Civile de Avocați Stan-Baculescu.',
   },
   'Cristina Blan': {
     role: 'Avocat Colaborator',
-    bio: 'Avocat in Baroul Satu Mare cu experienta in drept civil si contencios administrativ. Colaborator al SCA Stan-Baculescu.',
+    bio: 'Avocat in Baroul Satu Mare cu experienta in drept civil si contencios administrativ. Colaborator al Societății Civile de Avocați Stan-Baculescu.',
   },
   'Alexandra Rusu': {
     role: 'Avocat Colaborator',
-    bio: 'Avocat in Baroul Satu Mare cu experienta in drept comercial si executare silita. Colaborator al SCA Stan-Baculescu.',
+    bio: 'Avocat in Baroul Satu Mare cu experienta in drept comercial si executare silita. Colaborator al Societății Civile de Avocați Stan-Baculescu.',
   },
   'Gabriella Diana Veress': {
     role: 'Relatii Clienti',
-    bio: 'Responsabila de relatia cu clientii la SCA Stan-Baculescu, asigurand o comunicare eficienta si un serviciu de calitate.',
+    bio: 'Responsabila de relatia cu clientii la Societatea Civilă de Avocați Stan-Baculescu, asigurand o comunicare eficienta si un serviciu de calitate.',
   },
 };
 

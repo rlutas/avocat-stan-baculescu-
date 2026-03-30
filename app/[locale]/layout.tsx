@@ -18,7 +18,7 @@ const playfairDisplay = Playfair_Display({
   variable: '--font-heading',
   subsets: ['latin'],
   weight: ['600', '700'],
-  display: 'swap',
+  display: 'block',
 });
 
 const inter = Inter({
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     'dreptul muncii',
     'avocat Romania',
   ],
-  authors: [{ name: 'SCA Stan-Baculescu' }],
+  authors: [{ name: 'Stan-Baculescu' }],
   creator: 'Stan-Baculescu Law Firm',
   publisher: 'Stan-Baculescu Law Firm',
   formatDetection: {
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'SCA Stan-Baculescu',
+        alt: 'Stan-Baculescu',
       },
     ],
   },
@@ -128,6 +128,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale}>
       <head>
         <OrganizationSchema />
+        <link rel="preload" href="/images/team/camelia-stan.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/images/team/vlad-baculescu.webp" as="image" type="image/webp" />
       </head>
       <body
         className={`${playfairDisplay.variable} ${inter.variable} font-body antialiased`}

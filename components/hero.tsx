@@ -43,7 +43,7 @@ export function Hero() {
   }, [mouseX, mouseY]);
 
   return (
-    <section className="hero-gradient-animated relative w-full min-h-screen overflow-hidden">
+    <section className="hero-gradient-animated relative w-full min-h-screen overflow-hidden" style={{ backgroundColor: '#003a70' }}>
       <style jsx>{`
         .hero-gradient-animated {
           background: linear-gradient(

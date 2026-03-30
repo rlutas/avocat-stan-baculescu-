@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Blog Juridic - Informatii Legale | SCA Stan-Baculescu'
-      : 'Legal Blog - Useful Legal Info | SCA Stan-Baculescu';
+      ? 'Blog Juridic - Informatii Legale | Stan-Baculescu'
+      : 'Legal Blog - Useful Legal Info | Stan-Baculescu';
   const description =
     locale === 'ro'
       ? 'Articole si informatii juridice utile despre drept civil, penal, familiei, muncii si alte domenii. Aflati drepturile dumneavoastra de la avocati specializati.'

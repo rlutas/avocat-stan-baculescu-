@@ -149,7 +149,7 @@ export default function Error({
         <div style={{ animation: 'fadeInUp 0.8s ease-out both' }}>
           <Image
             src="/images/logo.webp"
-            alt="SCA Stan-Baculescu"
+            alt="Stan-Baculescu"
             width={180}
             height={60}
             className="mx-auto mb-8"

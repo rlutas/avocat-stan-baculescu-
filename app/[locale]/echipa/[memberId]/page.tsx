@@ -156,13 +156,13 @@ export default async function MemberProfilePage({ params }: Props) {
   const currentYear = new Date().getFullYear();
   const yearsExp = memberBarYear ? currentYear - parseInt(memberBarYear) : 0;
 
-  // Specializations (up to 10)
+  // Specializations (up to 15)
   const specializations: string[] = [];
   const specializationSlugs: string[] = [];
   const specializationIcons: string[] = [];
   const specializationDescs: string[] = [];
   const specializationImages: string[] = [];
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 15; i++) {
     const key = `members.${memberKey}.specializations.spec${i}` as Parameters<typeof t>[0];
     if (t.has(key)) {
       specializations.push(t(key));

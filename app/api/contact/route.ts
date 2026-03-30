@@ -9,7 +9,7 @@ const AUDIENCE_ID = 'd6085ddf-9f37-480d-b1e5-db5e43c36cf1';
 
 // Firm contact details (single source of truth)
 const FIRM = {
-  name: 'SCA Stan-Baculescu',
+  name: 'Stan-Baculescu',
   fullName: 'Stan-Baculescu - Societate Civila de Avocati',
   phone: '+40 745 466 720',
   phoneTel: '+40745466720',

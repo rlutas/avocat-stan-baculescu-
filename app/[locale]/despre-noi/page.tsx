@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Despre Noi - Avocati cu Experienta | SCA Stan-Baculescu'
-      : 'About Us - Experienced Lawyers | SCA Stan-Baculescu';
+      ? 'Despre Noi - Avocati cu Experienta | Stan-Baculescu'
+      : 'About Us - Experienced Lawyers | Stan-Baculescu';
   const description =
     locale === 'ro'
-      ? 'Descopera povestea, valorile si metodologia de lucru a SCA Stan-Baculescu din Satu Mare. Peste 20 de ani de experienta in servicii juridice de excelenta.'
+      ? 'Descopera povestea, valorile si metodologia de lucru a Stan-Baculescu din Satu Mare. Peste 20 de ani de experienta in servicii juridice de excelenta.'
       : 'Discover the story, values and working methodology of Stan-Baculescu Law Firm in Satu Mare. Over 20 years of experience delivering excellent legal services.';
 
   return {

@@ -91,7 +91,7 @@ export default function NotFound() {
       <div className="max-w-3xl mx-auto px-4 py-12 text-center relative z-10">
         {/* Site Logo */}
         <div style={{ animation: 'fadeInUp 0.8s ease-out both' }}>
-          <Image src="/images/logo.webp" alt="SCA Stan-Baculescu" width={160} height={50} className="mx-auto mb-8 brightness-0 invert" />
+          <Image src="/images/logo.webp" alt="Stan-Baculescu" width={160} height={50} className="mx-auto mb-8 brightness-0 invert" />
         </div>
 
         {/* 404 Number with Scale icon to the right */}

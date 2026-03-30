@@ -13,11 +13,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Politica de Cookies | SCA Stan-Baculescu'
+      ? 'Politica de Cookies | Stan-Baculescu'
       : 'Cookie Policy | Stan-Baculescu Law Firm';
   const description =
     locale === 'ro'
-      ? 'Politica de cookies a SCA Stan-Baculescu. Aflati ce cookie-uri folosim si cum puteti gestiona preferintele.'
+      ? 'Politica de cookies a Stan-Baculescu. Aflati ce cookie-uri folosim si cum puteti gestiona preferintele.'
       : 'Cookie Policy of Stan-Baculescu Law Firm. Learn what cookies we use and how you can manage your preferences.';
 
   return {

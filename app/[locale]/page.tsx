@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Avocat Satu Mare - Servicii Juridice | SCA Stan-Baculescu'
-      : 'Lawyer Satu Mare - Legal Services | SCA Stan-Baculescu';
+      ? 'Avocat Satu Mare - Servicii Juridice | Societate Civilă de Avocați Stan-Baculescu'
+      : 'Lawyer Satu Mare - Legal Services | Stan-Baculescu Law Firm';
   const description =
     locale === 'ro'
       ? 'Societate civila de avocati cu experienta de 20 de ani in Satu Mare. Servicii juridice profesionale: malpraxis medical, drept civil, penal si familiei.'
@@ -58,7 +58,7 @@ export default async function Home({ params }: Props) {
     '@id': `${BASE_URL}/#website`,
     name:
       locale === 'ro'
-        ? 'SCA Stan-Baculescu - Societate Civila de Avocati'
+        ? 'Stan-Baculescu - Societate Civila de Avocati'
         : 'Stan-Baculescu Law Firm',
     url: BASE_URL,
     publisher: {

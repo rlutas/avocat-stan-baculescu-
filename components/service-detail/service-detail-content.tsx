@@ -47,7 +47,7 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
   return (
     <>
       {/* -- Description section ----------------------------------------- */}
-      <section className="bg-white py-20 sm:py-32">
+      <section className="bg-white py-14 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <ScrollAnimate>
@@ -56,15 +56,15 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
               </p>
             </ScrollAnimate>
             <ScrollAnimate delay={0.1}>
-              <h2 className="font-heading text-4xl font-bold leading-[1.1] text-navy sm:text-5xl">
+              <h2 className="font-heading text-3xl font-bold leading-[1.15] text-navy sm:text-5xl">
                 {t(`${serviceId}.descriptionTitle`)}
               </h2>
               <div className="mt-4 h-[2px] w-16 bg-gold" />
             </ScrollAnimate>
             <ScrollAnimate delay={0.2}>
-              <div className="mt-6 space-y-4">
+              <div className="mt-6 space-y-3 sm:space-y-4">
                 {t(`${serviceId}.description`).split('\n\n').map((paragraph: string, i: number) => (
-                  <p key={i} className="text-lg leading-relaxed text-text-secondary">
+                  <p key={i} className="text-base leading-[1.7] text-text-secondary hyphens-auto text-pretty sm:text-lg sm:leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
@@ -277,7 +277,7 @@ export function ServiceDetailContent({ serviceId }: ServiceDetailContentProps) {
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                             >
-                              <p className="px-6 pb-6 pt-0 text-base leading-relaxed text-text-secondary sm:px-8 sm:pb-8">
+                              <p className="px-6 pb-6 pt-0 text-base leading-relaxed text-text-secondary hyphens-auto text-pretty sm:px-8 sm:pb-8">
                                 {faq.answer}
                               </p>
                             </motion.div>

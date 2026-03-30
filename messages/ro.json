@@ -21,7 +21,7 @@
       "titleLine1": "Societate Civilă de Avocați",
       "titleLine2": "Stan-Baculescu",
       "subtitle": "Profesionalism. Dedicare. Rezultate.",
-      "description": "Stan-Baculescu este o societate de avocatură, formată din avocați specializați la cel mai înalt nivel juridic, unde indiferent de nevoia dumneavoastră, veți găsi cu siguranță un avocat mereu pregătit să ofere soluții legale, recomandări rapide și eficiente. Cu experiență juridică solidă dobândită în peste 20 de ani de activitate, echipa Stan-Baculescu acordă clienților servicii de consultanță juridică, de asistare și reprezentare în litigii de drept civil, penal, comercial, achiziții publice, malpraxis medical, administrativ și fiscal, precum și în arbitraj.",
+      "description": "Indiferent de nevoia dumneavoastră, veți găsi cu siguranță un avocat pregătit să ofere soluții legale, recomandări rapide și eficiente. Cu experiență juridică solidă dobândită în peste 20 de ani de activitate, acordăm clienților servicii de consultanță juridică, asistare și reprezentare în litigii de drept civil, penal, comercial, achiziții publice, malpraxis medical, administrativ și fiscal, precum și în arbitraj.",
       "cta": "Programează o Consultație",
       "ctaShort": "Consultație",
       "secondaryCta": "Descoperă Serviciile",
@@ -221,66 +221,74 @@
     "members": {
       "cameliaStan": {
         "name": "Camelia Stan",
-        "shortBio": "Avocat fondator, membră a Baroului Satu Mare din 2006. Specializată în drept civil, contencios administrativ, achiziții publice, dreptul afacerilor, dreptul familiei",
-        "fullBio": "Camelia Stan este avocat fondator a Societății Civile de Avocați Stan - Baculescu, membră a Baroului Satu Mare din anul 2006, reprezintă cu profesionalism interesele clienților săi. Este un experimentat avocat pledant, a acordat asistență juridică și a reprezentat clienți în litigii de drept civil, contencios administrativ și fiscal, dreptul afacerilor și societar, malpraxis medical, achiziții publice, dreptul asigurărilor, în materia insolvenței, dreptul familiei, dreptul muncii, drept contravențional și în cauze arbitrale interne. A participat în numeroase proiecte de consultanță privind probleme de drept contractual, imobiliar, în dreptul afacerilor și societar, asistând clienții la negocierea și încheierea contractelor civile și comerciale.",
+        "shortBio": "Avocat fondator, membră a Baroului Satu Mare din 2006. Specializată în drept civil, drept administrativ și fiscal, drept comercial, achiziții publice, dreptul familiei, dreptul muncii și arbitraj.",
+        "fullBio": "Camelia Stan este avocat fondator al Societății Civile de Avocați Stan - Baculescu, membră a Baroului Satu Mare din anul 2006, reprezintă cu profesionalism interesele clienților săi. Este un experimentat avocat pledant, a acordat asistență juridică și a reprezentat clienți în litigii de drept civil, contencios administrativ și fiscal, dreptul afacerilor și societar, malpraxis medical, achiziții publice, dreptul asigurărilor, în materia insolvenței, dreptul familiei, dreptul muncii, drept contravențional și în cauze arbitrale interne. A participat în numeroase proiecte de consultanță privind probleme de drept contractual, imobiliar, în dreptul afacerilor și societar, asistând clienții la negocierea și încheierea contractelor civile și comerciale.",
         "pullQuote": "Profesionalism și dedicare în apărarea intereselor clienților noștri.",
         "phone": "+40 745 466 720",
-        "email": "camelia.stan@stanbaculescu.ro",
+        "email": "office@stanbaculescu.ro",
         "barYear": "2006",
         "specializations": {
-          "spec1": "Drept Civil",
+          "spec1": "Drept civil",
           "spec1Slug": "drept-civil",
           "spec1Icon": "balance-scale",
-          "spec2": "Contencios Administrativ și Fiscal",
-          "spec2Slug": "drept-administrativ-fiscal",
-          "spec2Icon": "document",
-          "spec3": "Dreptul Afacerilor și Societar",
-          "spec3Slug": "drept-comercial",
-          "spec3Icon": "contract",
-          "spec4": "Malpraxis Medical",
-          "spec4Slug": "malpraxis-medical",
-          "spec4Icon": "justice",
-          "spec5": "Achiziții Publice",
-          "spec5Slug": "achizitii-publice",
-          "spec5Icon": "approval",
-          "spec5Image": "/images/services/achizitii-publice.webp",
-          "spec6": "Dreptul Asigurărilor",
-          "spec6Slug": "dreptul-asigurarilor",
-          "spec6Icon": "shield",
-          "spec6Image": "/images/services/dreptul-asigurarilor.webp",
-          "spec7": "Dreptul Familiei",
-          "spec7Slug": "drept-familiei",
-          "spec7Icon": "family",
-          "spec8": "Dreptul Muncii",
-          "spec8Slug": "dreptul-muncii",
-          "spec8Icon": "suitcase",
-          "spec9": "Drept Contravențional",
-          "spec9Slug": "drept-contraventional",
-          "spec9Icon": "gavel",
-          "spec9Image": "/images/services/drept-contraventional.webp",
-          "spec10": "Arbitraj Intern",
-          "spec10Slug": "arbitraj-intern",
-          "spec10Icon": "court",
-          "spec10Image": "/images/services/arbitraj-intern.webp",
+          "spec2": "Dreptul proprietății",
+          "spec2Slug": "drept-civil",
+          "spec2Icon": "certificate",
+          "spec3": "Drept administrativ și fiscal",
+          "spec3Slug": "drept-administrativ-fiscal",
+          "spec3Icon": "document",
+          "spec4": "Dreptul comercial și corporativ",
+          "spec4Slug": "drept-comercial",
+          "spec4Icon": "contract",
+          "spec5": "Insolvență",
+          "spec5Slug": "drept-comercial",
+          "spec5Icon": "document",
+          "spec6": "Malpraxis medical",
+          "spec6Slug": "malpraxis-medical",
+          "spec6Icon": "justice",
+          "spec7": "Achiziții publice și parteneriate public-privat",
+          "spec7Slug": "drept-comercial",
+          "spec7Icon": "approval",
+          "spec8": "Drept bancar și asigurări",
+          "spec8Slug": "drept-comercial",
+          "spec8Icon": "shield",
+          "spec9": "Dreptul familiei",
+          "spec9Slug": "drept-familiei",
+          "spec9Icon": "family",
+          "spec10": "Dreptul muncii",
+          "spec10Slug": "dreptul-muncii",
+          "spec10Icon": "suitcase",
+          "spec11": "Drept contravențional",
+          "spec11Slug": "drept-comercial",
+          "spec11Icon": "gavel",
+          "spec12": "Arbitraj intern",
+          "spec12Slug": "drept-comercial",
+          "spec12Icon": "court",
+          "spec13": "Litigii",
+          "spec13Slug": "drept-civil",
+          "spec13Icon": "balance-scale",
           "spec1Desc": "Consultanță și reprezentare în litigii civile, contracte, proprietate și succesiuni.",
-          "spec2Desc": "Contestații administrative, litigii fiscale și reprezentare în fața autorităților.",
-          "spec3Desc": "Consultanță pentru societăți comerciale, contracte, litigii comerciale și insolvență.",
-          "spec4Desc": "Reprezentare în cazuri de neglijență medicală și obținerea de despăgubiri pentru prejudiciile suferite.",
-          "spec5Desc": "Asistență juridică în proceduri de achiziții publice și contestații la CNSC.",
-          "spec6Desc": "Reprezentare în litigii de asigurări și obținerea despăgubirilor cuvenite.",
-          "spec7Desc": "Divorțuri, custodia copiilor, partaj, pensii alimentare și alte aspecte familiale.",
-          "spec8Desc": "Protecția drepturilor angajaților, contracte de muncă, concedieri și litigii de muncă.",
-          "spec9Desc": "Apărare în cauze contravenționale, contestații la amenzi și procese-verbale.",
-          "spec10Desc": "Reprezentare în proceduri arbitrale interne și soluționarea alternativă a litigilor."
+          "spec2Desc": "Consultanță și reprezentare în litigii privind dreptul de proprietate, carte funciară și imobiliare.",
+          "spec3Desc": "Contestații administrative, litigii fiscale și reprezentare în fața autorităților.",
+          "spec4Desc": "Consultanță pentru societăți comerciale, contracte, litigii comerciale și drept corporativ.",
+          "spec5Desc": "Asistență juridică în proceduri de insolvență, reorganizare și faliment.",
+          "spec6Desc": "Reprezentare în cazuri de neglijență medicală și obținerea de despăgubiri pentru prejudiciile suferite.",
+          "spec7Desc": "Asistență juridică în proceduri de achiziții publice, contestații la CNSC și parteneriate public-privat.",
+          "spec8Desc": "Reprezentare în litigii bancare, de asigurări și obținerea despăgubirilor cuvenite.",
+          "spec9Desc": "Divorțuri, custodia copiilor, partaj, pensii alimentare și alte aspecte familiale.",
+          "spec10Desc": "Protecția drepturilor angajaților, contracte de muncă, concedieri și litigii de muncă.",
+          "spec11Desc": "Apărare în cauze contravenționale, contestații la amenzi și procese-verbale.",
+          "spec12Desc": "Reprezentare în proceduri arbitrale interne și soluționarea alternativă a litigilor.",
+          "spec13Desc": "Reprezentare în instanță în litigii civile, comerciale și administrative."
         },
         "education": {
           "edu1": "Membră a Baroului Satu Mare din anul 2006",
           "edu2": "Licență în Drept"
         },
         "experience": {
-          "exp1": "Partener fondator - SCA Stan-Baculescu (2020 - prezent)",
-          "exp2": "Avocat pledant cu experiență în litigii civile complexe",
-          "exp3": "Consultanță în drept contractual și imobiliar"
+          "exp1": "Avocat fondator al Societății Civile de Avocați Stan-Baculescu (2020 - prezent)",
+          "exp2": "Avocat pledant cu experiență în litigii complexe",
+          "exp3": "Consultanță în domeniile juridice în care este specializată"
         },
         "press": {
           "item1Title": "Opinia avocatului: Cum poți să îți aperi drepturile dacă au greșit Finanțele",
@@ -294,31 +302,31 @@
         "fullBio": "Vlad Baculescu este avocat fondator al Societății Civile de Avocați Stan - Baculescu. Membru al Baroului Satu Mare din anul 2006, are o bogată experiență în domeniul dreptului penal (infracțiuni de evaziune fiscală, infracțiuni la regimul circulației, infracțiuni economice, infracțiuni privind frontiera de stat etc.) atât în fața organelor de cercetare/urmărire penală cât și în fața instanțelor penale, insolvenței și al dreptului afacerilor. A acordat consultanță juridică și a asigurat asistență și reprezentarea inculpaților și a persoanelor vătămate în cauzele penale complexe. Stilul său de lucru se caracterizează prin empatie, rigurozitate și o abordare strategică — ascultă cu adevărat clienții și se transpune în situația lor pentru a găsi soluția optimă pentru problemele pe care le întâmpină aceștia.",
         "pullQuote": "Încerc să ascult omul cu adevărat și să mă transpun în situația lui, doar așa reușesc să găsesc soluția optimă pentru problemele pe care le întâmpină.",
         "phone": "+40 744 201 694",
-        "email": "vlad.baculescu@stanbaculescu.ro",
+        "email": "office@stanbaculescu.ro",
         "barYear": "2006",
         "specializations": {
-          "spec1": "Drept Penal",
+          "spec1": "Drept penal",
           "spec1Slug": "drept-penal",
           "spec1Icon": "gavel",
           "spec1Desc": "Apărare și reprezentare în cauze penale complexe, de la anchetă până la judecată definitivă.",
-          "spec2": "Dreptul Afacerilor și Societar",
+          "spec2": "Dreptul comercial și corporativ",
           "spec2Slug": "drept-comercial",
           "spec2Icon": "contract",
           "spec2Desc": "Consultanță pentru societăți comerciale, contracte, litigii comerciale și reorganizare.",
-          "spec3": "Dreptul Familiei",
+          "spec3": "Dreptul familiei",
           "spec3Slug": "drept-familiei",
           "spec3Icon": "family",
           "spec3Desc": "Divorțuri, custodia copiilor, partaj, pensii alimentare și alte aspecte familiale.",
-          "spec4": "Practician în Insolvență",
+          "spec4": "Practician în insolvență",
           "spec4Slug": "practician-insolventa",
           "spec4Icon": "law-book",
           "spec4Image": "/images/services/practician-insolventa.webp",
           "spec4Desc": "Proceduri de insolvență, reorganizare, faliment",
-          "spec5": "Drept Civil",
+          "spec5": "Drept civil",
           "spec5Slug": "drept-civil",
           "spec5Icon": "balance-scale",
           "spec5Desc": "Consultanță și reprezentare în litigii civile, contracte, proprietate și succesiuni.",
-          "spec6": "Malpraxis Medical",
+          "spec6": "Malpraxis medical",
           "spec6Slug": "malpraxis-medical",
           "spec6Icon": "justice",
           "spec6Desc": "Reprezentare în cazuri de neglijență medicală și obținerea de despăgubiri pentru prejudiciile suferite."
@@ -330,7 +338,7 @@
         },
         "experience": {
           "exp1": "Decan al Baroului Satu Mare (2019 - prezent)",
-          "exp2": "Partener fondator - SCA Stan-Baculescu (2020 - prezent)",
+          "exp2": "Avocat fondator al Societății Civile de Avocați Stan-Baculescu (2020 - prezent)",
           "exp3": "Experiență vastă în litigii penale complexe",
           "exp4": "Consultanță juridică în dreptul afacerilor și insolvență"
         },
@@ -367,31 +375,31 @@
         "fullBio": "Diana Antonia Chincea este avocat colaborator în cadrul Societății Civile de Avocați Stan - Baculescu, membră a Baroului Satu Mare din anul 2019, absolventă a Facultății de Drept din cadrul Universității din București. Încă din timpul studiilor universitare și-a dezvoltat un interes deosebit pentru dreptul comercial, domeniu în care a continuat să se perfecționeze. A acordat asistență juridică și a reprezentat clienți în litigii de drept civil, contencios administrativ și fiscal, dreptul familiei, dreptul muncii, drept contravențional, precum și în proiecte de consultanță. A participat activ la negocierea și încheierea contractelor civile și comerciale.",
         "pullQuote": "Fiecare caz merită o abordare dedicată și o soluție juridică adaptată nevoilor clientului.",
         "phone": "+40 748 094 106",
-        "email": "diana.chincea@stanbaculescu.ro",
+        "email": "office@stanbaculescu.ro",
         "barYear": "2019",
         "specializations": {
-          "spec1": "Drept Civil",
+          "spec1": "Drept civil",
           "spec1Slug": "drept-civil",
           "spec1Icon": "balance-scale",
           "spec1Desc": "Asistență juridică și reprezentare în litigii civile, contracte, proprietate și succesiuni.",
-          "spec2": "Drept Comercial",
+          "spec2": "Dreptul comercial și corporativ",
           "spec2Slug": "drept-comercial",
           "spec2Icon": "contract",
           "spec2Desc": "Consultanță și reprezentare în dreptul afacerilor, negocierea și încheierea contractelor comerciale.",
-          "spec3": "Contencios Administrativ și Fiscal",
+          "spec3": "Drept administrativ și fiscal",
           "spec3Slug": "drept-administrativ-fiscal",
           "spec3Icon": "document",
           "spec3Desc": "Contestații administrative, litigii fiscale și reprezentare în fața autorităților publice.",
-          "spec4": "Dreptul Familiei",
+          "spec4": "Dreptul familiei",
           "spec4Slug": "drept-familiei",
           "spec4Icon": "family",
           "spec4Desc": "Divorțuri, custodia copiilor, partaj, pensii alimentare și alte aspecte de dreptul familiei.",
-          "spec5": "Drept Contravențional",
-          "spec5Slug": "drept-contraventional",
+          "spec5": "Drept contravențional",
+          "spec5Slug": "drept-comercial",
           "spec5Icon": "gavel",
           "spec5Image": "/images/services/drept-contraventional.webp",
           "spec5Desc": "Apărare în cauze contravenționale, contestații la amenzi și procese-verbale de contravenție.",
-          "spec6": "Dreptul Muncii",
+          "spec6": "Dreptul muncii",
           "spec6Slug": "dreptul-muncii",
           "spec6Icon": "suitcase",
           "spec6Desc": "Protecția drepturilor angajaților și angajatorilor, contracte de muncă și litigii de muncă."
@@ -402,7 +410,7 @@
           "edu3": "Master în Dreptul Afacerilor - Universitatea din București"
         },
         "experience": {
-          "exp1": "Avocat colaborator - SCA Stan-Baculescu (2019 - prezent)",
+          "exp1": "Avocat colaborator - Societatea Civilă de Avocați Stan-Baculescu (2019 - prezent)",
           "exp2": "Asistență juridică și reprezentare în litigii civile și comerciale",
           "exp3": "Consultanță în drept contractual și negocierea contractelor"
         }
@@ -412,17 +420,17 @@
         "shortBio": "Avocat colaborator cu focus pe drept civil și executări silite. Experiență solidă în recuperarea creanțelor.",
         "fullBio": "Cristina Blan este avocat colaborator specializat în drept civil și proceduri de executare silită. Cu o experiență semnificativă în domeniul recuperării creanțelor, a asistat clienții în proceduri complexe de executare, asigurându-se că drepturile acestora sunt pe deplin respectate. Abordarea sa profesională și eficientă garantează rezultate optime pentru clienți.",
         "specializations": {
-          "spec1": "Drept Civil",
-          "spec2": "Executări Silite",
-          "spec3": "Recuperare Creanțe",
-          "spec4": "Drept Bancar"
+          "spec1": "Drept civil",
+          "spec2": "Executări silite",
+          "spec3": "Recuperare creanțe",
+          "spec4": "Drept bancar"
         },
         "education": {
           "edu1": "Licență în Drept - Universitatea din Oradea",
           "edu2": "Membru al Baroului Satu Mare"
         },
         "experience": {
-          "exp1": "Avocat Colaborator - SCA Stan-Baculescu",
+          "exp1": "Avocat colaborator - Societatea Civilă de Avocați Stan-Baculescu",
           "exp2": "Experiență în executări silite"
         }
       },
@@ -432,27 +440,27 @@
         "fullBio": "Alexandra Rusu este avocat colaborator în cadrul Societății Civile de Avocați Stan - Baculescu, membră a Baroului Satu Mare din anul 2019. Avocat definitiv, a acordat asistență juridică și a reprezentat clienți în litigii de drept penal (infracțiuni la regimul circulației pe drumurile publice, infracțiuni contra persoanei și contra patrimoniului, la regimul frontierei de stat), dreptul familiei, drept comercial, drept contravențional. De asemenea, s-a ocupat de litigii contractuale, răspundere civilă delictuală, contencios civil, dreptul societar și dreptul imobiliar, abordând fiecare caz cu dedicare.",
         "pullQuote": "Duc lucrurile până la capăt, indiferent de efortul pe care îl presupune acest lucru.",
         "phone": "+40 729 052 954",
-        "email": "alexandra.rusu@stanbaculescu.ro",
+        "email": "office@stanbaculescu.ro",
         "barYear": "2019",
         "specializations": {
-          "spec1": "Drept Civil",
+          "spec1": "Drept civil",
           "spec1Slug": "drept-civil",
           "spec1Icon": "balance-scale",
           "spec1Desc": "Consultanță și reprezentare în litigii civile, contracte, proprietate, răspundere civilă delictuală și succesiuni.",
-          "spec2": "Drept Penal",
+          "spec2": "Drept penal",
           "spec2Slug": "drept-penal",
           "spec2Icon": "gavel",
           "spec2Desc": "Apărare în cauze penale, inclusiv infracțiuni rutiere, contra persoanei, patrimoniului și regimul frontierei.",
-          "spec3": "Dreptul Familiei",
+          "spec3": "Dreptul familiei",
           "spec3Slug": "drept-familiei",
           "spec3Icon": "family",
           "spec3Desc": "Divorțuri, custodia copiilor, partaj, pensii alimentare și alte aspecte familiale.",
-          "spec4": "Dreptul Afacerilor și Societar",
+          "spec4": "Dreptul comercial și corporativ",
           "spec4Slug": "drept-comercial",
           "spec4Icon": "contract",
           "spec4Desc": "Consultanță pentru societăți comerciale, contracte, litigii comerciale și drept societar.",
-          "spec5": "Drept Contravențional",
-          "spec5Slug": "drept-contraventional",
+          "spec5": "Drept contravențional",
+          "spec5Slug": "drept-comercial",
           "spec5Icon": "gavel",
           "spec5Image": "/images/services/drept-contraventional.webp",
           "spec5Desc": "Apărare în cauze contravenționale, contestații la amenzi și procese-verbale."
@@ -462,7 +470,7 @@
           "edu2": "Licență în Drept"
         },
         "experience": {
-          "exp1": "Avocat Colaborator - SCA Stan-Baculescu (2020 - prezent)",
+          "exp1": "Avocat colaborator - Societatea Civilă de Avocați Stan-Baculescu (2020 - prezent)",
           "exp2": "Avocat pledant cu experiență în litigii penale și civile",
           "exp3": "Consultanță în drept contractual și imobiliar"
         }
@@ -470,16 +478,16 @@
       "dianaVeres": {
         "name": "Gabriella Diana Veress",
         "shortBio": "Responsabil relații cu clienții, asigurând primirea și orientarea clienților, precum și suportul administrativ al societății.",
-        "fullBio": "Gabriella Diana Veress face parte din echipa administrativă a Cabinetului de Avocatură Stan-Baculescu din Satu Mare, ocupând funcția de responsabil relații cu clienții. Cu o atitudine caldă și o abordare profesionistă, asigură primirea clienților, gestionează programările și facilitează comunicarea eficientă între clienți și avocați. Prin dedicarea și atenția sa la detalii, contribuie la buna funcționare a societății și la o experiență plăcută pentru fiecare client.",
+        "fullBio": "Gabriella Diana Veress face parte din echipa administrativă a Societății Civile de Avocați Stan-Baculescu din Satu Mare, ocupând funcția de responsabil relații cu clienții. Cu o atitudine caldă și o abordare profesionistă, asigură primirea clienților, gestionează programările și facilitează comunicarea eficientă între clienți și avocați. Prin dedicarea și atenția sa la detalii, contribuie la buna funcționare a societății și la o experiență plăcută pentru fiecare client.",
         "specializations": {
-          "spec1": "Relații cu Clienții",
-          "spec2": "Coordonare Programări"
+          "spec1": "Relații cu clienții",
+          "spec2": "Coordonare programări"
         },
         "education": {
           "edu1": "Absolventă a Facultății de Drept, Universitatea Babeș-Bolyai, Cluj-Napoca"
         },
         "experience": {
-          "exp1": "Responsabil Relații Clienți - SCA Stan-Baculescu",
+          "exp1": "Responsabil relații clienți - Societatea Civilă de Avocați Stan-Baculescu",
           "exp2": "Experiență în administrare și recepție"
         }
       }
@@ -616,7 +624,7 @@
       "titleLine1": "Servicii Juridice Specializate",
       "titleLine2": "Malpraxis Medical",
       "meta": {
-        "title": "Avocat Malpraxis Medical Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Malpraxis Medical Satu Mare | Stan-Baculescu",
         "description": "Reprezentare specializată în cazuri de malpraxis medical. Uneori medicii și întreg personalul medical sunt copleșiți de volumul mare de muncă și pot să fie acuzați de malpraxis, suntem aici ca să le oferim sprijin juridic. Pacienții sau aparținătorii acestora merită să beneficieze de un act medical, suntem alături de ei pentru a fi siguri că obțin acest lucru."
       },
       "descriptionTitle": "Ce este Malpraxisul Medical?",
@@ -656,7 +664,7 @@
       "titleLine1": "Servicii Juridice Complete",
       "titleLine2": "Drept Civil",
       "meta": {
-        "title": "Avocat Drept Civil Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Drept Civil Satu Mare | Stan-Baculescu",
         "description": "Servicii complete de drept civil: litigii, redactare contracte, dreptul proprietății, succesiuni. Avocați specializați în Satu Mare cu experiență vastă în domeniu."
       },
       "descriptionTitle": "Servicii de Drept Civil",
@@ -696,7 +704,7 @@
       "titleLine1": "Asistență Juridică Specializată",
       "titleLine2": "Drept Penal",
       "meta": {
-        "title": "Avocat Drept Penal Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Drept Penal Satu Mare | Stan-Baculescu",
         "description": "Asistarea suspectului/inculpatului, a persoanei vătămate sau a martorului la audieri, reprezentare/asistare în fața instanței de judecată, redactarea de căi de atac. Societatea noastră are în componență avocați de drept penal cu experiență în cauze complexe."
       },
       "descriptionTitle": "Servicii în domeniul Dreptului Penal",
@@ -736,7 +744,7 @@
       "titleLine1": "Consultanță Juridică pentru Familie",
       "titleLine2": "Dreptul Familiei",
       "meta": {
-        "title": "Avocat Dreptul Familiei Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Dreptul Familiei Satu Mare | Stan-Baculescu",
         "description": "Divorțuri, stabilire locuință minori, pensii alimentare și partaj bunuri comune. Avocați cu o vastă experiență în dreptul familiei"
       },
       "descriptionTitle": "Consultanță Juridică în dreptul familiei",
@@ -765,8 +773,8 @@
         "a2": "Conform art. 396-403 Cod Civil, instanța stabilește exercitarea autorității părintești având ca principiu fundamental interesul superior al copilului (art. 263 Cod civil). Regula este exercitarea în comun a autorității părintești de către ambii părinți, chiar și după divorț. Instanța stabilește locuința copilului la unul dintre părinți și un program de relații personale cu celălalt părinte. Se iau în considerare vârsta copilului, atașamentul față de fiecare părinte, capacitatea fiecăruia de a asigura nevoile copilului și de opinia copilului, dacă acesta are peste 10 ani.",
         "q3": "Cât este pensia alimentară și cum se calculează?",
         "a3": "Pensia alimentară (obligația de întreținere) pentru copii este reglementată de art. 529-530 Cod Civil. Cuantumul se stabilește în funcție de veniturile părintelui obligat la plată: până la o pătrime din venituri pentru un copil, o treime pentru doi copii și o jumătate pentru trei sau mai mulți copii. Se iau în calcul toate veniturile părintelui, inclusiv salariu, bonusuri, chirii, dividende. Pensia poate fi modificată ulterior dacă se schimbă circumstanțele (creșterea sau scăderea veniturilor, apariția altor obligații de întreținere).",
-        "q4": "",
-        "a4": ""
+        "q4": "Cum se realizează partajul bunurilor comune la divorț?",
+        "a4": "Partajul bunurilor comune este reglementat de art. 357-362 Cod Civil. Bunurile dobândite în timpul căsătoriei sunt bunuri comune, iar la divorț se împart între soți. Partajul se poate realiza prin acordul soților sau prin hotărâre judecătorească. Instanța stabilește cota-parte a fiecărui soț în funcție de contribuția la dobândirea bunurilor, inclusiv munca în gospodărie și creșterea copiilor. Se iau în calcul bunurile mobile, imobile, economii, investiții și datorii comune. Este recomandată asistența unui avocat pentru a vă proteja drepturile patrimoniale."
       }
     },
     "dreptul-muncii": {
@@ -776,7 +784,7 @@
       "titleLine1": "Asistență în Relațiile de Muncă",
       "titleLine2": "Dreptul Muncii",
       "meta": {
-        "title": "Avocat Dreptul Muncii Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Dreptul Muncii Satu Mare | Stan-Baculescu",
         "description": "Consultanță și reprezentare în dreptul muncii. Concedieri abuzive, drepturi salariale, hărțuire la locul de muncă. Avocat specializat Satu Mare."
       },
       "descriptionTitle": "Servicii de Dreptul Muncii",
@@ -816,7 +824,7 @@
       "titleLine1": "Servicii Juridice pentru Companii",
       "titleLine2": "Drept Comercial",
       "meta": {
-        "title": "Avocat Drept Comercial Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Drept Comercial Satu Mare | Stan-Baculescu",
         "description": "Consultanță juridică pentru afaceri: contracte comerciale, litigii de specialitate, insolvență și fuziuni. Societate de avocați cu experiență în dreptul comercial și societar."
       },
       "descriptionTitle": "Servicii juridice pentru companii",
@@ -856,7 +864,7 @@
       "titleLine1": "Despăgubiri și Compensații",
       "titleLine2": "Accidente Rutiere",
       "meta": {
-        "title": "Avocat Accidente Rutiere Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Accidente Rutiere Satu Mare | Stan-Baculescu",
         "description": "Reprezentare victime accidente rutiere. Obțineți despăgubiri de la asigurător: daune materiale, morale, venituri pierdute. Avocat specializat Satu Mare."
       },
       "descriptionTitle": "Servicii pentru Victime ale Accidentelor Rutiere",
@@ -896,7 +904,7 @@
       "titleLine1": "Contestații și Reprezentare",
       "titleLine2": "Drept Administrativ și Fiscal",
       "meta": {
-        "title": "Avocat Drept Administrativ Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Drept Administrativ Satu Mare | Stan-Baculescu",
         "description": "Contestații administrative și fiscale, litigii și reprezentare în fața autorităților. Avocat specializat în drept administrativ și fiscal Satu Mare."
       },
       "descriptionTitle": "Servicii de Drept Administrativ și Fiscal",
@@ -936,7 +944,7 @@
       "titleLine1": "Licitații și Contestații",
       "titleLine2": "Achiziții Publice",
       "meta": {
-        "title": "Avocat Achizitii Publice Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Achizitii Publice Satu Mare | Stan-Baculescu",
         "description": "Consultanță în proceduri de achiziție publică, contestații la CNSC și litigii contracte publice. Avocați specializați achiziții publice."
       },
       "descriptionTitle": "Servicii de Achiziții Publice",
@@ -976,7 +984,7 @@
       "titleLine1": "Amenzi și Contestații",
       "titleLine2": "Drept Contravențional",
       "meta": {
-        "title": "Avocat Drept Contraventional Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Drept Contraventional Satu Mare | Stan-Baculescu",
         "description": "Contestarea amenzilor contravenționale, proceselor-verbale și sancțiunilor. Avocat specializat drept contravențional Satu Mare."
       },
       "descriptionTitle": "Servicii de Drept Contravențional",
@@ -1016,7 +1024,7 @@
       "titleLine1": "Despăgubiri și Litigii",
       "titleLine2": "Dreptul Asigurărilor",
       "meta": {
-        "title": "Avocat Dreptul Asigurarilor Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Dreptul Asigurarilor Satu Mare | Stan-Baculescu",
         "description": "Recuperarea despăgubirilor din asigurări, litigii RCA/CASCO și reprezentare împotriva companiilor de asigurare. Avocat asigurări Satu Mare."
       },
       "descriptionTitle": "Servicii de Dreptul Asigurărilor",
@@ -1056,7 +1064,7 @@
       "titleLine1": "Reorganizare și Lichidare",
       "titleLine2": "Practician în Insolvență",
       "meta": {
-        "title": "Avocat Insolventa Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Insolventa Satu Mare | Stan-Baculescu",
         "description": "Proceduri de insolvență, reorganizare judiciară și lichidare. Reprezentare creditori și debitori. Avocat insolvență Satu Mare."
       },
       "descriptionTitle": "Servicii de Insolvență",
@@ -1096,7 +1104,7 @@
       "titleLine1": "Soluționare Alternativă",
       "titleLine2": "Arbitraj Intern",
       "meta": {
-        "title": "Avocat Arbitraj Intern Satu Mare | SCA Stan-Baculescu",
+        "title": "Avocat Arbitraj Intern Satu Mare | Stan-Baculescu",
         "description": "Soluționarea disputelor comerciale prin arbitraj intern, mediere și conciliere. Avocat arbitraj Satu Mare."
       },
       "descriptionTitle": "Servicii de Arbitraj și Mediere",
@@ -1194,8 +1202,8 @@
   },
   "ContactPage": {
     "meta": {
-      "title": "Contact Avocat Satu Mare - Programare | SCA Stan-Baculescu",
-      "description": "Contactați SCA Stan-Baculescu din Satu Mare pentru o consultație juridică. Programați o întâlnire cu un avocat specializat sau trimiteți-ne un mesaj online."
+      "title": "Contact Avocat Satu Mare - Programare | Stan-Baculescu",
+      "description": "Contactați Societatea Civilă de Avocați Stan-Baculescu din Satu Mare pentru o consultație juridică. Programați o întâlnire cu un avocat specializat sau trimiteți-ne un mesaj online."
     },
     "hero": {
       "trustBadge": "Contactați-ne",
@@ -1270,7 +1278,7 @@
     "badge": "GDPR Conform",
     "hero": {
       "title": "Politica de Confidențialitate",
-      "titleLine1": "SCA Stan-Baculescu",
+      "titleLine1": "Stan-Baculescu",
       "titleLine2": "Politica de Confidențialitate",
       "subtitle": "Respectăm confidențialitatea datelor dumneavoastră personale și ne angajăm să le protejăm în conformitate cu legislația europeană și națională."
     },
@@ -1371,7 +1379,7 @@
     "badge": "Document Legal",
     "hero": {
       "title": "Termeni și Condiții",
-      "titleLine1": "SCA Stan-Baculescu",
+      "titleLine1": "Stan-Baculescu",
       "titleLine2": "Termeni și Condiții",
       "subtitle": "Vă rugăm să citiți cu atenție acești termeni și condiții înainte de a utiliza site-ul sau serviciile noastre."
     },
@@ -1450,7 +1458,7 @@
     "badge": "Politica Cookies",
     "hero": {
       "title": "Politica de Cookies",
-      "titleLine1": "SCA Stan-Baculescu",
+      "titleLine1": "Stan-Baculescu",
       "titleLine2": "Politica de Cookies",
       "subtitle": "Această politică explică ce sunt cookie-urile, cum le folosim și cum puteți gestiona preferințele dumneavoastră."
     },
