@@ -139,7 +139,7 @@ export function MemberAnimatedSections({
                   01
                 </span>
                 {/* Bio text with decorative drop cap */}
-                <p className="relative text-lg leading-[1.8] text-text-secondary first-letter:float-left first-letter:mr-3 first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:leading-[0.85] first-letter:text-navy">
+                <p className="relative text-base leading-[1.7] text-text-secondary text-justify hyphens-auto first-letter:float-left first-letter:mr-3 first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:leading-[0.85] first-letter:text-navy sm:text-lg sm:leading-[1.8]">
                   {fullBio}
                 </p>
               </div>
