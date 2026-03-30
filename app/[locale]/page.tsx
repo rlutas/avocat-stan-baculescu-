@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title =
     locale === 'ro'
-      ? 'Avocat Satu Mare - Servicii Juridice | Societate Civilă de Avocați Stan-Baculescu'
+      ? 'Avocat Satu Mare - Servicii Juridice | Stan-Baculescu - Societate Civilă de Avocați'
       : 'Lawyer Satu Mare - Legal Services | Stan-Baculescu Law Firm';
   const description =
     locale === 'ro'
