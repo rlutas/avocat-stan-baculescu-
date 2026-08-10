@@ -278,7 +278,7 @@ export function BlogArticle({
             <div className="mx-auto max-w-3xl">
               <div className="blog-content mb-16">
                 {raw && <TableOfContents content={raw} />}
-                <MDXContent />
+                <MDXContent components={mdxComponents} />
               </div>
 
               {/* Bottom divider */}
