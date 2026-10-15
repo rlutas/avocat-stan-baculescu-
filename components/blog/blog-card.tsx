@@ -16,6 +16,8 @@ type BlogCardProps = {
   category: string;
   image?: string;
   index?: number;
+  /** Heading level for the title; use h3 when the card sits under a section h2. */
+  titleAs?: 'h2' | 'h3';
 };
 
 export function BlogCard({
@@ -27,6 +29,7 @@ export function BlogCard({
   authorImage,
   category,
   image,
+  titleAs: TitleTag = 'h2',
 }: BlogCardProps) {
   const t = useTranslations('BlogPage');
   const formattedDate = new Date(date).toLocaleDateString('ro-RO', {
@@ -93,9 +96,9 @@ export function BlogCard({
         </div>
 
         {/* Title */}
-        <h2 className="mb-3 font-heading text-xl font-bold leading-tight text-navy transition-colors duration-300 group-hover:text-gold line-clamp-2">
+        <TitleTag className="mb-3 font-heading text-xl font-bold leading-tight text-navy transition-colors duration-300 group-hover:text-gold line-clamp-2">
           <Link href={`/blog/${slug}`}>{title}</Link>
-        </h2>
+        </TitleTag>
 
         {/* Description */}
         <p className="mb-5 flex-grow text-sm leading-relaxed text-navy/60 line-clamp-3">

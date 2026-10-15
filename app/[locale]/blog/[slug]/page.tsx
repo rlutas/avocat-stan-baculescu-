@@ -75,16 +75,16 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  // Get related posts (same category, different slug, same locale)
-  const relatedPosts = posts
-    .filter(
-      (p) =>
-        p.locale === locale &&
-        p.published &&
-        p.category === post.category &&
-        p.slug !== post.slug
-    )
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  // Same category first, then the most recent other articles, so the section always shows 3
+  const byDateDesc = (a: { date: string }, b: { date: string }) =>
+    new Date(b.date).getTime() - new Date(a.date).getTime();
+  const otherPosts = posts.filter(
+    (p) => p.locale === locale && p.published && p.slug !== post.slug
+  );
+  const relatedPosts = [
+    ...otherPosts.filter((p) => p.category === post.category).sort(byDateDesc),
+    ...otherPosts.filter((p) => p.category !== post.category).sort(byDateDesc),
+  ]
     .slice(0, 3)
     .map((p) => ({
       title: p.title,
@@ -143,8 +143,8 @@ export default async function BlogPostPage({ params }: Props) {
         raw={post.raw}
         image={post.image}
       />
-      <RelatedArticles posts={relatedPosts} />
       <BlogCta />
+      <RelatedArticles posts={relatedPosts} />
     </main>
   );
 }

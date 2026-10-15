@@ -1156,7 +1156,7 @@
       "title": "Latest Articles",
       "description": "Useful information and legal analyses from our attorneys, to help you understand your rights."
     },
-    "relatedArticlesLabel": "Recommended Reading",
+    "relatedArticlesLabel": "Keep reading",
     "readMore": "Read article",
     "allCategories": "All categories",
     "noPosts": "No articles in this category.",
@@ -1165,7 +1165,8 @@
     "nextPage": "Next page",
     "backToBlog": "Back to Blog",
     "shareArticle": "Share this article:",
-    "relatedArticles": "Related articles",
+    "relatedArticles": "Recommended articles",
+    "viewAllArticles": "View all articles",
     "cta": {
       "label": "Legal Advice",
       "title": "Need legal advice?",

@@ -1156,7 +1156,7 @@
       "title": "Ultimele Articole",
       "description": "Informații utile și analize juridice de la avocații noștri, pentru a vă ajuta să vă cunoașteți drepturile."
     },
-    "relatedArticlesLabel": "Lecturi recomandate",
+    "relatedArticlesLabel": "Continuați lectura",
     "readMore": "Citește articolul",
     "allCategories": "Toate categoriile",
     "noPosts": "Nu există articole în această categorie.",
@@ -1165,7 +1165,8 @@
     "nextPage": "Pagina următoare",
     "backToBlog": "Înapoi la Blog",
     "shareArticle": "Distribuie articolul:",
-    "relatedArticles": "Articole similare",
+    "relatedArticles": "Articole recomandate",
+    "viewAllArticles": "Vezi toate articolele",
     "cta": {
       "label": "Consultanță Juridică",
       "title": "Aveți nevoie de consultanță juridică?",
