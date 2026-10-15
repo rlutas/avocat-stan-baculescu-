@@ -17,7 +17,7 @@ Toate obligatiile contractuale din **Articolul 1A (Dezvoltare Website)** au fost
 ### Ultima actualizare: 10 august 2026
 
 - Publicat **articol nou de blog** semnat de av. Camelia Stan — *"Cumperi un apartament de la dezvoltator? Iata etapele pe care trebuie sa le cunosti"* (Legea nr. 207/2025 — "Legea Nordis": rezervare, promisiune de vanzare-cumparare, contract de vanzare). Bilingv RO + EN, categorie noua **Drept Civil / Civil Law**, imagine featured dedicata (WebP 1680x720, 52 KB), mapare hreflang RO<->EN. Textul redactat de client a fost pastrat integral; a fost reconstruita o singura fraza deteriorata la copiere (penalitati / conditii de reziliere / modalitate de plata) — de confirmat cu autoarea. **Dedus 1 articol** din cele 12 contractate (Art. 1B.1)
-- Total blog: **5 articole RO + 5 EN = 10** (de la 8). Raman **7 articole** de livrat pana in martie 2027
+- Total blog: **6 articole RO + 6 EN = 12** (15.10.2026: articol nou „Parti sociale la partaj”, Camelia Stan). Raman **6 articole** de livrat pana in martie 2027
 - Remediata o eroare latenta in randarea articolelor (`components/blog/blog-article.tsx`) — componentele MDX (Callout, Puncte Cheie, Citatie legala) erau definite dar nu erau transmise catre continut, iar orice articol care le folosea returna eroare 500. Problema nu se manifestase pana acum pentru ca niciun articol existent nu folosea aceste componente
 
 ### Actualizare anterioara: 19 mai 2026
@@ -52,7 +52,7 @@ Toate obligatiile contractuale din **Articolul 1A (Dezvoltare Website)** au fost
 | 2 | Pagina Despre Noi | ✅ Livrat | Prezentare firma, valori, galerie foto, testimoniale |
 | 3 | Pagina Echipa + 6 pagini individuale | ✅ Livrat | 2 fondatori + 3 colaboratori + 1 relatii clienti, profile detaliate |
 | 4 | Pagina Servicii + 8 pagini individuale | ✅ Livrat | 8 contractate + **5 EXTRA** = 13 total (vezi Sect. 3) |
-| 5 | Pagina Blog | ✅ Livrat | 5 articole RO + 5 EN = 10 total, MDX CMS, cuprins, progress bar |
+| 5 | Pagina Blog | ✅ Livrat | 6 articole RO + 6 EN = 12 total, MDX CMS, cuprins, progress bar, articole recomandate |
 | 6 | Pagina Contact | ✅ Livrat | Formular complex + Google Maps + date contact |
 
 ### 2.2 Functionalitati Tehnice
@@ -127,8 +127,8 @@ Urmatoarele lucrari au fost realizate **integral gratuit**, ca bonus pentru cola
 |---|---|
 | Articole contractate | 12 (1 pe luna, 12 luni) |
 | Articole publicate la lansare | 4 RO + 4 EN = 8 total |
-| Articole publicate post-lansare | 1 (august 2026 — achizitie apartament de la dezvoltator, Legea 207/2025) |
-| Total pe site | 5 RO + 5 EN = 10 total |
+| Articole publicate post-lansare | 2 (august 2026 — achizitie apartament de la dezvoltator, Legea 207/2025; octombrie 2026 — parti sociale dobandite in timpul casatoriei) |
+| Total pe site | 6 RO + 6 EN = 12 total |
 | Articole ramase de livrat | 7 |
 | Perioada | Aprilie 2026 - Martie 2027 |
 
@@ -162,7 +162,7 @@ Urmatoarele lucrari au fost realizate **integral gratuit**, ca bonus pentru cola
 | Postare de lansare | ✅ Publicata |
 | Q&A | ✅ Completat |
 
-**Concluzie Art. 1B: Toate serviciile de marketing sunt active. Google Ads si Facebook Ads ruleaza. Postare Facebook de lansare publicata. Raman de livrat 7 articole blog si 22 posturi social media pe parcursul a 12 luni.**
+**Concluzie Art. 1B: Toate serviciile de marketing sunt active. Google Ads si Facebook Ads ruleaza. Postare Facebook de lansare publicata. Raman de livrat 6 articole blog si 22 posturi social media pe parcursul a 12 luni.**
 
 ---
 
