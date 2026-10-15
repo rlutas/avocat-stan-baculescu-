@@ -245,8 +245,10 @@ Detalii complete in `docs/raport-performanta-2026-10.md`.
 
 | Activitate | Responsabil | Status |
 |---|---|---|
-| Etichete conversie Google Ads in GTM (sunt inca `*_LABEL_HERE`) + actiuni apel/WhatsApp in Ads | Prestator | De facut — critic |
-| Fix `generate_lead` trimis dublu in GA4 | Prestator | Rezolvat in cod, de deploiat |
+| Actiuni conversie Ads: Click telefon, Click WhatsApp, Formular contact (GTM), Apeluri din anunturi | Prestator | Create 15.10.2026 |
+| Etichete reale + ID numeric in variabilele GTM | Prestator | Salvate in workspace, **de publicat GTM** |
+| Actiunile vechi de formular (auto-detectate) trecute pe Secundara | Prestator | De facut |
+| Fix `generate_lead` trimis dublu in GA4 | Prestator | Rezolvat, commit `84cf4df` |
 | Marcare evenimente cheie in GA4 (`generate_lead`, `phone_click`, `whatsapp_click`) | Prestator | De facut |
 | Legare Google Ads ↔ GA4 | Prestator | De facut |
 | Unificare telefon Profil Google (0744 201 694) vs site (0745 466 720) | Beneficiar confirma | De clarificat |
