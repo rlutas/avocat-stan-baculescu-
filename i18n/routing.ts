@@ -13,6 +13,10 @@ export const routing = defineRouting({
   // Disable automatic browser language detection (Accept-Language header)
   // so visitors always land on Romanian by default
   localeDetection: false,
+
+  // Pages declare hreflang in their own metadata (x-default = /ro). The
+  // middleware's Link header pointed x-default at `/`, which contradicted it.
+  alternateLinks: false,
 });
 
 export type Locale = (typeof routing.locales)[number];

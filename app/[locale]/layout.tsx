@@ -32,7 +32,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default: 'Stan-Baculescu | Societate Civila de Avocati',
-    template: '%s | Stan-Baculescu',
+    // Page titles already end with the brand (see messages/*.json), so no suffix here
+    template: '%s',
   },
   description:
     'Cabinet de avocatura Stan-Baculescu din Satu Mare. Servicii juridice profesionale: malpraxis medical, drept civil, drept penal, drept al familiei, dreptul muncii, drept comercial.',
