@@ -246,7 +246,7 @@ Detalii complete in `docs/raport-performanta-2026-10.md`.
 | Activitate | Responsabil | Status |
 |---|---|---|
 | Actiuni conversie Ads: Click telefon, Click WhatsApp, Formular contact (GTM), Apeluri din anunturi | Prestator | Create 15.10.2026 |
-| Etichete reale + ID numeric in variabilele GTM | Prestator | Salvate in workspace, **de publicat GTM** |
+| Etichete reale + ID numeric in variabilele GTM | Prestator | Publicat GTM versiunea 6 (15.10.2026) |
 | Actiunile vechi de formular (auto-detectate) trecute pe Secundara | Prestator | De facut |
 | Fix `generate_lead` trimis dublu in GA4 | Prestator | Rezolvat, commit `84cf4df` |
 | Marcare evenimente cheie in GA4 (`generate_lead`, `phone_click`, `whatsapp_click`) | Prestator | De facut |
