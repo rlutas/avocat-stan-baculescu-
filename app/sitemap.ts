@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next';
+import { posts } from '#site/content';
+import { blogSlugMap } from '@/lib/blog-slugs';
 
 const BASE_URL = 'https://stanbaculescu.ro';
 
@@ -8,7 +10,7 @@ const staticPages = [
   { path: '/despre-noi', lastmod: '2026-03-01' },
   { path: '/echipa', lastmod: '2026-03-01' },
   { path: '/servicii', lastmod: '2026-02-15' },
-  { path: '/blog', lastmod: '2026-01-15' },
+  { path: '/blog', lastmod: '2026-10-15' },
   { path: '/contact', lastmod: '2026-03-01' },
 ];
 
@@ -39,29 +41,11 @@ const teamMemberIds = [
   'diana-veress',
 ];
 
-// Blog post slug mapping between languages (ro <-> en)
-const blogPostPairs = [
-  {
-    ro: 'drepturile-pacientului-malpraxis',
-    en: 'patient-rights-malpractice',
-    lastmod: '2026-01-10',
-  },
-  {
-    ro: 'procedura-divortului-romania',
-    en: 'divorce-procedure-romania',
-    lastmod: '2026-01-05',
-  },
-  {
-    ro: 'drepturile-angajatului-concediere',
-    en: 'employee-rights-dismissal',
-    lastmod: '2025-12-20',
-  },
-  {
-    ro: 'fals-inscrisuri-semnatura-privata',
-    en: 'forgery-private-documents',
-    lastmod: '2026-03-06',
-  },
-];
+// Blog posts come from the Velite collection; the EN slug comes from blogSlugMap,
+// so a new article only needs its MDX files and a blogSlugMap entry.
+const blogPostPairs = posts
+  .filter((post) => post.locale === 'ro' && post.published && blogSlugMap[post.slug])
+  .map((post) => ({ ro: post.slug, en: blogSlugMap[post.slug], lastmod: post.date.slice(0, 10) }));
 
 const locales = ['ro', 'en'];
 

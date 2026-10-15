@@ -9,12 +9,14 @@ export const blogSlugMap: Record<string, string> = {
   'drepturile-angajatului-concediere': 'employee-rights-dismissal',
   'fals-inscrisuri-semnatura-privata': 'forgery-private-documents',
   'etape-cumparare-apartament-dezvoltator': 'buying-apartment-from-developer-stages',
+  'parti-sociale-partaj-divort': 'company-shares-divorce-romania',
   // EN -> RO
   'patient-rights-malpractice': 'drepturile-pacientului-malpraxis',
   'divorce-procedure-romania': 'procedura-divortului-romania',
   'employee-rights-dismissal': 'drepturile-angajatului-concediere',
   'forgery-private-documents': 'fals-inscrisuri-semnatura-privata',
   'buying-apartment-from-developer-stages': 'etape-cumparare-apartament-dezvoltator',
+  'company-shares-divorce-romania': 'parti-sociale-partaj-divort',
 };
 
 /**
