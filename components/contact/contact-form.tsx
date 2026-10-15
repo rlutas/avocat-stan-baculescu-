@@ -104,14 +104,6 @@ export function ContactForm() {
       reset();
       formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'generate_lead', {
-          event_category: 'Contact',
-          event_label: data.subject,
-          value: 1,
-        });
-      }
-
       setUserDataForEnhancedConversions({
         email: data.email,
         phone: data.phone,

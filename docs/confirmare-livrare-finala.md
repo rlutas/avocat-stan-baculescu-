@@ -14,8 +14,23 @@ Website-ul pentru Societatea Civila de Avocati Stan-Baculescu este **complet liv
 
 Toate obligatiile contractuale din **Articolul 1A (Dezvoltare Website)** au fost indeplinite integral, iar pe langa acestea au fost livrate gratuit **24 de extras-uri** cu o valoare estimata de **3.150-4.700 EUR**.
 
-### Ultima actualizare: 30 martie 2026
+### Ultima actualizare: 10 august 2026
 
+- Publicat **articol nou de blog** semnat de av. Camelia Stan — *"Cumperi un apartament de la dezvoltator? Iata etapele pe care trebuie sa le cunosti"* (Legea nr. 207/2025 — "Legea Nordis": rezervare, promisiune de vanzare-cumparare, contract de vanzare). Bilingv RO + EN, categorie noua **Drept Civil / Civil Law**, imagine featured dedicata (WebP 1680x720, 52 KB), mapare hreflang RO<->EN. Textul redactat de client a fost pastrat integral; a fost reconstruita o singura fraza deteriorata la copiere (penalitati / conditii de reziliere / modalitate de plata) — de confirmat cu autoarea. **Dedus 1 articol** din cele 12 contractate (Art. 1B.1)
+- Total blog: **5 articole RO + 5 EN = 10** (de la 8). Raman **7 articole** de livrat pana in martie 2027
+- Remediata o eroare latenta in randarea articolelor (`components/blog/blog-article.tsx`) — componentele MDX (Callout, Puncte Cheie, Citatie legala) erau definite dar nu erau transmise catre continut, iar orice articol care le folosea returna eroare 500. Problema nu se manifestase pana acum pentru ca niciun articol existent nu folosea aceste componente
+
+### Actualizare anterioara: 19 mai 2026
+
+- Productie **video reclama generala "Aveti nevoie de un avocat?"** — campanie noua complementara campaniei penale, design refacut conform brand-ului site-ului (Playfair Display + Inter, navy + gold, fara glow-uri aurii), CTA static cu detalii contact si buton "Contacteaza-ne acum" animat, poza echipei full-body pe vertical, 4 formate planificate (vertical 9:16, portrait 4:5, square 1:1, horizontal 16:9), 2 randate HQ pana acum (vertical + square) + muzica corporate-cinematic (Pixabay) + reorganizare structura `remotion-video/` pe campanii (per-campaign folders pentru intretinere). Dedus **5 posturi** din bonusul de 60 (Art. 1B.2)
+- Productie **video reclama Drept Penal "Ai fost chemat la Politie"** — 4 formate (vertical 9:16, portrait 4:5, square 1:1, horizontal 16:9) + voiceover RO neural (Emil + Alina A/B) + design polish multiple iteratii + ghid complet de postare social media + Google Ads. Dedus **5 posturi** din bonusul de 60 (Art. 1B.2)
+- Publicate **3 posturi suplimentare pe Facebook** post-lansare — deduse din bonusul de 60 posturi
+- Total post-lansare: **6 posturi publicate pe Facebook** (3 reels anterior + 3 posturi noi) si **32 posturi deduse pentru productie**. Raman **22 posturi** (4 Facebook + 8 Instagram + 10 TikTok)
+
+### Actualizare: 21 aprilie 2026
+
+- Publicate **3 reels suplimentare pe Facebook** — deduse din bonusul de 60 posturi (Art. 1B.2)
+- Confirmat: tranșele 1 și 2 facturate și încasate. Rămâne de facturat doar tranșa 3 (1.058,75 EUR) la lansare
 - Actualizat profil Camelia Stan conform documentului revizuit de client (13 specializari, experienta reformulata, descriere corectata)
 - Inlocuit prescurtarea "SCA Stan-Baculescu" cu denumirea completa "Societatea Civila de Avocati Stan-Baculescu" pe intreg site-ul (~50 locuri)
 - Email unificat la office@stanbaculescu.ro pentru toti avocatii
@@ -37,7 +52,7 @@ Toate obligatiile contractuale din **Articolul 1A (Dezvoltare Website)** au fost
 | 2 | Pagina Despre Noi | ✅ Livrat | Prezentare firma, valori, galerie foto, testimoniale |
 | 3 | Pagina Echipa + 6 pagini individuale | ✅ Livrat | 2 fondatori + 3 colaboratori + 1 relatii clienti, profile detaliate |
 | 4 | Pagina Servicii + 8 pagini individuale | ✅ Livrat | 8 contractate + **5 EXTRA** = 13 total (vezi Sect. 3) |
-| 5 | Pagina Blog | ✅ Livrat | 4 articole RO + 4 EN = 8 total, MDX CMS, cuprins, progress bar |
+| 5 | Pagina Blog | ✅ Livrat | 5 articole RO + 5 EN = 10 total, MDX CMS, cuprins, progress bar |
 | 6 | Pagina Contact | ✅ Livrat | Formular complex + Google Maps + date contact |
 
 ### 2.2 Functionalitati Tehnice
@@ -112,17 +127,19 @@ Urmatoarele lucrari au fost realizate **integral gratuit**, ca bonus pentru cola
 |---|---|
 | Articole contractate | 12 (1 pe luna, 12 luni) |
 | Articole publicate la lansare | 4 RO + 4 EN = 8 total |
-| Articole ramase de livrat | 8 |
+| Articole publicate post-lansare | 1 (august 2026 — achizitie apartament de la dezvoltator, Legea 207/2025) |
+| Total pe site | 5 RO + 5 EN = 10 total |
+| Articole ramase de livrat | 7 |
 | Perioada | Aprilie 2026 - Martie 2027 |
 
 ### B.2 Management Social Media (12 luni)
 
-| Platforme | Contractat | Dedus* | Ramas |
-|---|---|---|---|
-| Facebook | 20 posturi | — | 12 posturi |
-| Instagram | 20 posturi | — | 12 posturi |
-| TikTok | 20 posturi | — | 14 posturi |
-| **TOTAL** | **60 posturi** | **22 posturi** | **38 posturi** |
+| Platforme | Contractat | Dedus* | Publicate post-lansare | Ramas |
+|---|---|---|---|---|
+| Facebook | 20 posturi | — | 3 reels + 3 posturi | 4 posturi |
+| Instagram | 20 posturi | — | — | 8 posturi |
+| TikTok | 20 posturi | — | — | 10 posturi |
+| **TOTAL** | **60 posturi** | **32 posturi** | **6 posturi** | **22 posturi** |
 
 *\*Deducere detaliata in Sectiunea 5.*
 
@@ -145,7 +162,7 @@ Urmatoarele lucrari au fost realizate **integral gratuit**, ca bonus pentru cola
 | Postare de lansare | ✅ Publicata |
 | Q&A | ✅ Completat |
 
-**Concluzie Art. 1B: Toate serviciile de marketing sunt active. Google Ads si Facebook Ads ruleaza. Postare Facebook de lansare publicata. Raman de livrat 8 articole blog si 38 posturi social media pe parcursul a 12 luni.**
+**Concluzie Art. 1B: Toate serviciile de marketing sunt active. Google Ads si Facebook Ads ruleaza. Postare Facebook de lansare publicata. Raman de livrat 7 articole blog si 22 posturi social media pe parcursul a 12 luni.**
 
 ---
 
@@ -161,9 +178,11 @@ Timpul investit in productia de continut suplimentar (video, GMB, ads) se deduce
 | Facebook/Google Ads copy + setup | 4 |
 | Postare Facebook (lansare website) | 1 |
 | Postare Google My Business | 1 |
-| **TOTAL DEDUS** | **22 posturi** |
+| Productie video reclama Drept Penal "Ai fost chemat la Politie" (4 formate + voiceover RO dual + design polish iteratii + ghid postare) | 5 |
+| Productie video reclama generala "Aveti nevoie de un avocat?" (4 formate planificate, 2 randate HQ + design brand-aligned cu Playfair Display/Inter + CTA static animat + muzica corporate + reorganizare repo pe campanii) | 5 |
+| **TOTAL DEDUS** | **32 posturi** |
 
-**Raman: 38 posturi** (12 Facebook + 12 Instagram + 14 TikTok) de livrat pe parcursul celor 12 luni post-lansare.
+La aceste deduceri de productie se adauga **6 posturi publicate pe Facebook post-lansare** (3 reels anterior + 3 posturi noi), rezultand **22 posturi ramase** de livrat pe parcursul celor 12 luni post-lansare (4 Facebook + 8 Instagram + 10 TikTok).
 
 ---
 
@@ -201,10 +220,11 @@ Timpul investit in productia de continut suplimentar (video, GMB, ads) se deduce
 
 | # | Transa | Procent | Suma (EUR cu TVA) | Status | Data |
 |---|---|---|---|---|---|
-| 1 | Avans (la semnare) | 50% | 2.117,50 EUR | ✅ Platit | 04.02.2026 |
-| 2 | Aprobare design | 25% | 1.058,75 EUR | ✅ Confirmat — de facturat | 11.03.2026 |
-| 3 | Lansare website | 25% | 1.058,75 EUR | ⏳ La lansare | 26.03.2026 |
+| 1 | Avans (la semnare) | 50% | 2.117,50 EUR | ✅ Facturat si incasat | 04.02.2026 |
+| 2 | Aprobare design | 25% | 1.058,75 EUR | ✅ Facturat si incasat | 11.03.2026 |
+| 3 | Lansare website | 25% | 1.058,75 EUR | ⏳ De facturat si incasat | 26.03.2026 |
 | | **TOTAL CONTRACT** | **100%** | **4.235,00 EUR** | | |
+| | **RAMAS DE INCASAT** | | **1.058,75 EUR** | | |
 
 ---
 
@@ -215,17 +235,28 @@ Timpul investit in productia de continut suplimentar (video, GMB, ads) se deduce
 | Activitate | Responsabil | Termen |
 |---|---|---|
 | DKIM record (email deliverability) | Prestator | Aprilie 2026 |
-| Facturare transa 2 (1.058,75 EUR) | Prestator | Imediat |
 | Facturare transa 3 (1.058,75 EUR) | Prestator | Imediat |
-| Plata transe 2 si 3 | Beneficiar | Conform contract |
+| Plata transa 3 (1.058,75 EUR) | Beneficiar | Conform contract |
 | Card pentru Google Ads | Beneficiar | Cand disponibil |
+
+### Actualizare 15 octombrie 2026 — tracking
+
+Detalii complete in `docs/raport-performanta-2026-10.md`.
+
+| Activitate | Responsabil | Status |
+|---|---|---|
+| Etichete conversie Google Ads in GTM (sunt inca `*_LABEL_HERE`) + actiuni apel/WhatsApp in Ads | Prestator | De facut — critic |
+| Fix `generate_lead` trimis dublu in GA4 | Prestator | Rezolvat in cod, de deploiat |
+| Marcare evenimente cheie in GA4 (`generate_lead`, `phone_click`, `whatsapp_click`) | Prestator | De facut |
+| Legare Google Ads ↔ GA4 | Prestator | De facut |
+| Unificare telefon Profil Google (0744 201 694) vs site (0745 466 720) | Beneficiar confirma | De clarificat |
 
 ### Post-lansare (12 luni — pana la martie 2027)
 
 | Activitate | Cantitate | Frecventa |
 |---|---|---|
 | Articole blog | 8 ramase | ~1 pe luna |
-| Posturi social media | 38 ramase | ~3-4 pe luna |
+| Posturi social media | 22 ramase (6 posturi deja publicate pe Facebook: 3 reels + 3 posturi) | ~2 pe luna |
 | Suport tehnic | 20 luni | Continuu pana nov. 2027 |
 
 ---
@@ -234,7 +265,7 @@ Timpul investit in productia de continut suplimentar (video, GMB, ads) se deduce
 
 Toate extras-urile mentionate la Sectiunea 3 au fost livrate **integral gratuit** ca parte a colaborarii de calitate. Valoarea lor estimata de piata este de **3.050-4.550 EUR**, ceea ce reprezinta un bonus semnificativ fata de valoarea contractului de 4.235 EUR.
 
-Referitor la **video promotional, optimizare GMB, postare GMB si setup campanii Ads**: orele de productie sunt defalcate din bonusul post-lansare de 12 luni (60 posturi social media). Se deduc **20 de posturi**, ramanand **40 de posturi** de livrat pe parcursul celor 12 luni.
+Referitor la **video promotional Remotion (10 posturi), optimizare GMB (4 posturi), postare GMB + video (2 posturi), setup campanii Facebook/Google Ads (4 posturi), postare Facebook lansare (1 post), postare GMB (1 post), video reclama Drept Penal "Ai fost chemat la Politie" cu voiceover RO dual si 4 formate (5 posturi) si video reclama generala "Aveti nevoie de un avocat?" cu design brand-aligned, CTA static animat si reorganizare repo pe campanii (5 posturi)**: orele de productie sunt defalcate din bonusul post-lansare de 12 luni (60 posturi social media). Se deduc **32 de posturi** (defalcare detaliata in Sectiunea 5). La acestea se adauga **6 posturi deja publicate pe Facebook post-lansare** (3 reels anterior + 3 posturi noi), ramanand **22 de posturi** de livrat pe parcursul celor 12 luni (4 Facebook + 8 Instagram + 10 TikTok).
 
 ---
 
